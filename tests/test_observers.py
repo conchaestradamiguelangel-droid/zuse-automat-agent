@@ -24,6 +24,16 @@ class ObserverTests(unittest.TestCase):
         self.assertTrue(consensus.get("oscilador", False))
         self.assertEqual(dominant_type(structures), "oscilador")
 
+    def test_period3_oscillator_has_oscillator_consensus(self):
+        import numpy as np
+
+        frames = np.zeros((18, 32), dtype=np.uint8)
+        for t in range(frames.shape[0]):
+            frames[t, 14 + (t % 3)] = 1
+        structures = run_observers(frames)
+        consensus = consensus_by_type(structures)
+        self.assertTrue(consensus.get("oscilador", False))
+
     def test_structure_contract_fields(self):
         structures = run_observers(moving_point())
         structure = structures[0]

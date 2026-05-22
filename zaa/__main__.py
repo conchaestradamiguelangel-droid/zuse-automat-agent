@@ -6,13 +6,14 @@ import argparse
 from pathlib import Path
 
 from .eca import random_initial_state, simulate, single_seed_initial_state
+from .gates import evaluate_g1a1
 from .metrics import summarize_frames
 from .consensus import consensus_by_type, dominant_type
 from .observers import run_observers
 from .observers2d import run_observers_2d
 from .packed_eca import array_to_int, run_packed
 from .report import render_rule_report, save_report
-from .rule110_fixtures import generate_all_candidates, promote_all_candidates
+from .rule110_fixtures import generate_all_candidates, normalize_all_validated_fixture_taxonomy, promote_all_candidates
 from .storage import connect, count_universes, insert_universe
 from .synthetic import moving_point, oscillator, static_block
 from .visualize import save_frames_png
@@ -115,6 +116,12 @@ def cmd_validate_rule110_fixtures(args: argparse.Namespace) -> None:
         print(f"validated={path}")
 
 
+def cmd_normalize_rule110_taxonomy(args: argparse.Namespace) -> None:
+    normalized = normalize_all_validated_fixture_taxonomy(args.validated)
+    for path in normalized:
+        print(f"normalized={path}")
+
+
 def cmd_observe_life(args: argparse.Namespace) -> None:
     frames = simulate_life(life_fixture(args.kind, height=args.height, width=args.width), args.steps)
     structures = run_observers_2d(frames)
@@ -128,6 +135,21 @@ def cmd_observe_life(args: argparse.Namespace) -> None:
             "structure="
             f"{structure.observador}:{structure.tipo}:"
             f"{structure.tipo_asignado_por}:conf={structure.confianza:.2f}"
+        )
+
+
+def cmd_gate_g1a1(args: argparse.Namespace) -> None:
+    report = evaluate_g1a1(args.fixtures)
+    print(f"gate={report['gate']}")
+    print(f"passed={report['passed']}")
+    print(f"required={report['required']}")
+    print(f"passed_required={report['passed_required']}")
+    for result in report["results"]:
+        print(
+            "fixture="
+            f"{result['fixture_id']}:expected={result['expected_type']}:"
+            f"dominant={result['dominant_type']}:passed={result['passed']}:"
+            f"consensus={result['consensus']}"
         )
 
 
@@ -176,12 +198,20 @@ def build_parser() -> argparse.ArgumentParser:
     validate.add_argument("--validated", default="fixtures/validated")
     validate.set_defaults(func=cmd_validate_rule110_fixtures)
 
+    normalize = sub.add_parser("normalize-rule110-taxonomy", help="normalize validated Rule 110 fixture taxonomy")
+    normalize.add_argument("--validated", default="fixtures/validated")
+    normalize.set_defaults(func=cmd_normalize_rule110_taxonomy)
+
     life = sub.add_parser("observe-life", help="run Fase 1b observers on known Game of Life fixtures")
     life.add_argument("--kind", choices=["block", "blinker", "glider"], required=True)
     life.add_argument("--steps", type=int, default=8)
     life.add_argument("--height", type=int, default=32)
     life.add_argument("--width", type=int, default=32)
     life.set_defaults(func=cmd_observe_life)
+
+    gate = sub.add_parser("gate-g1a1", help="evaluate Gate G1a.1 on validated Rule 110 fixtures")
+    gate.add_argument("--fixtures", default="fixtures/validated")
+    gate.set_defaults(func=cmd_gate_g1a1)
 
     return parser
 

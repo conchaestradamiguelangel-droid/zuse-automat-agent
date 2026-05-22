@@ -10,6 +10,7 @@ from zaa.rule110_fixtures import (
     difference_from_ether,
     ether_state,
     generate_candidate,
+    normalize_validated_fixture_taxonomy,
     promote_candidate_to_validated,
 )
 
@@ -61,6 +62,19 @@ class Rule110FixtureTests(unittest.TestCase):
             self.assertFalse(generated["npz"].exists())
             loaded = load_fixture(validated)
             self.assertEqual(loaded["metadata"]["validation_status"], "validated_computational")
+
+    def test_normalize_taxonomy_keeps_c1_as_glider_with_stationary_kinematics(self):
+        import tempfile
+
+        from zaa.fixtures import load_fixture
+
+        with tempfile.TemporaryDirectory() as tmp:
+            generated = generate_candidate(FIXTURE_SPECS[2], output_dir=f"{tmp}/pending")
+            validated = promote_candidate_to_validated(generated["npz"], validated_dir=f"{tmp}/validated")
+            normalized = normalize_validated_fixture_taxonomy(validated)
+            glider = load_fixture(normalized)["metadata"]["gliders_esperados"][0]
+            self.assertEqual(glider["tipo"], "glider")
+            self.assertEqual(glider["kinematics"], "stationary_periodic")
 
 
 if __name__ == "__main__":

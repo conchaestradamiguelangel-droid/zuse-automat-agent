@@ -130,10 +130,14 @@ def difference_from_ether(frames: np.ndarray) -> int:
 
 def expected_glider_metadata(spec: Rule110FixtureSpec) -> list[dict]:
     """Return expected metadata to be confirmed by visual validation."""
+    kinematics = "moving"
+    if spec.displacement_x == 0 and spec.period_t > 1:
+        kinematics = "stationary_periodic"
     return [
         {
             "fixture_id": spec.fixture_id,
-            "tipo": "glider" if spec.displacement_x != 0 else "oscilador",
+            "tipo": "glider",
+            "kinematics": kinematics,
             "nombre": spec.glider,
             "phase": spec.phase,
             "period_t": spec.period_t,
@@ -244,4 +248,35 @@ def promote_all_candidates(
     return [
         promote_candidate_to_validated(path, validated_dir=validated_dir)
         for path in sorted(pending.glob("FIX-*.npz"))
+    ]
+
+
+def normalize_validated_fixture_taxonomy(path: str | Path) -> Path:
+    """Normalize validated fixture metadata after taxonomy decisions."""
+    fixture = Path(path)
+    with np.load(fixture, allow_pickle=False) as data:
+        ci = data["ci"].copy()
+        frames = data["frames_esperados"].copy()
+        metadata = json.loads(str(data["metadata_json"]))
+
+    for glider in metadata.get("gliders_esperados", []):
+        displacement = glider.get("displacement_x", 0)
+        period = glider.get("period_t", 1)
+        glider["tipo"] = "glider"
+        glider["kinematics"] = "stationary_periodic" if displacement == 0 and period > 1 else "moving"
+
+    np.savez_compressed(
+        fixture,
+        ci=ci,
+        frames_esperados=frames,
+        metadata_json=json.dumps(metadata, sort_keys=True),
+    )
+    return fixture
+
+
+def normalize_all_validated_fixture_taxonomy(validated_dir: str | Path = "fixtures/validated") -> list[Path]:
+    """Normalize taxonomy metadata for all validated Rule 110 fixtures."""
+    return [
+        normalize_validated_fixture_taxonomy(path)
+        for path in sorted(Path(validated_dir).glob("FIX-*.npz"))
     ]

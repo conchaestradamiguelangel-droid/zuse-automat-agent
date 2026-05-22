@@ -42,12 +42,18 @@ def _track_nearest_active(frames: np.ndarray, *, max_jump: int = 2, min_persiste
     return [tuple(track) for track in closed if len(track) >= min_persistence]
 
 
-def _is_periodic_local(frames: np.ndarray) -> bool:
-    """Detect simple period-2 local oscillation."""
+def _is_periodic_local(frames: np.ndarray, *, max_period: int = 16) -> bool:
+    """Detect local oscillation with a small exact period."""
     frames = np.asarray(frames, dtype=np.uint8)
     if frames.shape[0] < 4:
         return False
-    return bool(np.array_equal(frames[:-2], frames[2:]) and not np.array_equal(frames[:-1], frames[1:]))
+    changed = any(not np.array_equal(frames[:-p], frames[p:]) for p in range(1, min(max_period, frames.shape[0] - 1) + 1))
+    if not changed:
+        return False
+    for period in range(2, min(max_period, frames.shape[0] - 1) + 1):
+        if np.array_equal(frames[:-period], frames[period:]):
+            return True
+    return False
 
 
 def _static_block_track(frames: np.ndarray) -> tuple[tuple[tuple[int, int, int], ...], int] | None:
