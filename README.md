@@ -50,6 +50,28 @@ python -m unittest discover -s tests
   La validacion real contra Rule 110 queda pendiente de fixtures congelados.
 - Fase 1b: motor Game of Life y observadores 2D iniciales.
 
+## Alertas metodologicas vivas
+
+### Gate G1a.1
+
+`gate-g1a1` pasa mecanicamente sobre los fixtures validados de Rule 110, pero
+la deteccion coherente de estructuras en ether denso sigue pendiente. Los
+observadores O2/O3 actuales fueron disenados para fondos vacios y pueden emitir
+muchas estructuras fragmentadas sobre el ether; el consenso 2-de-3 puede pasar
+por presencia de tipo, no por detectar una particula coherente.
+
+Antes de cerrar una validacion fuerte de Rule 110, los observadores deben operar
+sobre `diff(frames, ether_puro)` o incorporar un observador de patches/k-means
+real que separe estructura y fondo.
+
+### Fase 2a
+
+Las leyes `velocidad_constante`, `periodicidad` y `conteo_estructuras` se aceptan
+en fixtures Rule 110 porque se evalua contra metadata computacionalmente
+validada del fixture. Sirven como prueba mecanica del pipeline MDL, pero no son
+observacion independiente. La evaluacion no circular actual es
+`paridad_total`, que se calcula sobre frames reales y se rechaza correctamente.
+
 ## Fixtures Rule 110
 
 `python -m zaa generate-rule110-fixtures` genera candidatos `.npz` y PNG en
