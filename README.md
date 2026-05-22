@@ -38,6 +38,7 @@ python -m zaa generate-rule110-fixtures --out fixtures\pending
 python -m zaa validate-rule110-fixtures --pending fixtures\pending --validated fixtures\validated
 python -m zaa observe-life --kind glider
 python -m zaa gate-g1a1 --fixtures fixtures\validated
+python -m zaa laws-2a --fixtures fixtures\validated --out reports\fase2a
 python -m unittest discover -s tests
 ```
 

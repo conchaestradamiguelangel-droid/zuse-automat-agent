@@ -18,6 +18,7 @@ from .storage import connect, count_universes, insert_universe
 from .synthetic import moving_point, oscillator, static_block
 from .visualize import save_frames_png
 from .life2d import life_fixture, simulate_life
+from .invariants import evaluate_all_fixture_laws, save_law_report
 
 
 def cmd_simulate(args: argparse.Namespace) -> None:
@@ -153,6 +154,26 @@ def cmd_gate_g1a1(args: argparse.Namespace) -> None:
         )
 
 
+def cmd_laws_2a(args: argparse.Namespace) -> None:
+    report = evaluate_all_fixture_laws(args.fixtures)
+    saved = save_law_report(report, args.out) if args.out else None
+    print(f"fixtures={args.fixtures}")
+    print(f"accepted={report['accepted']}")
+    print(f"rejected={report['rejected']}")
+    for fixture_report in report["reports"]:
+        print(f"fixture={fixture_report['fixture_id']}")
+        for result in fixture_report["results"]:
+            print(
+                "law="
+                f"{result['name']}:accepted={result['accepted']}:"
+                f"consistency={result['consistency']:.3f}:"
+                f"mdl={result['mdl_candidate']}<null={result['mdl_null']}"
+            )
+    if saved:
+        print(f"json={saved['json']}")
+        print(f"markdown={saved['markdown']}")
+
+
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(prog="zaa", description="ZUSE AUTOMAT AGENT Fase 0a")
     sub = parser.add_subparsers(dest="command", required=True)
@@ -212,6 +233,11 @@ def build_parser() -> argparse.ArgumentParser:
     gate = sub.add_parser("gate-g1a1", help="evaluate Gate G1a.1 on validated Rule 110 fixtures")
     gate.add_argument("--fixtures", default="fixtures/validated")
     gate.set_defaults(func=cmd_gate_g1a1)
+
+    laws = sub.add_parser("laws-2a", help="evaluate Fase 2a discrete law candidates")
+    laws.add_argument("--fixtures", default="fixtures/validated")
+    laws.add_argument("--out", default="")
+    laws.set_defaults(func=cmd_laws_2a)
 
     return parser
 
