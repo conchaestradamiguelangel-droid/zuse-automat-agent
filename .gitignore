@@ -11,3 +11,4 @@ outputs/
 *.db
 
 fixtures/tmp/
+fixtures/pending/

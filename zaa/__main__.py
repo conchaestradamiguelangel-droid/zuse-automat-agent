@@ -11,6 +11,7 @@ from .consensus import consensus_by_type, dominant_type
 from .observers import run_observers
 from .packed_eca import array_to_int, run_packed
 from .report import render_rule_report, save_report
+from .rule110_fixtures import generate_all_candidates
 from .storage import connect, count_universes, insert_universe
 from .synthetic import moving_point, oscillator, static_block
 from .visualize import save_frames_png
@@ -98,6 +99,14 @@ def cmd_observe_synthetic(args: argparse.Namespace) -> None:
         )
 
 
+def cmd_generate_rule110_fixtures(args: argparse.Namespace) -> None:
+    generated = generate_all_candidates(output_dir=args.out)
+    for item in generated:
+        print(f"npz={item['npz']}")
+        print(f"png={item['png']}")
+        print(f"summary={item['summary']}")
+
+
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(prog="zaa", description="ZUSE AUTOMAT AGENT Fase 0a")
     sub = parser.add_subparsers(dest="command", required=True)
@@ -133,6 +142,10 @@ def build_parser() -> argparse.ArgumentParser:
     obs.add_argument("--steps", type=int, default=24)
     obs.add_argument("--width", type=int, default=64)
     obs.set_defaults(func=cmd_observe_synthetic)
+
+    fix = sub.add_parser("generate-rule110-fixtures", help="generate pending Rule 110 fixture candidates")
+    fix.add_argument("--out", default="fixtures/pending")
+    fix.set_defaults(func=cmd_generate_rule110_fixtures)
 
     return parser
 
