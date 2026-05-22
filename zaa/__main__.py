@@ -7,9 +7,12 @@ from pathlib import Path
 
 from .eca import random_initial_state, simulate, single_seed_initial_state
 from .metrics import summarize_frames
+from .consensus import consensus_by_type, dominant_type
+from .observers import run_observers
 from .packed_eca import array_to_int, run_packed
 from .report import render_rule_report, save_report
 from .storage import connect, count_universes, insert_universe
+from .synthetic import moving_point, oscillator, static_block
 from .visualize import save_frames_png
 
 
@@ -73,6 +76,28 @@ def cmd_benchmark(args: argparse.Namespace) -> None:
     print(f"final_state_low64={final_state & ((1 << 64) - 1)}")
 
 
+def cmd_observe_synthetic(args: argparse.Namespace) -> None:
+    if args.kind == "glider":
+        frames = moving_point(steps=args.steps, width=args.width)
+    elif args.kind == "oscilador":
+        frames = oscillator(steps=args.steps, width=args.width)
+    else:
+        frames = static_block(steps=args.steps, width=args.width)
+
+    structures = run_observers(frames)
+    consensus = consensus_by_type(structures)
+    print(f"kind={args.kind}")
+    print(f"structures={len(structures)}")
+    print(f"dominant_type={dominant_type(structures)}")
+    print(f"consensus={consensus}")
+    for structure in structures:
+        print(
+            "structure="
+            f"{structure.observador}:{structure.tipo}:"
+            f"{structure.tipo_asignado_por}:conf={structure.confianza:.2f}"
+        )
+
+
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(prog="zaa", description="ZUSE AUTOMAT AGENT Fase 0a")
     sub = parser.add_subparsers(dest="command", required=True)
@@ -102,6 +127,12 @@ def build_parser() -> argparse.ArgumentParser:
     bench.add_argument("--steps", type=int, default=1_000_000)
     bench.add_argument("--width", type=int, default=256)
     bench.set_defaults(func=cmd_benchmark)
+
+    obs = sub.add_parser("observe-synthetic", help="run Fase 1a observers on synthetic frames")
+    obs.add_argument("--kind", choices=["glider", "oscilador", "bloque"], required=True)
+    obs.add_argument("--steps", type=int, default=24)
+    obs.add_argument("--width", type=int, default=64)
+    obs.set_defaults(func=cmd_observe_synthetic)
 
     return parser
 
