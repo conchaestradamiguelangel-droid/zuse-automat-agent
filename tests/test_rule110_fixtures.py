@@ -10,6 +10,7 @@ from zaa.rule110_fixtures import (
     difference_from_ether,
     ether_state,
     generate_candidate,
+    promote_candidate_to_validated,
 )
 
 
@@ -47,6 +48,19 @@ class Rule110FixtureTests(unittest.TestCase):
             aligned = align_candidate(spec)
             frames = simulate(build_initial_condition(aligned), 110, aligned.steps)
             self.assertGreater(difference_from_ether(frames), 0, spec.fixture_id)
+
+    def test_promote_candidate_updates_status(self):
+        import tempfile
+
+        from zaa.fixtures import load_fixture
+
+        with tempfile.TemporaryDirectory() as tmp:
+            generated = generate_candidate(FIXTURE_SPECS[0], output_dir=f"{tmp}/pending")
+            validated = promote_candidate_to_validated(generated["npz"], validated_dir=f"{tmp}/validated")
+            self.assertTrue(validated.exists())
+            self.assertFalse(generated["npz"].exists())
+            loaded = load_fixture(validated)
+            self.assertEqual(loaded["metadata"]["validation_status"], "validated_computational")
 
 
 if __name__ == "__main__":

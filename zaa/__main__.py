@@ -12,7 +12,7 @@ from .observers import run_observers
 from .observers2d import run_observers_2d
 from .packed_eca import array_to_int, run_packed
 from .report import render_rule_report, save_report
-from .rule110_fixtures import generate_all_candidates
+from .rule110_fixtures import generate_all_candidates, promote_all_candidates
 from .storage import connect, count_universes, insert_universe
 from .synthetic import moving_point, oscillator, static_block
 from .visualize import save_frames_png
@@ -109,6 +109,12 @@ def cmd_generate_rule110_fixtures(args: argparse.Namespace) -> None:
         print(f"summary={item['summary']}")
 
 
+def cmd_validate_rule110_fixtures(args: argparse.Namespace) -> None:
+    promoted = promote_all_candidates(pending_dir=args.pending, validated_dir=args.validated)
+    for path in promoted:
+        print(f"validated={path}")
+
+
 def cmd_observe_life(args: argparse.Namespace) -> None:
     frames = simulate_life(life_fixture(args.kind, height=args.height, width=args.width), args.steps)
     structures = run_observers_2d(frames)
@@ -164,6 +170,11 @@ def build_parser() -> argparse.ArgumentParser:
     fix = sub.add_parser("generate-rule110-fixtures", help="generate pending Rule 110 fixture candidates")
     fix.add_argument("--out", default="fixtures/pending")
     fix.set_defaults(func=cmd_generate_rule110_fixtures)
+
+    validate = sub.add_parser("validate-rule110-fixtures", help="promote pending Rule 110 fixtures to validated")
+    validate.add_argument("--pending", default="fixtures/pending")
+    validate.add_argument("--validated", default="fixtures/validated")
+    validate.set_defaults(func=cmd_validate_rule110_fixtures)
 
     life = sub.add_parser("observe-life", help="run Fase 1b observers on known Game of Life fixtures")
     life.add_argument("--kind", choices=["block", "blinker", "glider"], required=True)

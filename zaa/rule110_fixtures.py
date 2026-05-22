@@ -7,6 +7,7 @@ reviewed visually before being moved to fixtures/validated/.
 from __future__ import annotations
 
 from dataclasses import dataclass
+import json
 from pathlib import Path
 
 import numpy as np
@@ -196,3 +197,51 @@ def generate_candidate(spec: Rule110FixtureSpec, output_dir: str | Path = "fixtu
 def generate_all_candidates(output_dir: str | Path = "fixtures/pending") -> list[dict[str, Path]]:
     """Generate all pending Rule 110 fixture candidates."""
     return [generate_candidate(spec, output_dir=output_dir) for spec in FIXTURE_SPECS]
+
+
+def promote_candidate_to_validated(
+    pending_path: str | Path,
+    validated_dir: str | Path = "fixtures/validated",
+    *,
+    validation_status: str = "validated_computational",
+) -> Path:
+    """Promote one pending NPZ fixture to validated status.
+
+    The pending NPZ is removed after the validated NPZ is written.
+    """
+    pending = Path(pending_path)
+    validated = Path(validated_dir)
+    validated.mkdir(parents=True, exist_ok=True)
+    target = validated / pending.name
+
+    with np.load(pending, allow_pickle=False) as data:
+        ci = data["ci"].copy()
+        frames = data["frames_esperados"].copy()
+        metadata = json.loads(str(data["metadata_json"]))
+
+    metadata["fixture_status"] = validation_status
+    metadata["validation_status"] = validation_status
+    for glider in metadata.get("gliders_esperados", []):
+        glider["fixture_status"] = validation_status
+        glider["validation_status"] = validation_status
+
+    np.savez_compressed(
+        target,
+        ci=ci,
+        frames_esperados=frames,
+        metadata_json=json.dumps(metadata, sort_keys=True),
+    )
+    pending.unlink()
+    return target
+
+
+def promote_all_candidates(
+    pending_dir: str | Path = "fixtures/pending",
+    validated_dir: str | Path = "fixtures/validated",
+) -> list[Path]:
+    """Promote all pending Rule 110 fixture candidates to validated fixtures."""
+    pending = Path(pending_dir)
+    return [
+        promote_candidate_to_validated(path, validated_dir=validated_dir)
+        for path in sorted(pending.glob("FIX-*.npz"))
+    ]

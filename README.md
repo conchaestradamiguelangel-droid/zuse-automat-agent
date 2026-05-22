@@ -35,6 +35,7 @@ python -m zaa dataset --steps 1000 --width 256 --cis 10 --db data\zaa.sqlite
 python -m zaa benchmark --rule 110 --steps 1000000 --width 256
 python -m zaa observe-synthetic --kind glider
 python -m zaa generate-rule110-fixtures --out fixtures\pending
+python -m zaa validate-rule110-fixtures --pending fixtures\pending --validated fixtures\validated
 python -m zaa observe-life --kind glider
 python -m unittest discover -s tests
 ```
