@@ -9,12 +9,14 @@ from .eca import random_initial_state, simulate, single_seed_initial_state
 from .metrics import summarize_frames
 from .consensus import consensus_by_type, dominant_type
 from .observers import run_observers
+from .observers2d import run_observers_2d
 from .packed_eca import array_to_int, run_packed
 from .report import render_rule_report, save_report
 from .rule110_fixtures import generate_all_candidates
 from .storage import connect, count_universes, insert_universe
 from .synthetic import moving_point, oscillator, static_block
 from .visualize import save_frames_png
+from .life2d import life_fixture, simulate_life
 
 
 def cmd_simulate(args: argparse.Namespace) -> None:
@@ -107,6 +109,22 @@ def cmd_generate_rule110_fixtures(args: argparse.Namespace) -> None:
         print(f"summary={item['summary']}")
 
 
+def cmd_observe_life(args: argparse.Namespace) -> None:
+    frames = simulate_life(life_fixture(args.kind, height=args.height, width=args.width), args.steps)
+    structures = run_observers_2d(frames)
+    consensus = consensus_by_type(structures)
+    print(f"kind={args.kind}")
+    print(f"structures={len(structures)}")
+    print(f"dominant_type={dominant_type(structures)}")
+    print(f"consensus={consensus}")
+    for structure in structures:
+        print(
+            "structure="
+            f"{structure.observador}:{structure.tipo}:"
+            f"{structure.tipo_asignado_por}:conf={structure.confianza:.2f}"
+        )
+
+
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(prog="zaa", description="ZUSE AUTOMAT AGENT Fase 0a")
     sub = parser.add_subparsers(dest="command", required=True)
@@ -146,6 +164,13 @@ def build_parser() -> argparse.ArgumentParser:
     fix = sub.add_parser("generate-rule110-fixtures", help="generate pending Rule 110 fixture candidates")
     fix.add_argument("--out", default="fixtures/pending")
     fix.set_defaults(func=cmd_generate_rule110_fixtures)
+
+    life = sub.add_parser("observe-life", help="run Fase 1b observers on known Game of Life fixtures")
+    life.add_argument("--kind", choices=["block", "blinker", "glider"], required=True)
+    life.add_argument("--steps", type=int, default=8)
+    life.add_argument("--height", type=int, default=32)
+    life.add_argument("--width", type=int, default=32)
+    life.set_defaults(func=cmd_observe_life)
 
     return parser
 

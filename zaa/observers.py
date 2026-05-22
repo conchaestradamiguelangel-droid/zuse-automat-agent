@@ -14,28 +14,28 @@ def _active_positions_by_time(frames: np.ndarray) -> list[list[int]]:
     return [np.flatnonzero(frame).astype(int).tolist() for frame in frames]
 
 
-def _track_nearest_active(frames: np.ndarray, *, max_jump: int = 2, min_persistence: int = 10) -> list[tuple[tuple[int, int], ...]]:
+def _track_nearest_active(frames: np.ndarray, *, max_jump: int = 2, min_persistence: int = 10) -> list[tuple[tuple[int, int, int], ...]]:
     """Track active cells over time with a small nearest-neighbor heuristic."""
     positions_by_time = _active_positions_by_time(frames)
-    active_tracks: list[list[tuple[int, int]]] = [[(0, x)] for x in positions_by_time[0]]
-    closed: list[list[tuple[int, int]]] = []
+    active_tracks: list[list[tuple[int, int, int]]] = [[(0, x, 0)] for x in positions_by_time[0]]
+    closed: list[list[tuple[int, int, int]]] = []
 
     for t in range(1, len(positions_by_time)):
         unused = set(positions_by_time[t])
         next_tracks: list[list[tuple[int, int]]] = []
         for track in active_tracks:
-            _, last_x = track[-1]
+            _, last_x, _ = track[-1]
             if not unused:
                 closed.append(track)
                 continue
             best = min(unused, key=lambda x: abs(x - last_x))
             if abs(best - last_x) <= max_jump:
                 unused.remove(best)
-                next_tracks.append([*track, (t, best)])
+                next_tracks.append([*track, (t, best, 0)])
             else:
                 closed.append(track)
         for x in sorted(unused):
-            next_tracks.append([(t, x)])
+            next_tracks.append([(t, x, 0)])
         active_tracks = next_tracks
 
     closed.extend(active_tracks)
@@ -50,7 +50,7 @@ def _is_periodic_local(frames: np.ndarray) -> bool:
     return bool(np.array_equal(frames[:-2], frames[2:]) and not np.array_equal(frames[:-1], frames[1:]))
 
 
-def _static_block_track(frames: np.ndarray) -> tuple[tuple[tuple[int, int], ...], int] | None:
+def _static_block_track(frames: np.ndarray) -> tuple[tuple[tuple[int, int, int], ...], int] | None:
     """Return one centroid track for a static active region, if present."""
     frames = np.asarray(frames, dtype=np.uint8)
     if frames.shape[0] < 2 or not np.array_equal(frames[0], frames[-1]):
@@ -63,7 +63,7 @@ def _static_block_track(frames: np.ndarray) -> tuple[tuple[tuple[int, int], ...]
     if xs.size > 1 and not np.all(np.diff(xs) == 1):
         return None
     center = int(np.round(np.mean(xs)))
-    return tuple((t, center) for t in range(frames.shape[0])), int(xs.size)
+    return tuple((t, center, 0) for t in range(frames.shape[0])), int(xs.size)
 
 
 def observar_diferencia_frames(frames: np.ndarray, *, min_persistence: int = 10) -> list[Estructura]:
@@ -107,7 +107,7 @@ def observar_correlacion(frames: np.ndarray, *, min_persistence: int = 10) -> li
     if periodic:
         xs = np.flatnonzero(np.any(frames, axis=0))
         center = int(np.round(np.mean(xs))) if xs.size else 0
-        track = tuple((t, center) for t in range(frames.shape[0]))
+        track = tuple((t, center, 0) for t in range(frames.shape[0]))
         structures.append(
             Estructura(0, "oscilador", "plantilla", track, int(xs.size), 0.9, "correlacion")
         )

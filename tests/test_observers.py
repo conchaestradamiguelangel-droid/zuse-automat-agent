@@ -33,6 +33,7 @@ class ObserverTests(unittest.TestCase):
         self.assertIn("posiciones", data)
         self.assertIn("confianza", data)
         self.assertIn("observador", data)
+        self.assertEqual(len(structure.posiciones[0]), 3)
 
 
 if __name__ == "__main__":
