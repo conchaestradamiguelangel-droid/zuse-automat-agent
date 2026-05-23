@@ -5,9 +5,9 @@ from __future__ import annotations
 from pathlib import Path
 
 from .consensus import consensus_by_type, dominant_type
-from .ether import diff_from_pure_ether
+from .ether import defect_activity_ratio
 from .fixtures import load_fixture
-from .observers import observar_diferencia_frames, observar_kmeans_patches
+from .observers import observar_regiones_rule110
 from .structures import Estructura
 
 
@@ -20,7 +20,6 @@ def evaluate_g1a1_fixture(path: str | Path) -> dict:
     """Evaluate current 1D observers on one validated Rule 110 fixture."""
     fixture = load_fixture(path)
     frames = fixture["frames_esperados"]
-    defect_frames = diff_from_pure_ether(frames)
     metadata = fixture["metadata"]
     expected = metadata["gliders_esperados"][0]
     expected_type = expected_operational_type(expected)
@@ -36,8 +35,7 @@ def evaluate_g1a1_fixture(path: str | Path) -> dict:
     )
     structures = [
         template_structure,
-        *observar_kmeans_patches(defect_frames),
-        *observar_diferencia_frames(defect_frames),
+        *observar_regiones_rule110(frames),
     ]
     consensus = consensus_by_type(structures)
     emitted_types = sorted({structure.tipo for structure in structures})
@@ -52,7 +50,7 @@ def evaluate_g1a1_fixture(path: str | Path) -> dict:
         "consensus": consensus,
         "emitted_types": emitted_types,
         "coherent_detection": coherent,
-        "defect_activity_ratio": float(defect_frames.mean()),
+        "defect_activity_ratio": defect_activity_ratio(frames),
         "structure_count": len(structures),
         "passed": passed,
         "structures": [structure.to_dict() for structure in structures],

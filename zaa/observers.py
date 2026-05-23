@@ -6,6 +6,7 @@ import itertools
 
 import numpy as np
 
+from .ether import diff_from_pure_ether
 from .structures import Estructura, classify_track
 
 
@@ -156,3 +157,114 @@ def run_observers(frames: np.ndarray) -> list[Estructura]:
             observar_diferencia_frames(frames),
         )
     )
+
+
+def find_connected_regions_1d(frame: np.ndarray) -> list[dict]:
+    """Find contiguous active regions in a binary 1D frame."""
+    frame = np.asarray(frame, dtype=np.uint8)
+    if frame.ndim != 1:
+        raise ValueError("frame must be a 1D array")
+
+    regions: list[dict] = []
+    start: int | None = None
+    for idx, value in enumerate(frame):
+        if value and start is None:
+            start = idx
+        elif not value and start is not None:
+            cells = list(range(start, idx))
+            regions.append({"center_x": int(round((start + idx - 1) / 2)), "width": len(cells), "cells": cells})
+            start = None
+
+    if start is not None:
+        cells = list(range(start, frame.shape[0]))
+        regions.append(
+            {
+                "center_x": int(round((start + frame.shape[0] - 1) / 2)),
+                "width": len(cells),
+                "cells": cells,
+            }
+        )
+    return regions
+
+
+def track_regions_1d(
+    defect_frames: np.ndarray,
+    *,
+    min_persistence: int = 5,
+    max_jump: int = 4,
+    max_tracks_before_merge: int = 5,
+) -> list[list[tuple[int, int, int]]]:
+    """Track connected 1D defect regions by centroid proximity."""
+    defect_frames = np.asarray(defect_frames, dtype=np.uint8)
+    if defect_frames.ndim != 2:
+        raise ValueError("defect_frames must have shape (T, W)")
+
+    active_tracks: list[list[tuple[int, int, int]]] = []
+    closed_tracks: list[list[tuple[int, int, int]]] = []
+
+    for t, frame in enumerate(defect_frames):
+        regions = find_connected_regions_1d(frame)
+        unused = set(range(len(regions)))
+        next_tracks: list[list[tuple[int, int, int]]] = []
+
+        for track in active_tracks:
+            _, last_x, _ = track[-1]
+            if not unused:
+                closed_tracks.append(track)
+                continue
+            best_idx = min(unused, key=lambda idx: abs(regions[idx]["center_x"] - last_x))
+            region = regions[best_idx]
+            if abs(region["center_x"] - last_x) <= max_jump:
+                unused.remove(best_idx)
+                next_tracks.append([*track, (t, int(region["center_x"]), int(region["width"]))])
+            else:
+                closed_tracks.append(track)
+
+        for idx in sorted(unused):
+            region = regions[idx]
+            next_tracks.append([(t, int(region["center_x"]), int(region["width"]))])
+
+        active_tracks = next_tracks
+
+    closed_tracks.extend(active_tracks)
+    tracks = [track for track in closed_tracks if len(track) >= min_persistence]
+    if len(tracks) <= max_tracks_before_merge:
+        return tracks
+
+    aggregate: list[tuple[int, int, int]] = []
+    for t, frame in enumerate(defect_frames):
+        xs = np.flatnonzero(frame)
+        if xs.size == 0:
+            continue
+        left = int(xs.min())
+        right = int(xs.max())
+        aggregate.append((t, int(round((left + right) / 2)), right - left + 1))
+    if len(aggregate) >= min_persistence:
+        return [aggregate]
+    return tracks
+
+
+def observar_regiones_rule110(frames: np.ndarray, *, min_persistence: int = 5) -> list[Estructura]:
+    """Observe Rule 110 structures as connected tracks over ether-diff frames."""
+    tracks = track_regions_1d(diff_from_pure_ether(frames), min_persistence=min_persistence)
+    structures: list[Estructura] = []
+    for idx, track in enumerate(tracks):
+        posiciones = tuple((t, x, 0) for t, x, _ in track)
+        tipo, method = classify_track(posiciones)
+        widths = [width for _, _, width in track]
+        if tipo == "bloque" and len(set(widths)) > 1:
+            tipo = "glider"
+            method = "persistencia"
+        avg_width = int(round(float(np.mean(widths))))
+        structures.append(
+            Estructura(
+                id=idx,
+                tipo=tipo,
+                tipo_asignado_por=method,
+                posiciones=posiciones,
+                tamaño=max(1, avg_width),
+                confianza=0.8,
+                observador="regiones_rule110",
+            )
+        )
+    return structures

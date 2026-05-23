@@ -56,17 +56,14 @@ python -m unittest discover -s tests
 
 ### Gate G1a.1
 
-`gate-g1a1` pasa mecanicamente sobre los fixtures validados de Rule 110. Desde
-el commit que introduce `zaa/ether.py`, O2/O3 se evaluan sobre
-`diff(frames, ether_puro)` en lugar de sobre frames brutos. Esto reduce el falso
-consenso causado por el ether denso.
+`gate-g1a1` pasa sobre los fixtures validados de Rule 110 usando
+`diff(frames, ether_puro)` y un tracker de regiones conectadas 1D. El evaluador
+informa `coherent_detection`, `structure_count` y `emitted_types` para separar
+"pasa por tipo presente" de "detecta una particula compacta".
 
-La deteccion coherente de estructuras sigue siendo una deuda metodologica:
-O2/O3 aun pueden fragmentar un defecto en multiples tracks. El evaluador del
-gate informa `coherent_detection` y `structure_count` para separar "pasa por
-tipo presente" de "detecta una particula compacta". Antes de una validacion
-fuerte de Rule 110 hace falta un observador de patches/k-means real o un tracker
-de regiones conectadas sobre el defecto.
+La deuda metodologica restante es mejorar la independencia real de observadores:
+el tracker de regiones reduce la fragmentacion, pero O2 sigue siendo un
+stand-in sin k-means genuino.
 
 ### Fase 2a
 
