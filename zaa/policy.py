@@ -17,7 +17,7 @@ WORLD_SEQUENCE = [
 ]
 BLOCKED_WORLDS = ["rule110_real"]
 MAX_STEPS_DEFAULT = 400
-MAX_REPEATS_DEFAULT = 3
+MAX_REPEATS_DEFAULT = 1
 
 
 @dataclass(frozen=True)
@@ -32,6 +32,7 @@ class PolicyState:
     steps: int
     seed: int
     repeats_in_current_world: int
+    score: float | None = None
 
 
 @dataclass(frozen=True)
@@ -67,11 +68,12 @@ def compute_score(state: PolicyState, prev_dominant: str | None) -> float:
 def decide(
     state: PolicyState,
     prev_dominant: str | None = None,
+    prev_score: float = 0.0,
     max_steps: int = MAX_STEPS_DEFAULT,
     max_repeats: int = MAX_REPEATS_DEFAULT,
 ) -> PolicyDecision:
     """Choose the next exploration action using explicit if/else rules."""
-    score = compute_score(state, prev_dominant)
+    score = compute_score(state, prev_dominant) if state.score is None else state.score
 
     if state.world_type in BLOCKED_WORLDS:
         return PolicyDecision(
@@ -112,7 +114,11 @@ def decide(
             score,
         )
 
-    if len(state.laws_accepted) >= 2 and state.repeats_in_current_world < max_repeats:
+    if (
+        len(state.laws_accepted) >= 2
+        and state.repeats_in_current_world < max_repeats
+        and score > prev_score
+    ):
         return PolicyDecision(
             "repeat_vary_seed",
             state.world_type,

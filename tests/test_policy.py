@@ -1,6 +1,6 @@
 import unittest
 
-from zaa.policy import PolicyState, _next_world, compute_score, decide
+from zaa.policy import MAX_REPEATS_DEFAULT, PolicyState, _next_world, compute_score, decide
 
 
 def state(**overrides):
@@ -38,6 +38,20 @@ class PolicyTests(unittest.TestCase):
         self.assertEqual(decision.action, "repeat_vary_seed")
         self.assertEqual(decision.next_seed, 11)
 
+    def test_many_laws_without_score_improvement_changes_world(self):
+        decision = decide(
+            state(laws_accepted=["a", "b"], repeats_in_current_world=0, score=2.0),
+            prev_score=3.0,
+        )
+        self.assertEqual(decision.action, "change_world")
+
+    def test_many_laws_with_score_improvement_repeats(self):
+        decision = decide(
+            state(laws_accepted=["a", "b"], repeats_in_current_world=0, score=3.0),
+            prev_score=2.0,
+        )
+        self.assertEqual(decision.action, "repeat_vary_seed")
+
     def test_many_laws_at_max_repeats_changes_world(self):
         decision = decide(state(laws_accepted=["a", "b"], repeats_in_current_world=3), max_repeats=3)
         self.assertEqual(decision.action, "change_world")
@@ -64,6 +78,9 @@ class PolicyTests(unittest.TestCase):
     def test_blocked_world_is_skipped(self):
         decision = decide(state(world_type="rule110_real"))
         self.assertEqual(decision.action, "skip_rule110_real")
+
+    def test_max_repeats_default_is_one(self):
+        self.assertEqual(MAX_REPEATS_DEFAULT, 1)
 
 
 if __name__ == "__main__":

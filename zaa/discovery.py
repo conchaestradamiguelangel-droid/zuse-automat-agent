@@ -126,6 +126,7 @@ def run_discovery_loop(config: DiscoveryConfig) -> list[dict]:
     current_seed = config.seed
     repeats_in_current_world = 0
     prev_dominant = None
+    prev_score = 0.0
     results: list[dict] = []
 
     for cycle_id in range(config.cycles):
@@ -148,13 +149,14 @@ def run_discovery_loop(config: DiscoveryConfig) -> list[dict]:
             seed=current_seed,
             repeats_in_current_world=repeats_in_current_world,
         )
-        decision = decide(policy_state, prev_dominant)
+        decision = decide(policy_state, prev_dominant, prev_score)
         result["action_taken"] = decision.action
         result["action_reason"] = decision.reason
         result["score"] = decision.score
         results.append(result)
 
         prev_dominant = result["dominant_type"]
+        prev_score = decision.score
         repeats_in_current_world = repeats_in_current_world + 1 if decision.action == "repeat_vary_seed" else 0
         current_world = decision.next_world
         current_steps = decision.next_steps
