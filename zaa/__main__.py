@@ -187,11 +187,14 @@ def cmd_discover(args: argparse.Namespace) -> None:
         height=args.height,
         seed=args.seed,
         cycles=args.cycles,
+        state_file=args.state_file or None,
     )
     results = run_discovery_loop(config)
     if args.journal:
         path = save_journal(results, args.journal)
         print(f"journal={path}")
+    if config.state_file:
+        print(f"state={config.state_file}")
     for result in results:
         print(
             f"cycle={result['cycle_id']} world={result['world_type']} "
@@ -276,6 +279,7 @@ def build_parser() -> argparse.ArgumentParser:
     discover.add_argument("--seed", type=int, default=20260523)
     discover.add_argument("--cycles", type=int, default=5)
     discover.add_argument("--journal", default="")
+    discover.add_argument("--state-file", default="")
     discover.set_defaults(func=cmd_discover)
 
     return parser

@@ -12,7 +12,7 @@ import numpy as np
 from .consensus import consensus_by_type, dominant_type
 from .cycle_laws import evaluate_cycle_laws
 from .eca import simulate, single_seed_initial_state
-from .history import WorldRecord, update_history
+from .history import WorldRecord, load_agent_state, save_agent_state, update_history
 from .life2d import life_fixture, simulate_life
 from .metrics import summarize_frames
 from .observers import run_observers
@@ -34,6 +34,7 @@ class DiscoveryConfig:
     height: int = 32
     seed: int = 20260523
     cycles: int = 5
+    state_file: str | None = None
 
 
 def build_world(config: DiscoveryConfig, cycle_seed: int | None = None) -> np.ndarray:
@@ -129,8 +130,12 @@ def run_discovery_loop(config: DiscoveryConfig) -> list[dict]:
     prev_dominant = None
     prev_score = 0.0
     results: list[dict] = []
-    world_history: dict[str, WorldRecord] = {}
-    seen_law_signatures: set[tuple[str, ...]] = set()
+    state_path = Path(config.state_file) if config.state_file else None
+    if state_path and state_path.exists() and state_path.stat().st_size > 0:
+        world_history, seen_law_signatures = load_agent_state(state_path)
+    else:
+        world_history: dict[str, WorldRecord] = {}
+        seen_law_signatures: set[tuple[str, ...]] = set()
 
     for cycle_id in range(config.cycles):
         cycle_config = DiscoveryConfig(
@@ -140,6 +145,7 @@ def run_discovery_loop(config: DiscoveryConfig) -> list[dict]:
             height=config.height,
             seed=current_seed,
             cycles=config.cycles,
+            state_file=config.state_file,
         )
         result = run_cycle(cycle_config, cycle_id)
 
@@ -192,6 +198,8 @@ def run_discovery_loop(config: DiscoveryConfig) -> list[dict]:
         current_steps = decision.next_steps
         current_seed = decision.next_seed
 
+    if config.state_file:
+        save_agent_state(world_history, seen_law_signatures, config.state_file)
     return results
 
 

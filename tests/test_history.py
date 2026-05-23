@@ -1,6 +1,9 @@
+import json
+from pathlib import Path
+import tempfile
 import unittest
 
-from zaa.history import WorldRecord, update_history
+from zaa.history import WorldRecord, load_agent_state, save_agent_state, update_history
 
 
 class WorldHistoryTests(unittest.TestCase):
@@ -32,6 +35,50 @@ class WorldHistoryTests(unittest.TestCase):
         update_history(history, "synthetic_glider", 3.0, "ok", sig)
         self.assertEqual(len(history["synthetic_glider"].law_signatures), 2)
         self.assertEqual(history["synthetic_glider"].law_signatures[0], sig)
+
+    def test_save_load_roundtrip(self):
+        history = {}
+        sig = ("densidad_estable", "velocidad_constante")
+        update_history(history, "synthetic_glider", 3.0, "ok", sig)
+        seen = {sig, ("periodicidad",)}
+        with tempfile.NamedTemporaryFile(suffix=".json", delete=False) as f:
+            path = Path(f.name)
+        try:
+            save_agent_state(history, seen, path)
+            loaded_history, loaded_seen = load_agent_state(path)
+            self.assertEqual(loaded_history["synthetic_glider"].visit_count, 1)
+            self.assertAlmostEqual(loaded_history["synthetic_glider"].avg_score, 3.0)
+            self.assertIn(sig, loaded_seen)
+            self.assertIn(("periodicidad",), loaded_seen)
+        finally:
+            path.unlink(missing_ok=True)
+
+    def test_load_empty_state(self):
+        with tempfile.NamedTemporaryFile(
+            suffix=".json", delete=False, mode="w", encoding="utf-8"
+        ) as f:
+            json.dump({"schema_version": 1, "seen_law_signatures": [], "world_history": {}}, f)
+            path = Path(f.name)
+        try:
+            history, seen = load_agent_state(path)
+            self.assertEqual(history, {})
+            self.assertEqual(seen, set())
+        finally:
+            path.unlink(missing_ok=True)
+
+    def test_discovery_preloaded_state_skips_known_signatures(self):
+        from zaa.discovery import DiscoveryConfig, run_discovery_loop
+
+        with tempfile.NamedTemporaryFile(suffix=".json", delete=False) as f:
+            path = Path(f.name)
+        try:
+            run_discovery_loop(DiscoveryConfig("synthetic_glider", cycles=3, state_file=str(path)))
+            results2 = run_discovery_loop(DiscoveryConfig("synthetic_glider", cycles=3, state_file=str(path)))
+            for r in results2:
+                if r["analysis_status"] == "ok":
+                    self.assertFalse(r["is_new_law_signature"])
+        finally:
+            path.unlink(missing_ok=True)
 
 
 if __name__ == "__main__":

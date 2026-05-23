@@ -3,6 +3,8 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
+import json
+from pathlib import Path
 from typing import Any
 
 
@@ -26,9 +28,11 @@ class WorldRecord:
     def to_dict(self) -> dict[str, Any]:
         return {
             "visit_count": self.visit_count,
+            "scores": list(self.scores),
+            "noise_count": self.noise_count,
+            "law_signatures": [list(sig) for sig in self.law_signatures],
             "avg_score": self.avg_score,
             "noise_fraction": self.noise_fraction,
-            "scores": list(self.scores),
         }
 
 
@@ -48,3 +52,37 @@ def update_history(
     if analysis_status == "ruido_no_analizable":
         record.noise_count += 1
     record.law_signatures.append(law_signature)
+
+
+def save_agent_state(
+    world_history: dict[str, WorldRecord],
+    seen_law_signatures: set[tuple[str, ...]],
+    path: str | Path,
+) -> Path:
+    """Persist world history and known signatures to JSON."""
+    output = Path(path)
+    output.parent.mkdir(parents=True, exist_ok=True)
+    state = {
+        "schema_version": 1,
+        "seen_law_signatures": sorted([list(sig) for sig in seen_law_signatures]),
+        "world_history": {wt: record.to_dict() for wt, record in world_history.items()},
+    }
+    output.write_text(json.dumps(state, indent=2, sort_keys=True), encoding="utf-8")
+    return output
+
+
+def load_agent_state(
+    path: str | Path,
+) -> tuple[dict[str, WorldRecord], set[tuple[str, ...]]]:
+    """Load world history and known signatures from JSON."""
+    data = json.loads(Path(path).read_text(encoding="utf-8"))
+    seen_law_signatures = {tuple(sig) for sig in data.get("seen_law_signatures", [])}
+    world_history: dict[str, WorldRecord] = {}
+    for wt, rd in data.get("world_history", {}).items():
+        world_history[wt] = WorldRecord(
+            visit_count=rd["visit_count"],
+            scores=list(rd["scores"]),
+            noise_count=rd.get("noise_count", 0),
+            law_signatures=[tuple(sig) for sig in rd.get("law_signatures", [])],
+        )
+    return world_history, seen_law_signatures
