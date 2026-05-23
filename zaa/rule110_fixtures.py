@@ -45,10 +45,26 @@ class Rule110FixtureSpec:
     auto_align: bool = True
 
 
+@dataclass(frozen=True)
+class TwoGliderFixtureSpec:
+    """Specification for pending two-glider Rule 110 fixture candidates."""
+
+    fixture_id: str
+    spec_a: Rule110FixtureSpec
+    spec_b: Rule110FixtureSpec
+    separation: int
+    steps: int
+
+
 FIXTURE_SPECS = (
     Rule110FixtureSpec("FIX-A", "Glider A candidate", "A", "f1_1", "111110", 3, 2),
     Rule110FixtureSpec("FIX-B", "Glider B candidate", "B", "f1_1", "11111010", 4, -2),
     Rule110FixtureSpec("FIX-C1", "Glider C1 candidate", "C1", "A,f1_1", "111110000", 7, 0),
+)
+
+TWO_GLIDER_SPECS = (
+    TwoGliderFixtureSpec("FIX-D", FIXTURE_SPECS[0], FIXTURE_SPECS[1], 40, 120),
+    TwoGliderFixtureSpec("FIX-E", FIXTURE_SPECS[0], FIXTURE_SPECS[2], 50, 150),
 )
 
 
@@ -74,6 +90,34 @@ def build_initial_condition(spec: Rule110FixtureSpec) -> np.ndarray:
     if end > spec.width:
         raise ValueError("pattern does not fit in fixture width")
     ci[spec.insert_at:end] = pattern
+    return ci
+
+
+def build_two_glider_initial_condition(
+    spec_a: Rule110FixtureSpec,
+    spec_b: Rule110FixtureSpec,
+    separation: int,
+) -> np.ndarray:
+    """Build one CI containing two glider phase strings over the same ether."""
+    if separation <= 0:
+        raise ValueError("separation must be > 0")
+    aligned_a = align_candidate(spec_a)
+    aligned_b = align_candidate(spec_b)
+    ci = ether_state(aligned_a.width)
+
+    pattern_a = bits(aligned_a.pattern)
+    pattern_b = bits(aligned_b.pattern)
+    insert_a = aligned_a.insert_at
+    insert_b = aligned_a.insert_at + separation
+    end_a = insert_a + pattern_a.shape[0]
+    end_b = insert_b + pattern_b.shape[0]
+    if end_b > aligned_a.width:
+        raise ValueError("two-glider fixture does not fit in fixture width")
+    if insert_b < end_a:
+        raise ValueError("two-glider fixture patterns overlap")
+
+    ci[insert_a:end_a] = pattern_a
+    ci[insert_b:end_b] = pattern_b
     return ci
 
 
@@ -201,6 +245,71 @@ def generate_candidate(spec: Rule110FixtureSpec, output_dir: str | Path = "fixtu
 def generate_all_candidates(output_dir: str | Path = "fixtures/pending") -> list[dict[str, Path]]:
     """Generate all pending Rule 110 fixture candidates."""
     return [generate_candidate(spec, output_dir=output_dir) for spec in FIXTURE_SPECS]
+
+
+def generate_two_glider_candidate(
+    spec: TwoGliderFixtureSpec,
+    output_dir: str | Path = "fixtures/pending",
+) -> dict[str, Path]:
+    """Generate one pending two-glider fixture candidate."""
+    out = Path(output_dir)
+    ci = build_two_glider_initial_condition(spec.spec_a, spec.spec_b, spec.separation)
+    frames = simulate(ci, 110, spec.steps)
+    diff_cells = difference_from_ether(frames)
+    npz_path = out / f"{spec.fixture_id}.npz"
+    png_path = out / f"{spec.fixture_id}.png"
+    summary_path = out / f"{spec.fixture_id}.txt"
+    gliders = [
+        {
+            "fixture_id": spec.fixture_id,
+            "tipo": "glider",
+            "nombre": spec.spec_a.glider,
+            "period_t": spec.spec_a.period_t,
+            "displacement_x": spec.spec_a.displacement_x,
+            "x_inicio": align_candidate(spec.spec_a).insert_at,
+            "validation_status": "candidate_not_validated",
+        },
+        {
+            "fixture_id": spec.fixture_id,
+            "tipo": "glider",
+            "nombre": spec.spec_b.glider,
+            "period_t": spec.spec_b.period_t,
+            "displacement_x": spec.spec_b.displacement_x,
+            "x_inicio": align_candidate(spec.spec_a).insert_at + spec.separation,
+            "validation_status": "candidate_not_validated",
+        },
+    ]
+    save_fixture(
+        npz_path,
+        nombre=f"{spec.spec_a.glider}+{spec.spec_b.glider} candidate",
+        fuente=spec.spec_a.source,
+        seed=spec.spec_a.seed,
+        ci=ci,
+        frames_esperados=frames,
+        gliders_esperados=gliders,
+    )
+    summary_path.parent.mkdir(parents=True, exist_ok=True)
+    summary_path.write_text(
+        "\n".join(
+            [
+                f"fixture_id={spec.fixture_id}",
+                f"glider_a={spec.spec_a.glider}",
+                f"glider_b={spec.spec_b.glider}",
+                f"separation={spec.separation}",
+                f"difference_from_pure_ether_cells={diff_cells}",
+                "status=candidate_not_validated",
+                "",
+            ]
+        ),
+        encoding="utf-8",
+    )
+    save_frames_png(frames, png_path, scale=2)
+    return {"npz": npz_path, "png": png_path, "summary": summary_path}
+
+
+def generate_all_two_glider_candidates(output_dir: str | Path = "fixtures/pending") -> list[dict[str, Path]]:
+    """Generate all pending two-glider Rule 110 fixture candidates."""
+    return [generate_two_glider_candidate(spec, output_dir=output_dir) for spec in TWO_GLIDER_SPECS]
 
 
 def promote_candidate_to_validated(

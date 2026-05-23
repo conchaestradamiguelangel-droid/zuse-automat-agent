@@ -9,7 +9,11 @@ from __future__ import annotations
 
 from collections import Counter, defaultdict
 from dataclasses import dataclass
+from pathlib import Path
 from typing import Iterable
+
+from .fixtures import load_fixture
+from .observers import observar_regiones_rule110
 
 
 @dataclass(frozen=True)
@@ -96,3 +100,53 @@ def validate_consistency(
         key: value >= threshold
         for key, value in consistency_table(table).items()
     }
+
+
+def _track_positions_by_time(structure) -> dict[int, int]:
+    return {t: x for t, x, _ in structure.posiciones}
+
+
+def detect_collision_candidates_rule110(frames, *, max_distance: int = 6) -> list[Collision]:
+    """Detect candidate convergence events between coherent Rule 110 tracks."""
+    structures = observar_regiones_rule110(frames)
+    candidates: list[Collision] = []
+    seen: set[tuple[int, int, int]] = set()
+    for i, first in enumerate(structures):
+        first_pos = _track_positions_by_time(first)
+        for j, second in enumerate(structures[i + 1 :], start=i + 1):
+            second_pos = _track_positions_by_time(second)
+            common_times = sorted(set(first_pos) & set(second_pos))
+            for t in common_times:
+                distance = abs(first_pos[t] - second_pos[t])
+                if distance <= max_distance:
+                    key = (i, j, t)
+                    if key in seen:
+                        continue
+                    seen.add(key)
+                    candidates.append(
+                        Collision(
+                            tipo_a=first.tipo,
+                            tipo_b=second.tipo,
+                            resultado="candidato_pendiente",
+                            t=t,
+                            x=int(round((first_pos[t] + second_pos[t]) / 2)),
+                        )
+                    )
+                    break
+    return candidates
+
+
+def run_collision_detection_rule110(fixtures_dir: str | Path = "fixtures/validated") -> dict:
+    """Run Rule 110 collision-candidate detection over validated fixtures."""
+    results: dict[str, list[Collision]] = {}
+    total = 0
+    for path in sorted(Path(fixtures_dir).glob("FIX-*.npz")):
+        fixture = load_fixture(path)
+        fixture_id = fixture["metadata"]["gliders_esperados"][0]["fixture_id"]
+        collisions = detect_collision_candidates_rule110(fixture["frames_esperados"])
+        results[fixture_id] = collisions
+        total += len(collisions)
+    report = {"fixtures": results, "total": total}
+    if total == 0:
+        report["gap"] = "sin_colisiones_en_fixtures_actuales"
+    return report

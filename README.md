@@ -51,6 +51,11 @@ python -m unittest discover -s tests
 - Fase 1b: motor Game of Life y observadores 2D iniciales.
 - Fase 2b: pipeline mecanico inicial de colisiones sinteticas. No conectado
   todavia a Rule 110 real.
+- Fase 2b-real: pipeline de deteccion de eventos candidatos Rule 110 activo.
+  Los fixtures validados actuales (`FIX-A`, `FIX-B`, `FIX-C1`) contienen un
+  solo glider, asi que producen 0 colisiones. Se generan candidatos de dos
+  gliders (`FIX-D`, `FIX-E`) en `fixtures/pending/`, pendientes de revision
+  visual/computacional antes de moverlos a `fixtures/validated/`.
 
 ## Alertas metodologicas vivas
 
