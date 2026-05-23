@@ -80,6 +80,9 @@ Estado: Fase 2b-real bloqueada en Rule 110 hasta resolver una de estas:
 
 Fase 2b sintetica sigue siendo la base valida y no esta afectada.
 
+Confirmado con `W=512`, `separation=200`, `steps=300`: mismo resultado. El
+problema es estructural al enfoque `diff`.
+
 ## Alertas metodologicas vivas
 
 ### Gate G1a.1
