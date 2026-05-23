@@ -64,7 +64,7 @@ FIXTURE_SPECS = (
 
 TWO_GLIDER_SPECS = (
     TwoGliderFixtureSpec("FIX-D", FIXTURE_SPECS[0], FIXTURE_SPECS[1], 40, 120),
-    TwoGliderFixtureSpec("FIX-E", FIXTURE_SPECS[0], FIXTURE_SPECS[2], 50, 150),
+    TwoGliderFixtureSpec("FIX-E", FIXTURE_SPECS[0], FIXTURE_SPECS[2], 100, 180),
 )
 
 

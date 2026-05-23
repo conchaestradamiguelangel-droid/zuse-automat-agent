@@ -57,6 +57,29 @@ python -m unittest discover -s tests
   gliders (`FIX-D`, `FIX-E`) en `fixtures/pending/`, pendientes de revision
   visual/computacional antes de moverlos a `fixtures/validated/`.
 
+## Limite metodologico conocido - diff 2-gliders en W=256
+
+El pipeline `detect_collision_candidates_rule110` no detecta eventos candidatos
+en fixtures de 2 gliders con `W=256`.
+
+Causa: `diff(frames, ether_puro)` produce alrededor de 3.300 celulas de
+perturbacion por glider en un dominio de 256 celdas. Con dos gliders, los campos
+de perturbacion se solapan aunque la separacion sea >=100 celdas.
+`track_regions_1d` ve una sola region fusionada, no dos tracks separados.
+
+Resultado experimental:
+
+- `FIX-E` (`A + C1`, `separation=100`, `steps=180`): 1 track, 0 candidatos.
+- El tracker sigue el baricentro fusionado, no cada glider individualmente.
+
+Estado: Fase 2b-real bloqueada en Rule 110 hasta resolver una de estas:
+
+- Dominio mas ancho (`W=512+`) para separar campos de perturbacion.
+- Tracker basado en diff frame-a-frame en lugar de diff contra ether fijo.
+- Template matching especifico por tipo de glider.
+
+Fase 2b sintetica sigue siendo la base valida y no esta afectada.
+
 ## Alertas metodologicas vivas
 
 ### Gate G1a.1
