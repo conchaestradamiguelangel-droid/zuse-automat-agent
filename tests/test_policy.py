@@ -35,21 +35,23 @@ class PolicyTests(unittest.TestCase):
         self.assertEqual(decision.action, "change_world")
 
     def test_many_laws_repeats_with_new_seed(self):
-        decision = decide(state(laws_accepted=["a", "b"], repeats_in_current_world=0))
+        decision = decide(state(laws_accepted=["a", "b"], repeats_in_current_world=0, is_new_law_signature=True))
         self.assertEqual(decision.action, "repeat_vary_seed")
         self.assertEqual(decision.next_seed, 11)
 
     def test_many_laws_without_score_improvement_changes_world(self):
         decision = decide(
-            state(laws_accepted=["a", "b"], repeats_in_current_world=0, score=2.0),
+            state(laws_accepted=["a", "b"], repeats_in_current_world=0, score=2.0, steps=400),
             prev_score=3.0,
+            max_steps=400,
         )
         self.assertEqual(decision.action, "change_world")
 
     def test_many_laws_with_score_improvement_repeats(self):
         decision = decide(
-            state(laws_accepted=["a", "b"], repeats_in_current_world=0, score=3.0),
+            state(laws_accepted=["a", "b"], repeats_in_current_world=0, score=3.0, steps=400),
             prev_score=2.0,
+            max_steps=400,
         )
         self.assertEqual(decision.action, "repeat_vary_seed")
 
@@ -93,6 +95,20 @@ class PolicyTests(unittest.TestCase):
         decision = decide(state(is_new_law_signature=True, structure_count=3))
         self.assertEqual(decision.action, "repeat_vary_seed")
         self.assertEqual(decision.reason, "firma_leyes_nueva_explorar_mas")
+
+    def test_scale_search_on_known_signature(self):
+        decision = decide(state(laws_accepted=["a", "b"], repeats_in_current_world=0))
+        self.assertEqual(decision.action, "increase_steps")
+        self.assertEqual(decision.reason, "firma_conocida_buscar_escala")
+        self.assertEqual(decision.next_steps, 48)
+
+    def test_scale_search_does_not_fire_after_repeat(self):
+        decision = decide(state(laws_accepted=["a", "b"], repeats_in_current_world=1))
+        self.assertNotEqual(decision.reason, "firma_conocida_buscar_escala")
+
+    def test_scale_search_does_not_fire_at_max_steps(self):
+        decision = decide(state(laws_accepted=["a", "b"], repeats_in_current_world=0, steps=400), max_steps=400)
+        self.assertNotEqual(decision.reason, "firma_conocida_buscar_escala")
 
 
 if __name__ == "__main__":

@@ -80,6 +80,14 @@ class WorldHistoryTests(unittest.TestCase):
         finally:
             path.unlink(missing_ok=True)
 
+    def test_params_tried_recorded(self):
+        history = {}
+        sig = ("densidad_estable",)
+        update_history(history, "rule_30", 2.0, "ok", sig, steps=48, width=64)
+        record = history["rule_30"]
+        self.assertEqual(len(record.params_tried), 1)
+        self.assertEqual(record.params_tried[0], (48, 64, sig))
+
 
 if __name__ == "__main__":
     unittest.main()

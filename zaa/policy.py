@@ -143,6 +143,21 @@ def decide(
         )
 
     if (
+        not state.is_new_law_signature
+        and len(state.laws_accepted) >= 2
+        and state.repeats_in_current_world == 0
+        and state.steps < max_steps
+    ):
+        return PolicyDecision(
+            "increase_steps",
+            state.world_type,
+            min(state.steps * 2, max_steps),
+            state.seed,
+            "firma_conocida_buscar_escala",
+            score,
+        )
+
+    if (
         len(state.laws_accepted) >= 2
         and state.repeats_in_current_world < max_repeats
         and score > prev_score

@@ -16,6 +16,7 @@ class WorldRecord:
     scores: list[float] = field(default_factory=list)
     noise_count: int = 0
     law_signatures: list[tuple[str, ...]] = field(default_factory=list)
+    params_tried: list[tuple[int, int, tuple[str, ...]]] = field(default_factory=list)
 
     @property
     def avg_score(self) -> float:
@@ -33,6 +34,7 @@ class WorldRecord:
             "law_signatures": [list(sig) for sig in self.law_signatures],
             "avg_score": self.avg_score,
             "noise_fraction": self.noise_fraction,
+            "params_tried": [(p[0], p[1], list(p[2])) for p in self.params_tried],
         }
 
 
@@ -42,6 +44,8 @@ def update_history(
     score: float,
     analysis_status: str,
     law_signature: tuple[str, ...] = (),
+    steps: int = 0,
+    width: int = 0,
 ) -> None:
     """Update history for one world after observing a cycle."""
     if world_type not in history:
@@ -52,6 +56,7 @@ def update_history(
     if analysis_status == "ruido_no_analizable":
         record.noise_count += 1
     record.law_signatures.append(law_signature)
+    record.params_tried.append((steps, width, law_signature))
 
 
 def save_agent_state(
@@ -84,5 +89,8 @@ def load_agent_state(
             scores=list(rd["scores"]),
             noise_count=rd.get("noise_count", 0),
             law_signatures=[tuple(sig) for sig in rd.get("law_signatures", [])],
+            params_tried=[
+                (p[0], p[1], tuple(p[2])) for p in rd.get("params_tried", [])
+            ],
         )
     return world_history, seen_law_signatures

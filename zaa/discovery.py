@@ -127,6 +127,7 @@ def run_discovery_loop(config: DiscoveryConfig) -> list[dict]:
     current_steps = config.steps
     current_seed = config.seed
     repeats_in_current_world = 0
+    scale_attempts_in_current_world = 0
     prev_dominant = None
     prev_score = 0.0
     results: list[dict] = []
@@ -172,7 +173,15 @@ def run_discovery_loop(config: DiscoveryConfig) -> list[dict]:
         )
 
         score = compute_score(policy_state, prev_dominant)
-        update_history(world_history, current_world, score, result["analysis_status"], law_signature)
+        update_history(
+            world_history,
+            current_world,
+            score,
+            result["analysis_status"],
+            law_signature,
+            current_steps,
+            config.width,
+        )
         if result["analysis_status"] == "ok":
             seen_law_signatures.add(law_signature)
 
@@ -189,10 +198,15 @@ def run_discovery_loop(config: DiscoveryConfig) -> list[dict]:
         result["world_avg_score_prev"] = world_avg_score_prev
         result["law_signature"] = list(law_signature)
         result["is_new_law_signature"] = is_new_law_signature
+        result["scale_attempt_count"] = scale_attempts_in_current_world
         results.append(result)
 
         prev_dominant = result["dominant_type"]
         prev_score = decision.score
+        if decision.next_world != current_world:
+            scale_attempts_in_current_world = 0
+        elif decision.reason == "firma_conocida_buscar_escala":
+            scale_attempts_in_current_world += 1
         repeats_in_current_world = repeats_in_current_world + 1 if decision.action == "repeat_vary_seed" else 0
         current_world = decision.next_world
         current_steps = decision.next_steps
