@@ -68,6 +68,11 @@ python -m unittest discover -s tests
 - Fase 3c: evaluacion de leyes por ciclo. Para mundos `ok`: velocidad
   constante, periodicidad, densidad estable y tipo unico. Para ruido:
   `laws_status=skipped_noise`. El resultado queda en el journal por ciclo.
+- Fase 3d: politica heuristica v0. El agente decide cada ciclo:
+  `repeat_vary_seed`, `increase_steps`, `change_world` o
+  `skip_rule110_real`. Sin ML. Sin LLM. Sin Rule 110 real. Politica
+  transparente if/else. Registra `action_taken`, `action_reason` y `score` en
+  journal.
 
 ## Limite metodologico conocido - diff 2-gliders en W=256
 

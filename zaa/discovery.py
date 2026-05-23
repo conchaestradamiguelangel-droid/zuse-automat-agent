@@ -16,6 +16,7 @@ from .life2d import life_fixture, simulate_life
 from .metrics import summarize_frames
 from .observers import run_observers
 from .observers2d import run_observers_2d
+from .policy import PolicyState, decide
 from .synthetic import moving_point, oscillator, static_block
 
 
@@ -116,10 +117,50 @@ def run_cycle(config: DiscoveryConfig, cycle_id: int) -> dict:
 
 
 def run_discovery_loop(config: DiscoveryConfig) -> list[dict]:
-    """Run N discovery cycles."""
+    """Run N autonomous discovery cycles."""
     if config.cycles <= 0:
         raise ValueError("cycles must be > 0")
-    return [run_cycle(config, cycle_id) for cycle_id in range(config.cycles)]
+
+    current_world = config.world_type
+    current_steps = config.steps
+    current_seed = config.seed
+    repeats_in_current_world = 0
+    prev_dominant = None
+    results: list[dict] = []
+
+    for cycle_id in range(config.cycles):
+        cycle_config = DiscoveryConfig(
+            world_type=current_world,
+            steps=current_steps,
+            width=config.width,
+            height=config.height,
+            seed=current_seed,
+            cycles=config.cycles,
+        )
+        result = run_cycle(cycle_config, cycle_id)
+        policy_state = PolicyState(
+            world_type=current_world,
+            analysis_status=result["analysis_status"],
+            structure_count=result["structure_count"],
+            laws_accepted=result["laws_accepted"],
+            dominant_type=result["dominant_type"],
+            steps=current_steps,
+            seed=current_seed,
+            repeats_in_current_world=repeats_in_current_world,
+        )
+        decision = decide(policy_state, prev_dominant)
+        result["action_taken"] = decision.action
+        result["action_reason"] = decision.reason
+        result["score"] = decision.score
+        results.append(result)
+
+        prev_dominant = result["dominant_type"]
+        repeats_in_current_world = repeats_in_current_world + 1 if decision.action == "repeat_vary_seed" else 0
+        current_world = decision.next_world
+        current_steps = decision.next_steps
+        current_seed = decision.next_seed
+
+    return results
 
 
 def save_journal(results: list[dict], path: str | Path) -> Path:

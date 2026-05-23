@@ -46,7 +46,8 @@ class DiscoveryTests(unittest.TestCase):
         self.assertGreater(result["metrics"]["density_mean"], 0.0)
 
     def test_synthetic_glider_cycles_explore_positions(self):
-        results = run_discovery_loop(DiscoveryConfig("synthetic_glider", cycles=3, width=64))
+        config = DiscoveryConfig("synthetic_glider", cycles=3, width=64)
+        results = [run_cycle(config, cycle_id) for cycle_id in range(3)]
         self.assertTrue(all(item["structure_count"] > 0 for item in results))
         densities = {item["metrics"]["density_mean"] for item in results}
         self.assertGreaterEqual(len(densities), 2)
