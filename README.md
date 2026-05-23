@@ -73,6 +73,28 @@ python -m unittest discover -s tests
   `skip_rule110_real`. Sin ML. Sin LLM. Sin Rule 110 real. Politica
   transparente if/else. Registra `action_taken`, `action_reason` y `score` en
   journal.
+- Fase 3d-v1 / 3a-fix: politica mas agresiva con `MAX_REPEATS_DEFAULT=1`
+  y `repeat_vary_seed` condicionado a mejora de score. La ley
+  `velocidad_constante` pasa de "mejor caso" a fraccion de estructuras:
+  acepta solo si `passing_fraction >= 0.5` entre estructuras en movimiento.
+- Fase 3e: historial por mundo dentro del run. `WorldRecord` acumula
+  `visit_count`, `scores` y `noise_count`. La politica evita mundos
+  consistentemente ruidosos (`noise_fraction >= 0.75`, `visit_count >= 2`).
+- Fase 3f: firma de leyes como novedad exploratoria. El agente registra
+  `law_signature` e `is_new_law_signature`; una firma nueva dispara
+  `firma_leyes_nueva_explorar_mas`.
+- Fase 3g: persistencia entre runs con `--state-file`. Se guardan/cargan
+  `world_history` y firmas conocidas en JSON (`schema_version=1`).
+- Quinta ley: `complejidad_alta`, basada en entropia media y tasa de
+  transicion (`entropy_mean > 0.8` y `transition_rate > 0.25`). Separa caos
+  estable de orden simple; `rule_30` obtiene firma
+  `(complejidad_alta, densidad_estable)`.
+- Fase 3h: exploracion parametrica por firma conocida. Si una firma ya es
+  conocida pero tiene al menos dos leyes aceptadas, el agente prueba mas
+  escala (`firma_conocida_buscar_escala`) incrementando `steps`.
+- Fase 3i: parametros por mundo. `steps` deja de heredarse globalmente entre
+  mundos; cada mundo conserva su propia escala. Esto elimino la contaminacion
+  por carry-over que hacia que `rule_30` y `rule_110` heredaran `steps=400`.
 
 ## Limite metodologico conocido - diff 2-gliders en W=256
 
@@ -101,6 +123,27 @@ Confirmado con `W=512`, `separation=200`, `steps=300`: mismo resultado. El
 problema es estructural al enfoque `diff`.
 
 ## Alertas metodologicas vivas
+
+### Rule 110 a escala corta
+
+Tras Fase 3i, `rule_110` pudo evaluarse con `steps=24`, `width=64` y seed
+fijo sin heredar escalas altas de otros mundos. Resultado:
+
+- `steps=24`: `status=ok`, `structure_count` alrededor de 69-78 en 6 seeds.
+- Firma robusta principal: `(complejidad_alta, densidad_estable)`.
+- En 2 de 6 seeds tambien aparece `velocidad_constante`.
+- `steps>=48`: pasa a `ruido_no_analizable` por superar el umbral de
+  estructuras.
+
+Interpretacion actual: `rule_110` tiene una ventana corta explorable antes de
+que el ether/estructura densa dispare demasiadas regiones para los
+observadores actuales. Con las 5 leyes actuales, `rule_110@steps=24` y
+`rule_30` no quedan distinguidos de forma estable: ambos comparten la firma
+`(complejidad_alta, densidad_estable)` en su regimen explorable.
+
+Siguiente pregunta metodologica: distinguir caos tipo Rule 30 de transitorio
+caotico Rule 110, posiblemente con una sexta ley de periodicidad/ether local,
+autocorrelacion espacio-temporal o frontera `max_ok_steps`/`noise_boundary`.
 
 ### Gate G1a.1
 
