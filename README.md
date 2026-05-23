@@ -65,6 +65,9 @@ python -m unittest discover -s tests
   GoL 3D y filtro de ruido (`structure_count > 100` ->
   `ruido_no_analizable`). Comando:
   `python -m zaa discover --world synthetic_glider --cycles 5`.
+- Fase 3c: evaluacion de leyes por ciclo. Para mundos `ok`: velocidad
+  constante, periodicidad, densidad estable y tipo unico. Para ruido:
+  `laws_status=skipped_noise`. El resultado queda en el journal por ciclo.
 
 ## Limite metodologico conocido - diff 2-gliders en W=256
 

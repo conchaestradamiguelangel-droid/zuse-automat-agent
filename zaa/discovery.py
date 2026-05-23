@@ -10,6 +10,7 @@ from pathlib import Path
 import numpy as np
 
 from .consensus import consensus_by_type, dominant_type
+from .cycle_laws import evaluate_cycle_laws
 from .eca import simulate, single_seed_initial_state
 from .life2d import life_fixture, simulate_life
 from .metrics import summarize_frames
@@ -89,6 +90,16 @@ def run_cycle(config: DiscoveryConfig, cycle_id: int) -> dict:
     structure_count = len(structures)
     consensus = consensus_by_type(structures)
     analysis_status = "ruido_no_analizable" if structure_count > STRUCTURE_NOISE_THRESHOLD else "ok"
+    if analysis_status == "ok":
+        law_report = evaluate_cycle_laws(structures, frames)
+    else:
+        law_report = {
+            "laws_evaluated": [],
+            "laws_accepted": [],
+            "laws_rejected": [],
+            "laws_status": "skipped_noise",
+            "details": [],
+        }
     return {
         "cycle_id": cycle_id,
         "world_type": config.world_type,
@@ -100,6 +111,7 @@ def run_cycle(config: DiscoveryConfig, cycle_id: int) -> dict:
         "consensus": _serializable_consensus(consensus),
         "metrics": summarize_frames(metric_frames),
         "timestamp": datetime.now(UTC).isoformat(),
+        **law_report,
     }
 
 

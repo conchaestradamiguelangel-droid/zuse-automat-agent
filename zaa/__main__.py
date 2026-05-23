@@ -196,7 +196,8 @@ def cmd_discover(args: argparse.Namespace) -> None:
         print(
             f"cycle={result['cycle_id']} world={result['world_type']} "
             f"structures={result['structure_count']} dominant={result['dominant_type']} "
-            f"status={result['analysis_status']}"
+            f"status={result['analysis_status']} "
+            f"laws_ok={len(result['laws_accepted'])}/{len(result['laws_evaluated'])}"
         )
 
 
