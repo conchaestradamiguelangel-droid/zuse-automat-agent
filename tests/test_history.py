@@ -25,6 +25,14 @@ class WorldHistoryTests(unittest.TestCase):
     def test_noise_fraction_empty_record(self):
         self.assertEqual(WorldRecord().noise_fraction, 0.0)
 
+    def test_law_signatures_recorded(self):
+        history = {}
+        sig = ("densidad_estable", "velocidad_constante")
+        update_history(history, "synthetic_glider", 3.0, "ok", sig)
+        update_history(history, "synthetic_glider", 3.0, "ok", sig)
+        self.assertEqual(len(history["synthetic_glider"].law_signatures), 2)
+        self.assertEqual(history["synthetic_glider"].law_signatures[0], sig)
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -89,6 +89,11 @@ class PolicyTests(unittest.TestCase):
         self.assertEqual(decision.action, "change_world")
         self.assertEqual(decision.reason, "mundo_consistentemente_ruidoso")
 
+    def test_new_law_signature_triggers_repeat(self):
+        decision = decide(state(is_new_law_signature=True, structure_count=3))
+        self.assertEqual(decision.action, "repeat_vary_seed")
+        self.assertEqual(decision.reason, "firma_leyes_nueva_explorar_mas")
+
 
 if __name__ == "__main__":
     unittest.main()

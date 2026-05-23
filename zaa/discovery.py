@@ -130,6 +130,7 @@ def run_discovery_loop(config: DiscoveryConfig) -> list[dict]:
     prev_score = 0.0
     results: list[dict] = []
     world_history: dict[str, WorldRecord] = {}
+    seen_law_signatures: set[tuple[str, ...]] = set()
 
     for cycle_id in range(config.cycles):
         cycle_config = DiscoveryConfig(
@@ -141,6 +142,12 @@ def run_discovery_loop(config: DiscoveryConfig) -> list[dict]:
             cycles=config.cycles,
         )
         result = run_cycle(cycle_config, cycle_id)
+
+        law_signature = tuple(sorted(result["laws_accepted"]))
+        is_new_law_signature = (
+            result["analysis_status"] == "ok"
+            and law_signature not in seen_law_signatures
+        )
 
         record_prev = world_history.get(current_world)
         world_visit_count = record_prev.visit_count if record_prev is not None else 0
@@ -155,10 +162,13 @@ def run_discovery_loop(config: DiscoveryConfig) -> list[dict]:
             steps=current_steps,
             seed=current_seed,
             repeats_in_current_world=repeats_in_current_world,
+            is_new_law_signature=is_new_law_signature,
         )
 
         score = compute_score(policy_state, prev_dominant)
-        update_history(world_history, current_world, score, result["analysis_status"])
+        update_history(world_history, current_world, score, result["analysis_status"], law_signature)
+        if result["analysis_status"] == "ok":
+            seen_law_signatures.add(law_signature)
 
         decision = decide(
             replace(policy_state, score=score),
@@ -171,6 +181,8 @@ def run_discovery_loop(config: DiscoveryConfig) -> list[dict]:
         result["score"] = decision.score
         result["world_visit_count"] = world_visit_count
         result["world_avg_score_prev"] = world_avg_score_prev
+        result["law_signature"] = list(law_signature)
+        result["is_new_law_signature"] = is_new_law_signature
         results.append(result)
 
         prev_dominant = result["dominant_type"]

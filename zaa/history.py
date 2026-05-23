@@ -13,6 +13,7 @@ class WorldRecord:
     visit_count: int = 0
     scores: list[float] = field(default_factory=list)
     noise_count: int = 0
+    law_signatures: list[tuple[str, ...]] = field(default_factory=list)
 
     @property
     def avg_score(self) -> float:
@@ -36,6 +37,7 @@ def update_history(
     world_type: str,
     score: float,
     analysis_status: str,
+    law_signature: tuple[str, ...] = (),
 ) -> None:
     """Update history for one world after observing a cycle."""
     if world_type not in history:
@@ -45,3 +47,4 @@ def update_history(
     record.scores.append(score)
     if analysis_status == "ruido_no_analizable":
         record.noise_count += 1
+    record.law_signatures.append(law_signature)

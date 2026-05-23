@@ -34,6 +34,7 @@ class PolicyState:
     steps: int
     seed: int
     repeats_in_current_world: int
+    is_new_law_signature: bool = False
     score: float | None = None
 
 
@@ -128,6 +129,16 @@ def decide(
             state.steps,
             state.seed,
             "sin_estructuras_max_steps_alcanzado",
+            score,
+        )
+
+    if state.is_new_law_signature and state.repeats_in_current_world < max_repeats:
+        return PolicyDecision(
+            "repeat_vary_seed",
+            state.world_type,
+            state.steps,
+            state.seed + 1,
+            "firma_leyes_nueva_explorar_mas",
             score,
         )
 
