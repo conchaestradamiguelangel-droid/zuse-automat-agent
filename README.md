@@ -49,6 +49,8 @@ python -m unittest discover -s tests
 - Fase 1a: iniciado el pipeline de observadores 1D con datos sinteticos.
   La validacion real contra Rule 110 queda pendiente de fixtures congelados.
 - Fase 1b: motor Game of Life y observadores 2D iniciales.
+- Fase 2b: pipeline mecanico inicial de colisiones sinteticas. No conectado
+  todavia a Rule 110 real.
 
 ## Alertas metodologicas vivas
 
