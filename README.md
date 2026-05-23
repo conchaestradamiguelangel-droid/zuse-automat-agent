@@ -59,9 +59,12 @@ python -m unittest discover -s tests
   solo glider, asi que producen 0 colisiones. Se generan candidatos de dos
   gliders (`FIX-D`, `FIX-E`) en `fixtures/pending/`, pendientes de revision
   visual/computacional antes de moverlos a `fixtures/validated/`.
-- Fase 3a: discovery loop mecanico activo. Mundos: sinteticos 1D, Game of
+- Fase 3a/3b: discovery loop mecanico activo. Mundos: sinteticos 1D, Game of
   Life, ECA arbitrario. Sin LLM. Sin Rule 110 real (tracker bloqueado).
-  Comando: `python -m zaa discover --world synthetic_glider --cycles 5`.
+  Fase 3b anade exploracion por ciclo (seed variante), metricas correctas para
+  GoL 3D y filtro de ruido (`structure_count > 100` ->
+  `ruido_no_analizable`). Comando:
+  `python -m zaa discover --world synthetic_glider --cycles 5`.
 
 ## Limite metodologico conocido - diff 2-gliders en W=256
 

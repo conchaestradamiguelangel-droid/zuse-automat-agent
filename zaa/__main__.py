@@ -195,7 +195,8 @@ def cmd_discover(args: argparse.Namespace) -> None:
     for result in results:
         print(
             f"cycle={result['cycle_id']} world={result['world_type']} "
-            f"structures={result['structure_count']} dominant={result['dominant_type']}"
+            f"structures={result['structure_count']} dominant={result['dominant_type']} "
+            f"status={result['analysis_status']}"
         )
 
 

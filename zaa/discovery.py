@@ -18,6 +18,9 @@ from .observers2d import run_observers_2d
 from .synthetic import moving_point, oscillator, static_block
 
 
+STRUCTURE_NOISE_THRESHOLD = 100
+
+
 @dataclass(frozen=True)
 class DiscoveryConfig:
     """Configuration for one controlled discovery loop."""
@@ -30,14 +33,28 @@ class DiscoveryConfig:
     cycles: int = 5
 
 
-def build_world(config: DiscoveryConfig) -> np.ndarray:
+def build_world(config: DiscoveryConfig, cycle_seed: int | None = None) -> np.ndarray:
     """Build frames for a controlled world."""
+    if cycle_seed is None:
+        cycle_seed = config.seed
     if config.world_type == "synthetic_glider":
-        return moving_point(steps=config.steps + 1, width=config.width)
+        start = (cycle_seed % (config.width // 2)) + 4
+        velocity = 1 + (cycle_seed % 2)
+        frames = moving_point(steps=config.steps + 1, width=config.width, start=start, velocity=velocity)
+        if cycle_seed % 2:
+            frames |= moving_point(
+                steps=config.steps + 1,
+                width=config.width,
+                start=(start + 7) % config.width,
+                velocity=velocity,
+            )
+        return frames
     if config.world_type == "synthetic_oscilador":
-        return oscillator(steps=config.steps + 1, width=config.width)
+        center = (cycle_seed % (config.width - 8)) + 4
+        return oscillator(steps=config.steps + 1, width=config.width, center=center)
     if config.world_type == "synthetic_bloque":
-        return static_block(steps=config.steps + 1, width=config.width)
+        start = (cycle_seed % (config.width // 2)) + 4
+        return static_block(steps=config.steps + 1, width=config.width, start=start)
     if config.world_type == "life_glider":
         return simulate_life(life_fixture("glider", height=config.height, width=config.width), config.steps)
     if config.world_type == "life_blinker":
@@ -46,7 +63,9 @@ def build_world(config: DiscoveryConfig) -> np.ndarray:
         return simulate_life(life_fixture("block", height=config.height, width=config.width), config.steps)
     if config.world_type.startswith("rule_"):
         rule = int(config.world_type.removeprefix("rule_"))
-        return simulate(single_seed_initial_state(config.width), rule, config.steps)
+        from .eca import random_initial_state
+
+        return simulate(random_initial_state(config.width, seed=cycle_seed), rule, config.steps)
     raise ValueError(f"unknown world_type: {config.world_type}")
 
 
@@ -56,24 +75,28 @@ def _serializable_consensus(consensus: dict) -> dict[str, bool]:
 
 def run_cycle(config: DiscoveryConfig, cycle_id: int) -> dict:
     """Run one mechanical discovery cycle."""
-    frames = build_world(config)
+    cycle_seed = config.seed + cycle_id
+    frames = build_world(config, cycle_seed)
     if frames.ndim == 2:
         structures = run_observers(frames)
         metric_frames = frames
     elif frames.ndim == 3:
         structures = run_observers_2d(frames)
-        metric_frames = frames[:, 0, :]
+        metric_frames = frames.reshape(frames.shape[0], -1)
     else:
         raise ValueError("frames must be 2D or 3D")
 
+    structure_count = len(structures)
     consensus = consensus_by_type(structures)
+    analysis_status = "ruido_no_analizable" if structure_count > STRUCTURE_NOISE_THRESHOLD else "ok"
     return {
         "cycle_id": cycle_id,
         "world_type": config.world_type,
         "steps": config.steps,
         "width": config.width,
-        "structure_count": len(structures),
+        "structure_count": structure_count,
         "dominant_type": dominant_type(structures),
+        "analysis_status": analysis_status,
         "consensus": _serializable_consensus(consensus),
         "metrics": summarize_frames(metric_frames),
         "timestamp": datetime.now(UTC).isoformat(),

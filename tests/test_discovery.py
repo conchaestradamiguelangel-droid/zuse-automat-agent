@@ -34,11 +34,30 @@ class DiscoveryTests(unittest.TestCase):
             "width",
             "structure_count",
             "dominant_type",
+            "analysis_status",
             "consensus",
             "metrics",
             "timestamp",
         ]:
             self.assertIn(key, result)
+
+    def test_life_glider_metrics_are_nonzero(self):
+        result = run_cycle(DiscoveryConfig("life_glider", steps=20, width=32, height=32), 0)
+        self.assertGreater(result["metrics"]["density_mean"], 0.0)
+
+    def test_synthetic_glider_cycles_explore_positions(self):
+        results = run_discovery_loop(DiscoveryConfig("synthetic_glider", cycles=3, width=64))
+        self.assertTrue(all(item["structure_count"] > 0 for item in results))
+        densities = {item["metrics"]["density_mean"] for item in results}
+        self.assertGreaterEqual(len(densities), 2)
+
+    def test_rule_30_is_marked_as_noise(self):
+        result = run_cycle(DiscoveryConfig("rule_30", steps=200, width=256), 0)
+        self.assertEqual(result["analysis_status"], "ruido_no_analizable")
+
+    def test_synthetic_glider_status_ok(self):
+        result = run_cycle(DiscoveryConfig("synthetic_glider"), 0)
+        self.assertEqual(result["analysis_status"], "ok")
 
     def test_run_discovery_loop_cycles(self):
         results = run_discovery_loop(DiscoveryConfig("synthetic_bloque", cycles=3))
