@@ -4,6 +4,8 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 
+from .history import WorldRecord
+
 
 WORLD_SEQUENCE = [
     "synthetic_glider",
@@ -71,6 +73,7 @@ def decide(
     prev_score: float = 0.0,
     max_steps: int = MAX_STEPS_DEFAULT,
     max_repeats: int = MAX_REPEATS_DEFAULT,
+    world_record: WorldRecord | None = None,
 ) -> PolicyDecision:
     """Choose the next exploration action using explicit if/else rules."""
     score = compute_score(state, prev_dominant) if state.score is None else state.score
@@ -82,6 +85,20 @@ def decide(
             state.steps,
             state.seed,
             "world_bloqueado",
+            score,
+        )
+
+    if (
+        world_record is not None
+        and world_record.noise_fraction >= 0.75
+        and world_record.visit_count >= 2
+    ):
+        return PolicyDecision(
+            "change_world",
+            _next_world(state.world_type),
+            state.steps,
+            state.seed,
+            "mundo_consistentemente_ruidoso",
             score,
         )
 

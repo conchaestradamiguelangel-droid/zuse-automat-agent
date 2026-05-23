@@ -1,5 +1,6 @@
 import unittest
 
+from zaa.history import WorldRecord
 from zaa.policy import MAX_REPEATS_DEFAULT, PolicyState, _next_world, compute_score, decide
 
 
@@ -81,6 +82,12 @@ class PolicyTests(unittest.TestCase):
 
     def test_max_repeats_default_is_one(self):
         self.assertEqual(MAX_REPEATS_DEFAULT, 1)
+
+    def test_history_consistently_noisy_changes_world(self):
+        record = WorldRecord(visit_count=4, scores=[-1.0, -1.0, -1.0, 1.0], noise_count=3)
+        decision = decide(state(), world_record=record)
+        self.assertEqual(decision.action, "change_world")
+        self.assertEqual(decision.reason, "mundo_consistentemente_ruidoso")
 
 
 if __name__ == "__main__":

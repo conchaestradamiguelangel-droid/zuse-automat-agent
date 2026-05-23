@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from dataclasses import dataclass
+from dataclasses import dataclass, replace
 from datetime import UTC, datetime
 import json
 from pathlib import Path
@@ -12,11 +12,12 @@ import numpy as np
 from .consensus import consensus_by_type, dominant_type
 from .cycle_laws import evaluate_cycle_laws
 from .eca import simulate, single_seed_initial_state
+from .history import WorldRecord, update_history
 from .life2d import life_fixture, simulate_life
 from .metrics import summarize_frames
 from .observers import run_observers
 from .observers2d import run_observers_2d
-from .policy import PolicyState, decide
+from .policy import PolicyState, compute_score, decide
 from .synthetic import moving_point, oscillator, static_block
 
 
@@ -128,6 +129,7 @@ def run_discovery_loop(config: DiscoveryConfig) -> list[dict]:
     prev_dominant = None
     prev_score = 0.0
     results: list[dict] = []
+    world_history: dict[str, WorldRecord] = {}
 
     for cycle_id in range(config.cycles):
         cycle_config = DiscoveryConfig(
@@ -139,6 +141,11 @@ def run_discovery_loop(config: DiscoveryConfig) -> list[dict]:
             cycles=config.cycles,
         )
         result = run_cycle(cycle_config, cycle_id)
+
+        record_prev = world_history.get(current_world)
+        world_visit_count = record_prev.visit_count if record_prev is not None else 0
+        world_avg_score_prev = record_prev.avg_score if record_prev is not None else 0.0
+
         policy_state = PolicyState(
             world_type=current_world,
             analysis_status=result["analysis_status"],
@@ -149,10 +156,21 @@ def run_discovery_loop(config: DiscoveryConfig) -> list[dict]:
             seed=current_seed,
             repeats_in_current_world=repeats_in_current_world,
         )
-        decision = decide(policy_state, prev_dominant, prev_score)
+
+        score = compute_score(policy_state, prev_dominant)
+        update_history(world_history, current_world, score, result["analysis_status"])
+
+        decision = decide(
+            replace(policy_state, score=score),
+            prev_dominant,
+            prev_score,
+            world_record=world_history.get(current_world),
+        )
         result["action_taken"] = decision.action
         result["action_reason"] = decision.reason
         result["score"] = decision.score
+        result["world_visit_count"] = world_visit_count
+        result["world_avg_score_prev"] = world_avg_score_prev
         results.append(result)
 
         prev_dominant = result["dominant_type"]
