@@ -39,6 +39,9 @@ python -m zaa validate-rule110-fixtures --pending fixtures\pending --validated f
 python -m zaa observe-life --kind glider
 python -m zaa gate-g1a1 --fixtures fixtures\validated
 python -m zaa laws-2a --fixtures fixtures\validated --out reports\fase2a
+python -m zaa discover --world synthetic_glider --cycles 5
+python -m zaa discover --world life_glider --cycles 3 --journal journal.jsonl
+python -m zaa discover --world rule_30 --cycles 5 --steps 200 --width 256
 python -m unittest discover -s tests
 ```
 
@@ -56,6 +59,9 @@ python -m unittest discover -s tests
   solo glider, asi que producen 0 colisiones. Se generan candidatos de dos
   gliders (`FIX-D`, `FIX-E`) en `fixtures/pending/`, pendientes de revision
   visual/computacional antes de moverlos a `fixtures/validated/`.
+- Fase 3a: discovery loop mecanico activo. Mundos: sinteticos 1D, Game of
+  Life, ECA arbitrario. Sin LLM. Sin Rule 110 real (tracker bloqueado).
+  Comando: `python -m zaa discover --world synthetic_glider --cycles 5`.
 
 ## Limite metodologico conocido - diff 2-gliders en W=256
 

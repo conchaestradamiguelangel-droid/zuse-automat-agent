@@ -9,6 +9,7 @@ from .eca import random_initial_state, simulate, single_seed_initial_state
 from .gates import evaluate_g1a1
 from .metrics import summarize_frames
 from .consensus import consensus_by_type, dominant_type
+from .discovery import DiscoveryConfig, run_discovery_loop, save_journal
 from .observers import run_observers
 from .observers2d import run_observers_2d
 from .packed_eca import array_to_int, run_packed
@@ -178,6 +179,26 @@ def cmd_laws_2a(args: argparse.Namespace) -> None:
         print(f"markdown={saved['markdown']}")
 
 
+def cmd_discover(args: argparse.Namespace) -> None:
+    config = DiscoveryConfig(
+        world_type=args.world,
+        steps=args.steps,
+        width=args.width,
+        height=args.height,
+        seed=args.seed,
+        cycles=args.cycles,
+    )
+    results = run_discovery_loop(config)
+    if args.journal:
+        path = save_journal(results, args.journal)
+        print(f"journal={path}")
+    for result in results:
+        print(
+            f"cycle={result['cycle_id']} world={result['world_type']} "
+            f"structures={result['structure_count']} dominant={result['dominant_type']}"
+        )
+
+
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(prog="zaa", description="ZUSE AUTOMAT AGENT Fase 0a")
     sub = parser.add_subparsers(dest="command", required=True)
@@ -242,6 +263,16 @@ def build_parser() -> argparse.ArgumentParser:
     laws.add_argument("--fixtures", default="fixtures/validated")
     laws.add_argument("--out", default="")
     laws.set_defaults(func=cmd_laws_2a)
+
+    discover = sub.add_parser("discover", help="run mechanical discovery loop on controlled worlds")
+    discover.add_argument("--world", required=True)
+    discover.add_argument("--steps", type=int, default=24)
+    discover.add_argument("--width", type=int, default=64)
+    discover.add_argument("--height", type=int, default=32)
+    discover.add_argument("--seed", type=int, default=20260523)
+    discover.add_argument("--cycles", type=int, default=5)
+    discover.add_argument("--journal", default="")
+    discover.set_defaults(func=cmd_discover)
 
     return parser
 
