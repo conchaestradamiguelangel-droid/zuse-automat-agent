@@ -131,6 +131,7 @@ def run_discovery_loop(config: DiscoveryConfig) -> list[dict]:
     prev_dominant = None
     prev_score = 0.0
     results: list[dict] = []
+    world_steps: dict[str, int] = {}
     state_path = Path(config.state_file) if config.state_file else None
     if state_path and state_path.exists() and state_path.stat().st_size > 0:
         world_history, seen_law_signatures = load_agent_state(state_path)
@@ -208,8 +209,12 @@ def run_discovery_loop(config: DiscoveryConfig) -> list[dict]:
         elif decision.reason == "firma_conocida_buscar_escala":
             scale_attempts_in_current_world += 1
         repeats_in_current_world = repeats_in_current_world + 1 if decision.action == "repeat_vary_seed" else 0
+        world_steps[current_world] = decision.next_steps if decision.next_world == current_world else current_steps
+        if decision.next_world != current_world:
+            current_steps = world_steps.get(decision.next_world, config.steps)
+        else:
+            current_steps = decision.next_steps
         current_world = decision.next_world
-        current_steps = decision.next_steps
         current_seed = decision.next_seed
 
     if config.state_file:

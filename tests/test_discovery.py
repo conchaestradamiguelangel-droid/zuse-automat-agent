@@ -74,6 +74,14 @@ class DiscoveryTests(unittest.TestCase):
         for line in lines:
             self.assertIn("world_type", json.loads(line))
 
+    def test_world_steps_do_not_carry_over(self):
+        config = DiscoveryConfig("synthetic_glider", cycles=20, steps=24)
+        results = run_discovery_loop(config)
+        for r in results:
+            if r["world_type"] == "rule_30":
+                self.assertLessEqual(r["steps"], 48)
+                return
+
 
 if __name__ == "__main__":
     unittest.main()
