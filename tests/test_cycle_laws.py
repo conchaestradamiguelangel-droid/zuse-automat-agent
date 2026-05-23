@@ -1,6 +1,7 @@
 import unittest
 
 from zaa.cycle_laws import (
+    evaluate_complexity_law,
     evaluate_density_law,
     evaluate_periodicity_law,
     evaluate_structure_count_law,
@@ -57,6 +58,25 @@ class CycleLawTests(unittest.TestCase):
         self.assertIn("passing_fraction", result.evidence)
         self.assertIn("passing_count", result.evidence)
         self.assertIn("n_structures_tested", result.evidence)
+
+    def test_complexity_law_accepts_rule30(self):
+        from zaa.eca import random_initial_state, simulate
+
+        frames = simulate(random_initial_state(64, seed=20260523), 30, 24)
+        result = evaluate_complexity_law(frames)
+        self.assertTrue(result.accepted)
+        self.assertIn("entropy_mean", result.evidence)
+        self.assertIn("transition_rate", result.evidence)
+
+    def test_complexity_law_rejects_static_block(self):
+        frames = static_block(steps=24, width=64)
+        result = evaluate_complexity_law(frames)
+        self.assertFalse(result.accepted)
+
+    def test_complexity_law_rejects_moving_point(self):
+        frames = moving_point(steps=24, width=64)
+        result = evaluate_complexity_law(frames)
+        self.assertFalse(result.accepted)
 
 
 if __name__ == "__main__":

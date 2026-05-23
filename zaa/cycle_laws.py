@@ -6,6 +6,7 @@ from dataclasses import dataclass
 
 import numpy as np
 
+from .metrics import active_transition_rate, shannon_entropy
 from .structures import Estructura
 
 
@@ -103,6 +104,22 @@ def evaluate_structure_count_law(structures: list[Estructura]) -> CycleLawResult
     )
 
 
+def evaluate_complexity_law(frames: np.ndarray) -> CycleLawResult:
+    """Accept if frames show high entropy and high cell-transition rate."""
+    frames = np.asarray(frames, dtype=np.uint8)
+    if frames.ndim == 3:
+        frames = frames.reshape(frames.shape[0], -1)
+    entropy_mean = float(np.mean([shannon_entropy(frame) for frame in frames]))
+    transition_rate = active_transition_rate(frames)
+    accepted = entropy_mean > 0.8 and transition_rate > 0.25
+    return CycleLawResult(
+        "complejidad_alta",
+        accepted,
+        "complejidad_alta_detectada" if accepted else "complejidad_baja",
+        {"entropy_mean": entropy_mean, "transition_rate": transition_rate},
+    )
+
+
 def evaluate_cycle_laws(structures: list[Estructura], frames: np.ndarray) -> dict:
     """Evaluate all cycle-level law candidates."""
     results = [
@@ -110,6 +127,7 @@ def evaluate_cycle_laws(structures: list[Estructura], frames: np.ndarray) -> dic
         evaluate_periodicity_law(structures),
         evaluate_density_law(frames),
         evaluate_structure_count_law(structures),
+        evaluate_complexity_law(frames),
     ]
     return {
         "laws_evaluated": [result.name for result in results],
