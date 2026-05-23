@@ -43,6 +43,21 @@ class CycleLawTests(unittest.TestCase):
         self.assertEqual(result["laws_status"], "skipped_noise")
         self.assertEqual(result["laws_accepted"], [])
 
+    def test_velocity_law_rejects_chaotic_rule30(self):
+        from zaa.eca import random_initial_state, simulate
+
+        frames = simulate(random_initial_state(64, seed=20260523), 30, 24)
+        structures = run_observers(frames)
+        result = evaluate_velocity_law(structures)
+        self.assertFalse(result.accepted)
+
+    def test_velocity_law_evidence_has_fraction(self):
+        structures = run_observers(moving_point(steps=24, width=64))
+        result = evaluate_velocity_law(structures)
+        self.assertIn("passing_fraction", result.evidence)
+        self.assertIn("passing_count", result.evidence)
+        self.assertIn("n_structures_tested", result.evidence)
+
 
 if __name__ == "__main__":
     unittest.main()

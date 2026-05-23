@@ -28,30 +28,35 @@ class CycleLawResult:
 
 
 def evaluate_velocity_law(structures: list[Estructura]) -> CycleLawResult:
-    """Accept if an observed structure has approximately linear x(t)."""
+    """Accept if >= 50% of moving structures have approximately linear x(t)."""
     tested = 0
-    min_residual = float("inf")
+    passing_count = 0
     max_velocity = 0.0
     for structure in structures:
         if len(structure.posiciones) < 4:
             continue
-        tested += 1
         ts = np.array([pos[0] for pos in structure.posiciones], dtype=np.float64)
         xs = np.array([pos[1] for pos in structure.posiciones], dtype=np.float64)
         a, b = np.polyfit(ts, xs, 1)
         residuals = xs - (a * ts + b)
         normalized = float(np.std(residuals) / (np.max(xs) - np.min(xs) + 1e-9))
-        min_residual = min(min_residual, normalized)
-        max_velocity = max(max_velocity, abs(float(a)))
+        velocity = abs(float(a))
+        max_velocity = max(max_velocity, velocity)
+        if velocity > 0.05:
+            tested += 1
+            if normalized < 0.15:
+                passing_count += 1
 
-    accepted = tested > 0 and min_residual < 0.15 and max_velocity > 0.05
+    passing_fraction = passing_count / tested if tested > 0 else 0.0
+    accepted = tested > 0 and passing_fraction >= 0.5
     return CycleLawResult(
         "velocidad_constante",
         accepted,
         "velocidad_constante_detectada" if accepted else "sin_movimiento_lineal",
         {
             "n_structures_tested": tested,
-            "min_residual": 0.0 if min_residual == float("inf") else min_residual,
+            "passing_count": passing_count,
+            "passing_fraction": passing_fraction,
             "max_velocity": max_velocity,
         },
     )
