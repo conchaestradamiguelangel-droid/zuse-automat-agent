@@ -150,6 +150,10 @@ def cmd_gate_g1a1(args: argparse.Namespace) -> None:
             "fixture="
             f"{result['fixture_id']}:expected={result['expected_type']}:"
             f"dominant={result['dominant_type']}:passed={result['passed']}:"
+            f"coherent={result['coherent_detection']}:"
+            f"structures={result['structure_count']}:"
+            f"types={result['emitted_types']}:"
+            f"defect_activity={result['defect_activity_ratio']:.4f}:"
             f"consensus={result['consensus']}"
         )
 

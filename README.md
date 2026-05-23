@@ -54,15 +54,17 @@ python -m unittest discover -s tests
 
 ### Gate G1a.1
 
-`gate-g1a1` pasa mecanicamente sobre los fixtures validados de Rule 110, pero
-la deteccion coherente de estructuras en ether denso sigue pendiente. Los
-observadores O2/O3 actuales fueron disenados para fondos vacios y pueden emitir
-muchas estructuras fragmentadas sobre el ether; el consenso 2-de-3 puede pasar
-por presencia de tipo, no por detectar una particula coherente.
+`gate-g1a1` pasa mecanicamente sobre los fixtures validados de Rule 110. Desde
+el commit que introduce `zaa/ether.py`, O2/O3 se evaluan sobre
+`diff(frames, ether_puro)` en lugar de sobre frames brutos. Esto reduce el falso
+consenso causado por el ether denso.
 
-Antes de cerrar una validacion fuerte de Rule 110, los observadores deben operar
-sobre `diff(frames, ether_puro)` o incorporar un observador de patches/k-means
-real que separe estructura y fondo.
+La deteccion coherente de estructuras sigue siendo una deuda metodologica:
+O2/O3 aun pueden fragmentar un defecto en multiples tracks. El evaluador del
+gate informa `coherent_detection` y `structure_count` para separar "pasa por
+tipo presente" de "detecta una particula compacta". Antes de una validacion
+fuerte de Rule 110 hace falta un observador de patches/k-means real o un tracker
+de regiones conectadas sobre el defecto.
 
 ### Fase 2a
 
