@@ -85,15 +85,39 @@ class DiscoveryTests(unittest.TestCase):
     def test_rule110_noise_boundary_prevents_repeated_large_scales(self):
         state = {
             "schema_version": 1,
-            "seen_law_signatures": [["complejidad_alta", "densidad_estable", "frontera_temporal"]],
+            "seen_law_signatures": [
+                [
+                    "complejidad_alta",
+                    "densidad_estable",
+                    "frontera_temporal",
+                    "temporal_scale_stability",
+                ]
+            ],
             "world_history": {
                 "rule_110": {
                     "visit_count": 2,
                     "scores": [3.0, -1.0],
                     "noise_count": 1,
-                    "law_signatures": [["complejidad_alta", "densidad_estable", "frontera_temporal"], []],
+                    "law_signatures": [
+                        [
+                            "complejidad_alta",
+                            "densidad_estable",
+                            "frontera_temporal",
+                            "temporal_scale_stability",
+                        ],
+                        [],
+                    ],
                     "params_tried": [
-                        [24, 64, ["complejidad_alta", "densidad_estable", "frontera_temporal"]],
+                        [
+                            24,
+                            64,
+                            [
+                                "complejidad_alta",
+                                "densidad_estable",
+                                "frontera_temporal",
+                                "temporal_scale_stability",
+                            ],
+                        ],
                         [48, 64, []],
                     ],
                     "max_ok_steps": 24,

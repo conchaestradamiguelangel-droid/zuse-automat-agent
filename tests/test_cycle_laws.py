@@ -7,6 +7,7 @@ from zaa.cycle_laws import (
     evaluate_frontera_temporal,
     evaluate_periodicity_law,
     evaluate_structure_count_law,
+    evaluate_temporal_scale_stability,
     evaluate_velocity_law,
 )
 from zaa.discovery import DiscoveryConfig, run_cycle
@@ -107,6 +108,28 @@ class CycleLawTests(unittest.TestCase):
         result = evaluate_frontera_temporal(frames, threshold_max=_FRONTERA_THRESHOLD_MAX)
         for key in ("transition_rate", "entropy_mean", "threshold_max"):
             self.assertIn(key, result.evidence)
+
+    def test_temporal_scale_stability_accepts_low_steps_chaotic_frames(self):
+        from zaa.eca import random_initial_state, simulate
+
+        frames = simulate(random_initial_state(64, seed=20260523), 110, 24)
+        result = evaluate_temporal_scale_stability(frames, steps=24)
+        self.assertTrue(result.accepted)
+        self.assertEqual(result.name, "temporal_scale_stability")
+
+    def test_temporal_scale_stability_rejects_high_steps_chaotic_frames(self):
+        from zaa.eca import random_initial_state, simulate
+
+        frames = simulate(random_initial_state(64, seed=20260523), 110, 192)
+        result = evaluate_temporal_scale_stability(frames, steps=192)
+        self.assertFalse(result.accepted)
+
+    def test_temporal_scale_stability_rejects_zero_transition_rate(self):
+        frames = static_block(steps=24, width=64)
+        result = evaluate_temporal_scale_stability(frames, steps=24)
+        self.assertFalse(result.accepted)
+        self.assertEqual(result.reason, "sin_transiciones_temporales")
+        self.assertEqual(result.evidence["transition_rate"], 0.0)
 
 
 if __name__ == "__main__":

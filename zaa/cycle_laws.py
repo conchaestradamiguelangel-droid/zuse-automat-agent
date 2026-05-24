@@ -6,7 +6,7 @@ from dataclasses import dataclass
 
 import numpy as np
 
-from .metrics import active_transition_rate, shannon_entropy
+from .metrics import active_transition_rate, gzip_compressibility, shannon_entropy
 from .structures import Estructura
 
 
@@ -14,6 +14,12 @@ from .structures import Estructura
 # seeds 20260523..20260528. Midpoint between max(rule_110)=0.4147
 # and min(rule_30)=0.4557.
 _FRONTERA_THRESHOLD_MAX: float = 0.4352
+
+# Calibrated 2026-05-24 on datasets/fase2c_v3.csv using
+# temporal_load = steps * gzip_ratio / transition_rate. Best threshold
+# over 120 ECA scale samples: accuracy=0.9083, precision_ok=0.8857,
+# recall_ok=0.9538.
+_TEMPORAL_SCALE_THRESHOLD: float = 19.03
 
 
 @dataclass(frozen=True)
@@ -151,7 +157,43 @@ def evaluate_frontera_temporal(
     )
 
 
-def evaluate_cycle_laws(structures: list[Estructura], frames: np.ndarray) -> dict:
+def evaluate_temporal_scale_stability(
+    frames: np.ndarray,
+    steps: int,
+    threshold: float = _TEMPORAL_SCALE_THRESHOLD,
+) -> CycleLawResult:
+    """Accept if temporal load stays below the calibrated analyzability scale."""
+    frames_arr = np.asarray(frames, dtype=np.uint8)
+    transition_rate = active_transition_rate(frames_arr)
+    gzip_ratio = float(gzip_compressibility(frames_arr))
+    if transition_rate == 0.0:
+        return CycleLawResult(
+            "temporal_scale_stability",
+            False,
+            "sin_transiciones_temporales",
+            {
+                "temporal_load": float("inf"),
+                "C": threshold,
+                "gzip_ratio": gzip_ratio,
+                "transition_rate": transition_rate,
+            },
+        )
+    temporal_load = float(steps * gzip_ratio / transition_rate)
+    accepted = temporal_load < threshold
+    return CycleLawResult(
+        "temporal_scale_stability",
+        accepted,
+        "escala_temporal_estable" if accepted else "escala_temporal_inestable",
+        {
+            "temporal_load": temporal_load,
+            "C": threshold,
+            "gzip_ratio": gzip_ratio,
+            "transition_rate": transition_rate,
+        },
+    )
+
+
+def evaluate_cycle_laws(structures: list[Estructura], frames: np.ndarray, steps: int) -> dict:
     """Evaluate all cycle-level law candidates."""
     results = [
         evaluate_velocity_law(structures),
@@ -160,6 +202,7 @@ def evaluate_cycle_laws(structures: list[Estructura], frames: np.ndarray) -> dic
         evaluate_structure_count_law(structures),
         evaluate_complexity_law(frames),
         evaluate_frontera_temporal(frames, threshold_max=_FRONTERA_THRESHOLD_MAX),
+        evaluate_temporal_scale_stability(frames, steps),
     ]
     return {
         "laws_evaluated": [result.name for result in results],

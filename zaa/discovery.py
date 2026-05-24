@@ -94,7 +94,7 @@ def run_cycle(config: DiscoveryConfig, cycle_id: int) -> dict:
     consensus = consensus_by_type(structures)
     analysis_status = "ruido_no_analizable" if structure_count > STRUCTURE_NOISE_THRESHOLD else "ok"
     if analysis_status == "ok":
-        law_report = evaluate_cycle_laws(structures, frames)
+        law_report = evaluate_cycle_laws(structures, frames, config.steps)
     else:
         law_report = {
             "laws_evaluated": [],

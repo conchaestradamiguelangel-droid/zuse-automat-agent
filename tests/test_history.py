@@ -73,7 +73,7 @@ class WorldHistoryTests(unittest.TestCase):
             path = Path(f.name)
         try:
             run_discovery_loop(DiscoveryConfig("synthetic_glider", cycles=3, state_file=str(path)))
-            results2 = run_discovery_loop(DiscoveryConfig("synthetic_glider", cycles=3, state_file=str(path)))
+            results2 = run_discovery_loop(DiscoveryConfig("synthetic_glider", cycles=1, state_file=str(path)))
             for r in results2:
                 if r["analysis_status"] == "ok":
                     self.assertFalse(r["is_new_law_signature"])

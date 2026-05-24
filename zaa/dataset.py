@@ -67,6 +67,7 @@ def build_sample(world_type: str, steps: int, width: int, seed: int) -> dict[str
         "tipo_unico",
         "complejidad_alta",
         "frontera_temporal",
+        "temporal_scale_stability",
     ):
         sample[f"law_{law}"] = _law_accepted(details, law)
     return sample
