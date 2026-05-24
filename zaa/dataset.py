@@ -19,6 +19,10 @@ WORLD_SPECS: list[tuple[str, int, int]] = [
     ("life_glider", 24, 64),
     ("life_blinker", 24, 64),
     ("life_block", 24, 64),
+    ("rule_124", 24, 64),  # mirror de rule_110, 6/6 frontera_temporal positive
+    ("rule_137", 24, 64),  # low density positive, breaks density_mean shortcut
+    ("rule_109", 24, 64),  # borderline lower transition rate, 5/6 positive
+    ("rule_54", 24, 64),  # high mutual info negative, breaks MI shortcut
 ]
 N_SEEDS = 6
 BASE_SEED = 20260523

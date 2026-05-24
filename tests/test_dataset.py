@@ -30,6 +30,21 @@ class DatasetTests(unittest.TestCase):
         self.assertEqual(sample["analysis_status"], "ok")
         self.assertEqual(sample["law_frontera_temporal"], 0)
 
+    def test_rule124_is_ft_positive(self):
+        sample = build_sample("rule_124", 24, 64, 20260523)
+        self.assertEqual(sample["analysis_status"], "ok")
+        self.assertEqual(sample["law_frontera_temporal"], 1)
+
+    def test_rule137_is_ft_positive_despite_low_density(self):
+        sample = build_sample("rule_137", 24, 64, 20260523)
+        self.assertEqual(sample["law_frontera_temporal"], 1)
+        self.assertLess(sample["density_mean"], 0.52)
+
+    def test_rule54_is_ft_negative_despite_high_mi(self):
+        sample = build_sample("rule_54", 24, 64, 20260523)
+        self.assertEqual(sample["law_frontera_temporal"], 0)
+        self.assertGreater(sample["mutual_info_mean"], 0.05)
+
     def test_build_dataset_correct_count(self):
         specs = [("rule_30", 24, 64), ("rule_110", 24, 64)]
         samples = build_dataset(specs, n_seeds=3, base_seed=20260523)
