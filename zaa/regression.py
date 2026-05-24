@@ -11,6 +11,7 @@ FEATURE_KEYS: list[str] = [
     "density_mean",
     "gzip_ratio",
     "structure_count",
+    "mutual_info_mean",
 ]
 TARGET_KEY: str = "law_frontera_temporal"
 
