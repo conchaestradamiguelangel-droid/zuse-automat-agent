@@ -68,6 +68,15 @@ def compute_score(state: PolicyState, prev_dominant: str | None) -> float:
     return score
 
 
+def _would_hit_noise_boundary(proposed_steps: int, world_record: WorldRecord | None) -> bool:
+    """Return True if proposed_steps would hit or exceed the known noise boundary."""
+    return (
+        world_record is not None
+        and world_record.first_noise_steps > 0
+        and proposed_steps >= world_record.first_noise_steps
+    )
+
+
 def decide(
     state: PolicyState,
     prev_dominant: str | None = None,
@@ -115,10 +124,20 @@ def decide(
 
     if state.structure_count == 0:
         if state.steps < max_steps:
+            proposed = min(state.steps * 2, max_steps)
+            if _would_hit_noise_boundary(proposed, world_record):
+                return PolicyDecision(
+                    "change_world",
+                    _next_world(state.world_type),
+                    state.steps,
+                    state.seed,
+                    "noise_boundary_alcanzado",
+                    score,
+                )
             return PolicyDecision(
                 "increase_steps",
                 state.world_type,
-                min(state.steps * 2, max_steps),
+                proposed,
                 state.seed,
                 "sin_estructuras_aumentar_steps",
                 score,
@@ -148,10 +167,20 @@ def decide(
         and state.repeats_in_current_world == 0
         and state.steps < max_steps
     ):
+        proposed = min(state.steps * 2, max_steps)
+        if _would_hit_noise_boundary(proposed, world_record):
+            return PolicyDecision(
+                "change_world",
+                _next_world(state.world_type),
+                state.steps,
+                state.seed,
+                "noise_boundary_alcanzado",
+                score,
+            )
         return PolicyDecision(
             "increase_steps",
             state.world_type,
-            min(state.steps * 2, max_steps),
+            proposed,
             state.seed,
             "firma_conocida_buscar_escala",
             score,
@@ -172,10 +201,20 @@ def decide(
         )
 
     if len(state.laws_accepted) < 2 and state.steps < max_steps:
+        proposed = min(state.steps * 2, max_steps)
+        if _would_hit_noise_boundary(proposed, world_record):
+            return PolicyDecision(
+                "change_world",
+                _next_world(state.world_type),
+                state.steps,
+                state.seed,
+                "noise_boundary_alcanzado",
+                score,
+            )
         return PolicyDecision(
             "increase_steps",
             state.world_type,
-            min(state.steps * 2, max_steps),
+            proposed,
             state.seed,
             "pocas_leyes_aumentar_steps",
             score,

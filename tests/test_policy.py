@@ -110,6 +110,41 @@ class PolicyTests(unittest.TestCase):
         decision = decide(state(laws_accepted=["a", "b"], repeats_in_current_world=0, steps=400), max_steps=400)
         self.assertNotEqual(decision.reason, "firma_conocida_buscar_escala")
 
+    def test_policy_does_not_scale_past_noise_boundary(self):
+        policy_state = PolicyState(
+            world_type="rule_110",
+            analysis_status="ok",
+            structure_count=5,
+            laws_accepted=["complejidad_alta", "densidad_estable"],
+            dominant_type="desconocido",
+            steps=24,
+            seed=20260523,
+            repeats_in_current_world=0,
+            is_new_law_signature=False,
+        )
+        record = WorldRecord(max_ok_steps=24, first_noise_steps=48, visit_count=2)
+        decision = decide(policy_state, world_record=record)
+        self.assertEqual(decision.action, "change_world")
+        self.assertEqual(decision.reason, "noise_boundary_alcanzado")
+        self.assertNotEqual(decision.next_world, "rule_110")
+
+    def test_policy_scales_when_no_noise_boundary_known(self):
+        policy_state = PolicyState(
+            world_type="rule_110",
+            analysis_status="ok",
+            structure_count=5,
+            laws_accepted=["complejidad_alta", "densidad_estable"],
+            dominant_type="desconocido",
+            steps=24,
+            seed=20260523,
+            repeats_in_current_world=0,
+            is_new_law_signature=False,
+        )
+        record = WorldRecord(max_ok_steps=24, first_noise_steps=0, visit_count=1)
+        decision = decide(policy_state, world_record=record)
+        self.assertEqual(decision.action, "increase_steps")
+        self.assertEqual(decision.next_steps, 48)
+
 
 if __name__ == "__main__":
     unittest.main()

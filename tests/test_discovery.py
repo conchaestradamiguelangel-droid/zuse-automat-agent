@@ -82,6 +82,39 @@ class DiscoveryTests(unittest.TestCase):
                 self.assertLessEqual(r["steps"], 48)
                 return
 
+    def test_rule110_noise_boundary_prevents_repeated_large_scales(self):
+        state = {
+            "schema_version": 1,
+            "seen_law_signatures": [["complejidad_alta", "densidad_estable", "frontera_temporal"]],
+            "world_history": {
+                "rule_110": {
+                    "visit_count": 2,
+                    "scores": [3.0, -1.0],
+                    "noise_count": 1,
+                    "law_signatures": [["complejidad_alta", "densidad_estable", "frontera_temporal"], []],
+                    "params_tried": [
+                        [24, 64, ["complejidad_alta", "densidad_estable", "frontera_temporal"]],
+                        [48, 64, []],
+                    ],
+                    "max_ok_steps": 24,
+                    "first_noise_steps": 48,
+                }
+            },
+        }
+        with tempfile.NamedTemporaryFile(
+            suffix=".json", delete=False, mode="w", encoding="utf-8"
+        ) as handle:
+            json.dump(state, handle)
+            path = handle.name
+        try:
+            results = run_discovery_loop(DiscoveryConfig("rule_110", cycles=1, steps=24, state_file=path))
+            self.assertEqual(results[0]["steps"], 24)
+            self.assertEqual(results[0]["action_reason"], "noise_boundary_alcanzado")
+        finally:
+            from pathlib import Path
+
+            Path(path).unlink(missing_ok=True)
+
 
 if __name__ == "__main__":
     unittest.main()

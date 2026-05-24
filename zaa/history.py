@@ -17,6 +17,8 @@ class WorldRecord:
     noise_count: int = 0
     law_signatures: list[tuple[str, ...]] = field(default_factory=list)
     params_tried: list[tuple[int, int, tuple[str, ...]]] = field(default_factory=list)
+    max_ok_steps: int = 0
+    first_noise_steps: int = 0
 
     @property
     def avg_score(self) -> float:
@@ -35,6 +37,8 @@ class WorldRecord:
             "avg_score": self.avg_score,
             "noise_fraction": self.noise_fraction,
             "params_tried": [(p[0], p[1], list(p[2])) for p in self.params_tried],
+            "max_ok_steps": self.max_ok_steps,
+            "first_noise_steps": self.first_noise_steps,
         }
 
 
@@ -53,8 +57,12 @@ def update_history(
     record = history[world_type]
     record.visit_count += 1
     record.scores.append(score)
+    if analysis_status == "ok":
+        record.max_ok_steps = max(record.max_ok_steps, steps)
     if analysis_status == "ruido_no_analizable":
         record.noise_count += 1
+        if record.first_noise_steps == 0 or steps < record.first_noise_steps:
+            record.first_noise_steps = steps
     record.law_signatures.append(law_signature)
     record.params_tried.append((steps, width, law_signature))
 
@@ -92,5 +100,7 @@ def load_agent_state(
             params_tried=[
                 (p[0], p[1], tuple(p[2])) for p in rd.get("params_tried", [])
             ],
+            max_ok_steps=rd.get("max_ok_steps", 0),
+            first_noise_steps=rd.get("first_noise_steps", 0),
         )
     return world_history, seen_law_signatures

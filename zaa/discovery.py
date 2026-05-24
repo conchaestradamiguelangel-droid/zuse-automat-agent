@@ -211,7 +211,11 @@ def run_discovery_loop(config: DiscoveryConfig) -> list[dict]:
         repeats_in_current_world = repeats_in_current_world + 1 if decision.action == "repeat_vary_seed" else 0
         world_steps[current_world] = decision.next_steps if decision.next_world == current_world else current_steps
         if decision.next_world != current_world:
-            current_steps = world_steps.get(decision.next_world, config.steps)
+            restored = world_steps.get(decision.next_world, config.steps)
+            next_record = world_history.get(decision.next_world)
+            if next_record is not None and next_record.first_noise_steps > 0:
+                restored = min(restored, next_record.first_noise_steps - 1)
+            current_steps = restored
         else:
             current_steps = decision.next_steps
         current_world = decision.next_world

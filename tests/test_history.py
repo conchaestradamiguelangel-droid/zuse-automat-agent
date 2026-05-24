@@ -88,6 +88,56 @@ class WorldHistoryTests(unittest.TestCase):
         self.assertEqual(len(record.params_tried), 1)
         self.assertEqual(record.params_tried[0], (48, 64, sig))
 
+    def test_update_history_tracks_max_ok_steps(self):
+        history = {}
+        update_history(history, "rule_110", 2.0, "ok", steps=24, width=64)
+        update_history(history, "rule_110", 1.0, "ok", steps=48, width=64)
+        self.assertEqual(history["rule_110"].max_ok_steps, 48)
+
+    def test_update_history_tracks_first_noise_steps(self):
+        history = {}
+        update_history(history, "rule_110", 0.0, "ruido_no_analizable", steps=48)
+        update_history(history, "rule_110", 0.0, "ruido_no_analizable", steps=96)
+        self.assertEqual(history["rule_110"].first_noise_steps, 48)
+
+    def test_first_noise_steps_not_overwritten_by_larger(self):
+        history = {}
+        update_history(history, "rule_110", 0.0, "ruido_no_analizable", steps=96)
+        update_history(history, "rule_110", 0.0, "ruido_no_analizable", steps=48)
+        self.assertEqual(history["rule_110"].first_noise_steps, 48)
+
+    def test_world_record_serializes_noise_boundary_fields(self):
+        record = WorldRecord(max_ok_steps=24, first_noise_steps=48)
+        data = record.to_dict()
+        self.assertEqual(data["max_ok_steps"], 24)
+        self.assertEqual(data["first_noise_steps"], 48)
+
+    def test_load_agent_state_backward_compat_missing_fields(self):
+        state = {
+            "schema_version": 1,
+            "seen_law_signatures": [],
+            "world_history": {
+                "rule_110": {
+                    "visit_count": 1,
+                    "scores": [2.0],
+                    "noise_count": 0,
+                    "law_signatures": [["densidad_estable"]],
+                    "params_tried": [[24, 64, ["densidad_estable"]]],
+                }
+            },
+        }
+        with tempfile.NamedTemporaryFile(
+            suffix=".json", delete=False, mode="w", encoding="utf-8"
+        ) as handle:
+            json.dump(state, handle)
+            path = Path(handle.name)
+        try:
+            history, _ = load_agent_state(path)
+            self.assertEqual(history["rule_110"].max_ok_steps, 0)
+            self.assertEqual(history["rule_110"].first_noise_steps, 0)
+        finally:
+            path.unlink(missing_ok=True)
+
 
 if __name__ == "__main__":
     unittest.main()
