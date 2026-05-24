@@ -10,6 +10,12 @@ from .metrics import active_transition_rate, shannon_entropy
 from .structures import Estructura
 
 
+# Calibrated 2026-05-24 for rule_30/rule_110 at steps=24, width=64,
+# seeds 20260523..20260528. Midpoint between max(rule_110)=0.4147
+# and min(rule_30)=0.4557.
+_FRONTERA_THRESHOLD_MAX: float = 0.4352
+
+
 @dataclass(frozen=True)
 class CycleLawResult:
     """Result of one cycle-level law evaluation."""
@@ -120,6 +126,31 @@ def evaluate_complexity_law(frames: np.ndarray) -> CycleLawResult:
     )
 
 
+def evaluate_frontera_temporal(
+    frames: np.ndarray,
+    *,
+    threshold_max: float,
+    threshold_min: float = 0.28,
+) -> CycleLawResult:
+    """Accept organized chaos: high entropy below pure-random transition rate."""
+    frames_arr = np.asarray(frames, dtype=np.uint8)
+    if frames_arr.ndim == 3:
+        frames_arr = frames_arr.reshape(frames_arr.shape[0], -1)
+    entropy_mean = float(np.mean([shannon_entropy(frame) for frame in frames_arr]))
+    transition_rate = active_transition_rate(frames_arr)
+    accepted = entropy_mean > 0.8 and threshold_min < transition_rate < threshold_max
+    return CycleLawResult(
+        "frontera_temporal",
+        accepted,
+        "caos_organizado" if accepted else "caos_puro_o_sin_entropia",
+        {
+            "transition_rate": transition_rate,
+            "entropy_mean": entropy_mean,
+            "threshold_max": threshold_max,
+        },
+    )
+
+
 def evaluate_cycle_laws(structures: list[Estructura], frames: np.ndarray) -> dict:
     """Evaluate all cycle-level law candidates."""
     results = [
@@ -128,6 +159,7 @@ def evaluate_cycle_laws(structures: list[Estructura], frames: np.ndarray) -> dic
         evaluate_density_law(frames),
         evaluate_structure_count_law(structures),
         evaluate_complexity_law(frames),
+        evaluate_frontera_temporal(frames, threshold_max=_FRONTERA_THRESHOLD_MAX),
     ]
     return {
         "laws_evaluated": [result.name for result in results],

@@ -1,0 +1,39 @@
+Fase 3j - calibracion frontera_temporal
+Fecha: 2026-05-24
+
+Parametros:
+- rules: 30, 110
+- seeds: 20260523..20260528
+- steps: 24
+- width: 64
+
+Valores:
+
+Rule 30
+- seed=20260523 transition_rate=0.4557 entropy=0.9886
+- seed=20260524 transition_rate=0.5189 entropy=0.9946
+- seed=20260525 transition_rate=0.4967 entropy=0.9826
+- seed=20260526 transition_rate=0.5111 entropy=0.9937
+- seed=20260527 transition_rate=0.5117 entropy=0.9882
+- seed=20260528 transition_rate=0.4941 entropy=0.9770
+- range: [0.4557, 0.5189]
+
+Rule 110
+- seed=20260523 transition_rate=0.4023 entropy=0.9773
+- seed=20260524 transition_rate=0.4147 entropy=0.9762
+- seed=20260525 transition_rate=0.3906 entropy=0.9813
+- seed=20260526 transition_rate=0.3939 entropy=0.9869
+- seed=20260527 transition_rate=0.3991 entropy=0.9776
+- seed=20260528 transition_rate=0.4056 entropy=0.9813
+- range: [0.3906, 0.4147]
+
+Decision:
+- max(rule_110)=0.4147 < min(rule_30)=0.4557
+- separacion limpia: si
+- threshold_max elegido: 0.4352
+- formula: (0.4147 + 0.4557) / 2 = 0.4352
+
+Interpretacion:
+frontera_temporal acepta caos organizado cuando entropy_mean > 0.8 y
+0.28 < transition_rate < 0.4352. En esta calibracion separa Rule 110 corto
+de Rule 30 corto.

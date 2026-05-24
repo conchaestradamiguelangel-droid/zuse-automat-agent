@@ -1,8 +1,10 @@
 import unittest
 
 from zaa.cycle_laws import (
+    _FRONTERA_THRESHOLD_MAX,
     evaluate_complexity_law,
     evaluate_density_law,
+    evaluate_frontera_temporal,
     evaluate_periodicity_law,
     evaluate_structure_count_law,
     evaluate_velocity_law,
@@ -77,6 +79,34 @@ class CycleLawTests(unittest.TestCase):
         frames = moving_point(steps=24, width=64)
         result = evaluate_complexity_law(frames)
         self.assertFalse(result.accepted)
+
+    def test_frontera_temporal_accepts_rule110_short(self):
+        from zaa.eca import random_initial_state, simulate
+
+        frames = simulate(random_initial_state(64, seed=20260523), 110, 24)
+        result = evaluate_frontera_temporal(frames, threshold_max=_FRONTERA_THRESHOLD_MAX)
+        self.assertTrue(result.accepted)
+        self.assertEqual(result.reason, "caos_organizado")
+
+    def test_frontera_temporal_rejects_rule30_short(self):
+        from zaa.eca import random_initial_state, simulate
+
+        frames = simulate(random_initial_state(64, seed=20260523), 30, 24)
+        result = evaluate_frontera_temporal(frames, threshold_max=_FRONTERA_THRESHOLD_MAX)
+        self.assertFalse(result.accepted)
+
+    def test_frontera_temporal_rejects_static_block(self):
+        frames = static_block(steps=24, width=64)
+        result = evaluate_frontera_temporal(frames, threshold_max=_FRONTERA_THRESHOLD_MAX)
+        self.assertFalse(result.accepted)
+
+    def test_frontera_temporal_evidence_keys(self):
+        from zaa.eca import random_initial_state, simulate
+
+        frames = simulate(random_initial_state(64, seed=20260523), 110, 24)
+        result = evaluate_frontera_temporal(frames, threshold_max=_FRONTERA_THRESHOLD_MAX)
+        for key in ("transition_rate", "entropy_mean", "threshold_max"):
+            self.assertIn(key, result.evidence)
 
 
 if __name__ == "__main__":
