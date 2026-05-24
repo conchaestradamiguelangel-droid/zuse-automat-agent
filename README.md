@@ -1,6 +1,6 @@
 # ZUSE AUTOMAT AGENT
 
-Estado: Fase 0a iniciada.
+Estado: Fase B completada. 130 tests OK. Ultimo commit: 85c397b.
 
 Premisas rectoras:
 
@@ -95,55 +95,53 @@ python -m unittest discover -s tests
 - Fase 3i: parametros por mundo. `steps` deja de heredarse globalmente entre
   mundos; cada mundo conserva su propia escala. Esto elimino la contaminacion
   por carry-over que hacia que `rule_30` y `rule_110` heredaran `steps=400`.
+- Fase 4a (commit 2cd91c1): 7a ley `temporal_scale_stability`
+  (`temporal_load = steps * gzip_ratio / transition_rate < 19.03`).
+  Calibrada con PySR sobre dataset ECA caotico (90.8% accuracy).
+  Cierra alerta rule_30/rule_110: `frontera_temporal`
+  (`tr` en `(0.28, 0.44]`) los distingue desde Fase 3i.
+  `rule_110` tr=0.402, `rule_30` tr=0.456.
+- Fase 4b (commit 04948eb): filtro diagnostico anti-eter
+  `filter_structures_by_start_frame(structures, T=18)` en
+  `zaa/observers.py`. T=18 es constante empirica para width=64, no heuristica
+  perezosa. El eter de Rule 110 madura en frame ~18; el filtro retiene solo
+  estructuras nacidas antes de ese umbral.
+- Fase B (commit 85c397b): `FIX-D` y `FIX-E` validados computacionalmente
+  mediante `dual_reference_diff`. Metodo: comparar run contra referencias de
+  un solo glider para aislar cada componente y la zona de colision.
+  Outcomes:
+  - `FIX-D` (`A+B`): `glider_B_consumed_ether_phase_transition`.
+  - `FIX-E` (`A+C1`): `glider_C1_transformed_compound_output`.
+  `diff_from_pure_ether` es valido solo para CI = `ether_state(width) +
+  perturbacion`. Para discovery aleatorio, T=18 es la herramienta correcta.
 
-## Limite metodologico conocido - diff 2-gliders en W=256
+## Estado de colisiones Rule 110 - Fase B
 
-El pipeline `detect_collision_candidates_rule110` no detecta eventos candidatos
-en fixtures de 2 gliders con `W=256`.
+`diff_from_pure_ether` + `observar_regiones_rule110` son validos para runs
+cuya CI es `ether_state(width) + perturbacion` (fixtures canonicos). En ese
+caso el defecto de costura (`width mod 14 != 0`) cancela en el diff porque
+ambas simulaciones parten del mismo IC.
 
-Causa: `diff(frames, ether_puro)` produce alrededor de 3.300 celulas de
-perturbacion por glider en un dominio de 256 celdas. Con dos gliders, los campos
-de perturbacion se solapan aunque la separacion sea >=100 celdas.
-`track_regions_1d` ve una sola region fusionada, no dos tracks separados.
+Para discovery con IC aleatoria: el diff canonico produce ~50% de actividad
+residual (el defecto de costura no cancela). En ese caso, `T=18` es la
+herramienta correcta (`filter_structures_by_start_frame`).
 
-Resultado experimental:
-
-- `FIX-E` (`A + C1`, `separation=100`, `steps=180`): 1 track, 0 candidatos.
-- El tracker sigue el baricentro fusionado, no cada glider individualmente.
-
-Estado: Fase 2b-real bloqueada en Rule 110 hasta resolver una de estas:
-
-- Dominio mas ancho (`W=512+`) para separar campos de perturbacion.
-- Tracker basado en diff frame-a-frame en lugar de diff contra ether fijo.
-- Template matching especifico por tipo de glider.
-
-Fase 2b sintetica sigue siendo la base valida y no esta afectada.
-
-Confirmado con `W=512`, `separation=200`, `steps=300`: mismo resultado. El
-problema es estructural al enfoque `diff`.
+`FIX-D` y `FIX-E` estan en `fixtures/validated/` con metadata enriquecida y
+6 diff PNGs como evidencia visual.
 
 ## Alertas metodologicas vivas
 
-### Rule 110 a escala corta
+### Rule 110 - alerta CERRADA
 
-Tras Fase 3i, `rule_110` pudo evaluarse con `steps=24`, `width=64` y seed
-fijo sin heredar escalas altas de otros mundos. Resultado:
+La firma `(complejidad_alta, densidad_estable)` era compartida por `rule_110`
+y `rule_30` con 5 leyes. Cerrada en Fase 4a: `frontera_temporal`
+(`tr` en `(0.28, 0.44]`) distingue los dos:
 
-- `steps=24`: `status=ok`, `structure_count` alrededor de 69-78 en 6 seeds.
-- Firma robusta principal: `(complejidad_alta, densidad_estable)`.
-- En 2 de 6 seeds tambien aparece `velocidad_constante`.
-- `steps>=48`: pasa a `ruido_no_analizable` por superar el umbral de
-  estructuras.
+- `rule_110`: tr=0.402 -> `frontera_temporal=True`
+- `rule_30`: tr=0.456 -> `frontera_temporal=False`
 
-Interpretacion actual: `rule_110` tiene una ventana corta explorable antes de
-que el ether/estructura densa dispare demasiadas regiones para los
-observadores actuales. Con las 5 leyes actuales, `rule_110@steps=24` y
-`rule_30` no quedan distinguidos de forma estable: ambos comparten la firma
-`(complejidad_alta, densidad_estable)` en su regimen explorable.
-
-Siguiente pregunta metodologica: distinguir caos tipo Rule 30 de transitorio
-caotico Rule 110, posiblemente con una sexta ley de periodicidad/ether local,
-autocorrelacion espacio-temporal o frontera `max_ok_steps`/`noise_boundary`.
+Para `steps > 24` en discovery, `temporal_scale_stability` actua como
+limite de ventana: `temporal_load = steps * gzip_ratio / tr < 19.03`.
 
 ### Gate G1a.1
 
@@ -167,8 +165,12 @@ observacion independiente. La evaluacion no circular actual es
 ## Fixtures Rule 110
 
 `python -m zaa generate-rule110-fixtures` genera candidatos `.npz` y PNG en
-`fixtures/pending/`. No son fixtures validados hasta que una persona revise las
-previsualizaciones y los mueva explicitamente a `fixtures/validated/`.
+`fixtures/pending/`. Los candidatos se mueven a `fixtures/validated/` mediante
+validacion computacional (`dual_reference_diff`) o revision visual humana.
+
+- `FIX-A`, `FIX-B`, `FIX-C1`: validados computacionalmente (gliders simples).
+- `FIX-D`, `FIX-E`: validados computacionalmente (colisiones, outcomes
+  documentados en metadata).
 
 ## Dependencias actuales
 
@@ -178,9 +180,9 @@ Requeridas:
 - numpy
 - scipy
 - pillow
+- pysr  # instalado - calibracion Fase 4a
 
 Opcionales en fases posteriores:
 
 - numba
 - scikit-learn
-- pysr
