@@ -1,7 +1,8 @@
 import unittest
 
 from zaa.consensus import consensus_by_type, dominant_type
-from zaa.observers import run_observers
+from zaa.observers import filter_structures_by_start_frame, run_observers
+from zaa.structures import Estructura
 from zaa.synthetic import moving_point, oscillator, static_block
 
 
@@ -44,6 +45,25 @@ class ObserverTests(unittest.TestCase):
         self.assertIn("confianza", data)
         self.assertIn("observador", data)
         self.assertEqual(len(structure.posiciones[0]), 3)
+
+    def test_filter_structures_by_start_frame_filters_late_births(self):
+        early = Estructura(0, "glider", "test", ((2, 3, 0),), 1, 1.0, "test")
+        late = Estructura(1, "glider", "test", ((8, 3, 0),), 1, 1.0, "test")
+        filtered = filter_structures_by_start_frame([early, late], 5)
+        self.assertEqual(filtered, [early])
+
+    def test_filter_structures_by_start_frame_preserves_original_objects(self):
+        structures = [
+            Estructura(0, "glider", "test", ((1, 3, 0),), 1, 1.0, "test"),
+            Estructura(1, "bloque", "test", ((6, 3, 0),), 1, 1.0, "test"),
+        ]
+        filtered = filter_structures_by_start_frame(structures, 5)
+        self.assertIs(filtered[0], structures[0])
+        self.assertEqual(len(structures), 2)
+
+    def test_filter_structures_by_start_frame_zero_returns_empty(self):
+        structures = [Estructura(0, "glider", "test", ((0, 3, 0),), 1, 1.0, "test")]
+        self.assertEqual(filter_structures_by_start_frame(structures, 0), [])
 
 
 if __name__ == "__main__":

@@ -159,6 +159,18 @@ def run_observers(frames: np.ndarray) -> list[Estructura]:
     )
 
 
+def filter_structures_by_start_frame(
+    structures: list[Estructura],
+    max_start_frame: int,
+) -> list[Estructura]:
+    """Diagnostic anti-ether filter: keep structures born before a frame threshold."""
+    return [
+        structure
+        for structure in structures
+        if structure.posiciones and structure.posiciones[0][0] < max_start_frame
+    ]
+
+
 def find_connected_regions_1d(frame: np.ndarray) -> list[dict]:
     """Find contiguous active regions in a binary 1D frame."""
     frame = np.asarray(frame, dtype=np.uint8)
