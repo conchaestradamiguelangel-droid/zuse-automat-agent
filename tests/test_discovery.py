@@ -33,6 +33,8 @@ class DiscoveryTests(unittest.TestCase):
             "steps",
             "width",
             "structure_count",
+            "dedup_structure_count",
+            "inflation_ratio",
             "dominant_type",
             "analysis_status",
             "consensus",

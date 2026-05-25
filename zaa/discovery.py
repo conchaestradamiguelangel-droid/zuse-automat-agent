@@ -9,7 +9,7 @@ from pathlib import Path
 
 import numpy as np
 
-from .consensus import consensus_by_type, dominant_type
+from .consensus import consensus_by_type, deduplicate_structures, dominant_type
 from .cycle_laws import evaluate_cycle_laws
 from .eca import simulate, single_seed_initial_state
 from .history import WorldRecord, load_agent_state, save_agent_state, update_history
@@ -91,6 +91,8 @@ def run_cycle(config: DiscoveryConfig, cycle_id: int) -> dict:
         raise ValueError("frames must be 2D or 3D")
 
     structure_count = len(structures)
+    deduplicated_structures = deduplicate_structures(structures)
+    dedup_structure_count = len(deduplicated_structures)
     consensus = consensus_by_type(structures)
     analysis_status = "ruido_no_analizable" if structure_count > STRUCTURE_NOISE_THRESHOLD else "ok"
     if analysis_status == "ok":
@@ -109,6 +111,8 @@ def run_cycle(config: DiscoveryConfig, cycle_id: int) -> dict:
         "steps": config.steps,
         "width": config.width,
         "structure_count": structure_count,
+        "dedup_structure_count": dedup_structure_count,
+        "inflation_ratio": structure_count / max(1, dedup_structure_count),
         "dominant_type": dominant_type(structures),
         "analysis_status": analysis_status,
         "consensus": _serializable_consensus(consensus),

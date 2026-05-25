@@ -1,6 +1,6 @@
 import unittest
 
-from zaa.consensus import consensus_by_type, dominant_type
+from zaa.consensus import consensus_by_type, deduplicate_structures, dominant_type
 from zaa.observers import filter_structures_by_start_frame, run_observers
 from zaa.structures import Estructura
 from zaa.synthetic import moving_point, oscillator, static_block
@@ -64,6 +64,63 @@ class ObserverTests(unittest.TestCase):
     def test_filter_structures_by_start_frame_zero_returns_empty(self):
         structures = [Estructura(0, "glider", "test", ((0, 3, 0),), 1, 1.0, "test")]
         self.assertEqual(filter_structures_by_start_frame(structures, 0), [])
+
+    def test_deduplicate_structures_merges_overlapping_tracks(self):
+        high = Estructura(
+            0,
+            "glider",
+            "plantilla",
+            ((0, 10, 0), (1, 11, 0), (2, 12, 0)),
+            1,
+            0.9,
+            "correlacion",
+        )
+        low = Estructura(
+            1,
+            "glider",
+            "velocidad_centroide",
+            ((0, 11, 0), (1, 12, 0), (2, 13, 0)),
+            1,
+            0.7,
+            "kmeans_patches",
+        )
+        self.assertEqual(deduplicate_structures([low, high]), [high])
+
+    def test_deduplicate_structures_keeps_spatially_distant_tracks(self):
+        left = Estructura(0, "glider", "plantilla", ((0, 10, 0), (1, 11, 0)), 1, 0.9, "a")
+        right = Estructura(1, "glider", "plantilla", ((0, 20, 0), (1, 21, 0)), 1, 0.8, "b")
+        self.assertEqual(deduplicate_structures([left, right]), [left, right])
+
+    def test_deduplicate_structures_keeps_non_overlapping_tracks(self):
+        early = Estructura(0, "glider", "plantilla", ((0, 10, 0), (1, 11, 0)), 1, 0.9, "a")
+        late = Estructura(1, "glider", "plantilla", ((3, 10, 0), (4, 11, 0)), 1, 0.8, "b")
+        self.assertEqual(deduplicate_structures([early, late]), [early, late])
+
+    def test_deduplicate_structures_prefers_longer_track_on_confidence_tie(self):
+        short = Estructura(0, "glider", "plantilla", ((0, 10, 0), (1, 11, 0)), 1, 0.8, "a")
+        long = Estructura(
+            1,
+            "glider",
+            "plantilla",
+            ((0, 10, 0), (1, 11, 0), (2, 12, 0)),
+            1,
+            0.8,
+            "b",
+        )
+        self.assertEqual(deduplicate_structures([short, long]), [long])
+
+    def test_deduplicate_structures_prefers_confidence_over_track_length(self):
+        high_confidence = Estructura(0, "glider", "plantilla", ((0, 10, 0), (1, 11, 0)), 1, 0.9, "a")
+        long_low_confidence = Estructura(
+            1,
+            "glider",
+            "plantilla",
+            ((0, 10, 0), (1, 11, 0), (2, 12, 0)),
+            1,
+            0.8,
+            "b",
+        )
+        self.assertEqual(deduplicate_structures([long_low_confidence, high_confidence]), [high_confidence])
 
 
 if __name__ == "__main__":
