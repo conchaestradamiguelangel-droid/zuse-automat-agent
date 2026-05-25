@@ -16,6 +16,10 @@ WORLD_SEQUENCE = [
     "life_block",
     "rule_30",
     "rule_110",
+    "rule_124",
+    "rule_109",
+    "rule_137",
+    "rule_54",
 ]
 BLOCKED_WORLDS = ["rule110_real"]
 MAX_STEPS_DEFAULT = 400
