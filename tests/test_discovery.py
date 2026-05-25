@@ -58,6 +58,22 @@ class DiscoveryTests(unittest.TestCase):
         result = run_cycle(DiscoveryConfig("rule_30", steps=200, width=256), 0)
         self.assertEqual(result["analysis_status"], "ruido_no_analizable")
 
+    def test_rule_109_high_steps_is_ok_under_dedup_gate(self):
+        result = run_cycle(DiscoveryConfig("rule_109", steps=192, width=64, seed=20260523), 0)
+        self.assertEqual(result["analysis_status"], "ok")
+        self.assertLessEqual(result["dedup_structure_count"], 40)
+        self.assertGreater(result["structure_count"], 40)
+
+    def test_rule_30_high_steps_remains_noise_under_dedup_gate(self):
+        result = run_cycle(DiscoveryConfig("rule_30", steps=96, width=64, seed=20260523), 0)
+        self.assertEqual(result["analysis_status"], "ruido_no_analizable")
+        self.assertGreater(result["dedup_structure_count"], 40)
+
+    def test_rule_137_high_steps_remains_noise_under_dedup_gate(self):
+        result = run_cycle(DiscoveryConfig("rule_137", steps=96, width=64, seed=20260523), 0)
+        self.assertEqual(result["analysis_status"], "ruido_no_analizable")
+        self.assertGreater(result["dedup_structure_count"], 40)
+
     def test_synthetic_glider_status_ok(self):
         result = run_cycle(DiscoveryConfig("synthetic_glider"), 0)
         self.assertEqual(result["analysis_status"], "ok")

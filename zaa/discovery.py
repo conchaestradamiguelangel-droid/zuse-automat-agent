@@ -21,7 +21,7 @@ from .policy import PolicyState, compute_score, decide
 from .synthetic import moving_point, oscillator, static_block
 
 
-STRUCTURE_NOISE_THRESHOLD = 100
+DEDUP_STRUCTURE_NOISE_THRESHOLD = 40
 
 
 @dataclass(frozen=True)
@@ -94,7 +94,7 @@ def run_cycle(config: DiscoveryConfig, cycle_id: int) -> dict:
     deduplicated_structures = deduplicate_structures(structures)
     dedup_structure_count = len(deduplicated_structures)
     consensus = consensus_by_type(structures)
-    analysis_status = "ruido_no_analizable" if structure_count > STRUCTURE_NOISE_THRESHOLD else "ok"
+    analysis_status = "ruido_no_analizable" if dedup_structure_count > DEDUP_STRUCTURE_NOISE_THRESHOLD else "ok"
     if analysis_status == "ok":
         law_report = evaluate_cycle_laws(structures, frames, config.steps)
     else:
