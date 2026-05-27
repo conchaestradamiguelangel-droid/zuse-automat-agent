@@ -39,6 +39,7 @@ class PolicyState:
     seed: int
     repeats_in_current_world: int
     is_new_law_signature: bool = False
+    has_multiregime_evidence: bool = False
     score: float | None = None
 
 
@@ -221,6 +222,16 @@ def decide(
             proposed,
             state.seed,
             "pocas_leyes_aumentar_steps",
+            score,
+        )
+
+    if state.has_multiregime_evidence and state.repeats_in_current_world <= max_repeats:
+        return PolicyDecision(
+            "repeat_vary_seed",
+            state.world_type,
+            state.steps,
+            state.seed + 1,
+            "mundo_multiregimen_explorar_mas",
             score,
         )
 

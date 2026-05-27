@@ -174,6 +174,12 @@ def run_discovery_loop(config: DiscoveryConfig) -> list[dict]:
         world_unique_signatures_prev = (
             record_prev.unique_law_signature_count if record_prev is not None else 0
         )
+        world_has_multiregime_evidence_prev = (
+            record_prev.has_multiregime_evidence if record_prev is not None else False
+        )
+        world_peak_diversity_prev = (
+            record_prev.peak_signature_diversity if record_prev is not None else 0.0
+        )
 
         policy_state = PolicyState(
             world_type=current_world,
@@ -185,6 +191,7 @@ def run_discovery_loop(config: DiscoveryConfig) -> list[dict]:
             seed=current_seed,
             repeats_in_current_world=repeats_in_current_world,
             is_new_law_signature=is_new_law_signature,
+            has_multiregime_evidence=world_has_multiregime_evidence_prev,
         )
 
         score = compute_score(policy_state, prev_dominant)
@@ -215,6 +222,8 @@ def run_discovery_loop(config: DiscoveryConfig) -> list[dict]:
         result["world_score_variance_prev"] = world_score_variance_prev
         result["world_is_multiregime_candidate_prev"] = world_is_multiregime_candidate_prev
         result["world_unique_signatures_prev"] = world_unique_signatures_prev
+        result["world_has_multiregime_evidence_prev"] = world_has_multiregime_evidence_prev
+        result["world_peak_diversity_prev"] = world_peak_diversity_prev
         result["law_signature"] = list(law_signature)
         result["is_new_law_signature"] = is_new_law_signature
         result["scale_attempt_count"] = scale_attempts_in_current_world

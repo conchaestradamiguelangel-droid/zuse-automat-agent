@@ -50,12 +50,16 @@ class DiscoveryTests(unittest.TestCase):
             "world_score_variance_prev",
             "world_is_multiregime_candidate_prev",
             "world_unique_signatures_prev",
+            "world_has_multiregime_evidence_prev",
+            "world_peak_diversity_prev",
         ]:
             self.assertIn(key, result)
         self.assertIsNone(result["world_signature_diversity_prev"])
         self.assertIsNone(result["world_score_variance_prev"])
         self.assertFalse(result["world_is_multiregime_candidate_prev"])
         self.assertEqual(result["world_unique_signatures_prev"], 0)
+        self.assertFalse(result["world_has_multiregime_evidence_prev"])
+        self.assertEqual(result["world_peak_diversity_prev"], 0.0)
 
     def test_life_glider_metrics_are_nonzero(self):
         result = run_cycle(DiscoveryConfig("life_glider", steps=20, width=32, height=32), 0)

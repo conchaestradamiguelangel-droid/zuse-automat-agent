@@ -149,6 +149,51 @@ class PolicyTests(unittest.TestCase):
         self.assertEqual(decision.action, "increase_steps")
         self.assertEqual(decision.next_steps, 48)
 
+    def test_multiregime_evidence_repeats_before_default_change_world(self):
+        decision = decide(
+            state(
+                has_multiregime_evidence=True,
+                laws_accepted=["a", "b"],
+                repeats_in_current_world=0,
+                steps=400,
+                score=2.0,
+            ),
+            prev_score=3.0,
+            max_steps=400,
+        )
+        self.assertEqual(decision.action, "repeat_vary_seed")
+        self.assertEqual(decision.reason, "mundo_multiregimen_explorar_mas")
+
+    def test_multiregime_evidence_allows_one_extra_repeat_at_max_repeats(self):
+        decision = decide(
+            state(
+                has_multiregime_evidence=True,
+                laws_accepted=["a", "b"],
+                repeats_in_current_world=1,
+                steps=400,
+                score=2.0,
+            ),
+            prev_score=3.0,
+            max_steps=400,
+            max_repeats=1,
+        )
+        self.assertEqual(decision.action, "repeat_vary_seed")
+        self.assertEqual(decision.reason, "mundo_multiregimen_explorar_mas")
+
+    def test_multiregime_evidence_respects_max_repeats(self):
+        decision = decide(
+            state(
+                has_multiregime_evidence=True,
+                laws_accepted=["a", "b"],
+                repeats_in_current_world=2,
+                steps=400,
+                score=2.0,
+            ),
+            prev_score=3.0,
+            max_steps=400,
+        )
+        self.assertEqual(decision.action, "change_world")
+
 
 if __name__ == "__main__":
     unittest.main()

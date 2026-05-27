@@ -19,6 +19,8 @@ class WorldRecord:
     params_tried: list[tuple[int, int, tuple[str, ...]]] = field(default_factory=list)
     max_ok_steps: int = 0
     first_noise_steps: int = 0
+    peak_signature_diversity: float = 0.0
+    has_multiregime_evidence: bool = False
 
     @property
     def avg_score(self) -> float:
@@ -67,6 +69,8 @@ class WorldRecord:
             "law_signature_diversity": self.law_signature_diversity,
             "score_variance": self.score_variance,
             "is_multiregime_candidate": self.is_multiregime_candidate,
+            "peak_signature_diversity": self.peak_signature_diversity,
+            "has_multiregime_evidence": self.has_multiregime_evidence,
             "params_tried": [(p[0], p[1], list(p[2])) for p in self.params_tried],
             "max_ok_steps": self.max_ok_steps,
             "first_noise_steps": self.first_noise_steps,
@@ -96,6 +100,11 @@ def update_history(
             record.first_noise_steps = steps
     record.law_signatures.append(frozenset(law_signature))
     record.params_tried.append((steps, width, law_signature))
+    diversity = record.law_signature_diversity
+    if diversity is not None and record.noise_fraction < 0.20:
+        record.peak_signature_diversity = max(record.peak_signature_diversity, diversity)
+        if record.peak_signature_diversity > 0.5:
+            record.has_multiregime_evidence = True
 
 
 def save_agent_state(
@@ -133,5 +142,7 @@ def load_agent_state(
             ],
             max_ok_steps=rd.get("max_ok_steps", 0),
             first_noise_steps=rd.get("first_noise_steps", 0),
+            peak_signature_diversity=rd.get("peak_signature_diversity", 0.0),
+            has_multiregime_evidence=rd.get("has_multiregime_evidence", False),
         )
     return world_history, seen_law_signatures

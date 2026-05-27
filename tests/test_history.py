@@ -192,6 +192,71 @@ class WorldHistoryTests(unittest.TestCase):
         record = WorldRecord(scores=[1.0, 3.0])
         self.assertAlmostEqual(record.score_variance, 1.0)
 
+    def test_multiregime_evidence_locks_once_detected(self):
+        history = {}
+        signatures = [
+            ("a",),
+            ("b",),
+            ("c",),
+            ("d",),
+            ("d",),
+        ]
+        for sig in signatures:
+            update_history(history, "rule_137", 3.0, "ok", sig)
+
+        record = history["rule_137"]
+        self.assertTrue(record.has_multiregime_evidence)
+        self.assertAlmostEqual(record.peak_signature_diversity, 4 / 5)
+
+        for _ in range(5):
+            update_history(history, "rule_137", 3.0, "ok", ("d",))
+
+        self.assertTrue(record.has_multiregime_evidence)
+        self.assertAlmostEqual(record.peak_signature_diversity, 4 / 5)
+        self.assertLess(record.law_signature_diversity, 0.5)
+
+    def test_multiregime_evidence_requires_low_noise(self):
+        history = {}
+        updates = [
+            ("ok", ("a",)),
+            ("ruido_no_analizable", ()),
+            ("ok", ("b",)),
+            ("ok", ("c",)),
+            ("ok", ("d",)),
+        ]
+        for status, sig in updates:
+            update_history(history, "rule_54", 1.0, status, sig)
+
+        record = history["rule_54"]
+        self.assertFalse(record.has_multiregime_evidence)
+        self.assertEqual(record.peak_signature_diversity, 0.0)
+
+    def test_save_load_roundtrip_multiregime_evidence(self):
+        history = {
+            "rule_137": WorldRecord(
+                visit_count=5,
+                scores=[1.0, 2.0, 3.0, 4.0, 5.0],
+                law_signatures=[
+                    frozenset({"a"}),
+                    frozenset({"b"}),
+                    frozenset({"c"}),
+                    frozenset({"d"}),
+                    frozenset({"d"}),
+                ],
+                peak_signature_diversity=0.8,
+                has_multiregime_evidence=True,
+            )
+        }
+        with tempfile.NamedTemporaryFile(suffix=".json", delete=False) as handle:
+            path = Path(handle.name)
+        try:
+            save_agent_state(history, set(), path)
+            loaded, _ = load_agent_state(path)
+            self.assertTrue(loaded["rule_137"].has_multiregime_evidence)
+            self.assertAlmostEqual(loaded["rule_137"].peak_signature_diversity, 0.8)
+        finally:
+            path.unlink(missing_ok=True)
+
 
 if __name__ == "__main__":
     unittest.main()
