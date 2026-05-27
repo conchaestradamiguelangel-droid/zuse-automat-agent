@@ -164,6 +164,16 @@ def run_discovery_loop(config: DiscoveryConfig) -> list[dict]:
         record_prev = world_history.get(current_world)
         world_visit_count = record_prev.visit_count if record_prev is not None else 0
         world_avg_score_prev = record_prev.avg_score if record_prev is not None else 0.0
+        world_signature_diversity_prev = (
+            record_prev.law_signature_diversity if record_prev is not None else None
+        )
+        world_score_variance_prev = record_prev.score_variance if record_prev is not None else None
+        world_is_multiregime_candidate_prev = (
+            record_prev.is_multiregime_candidate if record_prev is not None else False
+        )
+        world_unique_signatures_prev = (
+            record_prev.unique_law_signature_count if record_prev is not None else 0
+        )
 
         policy_state = PolicyState(
             world_type=current_world,
@@ -201,6 +211,10 @@ def run_discovery_loop(config: DiscoveryConfig) -> list[dict]:
         result["score"] = decision.score
         result["world_visit_count"] = world_visit_count
         result["world_avg_score_prev"] = world_avg_score_prev
+        result["world_signature_diversity_prev"] = world_signature_diversity_prev
+        result["world_score_variance_prev"] = world_score_variance_prev
+        result["world_is_multiregime_candidate_prev"] = world_is_multiregime_candidate_prev
+        result["world_unique_signatures_prev"] = world_unique_signatures_prev
         result["law_signature"] = list(law_signature)
         result["is_new_law_signature"] = is_new_law_signature
         result["scale_attempt_count"] = scale_attempts_in_current_world

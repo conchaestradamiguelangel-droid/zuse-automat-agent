@@ -15,7 +15,7 @@ class WorldRecord:
     visit_count: int = 0
     scores: list[float] = field(default_factory=list)
     noise_count: int = 0
-    law_signatures: list[tuple[str, ...]] = field(default_factory=list)
+    law_signatures: list[frozenset[str]] = field(default_factory=list)
     params_tried: list[tuple[int, int, tuple[str, ...]]] = field(default_factory=list)
     max_ok_steps: int = 0
     first_noise_steps: int = 0
@@ -28,14 +28,45 @@ class WorldRecord:
     def noise_fraction(self) -> float:
         return self.noise_count / self.visit_count if self.visit_count > 0 else 0.0
 
+    @property
+    def unique_law_signature_count(self) -> int:
+        return len(set(self.law_signatures))
+
+    @property
+    def law_signature_diversity(self) -> float | None:
+        if self.visit_count < 5:
+            return None
+        return self.unique_law_signature_count / self.visit_count
+
+    @property
+    def score_variance(self) -> float | None:
+        if len(self.scores) < 2:
+            return None
+        avg = self.avg_score
+        return sum((score - avg) ** 2 for score in self.scores) / len(self.scores)
+
+    @property
+    def is_multiregime_candidate(self) -> bool:
+        diversity = self.law_signature_diversity
+        return (
+            diversity is not None
+            and diversity > 0.5
+            and self.noise_fraction < 0.20
+            and self.visit_count >= 5
+        )
+
     def to_dict(self) -> dict[str, Any]:
         return {
             "visit_count": self.visit_count,
             "scores": list(self.scores),
             "noise_count": self.noise_count,
-            "law_signatures": [list(sig) for sig in self.law_signatures],
+            "law_signatures": [sorted(sig) for sig in self.law_signatures],
             "avg_score": self.avg_score,
             "noise_fraction": self.noise_fraction,
+            "unique_law_signature_count": self.unique_law_signature_count,
+            "law_signature_diversity": self.law_signature_diversity,
+            "score_variance": self.score_variance,
+            "is_multiregime_candidate": self.is_multiregime_candidate,
             "params_tried": [(p[0], p[1], list(p[2])) for p in self.params_tried],
             "max_ok_steps": self.max_ok_steps,
             "first_noise_steps": self.first_noise_steps,
@@ -63,7 +94,7 @@ def update_history(
         record.noise_count += 1
         if record.first_noise_steps == 0 or steps < record.first_noise_steps:
             record.first_noise_steps = steps
-    record.law_signatures.append(law_signature)
+    record.law_signatures.append(frozenset(law_signature))
     record.params_tried.append((steps, width, law_signature))
 
 
@@ -96,7 +127,7 @@ def load_agent_state(
             visit_count=rd["visit_count"],
             scores=list(rd["scores"]),
             noise_count=rd.get("noise_count", 0),
-            law_signatures=[tuple(sig) for sig in rd.get("law_signatures", [])],
+            law_signatures=[frozenset(sig) for sig in rd.get("law_signatures", [])],
             params_tried=[
                 (p[0], p[1], tuple(p[2])) for p in rd.get("params_tried", [])
             ],

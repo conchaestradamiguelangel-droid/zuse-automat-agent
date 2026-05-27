@@ -34,7 +34,7 @@ class WorldHistoryTests(unittest.TestCase):
         update_history(history, "synthetic_glider", 3.0, "ok", sig)
         update_history(history, "synthetic_glider", 3.0, "ok", sig)
         self.assertEqual(len(history["synthetic_glider"].law_signatures), 2)
-        self.assertEqual(history["synthetic_glider"].law_signatures[0], sig)
+        self.assertEqual(history["synthetic_glider"].law_signatures[0], frozenset(sig))
 
     def test_save_load_roundtrip(self):
         history = {}
@@ -137,6 +137,60 @@ class WorldHistoryTests(unittest.TestCase):
             self.assertEqual(history["rule_110"].first_noise_steps, 0)
         finally:
             path.unlink(missing_ok=True)
+
+    def test_law_signature_diversity_requires_minimum_visits(self):
+        record = WorldRecord(
+            visit_count=4,
+            law_signatures=[
+                frozenset({"a"}),
+                frozenset({"b"}),
+                frozenset({"c"}),
+                frozenset({"d"}),
+            ],
+        )
+        self.assertIsNone(record.law_signature_diversity)
+        self.assertFalse(record.is_multiregime_candidate)
+
+    def test_law_signature_diversity_counts_unique_signatures(self):
+        record = WorldRecord(
+            visit_count=5,
+            law_signatures=[
+                frozenset({"a"}),
+                frozenset({"a"}),
+                frozenset({"b"}),
+                frozenset({"c"}),
+                frozenset({"c"}),
+            ],
+        )
+        self.assertEqual(record.unique_law_signature_count, 3)
+        self.assertAlmostEqual(record.law_signature_diversity, 3 / 5)
+
+    def test_multiregime_candidate_requires_diversity_noise_and_visits(self):
+        record = WorldRecord(
+            visit_count=5,
+            scores=[1.0, 2.0, 3.0, 4.0, 5.0],
+            noise_count=0,
+            law_signatures=[
+                frozenset({"a"}),
+                frozenset({"b"}),
+                frozenset({"c"}),
+                frozenset({"d"}),
+                frozenset({"d"}),
+            ],
+        )
+        self.assertTrue(record.is_multiregime_candidate)
+
+        noisy = WorldRecord(
+            visit_count=5,
+            noise_count=1,
+            law_signatures=record.law_signatures,
+        )
+        self.assertFalse(noisy.is_multiregime_candidate)
+
+    def test_score_variance_requires_at_least_two_scores(self):
+        self.assertIsNone(WorldRecord(scores=[1.0]).score_variance)
+        record = WorldRecord(scores=[1.0, 3.0])
+        self.assertAlmostEqual(record.score_variance, 1.0)
 
 
 if __name__ == "__main__":

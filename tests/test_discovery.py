@@ -43,6 +43,20 @@ class DiscoveryTests(unittest.TestCase):
         ]:
             self.assertIn(key, result)
 
+    def test_run_discovery_loop_emits_world_meta_prev_fields(self):
+        result = run_discovery_loop(DiscoveryConfig("synthetic_glider", cycles=1))[0]
+        for key in [
+            "world_signature_diversity_prev",
+            "world_score_variance_prev",
+            "world_is_multiregime_candidate_prev",
+            "world_unique_signatures_prev",
+        ]:
+            self.assertIn(key, result)
+        self.assertIsNone(result["world_signature_diversity_prev"])
+        self.assertIsNone(result["world_score_variance_prev"])
+        self.assertFalse(result["world_is_multiregime_candidate_prev"])
+        self.assertEqual(result["world_unique_signatures_prev"], 0)
+
     def test_life_glider_metrics_are_nonzero(self):
         result = run_cycle(DiscoveryConfig("life_glider", steps=20, width=32, height=32), 0)
         self.assertGreater(result["metrics"]["density_mean"], 0.0)
