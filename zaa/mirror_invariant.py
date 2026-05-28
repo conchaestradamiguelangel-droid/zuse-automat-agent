@@ -1,13 +1,18 @@
-"""Fase 6a — Mirror-invariant observer diagnostic.
+"""Fase 6a/6b - mirror-invariant observer diagnostic.
 
-Purpose: measure how much tipo_unico changes when a Rule 110 IC is
-reflected left-right.  A physically correct observer should give the
-same tipo_unico result for an IC and its mirror, because reflection is
-a symmetry of the integer lattice (it maps Rule 110 to Rule 124 and
-vice-versa, which are exact mirrors of each other).
+Purpose: measure how much tipo_unico changes when a 1D CA initial
+condition is reflected left-right. Reflection is a symmetry of the
+integer lattice, and maps some ECA rules to exact mirror rules
+(for example Rule 110 <-> Rule 124).
 
-This module is DIAGNOSTIC ONLY.  Do NOT integrate into the
-production pipeline until the full law map has been revalidated.
+Conclusion after Fase 6b: tipo_unico in the production pipeline is an
+observer-dependent exploratory signal, not a mirror-invariant physical
+property. Linreg classification, Hungarian assignment, and local
+velocity-predicted tracking were tested diagnostically and rejected:
+they degraded other worlds more than they fixed rule_137.
+
+This module is DIAGNOSTIC ONLY. Do not integrate variants into the
+production pipeline without revalidating the full 7-law map.
 
 Public API
 ----------

@@ -105,7 +105,11 @@ def evaluate_density_law(frames: np.ndarray) -> CycleLawResult:
 
 
 def evaluate_structure_count_law(structures: list[Estructura]) -> CycleLawResult:
-    """Accept if only one structure type is present."""
+    """Accept if only one observed structure type is present.
+
+    Fase 6b: tipo_unico is an observer-dependent exploratory signal, not a
+    mirror-invariant physical property.
+    """
     tipos_presentes = sorted({structure.tipo for structure in structures})
     accepted = len(tipos_presentes) == 1
     return CycleLawResult(
