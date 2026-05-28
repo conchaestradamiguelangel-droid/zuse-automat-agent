@@ -151,6 +151,25 @@ class WorldHistoryTests(unittest.TestCase):
         self.assertIsNone(record.law_signature_diversity)
         self.assertFalse(record.is_multiregime_candidate)
 
+    def test_law_signature_diversity_requires_minimum_non_empty_visits(self):
+        record = WorldRecord(
+            visit_count=8,
+            law_signatures=[
+                frozenset(),
+                frozenset(),
+                frozenset(),
+                frozenset({"a"}),
+                frozenset({"b"}),
+                frozenset({"c"}),
+                frozenset({"d"}),
+                frozenset(),
+            ],
+        )
+        self.assertEqual(record.non_empty_signature_visit_count, 4)
+        self.assertEqual(record.unique_law_signature_count, 4)
+        self.assertIsNone(record.law_signature_diversity)
+        self.assertFalse(record.is_multiregime_candidate)
+
     def test_law_signature_diversity_counts_unique_signatures(self):
         record = WorldRecord(
             visit_count=5,
@@ -164,6 +183,49 @@ class WorldHistoryTests(unittest.TestCase):
         )
         self.assertEqual(record.unique_law_signature_count, 3)
         self.assertAlmostEqual(record.law_signature_diversity, 3 / 5)
+
+    def test_law_signature_diversity_ignores_empty_signatures(self):
+        record = WorldRecord(
+            visit_count=8,
+            law_signatures=[
+                frozenset(),
+                frozenset({"a"}),
+                frozenset({"a"}),
+                frozenset({"b"}),
+                frozenset({"c"}),
+                frozenset({"c"}),
+                frozenset(),
+                frozenset({"d"}),
+            ],
+        )
+        self.assertEqual(record.non_empty_signature_visit_count, 6)
+        self.assertEqual(record.unique_law_signature_count, 4)
+        self.assertAlmostEqual(record.law_signature_diversity, 4 / 6)
+
+    def test_empty_signatures_do_not_trigger_multiregime_evidence(self):
+        history = {}
+        for _ in range(8):
+            update_history(history, "rule_90", 0.0, "ok", ())
+        record = history["rule_90"]
+        self.assertEqual(record.non_empty_signature_visit_count, 0)
+        self.assertEqual(record.unique_law_signature_count, 0)
+        self.assertIsNone(record.law_signature_diversity)
+        self.assertFalse(record.is_multiregime_candidate)
+        self.assertFalse(record.has_multiregime_evidence)
+        self.assertEqual(record.peak_signature_diversity, 0.0)
+
+    def test_repeated_single_non_empty_signature_is_not_multiregime(self):
+        history = {}
+        for _ in range(5):
+            update_history(history, "rule_90", 1.0, "ok", ("velocidad_constante",))
+        for _ in range(3):
+            update_history(history, "rule_90", 0.0, "ok", ())
+        record = history["rule_90"]
+        self.assertEqual(record.non_empty_signature_visit_count, 5)
+        self.assertEqual(record.unique_law_signature_count, 1)
+        self.assertAlmostEqual(record.law_signature_diversity, 1 / 5)
+        self.assertFalse(record.is_multiregime_candidate)
+        self.assertFalse(record.has_multiregime_evidence)
 
     def test_multiregime_candidate_requires_diversity_noise_and_visits(self):
         record = WorldRecord(

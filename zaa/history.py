@@ -32,13 +32,18 @@ class WorldRecord:
 
     @property
     def unique_law_signature_count(self) -> int:
-        return len(set(self.law_signatures))
+        return len({sig for sig in self.law_signatures if sig})
+
+    @property
+    def non_empty_signature_visit_count(self) -> int:
+        return sum(1 for sig in self.law_signatures if sig)
 
     @property
     def law_signature_diversity(self) -> float | None:
-        if self.visit_count < 5:
+        non_empty_visits = self.non_empty_signature_visit_count
+        if non_empty_visits < 5:
             return None
-        return self.unique_law_signature_count / self.visit_count
+        return self.unique_law_signature_count / non_empty_visits
 
     @property
     def score_variance(self) -> float | None:
@@ -54,7 +59,7 @@ class WorldRecord:
             diversity is not None
             and diversity > 0.5
             and self.noise_fraction < 0.20
-            and self.visit_count >= 5
+            and self.non_empty_signature_visit_count >= 5
         )
 
     def to_dict(self) -> dict[str, Any]:
@@ -66,6 +71,7 @@ class WorldRecord:
             "avg_score": self.avg_score,
             "noise_fraction": self.noise_fraction,
             "unique_law_signature_count": self.unique_law_signature_count,
+            "non_empty_signature_visit_count": self.non_empty_signature_visit_count,
             "law_signature_diversity": self.law_signature_diversity,
             "score_variance": self.score_variance,
             "is_multiregime_candidate": self.is_multiregime_candidate,
