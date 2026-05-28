@@ -73,7 +73,7 @@ class PolicyTests(unittest.TestCase):
         self.assertEqual(compute_score(state(dominant_type="glider"), "bloque"), 0.5)
 
     def test_next_world_wraps(self):
-        self.assertEqual(_next_world("rule_54"), "synthetic_glider")
+        self.assertEqual(_next_world("rule_150"), "synthetic_glider")
 
     def test_next_world_advances(self):
         self.assertEqual(_next_world("synthetic_glider"), "synthetic_oscilador")
@@ -81,6 +81,9 @@ class PolicyTests(unittest.TestCase):
     def test_next_world_reaches_rich_eca_sequence(self):
         self.assertEqual(_next_world("rule_110"), "rule_124")
         self.assertIn("rule_109", WORLD_SEQUENCE)
+        self.assertEqual(_next_world("rule_54"), "rule_18")
+        self.assertEqual(_next_world("rule_18"), "rule_90")
+        self.assertEqual(_next_world("rule_90"), "rule_150")
 
     def test_blocked_world_is_skipped(self):
         decision = decide(state(world_type="rule110_real"))

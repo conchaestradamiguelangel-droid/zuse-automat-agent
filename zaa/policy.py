@@ -20,6 +20,9 @@ WORLD_SEQUENCE = [
     "rule_109",
     "rule_137",
     "rule_54",
+    "rule_18",
+    "rule_90",
+    "rule_150",
 ]
 BLOCKED_WORLDS = ["rule110_real"]
 MAX_STEPS_DEFAULT = 400
