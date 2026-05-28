@@ -123,3 +123,51 @@ Fase 7 is scientifically closed without PySR:
 
 Open validation step for the future: test whether the physical tree generalizes to
 new ECA worlds not present in the 200-cycle journal.
+
+## Generalization Check on New ECA Rules
+
+Follow-up test: rules `18, 22, 45, 90, 106, 126, 150`, six seeds each,
+`steps=24`, `width=64`. These worlds were not part of the 200-cycle journal.
+
+The strict tree leaf from the training journal:
+
+```text
+analysis_ok = 1
+entropy_mean > 0.97
+gzip_ratio > 0.17
+mutual_info_mean > 0.02
+```
+
+does **not** generalize as a broad law-richness classifier.
+
+Per-rule means:
+
+```text
+rule  ok/6 rich_pred/6 laws_mean laws_max entropy  gzip    mi      tr
+  18   6       0          3.500     4     0.8423  0.1705  0.1608  0.5535
+  22   6       0          2.333     3     0.9229  0.1839  0.0388  0.5366
+  45   6       0          2.833     3     0.9864  0.2031  0.0097  0.5004
+  90   6       0          2.500     3     0.9830  0.1853  0.0116  0.5101
+ 106   6       0          3.833     5     0.9888  0.1949  0.0096  0.4964
+ 126   6       1          2.500     3     0.9741  0.1697  0.0238  0.4979
+ 150   6       0          2.833     3     0.9873  0.2028  0.0113  0.4976
+```
+
+For observed richness defined as `n_laws_accepted >= 3`, the strict leaf has
+precision `1.0` but recall only `0.034`: it identifies one narrow organized-chaos
+case but misses many other law-rich regimes.
+
+Interpretation:
+
+- The training tree found a **specific** law-rich region, not a universal rule.
+- New ECA rules reveal multiple routes to law richness:
+  - Rule 18: lower entropy but high mutual information, often 3-4 laws.
+  - Rule 106: high entropy/gzip but low mutual information, still 3-5 laws.
+  - Additive/chaotic rules such as 90/150 often produce the core pair
+    `densidad_estable + complejidad_alta + temporal_scale_stability`.
+- The meta-observation survives in weaker form: physical metrics predict law
+  richness, but a single threshold leaf does not cover the whole space.
+
+Next scientific step: retrain the physical tree on the union of the original
+journal plus these new ECA rows, or separate law richness into families instead
+of one global classifier.
