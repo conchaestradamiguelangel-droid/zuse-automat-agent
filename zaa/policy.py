@@ -228,7 +228,11 @@ def decide(
             score,
         )
 
-    if state.has_multiregime_evidence and state.repeats_in_current_world <= max_repeats:
+    if (
+        state.has_multiregime_evidence
+        and len(state.laws_accepted) > 0
+        and state.repeats_in_current_world <= max_repeats
+    ):
         return PolicyDecision(
             "repeat_vary_seed",
             state.world_type,

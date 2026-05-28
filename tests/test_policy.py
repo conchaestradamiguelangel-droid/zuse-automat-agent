@@ -183,6 +183,37 @@ class PolicyTests(unittest.TestCase):
         self.assertEqual(decision.action, "repeat_vary_seed")
         self.assertEqual(decision.reason, "mundo_multiregimen_explorar_mas")
 
+    def test_multiregime_evidence_with_one_law_repeats(self):
+        decision = decide(
+            state(
+                has_multiregime_evidence=True,
+                laws_accepted=["densidad_estable"],
+                repeats_in_current_world=1,
+                steps=400,
+                score=1.0,
+            ),
+            prev_score=3.0,
+            max_steps=400,
+            max_repeats=1,
+        )
+        self.assertEqual(decision.action, "repeat_vary_seed")
+        self.assertEqual(decision.reason, "mundo_multiregimen_explorar_mas")
+
+    def test_multiregime_evidence_with_empty_laws_changes_world_at_max_steps(self):
+        decision = decide(
+            state(
+                has_multiregime_evidence=True,
+                laws_accepted=[],
+                repeats_in_current_world=0,
+                steps=400,
+                score=0.0,
+            ),
+            prev_score=3.0,
+            max_steps=400,
+        )
+        self.assertEqual(decision.action, "change_world")
+        self.assertEqual(decision.reason, "max_repeats_o_max_steps_alcanzado")
+
     def test_multiregime_evidence_respects_max_repeats(self):
         decision = decide(
             state(
