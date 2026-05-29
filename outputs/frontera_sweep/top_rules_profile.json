@@ -1,0 +1,668 @@
+{
+  "rule_208": {
+    "classification": "sin-evidencia-multiregimen",
+    "law_frequencies": {
+      "complejidad_alta": {
+        "class": "core",
+        "count": 6,
+        "rate": 1.0
+      },
+      "densidad_estable": {
+        "class": "core",
+        "count": 6,
+        "rate": 1.0
+      },
+      "frontera_temporal": {
+        "class": "core",
+        "count": 6,
+        "rate": 1.0
+      },
+      "periodicidad": {
+        "class": "absent",
+        "count": 0,
+        "rate": 0.0
+      },
+      "temporal_scale_stability": {
+        "class": "core",
+        "count": 6,
+        "rate": 1.0
+      },
+      "tipo_unico": {
+        "class": "core",
+        "count": 6,
+        "rate": 1.0
+      },
+      "velocidad_constante": {
+        "class": "core",
+        "count": 6,
+        "rate": 1.0
+      }
+    },
+    "mean_dedup_structure_count": 12.5,
+    "mean_entropy": 0.9454096046305067,
+    "mean_n_laws": 6,
+    "mean_transition_rate": 0.3497178819444444,
+    "noise_visits": 0,
+    "non_empty_ratio": 1.0,
+    "non_empty_visits": 6,
+    "ok_visits": 6,
+    "peak_diversity": 0.16666666666666666,
+    "rows": [
+      {
+        "analysis_ok": true,
+        "analysis_status": "ok",
+        "dedup_structure_count": 12,
+        "dominant_type": "glider",
+        "inflation_ratio": 5.5,
+        "laws_accepted": [
+          "velocidad_constante",
+          "densidad_estable",
+          "tipo_unico",
+          "complejidad_alta",
+          "frontera_temporal",
+          "temporal_scale_stability"
+        ],
+        "metrics": {
+          "density_mean": 0.300625,
+          "entropy_mean": 0.8809478865960503,
+          "entropy_var": 0.0002957793692701707,
+          "gzip_ratio": 0.05625,
+          "mutual_info_mean": 0.04296696017532639,
+          "transition_rate": 0.3151041666666667
+        },
+        "n_laws_accepted": 6,
+        "seed": 20260523,
+        "structure_count": 66
+      },
+      {
+        "analysis_ok": true,
+        "analysis_status": "ok",
+        "dedup_structure_count": 13,
+        "dominant_type": "glider",
+        "inflation_ratio": 5.3076923076923075,
+        "laws_accepted": [
+          "velocidad_constante",
+          "densidad_estable",
+          "tipo_unico",
+          "complejidad_alta",
+          "frontera_temporal",
+          "temporal_scale_stability"
+        ],
+        "metrics": {
+          "density_mean": 0.35,
+          "entropy_mean": 0.9312275894990728,
+          "entropy_var": 0.00019706851858783468,
+          "gzip_ratio": 0.056875,
+          "mutual_info_mean": 0.020580147075447367,
+          "transition_rate": 0.3763020833333333
+        },
+        "n_laws_accepted": 6,
+        "seed": 20260524,
+        "structure_count": 69
+      },
+      {
+        "analysis_ok": true,
+        "analysis_status": "ok",
+        "dedup_structure_count": 12,
+        "dominant_type": "glider",
+        "inflation_ratio": 5.5,
+        "laws_accepted": [
+          "velocidad_constante",
+          "densidad_estable",
+          "tipo_unico",
+          "complejidad_alta",
+          "frontera_temporal",
+          "temporal_scale_stability"
+        ],
+        "metrics": {
+          "density_mean": 0.346875,
+          "entropy_mean": 0.9305202538198948,
+          "entropy_var": 0.00011178592951998896,
+          "gzip_ratio": 0.0525,
+          "mutual_info_mean": 0.020379428593226213,
+          "transition_rate": 0.3756510416666667
+        },
+        "n_laws_accepted": 6,
+        "seed": 20260525,
+        "structure_count": 66
+      },
+      {
+        "analysis_ok": true,
+        "analysis_status": "ok",
+        "dedup_structure_count": 13,
+        "dominant_type": "glider",
+        "inflation_ratio": 7.846153846153846,
+        "laws_accepted": [
+          "velocidad_constante",
+          "densidad_estable",
+          "tipo_unico",
+          "complejidad_alta",
+          "frontera_temporal",
+          "temporal_scale_stability"
+        ],
+        "metrics": {
+          "density_mean": 0.4725,
+          "entropy_mean": 0.9968411592700335,
+          "entropy_var": 2.7620045435560158e-06,
+          "gzip_ratio": 0.0525,
+          "mutual_info_mean": 0.07058946977894769,
+          "transition_rate": 0.34375
+        },
+        "n_laws_accepted": 6,
+        "seed": 20260526,
+        "structure_count": 102
+      },
+      {
+        "analysis_ok": true,
+        "analysis_status": "ok",
+        "dedup_structure_count": 11,
+        "dominant_type": "glider",
+        "inflation_ratio": 8.181818181818182,
+        "laws_accepted": [
+          "velocidad_constante",
+          "densidad_estable",
+          "tipo_unico",
+          "complejidad_alta",
+          "frontera_temporal",
+          "temporal_scale_stability"
+        ],
+        "metrics": {
+          "density_mean": 0.443125,
+          "entropy_mean": 0.9884440962777795,
+          "entropy_var": 1.5644213476035375e-06,
+          "gzip_ratio": 0.049375,
+          "mutual_info_mean": 0.0966820449018862,
+          "transition_rate": 0.314453125
+        },
+        "n_laws_accepted": 6,
+        "seed": 20260527,
+        "structure_count": 90
+      },
+      {
+        "analysis_ok": true,
+        "analysis_status": "ok",
+        "dedup_structure_count": 14,
+        "dominant_type": "glider",
+        "inflation_ratio": 5.357142857142857,
+        "laws_accepted": [
+          "velocidad_constante",
+          "densidad_estable",
+          "tipo_unico",
+          "complejidad_alta",
+          "frontera_temporal",
+          "temporal_scale_stability"
+        ],
+        "metrics": {
+          "density_mean": 0.365,
+          "entropy_mean": 0.9444766423202091,
+          "entropy_var": 0.00012845180200158317,
+          "gzip_ratio": 0.055,
+          "mutual_info_mean": 0.027504603631579316,
+          "transition_rate": 0.373046875
+        },
+        "n_laws_accepted": 6,
+        "seed": 20260528,
+        "structure_count": 75
+      }
+    ],
+    "rule_id": 208,
+    "seeds": [
+      20260523,
+      20260524,
+      20260525,
+      20260526,
+      20260527,
+      20260528
+    ],
+    "signatures": {
+      "velocidad_constante + densidad_estable + tipo_unico + complejidad_alta + frontera_temporal + temporal_scale_stability": 6
+    },
+    "steps": 24,
+    "total_visits": 6,
+    "width": 64
+  },
+  "rule_209": {
+    "classification": "sin-evidencia-multiregimen",
+    "law_frequencies": {
+      "complejidad_alta": {
+        "class": "core",
+        "count": 6,
+        "rate": 1.0
+      },
+      "densidad_estable": {
+        "class": "core",
+        "count": 6,
+        "rate": 1.0
+      },
+      "frontera_temporal": {
+        "class": "core",
+        "count": 6,
+        "rate": 1.0
+      },
+      "periodicidad": {
+        "class": "absent",
+        "count": 0,
+        "rate": 0.0
+      },
+      "temporal_scale_stability": {
+        "class": "core",
+        "count": 6,
+        "rate": 1.0
+      },
+      "tipo_unico": {
+        "class": "core",
+        "count": 6,
+        "rate": 1.0
+      },
+      "velocidad_constante": {
+        "class": "core",
+        "count": 6,
+        "rate": 1.0
+      }
+    },
+    "mean_dedup_structure_count": 13.166666666666666,
+    "mean_entropy": 0.9354233793322243,
+    "mean_n_laws": 6,
+    "mean_transition_rate": 0.3612196180555556,
+    "noise_visits": 0,
+    "non_empty_ratio": 1.0,
+    "non_empty_visits": 6,
+    "ok_visits": 6,
+    "peak_diversity": 0.16666666666666666,
+    "rows": [
+      {
+        "analysis_ok": true,
+        "analysis_status": "ok",
+        "dedup_structure_count": 12,
+        "dominant_type": "glider",
+        "inflation_ratio": 11.75,
+        "laws_accepted": [
+          "velocidad_constante",
+          "densidad_estable",
+          "tipo_unico",
+          "complejidad_alta",
+          "frontera_temporal",
+          "temporal_scale_stability"
+        ],
+        "metrics": {
+          "density_mean": 0.669375,
+          "entropy_mean": 0.902850457837566,
+          "entropy_var": 0.0005541265014161837,
+          "gzip_ratio": 0.059375,
+          "mutual_info_mean": 0.04900923177483568,
+          "transition_rate": 0.3313802083333333
+        },
+        "n_laws_accepted": 6,
+        "seed": 20260523,
+        "structure_count": 141
+      },
+      {
+        "analysis_ok": true,
+        "analysis_status": "ok",
+        "dedup_structure_count": 14,
+        "dominant_type": "glider",
+        "inflation_ratio": 9.428571428571429,
+        "laws_accepted": [
+          "velocidad_constante",
+          "densidad_estable",
+          "tipo_unico",
+          "complejidad_alta",
+          "frontera_temporal",
+          "temporal_scale_stability"
+        ],
+        "metrics": {
+          "density_mean": 0.6125,
+          "entropy_mean": 0.9576272590225078,
+          "entropy_var": 0.00011981823926227796,
+          "gzip_ratio": 0.060625,
+          "mutual_info_mean": 0.026527228611730708,
+          "transition_rate": 0.3880208333333333
+        },
+        "n_laws_accepted": 6,
+        "seed": 20260524,
+        "structure_count": 132
+      },
+      {
+        "analysis_ok": true,
+        "analysis_status": "ok",
+        "dedup_structure_count": 14,
+        "dominant_type": "glider",
+        "inflation_ratio": 9.428571428571429,
+        "laws_accepted": [
+          "velocidad_constante",
+          "densidad_estable",
+          "tipo_unico",
+          "complejidad_alta",
+          "frontera_temporal",
+          "temporal_scale_stability"
+        ],
+        "metrics": {
+          "density_mean": 0.613125,
+          "entropy_mean": 0.9572591629675604,
+          "entropy_var": 9.620623214494105e-05,
+          "gzip_ratio": 0.060625,
+          "mutual_info_mean": 0.02697735943654943,
+          "transition_rate": 0.3873697916666667
+        },
+        "n_laws_accepted": 6,
+        "seed": 20260525,
+        "structure_count": 132
+      },
+      {
+        "analysis_ok": true,
+        "analysis_status": "ok",
+        "dedup_structure_count": 13,
+        "dominant_type": "glider",
+        "inflation_ratio": 10.615384615384615,
+        "laws_accepted": [
+          "velocidad_constante",
+          "densidad_estable",
+          "tipo_unico",
+          "complejidad_alta",
+          "frontera_temporal",
+          "temporal_scale_stability"
+        ],
+        "metrics": {
+          "density_mean": 0.64875,
+          "entropy_mean": 0.933189059266358,
+          "entropy_var": 0.0002679477259617168,
+          "gzip_ratio": 0.059375,
+          "mutual_info_mean": 0.03745407857761807,
+          "transition_rate": 0.3515625
+        },
+        "n_laws_accepted": 6,
+        "seed": 20260526,
+        "structure_count": 138
+      },
+      {
+        "analysis_ok": true,
+        "analysis_status": "ok",
+        "dedup_structure_count": 12,
+        "dominant_type": "glider",
+        "inflation_ratio": 11.75,
+        "laws_accepted": [
+          "velocidad_constante",
+          "densidad_estable",
+          "tipo_unico",
+          "complejidad_alta",
+          "frontera_temporal",
+          "temporal_scale_stability"
+        ],
+        "metrics": {
+          "density_mean": 0.675625,
+          "entropy_mean": 0.9036478382526149,
+          "entropy_var": 0.0006721741876573362,
+          "gzip_ratio": 0.058125,
+          "mutual_info_mean": 0.04837180162428787,
+          "transition_rate": 0.3248697916666667
+        },
+        "n_laws_accepted": 6,
+        "seed": 20260527,
+        "structure_count": 141
+      },
+      {
+        "analysis_ok": true,
+        "analysis_status": "ok",
+        "dedup_structure_count": 14,
+        "dominant_type": "glider",
+        "inflation_ratio": 9.0,
+        "laws_accepted": [
+          "velocidad_constante",
+          "densidad_estable",
+          "tipo_unico",
+          "complejidad_alta",
+          "frontera_temporal",
+          "temporal_scale_stability"
+        ],
+        "metrics": {
+          "density_mean": 0.61625,
+          "entropy_mean": 0.9579664986467386,
+          "entropy_var": 0.0001436620522879013,
+          "gzip_ratio": 0.05875,
+          "mutual_info_mean": 0.02631227354496214,
+          "transition_rate": 0.3841145833333333
+        },
+        "n_laws_accepted": 6,
+        "seed": 20260528,
+        "structure_count": 126
+      }
+    ],
+    "rule_id": 209,
+    "seeds": [
+      20260523,
+      20260524,
+      20260525,
+      20260526,
+      20260527,
+      20260528
+    ],
+    "signatures": {
+      "velocidad_constante + densidad_estable + tipo_unico + complejidad_alta + frontera_temporal + temporal_scale_stability": 6
+    },
+    "steps": 24,
+    "total_visits": 6,
+    "width": 64
+  },
+  "rule_46": {
+    "classification": "sin-evidencia-multiregimen",
+    "law_frequencies": {
+      "complejidad_alta": {
+        "class": "core",
+        "count": 6,
+        "rate": 1.0
+      },
+      "densidad_estable": {
+        "class": "core",
+        "count": 5,
+        "rate": 0.8333333333333334
+      },
+      "frontera_temporal": {
+        "class": "core",
+        "count": 6,
+        "rate": 1.0
+      },
+      "periodicidad": {
+        "class": "absent",
+        "count": 0,
+        "rate": 0.0
+      },
+      "temporal_scale_stability": {
+        "class": "core",
+        "count": 6,
+        "rate": 1.0
+      },
+      "tipo_unico": {
+        "class": "core",
+        "count": 6,
+        "rate": 1.0
+      },
+      "velocidad_constante": {
+        "class": "core",
+        "count": 6,
+        "rate": 1.0
+      }
+    },
+    "mean_dedup_structure_count": 12.666666666666666,
+    "mean_entropy": 0.9354233793322243,
+    "mean_n_laws": 5.833333333333333,
+    "mean_transition_rate": 0.3605685763888889,
+    "noise_visits": 0,
+    "non_empty_ratio": 1.0,
+    "non_empty_visits": 6,
+    "ok_visits": 6,
+    "peak_diversity": 0.3333333333333333,
+    "rows": [
+      {
+        "analysis_ok": true,
+        "analysis_status": "ok",
+        "dedup_structure_count": 12,
+        "dominant_type": "glider",
+        "inflation_ratio": 5.5,
+        "laws_accepted": [
+          "velocidad_constante",
+          "densidad_estable",
+          "tipo_unico",
+          "complejidad_alta",
+          "frontera_temporal",
+          "temporal_scale_stability"
+        ],
+        "metrics": {
+          "density_mean": 0.321875,
+          "entropy_mean": 0.902850457837566,
+          "entropy_var": 0.0005541265014161837,
+          "gzip_ratio": 0.0575,
+          "mutual_info_mean": 0.04900923177483568,
+          "transition_rate": 0.322265625
+        },
+        "n_laws_accepted": 6,
+        "seed": 20260523,
+        "structure_count": 66
+      },
+      {
+        "analysis_ok": true,
+        "analysis_status": "ok",
+        "dedup_structure_count": 13,
+        "dominant_type": "glider",
+        "inflation_ratio": 6.0,
+        "laws_accepted": [
+          "velocidad_constante",
+          "densidad_estable",
+          "tipo_unico",
+          "complejidad_alta",
+          "frontera_temporal",
+          "temporal_scale_stability"
+        ],
+        "metrics": {
+          "density_mean": 0.3875,
+          "entropy_mean": 0.9576272590225078,
+          "entropy_var": 0.00011981823926227796,
+          "gzip_ratio": 0.056875,
+          "mutual_info_mean": 0.026527228611730708,
+          "transition_rate": 0.3880208333333333
+        },
+        "n_laws_accepted": 6,
+        "seed": 20260524,
+        "structure_count": 78
+      },
+      {
+        "analysis_ok": true,
+        "analysis_status": "ok",
+        "dedup_structure_count": 14,
+        "dominant_type": "glider",
+        "inflation_ratio": 5.571428571428571,
+        "laws_accepted": [
+          "velocidad_constante",
+          "densidad_estable",
+          "tipo_unico",
+          "complejidad_alta",
+          "frontera_temporal",
+          "temporal_scale_stability"
+        ],
+        "metrics": {
+          "density_mean": 0.380625,
+          "entropy_mean": 0.9572591629675604,
+          "entropy_var": 9.620623214494105e-05,
+          "gzip_ratio": 0.05625,
+          "mutual_info_mean": 0.02697735943654943,
+          "transition_rate": 0.380859375
+        },
+        "n_laws_accepted": 6,
+        "seed": 20260525,
+        "structure_count": 78
+      },
+      {
+        "analysis_ok": true,
+        "analysis_status": "ok",
+        "dedup_structure_count": 12,
+        "dominant_type": "glider",
+        "inflation_ratio": 6.0,
+        "laws_accepted": [
+          "velocidad_constante",
+          "densidad_estable",
+          "tipo_unico",
+          "complejidad_alta",
+          "frontera_temporal",
+          "temporal_scale_stability"
+        ],
+        "metrics": {
+          "density_mean": 0.35625,
+          "entropy_mean": 0.933189059266358,
+          "entropy_var": 0.0002679477259617168,
+          "gzip_ratio": 0.0575,
+          "mutual_info_mean": 0.03745407857761807,
+          "transition_rate": 0.3567708333333333
+        },
+        "n_laws_accepted": 6,
+        "seed": 20260526,
+        "structure_count": 72
+      },
+      {
+        "analysis_ok": true,
+        "analysis_status": "ok",
+        "dedup_structure_count": 12,
+        "dominant_type": "glider",
+        "inflation_ratio": 5.75,
+        "laws_accepted": [
+          "velocidad_constante",
+          "tipo_unico",
+          "complejidad_alta",
+          "frontera_temporal",
+          "temporal_scale_stability"
+        ],
+        "metrics": {
+          "density_mean": 0.330625,
+          "entropy_mean": 0.9036478382526149,
+          "entropy_var": 0.0006721741876573362,
+          "gzip_ratio": 0.05875,
+          "mutual_info_mean": 0.04837180162428787,
+          "transition_rate": 0.3313802083333333
+        },
+        "n_laws_accepted": 5,
+        "seed": 20260527,
+        "structure_count": 69
+      },
+      {
+        "analysis_ok": true,
+        "analysis_status": "ok",
+        "dedup_structure_count": 13,
+        "dominant_type": "glider",
+        "inflation_ratio": 5.769230769230769,
+        "laws_accepted": [
+          "velocidad_constante",
+          "densidad_estable",
+          "tipo_unico",
+          "complejidad_alta",
+          "frontera_temporal",
+          "temporal_scale_stability"
+        ],
+        "metrics": {
+          "density_mean": 0.38375,
+          "entropy_mean": 0.9579664986467386,
+          "entropy_var": 0.0001436620522879013,
+          "gzip_ratio": 0.059375,
+          "mutual_info_mean": 0.02631227354496214,
+          "transition_rate": 0.3841145833333333
+        },
+        "n_laws_accepted": 6,
+        "seed": 20260528,
+        "structure_count": 75
+      }
+    ],
+    "rule_id": 46,
+    "seeds": [
+      20260523,
+      20260524,
+      20260525,
+      20260526,
+      20260527,
+      20260528
+    ],
+    "signatures": {
+      "velocidad_constante + densidad_estable + tipo_unico + complejidad_alta + frontera_temporal + temporal_scale_stability": 5,
+      "velocidad_constante + tipo_unico + complejidad_alta + frontera_temporal + temporal_scale_stability": 1
+    },
+    "steps": 24,
+    "total_visits": 6,
+    "width": 64
+  }
+}
