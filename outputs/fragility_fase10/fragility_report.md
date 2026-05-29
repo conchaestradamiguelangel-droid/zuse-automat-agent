@@ -68,6 +68,26 @@ Selected cases:
 | rule_46 | 0.031 | 0.000 | 0.000 | 0.031 |
 | rule_90 | 0.172 | 0.000 | 0.000 | 0.172 |
 
+## Fragility Spectrum
+
+| world | category | f_total | pattern |
+| --- | --- | --- | --- |
+| rule_208 | frontera-rich-estable | 0.000 | - |
+| rule_209 | frontera-rich-estable | 0.000 | - |
+| rule_46 | frontera-rich-estable | 0.031 | - |
+| rule_90 | multiregimen-escala-dependiente | 0.172 | clustered |
+| rule_109 | multiregimen-productivo | 0.250 | clustered |
+| rule_18 | multiregimen-productivo | 0.349 | clustered |
+| rule_137 | multiregimen-productivo | 0.630 | dispersed |
+
+The spectrum is ordered and category-aligned: `frontera-rich-estable` occupies
+the low-fragility end, while `multiregimen-productivo` occupies the upper end.
+There is no overlap in the measured set.
+
+`rule_208` and `rule_209` both have `f_total = 0.000`. Since they are linked by
+the complement symmetry `0 <-> 1`, this suggests complement symmetry preserves
+not only the law signature but also the basin width.
+
 ## Interpretation
 
 - `rule_109`: total fragility `0.250`, dominated by `other_sig` (`0.250`); perturbations mostly move the IC into other productive law signatures.

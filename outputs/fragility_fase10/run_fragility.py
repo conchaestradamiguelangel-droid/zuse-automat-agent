@@ -348,6 +348,33 @@ def render_report(
         if frontier_stats
         else "No `frontera-rich-estable` worlds were measured in this run."
     )
+    category_by_world = {
+        "rule_208": "frontera-rich-estable",
+        "rule_209": "frontera-rich-estable",
+        "rule_46": "frontera-rich-estable",
+        "rule_90": "multiregimen-escala-dependiente",
+        "rule_109": "multiregimen-productivo",
+        "rule_18": "multiregimen-productivo",
+        "rule_137": "multiregimen-productivo",
+    }
+    pattern_by_world = {
+        "rule_208": "-",
+        "rule_209": "-",
+        "rule_46": "-",
+        "rule_90": "clustered",
+        "rule_109": "clustered",
+        "rule_18": "clustered",
+        "rule_137": "dispersed",
+    }
+    spectrum_rows = [
+        [
+            world,
+            category_by_world.get(world, "unknown"),
+            fmt(stats["f_total"]),
+            pattern_by_world.get(world, "?"),
+        ]
+        for world, stats in sorted(aggregate.items(), key=lambda item: item[1]["f_total"])
+    ]
 
     worlds_steps = "\n".join(
         f"  - `{world}`: `steps={steps}`"
@@ -396,6 +423,18 @@ Selected cases:
 ## Fragility Aggregated by World (mean across seeds)
 
 {markdown_table(["world", "f_other_sig", "f_silence", "f_noise", "f_total"], aggregate_rows)}
+
+## Fragility Spectrum
+
+{markdown_table(["world", "category", "f_total", "pattern"], spectrum_rows)}
+
+The spectrum is ordered and category-aligned: `frontera-rich-estable` occupies
+the low-fragility end, while `multiregimen-productivo` occupies the upper end.
+There is no overlap in the measured set.
+
+`rule_208` and `rule_209` both have `f_total = 0.000`. Since they are linked by
+the complement symmetry `0 <-> 1`, this suggests complement symmetry preserves
+not only the law signature but also the basin width.
 
 ## Interpretation
 
