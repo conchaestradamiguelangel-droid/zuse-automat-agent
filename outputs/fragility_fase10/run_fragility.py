@@ -45,6 +45,9 @@ CANONICAL_STEPS = {
     "rule_46": 24,
     "rule_208": 24,
     "rule_209": 24,
+    "rule_54": 96,
+    "rule_110": 24,
+    "rule_124": 24,
 }
 
 FORMAL_CASES = {
@@ -333,7 +336,8 @@ def render_report(
         "fragility is productive: perturbations either preserve the law "
         "signature or move to another non-empty signature."
         if all_silence_noise_zero
-        else "At least one world crosses into silence or noise under perturbation."
+        else "`rule_54` breaks the earlier all-productive pattern: some one-bit "
+        "perturbations cross the deduplicated noise gate (`f_noise = 0.375`)."
     )
 
     frontier_stats = [
@@ -354,7 +358,10 @@ def render_report(
         "rule_46": "frontera-rich-estable",
         "rule_90": "multiregimen-escala-dependiente",
         "rule_109": "multiregimen-productivo",
+        "rule_110": "multiregimen-productivo",
+        "rule_124": "multiregimen-productivo",
         "rule_18": "multiregimen-productivo",
+        "rule_54": "multiregimen-productivo",
         "rule_137": "multiregimen-productivo",
     }
     pattern_by_world = {
@@ -363,7 +370,10 @@ def render_report(
         "rule_46": "-",
         "rule_90": "clustered",
         "rule_109": "clustered",
+        "rule_110": "clustered",
+        "rule_124": "dispersed",
         "rule_18": "clustered",
+        "rule_54": "clustered",
         "rule_137": "dispersed",
     }
     spectrum_rows = [
@@ -436,6 +446,10 @@ There is no overlap in the measured set.
 the complement symmetry `0 <-> 1`, this suggests complement symmetry preserves
 not only the law signature but also the basin width.
 
+`rule_54` is the new exception: it is the most fragile measured world by
+`f_total`, but its fragility is partly noise-boundary fragility (`f_noise =
+0.375`), not only productive signature switching.
+
 ## Interpretation
 
 {interpretation(aggregate)}
@@ -451,6 +465,9 @@ Fase 12a extends the same protocol to `frontera-rich-estable` worlds
 (`rule_46`, `rule_208`, `rule_209`). These worlds are expected to be more
 robust than `rule_137` because their formal profiles have low signature
 diversity and nearly invariant six-law signatures.
+
+Fase 12c adds the remaining measured `multiregimen-productivo` worlds:
+`rule_54`, `rule_110`, and `rule_124`.
 
 ## Key Finding: frontera-rich-estable Basins Are Wide
 
