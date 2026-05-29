@@ -61,3 +61,16 @@ Is `rule_137` special because it has a fragile basin, or do all multi-regime
 worlds have sensitive boundaries?
 
 `rule_137` is the most fragile world in this sample.
+
+## Key Finding: All Fragility Is Productive Fragility
+
+Across all four worlds and all 640 single-bit perturbations (4 worlds × up to 3 seeds × 64 flips), `f_silence` and `f_noise` are zero without exception. No bit flip collapses any world into analytic silence or noise at their canonical steps.
+
+This means the basin boundary for all four multi-regime worlds lies between productive law-signature regions, not at the edge of the analyzable zone. The IC neighborhood is entirely inside productive territory.
+
+Consequences:
+
+- `rule_137` is not fragile in the sense of "easily broken" — it is fragile in the sense of "easily shifted to a different productive regime".
+- The fragility spectrum (`rule_137` 0.630 > `rule_18` 0.349 > `rule_109` 0.250 > `rule_90` 0.172) reflects how densely packed the IC space is with distinct attractor basins, not how close the world is to silence or noise.
+- `rule_137`'s high seed-to-seed variance (0.219 to 0.859) shows that fragility is a property of `(world, IC)`, not of the world alone. Some initial conditions sit deep inside a basin; others sit near a boundary.
+- `rule_90`'s low fragility at its canonical steps (0.172) is consistent with its scale-dependent profile: at `steps=96` it has converged to a minimal stable signature (`temporal_scale_stability` only), which is robust to IC perturbation.
