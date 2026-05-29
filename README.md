@@ -45,6 +45,12 @@ python -m zaa discover --world rule_30 --cycles 5 --steps 200 --width 256
 python -m unittest discover -s tests
 ```
 
+## Scientific Artifacts
+
+- [World taxonomy and law coverage matrix](outputs/world_taxonomy/law_map.md)
+  -- formal classification of all 15 worlds and per-law coverage across the
+  7 current cycle laws.
+
 ## Estado de fases
 
 - Fase 0a: congelada en git.
