@@ -336,8 +336,10 @@ def render_report(
         "fragility is productive: perturbations either preserve the law "
         "signature or move to another non-empty signature."
         if all_silence_noise_zero
-        else "`rule_54` breaks the earlier all-productive pattern: some one-bit "
-        "perturbations cross the deduplicated noise gate (`f_noise = 0.375`)."
+        else "Nine of ten measured worlds still have `f_noise = 0`; `rule_54` "
+        "is the exception with `f_noise = 0.375`. This qualifies the earlier "
+        "Fase 10 finding: productive fragility is the dominant mechanism, but "
+        "`rule_54` defines a second mechanism, noise-boundary fragility."
     )
 
     frontier_stats = [
@@ -477,9 +479,15 @@ This confirms the pre-run hypothesis: stable high-richness worlds have broad
 law-signature basins, unlike `rule_137`, whose signature changes under most
 single-bit perturbations.
 
-## Productive Fragility Check
+## Two Fragility Mechanisms
 
 {productive_fragility}
+
+- Productive basin switching: `rule_137` (`f_noise = 0.000`, dispersed) has
+  many productive attractors available.
+- Noise-boundary fragility: `rule_54` (`f_noise = 0.375`, clustered) sits close
+  to the deduplicated structure threshold and can fall into noise under local
+  perturbation.
 """
 
 
