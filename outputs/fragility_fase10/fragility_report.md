@@ -1,4 +1,4 @@
-# Basin Fragility Diagnostic — Fase 10a
+# Basin Fragility Diagnostic - Fase 10a/12a
 
 ## Setup
 
@@ -8,9 +8,14 @@
   - `rule_18`: `steps=24`
   - `rule_109`: `steps=48`
   - `rule_90`: `steps=96`
+  - `rule_46`: `steps=24`
+  - `rule_208`: `steps=24`
+  - `rule_209`: `steps=24`
 - Seeds are reconstructed from `journal_8c_long.jsonl` because the journal does
-  not store seed explicitly.
+  not store seed explicitly. `rule_46`, `rule_208`, and `rule_209` use formal
+  profile seeds `20260523..20260525`.
 - Fragility = one-bit flips that change outcome / 64.
+- Total perturbations in this report: `1216`.
 - Components:
   - `f_other_sig`: flip produces a different non-empty law signature.
   - `f_silence`: flip produces `analysis_ok=True` and `laws_accepted=[]`.
@@ -23,6 +28,9 @@ Selected cases:
 - `rule_18`: seed 20260564 @ steps 24, seed 20260566 @ steps 24, seed 20260643 @ steps 24
 - `rule_109`: seed 20260554 @ steps 48
 - `rule_90`: seed 20260568 @ steps 48, seed 20260570 @ steps 48, seed 20260567 @ steps 24
+- `rule_46`: seed 20260523 @ steps 24, seed 20260524 @ steps 24, seed 20260525 @ steps 24
+- `rule_208`: seed 20260523 @ steps 24, seed 20260524 @ steps 24, seed 20260525 @ steps 24
+- `rule_209`: seed 20260523 @ steps 24, seed 20260524 @ steps 24, seed 20260525 @ steps 24
 
 ## Fragility Components
 
@@ -35,6 +43,15 @@ Selected cases:
 | rule_18 | 20260564 | 24 | 0.281 | 0.000 | 0.000 | 0.281 | temporal_scale_stability + tipo_unico + velocidad_constante |
 | rule_18 | 20260566 | 24 | 0.188 | 0.000 | 0.000 | 0.188 | complejidad_alta + temporal_scale_stability + tipo_unico + velocidad_constante |
 | rule_18 | 20260643 | 24 | 0.578 | 0.000 | 0.000 | 0.578 | complejidad_alta + temporal_scale_stability + velocidad_constante |
+| rule_208 | 20260523 | 24 | 0.000 | 0.000 | 0.000 | 0.000 | complejidad_alta + densidad_estable + frontera_temporal + temporal_scale_stability + tipo_unico + velocidad_constante |
+| rule_208 | 20260524 | 24 | 0.000 | 0.000 | 0.000 | 0.000 | complejidad_alta + densidad_estable + frontera_temporal + temporal_scale_stability + tipo_unico + velocidad_constante |
+| rule_208 | 20260525 | 24 | 0.000 | 0.000 | 0.000 | 0.000 | complejidad_alta + densidad_estable + frontera_temporal + temporal_scale_stability + tipo_unico + velocidad_constante |
+| rule_209 | 20260523 | 24 | 0.000 | 0.000 | 0.000 | 0.000 | complejidad_alta + densidad_estable + frontera_temporal + temporal_scale_stability + tipo_unico + velocidad_constante |
+| rule_209 | 20260524 | 24 | 0.000 | 0.000 | 0.000 | 0.000 | complejidad_alta + densidad_estable + frontera_temporal + temporal_scale_stability + tipo_unico + velocidad_constante |
+| rule_209 | 20260525 | 24 | 0.000 | 0.000 | 0.000 | 0.000 | complejidad_alta + densidad_estable + frontera_temporal + temporal_scale_stability + tipo_unico + velocidad_constante |
+| rule_46 | 20260523 | 24 | 0.062 | 0.000 | 0.000 | 0.062 | complejidad_alta + densidad_estable + frontera_temporal + temporal_scale_stability + tipo_unico + velocidad_constante |
+| rule_46 | 20260524 | 24 | 0.016 | 0.000 | 0.000 | 0.016 | complejidad_alta + densidad_estable + frontera_temporal + temporal_scale_stability + tipo_unico + velocidad_constante |
+| rule_46 | 20260525 | 24 | 0.016 | 0.000 | 0.000 | 0.016 | complejidad_alta + densidad_estable + frontera_temporal + temporal_scale_stability + tipo_unico + velocidad_constante |
 | rule_90 | 20260567 | 24 | 0.266 | 0.000 | 0.000 | 0.266 | complejidad_alta + densidad_estable + temporal_scale_stability |
 | rule_90 | 20260568 | 48 | 0.188 | 0.000 | 0.000 | 0.188 | temporal_scale_stability |
 | rule_90 | 20260570 | 48 | 0.062 | 0.000 | 0.000 | 0.062 | temporal_scale_stability |
@@ -46,6 +63,9 @@ Selected cases:
 | rule_109 | 0.250 | 0.000 | 0.000 | 0.250 |
 | rule_137 | 0.630 | 0.000 | 0.000 | 0.630 |
 | rule_18 | 0.349 | 0.000 | 0.000 | 0.349 |
+| rule_208 | 0.000 | 0.000 | 0.000 | 0.000 |
+| rule_209 | 0.000 | 0.000 | 0.000 | 0.000 |
+| rule_46 | 0.031 | 0.000 | 0.000 | 0.031 |
 | rule_90 | 0.172 | 0.000 | 0.000 | 0.172 |
 
 ## Interpretation
@@ -53,6 +73,9 @@ Selected cases:
 - `rule_109`: total fragility `0.250`, dominated by `other_sig` (`0.250`); perturbations mostly move the IC into other productive law signatures.
 - `rule_137`: total fragility `0.630`, dominated by `other_sig` (`0.630`); perturbations mostly move the IC into other productive law signatures.
 - `rule_18`: total fragility `0.349`, dominated by `other_sig` (`0.349`); perturbations mostly move the IC into other productive law signatures.
+- `rule_208`: total fragility `0.000`; all one-bit perturbations preserve the reference law signature.
+- `rule_209`: total fragility `0.000`; all one-bit perturbations preserve the reference law signature.
+- `rule_46`: total fragility `0.031`, dominated by `other_sig` (`0.031`); perturbations mostly move the IC into other productive law signatures.
 - `rule_90`: total fragility `0.172`, dominated by `other_sig` (`0.172`); perturbations mostly move the IC into other productive law signatures.
 
 ## Scientific Question
@@ -62,15 +85,19 @@ worlds have sensitive boundaries?
 
 `rule_137` is the most fragile world in this sample.
 
-## Key Finding: All Fragility Is Productive Fragility
+Fase 12a extends the same protocol to `frontera-rich-estable` worlds
+(`rule_46`, `rule_208`, `rule_209`). These worlds are expected to be more
+robust than `rule_137` because their formal profiles have low signature
+diversity and nearly invariant six-law signatures.
 
-Across all four worlds and all 640 single-bit perturbations (4 worlds × up to 3 seeds × 64 flips), `f_silence` and `f_noise` are zero without exception. No bit flip collapses any world into analytic silence or noise at their canonical steps.
+## Key Finding: frontera-rich-estable Basins Are Wide
 
-This means the basin boundary for all four multi-regime worlds lies between productive law-signature regions, not at the edge of the analyzable zone. The IC neighborhood is entirely inside productive territory.
+The `frontera-rich-estable` worlds are dramatically more robust than `rule_137`: `rule_208` and `rule_209` have `f_total = 0.000`, while `rule_46` has `f_total = 0.031`.
 
-Consequences:
+This confirms the pre-run hypothesis: stable high-richness worlds have broad
+law-signature basins, unlike `rule_137`, whose signature changes under most
+single-bit perturbations.
 
-- `rule_137` is not fragile in the sense of "easily broken" — it is fragile in the sense of "easily shifted to a different productive regime".
-- The fragility spectrum (`rule_137` 0.630 > `rule_18` 0.349 > `rule_109` 0.250 > `rule_90` 0.172) reflects how densely packed the IC space is with distinct attractor basins, not how close the world is to silence or noise.
-- `rule_137`'s high seed-to-seed variance (0.219 to 0.859) shows that fragility is a property of `(world, IC)`, not of the world alone. Some initial conditions sit deep inside a basin; others sit near a boundary.
-- `rule_90`'s low fragility at its canonical steps (0.172) is consistent with its scale-dependent profile: at `steps=96` it has converged to a minimal stable signature (`temporal_scale_stability` only), which is robust to IC perturbation.
+## Productive Fragility Check
+
+Across all worlds, `f_silence = 0` and `f_noise = 0`. All observed fragility is productive: perturbations either preserve the law signature or move to another non-empty signature.
