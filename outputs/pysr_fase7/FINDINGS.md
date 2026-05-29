@@ -298,3 +298,76 @@ Artifacts:
 
 - `outputs/pysr_fase7/retrain_physical_tree.py`
 - `outputs/pysr_fase7/retrain_physical_tree_8c.json`
+
+## Fase 11 Update - frontera_temporal Was Undersampled, Not Rare
+
+Follow-up sweep: all ECA rules `0..255`, seeds `20260523..20260525`,
+`steps=24`, `width=64`.
+
+Artifacts:
+
+- `outputs/frontera_sweep/run_frontera_sweep.py`
+- `outputs/frontera_sweep/candidate_rules.md`
+- `outputs/frontera_sweep/top_rules_profile.md`
+- `outputs/world_taxonomy/law_map.md`
+
+Result:
+
+- 38 ECA rules activate `frontera_temporal` in at least `2/3` seeds.
+- 17 rules activate it in `3/3` seeds.
+- The top rules by richness are `rule_46`, `rule_208`, and `rule_209`.
+
+Formal six-seed profiles show a new world category:
+
+```text
+world     category                mean_laws  peak_diversity
+rule_46   frontera-rich-estable     5.833       0.333
+rule_208  frontera-rich-estable     6.000       0.167
+rule_209  frontera-rich-estable     6.000       0.167
+```
+
+These worlds are not multi-regime: their law signatures are stable across ICs.
+They are also not ordinary low-diversity worlds: they consistently activate
+nearly the maximum observable law set:
+
+```text
+velocidad_constante
+densidad_estable
+tipo_unico
+complejidad_alta
+frontera_temporal
+temporal_scale_stability
+```
+
+`periodicidad` remains absent.
+
+Interpretation:
+
+- The earlier atlas under-sampled the `frontera_temporal` region.
+- `frontera_temporal` is demanding, but not intrinsically rare in ECA space.
+- It requires the right family of worlds: stable, high-richness boundary worlds.
+- `rule_46` and `rule_209` are a complement pair (`255 - 209 = 46`), so they
+  are one physical phenomenon under `0 <-> 1` inversion.
+- `rule_208` reaches the same maximum-richness profile independently; its
+  complement is `rule_47`, not `rule_46` or `rule_209`.
+
+Taxonomy update:
+
+`outputs/world_taxonomy/law_map.md` now distinguishes:
+
+- `multiregimen-productivo`: high signature diversity, productive visits.
+- `multiregimen-escala-dependiente`: diversity plus scale-dependent silence.
+- `frontera-rich-estable`: low diversity, stable high law richness
+  (`mean_laws >= 4.0`).
+- `noise-bounded`: pre-analysis failure under the dedup gate.
+- `sin-evidencia-multiregimen`: no evidence of multi-regime or stable-rich
+  behavior in the current data.
+
+Scientific revision:
+
+The old statement "frontera_temporal is a rare law" is too strong. The correct
+statement is:
+
+> `frontera_temporal` is rare in the 15-world discovery atlas because that atlas
+> under-sampled stable high-richness boundary worlds. In the full ECA sweep it is
+> a robust marker of a distinct `frontera-rich-estable` family.
