@@ -2,17 +2,22 @@
 
 Source journal: `outputs/experiments_2026-05-27/journal_8c_long.jsonl`
 
+Additional formal profiles: `outputs/frontera_sweep/top_rules_profile.json`
+when present.
+
 Schema check: world field detected as `world_type`. First-row keys include:
 `action_reason, action_taken, analysis_status, consensus, cycle_id, dedup_structure_count, details, dominant_type, inflation_ratio, is_new_law_signature, law_signature, laws_accepted, laws_evaluated, laws_rejected, laws_status, metrics, scale_attempt_count, score, steps, structure_count, timestamp, width, world_avg_score_prev, world_has_multiregime_evidence_prev, world_is_multiregime_candidate_prev, world_peak_diversity_prev, world_score_variance_prev, world_signature_diversity_prev, world_type, world_unique_signatures_prev, world_visit_count`.
 
 ## Taxonomy
 
-This taxonomy separates three mechanisms that looked similar before Fase 8:
+This taxonomy separates four mechanisms that looked similar before Fase 8:
 
 - **multi-regimen-productivo**: the world has real law-signature diversity and
   most visits produce at least one accepted law.
 - **multi-regimen-escala-dependiente**: the world has real non-empty signature
   diversity, but most visits are silent at the explored scale.
+- **frontera-rich-estable**: the world has low signature diversity but high
+  stable law richness (`mean_laws >= 4.0`).
 - **noise-bounded**: the world fails before law evaluation at high scale because
   `analysis_status == "ruido_no_analizable"`.
 - **sin-evidencia-multiregimen**: no sufficient evidence of multi-regime behavior
@@ -30,6 +35,7 @@ Thresholds used:
 - `DIVERSITY_THRESHOLD = 0.5`
 - `NON_EMPTY_RATIO_THRESHOLD = 0.5`
 - `NOISE_RATIO_THRESHOLD = 0.5`
+- `RICH_LAWS_THRESHOLD = 4.0`
 
 Classification function:
 
@@ -45,6 +51,8 @@ def classify_world(stats):
             return "multiregimen-escala-dependiente"
         else:
             return "multiregimen-productivo"
+    if stats['mean_laws'] >= RICH_LAWS_THRESHOLD:
+        return "frontera-rich-estable"
     return "sin-evidencia-multiregimen"
 ```
 
@@ -61,7 +69,10 @@ def classify_world(stats):
 | rule_137 | class-4 | multiregimen-productivo | 15 | 0.800 | 0.200 | 0.833 | 2.867 | densidad_estable + complejidad_alta + frontera_temporal | 0.630 | dispersed |
 | rule_150 | class-3 (additive) | noise-bounded | 8 | 0.250 | 0.750 | 0.000 | 0.750 | densidad_estable + complejidad_alta + temporal_scale_stability | ? | ? |
 | rule_18 | class-3 (moving wave fronts) | multiregimen-productivo | 13 | 0.769 | 0.231 | 0.800 | 2.308 | velocidad_constante + tipo_unico + temporal_scale_stability | 0.349 | clustered |
+| rule_208 | unknown | frontera-rich-estable | 6 | 1.000 | 0.000 | 0.167 | 6.000 | velocidad_constante + densidad_estable + tipo_unico + complejidad_alta + frontera_temporal + temporal_scale_stability | ? | ? |
+| rule_209 | unknown | frontera-rich-estable | 6 | 1.000 | 0.000 | 0.167 | 6.000 | velocidad_constante + densidad_estable + tipo_unico + complejidad_alta + frontera_temporal + temporal_scale_stability | ? | ? |
 | rule_30 | class-3 (chaotic) | noise-bounded | 10 | 0.400 | 0.600 | 0.000 | 1.100 | densidad_estable + complejidad_alta + temporal_scale_stability | ? | ? |
+| rule_46 | unknown | frontera-rich-estable | 6 | 1.000 | 0.000 | 0.333 | 5.833 | velocidad_constante + densidad_estable + tipo_unico + complejidad_alta + frontera_temporal + temporal_scale_stability | ? | ? |
 | rule_54 | class-4 | multiregimen-productivo | 12 | 0.667 | 0.333 | 0.800 | 1.917 | complejidad_alta + temporal_scale_stability | ? | ? |
 | rule_90 | class-3 (additive/XOR) | multiregimen-escala-dependiente | 14 | 0.357 | 0.000 | 0.600 | 0.500 | temporal_scale_stability | 0.172 | clustered |
 | synthetic_bloque | unknown | sin-evidencia-multiregimen | 14 | 1.000 | 0.000 | 0.200 | 2.000 | densidad_estable + tipo_unico | ? | ? |
@@ -98,7 +109,10 @@ Cell states:
 | rule_137 | · | - | ✓ | · | ✓ | ✓ | ✓ |
 | rule_150 | - | - | ✓ | - | ✓ | - | ✓ |
 | rule_18 | ✓ | - | - | ✓ | ✓ | - | ✓ |
+| rule_208 | ✓ | - | ✓ | ✓ | ✓ | ✓ | ✓ |
+| rule_209 | ✓ | - | ✓ | ✓ | ✓ | ✓ | ✓ |
 | rule_30 | - | - | ✓ | - | ✓ | - | ✓ |
+| rule_46 | ✓ | - | ✓ | ✓ | ✓ | ✓ | ✓ |
 | rule_54 | ✓ | - | · | · | ✓ | - | ✓ |
 | rule_90 | · | - | · | - | · | - | ✓ |
 | synthetic_bloque | - | - | ✓ | ✓ | - | - | - |

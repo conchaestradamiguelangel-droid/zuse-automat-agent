@@ -21,11 +21,14 @@ from typing import Any
 
 ROOT = Path(__file__).resolve().parents[2]
 JOURNAL = ROOT / "outputs" / "experiments_2026-05-27" / "journal_8c_long.jsonl"
+EXTRA_PROFILE = ROOT / "outputs" / "frontera_sweep" / "top_rules_profile.json"
+FRAGILITY_PROFILE = ROOT / "outputs" / "fragility_fase10" / "fragility_position_map.json"
 OUT = ROOT / "outputs" / "world_taxonomy" / "law_map.md"
 
 DIVERSITY_THRESHOLD = 0.5
 NON_EMPTY_RATIO_THRESHOLD = 0.5
 NOISE_RATIO_THRESHOLD = 0.5
+RICH_LAWS_THRESHOLD = 4.0
 
 LAW_COLUMNS = [
     ("vel", "velocidad_constante"),
@@ -97,8 +100,23 @@ def classify_world(stats: dict[str, Any]) -> str:
     if stats["peak_diversity"] is not None and stats["peak_diversity"] > DIVERSITY_THRESHOLD:
         if stats["non_empty_ratio"] < NON_EMPTY_RATIO_THRESHOLD:
             return "multiregimen-escala-dependiente"
-        else:
-            return "multiregimen-productivo"
+        return "multiregimen-productivo"
+    if stats["mean_laws"] >= RICH_LAWS_THRESHOLD:
+        return "frontera-rich-estable"
+    return "sin-evidencia-multiregimen"
+
+
+def classify_world_legacy(stats: dict[str, Any]) -> str:
+    """Fase 9/10 taxonomy before the stable-rich branch."""
+    if stats["total_visits"] == 0:
+        return "sin-datos"
+    noise_ratio = stats["noise_visits"] / stats["total_visits"]
+    if noise_ratio > NOISE_RATIO_THRESHOLD:
+        return "noise-bounded"
+    if stats["peak_diversity"] is not None and stats["peak_diversity"] > DIVERSITY_THRESHOLD:
+        if stats["non_empty_ratio"] < NON_EMPTY_RATIO_THRESHOLD:
+            return "multiregimen-escala-dependiente"
+        return "multiregimen-productivo"
     return "sin-evidencia-multiregimen"
 
 
@@ -146,6 +164,63 @@ def compute_stats(rows: list[dict[str, Any]], world_field: str) -> dict[str, dic
     return stats_by_world
 
 
+def load_extra_profiles() -> dict[str, dict[str, Any]]:
+    """Load optional formal profiles into the same stats shape as journal rows."""
+    if not EXTRA_PROFILE.exists():
+        return {}
+    profiles = json.loads(EXTRA_PROFILE.read_text(encoding="utf-8"))
+    extras: dict[str, dict[str, Any]] = {}
+    for world, profile in profiles.items():
+        total_visits = int(profile["total_visits"])
+        non_empty_visits = int(profile["non_empty_visits"])
+        noise_visits = int(profile["noise_visits"])
+        law_counts = Counter(
+            {
+                law: int(info["count"])
+                for law, info in profile["law_frequencies"].items()
+            }
+        )
+        signatures = Counter(
+            {
+                tuple(signature.split(" + ")) if signature != "EMPTY" else (): int(count)
+                for signature, count in profile["signatures"].items()
+            }
+        )
+        non_empty_signatures = Counter({sig: count for sig, count in signatures.items() if sig})
+        dominant_signature = non_empty_signatures.most_common(1)[0][0] if non_empty_signatures else None
+        stats = {
+            "world": world,
+            "eca_class": ECA_CLASS.get(world, "unknown"),
+            "total_visits": total_visits,
+            "non_empty_visits": non_empty_visits,
+            "noise_visits": noise_visits,
+            "silence_visits": total_visits - non_empty_visits - noise_visits,
+            "mean_laws": float(profile["mean_n_laws"]),
+            "peak_diversity": profile["peak_diversity"],
+            "non_empty_ratio": float(profile["non_empty_ratio"]),
+            "noise_ratio": noise_visits / total_visits if total_visits else 0.0,
+            "dominant_signature": dominant_signature,
+            "law_counts": law_counts,
+        }
+        stats["category"] = classify_world(stats)
+        extras[world] = stats
+    return extras
+
+
+def apply_fragility_profiles(stats_by_world: dict[str, dict[str, Any]]) -> None:
+    """Attach Fase 10 fragility columns when measured."""
+    if not FRAGILITY_PROFILE.exists():
+        return
+    data = json.loads(FRAGILITY_PROFILE.read_text(encoding="utf-8"))
+    for world, payload in data.items():
+        if world not in stats_by_world:
+            continue
+        vector = payload.get("mean_fragility_vec", [])
+        fragility_total = mean(vector) if vector else None
+        stats_by_world[world]["fragility_total"] = fragility_total
+        stats_by_world[world]["fragility_pattern"] = payload.get("pattern")
+
+
 def law_cell(stats: dict[str, Any], law_name: str) -> str:
     non_empty_visits = stats["non_empty_visits"]
     if non_empty_visits == 0:
@@ -163,6 +238,12 @@ def law_cell(stats: dict[str, Any], law_name: str) -> str:
 def fmt_float(value: float | None, digits: int = 3) -> str:
     if value is None:
         return "-"
+    return f"{value:.{digits}f}"
+
+
+def fmt_optional_float(value: float | None, digits: int = 3) -> str:
+    if value is None:
+        return "?"
     return f"{value:.{digits}f}"
 
 
@@ -190,6 +271,8 @@ def render_markdown(stats_by_world: dict[str, dict[str, Any]], world_field: str,
                 fmt_float(stats["peak_diversity"]),
                 fmt_float(stats["mean_laws"]),
                 signature_label(stats["dominant_signature"]),
+                fmt_optional_float(stats.get("fragility_total")),
+                stats.get("fragility_pattern") or "?",
             ]
         )
         matrix_rows.append(
@@ -205,17 +288,22 @@ def render_markdown(stats_by_world: dict[str, dict[str, Any]], world_field: str,
 
 Source journal: `outputs/experiments_2026-05-27/journal_8c_long.jsonl`
 
+Additional formal profiles: `outputs/frontera_sweep/top_rules_profile.json`
+when present.
+
 Schema check: world field detected as `{world_field}`. First-row keys include:
 `{schema_excerpt}`.
 
 ## Taxonomy
 
-This taxonomy separates three mechanisms that looked similar before Fase 8:
+This taxonomy separates four mechanisms that looked similar before Fase 8:
 
 - **multi-regimen-productivo**: the world has real law-signature diversity and
   most visits produce at least one accepted law.
 - **multi-regimen-escala-dependiente**: the world has real non-empty signature
   diversity, but most visits are silent at the explored scale.
+- **frontera-rich-estable**: the world has low signature diversity but high
+  stable law richness (`mean_laws >= {RICH_LAWS_THRESHOLD}`).
 - **noise-bounded**: the world fails before law evaluation at high scale because
   `analysis_status == "ruido_no_analizable"`.
 - **sin-evidencia-multiregimen**: no sufficient evidence of multi-regime behavior
@@ -233,6 +321,7 @@ Thresholds used:
 - `DIVERSITY_THRESHOLD = {DIVERSITY_THRESHOLD}`
 - `NON_EMPTY_RATIO_THRESHOLD = {NON_EMPTY_RATIO_THRESHOLD}`
 - `NOISE_RATIO_THRESHOLD = {NOISE_RATIO_THRESHOLD}`
+- `RICH_LAWS_THRESHOLD = {RICH_LAWS_THRESHOLD}`
 
 Classification function:
 
@@ -248,6 +337,8 @@ def classify_world(stats):
             return "multiregimen-escala-dependiente"
         else:
             return "multiregimen-productivo"
+    if stats['mean_laws'] >= RICH_LAWS_THRESHOLD:
+        return "frontera-rich-estable"
     return "sin-evidencia-multiregimen"
 ```
 
@@ -264,6 +355,8 @@ def classify_world(stats):
             "peak_diversity",
             "mean_laws",
             "dominant_signature",
+            "fragility_total",
+            "fragility_pattern",
         ],
         classification_rows,
     )}
@@ -340,10 +433,34 @@ def main() -> None:
     world_field = detect_world_field(sample_rows)
     print(f"Detected world field: {world_field}")
 
-    stats_by_world = compute_stats(rows, world_field)
+    journal_stats = compute_stats(rows, world_field)
+    print("Category check for journal worlds:")
+    category_changes = []
+    for world, stats in journal_stats.items():
+        legacy = classify_world_legacy(stats)
+        current = stats["category"]
+        if legacy != current:
+            category_changes.append((world, legacy, current))
+        print(f"  {world}: {legacy} -> {current}")
+    if category_changes:
+        print("Category changes in existing journal worlds:")
+        for world, legacy, current in category_changes:
+            print(f"  {world}: {legacy} -> {current}")
+    else:
+        print("No category changes in existing journal worlds.")
+
+    extra_stats = load_extra_profiles()
+    stats_by_world = {**journal_stats, **extra_stats}
+    for stats in stats_by_world.values():
+        stats["category"] = classify_world(stats)
+    apply_fragility_profiles(stats_by_world)
+    stats_by_world = dict(sorted(stats_by_world.items()))
+
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(render_markdown(stats_by_world, world_field, schema_keys), encoding="utf-8")
     print(f"Generated: {OUT}")
+    print(f"Journal worlds: {len(journal_stats)}")
+    print(f"Extra profile worlds: {len(extra_stats)}")
     print(f"Worlds: {len(stats_by_world)}")
 
 
