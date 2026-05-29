@@ -1,0 +1,741 @@
+{
+  "depth_scan": [
+    {
+      "max_depth": 2,
+      "r2": 0.7069558765507944,
+      "rmse": 0.7561470685400725
+    },
+    {
+      "max_depth": 3,
+      "r2": 0.8089052882321663,
+      "rmse": 0.6106102620577386
+    },
+    {
+      "max_depth": 4,
+      "r2": 0.8650188394114897,
+      "rmse": 0.5131878237295215
+    },
+    {
+      "max_depth": 5,
+      "r2": 0.896121146889944,
+      "rmse": 0.4501977679898361
+    },
+    {
+      "max_depth": 6,
+      "r2": 0.9247952798473679,
+      "rmse": 0.3830560396205763
+    },
+    {
+      "max_depth": 8,
+      "r2": 0.9804408975932128,
+      "rmse": 0.19535036397683614
+    }
+  ],
+  "features": [
+    "dedup_structure_count",
+    "inflation_ratio",
+    "entropy_mean",
+    "entropy_var",
+    "gzip_ratio",
+    "mutual_info_mean",
+    "density_mean",
+    "transition_rate",
+    "analysis_ok",
+    "steps"
+  ],
+  "journal": "outputs\\experiments_2026-05-27\\journal_8c_long.jsonl",
+  "rows": 200,
+  "target": "n_laws_accepted",
+  "tree": {
+    "feature_importance": {
+      "analysis_ok": 0.6124533653070667,
+      "dedup_structure_count": 0.09317774854707915,
+      "density_mean": 0.0,
+      "entropy_mean": 0.030251500426135294,
+      "entropy_var": 0.20481886547089853,
+      "gzip_ratio": 0.0,
+      "inflation_ratio": 0.0014812723411217585,
+      "mutual_info_mean": 0.05781724790769855,
+      "steps": 0.0,
+      "transition_rate": 0.0
+    },
+    "model": "DecisionTreeRegressor(max_depth=4, random_state=42)",
+    "r2": 0.8650188394114897,
+    "rmse": 0.5131878237295215,
+    "tree_text": "|--- analysis_ok <= 0.50\n|   |--- value: [0.00]\n|--- analysis_ok >  0.50\n|   |--- entropy_var <= 0.04\n|   |   |--- dedup_structure_count <= 1.50\n|   |   |   |--- entropy_mean <= 0.02\n|   |   |   |   |--- value: [3.00]\n|   |   |   |--- entropy_mean >  0.02\n|   |   |   |   |--- value: [2.18]\n|   |   |--- dedup_structure_count >  1.50\n|   |   |   |--- mutual_info_mean <= 0.15\n|   |   |   |   |--- value: [3.47]\n|   |   |   |--- mutual_info_mean >  0.15\n|   |   |   |   |--- value: [2.42]\n|   |--- entropy_var >  0.04\n|   |   |--- mutual_info_mean <= 0.07\n|   |   |   |--- entropy_mean <= 0.46\n|   |   |   |   |--- value: [0.18]\n|   |   |   |--- entropy_mean >  0.46\n|   |   |   |   |--- value: [1.00]\n|   |   |--- mutual_info_mean >  0.07\n|   |   |   |--- inflation_ratio <= 3.18\n|   |   |   |   |--- value: [2.00]\n|   |   |   |--- inflation_ratio >  3.18\n|   |   |   |   |--- value: [3.00]\n"
+  },
+  "world_summary": {
+    "life_blinker": {
+      "actual_mean": 3.0,
+      "actual_values": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "n": 18,
+      "pred_mean": 3.0,
+      "pred_values": [
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0
+      ],
+      "signatures": {
+        "periodicidad|densidad_estable|tipo_unico": 18
+      },
+      "status": {
+        "ok": 18
+      }
+    },
+    "life_block": {
+      "actual_mean": 2.0,
+      "actual_values": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "n": 12,
+      "pred_mean": 2.181818181818181,
+      "pred_values": [
+        2.182,
+        2.182,
+        2.182,
+        2.182,
+        2.182,
+        2.182,
+        2.182,
+        2.182,
+        2.182,
+        2.182,
+        2.182,
+        2.182
+      ],
+      "signatures": {
+        "densidad_estable|tipo_unico": 12
+      },
+      "status": {
+        "ok": 12
+      }
+    },
+    "life_glider": {
+      "actual_mean": 2.357142857142857,
+      "actual_values": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "n": 14,
+      "pred_mean": 2.1818181818181808,
+      "pred_values": [
+        2.182,
+        2.182,
+        2.182,
+        2.182,
+        2.182,
+        2.182,
+        2.182,
+        2.182,
+        2.182,
+        2.182,
+        2.182,
+        2.182,
+        2.182,
+        2.182
+      ],
+      "signatures": {
+        "densidad_estable|tipo_unico": 9,
+        "velocidad_constante|densidad_estable|tipo_unico": 5
+      },
+      "status": {
+        "ok": 14
+      }
+    },
+    "rule_109": {
+      "actual_mean": 2.0,
+      "actual_values": [
+        4,
+        4,
+        2,
+        4,
+        3,
+        3,
+        3,
+        1,
+        3,
+        0,
+        0,
+        0,
+        3,
+        0,
+        0
+      ],
+      "n": 15,
+      "pred_mean": 2.0319444444444446,
+      "pred_values": [
+        3.469,
+        3.469,
+        2.417,
+        3.469,
+        3.469,
+        2.417,
+        3.469,
+        2.417,
+        2.417,
+        0.0,
+        0.0,
+        0.0,
+        3.469,
+        0.0,
+        0.0
+      ],
+      "signatures": {
+        "EMPTY": 5,
+        "densidad_estable": 1,
+        "densidad_estable|complejidad_alta|frontera_temporal": 4,
+        "densidad_estable|complejidad_alta|frontera_temporal|temporal_scale_stability": 3,
+        "densidad_estable|temporal_scale_stability": 1,
+        "densidad_estable|tipo_unico|temporal_scale_stability": 1
+      },
+      "status": {
+        "ok": 10,
+        "ruido_no_analizable": 5
+      }
+    },
+    "rule_110": {
+      "actual_mean": 2.727272727272727,
+      "actual_values": [
+        5,
+        5,
+        4,
+        4,
+        4,
+        4,
+        0,
+        4,
+        0,
+        0,
+        0
+      ],
+      "n": 11,
+      "pred_mean": 2.2073863636363638,
+      "pred_values": [
+        3.469,
+        3.469,
+        3.469,
+        3.469,
+        3.469,
+        3.469,
+        0.0,
+        3.469,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "signatures": {
+        "EMPTY": 4,
+        "densidad_estable|complejidad_alta|frontera_temporal|temporal_scale_stability": 1,
+        "velocidad_constante|densidad_estable|complejidad_alta|frontera_temporal": 4,
+        "velocidad_constante|densidad_estable|complejidad_alta|frontera_temporal|temporal_scale_stability": 2
+      },
+      "status": {
+        "ok": 7,
+        "ruido_no_analizable": 4
+      }
+    },
+    "rule_124": {
+      "actual_mean": 2.1666666666666665,
+      "actual_values": [
+        4,
+        4,
+        4,
+        4,
+        3,
+        3,
+        4,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "n": 12,
+      "pred_mean": 2.0234375,
+      "pred_values": [
+        3.469,
+        3.469,
+        3.469,
+        3.469,
+        3.469,
+        3.469,
+        3.469,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "signatures": {
+        "EMPTY": 5,
+        "densidad_estable|complejidad_alta|frontera_temporal": 2,
+        "densidad_estable|complejidad_alta|frontera_temporal|temporal_scale_stability": 3,
+        "velocidad_constante|densidad_estable|complejidad_alta|frontera_temporal": 2
+      },
+      "status": {
+        "ok": 7,
+        "ruido_no_analizable": 5
+      }
+    },
+    "rule_137": {
+      "actual_mean": 2.8666666666666667,
+      "actual_values": [
+        3,
+        4,
+        3,
+        2,
+        3,
+        6,
+        3,
+        5,
+        5,
+        3,
+        4,
+        2,
+        0,
+        0,
+        0
+      ],
+      "n": 15,
+      "pred_mean": 2.775,
+      "pred_values": [
+        3.469,
+        3.469,
+        3.469,
+        3.469,
+        3.469,
+        3.469,
+        3.469,
+        3.469,
+        3.469,
+        3.469,
+        3.469,
+        3.469,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "signatures": {
+        "EMPTY": 3,
+        "complejidad_alta|frontera_temporal": 2,
+        "complejidad_alta|frontera_temporal|temporal_scale_stability": 2,
+        "densidad_estable|complejidad_alta|frontera_temporal": 3,
+        "densidad_estable|complejidad_alta|frontera_temporal|temporal_scale_stability": 1,
+        "densidad_estable|tipo_unico|complejidad_alta|frontera_temporal|temporal_scale_stability": 1,
+        "velocidad_constante|densidad_estable|complejidad_alta|frontera_temporal": 1,
+        "velocidad_constante|densidad_estable|complejidad_alta|frontera_temporal|temporal_scale_stability": 1,
+        "velocidad_constante|densidad_estable|tipo_unico|complejidad_alta|frontera_temporal|temporal_scale_stability": 1
+      },
+      "status": {
+        "ok": 12,
+        "ruido_no_analizable": 3
+      }
+    },
+    "rule_150": {
+      "actual_mean": 0.75,
+      "actual_values": [
+        3,
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "n": 8,
+      "pred_mean": 0.8671875,
+      "pred_values": [
+        3.469,
+        3.469,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "signatures": {
+        "EMPTY": 6,
+        "densidad_estable|complejidad_alta|temporal_scale_stability": 2
+      },
+      "status": {
+        "ok": 2,
+        "ruido_no_analizable": 6
+      }
+    },
+    "rule_18": {
+      "actual_mean": 2.3076923076923075,
+      "actual_values": [
+        3,
+        4,
+        3,
+        3,
+        4,
+        3,
+        2,
+        3,
+        2,
+        3,
+        0,
+        0,
+        0
+      ],
+      "n": 13,
+      "pred_mean": 2.2764423076923075,
+      "pred_values": [
+        3.469,
+        3.469,
+        2.417,
+        2.417,
+        3.469,
+        3.0,
+        2.417,
+        3.469,
+        2.0,
+        3.469,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "signatures": {
+        "EMPTY": 3,
+        "tipo_unico|complejidad_alta|temporal_scale_stability": 1,
+        "velocidad_constante|complejidad_alta": 1,
+        "velocidad_constante|complejidad_alta|temporal_scale_stability": 1,
+        "velocidad_constante|tipo_unico": 1,
+        "velocidad_constante|tipo_unico|complejidad_alta": 2,
+        "velocidad_constante|tipo_unico|complejidad_alta|temporal_scale_stability": 2,
+        "velocidad_constante|tipo_unico|temporal_scale_stability": 2
+      },
+      "status": {
+        "ok": 10,
+        "ruido_no_analizable": 3
+      }
+    },
+    "rule_30": {
+      "actual_mean": 1.1,
+      "actual_values": [
+        3,
+        3,
+        3,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "n": 10,
+      "pred_mean": 1.3875,
+      "pred_values": [
+        3.469,
+        3.469,
+        3.469,
+        3.469,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "signatures": {
+        "EMPTY": 6,
+        "complejidad_alta|temporal_scale_stability": 1,
+        "densidad_estable|complejidad_alta|temporal_scale_stability": 3
+      },
+      "status": {
+        "ok": 4,
+        "ruido_no_analizable": 6
+      }
+    },
+    "rule_54": {
+      "actual_mean": 1.9166666666666667,
+      "actual_values": [
+        2,
+        5,
+        3,
+        2,
+        3,
+        3,
+        2,
+        3,
+        0,
+        0,
+        0,
+        0
+      ],
+      "n": 12,
+      "pred_mean": 1.8741319444444444,
+      "pred_values": [
+        2.417,
+        3.469,
+        3.469,
+        2.417,
+        2.417,
+        3.469,
+        2.417,
+        2.417,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "signatures": {
+        "EMPTY": 4,
+        "complejidad_alta|temporal_scale_stability": 3,
+        "densidad_estable|complejidad_alta|temporal_scale_stability": 1,
+        "velocidad_constante|complejidad_alta|temporal_scale_stability": 3,
+        "velocidad_constante|densidad_estable|tipo_unico|complejidad_alta|temporal_scale_stability": 1
+      },
+      "status": {
+        "ok": 8,
+        "ruido_no_analizable": 4
+      }
+    },
+    "rule_90": {
+      "actual_mean": 0.5,
+      "actual_values": [
+        3,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "n": 14,
+      "pred_mean": 0.5334821428571428,
+      "pred_values": [
+        3.469,
+        1.0,
+        1.0,
+        0.182,
+        0.182,
+        0.182,
+        0.182,
+        0.182,
+        0.182,
+        0.182,
+        0.182,
+        0.182,
+        0.182,
+        0.182
+      ],
+      "signatures": {
+        "EMPTY": 9,
+        "densidad_estable|complejidad_alta|temporal_scale_stability": 1,
+        "temporal_scale_stability": 2,
+        "velocidad_constante": 2
+      },
+      "status": {
+        "ok": 14
+      }
+    },
+    "synthetic_bloque": {
+      "actual_mean": 2.0,
+      "actual_values": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "n": 14,
+      "pred_mean": 2.1818181818181808,
+      "pred_values": [
+        2.182,
+        2.182,
+        2.182,
+        2.182,
+        2.182,
+        2.182,
+        2.182,
+        2.182,
+        2.182,
+        2.182,
+        2.182,
+        2.182,
+        2.182,
+        2.182
+      ],
+      "signatures": {
+        "densidad_estable|tipo_unico": 14
+      },
+      "status": {
+        "ok": 14
+      }
+    },
+    "synthetic_glider": {
+      "actual_mean": 3.1666666666666665,
+      "actual_values": [
+        4,
+        4,
+        3,
+        4,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "n": 18,
+      "pred_mean": 3.3972537878787876,
+      "pred_values": [
+        3.469,
+        3.469,
+        2.182,
+        3.469,
+        3.469,
+        3.469,
+        3.469,
+        3.469,
+        3.469,
+        3.469,
+        3.469,
+        3.469,
+        3.469,
+        3.469,
+        3.469,
+        3.469,
+        3.469,
+        3.469
+      ],
+      "signatures": {
+        "velocidad_constante|densidad_estable|tipo_unico": 15,
+        "velocidad_constante|densidad_estable|tipo_unico|temporal_scale_stability": 3
+      },
+      "status": {
+        "ok": 18
+      }
+    },
+    "synthetic_oscilador": {
+      "actual_mean": 2.2857142857142856,
+      "actual_values": [
+        3,
+        3,
+        3,
+        3,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "n": 14,
+      "pred_mean": 2.1818181818181808,
+      "pred_values": [
+        2.182,
+        2.182,
+        2.182,
+        2.182,
+        2.182,
+        2.182,
+        2.182,
+        2.182,
+        2.182,
+        2.182,
+        2.182,
+        2.182,
+        2.182,
+        2.182
+      ],
+      "signatures": {
+        "periodicidad|tipo_unico": 10,
+        "periodicidad|tipo_unico|temporal_scale_stability": 4
+      },
+      "status": {
+        "ok": 14
+      }
+    }
+  }
+}

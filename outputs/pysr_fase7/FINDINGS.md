@@ -171,3 +171,130 @@ Interpretation:
 Next scientific step: retrain the physical tree on the union of the original
 journal plus these new ECA rows, or separate law richness into families instead
 of one global classifier.
+
+## Retrain on Clean 15-World Journal
+
+Follow-up dataset: `outputs/experiments_2026-05-27/journal_8c_long.jsonl`.
+
+This is the first 200-cycle journal with all 15 worlds and the corrected
+multi-regime semantics:
+
+- empty signatures do not create diversity evidence;
+- multi-regime exploitation does not fire when the current cycle has no laws.
+
+The retrain deliberately uses only physical current-cycle features:
+
+- `dedup_structure_count`
+- `inflation_ratio`
+- `entropy_mean`
+- `entropy_var`
+- `gzip_ratio`
+- `mutual_info_mean`
+- `density_mean`
+- `transition_rate`
+- `analysis_ok`
+- `steps`
+
+Target: `n_laws_accepted`.
+
+Results for `DecisionTreeRegressor(max_depth=4, random_state=42)`:
+
+```text
+Rows: 200
+R2:   0.865
+RMSE: 0.513
+```
+
+This is lower than the original Fase 7 tree (`R2=0.929`, `RMSE=0.356`), but
+that drop is the point: the new worlds add genuinely different routes to law
+richness, so one compact class-4 branch no longer explains the whole journal.
+
+The new depth-4 tree:
+
+```text
+|--- analysis_ok <= 0.50
+|   |--- value: [0.00]
+|--- analysis_ok >  0.50
+|   |--- entropy_var <= 0.04
+|   |   |--- dedup_structure_count <= 1.50
+|   |   |   |--- entropy_mean <= 0.02
+|   |   |   |   |--- value: [3.00]
+|   |   |   |--- entropy_mean >  0.02
+|   |   |   |   |--- value: [2.18]
+|   |   |--- dedup_structure_count >  1.50
+|   |   |   |--- mutual_info_mean <= 0.15
+|   |   |   |   |--- value: [3.47]
+|   |   |   |--- mutual_info_mean >  0.15
+|   |   |   |   |--- value: [2.42]
+|   |--- entropy_var >  0.04
+|   |   |--- mutual_info_mean <= 0.07
+|   |   |   |--- entropy_mean <= 0.46
+|   |   |   |   |--- value: [0.18]
+|   |   |   |--- entropy_mean >  0.46
+|   |   |   |   |--- value: [1.00]
+|   |   |--- mutual_info_mean >  0.07
+|   |   |   |--- inflation_ratio <= 3.18
+|   |   |   |   |--- value: [2.00]
+|   |   |   |--- inflation_ratio >  3.18
+|   |   |   |   |--- value: [3.00]
+```
+
+Feature importance:
+
+```text
+analysis_ok              0.612
+entropy_var              0.205
+dedup_structure_count    0.093
+mutual_info_mean         0.058
+entropy_mean             0.030
+inflation_ratio          0.001
+gzip_ratio               0.000
+density_mean             0.000
+transition_rate          0.000
+steps                    0.000
+```
+
+Important change versus Fase 7: `gzip_ratio` disappears from the compact tree,
+while `entropy_var`, `dedup_structure_count`, and `mutual_info_mean` become the
+main physical splitters after the analysis gate. This matches the empirical
+addition of rule_18: law-richness now includes a lower-entropy/high-MI route,
+not just the original organized-chaos/gzip route.
+
+Per-world focus:
+
+```text
+world     actual_mean  pred_mean  interpretation
+rule_18      2.308       2.276    captured well; alternate MI/kinetic route
+rule_90      0.500       0.533    captured as mostly silent at high steps
+rule_150     0.750       0.867    captured as early-noise limited
+rule_137     2.867       2.775    still rich and variable
+rule_54      1.917       1.874    captured as moderate/rich near boundary
+rule_109     2.000       2.032    captured as moderate multi-regime
+```
+
+Depth scan:
+
+```text
+max_depth  R2      RMSE
+2          0.707   0.756
+3          0.809   0.611
+4          0.865   0.513
+5          0.896   0.450
+6          0.925   0.383
+8          0.980   0.195
+```
+
+Interpretation:
+
+- A compact depth-4 tree is now less accurate because the ecosystem is more
+  heterogeneous.
+- Deeper trees recover high in-sample fit, but at the cost of local, less
+  interpretable branches.
+- The robust conclusion is not a single universal formula. It is a family map:
+  law richness is gated by `analysis_ok`, then splits into multiple physical
+  regimes.
+
+Artifacts:
+
+- `outputs/pysr_fase7/retrain_physical_tree.py`
+- `outputs/pysr_fase7/retrain_physical_tree_8c.json`
