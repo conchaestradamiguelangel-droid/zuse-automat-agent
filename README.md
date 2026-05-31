@@ -81,19 +81,18 @@ Fases 11-17 establish these robust results:
   `rule_51` gives global frame-periodicity, while `rule_108` gives a local
   period-2 oscillator on a quiescent background (`#.# <-> ###`).
 
-Two high-fragility mechanisms are currently distinguished:
+Three high-fragility mechanisms are currently distinguished:
 
 - Productive basin switching: `rule_137` (`f_total=0.630`, `f_noise=0.000`,
   dispersed). Perturbations move between productive law signatures.
 - Noise-boundary fragility: `rule_54` (`f_total=0.714`, `f_noise=0.375`,
   clustered). Perturbations cross the deduplicated structure gate.
+- Quiescent-background activation: `rule_108` (`f_total=0.992`,
+  `core_fragility=0.047`, gap `0.945`). Background perturbations change
+  secondary laws, while the local oscillator core (`#.# <-> ###`) usually
+  survives; the fragile core positions are concentrated near the motif.
 - Global periodicity: `rule_51` (`f_total=0.193`, `f_noise=0.000`, dispersed).
   Periodicity survives flips, but the full law signature can change.
-- Local periodicity: `rule_108`, where minimal ICs `pair_gap1` and `triple`
-  converge to the bounded oscillator `#.# <-> ###` for 200 steps.
-- Local oscillator robustness: `rule_108` has `core_fragility=0.047`
-  concentrated near the motif, even though full-signature churn is high
-  (`f_total=0.992`).
 - Core fragility separates behavioral robustness from secondary-law churn:
   `rule_51` has `core_fragility=0.000` even though `f_total=0.193`.
 

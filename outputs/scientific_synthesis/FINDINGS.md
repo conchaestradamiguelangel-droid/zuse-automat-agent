@@ -180,9 +180,11 @@ invariant, but secondary laws such as `densidad_estable` can change.
 maximal, but core fragility remains low because the local oscillator survives
 all but six central perturbations.
 
-## 5. Two High-Fragility Mechanisms
+## 5. Three High-Fragility Mechanisms
 
-The atlas now separates two high-fragility mechanisms.
+The atlas now separates three high-fragility mechanisms. The third one only
+became visible after `rule_108`: a near-empty quiescent background can be very
+sensitive in full signature while its local core remains stable.
 
 ### Productive Basin Switching
 
@@ -214,6 +216,25 @@ dedup_structure_count > 40
 The most sensitive seed, `20260642`, starts at `reference_dedup_structure_count
 = 39`, only one structure below the threshold. This explains why many local
 perturbations push it into `ruido_no_analizable`.
+
+### Quiescent-Background Activation
+
+Example: `rule_108`
+
+- `f_total = 0.992`
+- `f_core = 0.047`
+- `f_gap = 0.945`
+- pattern: `clustered` for the oscillator core
+
+The canonical IC has only two active bits on a zero background. A one-bit
+perturbation almost anywhere in the background can ignite additional dynamics
+and change secondary laws. The local oscillator itself survives unless the
+perturbation lands near the motif (`61..63`, `65..67`).
+
+This is distinct from both `rule_137` and `rule_54`: the system is not moving
+between dense productive basins, and it is not primarily crossing the noise
+gate. It is exposing the difference between background sensitivity and core
+behavioral robustness.
 
 ## 6. Robust Families
 
