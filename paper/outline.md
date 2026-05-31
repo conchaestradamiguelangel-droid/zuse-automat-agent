@@ -356,9 +356,71 @@ observables without equivariance checks.
 
 ### 7.3 `rule_137` — Productive Basin Switching
 
-`rule_137` has high productive fragility: perturbations move the IC between
-non-empty law-signature regimes rather than into silence or noise. It is a key
-example of high-dimensional basin structure.
+`rule_137` is the primary example of productive basin switching: one-bit IC
+perturbations change the law signature without ever crossing the noise gate or
+reaching silence. All fragility is productive (`f_noise = 0.000`,
+`f_silence = 0.000`), making it the cleanest case in the atlas for
+inter-basin transitions.
+
+#### Fragility profile
+
+Three canonical seeds at `steps = 48`, `width = 64`:
+
+| seed | reference signature | f_total |
+| --- | --- | --- |
+| `20260633` | `complejidad_alta + frontera_temporal` | `0.812` |
+| `20260635` | `complejidad_alta + densidad_estable + frontera_temporal` | `0.219` |
+| `20260673` | `complejidad_alta + densidad_estable + frontera_temporal + temporal_scale_stability + tipo_unico + velocidad_constante` | `0.859` |
+
+Aggregate: `f_total = 0.630`, `f_core = 0.312`, `f_gap = 0.318`.
+
+The per-seed range (`0.219..0.859`) is the widest in the atlas. Even the least
+fragile measured seed has `f_total > 0.2`. The most fragile seeds (20260633 and
+20260673) flip on more than 80% of one-bit perturbations.
+
+#### Mechanism
+
+`f_noise = 0.000`: no perturbed IC crosses the deduplicated structure gate. The
+world remains analyzable throughout. The fragility is a property of productive
+basin geography, not proximity to an observer threshold.
+
+The pattern is `dispersed`: sensitive positions are distributed across the IC
+width rather than concentrated near a motif. This is consistent with a world
+that has many narrow productive basins whose boundaries intersect throughout
+the IC space.
+
+`peak_diversity = 0.833` — the highest in the atlas. The canonical seeds
+themselves already visit multiple distinct productive regimes. The fragility
+measurement extends this: not just that the world can reach different signatures
+under different seeds, but that a single-bit perturbation to any one canonical
+IC is enough to move between regimes.
+
+#### f_core and f_gap interpretation
+
+`f_core = 0.312` reflects genuine regime switching: flips that remove or
+change laws defining the canonical signature. `f_gap = 0.318` reflects
+secondary-law churn: the core productive signature survives, but laws on the
+signature boundary (such as `densidad_estable` or `tipo_unico`) toggle.
+
+The two components are roughly equal (0.312 vs 0.318), meaning `rule_137` sits
+in a region where both core-regime transitions and secondary-law transitions are
+common. This is structurally different from `rule_108` (`f_gap = 0.945`, where
+the core oscillator is robust and secondary laws dominate) and from `rule_54`
+(`f_gap = 0.037`, where the core productive signature changes but almost no
+fragility is secondary).
+
+#### Contrast with `rule_54` and `rule_108`
+
+`rule_54` and `rule_137` both have high `f_total` (0.714 vs 0.630), but the
+mechanisms are opposite: `rule_54` fragility is dominated by noise-gate
+crossings (`f_noise = 0.375`), while `rule_137` fragility is entirely
+productive. A perturbed `rule_137` IC stays analyzable and law-rich; it is
+simply in a different productive regime.
+
+`rule_108` contrasts from the opposite direction: its `f_core = 0.047` shows
+that the defining behavior (the local oscillator) is nearly indestructible,
+while `rule_137`'s `f_core = 0.312` shows that its defining signatures change
+under nearly a third of all one-bit flips.
 
 ### 7.4 `rule_46`, `rule_208`, `rule_209` — Stable-Rich Frontier
 
