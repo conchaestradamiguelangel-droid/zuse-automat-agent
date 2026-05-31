@@ -593,14 +593,60 @@ symmetry-invariant observers would remove both artifacts.
 
 ## 9. Limitations
 
-- Observers are heuristic and not fully symmetry-invariant.
-- `tipo_unico` is useful for exploration but not a mirror-invariant property.
-- The atlas is empirical and parameterized by width, steps, thresholds, and IC
-  protocols.
-- Local oscillator uniqueness is proven only under the current protocol:
-  quiescent background, stationary exact periodicity, IC words of length <= 8.
-- PySR symbolic formulas remain blocked by Julia infrastructure; current
-  conclusions rely on deterministic scripts and tree-based analysis.
+### 9.1 Fixed protocol parameters
+
+The atlas is valid for the parameter regime used: `width = 64` (formal
+profiles), `width = 128` (rule_108 oscillator), `steps` roughly `24..200`, and
+the IC protocols defined per world. The two calibrated thresholds —
+`frontera_temporal` upper bound `0.4352` and `temporal_scale_stability`
+threshold `19.03` — were fit on data from this regime. Applying the atlas to
+significantly different widths or step counts requires recalibration. This is
+not a flaw in the methodology; it is the expected scope of an empirically
+grounded atlas.
+
+### 9.2 Heuristic observers
+
+The observer stack uses geometric heuristics to label structures as `glider`,
+`bloque`, or `oscilador`. These heuristics are not derived from first
+principles and are not provably complete or sound for arbitrary ECA dynamics.
+As shown in Section 8, they are not translation-equivariant for wide-spreading
+patterns and are not mirror-invariant for `tipo_unico`. The atlas is built on
+law signatures, which are more robust than absolute observer counts, but the
+underlying observers remain heuristic. Replacing them with symmetry-invariant
+observers would be a meaningful improvement.
+
+### 9.3 Bounded local oscillator protocol
+
+The uniqueness claim for `rule_108` holds under a specific protocol: quiescent
+zero background, stationary exact periodicity (no drift), IC words of binary
+length 1..8 (510 non-zero words per rule), and period detection window 2..16
+with local span <= 32. Moving oscillators, longer IC words, non-zero
+backgrounds, or longer detection periods are outside the current protocol. The
+claim is therefore: no other quiescent ECA rule produces a stationary
+local-period oscillator under this protocol. It is not a claim about ECA
+oscillators in general.
+
+### 9.4 Empirical atlas, not axiomatic classification
+
+The world categories are induced from observed law signatures across a finite
+number of seeds and step counts. A world classified as
+`multiregimen-productivo` on 6..15 visits could exhibit different behavior at
+larger scale, with different IC distributions, or under longer runs. The
+categories are stable empirical summaries, not theorems. `rule_90` is a clear
+example: it is classified as `multiregimen-escala-dependiente` because
+high-scale visits become silent under the current protocol, but the underlying
+XOR dynamics have algebraic structure that the current seven laws do not
+capture.
+
+### 9.5 PySR symbolic regression pending
+
+The decision-tree analyses (Section 4, temporal calibration) provide strong
+empirical signal but not closed-form symbolic expressions. PySR was planned as
+a follow-up to produce interpretable formulas for the calibrated thresholds and
+fragility spectra. The Julia dependency required by PySR remains unresolved.
+Current conclusions rely on deterministic scripts and tree-based models. This
+does not affect the validity of the atlas findings, but the symbolic
+interpretation layer is incomplete.
 
 ## 10. Next Work
 
