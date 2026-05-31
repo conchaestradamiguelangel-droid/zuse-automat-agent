@@ -1,6 +1,6 @@
 # ZUSE AUTOMAT AGENT
 
-Estado: Fase B completada. 130 tests OK. FIX-D/E validados.
+Estado: Fase 13 completada. Atlas de 18 mundos; espectro de fragilidad medido.
 
 Premisas rectoras:
 
@@ -48,8 +48,33 @@ python -m unittest discover -s tests
 ## Scientific Artifacts
 
 - [World taxonomy and law coverage matrix](outputs/world_taxonomy/law_map.md)
-  -- formal classification of all 15 worlds and per-law coverage across the
-  7 current cycle laws.
+  -- formal classification of 18 worlds, per-law coverage across the 7 current
+  cycle laws, and measured basin fragility where available.
+- [Physical-tree findings](outputs/pysr_fase7/FINDINGS.md) -- meta-analysis of
+  physical metrics predicting law richness, updated with the
+  `frontera-rich-estable` family.
+- [Fragility report](outputs/fragility_fase10/fragility_report.md) -- basin
+  fragility spectrum and the two observed fragility mechanisms.
+- [Rule 54 noise-gate anatomy](outputs/rule54_gate_fase13/rule54_gate_report.md)
+  -- detailed diagnosis of the `rule_54` dedup noise-boundary mechanism.
+
+## Current Scientific Map
+
+Fases 11-13 establish two robust results:
+
+- `frontera_temporal` is not intrinsically rare. It was under-sampled by the
+  initial atlas and is now represented by the `frontera-rich-estable` family:
+  `rule_46`, `rule_208`, and `rule_209`.
+- Basin fragility separates world families. `frontera-rich-estable` worlds have
+  broad basins (`f_total` 0.000-0.031), while `multiregimen-productivo` worlds
+  occupy the high-fragility range.
+
+Two high-fragility mechanisms are currently distinguished:
+
+- Productive basin switching: `rule_137` (`f_total=0.630`, `f_noise=0.000`,
+  dispersed). Perturbations move between productive law signatures.
+- Noise-boundary fragility: `rule_54` (`f_total=0.714`, `f_noise=0.375`,
+  clustered). Perturbations cross the deduplicated structure gate.
 
 ## Estado de fases
 
