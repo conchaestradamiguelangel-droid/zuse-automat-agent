@@ -210,16 +210,83 @@ case.
 
 ### 7.1 `rule_108` — Unique Local Oscillator
 
-`rule_108` produces the local period-2 motif:
+#### Discovery and formal profile
+
+`rule_108` was identified during a targeted local-oscillator search (Fase 16)
+using minimal ICs on a quiescent background (`f(0,0,0) = 0`). The canonical IC
+is a pair of active cells separated by one gap (`#.#`, word `101` in binary).
+Under `rule_108`, this IC produces an exact period-2 local oscillator:
 
 ```text
-#.# <-> ###
+Step t:     . . . # . # . . .
+Step t+1:   . . . # # # . . .
+Step t+2:   . . . # . # . . .
 ```
 
-Fase 18 shows it is unique among 128 quiescent ECA rules under the local-word
-protocol (`length <= 8`). The family is internal to `rule_108`: 179 short IC
-words converge to exact period-2 local oscillators; 132 are accepted by the
-production observer as `periodicidad`.
+The oscillator is stationary (center of mass fixed), bounded (`span <= 3`),
+and stable over 200 steps with zero drift on a uniform-zero background.
+
+Formal profile (6 canonical seed labels, `width = 128`, `steps = 200`,
+IC = `pair_gap1`): `periodicidad` and `tipo_unico` are accepted in `6/6`
+runs. Mean `dedup_structure_count = 1.000`. The oscillator is deterministic
+given the canonical IC; the seed labels are retained only to keep the profile
+format consistent with other atlas worlds.
+
+#### Algebraic derivation
+
+The oscillator follows from three entries in the `rule_108` table:
+
+| Neighborhood | Output | Role |
+| --- | --- | --- |
+| `010` | `1` | isolated active center stays active |
+| `101` | `1` | gap fills in: `#.# -> ###` |
+| `111` | `0` | center empties: `### -> #.#` |
+
+`rule_108` is left-right symmetric (`f(l,c,r) = f(r,c,l)`), which explains why
+the oscillator does not drift: the two flanking cells exert equal influence on
+the center.
+
+#### Fragility: quiescent-background activation
+
+`rule_108` has the largest fragility gap in the atlas:
+
+| Metric | Value |
+| --- | --- |
+| `f_total` | `0.992` |
+| `f_core` | `0.047` |
+| `f_gap` | `0.945` |
+| Core positions | `61, 62, 63, 65, 66, 67` |
+| Pattern | `clustered` |
+
+The mechanism is geometric. The canonical IC (`pair_gap1`, 2 active bits in
+`width = 128`) leaves more than 120 cells at zero. A one-bit perturbation at
+any of those background positions activates the quiescent background: because
+`f(0,1,0) = 1`, an isolated `1` on a zero background immediately grows,
+producing new detectable structures. This changes secondary laws while leaving
+`periodicidad` and `tipo_unico` intact as long as the oscillator core is
+undisturbed. A perturbation within the core neighborhood (positions `61..63`,
+`65..67`) displaces or destroys the oscillator, accounting for
+`f_core = 0.047`.
+
+This constitutes a third fragility mechanism, distinct from productive basin
+switching (`rule_137`, Section 7.3) and noise-boundary fragility (`rule_54`,
+Section 7.2): quiescent-background activation. The core behavior is robust,
+but the minimal IC makes secondary laws highly sensitive to background
+activation.
+
+#### Uniqueness
+
+Fase 18 ran an exhaustive search over all 128 ECA rules with quiescent
+backgrounds (`f(0,0,0) = 0`), testing 510 IC words per rule (all non-empty
+binary words of length 1..8), with `width = 128`, `steps = 200`, and burn-in
+of 80 steps. Only `rule_108` produced local period-2 oscillators. No other
+rule produced any local oscillator under this protocol for periods `2..16` and
+span `<= 32`.
+
+The family is internal to `rule_108`: 132 out of 179 candidate IC words are
+accepted by the production observer as `periodicidad`, with oscillator spans
+3, 5, 6, 7, and 8. All confirmed oscillators have period exactly 2; no longer
+period was found.
 
 ### 7.2 `rule_54` — Noise Gate Anatomy
 
