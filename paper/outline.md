@@ -153,6 +153,29 @@ rule with periodic boundary conditions. The agent runs a world, computes frame
 metrics, extracts candidate structures, evaluates a fixed set of laws, updates
 world-level history, and chooses the next action through a transparent policy.
 
+### 3.1 Inputs and outputs
+
+A single agent cycle takes as input:
+
+- **World identifier**: the ECA rule number (`0..255`) or a named synthetic
+  world.
+- **IC protocol**: either a random seed for standard runs or a designed IC
+  vector for controlled experiments.
+- **Width and steps**: fixed integers, typically `width = 64` and
+  `steps = 24..200`, depending on the world's scale protocol.
+
+The outputs of a single cycle are:
+
+- **Frame metrics**: density mean, entropy mean, temporal transition rate, gzip
+  ratio, and mutual information mean.
+- **Analysis status**: `ok` or `ruido_no_analizable` after the noise gate.
+- **Structure records**: raw `Estructura` outputs with type labels and span
+  information, plus `dedup_structure_count`.
+- **Law signature**: frozenset of accepted law names, or the empty set if the
+  run is noise-gated.
+
+### 3.2 Loop structure
+
 The loop has five layers:
 
 1. **Simulation.** ECA frames are generated from explicit initial conditions
@@ -176,10 +199,66 @@ The loop has five layers:
    signature.
 
 5. **Policy and memory.** The agent stores a persistent `WorldRecord` per
-   world, including visit count, score history, noise fraction, law signatures,
-   peak signature diversity, and multiregime evidence. The policy then chooses
-   among actions such as varying the seed, increasing scale, repeating a
-   multi-regime world once more, or changing world.
+   world and chooses the next action after each cycle.
+
+### 3.3 State: WorldRecord
+
+Each world maintains a `WorldRecord` with the following fields relevant to
+atlas construction:
+
+| field | description |
+| --- | --- |
+| `visit_count` | total cycles run on this world |
+| `scores` | per-cycle scores used by the policy |
+| `noise_count` / `noise_fraction` | count and fraction of noise-gated cycles |
+| `law_signatures` | list of accepted law signatures as frozensets |
+| `unique_law_signature_count` | count of distinct non-empty signatures |
+| `non_empty_signature_visit_count` | visits where at least one law was accepted |
+| `law_signature_diversity` | unique non-empty signatures divided by non-empty visits, reported after at least five non-empty visits |
+| `peak_signature_diversity` | maximum clean diversity observed so far |
+| `has_multiregime_evidence` | monotone boolean, set once peak diversity exceeds `0.5` under low noise |
+| `params_tried` | tested `(steps, width, law_signature)` tuples |
+| `max_ok_steps` / `first_noise_steps` | scale boundary diagnostics |
+
+The important design choice is that empty signatures are retained for audit but
+excluded from diversity. A world is not multi-regime merely because it
+alternates between laws and silence; multi-regime evidence requires multiple
+non-empty law signatures.
+
+### 3.4 Journal
+
+Every cycle result is appended to a JSONL journal
+(`outputs/experiments_*/journal_*.jsonl`). Each line is a self-contained JSON
+record with cycle identifier, world identifier, steps, width, frame metrics,
+analysis status, structure counts, law signature, action taken, and the
+previous WorldRecord state visible to the policy at decision time. The journal
+is the primary reproducibility artifact: the atlas in Section 5, the fragility
+measurements in Section 6, and the case studies in Section 7 are all derived
+from journal queries and controlled follow-up scripts.
+
+### 3.5 Policy
+
+The policy selects the next action from four options:
+
+- **Vary seed** (`repeat_vary_seed`): run the same world with a new IC. Used
+  when the world has a new law signature or confirmed multi-regime evidence
+  and the current cycle is productive.
+- **Increase scale** (`increase_steps`): raise `steps` to test scale-dependent
+  behavior. Used when the current world produces analyzable signal and has not
+  reached a known noise boundary.
+- **Change world** (`change_world`): move to the next world. Used when the
+  current world is noise-bounded, reaches a known noise boundary, has exhausted
+  repeats, or converges to unproductive silence at maximum scale.
+- **Stop by exhaustion**: after the requested cycle budget, persist state and
+  journal artifacts.
+
+The policy has no learned parameters. Its thresholds are fixed constants or
+explicit guards in code: `dedup_structure_count > 40` for the noise gate,
+signature diversity `> 0.5` for multi-regime evidence, `noise_fraction < 0.20`
+for clean diversity, and at least five non-empty visits before diversity is
+reported.
+
+### 3.6 Non-generative design
 
 The agent is deliberately non-generative inside the loop. No LLM proposes laws,
 selects worlds, or evaluates a cycle. Symbolic regression was used only outside
