@@ -712,13 +712,11 @@ have similar total fragility with opposite core/secondary decompositions.
 `rule_108` was identified during a targeted local-oscillator search (Fase 16)
 using minimal ICs on a quiescent background (`f(0,0,0) = 0`). The canonical IC
 is a pair of active cells separated by one gap (`#.#`, word `101` in binary).
-Under `rule_108`, this IC produces an exact period-2 local oscillator:
+Under `rule_108`, this IC produces an exact period-2 local oscillator
+(Figure 4): the gap fills in each step (`#.# -> ###`) and then empties again,
+repeating indefinitely with zero drift.
 
-```text
-Step t:     . . . # . # . . .
-Step t+1:   . . . # # # . . .
-Step t+2:   . . . # . # . . .
-```
+**Figure 4. `rule_108` period-2 oscillator motif.**
 
 ```text
 Step t:   . . . # . # . . .
