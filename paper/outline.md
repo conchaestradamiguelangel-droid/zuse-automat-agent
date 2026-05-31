@@ -424,21 +424,135 @@ identifies different category-defining cores.
 
 ## 6. Fragility: `f_total`, `f_core`, `f_gap`
 
-Define the perturbation protocol and metrics:
+### 6.1 Protocol
 
-- `f_total`: fraction of one-bit IC perturbations that change any law
-  signature.
-- `f_core`: fraction that changes the category-defining core laws.
-- `f_gap = f_total - f_core`: secondary-law churn or background sensitivity.
+Fragility is measured by exhaustive one-bit IC perturbation. For each measured
+world and canonical seed, every bit in the IC is flipped individually, and the
+resulting run is evaluated through the full pipeline (simulation, frame
+metrics, observers, dedup, law evaluation). The reference is the law signature
+of the unperturbed run.
 
-Main interpretation:
+Protocol parameters:
 
-- Low `f_total` and low `f_core`: broad stable basin.
-- High `f_total` and high `f_core`: true regime fragility.
-- High `f_total` and low `f_core`: robust behavior with secondary-law churn.
+- **IC width**: `64` for most fragility measurements; `128` for the designed
+  `rule_108` local-oscillator IC.
+- **Perturbations per seed**: one per bit position (`64` or `128`, depending on
+  IC width).
+- **Seeds per world**: usually `3` canonical seeds, giving `192` perturbations
+  for width-64 worlds. Designed-IC worlds such as `rule_108` use a canonical
+  IC rather than random seeds.
+- **Steps**: world-specific canonical steps (e.g., `24` for `rule_46`, `48`
+  for `rule_137`, `96` for `rule_54`).
 
-Use `rule_108` as the extreme gap case and `rule_54` as the high-core-fragility
-case.
+### 6.2 Metrics
+
+Three primary fragility metrics are defined:
+
+- **`f_total`**: fraction of perturbations that produce a different law
+  signature from the reference (including noise-gated runs and silence).
+- **`f_core`**: fraction that changes the category-defining core laws. Noise
+  and silence count as core changes because the defining regime is lost.
+- **`f_gap = f_total - f_core`**: secondary-law churn. Perturbations that
+  change the signature without affecting the core-defining laws.
+
+A fourth component is tracked separately:
+
+- **`f_noise`**: fraction of perturbations that produce
+  `analysis_status = ruido_no_analizable` (noise-gate crossing).
+
+`f_noise` is a component of `f_total` and `f_core`; it is reported separately
+because it identifies a specific observer-boundary mechanism.
+
+### 6.3 Core-law convention
+
+Core laws are defined per category:
+
+| category | core laws |
+| --- | --- |
+| `frontera-rich-estable` | the full six-law frontier signature |
+| `periodicidad-global` | `periodicidad` |
+| `oscilador-local` | `periodicidad` and `tipo_unico` |
+| `multiregimen-productivo` | the reference signature of that specific seed |
+| `multiregimen-escala-dependiente` | `temporal_scale_stability` |
+
+For `multiregimen-productivo` worlds, the reference signature varies by seed.
+`f_core` is therefore computed per seed against that seed's reference and then
+averaged.
+
+### 6.4 Fragility spectrum
+
+| world | category | `f_total` | `f_core` | `f_gap` | `f_noise` |
+| --- | --- | ---: | ---: | ---: | ---: |
+| `rule_208` | `frontera-rich-estable` | 0.000 | 0.000 | 0.000 | 0.000 |
+| `rule_209` | `frontera-rich-estable` | 0.000 | 0.000 | 0.000 | 0.000 |
+| `rule_46` | `frontera-rich-estable` | 0.031 | 0.031 | 0.000 | 0.000 |
+| `rule_90` | `multiregimen-escala-dependiente` | 0.172 | 0.000 | 0.172 | 0.000 |
+| `rule_51` | `periodicidad-global` | 0.193 | 0.000 | 0.193 | 0.000 |
+| `rule_124` | `multiregimen-productivo` | 0.224 | 0.083 | 0.141 | 0.000 |
+| `rule_109` | `multiregimen-productivo` | 0.250 | 0.250 | 0.000 | 0.000 |
+| `rule_110` | `multiregimen-productivo` | 0.323 | 0.198 | 0.125 | 0.000 |
+| `rule_18` | `multiregimen-productivo` | 0.349 | 0.135 | 0.214 | 0.000 |
+| `rule_137` | `multiregimen-productivo` | 0.630 | 0.312 | 0.318 | 0.000 |
+| `rule_54` | `multiregimen-productivo` | 0.714 | 0.677 | 0.037 | 0.375 |
+| `rule_108` | `oscilador-local` | 0.992 | 0.047 | 0.945 | 0.000 |
+
+The spectrum is category-aligned at the extremes: `frontera-rich-estable`
+occupies the low end, while `multiregimen-productivo` occupies the upper end.
+`rule_108` is a structural outlier at `f_total = 0.992` because its mechanism
+differs from all others.
+
+### 6.5 Four fragility mechanisms
+
+The atlas identifies four distinct mechanisms by which one-bit IC perturbations
+change law signatures:
+
+**Stable basin** (`rule_208`, `rule_209`): `f_total = 0.000`. All perturbations
+preserve the reference signature. The basin for the six-law frontier signature
+is wide enough that no measured single-bit perturbation escapes it. `rule_46`
+is nearly identical (`f_total = 0.031`).
+
+**Productive basin switching** (`rule_137`, and all other
+`multiregimen-productivo` worlds): perturbations move the IC among productive
+law-signature regimes. The world never falls into silence or noise;
+`f_noise = 0.000` throughout. `rule_137` is the strongest clean case
+(`f_total = 0.630`), with more than 80% of perturbations switching regime in
+the two most fragile measured seeds.
+
+**Noise-boundary fragility** (`rule_54`): perturbations cross the observer
+noise gate rather than moving between productive regimes. The mechanism
+requires complex ICs near the dedup threshold; single-bit ICs from bare
+backgrounds do not approach the gate (Section 8). `f_noise = 0.375` makes
+`rule_54` the only measured world where noise-gate crossings dominate
+fragility.
+
+**Quiescent-background activation** (`rule_108`): the canonical IC has only two
+active bits on a zero background. Nearly any background perturbation ignites
+new dynamics and changes secondary laws, producing `f_total = 0.992`. The core
+oscillator survives unless the perturbation lands near the motif
+(`f_core = 0.047`). The result is the largest `f_gap` in the atlas (`0.945`):
+nearly all fragility is secondary, not core.
+
+### 6.6 The `f_core` / `f_gap` separation
+
+The main result of the fragility analysis is the separation between core and
+secondary law changes:
+
+- `rule_51` (`periodicidad-global`): `f_total = 0.193`, `f_core = 0.000`.
+  Global periodicity survives all measured perturbations; only secondary laws
+  (`densidad_estable`) toggle.
+- `rule_108` (`oscilador-local`): `f_total = 0.992`, `f_core = 0.047`. The
+  local oscillator survives nearly all perturbations; secondary laws are
+  maximally sensitive.
+- `rule_54` (`multiregimen-productivo`): `f_total = 0.714`,
+  `f_core = 0.677`. The core productive signature changes frequently;
+  `f_gap = 0.037` is near zero.
+- `rule_137` (`multiregimen-productivo`): `f_total = 0.630`,
+  `f_core = 0.312`. Both core and secondary transitions are common;
+  `f_gap` is approximately equal to `f_core`.
+
+These four cases span the space of possible (`f_core`, `f_gap`) combinations.
+Together they demonstrate that `f_total` alone is insufficient: two worlds can
+have similar total fragility with opposite core/secondary decompositions.
 
 ## 7. Case Studies
 
