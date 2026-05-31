@@ -592,7 +592,20 @@ averaged.
 | `rule_54` | `multiregimen-productivo` | 0.714 | 0.677 | 0.037 | 0.375 |
 | `rule_108` | `oscilador-local` | 0.992 | 0.047 | 0.945 | 0.000 |
 
-> **[FIGURE 3 — f_total / f_core spectrum]**
+| world | category | f_total | f_core | f_gap | mechanism |
+| --- | --- | ---: | ---: | ---: | --- |
+| `rule_208` | `frontera-rich-estable` | 0.000 | 0.000 | 0.000 | stable basin |
+| `rule_209` | `frontera-rich-estable` | 0.000 | 0.000 | 0.000 | stable basin |
+| `rule_46` | `frontera-rich-estable` | 0.031 | 0.031 | 0.000 | stable basin |
+| `rule_90` | `multiregimen-escala-dependiente` | 0.172 | 0.000 | 0.172 | secondary churn |
+| `rule_51` | `periodicidad-global` | 0.193 | 0.000 | 0.193 | secondary churn |
+| `rule_124` | `multiregimen-productivo` | 0.224 | 0.083 | 0.141 | productive switching |
+| `rule_109` | `multiregimen-productivo` | 0.250 | 0.250 | 0.000 | productive switching |
+| `rule_110` | `multiregimen-productivo` | 0.323 | 0.198 | 0.125 | productive switching |
+| `rule_18` | `multiregimen-productivo` | 0.349 | 0.135 | 0.214 | productive switching |
+| `rule_137` | `multiregimen-productivo` | 0.630 | 0.312 | 0.318 | productive switching |
+| `rule_54` | `multiregimen-productivo` | 0.714 | 0.677 | 0.037 | noise-boundary |
+| `rule_108` | `oscilador-local` | 0.992 | 0.047 | 0.945 | quiescent-background activation |
 
 The spectrum is category-aligned at the extremes: `frontera-rich-estable`
 occupies the low end, while `multiregimen-productivo` occupies the upper end.
@@ -669,7 +682,14 @@ Step t+1:   . . . # # # . . .
 Step t+2:   . . . # . # . . .
 ```
 
-> **[FIGURE 4 — rule_108 oscillator motif]**
+```text
+Step t:   . . . # . # . . .
+Step t+1: . . . # # # . . .
+Step t+2: . . . # . # . . .   (repeats)
+```
+
+*Space-time diagram to be rendered as bitmap figure. Active cells shown as `#`,
+quiescent background as `.`. Span <= 3, period `T = 2`.*
 
 The oscillator is stationary (center of mass fixed), bounded (`span <= 3`),
 and stable over 200 steps with zero drift on a uniform-zero background.
@@ -1012,7 +1032,17 @@ normalization: `True`). The observer/dedup pipeline was not:
 | law signature | `temporal_scale_stability` (all 64 identical) |
 | `analysis_status` | `ok` (all 64) |
 
-> **[FIGURE 5 — rule_54 gate and observer non-equivariance]**
+| metric | value |
+| --- | --- |
+| ICs tested | 64 single-bit positions (`k = 0..63`) |
+| ECA translation-invariant | True |
+| Unique result classes (observer) | 29 |
+| dedup range observed | 15-24 |
+| Noise gate threshold | > 40 |
+| Closest single-bit IC to gate | `k = 55`, `dedup = 24` |
+| Complex-IC reference (Fase 13) | `dedup = 32..39` |
+| Law signature (all 64 positions) | `temporal_scale_stability` |
+| Conclusion | noise-gate crossing requires complex IC geometry; single-bit ICs stay at least 16 below gate |
 
 The mechanism is a boundary interaction: `rule_54` produces wide-spreading
 patterns that cross the periodic frame boundary. The dedup algorithm's handling
