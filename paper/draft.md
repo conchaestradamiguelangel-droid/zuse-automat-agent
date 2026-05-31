@@ -393,7 +393,28 @@ for one of the positive families.
 | `noise-bounded` | pre-law failure under the deduplicated structure gate | `rule_30`, `rule_150` |
 | `sin-evidencia-multiregimen` | no sufficient evidence of multi-regime or stable-rich behavior in the current protocol | `life_blinker`, `life_block`, `life_glider`, `synthetic_bloque`, `synthetic_glider`, `synthetic_oscilador` |
 
-> **[FIGURE 1 — World taxonomy table]**
+| world | category | mean_laws | peak_diversity | f_total | f_core |
+| --- | --- | ---: | ---: | ---: | ---: |
+| `rule_208` | `frontera-rich-estable` | 6.000 | 0.167 | 0.000 | 0.000 |
+| `rule_209` | `frontera-rich-estable` | 6.000 | 0.167 | 0.000 | 0.000 |
+| `rule_46` | `frontera-rich-estable` | 5.833 | 0.333 | 0.031 | 0.031 |
+| `rule_51` | `periodicidad-global` | 4.500 | 0.333 | 0.193 | 0.000 |
+| `rule_108` | `oscilador-local` | 2.000 | 0.167 | 0.992 | 0.047 |
+| `rule_90` | `multiregimen-escala-dependiente` | 0.500 | 0.600 | 0.172 | 0.000 |
+| `rule_110` | `multiregimen-productivo` | 2.727 | 0.600 | 0.323 | 0.198 |
+| `rule_124` | `multiregimen-productivo` | 2.167 | 0.600 | 0.224 | 0.083 |
+| `rule_109` | `multiregimen-productivo` | 2.000 | 0.667 | 0.250 | 0.250 |
+| `rule_18` | `multiregimen-productivo` | 2.308 | 0.800 | 0.349 | 0.135 |
+| `rule_137` | `multiregimen-productivo` | 2.867 | 0.833 | 0.630 | 0.312 |
+| `rule_54` | `multiregimen-productivo` | 1.917 | 0.800 | 0.714 | 0.677 |
+| `rule_30` | `noise-bounded` | 1.100 | 0.000 | ? | ? |
+| `rule_150` | `noise-bounded` | 0.750 | 0.000 | ? | ? |
+| `life_blinker` | `sin-evidencia-multiregimen` | 3.000 | 0.200 | ? | ? |
+| `life_block` | `sin-evidencia-multiregimen` | 2.000 | 0.200 | ? | ? |
+| `life_glider` | `sin-evidencia-multiregimen` | 2.357 | 0.333 | ? | ? |
+| `synthetic_bloque` | `sin-evidencia-multiregimen` | 2.000 | 0.200 | ? | ? |
+| `synthetic_glider` | `sin-evidencia-multiregimen` | 3.167 | 0.400 | ? | ? |
+| `synthetic_oscilador` | `sin-evidencia-multiregimen` | 2.286 | 0.400 | ? | ? |
 
 This classification is intentionally operational. A world can be reclassified
 if a wider protocol produces different evidence; the atlas records what the
@@ -418,7 +439,35 @@ least half of non-empty visits (`✓`), observed but below half (`·`), never
 observed in non-empty visits (`-`), or unknown because no non-empty visits
 exist (`?`).
 
-> **[FIGURE 2 — Law coverage matrix]**
+Cell states:
+
+- `✓`: law appears in the dominant signature or in at least 50% of non-empty visits.
+- `·`: law appears in at least one non-empty visit but in less than 50%.
+- `-`: non-empty visits exist and the law never appears.
+- `?`: no non-empty visits.
+
+| world | vel | per | den | tipo | compl | front | tss |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| `life_blinker` | - | ✓ | ✓ | ✓ | - | - | - |
+| `life_block` | - | - | ✓ | ✓ | - | - | - |
+| `life_glider` | · | - | ✓ | ✓ | - | - | - |
+| `rule_108` | - | ✓ | - | ✓ | - | - | - |
+| `rule_109` | - | - | ✓ | · | ✓ | ✓ | ✓ |
+| `rule_110` | ✓ | - | ✓ | - | ✓ | ✓ | · |
+| `rule_124` | · | - | ✓ | - | ✓ | ✓ | ✓ |
+| `rule_137` | · | - | ✓ | · | ✓ | ✓ | ✓ |
+| `rule_150` | - | - | ✓ | - | ✓ | - | ✓ |
+| `rule_18` | ✓ | - | - | ✓ | ✓ | - | ✓ |
+| `rule_208` | ✓ | - | ✓ | ✓ | ✓ | ✓ | ✓ |
+| `rule_209` | ✓ | - | ✓ | ✓ | ✓ | ✓ | ✓ |
+| `rule_30` | - | - | ✓ | - | ✓ | - | ✓ |
+| `rule_46` | ✓ | - | ✓ | ✓ | ✓ | ✓ | ✓ |
+| `rule_51` | - | ✓ | ✓ | ✓ | ✓ | - | ✓ |
+| `rule_54` | ✓ | - | · | · | ✓ | - | ✓ |
+| `rule_90` | · | - | · | - | · | - | ✓ |
+| `synthetic_bloque` | - | - | ✓ | ✓ | - | - | - |
+| `synthetic_glider` | ✓ | - | ✓ | ✓ | - | - | · |
+| `synthetic_oscilador` | - | ✓ | - | ✓ | - | - | · |
 
 The matrix reveals three broad patterns:
 
