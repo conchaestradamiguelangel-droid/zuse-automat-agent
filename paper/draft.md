@@ -290,10 +290,12 @@ signature in the atlas can be reproduced from deterministic scripts.
 
 ## 4. Seven Cycle Laws
 
-Each law is evaluated per run (one world, one seed, one step count) after the
-observer and dedup stages succeed (`analysis_status == ok`). The output is
-binary: accepted or rejected. Law signatures are frozensets of accepted law
-names.
+The seven laws are the primary evidence units linking raw ECA frames to the
+world categories, fragility scores, and observer artifacts reported in Sections
+5-8. Each law is evaluated per run — one world, one initial condition, one step
+count — once the observer and dedup pipeline reports `analysis_status = ok`.
+The output is binary: accepted or rejected. Law signatures are frozensets of
+accepted law names.
 
 ### 4.1 Design rationale
 
@@ -340,6 +342,11 @@ forces explicit calibration of each threshold.
 
 ### 4.3 Calibrated constants
 
+Neither threshold can be derived analytically: the boundary between organized
+frontier dynamics and pure chaos has no closed form in ECA. Both constants
+were set empirically on real ECA runs and are valid within the atlas protocol
+(`width = 64`, `steps` roughly `24..200`).
+
 The `frontera_temporal` upper threshold `0.4352` is the midpoint between the
 maximum `transition_rate` observed for `rule_110` (`0.4147`) and the minimum
 for `rule_30` (`0.4557`) across six canonical seeds at `steps = 24`,
@@ -349,10 +356,6 @@ The `temporal_scale_stability` threshold `19.03` was fit on
 `datasets/fase2c_v3.csv` (120 ECA scale samples). A decision tree at
 `max_depth = 4` achieved accuracy `0.908`, precision `0.886`, and recall
 `0.954` on the `analysis_ok` label.
-
-Both constants are valid for the atlas protocol (`width = 64`, `steps` roughly
-`24..200`) and should be recalibrated if width or step range changes
-substantially.
 
 ### 4.4 Caveats
 
@@ -369,6 +372,10 @@ the main discriminator separating organized frontier dynamics from pure chaos
 or static order. Other metrics (`density_mean`, `gzip_ratio`,
 `mutual_info_mean`) are useful context features but should not be treated as
 independent causal evidence without ablation.
+
+These caveats do not weaken the atlas: they clarify which signals reflect
+physical ECA dynamics and which reflect the current observer design. Section 8
+returns to both artifacts with controlled experiments.
 
 ### 4.5 Law signatures and the atlas
 
