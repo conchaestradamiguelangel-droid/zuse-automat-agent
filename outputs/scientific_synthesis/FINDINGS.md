@@ -1,4 +1,4 @@
-# ZAA Scientific Synthesis — Fases 11-18
+# ZAA Scientific Synthesis — Fases 11-19
 
 Date: 2026-05-31
 
@@ -6,7 +6,8 @@ This document consolidates the current scientific map of ZAA after the ECA
 sweep, world taxonomy, basin-fragility diagnostics, `rule_54` gate anatomy,
 `rule_51` periodicity validation, `core_fragility`, the Fase 16 local
 oscillator search, the Fase 17 formal `rule_108` atlas profile, and the
-Fase 18 local oscillator family sweep.
+Fase 18 local oscillator family sweep, and the Fase 19 controlled `rule_54`
+single-bit experiment.
 
 Primary artifacts:
 
@@ -15,6 +16,7 @@ Primary artifacts:
 - `outputs/fragility_fase10/fragility_report.md`
 - `outputs/fragility_fase10/core_fragility_report.md`
 - `outputs/rule54_gate_fase13/rule54_gate_report.md`
+- `outputs/rule54_controlled_ic_fase19/rule54_single_bit_report.md`
 - `outputs/periodicity_fase14/periodicity_sweep_report.md`
 - `outputs/local_oscillators_fase16/local_oscillator_report.md`
 - `outputs/profile_fase17/rule108_seed_profile.json`
@@ -240,6 +242,24 @@ The most sensitive seed, `20260642`, starts at `reference_dedup_structure_count
 = 39`, only one structure below the threshold. This explains why many local
 perturbations push it into `ruido_no_analizable`.
 
+Fase 19 adds the controlled negative case: single-bit ICs for every position
+`k=0..63`, with `width=64` and `steps=96`.
+
+Result:
+
+- The ECA frames themselves are translation-invariant.
+- The observer/dedup pipeline is not translation-equivariant for this
+  wide-spreading pattern: `dedup_structure_count` ranges from `15` to `24`
+  depending on position.
+- The law signature is stable for all 64 positions:
+  `temporal_scale_stability`.
+- Every single-bit IC remains far below the noise gate (`>40`).
+
+Interpretation: the Fase 13 bit-5 signal is not a special absolute coordinate
+of the CA rule. It is an interaction between complex IC geometry and the
+observer/gate pipeline. The noise-boundary mechanism requires rich ICs near
+the dedup threshold; a single active cell cannot trigger it.
+
 ### Quiescent-Background Activation
 
 Example: `rule_108`
@@ -275,15 +295,16 @@ The `frontera-rich-estable` family is the robust end of the atlas:
 
 ## 7. Open Questions
 
-1. **`rule_54` gate geometry**  
-   Fase 13 found a multi-hot clustered sensitivity pattern. A controlled IC
-   experiment could test whether bit position 5 is structurally special or
-   seed-specific.
-
-2. **Symbolic formulas**  
+1. **Symbolic formulas**  
    The physical tree has strong empirical signal, but PySR/Julia remains a
    technical blocker. The current robust conclusion is a family map, not one
    universal equation.
+
+2. **Observer translation equivariance**  
+   Fase 19 shows that ECA dynamics remain translation-invariant while the
+   current observer/dedup counts do not for wide-spreading `rule_54` patterns.
+   This does not affect the law signature in the controlled case, but it is a
+   known limitation if future work uses absolute counts as physical evidence.
 
 ## 8. Bottom Line
 

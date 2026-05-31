@@ -1,6 +1,6 @@
 # ZUSE AUTOMAT AGENT
 
-Estado: Fase 18 completada. rule_108 es el unico oscilador-local ECA hallado en barrido pequeno.
+Estado: Fase 19 completada. rule_54 single-bit control confirma gate por IC compleja.
 
 Premisas rectoras:
 
@@ -60,6 +60,9 @@ python -m unittest discover -s tests
   fragility spectrum and the two observed fragility mechanisms.
 - [Rule 54 noise-gate anatomy](outputs/rule54_gate_fase13/rule54_gate_report.md)
   -- detailed diagnosis of the `rule_54` dedup noise-boundary mechanism.
+- [Rule 54 controlled single-bit IC](outputs/rule54_controlled_ic_fase19/rule54_single_bit_report.md)
+  -- translation-invariance control showing that single-bit `rule_54` stays
+  far below the dedup noise gate.
 - [Periodicity sweep](outputs/periodicity_fase14/periodicity_sweep_report.md)
   -- ECA validation of `periodicidad`, with `rule_51` as global period-2
   positive control.
@@ -72,7 +75,7 @@ python -m unittest discover -s tests
 
 ## Current Scientific Map
 
-Fases 11-18 establish these robust results:
+Fases 11-19 establish these robust results:
 
 - `frontera_temporal` is not intrinsically rare. It was under-sampled by the
   initial atlas and is now represented by the `frontera-rich-estable` family:
@@ -86,6 +89,9 @@ Fases 11-18 establish these robust results:
 - Exhaustive local-word sweep through length 8 found no other quiescent ECA
   rule with a local oscillator. `rule_108` is unique under the current
   stationary local-periodicity protocol.
+- `rule_54` noise-gate fragility requires complex IC geometry. Single-bit ICs
+  are dynamically translation-invariant, always keep the same law signature
+  (`temporal_scale_stability`), and stay below the dedup threshold.
 
 Three high-fragility mechanisms are currently distinguished:
 

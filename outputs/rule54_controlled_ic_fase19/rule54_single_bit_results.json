@@ -1,0 +1,2184 @@
+{
+  "records": [
+    {
+      "analysis_status": "ok",
+      "dedup_structure_count": 20,
+      "dominant_type": "glider",
+      "final_active_count": 16,
+      "final_active_span": 61,
+      "final_cyclic_active_span": 61,
+      "laws_accepted": [
+        "temporal_scale_stability"
+      ],
+      "max_active_count": 48,
+      "max_active_span": 64,
+      "max_cyclic_active_span": 63,
+      "position": 0,
+      "raw_structure_count": 60,
+      "type_counts": {
+        "bloque": 27,
+        "glider": 33
+      }
+    },
+    {
+      "analysis_status": "ok",
+      "dedup_structure_count": 15,
+      "dominant_type": "bloque",
+      "final_active_count": 16,
+      "final_active_span": 61,
+      "final_cyclic_active_span": 61,
+      "laws_accepted": [
+        "temporal_scale_stability"
+      ],
+      "max_active_count": 48,
+      "max_active_span": 64,
+      "max_cyclic_active_span": 63,
+      "position": 1,
+      "raw_structure_count": 45,
+      "type_counts": {
+        "bloque": 30,
+        "glider": 15
+      }
+    },
+    {
+      "analysis_status": "ok",
+      "dedup_structure_count": 15,
+      "dominant_type": "bloque",
+      "final_active_count": 16,
+      "final_active_span": 61,
+      "final_cyclic_active_span": 61,
+      "laws_accepted": [
+        "temporal_scale_stability"
+      ],
+      "max_active_count": 48,
+      "max_active_span": 64,
+      "max_cyclic_active_span": 63,
+      "position": 2,
+      "raw_structure_count": 45,
+      "type_counts": {
+        "bloque": 30,
+        "glider": 15
+      }
+    },
+    {
+      "analysis_status": "ok",
+      "dedup_structure_count": 15,
+      "dominant_type": "bloque",
+      "final_active_count": 16,
+      "final_active_span": 61,
+      "final_cyclic_active_span": 61,
+      "laws_accepted": [
+        "temporal_scale_stability"
+      ],
+      "max_active_count": 48,
+      "max_active_span": 64,
+      "max_cyclic_active_span": 63,
+      "position": 3,
+      "raw_structure_count": 45,
+      "type_counts": {
+        "bloque": 30,
+        "glider": 15
+      }
+    },
+    {
+      "analysis_status": "ok",
+      "dedup_structure_count": 15,
+      "dominant_type": "bloque",
+      "final_active_count": 16,
+      "final_active_span": 61,
+      "final_cyclic_active_span": 61,
+      "laws_accepted": [
+        "temporal_scale_stability"
+      ],
+      "max_active_count": 48,
+      "max_active_span": 64,
+      "max_cyclic_active_span": 63,
+      "position": 4,
+      "raw_structure_count": 45,
+      "type_counts": {
+        "bloque": 30,
+        "glider": 15
+      }
+    },
+    {
+      "analysis_status": "ok",
+      "dedup_structure_count": 15,
+      "dominant_type": "bloque",
+      "final_active_count": 16,
+      "final_active_span": 61,
+      "final_cyclic_active_span": 61,
+      "laws_accepted": [
+        "temporal_scale_stability"
+      ],
+      "max_active_count": 48,
+      "max_active_span": 64,
+      "max_cyclic_active_span": 63,
+      "position": 5,
+      "raw_structure_count": 45,
+      "type_counts": {
+        "bloque": 30,
+        "glider": 15
+      }
+    },
+    {
+      "analysis_status": "ok",
+      "dedup_structure_count": 17,
+      "dominant_type": "bloque",
+      "final_active_count": 16,
+      "final_active_span": 61,
+      "final_cyclic_active_span": 61,
+      "laws_accepted": [
+        "temporal_scale_stability"
+      ],
+      "max_active_count": 48,
+      "max_active_span": 64,
+      "max_cyclic_active_span": 63,
+      "position": 6,
+      "raw_structure_count": 51,
+      "type_counts": {
+        "bloque": 27,
+        "glider": 24
+      }
+    },
+    {
+      "analysis_status": "ok",
+      "dedup_structure_count": 17,
+      "dominant_type": "glider",
+      "final_active_count": 16,
+      "final_active_span": 61,
+      "final_cyclic_active_span": 61,
+      "laws_accepted": [
+        "temporal_scale_stability"
+      ],
+      "max_active_count": 48,
+      "max_active_span": 64,
+      "max_cyclic_active_span": 63,
+      "position": 7,
+      "raw_structure_count": 51,
+      "type_counts": {
+        "bloque": 24,
+        "glider": 27
+      }
+    },
+    {
+      "analysis_status": "ok",
+      "dedup_structure_count": 17,
+      "dominant_type": "glider",
+      "final_active_count": 16,
+      "final_active_span": 61,
+      "final_cyclic_active_span": 61,
+      "laws_accepted": [
+        "temporal_scale_stability"
+      ],
+      "max_active_count": 48,
+      "max_active_span": 64,
+      "max_cyclic_active_span": 63,
+      "position": 8,
+      "raw_structure_count": 51,
+      "type_counts": {
+        "bloque": 18,
+        "glider": 33
+      }
+    },
+    {
+      "analysis_status": "ok",
+      "dedup_structure_count": 17,
+      "dominant_type": "glider",
+      "final_active_count": 16,
+      "final_active_span": 61,
+      "final_cyclic_active_span": 61,
+      "laws_accepted": [
+        "temporal_scale_stability"
+      ],
+      "max_active_count": 48,
+      "max_active_span": 64,
+      "max_cyclic_active_span": 63,
+      "position": 9,
+      "raw_structure_count": 51,
+      "type_counts": {
+        "bloque": 18,
+        "glider": 33
+      }
+    },
+    {
+      "analysis_status": "ok",
+      "dedup_structure_count": 17,
+      "dominant_type": "glider",
+      "final_active_count": 16,
+      "final_active_span": 61,
+      "final_cyclic_active_span": 61,
+      "laws_accepted": [
+        "temporal_scale_stability"
+      ],
+      "max_active_count": 48,
+      "max_active_span": 64,
+      "max_cyclic_active_span": 63,
+      "position": 10,
+      "raw_structure_count": 51,
+      "type_counts": {
+        "bloque": 15,
+        "glider": 36
+      }
+    },
+    {
+      "analysis_status": "ok",
+      "dedup_structure_count": 16,
+      "dominant_type": "glider",
+      "final_active_count": 16,
+      "final_active_span": 61,
+      "final_cyclic_active_span": 61,
+      "laws_accepted": [
+        "temporal_scale_stability"
+      ],
+      "max_active_count": 48,
+      "max_active_span": 64,
+      "max_cyclic_active_span": 63,
+      "position": 11,
+      "raw_structure_count": 48,
+      "type_counts": {
+        "bloque": 21,
+        "glider": 27
+      }
+    },
+    {
+      "analysis_status": "ok",
+      "dedup_structure_count": 17,
+      "dominant_type": "glider",
+      "final_active_count": 16,
+      "final_active_span": 61,
+      "final_cyclic_active_span": 61,
+      "laws_accepted": [
+        "temporal_scale_stability"
+      ],
+      "max_active_count": 48,
+      "max_active_span": 64,
+      "max_cyclic_active_span": 63,
+      "position": 12,
+      "raw_structure_count": 51,
+      "type_counts": {
+        "bloque": 15,
+        "glider": 36
+      }
+    },
+    {
+      "analysis_status": "ok",
+      "dedup_structure_count": 16,
+      "dominant_type": "glider",
+      "final_active_count": 16,
+      "final_active_span": 61,
+      "final_cyclic_active_span": 61,
+      "laws_accepted": [
+        "temporal_scale_stability"
+      ],
+      "max_active_count": 48,
+      "max_active_span": 64,
+      "max_cyclic_active_span": 63,
+      "position": 13,
+      "raw_structure_count": 48,
+      "type_counts": {
+        "bloque": 15,
+        "glider": 33
+      }
+    },
+    {
+      "analysis_status": "ok",
+      "dedup_structure_count": 18,
+      "dominant_type": "glider",
+      "final_active_count": 16,
+      "final_active_span": 61,
+      "final_cyclic_active_span": 61,
+      "laws_accepted": [
+        "temporal_scale_stability"
+      ],
+      "max_active_count": 48,
+      "max_active_span": 64,
+      "max_cyclic_active_span": 63,
+      "position": 14,
+      "raw_structure_count": 54,
+      "type_counts": {
+        "bloque": 12,
+        "glider": 42
+      }
+    },
+    {
+      "analysis_status": "ok",
+      "dedup_structure_count": 19,
+      "dominant_type": "glider",
+      "final_active_count": 16,
+      "final_active_span": 61,
+      "final_cyclic_active_span": 61,
+      "laws_accepted": [
+        "temporal_scale_stability"
+      ],
+      "max_active_count": 48,
+      "max_active_span": 64,
+      "max_cyclic_active_span": 63,
+      "position": 15,
+      "raw_structure_count": 57,
+      "type_counts": {
+        "bloque": 15,
+        "glider": 42
+      }
+    },
+    {
+      "analysis_status": "ok",
+      "dedup_structure_count": 17,
+      "dominant_type": "glider",
+      "final_active_count": 16,
+      "final_active_span": 61,
+      "final_cyclic_active_span": 61,
+      "laws_accepted": [
+        "temporal_scale_stability"
+      ],
+      "max_active_count": 48,
+      "max_active_span": 64,
+      "max_cyclic_active_span": 63,
+      "position": 16,
+      "raw_structure_count": 51,
+      "type_counts": {
+        "bloque": 18,
+        "glider": 33
+      }
+    },
+    {
+      "analysis_status": "ok",
+      "dedup_structure_count": 17,
+      "dominant_type": "glider",
+      "final_active_count": 16,
+      "final_active_span": 61,
+      "final_cyclic_active_span": 61,
+      "laws_accepted": [
+        "temporal_scale_stability"
+      ],
+      "max_active_count": 48,
+      "max_active_span": 64,
+      "max_cyclic_active_span": 63,
+      "position": 17,
+      "raw_structure_count": 51,
+      "type_counts": {
+        "bloque": 18,
+        "glider": 33
+      }
+    },
+    {
+      "analysis_status": "ok",
+      "dedup_structure_count": 17,
+      "dominant_type": "glider",
+      "final_active_count": 16,
+      "final_active_span": 61,
+      "final_cyclic_active_span": 61,
+      "laws_accepted": [
+        "temporal_scale_stability"
+      ],
+      "max_active_count": 48,
+      "max_active_span": 64,
+      "max_cyclic_active_span": 63,
+      "position": 18,
+      "raw_structure_count": 51,
+      "type_counts": {
+        "bloque": 18,
+        "glider": 33
+      }
+    },
+    {
+      "analysis_status": "ok",
+      "dedup_structure_count": 16,
+      "dominant_type": "glider",
+      "final_active_count": 16,
+      "final_active_span": 61,
+      "final_cyclic_active_span": 61,
+      "laws_accepted": [
+        "temporal_scale_stability"
+      ],
+      "max_active_count": 48,
+      "max_active_span": 64,
+      "max_cyclic_active_span": 63,
+      "position": 19,
+      "raw_structure_count": 48,
+      "type_counts": {
+        "bloque": 18,
+        "glider": 30
+      }
+    },
+    {
+      "analysis_status": "ok",
+      "dedup_structure_count": 17,
+      "dominant_type": "glider",
+      "final_active_count": 16,
+      "final_active_span": 61,
+      "final_cyclic_active_span": 61,
+      "laws_accepted": [
+        "temporal_scale_stability"
+      ],
+      "max_active_count": 48,
+      "max_active_span": 64,
+      "max_cyclic_active_span": 63,
+      "position": 20,
+      "raw_structure_count": 51,
+      "type_counts": {
+        "bloque": 21,
+        "glider": 30
+      }
+    },
+    {
+      "analysis_status": "ok",
+      "dedup_structure_count": 16,
+      "dominant_type": "glider",
+      "final_active_count": 16,
+      "final_active_span": 61,
+      "final_cyclic_active_span": 61,
+      "laws_accepted": [
+        "temporal_scale_stability"
+      ],
+      "max_active_count": 48,
+      "max_active_span": 64,
+      "max_cyclic_active_span": 63,
+      "position": 21,
+      "raw_structure_count": 48,
+      "type_counts": {
+        "bloque": 21,
+        "glider": 27
+      }
+    },
+    {
+      "analysis_status": "ok",
+      "dedup_structure_count": 17,
+      "dominant_type": "glider",
+      "final_active_count": 16,
+      "final_active_span": 61,
+      "final_cyclic_active_span": 61,
+      "laws_accepted": [
+        "temporal_scale_stability"
+      ],
+      "max_active_count": 48,
+      "max_active_span": 64,
+      "max_cyclic_active_span": 63,
+      "position": 22,
+      "raw_structure_count": 51,
+      "type_counts": {
+        "bloque": 21,
+        "glider": 30
+      }
+    },
+    {
+      "analysis_status": "ok",
+      "dedup_structure_count": 18,
+      "dominant_type": "glider",
+      "final_active_count": 16,
+      "final_active_span": 61,
+      "final_cyclic_active_span": 61,
+      "laws_accepted": [
+        "temporal_scale_stability"
+      ],
+      "max_active_count": 48,
+      "max_active_span": 64,
+      "max_cyclic_active_span": 63,
+      "position": 23,
+      "raw_structure_count": 54,
+      "type_counts": {
+        "bloque": 21,
+        "glider": 33
+      }
+    },
+    {
+      "analysis_status": "ok",
+      "dedup_structure_count": 17,
+      "dominant_type": "glider",
+      "final_active_count": 16,
+      "final_active_span": 61,
+      "final_cyclic_active_span": 61,
+      "laws_accepted": [
+        "temporal_scale_stability"
+      ],
+      "max_active_count": 48,
+      "max_active_span": 64,
+      "max_cyclic_active_span": 63,
+      "position": 24,
+      "raw_structure_count": 51,
+      "type_counts": {
+        "bloque": 21,
+        "glider": 30
+      }
+    },
+    {
+      "analysis_status": "ok",
+      "dedup_structure_count": 17,
+      "dominant_type": "glider",
+      "final_active_count": 16,
+      "final_active_span": 61,
+      "final_cyclic_active_span": 61,
+      "laws_accepted": [
+        "temporal_scale_stability"
+      ],
+      "max_active_count": 48,
+      "max_active_span": 64,
+      "max_cyclic_active_span": 63,
+      "position": 25,
+      "raw_structure_count": 51,
+      "type_counts": {
+        "bloque": 21,
+        "glider": 30
+      }
+    },
+    {
+      "analysis_status": "ok",
+      "dedup_structure_count": 16,
+      "dominant_type": "glider",
+      "final_active_count": 16,
+      "final_active_span": 61,
+      "final_cyclic_active_span": 61,
+      "laws_accepted": [
+        "temporal_scale_stability"
+      ],
+      "max_active_count": 48,
+      "max_active_span": 64,
+      "max_cyclic_active_span": 63,
+      "position": 26,
+      "raw_structure_count": 48,
+      "type_counts": {
+        "bloque": 21,
+        "glider": 27
+      }
+    },
+    {
+      "analysis_status": "ok",
+      "dedup_structure_count": 16,
+      "dominant_type": "glider",
+      "final_active_count": 16,
+      "final_active_span": 61,
+      "final_cyclic_active_span": 61,
+      "laws_accepted": [
+        "temporal_scale_stability"
+      ],
+      "max_active_count": 48,
+      "max_active_span": 64,
+      "max_cyclic_active_span": 63,
+      "position": 27,
+      "raw_structure_count": 48,
+      "type_counts": {
+        "bloque": 24,
+        "glider": 24
+      }
+    },
+    {
+      "analysis_status": "ok",
+      "dedup_structure_count": 16,
+      "dominant_type": "glider",
+      "final_active_count": 16,
+      "final_active_span": 61,
+      "final_cyclic_active_span": 61,
+      "laws_accepted": [
+        "temporal_scale_stability"
+      ],
+      "max_active_count": 48,
+      "max_active_span": 64,
+      "max_cyclic_active_span": 63,
+      "position": 28,
+      "raw_structure_count": 48,
+      "type_counts": {
+        "bloque": 21,
+        "glider": 27
+      }
+    },
+    {
+      "analysis_status": "ok",
+      "dedup_structure_count": 16,
+      "dominant_type": "glider",
+      "final_active_count": 16,
+      "final_active_span": 61,
+      "final_cyclic_active_span": 61,
+      "laws_accepted": [
+        "temporal_scale_stability"
+      ],
+      "max_active_count": 48,
+      "max_active_span": 64,
+      "max_cyclic_active_span": 63,
+      "position": 29,
+      "raw_structure_count": 48,
+      "type_counts": {
+        "bloque": 18,
+        "glider": 30
+      }
+    },
+    {
+      "analysis_status": "ok",
+      "dedup_structure_count": 15,
+      "dominant_type": "bloque",
+      "final_active_count": 16,
+      "final_active_span": 61,
+      "final_cyclic_active_span": 61,
+      "laws_accepted": [
+        "temporal_scale_stability"
+      ],
+      "max_active_count": 48,
+      "max_active_span": 64,
+      "max_cyclic_active_span": 63,
+      "position": 30,
+      "raw_structure_count": 45,
+      "type_counts": {
+        "bloque": 27,
+        "glider": 18
+      }
+    },
+    {
+      "analysis_status": "ok",
+      "dedup_structure_count": 15,
+      "dominant_type": "bloque",
+      "final_active_count": 16,
+      "final_active_span": 61,
+      "final_cyclic_active_span": 61,
+      "laws_accepted": [
+        "temporal_scale_stability"
+      ],
+      "max_active_count": 48,
+      "max_active_span": 64,
+      "max_cyclic_active_span": 63,
+      "position": 31,
+      "raw_structure_count": 45,
+      "type_counts": {
+        "bloque": 27,
+        "glider": 18
+      }
+    },
+    {
+      "analysis_status": "ok",
+      "dedup_structure_count": 15,
+      "dominant_type": "glider",
+      "final_active_count": 16,
+      "final_active_span": 61,
+      "final_cyclic_active_span": 61,
+      "laws_accepted": [
+        "temporal_scale_stability"
+      ],
+      "max_active_count": 48,
+      "max_active_span": 64,
+      "max_cyclic_active_span": 63,
+      "position": 32,
+      "raw_structure_count": 45,
+      "type_counts": {
+        "bloque": 21,
+        "glider": 24
+      }
+    },
+    {
+      "analysis_status": "ok",
+      "dedup_structure_count": 15,
+      "dominant_type": "glider",
+      "final_active_count": 16,
+      "final_active_span": 61,
+      "final_cyclic_active_span": 61,
+      "laws_accepted": [
+        "temporal_scale_stability"
+      ],
+      "max_active_count": 48,
+      "max_active_span": 64,
+      "max_cyclic_active_span": 63,
+      "position": 33,
+      "raw_structure_count": 45,
+      "type_counts": {
+        "bloque": 21,
+        "glider": 24
+      }
+    },
+    {
+      "analysis_status": "ok",
+      "dedup_structure_count": 15,
+      "dominant_type": "bloque",
+      "final_active_count": 16,
+      "final_active_span": 61,
+      "final_cyclic_active_span": 61,
+      "laws_accepted": [
+        "temporal_scale_stability"
+      ],
+      "max_active_count": 48,
+      "max_active_span": 64,
+      "max_cyclic_active_span": 63,
+      "position": 34,
+      "raw_structure_count": 45,
+      "type_counts": {
+        "bloque": 27,
+        "glider": 18
+      }
+    },
+    {
+      "analysis_status": "ok",
+      "dedup_structure_count": 15,
+      "dominant_type": "bloque",
+      "final_active_count": 16,
+      "final_active_span": 61,
+      "final_cyclic_active_span": 61,
+      "laws_accepted": [
+        "temporal_scale_stability"
+      ],
+      "max_active_count": 48,
+      "max_active_span": 64,
+      "max_cyclic_active_span": 63,
+      "position": 35,
+      "raw_structure_count": 45,
+      "type_counts": {
+        "bloque": 27,
+        "glider": 18
+      }
+    },
+    {
+      "analysis_status": "ok",
+      "dedup_structure_count": 15,
+      "dominant_type": "glider",
+      "final_active_count": 16,
+      "final_active_span": 61,
+      "final_cyclic_active_span": 61,
+      "laws_accepted": [
+        "temporal_scale_stability"
+      ],
+      "max_active_count": 48,
+      "max_active_span": 64,
+      "max_cyclic_active_span": 63,
+      "position": 36,
+      "raw_structure_count": 45,
+      "type_counts": {
+        "bloque": 21,
+        "glider": 24
+      }
+    },
+    {
+      "analysis_status": "ok",
+      "dedup_structure_count": 15,
+      "dominant_type": "glider",
+      "final_active_count": 16,
+      "final_active_span": 61,
+      "final_cyclic_active_span": 61,
+      "laws_accepted": [
+        "temporal_scale_stability"
+      ],
+      "max_active_count": 48,
+      "max_active_span": 64,
+      "max_cyclic_active_span": 63,
+      "position": 37,
+      "raw_structure_count": 45,
+      "type_counts": {
+        "bloque": 21,
+        "glider": 24
+      }
+    },
+    {
+      "analysis_status": "ok",
+      "dedup_structure_count": 17,
+      "dominant_type": "bloque",
+      "final_active_count": 16,
+      "final_active_span": 61,
+      "final_cyclic_active_span": 61,
+      "laws_accepted": [
+        "temporal_scale_stability"
+      ],
+      "max_active_count": 48,
+      "max_active_span": 64,
+      "max_cyclic_active_span": 63,
+      "position": 38,
+      "raw_structure_count": 51,
+      "type_counts": {
+        "bloque": 27,
+        "glider": 24
+      }
+    },
+    {
+      "analysis_status": "ok",
+      "dedup_structure_count": 18,
+      "dominant_type": "glider",
+      "final_active_count": 16,
+      "final_active_span": 61,
+      "final_cyclic_active_span": 61,
+      "laws_accepted": [
+        "temporal_scale_stability"
+      ],
+      "max_active_count": 48,
+      "max_active_span": 64,
+      "max_cyclic_active_span": 63,
+      "position": 39,
+      "raw_structure_count": 54,
+      "type_counts": {
+        "bloque": 18,
+        "glider": 36
+      }
+    },
+    {
+      "analysis_status": "ok",
+      "dedup_structure_count": 17,
+      "dominant_type": "glider",
+      "final_active_count": 16,
+      "final_active_span": 61,
+      "final_cyclic_active_span": 61,
+      "laws_accepted": [
+        "temporal_scale_stability"
+      ],
+      "max_active_count": 48,
+      "max_active_span": 64,
+      "max_cyclic_active_span": 63,
+      "position": 40,
+      "raw_structure_count": 51,
+      "type_counts": {
+        "bloque": 12,
+        "glider": 39
+      }
+    },
+    {
+      "analysis_status": "ok",
+      "dedup_structure_count": 17,
+      "dominant_type": "glider",
+      "final_active_count": 16,
+      "final_active_span": 61,
+      "final_cyclic_active_span": 61,
+      "laws_accepted": [
+        "temporal_scale_stability"
+      ],
+      "max_active_count": 48,
+      "max_active_span": 64,
+      "max_cyclic_active_span": 63,
+      "position": 41,
+      "raw_structure_count": 51,
+      "type_counts": {
+        "bloque": 9,
+        "glider": 42
+      }
+    },
+    {
+      "analysis_status": "ok",
+      "dedup_structure_count": 18,
+      "dominant_type": "glider",
+      "final_active_count": 16,
+      "final_active_span": 61,
+      "final_cyclic_active_span": 61,
+      "laws_accepted": [
+        "temporal_scale_stability"
+      ],
+      "max_active_count": 48,
+      "max_active_span": 64,
+      "max_cyclic_active_span": 63,
+      "position": 42,
+      "raw_structure_count": 54,
+      "type_counts": {
+        "bloque": 18,
+        "glider": 36
+      }
+    },
+    {
+      "analysis_status": "ok",
+      "dedup_structure_count": 17,
+      "dominant_type": "glider",
+      "final_active_count": 16,
+      "final_active_span": 61,
+      "final_cyclic_active_span": 61,
+      "laws_accepted": [
+        "temporal_scale_stability"
+      ],
+      "max_active_count": 48,
+      "max_active_span": 64,
+      "max_cyclic_active_span": 63,
+      "position": 43,
+      "raw_structure_count": 51,
+      "type_counts": {
+        "bloque": 18,
+        "glider": 33
+      }
+    },
+    {
+      "analysis_status": "ok",
+      "dedup_structure_count": 17,
+      "dominant_type": "glider",
+      "final_active_count": 16,
+      "final_active_span": 61,
+      "final_cyclic_active_span": 61,
+      "laws_accepted": [
+        "temporal_scale_stability"
+      ],
+      "max_active_count": 48,
+      "max_active_span": 64,
+      "max_cyclic_active_span": 63,
+      "position": 44,
+      "raw_structure_count": 51,
+      "type_counts": {
+        "bloque": 12,
+        "glider": 39
+      }
+    },
+    {
+      "analysis_status": "ok",
+      "dedup_structure_count": 17,
+      "dominant_type": "glider",
+      "final_active_count": 16,
+      "final_active_span": 61,
+      "final_cyclic_active_span": 61,
+      "laws_accepted": [
+        "temporal_scale_stability"
+      ],
+      "max_active_count": 48,
+      "max_active_span": 64,
+      "max_cyclic_active_span": 63,
+      "position": 45,
+      "raw_structure_count": 51,
+      "type_counts": {
+        "bloque": 12,
+        "glider": 39
+      }
+    },
+    {
+      "analysis_status": "ok",
+      "dedup_structure_count": 20,
+      "dominant_type": "glider",
+      "final_active_count": 16,
+      "final_active_span": 61,
+      "final_cyclic_active_span": 61,
+      "laws_accepted": [
+        "temporal_scale_stability"
+      ],
+      "max_active_count": 48,
+      "max_active_span": 64,
+      "max_cyclic_active_span": 63,
+      "position": 46,
+      "raw_structure_count": 60,
+      "type_counts": {
+        "bloque": 12,
+        "glider": 48
+      }
+    },
+    {
+      "analysis_status": "ok",
+      "dedup_structure_count": 22,
+      "dominant_type": "glider",
+      "final_active_count": 16,
+      "final_active_span": 61,
+      "final_cyclic_active_span": 61,
+      "laws_accepted": [
+        "temporal_scale_stability"
+      ],
+      "max_active_count": 48,
+      "max_active_span": 64,
+      "max_cyclic_active_span": 63,
+      "position": 47,
+      "raw_structure_count": 66,
+      "type_counts": {
+        "bloque": 12,
+        "glider": 54
+      }
+    },
+    {
+      "analysis_status": "ok",
+      "dedup_structure_count": 20,
+      "dominant_type": "glider",
+      "final_active_count": 16,
+      "final_active_span": 61,
+      "final_cyclic_active_span": 61,
+      "laws_accepted": [
+        "temporal_scale_stability"
+      ],
+      "max_active_count": 48,
+      "max_active_span": 64,
+      "max_cyclic_active_span": 63,
+      "position": 48,
+      "raw_structure_count": 60,
+      "type_counts": {
+        "bloque": 12,
+        "glider": 48
+      }
+    },
+    {
+      "analysis_status": "ok",
+      "dedup_structure_count": 20,
+      "dominant_type": "glider",
+      "final_active_count": 16,
+      "final_active_span": 61,
+      "final_cyclic_active_span": 61,
+      "laws_accepted": [
+        "temporal_scale_stability"
+      ],
+      "max_active_count": 48,
+      "max_active_span": 64,
+      "max_cyclic_active_span": 63,
+      "position": 49,
+      "raw_structure_count": 60,
+      "type_counts": {
+        "bloque": 15,
+        "glider": 45
+      }
+    },
+    {
+      "analysis_status": "ok",
+      "dedup_structure_count": 20,
+      "dominant_type": "glider",
+      "final_active_count": 16,
+      "final_active_span": 61,
+      "final_cyclic_active_span": 61,
+      "laws_accepted": [
+        "temporal_scale_stability"
+      ],
+      "max_active_count": 48,
+      "max_active_span": 64,
+      "max_cyclic_active_span": 63,
+      "position": 50,
+      "raw_structure_count": 60,
+      "type_counts": {
+        "bloque": 15,
+        "glider": 45
+      }
+    },
+    {
+      "analysis_status": "ok",
+      "dedup_structure_count": 19,
+      "dominant_type": "glider",
+      "final_active_count": 16,
+      "final_active_span": 61,
+      "final_cyclic_active_span": 61,
+      "laws_accepted": [
+        "temporal_scale_stability"
+      ],
+      "max_active_count": 48,
+      "max_active_span": 64,
+      "max_cyclic_active_span": 63,
+      "position": 51,
+      "raw_structure_count": 57,
+      "type_counts": {
+        "bloque": 12,
+        "glider": 45
+      }
+    },
+    {
+      "analysis_status": "ok",
+      "dedup_structure_count": 19,
+      "dominant_type": "glider",
+      "final_active_count": 16,
+      "final_active_span": 61,
+      "final_cyclic_active_span": 61,
+      "laws_accepted": [
+        "temporal_scale_stability"
+      ],
+      "max_active_count": 48,
+      "max_active_span": 64,
+      "max_cyclic_active_span": 63,
+      "position": 52,
+      "raw_structure_count": 57,
+      "type_counts": {
+        "bloque": 15,
+        "glider": 42
+      }
+    },
+    {
+      "analysis_status": "ok",
+      "dedup_structure_count": 19,
+      "dominant_type": "glider",
+      "final_active_count": 16,
+      "final_active_span": 61,
+      "final_cyclic_active_span": 61,
+      "laws_accepted": [
+        "temporal_scale_stability"
+      ],
+      "max_active_count": 48,
+      "max_active_span": 64,
+      "max_cyclic_active_span": 63,
+      "position": 53,
+      "raw_structure_count": 57,
+      "type_counts": {
+        "bloque": 15,
+        "glider": 42
+      }
+    },
+    {
+      "analysis_status": "ok",
+      "dedup_structure_count": 22,
+      "dominant_type": "glider",
+      "final_active_count": 16,
+      "final_active_span": 61,
+      "final_cyclic_active_span": 61,
+      "laws_accepted": [
+        "temporal_scale_stability"
+      ],
+      "max_active_count": 48,
+      "max_active_span": 64,
+      "max_cyclic_active_span": 63,
+      "position": 54,
+      "raw_structure_count": 66,
+      "type_counts": {
+        "bloque": 21,
+        "glider": 45
+      }
+    },
+    {
+      "analysis_status": "ok",
+      "dedup_structure_count": 24,
+      "dominant_type": "glider",
+      "final_active_count": 16,
+      "final_active_span": 61,
+      "final_cyclic_active_span": 61,
+      "laws_accepted": [
+        "temporal_scale_stability"
+      ],
+      "max_active_count": 48,
+      "max_active_span": 64,
+      "max_cyclic_active_span": 63,
+      "position": 55,
+      "raw_structure_count": 72,
+      "type_counts": {
+        "bloque": 21,
+        "glider": 51
+      }
+    },
+    {
+      "analysis_status": "ok",
+      "dedup_structure_count": 22,
+      "dominant_type": "glider",
+      "final_active_count": 16,
+      "final_active_span": 61,
+      "final_cyclic_active_span": 61,
+      "laws_accepted": [
+        "temporal_scale_stability"
+      ],
+      "max_active_count": 48,
+      "max_active_span": 64,
+      "max_cyclic_active_span": 63,
+      "position": 56,
+      "raw_structure_count": 66,
+      "type_counts": {
+        "bloque": 18,
+        "glider": 48
+      }
+    },
+    {
+      "analysis_status": "ok",
+      "dedup_structure_count": 22,
+      "dominant_type": "glider",
+      "final_active_count": 16,
+      "final_active_span": 61,
+      "final_cyclic_active_span": 61,
+      "laws_accepted": [
+        "temporal_scale_stability"
+      ],
+      "max_active_count": 48,
+      "max_active_span": 64,
+      "max_cyclic_active_span": 63,
+      "position": 57,
+      "raw_structure_count": 66,
+      "type_counts": {
+        "bloque": 21,
+        "glider": 45
+      }
+    },
+    {
+      "analysis_status": "ok",
+      "dedup_structure_count": 21,
+      "dominant_type": "glider",
+      "final_active_count": 16,
+      "final_active_span": 61,
+      "final_cyclic_active_span": 61,
+      "laws_accepted": [
+        "temporal_scale_stability"
+      ],
+      "max_active_count": 48,
+      "max_active_span": 64,
+      "max_cyclic_active_span": 63,
+      "position": 58,
+      "raw_structure_count": 63,
+      "type_counts": {
+        "bloque": 18,
+        "glider": 45
+      }
+    },
+    {
+      "analysis_status": "ok",
+      "dedup_structure_count": 22,
+      "dominant_type": "glider",
+      "final_active_count": 16,
+      "final_active_span": 61,
+      "final_cyclic_active_span": 61,
+      "laws_accepted": [
+        "temporal_scale_stability"
+      ],
+      "max_active_count": 48,
+      "max_active_span": 64,
+      "max_cyclic_active_span": 63,
+      "position": 59,
+      "raw_structure_count": 66,
+      "type_counts": {
+        "bloque": 24,
+        "glider": 42
+      }
+    },
+    {
+      "analysis_status": "ok",
+      "dedup_structure_count": 20,
+      "dominant_type": "glider",
+      "final_active_count": 16,
+      "final_active_span": 61,
+      "final_cyclic_active_span": 61,
+      "laws_accepted": [
+        "temporal_scale_stability"
+      ],
+      "max_active_count": 48,
+      "max_active_span": 64,
+      "max_cyclic_active_span": 63,
+      "position": 60,
+      "raw_structure_count": 60,
+      "type_counts": {
+        "bloque": 24,
+        "glider": 36
+      }
+    },
+    {
+      "analysis_status": "ok",
+      "dedup_structure_count": 20,
+      "dominant_type": "glider",
+      "final_active_count": 16,
+      "final_active_span": 61,
+      "final_cyclic_active_span": 61,
+      "laws_accepted": [
+        "temporal_scale_stability"
+      ],
+      "max_active_count": 48,
+      "max_active_span": 64,
+      "max_cyclic_active_span": 63,
+      "position": 61,
+      "raw_structure_count": 60,
+      "type_counts": {
+        "bloque": 24,
+        "glider": 36
+      }
+    },
+    {
+      "analysis_status": "ok",
+      "dedup_structure_count": 15,
+      "dominant_type": "bloque",
+      "final_active_count": 16,
+      "final_active_span": 61,
+      "final_cyclic_active_span": 61,
+      "laws_accepted": [
+        "temporal_scale_stability"
+      ],
+      "max_active_count": 48,
+      "max_active_span": 64,
+      "max_cyclic_active_span": 63,
+      "position": 62,
+      "raw_structure_count": 45,
+      "type_counts": {
+        "bloque": 30,
+        "glider": 15
+      }
+    },
+    {
+      "analysis_status": "ok",
+      "dedup_structure_count": 20,
+      "dominant_type": "glider",
+      "final_active_count": 16,
+      "final_active_span": 61,
+      "final_cyclic_active_span": 61,
+      "laws_accepted": [
+        "temporal_scale_stability"
+      ],
+      "max_active_count": 48,
+      "max_active_span": 64,
+      "max_cyclic_active_span": 63,
+      "position": 63,
+      "raw_structure_count": 60,
+      "type_counts": {
+        "bloque": 24,
+        "glider": 36
+      }
+    }
+  ],
+  "summary": {
+    "baseline": {
+      "analysis_status": "ok",
+      "dedup_structure_count": 20,
+      "dominant_type": "glider",
+      "final_active_count": 16,
+      "final_cyclic_active_span": 61,
+      "laws_accepted": [
+        "temporal_scale_stability"
+      ],
+      "max_active_count": 48,
+      "max_cyclic_active_span": 63,
+      "raw_structure_count": 60,
+      "type_counts": {
+        "bloque": 27,
+        "glider": 33
+      }
+    },
+    "dedup_counts": [
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      24
+    ],
+    "divergent_positions": [
+      {
+        "positions": [
+          0
+        ],
+        "signature": [
+          60,
+          20,
+          "ok",
+          [
+            "temporal_scale_stability"
+          ],
+          "glider",
+          [
+            [
+              "bloque",
+              27
+            ],
+            [
+              "glider",
+              33
+            ]
+          ],
+          63,
+          61,
+          48,
+          16
+        ]
+      },
+      {
+        "positions": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          62
+        ],
+        "signature": [
+          45,
+          15,
+          "ok",
+          [
+            "temporal_scale_stability"
+          ],
+          "bloque",
+          [
+            [
+              "bloque",
+              30
+            ],
+            [
+              "glider",
+              15
+            ]
+          ],
+          63,
+          61,
+          48,
+          16
+        ]
+      },
+      {
+        "positions": [
+          6,
+          38
+        ],
+        "signature": [
+          51,
+          17,
+          "ok",
+          [
+            "temporal_scale_stability"
+          ],
+          "bloque",
+          [
+            [
+              "bloque",
+              27
+            ],
+            [
+              "glider",
+              24
+            ]
+          ],
+          63,
+          61,
+          48,
+          16
+        ]
+      },
+      {
+        "positions": [
+          7
+        ],
+        "signature": [
+          51,
+          17,
+          "ok",
+          [
+            "temporal_scale_stability"
+          ],
+          "glider",
+          [
+            [
+              "bloque",
+              24
+            ],
+            [
+              "glider",
+              27
+            ]
+          ],
+          63,
+          61,
+          48,
+          16
+        ]
+      },
+      {
+        "positions": [
+          8,
+          9,
+          16,
+          17,
+          18,
+          43
+        ],
+        "signature": [
+          51,
+          17,
+          "ok",
+          [
+            "temporal_scale_stability"
+          ],
+          "glider",
+          [
+            [
+              "bloque",
+              18
+            ],
+            [
+              "glider",
+              33
+            ]
+          ],
+          63,
+          61,
+          48,
+          16
+        ]
+      },
+      {
+        "positions": [
+          10,
+          12
+        ],
+        "signature": [
+          51,
+          17,
+          "ok",
+          [
+            "temporal_scale_stability"
+          ],
+          "glider",
+          [
+            [
+              "bloque",
+              15
+            ],
+            [
+              "glider",
+              36
+            ]
+          ],
+          63,
+          61,
+          48,
+          16
+        ]
+      },
+      {
+        "positions": [
+          11,
+          21,
+          26,
+          28
+        ],
+        "signature": [
+          48,
+          16,
+          "ok",
+          [
+            "temporal_scale_stability"
+          ],
+          "glider",
+          [
+            [
+              "bloque",
+              21
+            ],
+            [
+              "glider",
+              27
+            ]
+          ],
+          63,
+          61,
+          48,
+          16
+        ]
+      },
+      {
+        "positions": [
+          13
+        ],
+        "signature": [
+          48,
+          16,
+          "ok",
+          [
+            "temporal_scale_stability"
+          ],
+          "glider",
+          [
+            [
+              "bloque",
+              15
+            ],
+            [
+              "glider",
+              33
+            ]
+          ],
+          63,
+          61,
+          48,
+          16
+        ]
+      },
+      {
+        "positions": [
+          14
+        ],
+        "signature": [
+          54,
+          18,
+          "ok",
+          [
+            "temporal_scale_stability"
+          ],
+          "glider",
+          [
+            [
+              "bloque",
+              12
+            ],
+            [
+              "glider",
+              42
+            ]
+          ],
+          63,
+          61,
+          48,
+          16
+        ]
+      },
+      {
+        "positions": [
+          15,
+          52,
+          53
+        ],
+        "signature": [
+          57,
+          19,
+          "ok",
+          [
+            "temporal_scale_stability"
+          ],
+          "glider",
+          [
+            [
+              "bloque",
+              15
+            ],
+            [
+              "glider",
+              42
+            ]
+          ],
+          63,
+          61,
+          48,
+          16
+        ]
+      },
+      {
+        "positions": [
+          19,
+          29
+        ],
+        "signature": [
+          48,
+          16,
+          "ok",
+          [
+            "temporal_scale_stability"
+          ],
+          "glider",
+          [
+            [
+              "bloque",
+              18
+            ],
+            [
+              "glider",
+              30
+            ]
+          ],
+          63,
+          61,
+          48,
+          16
+        ]
+      },
+      {
+        "positions": [
+          20,
+          22,
+          24,
+          25
+        ],
+        "signature": [
+          51,
+          17,
+          "ok",
+          [
+            "temporal_scale_stability"
+          ],
+          "glider",
+          [
+            [
+              "bloque",
+              21
+            ],
+            [
+              "glider",
+              30
+            ]
+          ],
+          63,
+          61,
+          48,
+          16
+        ]
+      },
+      {
+        "positions": [
+          23
+        ],
+        "signature": [
+          54,
+          18,
+          "ok",
+          [
+            "temporal_scale_stability"
+          ],
+          "glider",
+          [
+            [
+              "bloque",
+              21
+            ],
+            [
+              "glider",
+              33
+            ]
+          ],
+          63,
+          61,
+          48,
+          16
+        ]
+      },
+      {
+        "positions": [
+          27
+        ],
+        "signature": [
+          48,
+          16,
+          "ok",
+          [
+            "temporal_scale_stability"
+          ],
+          "glider",
+          [
+            [
+              "bloque",
+              24
+            ],
+            [
+              "glider",
+              24
+            ]
+          ],
+          63,
+          61,
+          48,
+          16
+        ]
+      },
+      {
+        "positions": [
+          30,
+          31,
+          34,
+          35
+        ],
+        "signature": [
+          45,
+          15,
+          "ok",
+          [
+            "temporal_scale_stability"
+          ],
+          "bloque",
+          [
+            [
+              "bloque",
+              27
+            ],
+            [
+              "glider",
+              18
+            ]
+          ],
+          63,
+          61,
+          48,
+          16
+        ]
+      },
+      {
+        "positions": [
+          32,
+          33,
+          36,
+          37
+        ],
+        "signature": [
+          45,
+          15,
+          "ok",
+          [
+            "temporal_scale_stability"
+          ],
+          "glider",
+          [
+            [
+              "bloque",
+              21
+            ],
+            [
+              "glider",
+              24
+            ]
+          ],
+          63,
+          61,
+          48,
+          16
+        ]
+      },
+      {
+        "positions": [
+          39,
+          42
+        ],
+        "signature": [
+          54,
+          18,
+          "ok",
+          [
+            "temporal_scale_stability"
+          ],
+          "glider",
+          [
+            [
+              "bloque",
+              18
+            ],
+            [
+              "glider",
+              36
+            ]
+          ],
+          63,
+          61,
+          48,
+          16
+        ]
+      },
+      {
+        "positions": [
+          40,
+          44,
+          45
+        ],
+        "signature": [
+          51,
+          17,
+          "ok",
+          [
+            "temporal_scale_stability"
+          ],
+          "glider",
+          [
+            [
+              "bloque",
+              12
+            ],
+            [
+              "glider",
+              39
+            ]
+          ],
+          63,
+          61,
+          48,
+          16
+        ]
+      },
+      {
+        "positions": [
+          41
+        ],
+        "signature": [
+          51,
+          17,
+          "ok",
+          [
+            "temporal_scale_stability"
+          ],
+          "glider",
+          [
+            [
+              "bloque",
+              9
+            ],
+            [
+              "glider",
+              42
+            ]
+          ],
+          63,
+          61,
+          48,
+          16
+        ]
+      },
+      {
+        "positions": [
+          46,
+          48
+        ],
+        "signature": [
+          60,
+          20,
+          "ok",
+          [
+            "temporal_scale_stability"
+          ],
+          "glider",
+          [
+            [
+              "bloque",
+              12
+            ],
+            [
+              "glider",
+              48
+            ]
+          ],
+          63,
+          61,
+          48,
+          16
+        ]
+      },
+      {
+        "positions": [
+          47
+        ],
+        "signature": [
+          66,
+          22,
+          "ok",
+          [
+            "temporal_scale_stability"
+          ],
+          "glider",
+          [
+            [
+              "bloque",
+              12
+            ],
+            [
+              "glider",
+              54
+            ]
+          ],
+          63,
+          61,
+          48,
+          16
+        ]
+      },
+      {
+        "positions": [
+          49,
+          50
+        ],
+        "signature": [
+          60,
+          20,
+          "ok",
+          [
+            "temporal_scale_stability"
+          ],
+          "glider",
+          [
+            [
+              "bloque",
+              15
+            ],
+            [
+              "glider",
+              45
+            ]
+          ],
+          63,
+          61,
+          48,
+          16
+        ]
+      },
+      {
+        "positions": [
+          51
+        ],
+        "signature": [
+          57,
+          19,
+          "ok",
+          [
+            "temporal_scale_stability"
+          ],
+          "glider",
+          [
+            [
+              "bloque",
+              12
+            ],
+            [
+              "glider",
+              45
+            ]
+          ],
+          63,
+          61,
+          48,
+          16
+        ]
+      },
+      {
+        "positions": [
+          54,
+          57
+        ],
+        "signature": [
+          66,
+          22,
+          "ok",
+          [
+            "temporal_scale_stability"
+          ],
+          "glider",
+          [
+            [
+              "bloque",
+              21
+            ],
+            [
+              "glider",
+              45
+            ]
+          ],
+          63,
+          61,
+          48,
+          16
+        ]
+      },
+      {
+        "positions": [
+          55
+        ],
+        "signature": [
+          72,
+          24,
+          "ok",
+          [
+            "temporal_scale_stability"
+          ],
+          "glider",
+          [
+            [
+              "bloque",
+              21
+            ],
+            [
+              "glider",
+              51
+            ]
+          ],
+          63,
+          61,
+          48,
+          16
+        ]
+      },
+      {
+        "positions": [
+          56
+        ],
+        "signature": [
+          66,
+          22,
+          "ok",
+          [
+            "temporal_scale_stability"
+          ],
+          "glider",
+          [
+            [
+              "bloque",
+              18
+            ],
+            [
+              "glider",
+              48
+            ]
+          ],
+          63,
+          61,
+          48,
+          16
+        ]
+      },
+      {
+        "positions": [
+          58
+        ],
+        "signature": [
+          63,
+          21,
+          "ok",
+          [
+            "temporal_scale_stability"
+          ],
+          "glider",
+          [
+            [
+              "bloque",
+              18
+            ],
+            [
+              "glider",
+              45
+            ]
+          ],
+          63,
+          61,
+          48,
+          16
+        ]
+      },
+      {
+        "positions": [
+          59
+        ],
+        "signature": [
+          66,
+          22,
+          "ok",
+          [
+            "temporal_scale_stability"
+          ],
+          "glider",
+          [
+            [
+              "bloque",
+              24
+            ],
+            [
+              "glider",
+              42
+            ]
+          ],
+          63,
+          61,
+          48,
+          16
+        ]
+      },
+      {
+        "positions": [
+          60,
+          61,
+          63
+        ],
+        "signature": [
+          60,
+          20,
+          "ok",
+          [
+            "temporal_scale_stability"
+          ],
+          "glider",
+          [
+            [
+              "bloque",
+              24
+            ],
+            [
+              "glider",
+              36
+            ]
+          ],
+          63,
+          61,
+          48,
+          16
+        ]
+      }
+    ],
+    "dynamics_translation_invariant": true,
+    "laws_signatures": [
+      "temporal_scale_stability"
+    ],
+    "raw_counts": [
+      45,
+      48,
+      51,
+      54,
+      57,
+      60,
+      63,
+      66,
+      72
+    ],
+    "rule": 54,
+    "steps": 96,
+    "threshold": 40,
+    "translation_invariant_pipeline_result": false,
+    "unique_result_classes": 29,
+    "width": 64
+  }
+}
