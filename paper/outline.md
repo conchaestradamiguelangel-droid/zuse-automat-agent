@@ -424,9 +424,99 @@ under nearly a third of all one-bit flips.
 
 ### 7.4 `rule_46`, `rule_208`, `rule_209` — Stable-Rich Frontier
 
-These worlds show that `frontera_temporal` was undersampled, not intrinsically
-rare. They have high law richness with low diversity and extremely low
-fragility, including zero measured fragility for `rule_208` and `rule_209`.
+These three worlds define the `frontera-rich-estable` category: low signature
+diversity, near-maximal law richness, and very low fragility. They are the
+counterexample that revised the early atlas interpretation of
+`frontera_temporal`.
+
+The first 15-world atlas made `frontera_temporal` look rare: it appeared only
+as a minority law in class-4 multi-regime worlds such as `rule_137`,
+`rule_110`, and `rule_54`. Fase 11 showed that this was a sampling artifact.
+A sweep over all 256 ECA rules (`seeds = 20260523..20260525`, `W = 64`,
+`T = 24`) found 38 rules where `frontera_temporal` activates in at least two
+of three seeds, and 17 rules where it activates in all three.
+
+The top rules by law richness were `rule_46`, `rule_208`, and `rule_209`.
+Formal six-seed profiles (`20260523..20260528`, `W = 64`, `T = 24`) placed all
+three in a new category:
+
+| world | mean laws | peak diversity | category |
+| --- | ---: | ---: | --- |
+| `rule_46` | `5.833` | `0.333` | `frontera-rich-estable` |
+| `rule_208` | `6.000` | `0.167` | `frontera-rich-estable` |
+| `rule_209` | `6.000` | `0.167` | `frontera-rich-estable` |
+
+The dominant signature is the same six-law set:
+
+```text
+velocidad_constante
+densidad_estable
+tipo_unico
+complejidad_alta
+frontera_temporal
+temporal_scale_stability
+```
+
+Only `periodicidad` is absent. This makes the family nearly maximal under the
+current seven-law system without relying on multi-regime exploration.
+
+#### Stable richness rather than multi-regime diversity
+
+The category is defined by the conjunction of high richness and low diversity.
+`rule_137` is rich because it moves among several productive law signatures.
+The frontier-rich worlds are rich because the same high-law signature appears
+reliably across seeds.
+
+This distinction matters operationally. A policy that only looks for signature
+diversity would miss these worlds, even though they produce more accepted laws
+per visit than any multi-regime world in the atlas. The Fase 11 taxonomy update
+therefore adds:
+
+```text
+frontera-rich-estable := mean_laws >= 4.0 and peak_diversity <= 0.5
+```
+
+evaluated after noise-bounded and multi-regime cases.
+
+#### Complement symmetry and independent convergence
+
+`rule_46` and `rule_209` are a complement pair (`46 = 255 - 209`): exchanging
+zeros and ones maps one into the other. Their shared profile is therefore one
+physical phenomenon seen through global bit inversion.
+
+`rule_208` is more surprising. Its complement is `rule_47`, not `rule_46` or
+`rule_209`, yet it reaches the same maximum-richness profile. This suggests
+that the `frontera-rich-estable` regime is not a single isolated symmetry
+orbit; at least two distinct ECA regions converge to the same six-law
+frontier.
+
+#### Fragility
+
+Fase 12 measured one-bit fragility for the three worlds using the same protocol
+as `rule_137` and `rule_54`:
+
+| world | f_total | f_core | f_noise |
+| --- | ---: | ---: | ---: |
+| `rule_46` | `0.031` | `0.031` | `0.000` |
+| `rule_208` | `0.000` | `0.000` | `0.000` |
+| `rule_209` | `0.000` | `0.000` | `0.000` |
+
+The result is the opposite end of the fragility spectrum from `rule_137`.
+Where `rule_137` has many narrow productive basins (`f_total = 0.630`),
+`rule_208` and `rule_209` have measured basins so wide that no single-bit flip
+changes the law signature. `rule_46` is only slightly fragile: two of 192
+single-bit perturbations change signature across the three measured seeds.
+
+This confirms that high law richness does not imply high fragility. Richness
+can arise either from many neighboring productive regimes (`rule_137`) or from
+a single broad, stable regime (`rule_46/208/209`).
+
+#### Scientific revision
+
+The correct conclusion is not that `frontera_temporal` is intrinsically rare.
+It is rare in the original discovery atlas because the original world sequence
+under-sampled stable high-richness boundary worlds. In the full ECA sweep,
+`frontera_temporal` is a robust marker of the `frontera-rich-estable` family.
 
 ## 8. Observer Artifacts and Pipeline Equivariance
 
