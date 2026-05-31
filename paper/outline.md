@@ -69,17 +69,48 @@ automaton worlds.
 
 ## 3. System: ZUSE Automat Agent
 
-Describe the architecture:
+ZUSE Automat Agent is a deterministic discovery loop over cellular automaton
+worlds. A world is a simulator plus an initial-condition protocol and a time
+window. For ECA worlds, the simulator is the standard binary radius-1 update
+rule with periodic boundary conditions. The agent runs a world, computes frame
+metrics, extracts candidate structures, evaluates a fixed set of laws, updates
+world-level history, and chooses the next action through a transparent policy.
 
-- ECA simulation engine.
-- Frame metrics: entropy, gzip ratio, transition rate, mutual information,
-  density.
-- Observer stack and deduplication.
-- Seven cycle-law evaluators.
-- Discovery policy and persistent `WorldRecord` history.
+The loop has five layers:
 
-Emphasize that the LLM is used only outside the loop for interpretation and
-documentation, not to select or evaluate laws during agent runs.
+1. **Simulation.** ECA frames are generated from explicit initial conditions
+   with fixed `width`, `steps`, and `seed` or with designed ICs for controlled
+   experiments. The simulator itself is not learned.
+
+2. **Frame metrics.** Each run is summarized by density, entropy, temporal
+   transition rate, gzip compressibility, and temporal mutual information.
+   These features support both individual laws (`complejidad_alta`,
+   `frontera_temporal`, `temporal_scale_stability`) and later meta-analysis.
+
+3. **Observers and deduplication.** A stack of heuristic observers converts
+   frame histories into `Estructura` records with type labels such as `glider`,
+   `bloque`, and `oscilador`. The raw observer outputs are intentionally kept
+   for audit, while `deduplicate_structures` estimates the number of physical
+   structures. The production noise gate uses `dedup_structure_count > 40`.
+
+4. **Cycle-law evaluation.** Seven laws are evaluated on each analyzable run.
+   The result is a law signature: the set of accepted laws for that cycle.
+   Noise-gated runs skip law evaluation rather than forcing a low-confidence
+   signature.
+
+5. **Policy and memory.** The agent stores a persistent `WorldRecord` per
+   world, including visit count, score history, noise fraction, law signatures,
+   peak signature diversity, and multiregime evidence. The policy then chooses
+   among actions such as varying the seed, increasing scale, repeating a
+   multi-regime world once more, or changing world.
+
+The agent is deliberately non-generative inside the loop. No LLM proposes laws,
+selects worlds, or evaluates a cycle. Symbolic regression was used only outside
+the loop for calibration and analysis; it is not part of the online discovery
+policy. The LLM-assisted work reported here occurs after runs are complete: it
+helps design follow-up experiments, interpret artifacts, and write
+documentation. This separation is important because every accepted law
+signature in the atlas can be reproduced from deterministic scripts.
 
 ## 4. Seven Cycle Laws
 
