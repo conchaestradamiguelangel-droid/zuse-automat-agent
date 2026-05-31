@@ -275,6 +275,33 @@ observer and dedup stages succeed (`analysis_status == ok`). The output is
 binary: accepted or rejected. Law signatures are frozensets of accepted law
 names.
 
+### 4.0 Design rationale
+
+The seven laws were chosen to span distinct aspects of CA behavior using
+measurements available from a single fixed-length run. They divide into two
+groups by input type:
+
+- **Structure-observer laws** (`velocidad_constante`, `periodicidad`,
+  `densidad_estable`, `tipo_unico`): depend on the output of the heuristic
+  observer stack. They can only fire if the run is analyzable
+  (`analysis_status = ok`) and the observers detect at least one structure.
+
+- **Frame-metric laws** (`complejidad_alta`, `frontera_temporal`,
+  `temporal_scale_stability`): depend only on summary statistics computed
+  directly from the frame array, without reference to individual structures.
+
+This split is intentional. Frame-metric laws are symmetry-agnostic: they fire
+regardless of where structures are in the lattice, how many there are, or
+whether the observers identify them correctly. Structure-observer laws are
+richer but carry the observer's heuristic assumptions. Section 8 reports two
+cases where structure-observer laws produce artifacts that frame-metric laws
+do not.
+
+All laws produce binary output (accepted / rejected). The choice of binary
+rather than continuous output is also intentional: it makes signatures
+comparable across runs and worlds without requiring score normalization, and it
+forces explicit calibration of each threshold.
+
 ### Formal Criteria
 
 | # | Law | Inputs | Criterion | Constants |
@@ -322,6 +349,22 @@ the main discriminator separating organized frontier dynamics from pure chaos
 or static order. Other metrics (`density_mean`, `gzip_ratio`,
 `mutual_info_mean`) are useful context features but should not be treated as
 independent causal evidence without ablation.
+
+### 4.4 Signatures and the atlas
+
+A law signature is a frozenset of accepted law names for one run. The empty
+frozenset is valid and indicates a run that passed the noise gate but accepted
+no law. Law signatures are the unit of evidence in the atlas: the world
+categories in Section 5 are defined by how signatures distribute across seeds
+and scales, and the fragility measurements in Section 6 count how often
+signatures change under perturbation.
+
+`frontera_temporal` is a proper subset of `complejidad_alta` by construction
+(it adds the upper bound on transition rate). Any run that accepts
+`frontera_temporal` also accepts `complejidad_alta`; the converse is not
+required. This containment is visible in the law coverage matrix: every `✓` in
+the `frontera_temporal` column co-occurs with a `✓` in the
+`complejidad_alta` column.
 
 ## 5. World Atlas: 20 Worlds and Dynamic Categories
 
