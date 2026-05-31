@@ -14,13 +14,43 @@ pipeline despite translation-invariant ECA dynamics.
 
 ## 1. Contributions
 
-- A reproducible, non-generative discovery agent for ECA law exploration.
-- A 20-world atlas organized into dynamic categories and 7 cycle laws.
-- A fragility framework separating `f_total`, `f_core`, and `f_gap`.
-- Case studies showing unique local oscillation, noise-gate fragility,
-  productive basin switching, and stable-rich frontier dynamics.
-- A methodological result: observer/dedup counts can break translation
-  equivariance even when underlying ECA dynamics preserve it.
+We make the following contributions:
+
+1. **ZUSE Automat Agent** — A deterministic, policy-driven discovery loop for
+   ECA that accumulates multi-seed law evidence across worlds without symbolic
+   regression or LLM guidance in the loop. The agent combines persistent
+   world-record history, a dedup-gated observer stack, and a seven-law evaluator
+   into a single reproducible pipeline.
+
+2. **A five-category empirical atlas of 20 ECA worlds** — We classify 20 worlds
+   into five dynamic families (*frontera-rich-estable*, *periodicidad-global*,
+   *oscilador-local*, *multiregimen-productivo*,
+   *multiregimen-escala-dependiente*) using law coverage, signature diversity,
+   and fragility. The atlas extends Wolfram's four-class taxonomy by capturing
+   intra-class structure and multi-scale silencing.
+
+3. **A two-dimensional fragility framework** — We measure `f_total` and
+   `f_core` separately, defining `f_gap = f_total - f_core` as a quantitative
+   measure of secondary-law churn. Four distinct mechanisms are identified:
+   stable basin (`rule_208/209`, `f_total = 0.000`), productive basin switching
+   (`rule_137`, `f_gap = 0.318`), noise-boundary fragility (`rule_54`,
+   `f_core = 0.677`), and quiescent-background activation (`rule_108`,
+   `f_gap = 0.945`).
+
+4. **`rule_108` as the unique stationary local-period-2 ECA oscillator** —
+   Under an exhaustive protocol (128 quiescent ECA rules, 510 IC words per
+   rule, span <= 32, period <= 16), `rule_108` is the only ECA rule that
+   produces stationary local period-2 oscillators. The motif `#.# <-> ###`
+   follows algebraically from `f(0,1,0) = f(1,0,1) = 1` and
+   `f(1,1,1) = 0`, and the rule's left-right symmetry
+   (`f(l,c,r) = f(r,c,l)`) explains why the oscillator does not drift.
+
+5. **A measured separation between ECA dynamics and observer artifacts** —
+   `rule_54` single-bit-IC frames are provably translation-invariant
+   (confirmed by frame identity after shift normalization), while observer
+   dedup counts range from 15 to 24 across IC positions. This non-equivariance
+   is characterized as a pipeline property: absolute structure counts depend
+   on IC context, but law signatures remain stable.
 
 ## 2. Related Work
 
