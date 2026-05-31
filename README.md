@@ -1,6 +1,6 @@
 # ZUSE AUTOMAT AGENT
 
-Estado: Fase 16 completada. Oscilador local ECA encontrado en rule_108.
+Estado: Fase 17 completada. Atlas de 20 mundos; rule_108 integrado como oscilador-local.
 
 Premisas rectoras:
 
@@ -48,7 +48,7 @@ python -m unittest discover -s tests
 ## Scientific Artifacts
 
 - [World taxonomy and law coverage matrix](outputs/world_taxonomy/law_map.md)
-  -- formal classification of 19 worlds, per-law coverage across the 7 current
+  -- formal classification of 20 worlds, per-law coverage across the 7 current
   cycle laws, and measured basin fragility where available.
 - [Scientific synthesis](outputs/scientific_synthesis/FINDINGS.md) -- unified
   summary of world families, law coverage, basin fragility, core fragility, and
@@ -69,7 +69,7 @@ python -m unittest discover -s tests
 
 ## Current Scientific Map
 
-Fases 11-16 establish these robust results:
+Fases 11-17 establish these robust results:
 
 - `frontera_temporal` is not intrinsically rare. It was under-sampled by the
   initial atlas and is now represented by the `frontera-rich-estable` family:
@@ -91,6 +91,9 @@ Two high-fragility mechanisms are currently distinguished:
   Periodicity survives flips, but the full law signature can change.
 - Local periodicity: `rule_108`, where minimal ICs `pair_gap1` and `triple`
   converge to the bounded oscillator `#.# <-> ###` for 200 steps.
+- Local oscillator robustness: `rule_108` has `core_fragility=0.047`
+  concentrated near the motif, even though full-signature churn is high
+  (`f_total=0.992`).
 - Core fragility separates behavioral robustness from secondary-law churn:
   `rule_51` has `core_fragility=0.000` even though `f_total=0.193`.
 

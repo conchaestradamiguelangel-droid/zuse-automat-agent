@@ -1,11 +1,11 @@
-# ZAA Scientific Synthesis — Fases 11-16
+# ZAA Scientific Synthesis — Fases 11-17
 
 Date: 2026-05-31
 
 This document consolidates the current scientific map of ZAA after the ECA
 sweep, world taxonomy, basin-fragility diagnostics, `rule_54` gate anatomy,
-`rule_51` periodicity validation, `core_fragility`, and the Fase 16 local
-oscillator search.
+`rule_51` periodicity validation, `core_fragility`, the Fase 16 local
+oscillator search, and the Fase 17 formal `rule_108` atlas profile.
 
 Primary artifacts:
 
@@ -16,10 +16,12 @@ Primary artifacts:
 - `outputs/rule54_gate_fase13/rule54_gate_report.md`
 - `outputs/periodicity_fase14/periodicity_sweep_report.md`
 - `outputs/local_oscillators_fase16/local_oscillator_report.md`
+- `outputs/profile_fase17/rule108_seed_profile.json`
+- `outputs/profile_fase17/rule108_fragility.json`
 
 ## 1. Current Atlas
 
-The atlas now covers 19 worlds and 7 cycle laws:
+The atlas now covers 20 worlds and 7 cycle laws:
 
 - `velocidad_constante`
 - `periodicidad`
@@ -35,7 +37,7 @@ The world taxonomy currently distinguishes:
 | --- | --- | --- |
 | `frontera-rich-estable` | `rule_46`, `rule_208`, `rule_209` | stable high law richness, low diversity |
 | `periodicidad-global` | `rule_51` | global period-2 frame complementation |
-| `periodicidad-local` | `rule_108` | local period-2 particle on quiescent background |
+| `oscilador-local` | `rule_108` | local period-2 particle on quiescent background |
 | `multiregimen-productivo` | `rule_137`, `rule_54`, `rule_110`, `rule_124`, `rule_109`, `rule_18` | productive signature diversity |
 | `multiregimen-escala-dependiente` | `rule_90` | non-empty signatures at some scales, high-scale silence |
 | `noise-bounded` | `rule_30`, `rule_150` | crosses the dedup noise gate |
@@ -123,6 +125,29 @@ Interpretation: `periodicidad` is now validated on real ECA dynamics in two
 forms. `rule_51` is global frame periodicity; `rule_108` is a genuine local
 period-2 particle oscillator.
 
+Fase 17 integrates `rule_108` formally into the atlas. The canonical IC is
+`pair_gap1` on a quiescent zero background; the point IC is a negative control
+that remains stable but does not activate `periodicidad`.
+
+Formal `rule_108` profile:
+
+| metric | value |
+| --- | --- |
+| category | `oscilador-local` |
+| canonical IC | `pair_gap1` |
+| ok | 6/6 |
+| dominant signature | `periodicidad + tipo_unico` |
+| mean_laws | 2.000 |
+| mean_dedup_structure_count | 1.000 |
+| motif | `#.# <-> ###` |
+| f_total | 0.992 |
+| core_fragility | 0.047 |
+| core fragile positions | `61..63`, `65..67` |
+
+Interpretation: almost any extra bit changes secondary laws (`f_total=0.992`),
+but the oscillator core is highly robust (`core_fragility=0.047`) and its
+fragility is localized around the motif.
+
 ## 4. Fragility Has Two Axes
 
 Fase 15b separates:
@@ -146,10 +171,14 @@ secondary laws change.
 | `rule_18` | `multiregimen-productivo` | 0.349 | 0.135 | mixed, mostly secondary |
 | `rule_137` | `multiregimen-productivo` | 0.630 | 0.312 | high productive-regime fragility |
 | `rule_54` | `multiregimen-productivo` | 0.714 | 0.677 | high core fragility, noise-boundary |
+| `rule_108` | `oscilador-local` | 0.992 | 0.047 | local oscillator survives almost all perturbations |
 
 Key result: `rule_51` falsified the naive prediction that global periodicity
 would imply `f_total = 0`. It does imply `f_core = 0`: the periodic behavior is
 invariant, but secondary laws such as `densidad_estable` can change.
+`rule_108` is the sharper version of the same lesson: `f_total` is almost
+maximal, but core fragility remains low because the local oscillator survives
+all but six central perturbations.
 
 ## 5. Two High-Fragility Mechanisms
 

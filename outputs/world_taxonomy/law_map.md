@@ -2,8 +2,9 @@
 
 Source journal: `outputs/experiments_2026-05-27/journal_8c_long.jsonl`
 
-Additional formal profiles: `outputs/frontera_sweep/top_rules_profile.json`
-and `outputs/periodicity_fase14/rule51_profile.json` when present.
+Additional formal profiles: `outputs/frontera_sweep/top_rules_profile.json`,
+`outputs/periodicity_fase14/rule51_profile.json`, and
+`outputs/profile_fase17/rule108_seed_profile.json` when present.
 
 Schema check: world field detected as `world_type`. First-row keys include:
 `action_reason, action_taken, analysis_status, consensus, cycle_id, dedup_structure_count, details, dominant_type, inflation_ratio, is_new_law_signature, law_signature, laws_accepted, laws_evaluated, laws_rejected, laws_status, metrics, scale_attempt_count, score, steps, structure_count, timestamp, width, world_avg_score_prev, world_has_multiregime_evidence_prev, world_is_multiregime_candidate_prev, world_peak_diversity_prev, world_score_variance_prev, world_signature_diversity_prev, world_type, world_unique_signatures_prev, world_visit_count`.
@@ -21,6 +22,10 @@ This taxonomy separates four mechanisms that looked similar before Fase 8:
 - **periodicidad-global**: the world has low signature diversity and
   `periodicidad` in at least `0.9` of non-empty
   visits. This captures global frame-periodic dynamics such as `rule_51`.
+- **oscilador-local**: the world has a minimal IC on a quiescent background
+  that produces a bounded local period-2 structure. The oscillation is local
+  to the particle, not global across the lattice. Example: `rule_108`,
+  `#.# <-> ###`.
 - **noise-bounded**: the world fails before law evaluation at high scale because
   `analysis_status == "ruido_no_analizable"`.
 - **sin-evidencia-multiregimen**: no sufficient evidence of multi-regime behavior
@@ -40,6 +45,8 @@ Thresholds used:
 - `NOISE_RATIO_THRESHOLD = 0.5`
 - `RICH_LAWS_THRESHOLD = 4.0`
 - `PERIODICITY_GLOBAL_THRESHOLD = 0.9`
+- `PERIODICITY_LOCAL_THRESHOLD = 0.9`
+- `TYPE_UNIQUE_LOCAL_THRESHOLD = 0.5`
 
 Classification function:
 
@@ -56,6 +63,14 @@ def classify_world(stats):
         else:
             return "multiregimen-productivo"
     periodicity_rate = stats['law_counts'].get('periodicidad', 0) / max(1, stats['non_empty_visits'])
+    type_unique_rate = stats['law_counts'].get('tipo_unico', 0) / max(1, stats['non_empty_visits'])
+    if (
+        stats.get('allow_oscilador_local')
+        and periodicity_rate >= PERIODICITY_LOCAL_THRESHOLD
+        and type_unique_rate >= TYPE_UNIQUE_LOCAL_THRESHOLD
+        and stats['mean_laws'] < RICH_LAWS_THRESHOLD
+    ):
+        return "oscilador-local"
     if stats.get('allow_periodicidad_global') and periodicity_rate >= PERIODICITY_GLOBAL_THRESHOLD:
         return "periodicidad-global"
     if stats['mean_laws'] >= RICH_LAWS_THRESHOLD:
@@ -70,6 +85,7 @@ def classify_world(stats):
 | life_blinker | unknown | sin-evidencia-multiregimen | 18 | 1.000 | 0.000 | 0.200 | 3.000 | periodicidad + densidad_estable + tipo_unico | ? | ? | ? |
 | life_block | unknown | sin-evidencia-multiregimen | 12 | 1.000 | 0.000 | 0.200 | 2.000 | densidad_estable + tipo_unico | ? | ? | ? |
 | life_glider | unknown | sin-evidencia-multiregimen | 14 | 1.000 | 0.000 | 0.333 | 2.357 | densidad_estable + tipo_unico | ? | ? | ? |
+| rule_108 | local period-2 oscillator | oscilador-local | 6 | 1.000 | 0.000 | 0.167 | 2.000 | periodicidad + tipo_unico | 0.992 | 0.047 | clustered |
 | rule_109 | class-4 | multiregimen-productivo | 15 | 0.667 | 0.333 | 0.667 | 2.000 | densidad_estable + complejidad_alta + frontera_temporal | 0.250 | 0.250 | clustered |
 | rule_110 | class-4 | multiregimen-productivo | 11 | 0.636 | 0.364 | 0.600 | 2.727 | velocidad_constante + densidad_estable + complejidad_alta + frontera_temporal | 0.323 | 0.198 | clustered |
 | rule_124 | unknown | multiregimen-productivo | 12 | 0.583 | 0.417 | 0.600 | 2.167 | densidad_estable + complejidad_alta + frontera_temporal + temporal_scale_stability | 0.224 | 0.083 | dispersed |
@@ -111,6 +127,7 @@ Cell states:
 | life_blinker | - | ✓ | ✓ | ✓ | - | - | - |
 | life_block | - | - | ✓ | ✓ | - | - | - |
 | life_glider | · | - | ✓ | ✓ | - | - | - |
+| rule_108 | - | ✓ | - | ✓ | - | - | - |
 | rule_109 | - | - | ✓ | · | ✓ | ✓ | ✓ |
 | rule_110 | ✓ | - | ✓ | - | ✓ | ✓ | · |
 | rule_124 | · | - | ✓ | - | ✓ | ✓ | ✓ |
@@ -172,3 +189,28 @@ rule_150 produces a stable non-empty signature at low scale:
 At higher scale it crosses the deduplicated structure gate and becomes
 `ruido_no_analizable`. This is pre-analysis failure, unlike rule_90. The agent
 handles it by changing world once the noise boundary is observed.
+
+### rule_108 — oscilador-local (period-2 ECA particle)
+
+Formal map protocol: `steps=200`, `width=128`, IC `pair_gap1` on a quiescent
+zero background, seed labels `20260523..20260528`.
+
+The local motif is:
+
+```text
+#.# <-> ###
+```
+
+Result: `6/6 ok`, `periodicidad=6/6`, `tipo_unico=6/6`, and mean
+`dedup_structure_count=1.000`. The point IC is a documented negative control:
+it produces a stable single active cell but does not activate `periodicidad`.
+
+Fragility separates full-signature churn from behavioral core:
+
+- `f_total=0.992`: almost any extra bit changes some secondary law.
+- `core_fragility=0.047`: only positions near the motif
+  (`61..63`, `65..67`) disrupt the oscillator core.
+
+Interpretation: `rule_108` is the local counterpart to `rule_51`. `rule_51`
+periodicity is global frame complementation; `rule_108` periodicity is a
+localized particle on a stable background.

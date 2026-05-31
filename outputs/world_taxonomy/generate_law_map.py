@@ -24,9 +24,11 @@ JOURNAL = ROOT / "outputs" / "experiments_2026-05-27" / "journal_8c_long.jsonl"
 EXTRA_PROFILES = [
     ROOT / "outputs" / "frontera_sweep" / "top_rules_profile.json",
     ROOT / "outputs" / "periodicity_fase14" / "rule51_profile.json",
+    ROOT / "outputs" / "profile_fase17" / "rule108_seed_profile.json",
 ]
 FRAGILITY_PROFILE = ROOT / "outputs" / "fragility_fase10" / "fragility_position_map.json"
 CORE_FRAGILITY_PROFILE = ROOT / "outputs" / "fragility_fase10" / "core_fragility.json"
+RULE108_FRAGILITY_PROFILE = ROOT / "outputs" / "profile_fase17" / "rule108_fragility.json"
 OUT = ROOT / "outputs" / "world_taxonomy" / "law_map.md"
 
 DIVERSITY_THRESHOLD = 0.5
@@ -34,6 +36,8 @@ NON_EMPTY_RATIO_THRESHOLD = 0.5
 NOISE_RATIO_THRESHOLD = 0.5
 RICH_LAWS_THRESHOLD = 4.0
 PERIODICITY_GLOBAL_THRESHOLD = 0.9
+PERIODICITY_LOCAL_THRESHOLD = 0.9
+TYPE_UNIQUE_LOCAL_THRESHOLD = 0.5
 
 LAW_COLUMNS = [
     ("vel", "velocidad_constante"),
@@ -50,6 +54,7 @@ ECA_CLASS = {
     "rule_30": "class-3 (chaotic)",
     "rule_54": "class-4",
     "rule_51": "global period-2 complement",
+    "rule_108": "local period-2 oscillator",
     "rule_90": "class-3 (additive/XOR)",
     "rule_109": "class-4",
     "rule_110": "class-4",
@@ -108,6 +113,14 @@ def classify_world(stats: dict[str, Any]) -> str:
             return "multiregimen-escala-dependiente"
         return "multiregimen-productivo"
     periodicity_rate = stats["law_counts"].get("periodicidad", 0) / max(1, stats["non_empty_visits"])
+    type_unique_rate = stats["law_counts"].get("tipo_unico", 0) / max(1, stats["non_empty_visits"])
+    if (
+        stats.get("allow_oscilador_local")
+        and periodicity_rate >= PERIODICITY_LOCAL_THRESHOLD
+        and type_unique_rate >= TYPE_UNIQUE_LOCAL_THRESHOLD
+        and stats["mean_laws"] < RICH_LAWS_THRESHOLD
+    ):
+        return "oscilador-local"
     if stats.get("allow_periodicidad_global") and periodicity_rate >= PERIODICITY_GLOBAL_THRESHOLD:
         return "periodicidad-global"
     if stats["mean_laws"] >= RICH_LAWS_THRESHOLD:
@@ -212,6 +225,7 @@ def load_extra_profiles() -> dict[str, dict[str, Any]]:
                 "dominant_signature": dominant_signature,
                 "law_counts": law_counts,
                 "allow_periodicidad_global": world == "rule_51",
+                "allow_oscilador_local": world == "rule_108",
             }
             stats["category"] = classify_world(stats)
             extras[world] = stats
@@ -237,6 +251,15 @@ def apply_fragility_profiles(stats_by_world: dict[str, dict[str, Any]]) -> None:
             if world not in stats_by_world:
                 continue
             stats_by_world[world]["core_fragility"] = payload.get("f_core")
+
+    if RULE108_FRAGILITY_PROFILE.exists():
+        rule108_data = json.loads(RULE108_FRAGILITY_PROFILE.read_text(encoding="utf-8"))
+        for world, payload in rule108_data.items():
+            if world not in stats_by_world:
+                continue
+            stats_by_world[world]["fragility_total"] = payload.get("f_total")
+            stats_by_world[world]["core_fragility"] = payload.get("f_core")
+            stats_by_world[world]["fragility_pattern"] = payload.get("core_fragility_pattern")
 
 
 def law_cell(stats: dict[str, Any], law_name: str) -> str:
@@ -307,8 +330,9 @@ def render_markdown(stats_by_world: dict[str, dict[str, Any]], world_field: str,
 
 Source journal: `outputs/experiments_2026-05-27/journal_8c_long.jsonl`
 
-Additional formal profiles: `outputs/frontera_sweep/top_rules_profile.json`
-and `outputs/periodicity_fase14/rule51_profile.json` when present.
+Additional formal profiles: `outputs/frontera_sweep/top_rules_profile.json`,
+`outputs/periodicity_fase14/rule51_profile.json`, and
+`outputs/profile_fase17/rule108_seed_profile.json` when present.
 
 Schema check: world field detected as `{world_field}`. First-row keys include:
 `{schema_excerpt}`.
@@ -326,6 +350,10 @@ This taxonomy separates four mechanisms that looked similar before Fase 8:
 - **periodicidad-global**: the world has low signature diversity and
   `periodicidad` in at least `{PERIODICITY_GLOBAL_THRESHOLD:.1f}` of non-empty
   visits. This captures global frame-periodic dynamics such as `rule_51`.
+- **oscilador-local**: the world has a minimal IC on a quiescent background
+  that produces a bounded local period-2 structure. The oscillation is local
+  to the particle, not global across the lattice. Example: `rule_108`,
+  `#.# <-> ###`.
 - **noise-bounded**: the world fails before law evaluation at high scale because
   `analysis_status == "ruido_no_analizable"`.
 - **sin-evidencia-multiregimen**: no sufficient evidence of multi-regime behavior
@@ -345,6 +373,8 @@ Thresholds used:
 - `NOISE_RATIO_THRESHOLD = {NOISE_RATIO_THRESHOLD}`
 - `RICH_LAWS_THRESHOLD = {RICH_LAWS_THRESHOLD}`
 - `PERIODICITY_GLOBAL_THRESHOLD = {PERIODICITY_GLOBAL_THRESHOLD}`
+- `PERIODICITY_LOCAL_THRESHOLD = {PERIODICITY_LOCAL_THRESHOLD}`
+- `TYPE_UNIQUE_LOCAL_THRESHOLD = {TYPE_UNIQUE_LOCAL_THRESHOLD}`
 
 Classification function:
 
@@ -361,6 +391,14 @@ def classify_world(stats):
         else:
             return "multiregimen-productivo"
     periodicity_rate = stats['law_counts'].get('periodicidad', 0) / max(1, stats['non_empty_visits'])
+    type_unique_rate = stats['law_counts'].get('tipo_unico', 0) / max(1, stats['non_empty_visits'])
+    if (
+        stats.get('allow_oscilador_local')
+        and periodicity_rate >= PERIODICITY_LOCAL_THRESHOLD
+        and type_unique_rate >= TYPE_UNIQUE_LOCAL_THRESHOLD
+        and stats['mean_laws'] < RICH_LAWS_THRESHOLD
+    ):
+        return "oscilador-local"
     if stats.get('allow_periodicidad_global') and periodicity_rate >= PERIODICITY_GLOBAL_THRESHOLD:
         return "periodicidad-global"
     if stats['mean_laws'] >= RICH_LAWS_THRESHOLD:
@@ -447,6 +485,31 @@ rule_150 produces a stable non-empty signature at low scale:
 At higher scale it crosses the deduplicated structure gate and becomes
 `ruido_no_analizable`. This is pre-analysis failure, unlike rule_90. The agent
 handles it by changing world once the noise boundary is observed.
+
+### rule_108 — oscilador-local (period-2 ECA particle)
+
+Formal map protocol: `steps=200`, `width=128`, IC `pair_gap1` on a quiescent
+zero background, seed labels `20260523..20260528`.
+
+The local motif is:
+
+```text
+#.# <-> ###
+```
+
+Result: `6/6 ok`, `periodicidad=6/6`, `tipo_unico=6/6`, and mean
+`dedup_structure_count=1.000`. The point IC is a documented negative control:
+it produces a stable single active cell but does not activate `periodicidad`.
+
+Fragility separates full-signature churn from behavioral core:
+
+- `f_total=0.992`: almost any extra bit changes some secondary law.
+- `core_fragility=0.047`: only positions near the motif
+  (`61..63`, `65..67`) disrupt the oscillator core.
+
+Interpretation: `rule_108` is the local counterpart to `rule_51`. `rule_51`
+periodicity is global frame complementation; `rule_108` periodicity is a
+localized particle on a stable background.
 """
 
 

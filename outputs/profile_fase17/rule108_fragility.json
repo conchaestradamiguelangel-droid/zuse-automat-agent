@@ -1,0 +1,4693 @@
+{
+  "rule_108": {
+    "core_fragility_pattern": "clustered",
+    "core_fragility_vec": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      1,
+      0,
+      1,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "core_laws": [
+      "periodicidad",
+      "tipo_unico"
+    ],
+    "core_position_map": {
+      "bin_means": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0.375,
+        0.375,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "bin_range": 0.375,
+      "left_mean": 0.046875,
+      "pattern": "clustered",
+      "right_mean": 0.046875,
+      "top10_positions": [
+        61,
+        62,
+        63,
+        65,
+        66,
+        67,
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    "f_core": 0.046875,
+    "f_noise": 0.0,
+    "f_silence": 0.0,
+    "f_total": 0.9921875,
+    "fragility_pattern": "dispersed",
+    "ic_type": "pair_gap1",
+    "reference_core_signature": [
+      "periodicidad",
+      "tipo_unico"
+    ],
+    "reference_signature": [
+      "periodicidad",
+      "tipo_unico"
+    ],
+    "rows": [
+      {
+        "analysis_status": "ok",
+        "bit_position": 0,
+        "core_changed": false,
+        "dedup_structure_count": 3,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "periodicidad",
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "perturbed_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "perturbed_signature": [
+          "densidad_estable",
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "seed": 20260523,
+        "steps": 200,
+        "total_changed": true,
+        "width": 128,
+        "world": "rule_108"
+      },
+      {
+        "analysis_status": "ok",
+        "bit_position": 1,
+        "core_changed": false,
+        "dedup_structure_count": 3,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "periodicidad",
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "perturbed_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "perturbed_signature": [
+          "densidad_estable",
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "seed": 20260523,
+        "steps": 200,
+        "total_changed": true,
+        "width": 128,
+        "world": "rule_108"
+      },
+      {
+        "analysis_status": "ok",
+        "bit_position": 2,
+        "core_changed": false,
+        "dedup_structure_count": 3,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "periodicidad",
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "perturbed_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "perturbed_signature": [
+          "densidad_estable",
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "seed": 20260523,
+        "steps": 200,
+        "total_changed": true,
+        "width": 128,
+        "world": "rule_108"
+      },
+      {
+        "analysis_status": "ok",
+        "bit_position": 3,
+        "core_changed": false,
+        "dedup_structure_count": 3,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "periodicidad",
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "perturbed_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "perturbed_signature": [
+          "densidad_estable",
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "seed": 20260523,
+        "steps": 200,
+        "total_changed": true,
+        "width": 128,
+        "world": "rule_108"
+      },
+      {
+        "analysis_status": "ok",
+        "bit_position": 4,
+        "core_changed": false,
+        "dedup_structure_count": 3,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "periodicidad",
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "perturbed_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "perturbed_signature": [
+          "densidad_estable",
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "seed": 20260523,
+        "steps": 200,
+        "total_changed": true,
+        "width": 128,
+        "world": "rule_108"
+      },
+      {
+        "analysis_status": "ok",
+        "bit_position": 5,
+        "core_changed": false,
+        "dedup_structure_count": 3,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "periodicidad",
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "perturbed_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "perturbed_signature": [
+          "densidad_estable",
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "seed": 20260523,
+        "steps": 200,
+        "total_changed": true,
+        "width": 128,
+        "world": "rule_108"
+      },
+      {
+        "analysis_status": "ok",
+        "bit_position": 6,
+        "core_changed": false,
+        "dedup_structure_count": 3,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "periodicidad",
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "perturbed_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "perturbed_signature": [
+          "densidad_estable",
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "seed": 20260523,
+        "steps": 200,
+        "total_changed": true,
+        "width": 128,
+        "world": "rule_108"
+      },
+      {
+        "analysis_status": "ok",
+        "bit_position": 7,
+        "core_changed": false,
+        "dedup_structure_count": 3,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "periodicidad",
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "perturbed_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "perturbed_signature": [
+          "densidad_estable",
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "seed": 20260523,
+        "steps": 200,
+        "total_changed": true,
+        "width": 128,
+        "world": "rule_108"
+      },
+      {
+        "analysis_status": "ok",
+        "bit_position": 8,
+        "core_changed": false,
+        "dedup_structure_count": 3,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "periodicidad",
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "perturbed_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "perturbed_signature": [
+          "densidad_estable",
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "seed": 20260523,
+        "steps": 200,
+        "total_changed": true,
+        "width": 128,
+        "world": "rule_108"
+      },
+      {
+        "analysis_status": "ok",
+        "bit_position": 9,
+        "core_changed": false,
+        "dedup_structure_count": 3,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "periodicidad",
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "perturbed_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "perturbed_signature": [
+          "densidad_estable",
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "seed": 20260523,
+        "steps": 200,
+        "total_changed": true,
+        "width": 128,
+        "world": "rule_108"
+      },
+      {
+        "analysis_status": "ok",
+        "bit_position": 10,
+        "core_changed": false,
+        "dedup_structure_count": 3,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "periodicidad",
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "perturbed_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "perturbed_signature": [
+          "densidad_estable",
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "seed": 20260523,
+        "steps": 200,
+        "total_changed": true,
+        "width": 128,
+        "world": "rule_108"
+      },
+      {
+        "analysis_status": "ok",
+        "bit_position": 11,
+        "core_changed": false,
+        "dedup_structure_count": 3,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "periodicidad",
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "perturbed_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "perturbed_signature": [
+          "densidad_estable",
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "seed": 20260523,
+        "steps": 200,
+        "total_changed": true,
+        "width": 128,
+        "world": "rule_108"
+      },
+      {
+        "analysis_status": "ok",
+        "bit_position": 12,
+        "core_changed": false,
+        "dedup_structure_count": 3,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "periodicidad",
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "perturbed_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "perturbed_signature": [
+          "densidad_estable",
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "seed": 20260523,
+        "steps": 200,
+        "total_changed": true,
+        "width": 128,
+        "world": "rule_108"
+      },
+      {
+        "analysis_status": "ok",
+        "bit_position": 13,
+        "core_changed": false,
+        "dedup_structure_count": 3,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "periodicidad",
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "perturbed_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "perturbed_signature": [
+          "densidad_estable",
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "seed": 20260523,
+        "steps": 200,
+        "total_changed": true,
+        "width": 128,
+        "world": "rule_108"
+      },
+      {
+        "analysis_status": "ok",
+        "bit_position": 14,
+        "core_changed": false,
+        "dedup_structure_count": 3,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "periodicidad",
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "perturbed_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "perturbed_signature": [
+          "densidad_estable",
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "seed": 20260523,
+        "steps": 200,
+        "total_changed": true,
+        "width": 128,
+        "world": "rule_108"
+      },
+      {
+        "analysis_status": "ok",
+        "bit_position": 15,
+        "core_changed": false,
+        "dedup_structure_count": 3,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "periodicidad",
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "perturbed_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "perturbed_signature": [
+          "densidad_estable",
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "seed": 20260523,
+        "steps": 200,
+        "total_changed": true,
+        "width": 128,
+        "world": "rule_108"
+      },
+      {
+        "analysis_status": "ok",
+        "bit_position": 16,
+        "core_changed": false,
+        "dedup_structure_count": 3,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "periodicidad",
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "perturbed_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "perturbed_signature": [
+          "densidad_estable",
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "seed": 20260523,
+        "steps": 200,
+        "total_changed": true,
+        "width": 128,
+        "world": "rule_108"
+      },
+      {
+        "analysis_status": "ok",
+        "bit_position": 17,
+        "core_changed": false,
+        "dedup_structure_count": 3,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "periodicidad",
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "perturbed_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "perturbed_signature": [
+          "densidad_estable",
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "seed": 20260523,
+        "steps": 200,
+        "total_changed": true,
+        "width": 128,
+        "world": "rule_108"
+      },
+      {
+        "analysis_status": "ok",
+        "bit_position": 18,
+        "core_changed": false,
+        "dedup_structure_count": 3,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "periodicidad",
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "perturbed_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "perturbed_signature": [
+          "densidad_estable",
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "seed": 20260523,
+        "steps": 200,
+        "total_changed": true,
+        "width": 128,
+        "world": "rule_108"
+      },
+      {
+        "analysis_status": "ok",
+        "bit_position": 19,
+        "core_changed": false,
+        "dedup_structure_count": 3,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "periodicidad",
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "perturbed_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "perturbed_signature": [
+          "densidad_estable",
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "seed": 20260523,
+        "steps": 200,
+        "total_changed": true,
+        "width": 128,
+        "world": "rule_108"
+      },
+      {
+        "analysis_status": "ok",
+        "bit_position": 20,
+        "core_changed": false,
+        "dedup_structure_count": 3,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "periodicidad",
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "perturbed_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "perturbed_signature": [
+          "densidad_estable",
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "seed": 20260523,
+        "steps": 200,
+        "total_changed": true,
+        "width": 128,
+        "world": "rule_108"
+      },
+      {
+        "analysis_status": "ok",
+        "bit_position": 21,
+        "core_changed": false,
+        "dedup_structure_count": 3,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "periodicidad",
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "perturbed_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "perturbed_signature": [
+          "densidad_estable",
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "seed": 20260523,
+        "steps": 200,
+        "total_changed": true,
+        "width": 128,
+        "world": "rule_108"
+      },
+      {
+        "analysis_status": "ok",
+        "bit_position": 22,
+        "core_changed": false,
+        "dedup_structure_count": 3,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "periodicidad",
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "perturbed_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "perturbed_signature": [
+          "densidad_estable",
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "seed": 20260523,
+        "steps": 200,
+        "total_changed": true,
+        "width": 128,
+        "world": "rule_108"
+      },
+      {
+        "analysis_status": "ok",
+        "bit_position": 23,
+        "core_changed": false,
+        "dedup_structure_count": 3,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "periodicidad",
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "perturbed_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "perturbed_signature": [
+          "densidad_estable",
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "seed": 20260523,
+        "steps": 200,
+        "total_changed": true,
+        "width": 128,
+        "world": "rule_108"
+      },
+      {
+        "analysis_status": "ok",
+        "bit_position": 24,
+        "core_changed": false,
+        "dedup_structure_count": 3,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "periodicidad",
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "perturbed_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "perturbed_signature": [
+          "densidad_estable",
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "seed": 20260523,
+        "steps": 200,
+        "total_changed": true,
+        "width": 128,
+        "world": "rule_108"
+      },
+      {
+        "analysis_status": "ok",
+        "bit_position": 25,
+        "core_changed": false,
+        "dedup_structure_count": 3,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "periodicidad",
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "perturbed_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "perturbed_signature": [
+          "densidad_estable",
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "seed": 20260523,
+        "steps": 200,
+        "total_changed": true,
+        "width": 128,
+        "world": "rule_108"
+      },
+      {
+        "analysis_status": "ok",
+        "bit_position": 26,
+        "core_changed": false,
+        "dedup_structure_count": 3,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "periodicidad",
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "perturbed_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "perturbed_signature": [
+          "densidad_estable",
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "seed": 20260523,
+        "steps": 200,
+        "total_changed": true,
+        "width": 128,
+        "world": "rule_108"
+      },
+      {
+        "analysis_status": "ok",
+        "bit_position": 27,
+        "core_changed": false,
+        "dedup_structure_count": 3,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "periodicidad",
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "perturbed_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "perturbed_signature": [
+          "densidad_estable",
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "seed": 20260523,
+        "steps": 200,
+        "total_changed": true,
+        "width": 128,
+        "world": "rule_108"
+      },
+      {
+        "analysis_status": "ok",
+        "bit_position": 28,
+        "core_changed": false,
+        "dedup_structure_count": 3,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "periodicidad",
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "perturbed_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "perturbed_signature": [
+          "densidad_estable",
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "seed": 20260523,
+        "steps": 200,
+        "total_changed": true,
+        "width": 128,
+        "world": "rule_108"
+      },
+      {
+        "analysis_status": "ok",
+        "bit_position": 29,
+        "core_changed": false,
+        "dedup_structure_count": 3,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "periodicidad",
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "perturbed_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "perturbed_signature": [
+          "densidad_estable",
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "seed": 20260523,
+        "steps": 200,
+        "total_changed": true,
+        "width": 128,
+        "world": "rule_108"
+      },
+      {
+        "analysis_status": "ok",
+        "bit_position": 30,
+        "core_changed": false,
+        "dedup_structure_count": 3,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "periodicidad",
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "perturbed_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "perturbed_signature": [
+          "densidad_estable",
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "seed": 20260523,
+        "steps": 200,
+        "total_changed": true,
+        "width": 128,
+        "world": "rule_108"
+      },
+      {
+        "analysis_status": "ok",
+        "bit_position": 31,
+        "core_changed": false,
+        "dedup_structure_count": 3,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "periodicidad",
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "perturbed_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "perturbed_signature": [
+          "densidad_estable",
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "seed": 20260523,
+        "steps": 200,
+        "total_changed": true,
+        "width": 128,
+        "world": "rule_108"
+      },
+      {
+        "analysis_status": "ok",
+        "bit_position": 32,
+        "core_changed": false,
+        "dedup_structure_count": 3,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "periodicidad",
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "perturbed_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "perturbed_signature": [
+          "densidad_estable",
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "seed": 20260523,
+        "steps": 200,
+        "total_changed": true,
+        "width": 128,
+        "world": "rule_108"
+      },
+      {
+        "analysis_status": "ok",
+        "bit_position": 33,
+        "core_changed": false,
+        "dedup_structure_count": 3,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "periodicidad",
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "perturbed_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "perturbed_signature": [
+          "densidad_estable",
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "seed": 20260523,
+        "steps": 200,
+        "total_changed": true,
+        "width": 128,
+        "world": "rule_108"
+      },
+      {
+        "analysis_status": "ok",
+        "bit_position": 34,
+        "core_changed": false,
+        "dedup_structure_count": 3,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "periodicidad",
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "perturbed_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "perturbed_signature": [
+          "densidad_estable",
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "seed": 20260523,
+        "steps": 200,
+        "total_changed": true,
+        "width": 128,
+        "world": "rule_108"
+      },
+      {
+        "analysis_status": "ok",
+        "bit_position": 35,
+        "core_changed": false,
+        "dedup_structure_count": 3,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "periodicidad",
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "perturbed_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "perturbed_signature": [
+          "densidad_estable",
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "seed": 20260523,
+        "steps": 200,
+        "total_changed": true,
+        "width": 128,
+        "world": "rule_108"
+      },
+      {
+        "analysis_status": "ok",
+        "bit_position": 36,
+        "core_changed": false,
+        "dedup_structure_count": 3,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "periodicidad",
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "perturbed_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "perturbed_signature": [
+          "densidad_estable",
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "seed": 20260523,
+        "steps": 200,
+        "total_changed": true,
+        "width": 128,
+        "world": "rule_108"
+      },
+      {
+        "analysis_status": "ok",
+        "bit_position": 37,
+        "core_changed": false,
+        "dedup_structure_count": 3,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "periodicidad",
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "perturbed_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "perturbed_signature": [
+          "densidad_estable",
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "seed": 20260523,
+        "steps": 200,
+        "total_changed": true,
+        "width": 128,
+        "world": "rule_108"
+      },
+      {
+        "analysis_status": "ok",
+        "bit_position": 38,
+        "core_changed": false,
+        "dedup_structure_count": 3,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "periodicidad",
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "perturbed_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "perturbed_signature": [
+          "densidad_estable",
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "seed": 20260523,
+        "steps": 200,
+        "total_changed": true,
+        "width": 128,
+        "world": "rule_108"
+      },
+      {
+        "analysis_status": "ok",
+        "bit_position": 39,
+        "core_changed": false,
+        "dedup_structure_count": 3,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "periodicidad",
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "perturbed_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "perturbed_signature": [
+          "densidad_estable",
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "seed": 20260523,
+        "steps": 200,
+        "total_changed": true,
+        "width": 128,
+        "world": "rule_108"
+      },
+      {
+        "analysis_status": "ok",
+        "bit_position": 40,
+        "core_changed": false,
+        "dedup_structure_count": 3,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "periodicidad",
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "perturbed_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "perturbed_signature": [
+          "densidad_estable",
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "seed": 20260523,
+        "steps": 200,
+        "total_changed": true,
+        "width": 128,
+        "world": "rule_108"
+      },
+      {
+        "analysis_status": "ok",
+        "bit_position": 41,
+        "core_changed": false,
+        "dedup_structure_count": 3,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "periodicidad",
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "perturbed_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "perturbed_signature": [
+          "densidad_estable",
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "seed": 20260523,
+        "steps": 200,
+        "total_changed": true,
+        "width": 128,
+        "world": "rule_108"
+      },
+      {
+        "analysis_status": "ok",
+        "bit_position": 42,
+        "core_changed": false,
+        "dedup_structure_count": 3,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "periodicidad",
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "perturbed_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "perturbed_signature": [
+          "densidad_estable",
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "seed": 20260523,
+        "steps": 200,
+        "total_changed": true,
+        "width": 128,
+        "world": "rule_108"
+      },
+      {
+        "analysis_status": "ok",
+        "bit_position": 43,
+        "core_changed": false,
+        "dedup_structure_count": 3,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "periodicidad",
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "perturbed_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "perturbed_signature": [
+          "densidad_estable",
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "seed": 20260523,
+        "steps": 200,
+        "total_changed": true,
+        "width": 128,
+        "world": "rule_108"
+      },
+      {
+        "analysis_status": "ok",
+        "bit_position": 44,
+        "core_changed": false,
+        "dedup_structure_count": 3,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "periodicidad",
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "perturbed_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "perturbed_signature": [
+          "densidad_estable",
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "seed": 20260523,
+        "steps": 200,
+        "total_changed": true,
+        "width": 128,
+        "world": "rule_108"
+      },
+      {
+        "analysis_status": "ok",
+        "bit_position": 45,
+        "core_changed": false,
+        "dedup_structure_count": 3,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "periodicidad",
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "perturbed_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "perturbed_signature": [
+          "densidad_estable",
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "seed": 20260523,
+        "steps": 200,
+        "total_changed": true,
+        "width": 128,
+        "world": "rule_108"
+      },
+      {
+        "analysis_status": "ok",
+        "bit_position": 46,
+        "core_changed": false,
+        "dedup_structure_count": 3,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "periodicidad",
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "perturbed_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "perturbed_signature": [
+          "densidad_estable",
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "seed": 20260523,
+        "steps": 200,
+        "total_changed": true,
+        "width": 128,
+        "world": "rule_108"
+      },
+      {
+        "analysis_status": "ok",
+        "bit_position": 47,
+        "core_changed": false,
+        "dedup_structure_count": 3,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "periodicidad",
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "perturbed_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "perturbed_signature": [
+          "densidad_estable",
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "seed": 20260523,
+        "steps": 200,
+        "total_changed": true,
+        "width": 128,
+        "world": "rule_108"
+      },
+      {
+        "analysis_status": "ok",
+        "bit_position": 48,
+        "core_changed": false,
+        "dedup_structure_count": 3,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "periodicidad",
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "perturbed_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "perturbed_signature": [
+          "densidad_estable",
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "seed": 20260523,
+        "steps": 200,
+        "total_changed": true,
+        "width": 128,
+        "world": "rule_108"
+      },
+      {
+        "analysis_status": "ok",
+        "bit_position": 49,
+        "core_changed": false,
+        "dedup_structure_count": 3,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "periodicidad",
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "perturbed_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "perturbed_signature": [
+          "densidad_estable",
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "seed": 20260523,
+        "steps": 200,
+        "total_changed": true,
+        "width": 128,
+        "world": "rule_108"
+      },
+      {
+        "analysis_status": "ok",
+        "bit_position": 50,
+        "core_changed": false,
+        "dedup_structure_count": 3,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "periodicidad",
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "perturbed_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "perturbed_signature": [
+          "densidad_estable",
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "seed": 20260523,
+        "steps": 200,
+        "total_changed": true,
+        "width": 128,
+        "world": "rule_108"
+      },
+      {
+        "analysis_status": "ok",
+        "bit_position": 51,
+        "core_changed": false,
+        "dedup_structure_count": 2,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "periodicidad",
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "perturbed_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "perturbed_signature": [
+          "densidad_estable",
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "seed": 20260523,
+        "steps": 200,
+        "total_changed": true,
+        "width": 128,
+        "world": "rule_108"
+      },
+      {
+        "analysis_status": "ok",
+        "bit_position": 52,
+        "core_changed": false,
+        "dedup_structure_count": 2,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "periodicidad",
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "perturbed_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "perturbed_signature": [
+          "densidad_estable",
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "seed": 20260523,
+        "steps": 200,
+        "total_changed": true,
+        "width": 128,
+        "world": "rule_108"
+      },
+      {
+        "analysis_status": "ok",
+        "bit_position": 53,
+        "core_changed": false,
+        "dedup_structure_count": 2,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "periodicidad",
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "perturbed_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "perturbed_signature": [
+          "densidad_estable",
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "seed": 20260523,
+        "steps": 200,
+        "total_changed": true,
+        "width": 128,
+        "world": "rule_108"
+      },
+      {
+        "analysis_status": "ok",
+        "bit_position": 54,
+        "core_changed": false,
+        "dedup_structure_count": 2,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "periodicidad",
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "perturbed_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "perturbed_signature": [
+          "densidad_estable",
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "seed": 20260523,
+        "steps": 200,
+        "total_changed": true,
+        "width": 128,
+        "world": "rule_108"
+      },
+      {
+        "analysis_status": "ok",
+        "bit_position": 55,
+        "core_changed": false,
+        "dedup_structure_count": 2,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "periodicidad",
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "perturbed_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "perturbed_signature": [
+          "densidad_estable",
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "seed": 20260523,
+        "steps": 200,
+        "total_changed": true,
+        "width": 128,
+        "world": "rule_108"
+      },
+      {
+        "analysis_status": "ok",
+        "bit_position": 56,
+        "core_changed": false,
+        "dedup_structure_count": 2,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "periodicidad",
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "perturbed_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "perturbed_signature": [
+          "densidad_estable",
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "seed": 20260523,
+        "steps": 200,
+        "total_changed": true,
+        "width": 128,
+        "world": "rule_108"
+      },
+      {
+        "analysis_status": "ok",
+        "bit_position": 57,
+        "core_changed": false,
+        "dedup_structure_count": 2,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "periodicidad",
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "perturbed_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "perturbed_signature": [
+          "densidad_estable",
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "seed": 20260523,
+        "steps": 200,
+        "total_changed": true,
+        "width": 128,
+        "world": "rule_108"
+      },
+      {
+        "analysis_status": "ok",
+        "bit_position": 58,
+        "core_changed": false,
+        "dedup_structure_count": 2,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "periodicidad",
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "perturbed_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "perturbed_signature": [
+          "densidad_estable",
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "seed": 20260523,
+        "steps": 200,
+        "total_changed": true,
+        "width": 128,
+        "world": "rule_108"
+      },
+      {
+        "analysis_status": "ok",
+        "bit_position": 59,
+        "core_changed": false,
+        "dedup_structure_count": 2,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "periodicidad",
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "perturbed_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "perturbed_signature": [
+          "densidad_estable",
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "seed": 20260523,
+        "steps": 200,
+        "total_changed": true,
+        "width": 128,
+        "world": "rule_108"
+      },
+      {
+        "analysis_status": "ok",
+        "bit_position": 60,
+        "core_changed": false,
+        "dedup_structure_count": 2,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "periodicidad",
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "perturbed_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "perturbed_signature": [
+          "densidad_estable",
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "seed": 20260523,
+        "steps": 200,
+        "total_changed": true,
+        "width": 128,
+        "world": "rule_108"
+      },
+      {
+        "analysis_status": "ok",
+        "bit_position": 61,
+        "core_changed": true,
+        "dedup_structure_count": 2,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "perturbed_core_signature": [
+          "tipo_unico"
+        ],
+        "perturbed_signature": [
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "reference_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "seed": 20260523,
+        "steps": 200,
+        "total_changed": true,
+        "width": 128,
+        "world": "rule_108"
+      },
+      {
+        "analysis_status": "ok",
+        "bit_position": 62,
+        "core_changed": true,
+        "dedup_structure_count": 2,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "perturbed_core_signature": [
+          "tipo_unico"
+        ],
+        "perturbed_signature": [
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "reference_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "seed": 20260523,
+        "steps": 200,
+        "total_changed": true,
+        "width": 128,
+        "world": "rule_108"
+      },
+      {
+        "analysis_status": "ok",
+        "bit_position": 63,
+        "core_changed": true,
+        "dedup_structure_count": 1,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "perturbed_core_signature": [
+          "tipo_unico"
+        ],
+        "perturbed_signature": [
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "reference_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "seed": 20260523,
+        "steps": 200,
+        "total_changed": true,
+        "width": 128,
+        "world": "rule_108"
+      },
+      {
+        "analysis_status": "ok",
+        "bit_position": 64,
+        "core_changed": false,
+        "dedup_structure_count": 1,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "perturbed_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "perturbed_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "seed": 20260523,
+        "steps": 200,
+        "total_changed": false,
+        "width": 128,
+        "world": "rule_108"
+      },
+      {
+        "analysis_status": "ok",
+        "bit_position": 65,
+        "core_changed": true,
+        "dedup_structure_count": 1,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "perturbed_core_signature": [
+          "tipo_unico"
+        ],
+        "perturbed_signature": [
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "reference_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "seed": 20260523,
+        "steps": 200,
+        "total_changed": true,
+        "width": 128,
+        "world": "rule_108"
+      },
+      {
+        "analysis_status": "ok",
+        "bit_position": 66,
+        "core_changed": true,
+        "dedup_structure_count": 2,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "perturbed_core_signature": [
+          "tipo_unico"
+        ],
+        "perturbed_signature": [
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "reference_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "seed": 20260523,
+        "steps": 200,
+        "total_changed": true,
+        "width": 128,
+        "world": "rule_108"
+      },
+      {
+        "analysis_status": "ok",
+        "bit_position": 67,
+        "core_changed": true,
+        "dedup_structure_count": 2,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "perturbed_core_signature": [
+          "tipo_unico"
+        ],
+        "perturbed_signature": [
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "reference_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "seed": 20260523,
+        "steps": 200,
+        "total_changed": true,
+        "width": 128,
+        "world": "rule_108"
+      },
+      {
+        "analysis_status": "ok",
+        "bit_position": 68,
+        "core_changed": false,
+        "dedup_structure_count": 2,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "periodicidad",
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "perturbed_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "perturbed_signature": [
+          "densidad_estable",
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "seed": 20260523,
+        "steps": 200,
+        "total_changed": true,
+        "width": 128,
+        "world": "rule_108"
+      },
+      {
+        "analysis_status": "ok",
+        "bit_position": 69,
+        "core_changed": false,
+        "dedup_structure_count": 2,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "periodicidad",
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "perturbed_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "perturbed_signature": [
+          "densidad_estable",
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "seed": 20260523,
+        "steps": 200,
+        "total_changed": true,
+        "width": 128,
+        "world": "rule_108"
+      },
+      {
+        "analysis_status": "ok",
+        "bit_position": 70,
+        "core_changed": false,
+        "dedup_structure_count": 3,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "periodicidad",
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "perturbed_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "perturbed_signature": [
+          "densidad_estable",
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "seed": 20260523,
+        "steps": 200,
+        "total_changed": true,
+        "width": 128,
+        "world": "rule_108"
+      },
+      {
+        "analysis_status": "ok",
+        "bit_position": 71,
+        "core_changed": false,
+        "dedup_structure_count": 3,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "periodicidad",
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "perturbed_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "perturbed_signature": [
+          "densidad_estable",
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "seed": 20260523,
+        "steps": 200,
+        "total_changed": true,
+        "width": 128,
+        "world": "rule_108"
+      },
+      {
+        "analysis_status": "ok",
+        "bit_position": 72,
+        "core_changed": false,
+        "dedup_structure_count": 3,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "periodicidad",
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "perturbed_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "perturbed_signature": [
+          "densidad_estable",
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "seed": 20260523,
+        "steps": 200,
+        "total_changed": true,
+        "width": 128,
+        "world": "rule_108"
+      },
+      {
+        "analysis_status": "ok",
+        "bit_position": 73,
+        "core_changed": false,
+        "dedup_structure_count": 3,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "periodicidad",
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "perturbed_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "perturbed_signature": [
+          "densidad_estable",
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "seed": 20260523,
+        "steps": 200,
+        "total_changed": true,
+        "width": 128,
+        "world": "rule_108"
+      },
+      {
+        "analysis_status": "ok",
+        "bit_position": 74,
+        "core_changed": false,
+        "dedup_structure_count": 3,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "periodicidad",
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "perturbed_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "perturbed_signature": [
+          "densidad_estable",
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "seed": 20260523,
+        "steps": 200,
+        "total_changed": true,
+        "width": 128,
+        "world": "rule_108"
+      },
+      {
+        "analysis_status": "ok",
+        "bit_position": 75,
+        "core_changed": false,
+        "dedup_structure_count": 3,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "periodicidad",
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "perturbed_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "perturbed_signature": [
+          "densidad_estable",
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "seed": 20260523,
+        "steps": 200,
+        "total_changed": true,
+        "width": 128,
+        "world": "rule_108"
+      },
+      {
+        "analysis_status": "ok",
+        "bit_position": 76,
+        "core_changed": false,
+        "dedup_structure_count": 3,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "periodicidad",
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "perturbed_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "perturbed_signature": [
+          "densidad_estable",
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "seed": 20260523,
+        "steps": 200,
+        "total_changed": true,
+        "width": 128,
+        "world": "rule_108"
+      },
+      {
+        "analysis_status": "ok",
+        "bit_position": 77,
+        "core_changed": false,
+        "dedup_structure_count": 3,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "periodicidad",
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "perturbed_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "perturbed_signature": [
+          "densidad_estable",
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "seed": 20260523,
+        "steps": 200,
+        "total_changed": true,
+        "width": 128,
+        "world": "rule_108"
+      },
+      {
+        "analysis_status": "ok",
+        "bit_position": 78,
+        "core_changed": false,
+        "dedup_structure_count": 3,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "periodicidad",
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "perturbed_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "perturbed_signature": [
+          "densidad_estable",
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "seed": 20260523,
+        "steps": 200,
+        "total_changed": true,
+        "width": 128,
+        "world": "rule_108"
+      },
+      {
+        "analysis_status": "ok",
+        "bit_position": 79,
+        "core_changed": false,
+        "dedup_structure_count": 3,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "periodicidad",
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "perturbed_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "perturbed_signature": [
+          "densidad_estable",
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "seed": 20260523,
+        "steps": 200,
+        "total_changed": true,
+        "width": 128,
+        "world": "rule_108"
+      },
+      {
+        "analysis_status": "ok",
+        "bit_position": 80,
+        "core_changed": false,
+        "dedup_structure_count": 3,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "periodicidad",
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "perturbed_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "perturbed_signature": [
+          "densidad_estable",
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "seed": 20260523,
+        "steps": 200,
+        "total_changed": true,
+        "width": 128,
+        "world": "rule_108"
+      },
+      {
+        "analysis_status": "ok",
+        "bit_position": 81,
+        "core_changed": false,
+        "dedup_structure_count": 3,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "periodicidad",
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "perturbed_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "perturbed_signature": [
+          "densidad_estable",
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "seed": 20260523,
+        "steps": 200,
+        "total_changed": true,
+        "width": 128,
+        "world": "rule_108"
+      },
+      {
+        "analysis_status": "ok",
+        "bit_position": 82,
+        "core_changed": false,
+        "dedup_structure_count": 3,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "periodicidad",
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "perturbed_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "perturbed_signature": [
+          "densidad_estable",
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "seed": 20260523,
+        "steps": 200,
+        "total_changed": true,
+        "width": 128,
+        "world": "rule_108"
+      },
+      {
+        "analysis_status": "ok",
+        "bit_position": 83,
+        "core_changed": false,
+        "dedup_structure_count": 3,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "periodicidad",
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "perturbed_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "perturbed_signature": [
+          "densidad_estable",
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "seed": 20260523,
+        "steps": 200,
+        "total_changed": true,
+        "width": 128,
+        "world": "rule_108"
+      },
+      {
+        "analysis_status": "ok",
+        "bit_position": 84,
+        "core_changed": false,
+        "dedup_structure_count": 3,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "periodicidad",
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "perturbed_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "perturbed_signature": [
+          "densidad_estable",
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "seed": 20260523,
+        "steps": 200,
+        "total_changed": true,
+        "width": 128,
+        "world": "rule_108"
+      },
+      {
+        "analysis_status": "ok",
+        "bit_position": 85,
+        "core_changed": false,
+        "dedup_structure_count": 3,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "periodicidad",
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "perturbed_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "perturbed_signature": [
+          "densidad_estable",
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "seed": 20260523,
+        "steps": 200,
+        "total_changed": true,
+        "width": 128,
+        "world": "rule_108"
+      },
+      {
+        "analysis_status": "ok",
+        "bit_position": 86,
+        "core_changed": false,
+        "dedup_structure_count": 3,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "periodicidad",
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "perturbed_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "perturbed_signature": [
+          "densidad_estable",
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "seed": 20260523,
+        "steps": 200,
+        "total_changed": true,
+        "width": 128,
+        "world": "rule_108"
+      },
+      {
+        "analysis_status": "ok",
+        "bit_position": 87,
+        "core_changed": false,
+        "dedup_structure_count": 3,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "periodicidad",
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "perturbed_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "perturbed_signature": [
+          "densidad_estable",
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "seed": 20260523,
+        "steps": 200,
+        "total_changed": true,
+        "width": 128,
+        "world": "rule_108"
+      },
+      {
+        "analysis_status": "ok",
+        "bit_position": 88,
+        "core_changed": false,
+        "dedup_structure_count": 3,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "periodicidad",
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "perturbed_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "perturbed_signature": [
+          "densidad_estable",
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "seed": 20260523,
+        "steps": 200,
+        "total_changed": true,
+        "width": 128,
+        "world": "rule_108"
+      },
+      {
+        "analysis_status": "ok",
+        "bit_position": 89,
+        "core_changed": false,
+        "dedup_structure_count": 3,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "periodicidad",
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "perturbed_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "perturbed_signature": [
+          "densidad_estable",
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "seed": 20260523,
+        "steps": 200,
+        "total_changed": true,
+        "width": 128,
+        "world": "rule_108"
+      },
+      {
+        "analysis_status": "ok",
+        "bit_position": 90,
+        "core_changed": false,
+        "dedup_structure_count": 3,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "periodicidad",
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "perturbed_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "perturbed_signature": [
+          "densidad_estable",
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "seed": 20260523,
+        "steps": 200,
+        "total_changed": true,
+        "width": 128,
+        "world": "rule_108"
+      },
+      {
+        "analysis_status": "ok",
+        "bit_position": 91,
+        "core_changed": false,
+        "dedup_structure_count": 3,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "periodicidad",
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "perturbed_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "perturbed_signature": [
+          "densidad_estable",
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "seed": 20260523,
+        "steps": 200,
+        "total_changed": true,
+        "width": 128,
+        "world": "rule_108"
+      },
+      {
+        "analysis_status": "ok",
+        "bit_position": 92,
+        "core_changed": false,
+        "dedup_structure_count": 3,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "periodicidad",
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "perturbed_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "perturbed_signature": [
+          "densidad_estable",
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "seed": 20260523,
+        "steps": 200,
+        "total_changed": true,
+        "width": 128,
+        "world": "rule_108"
+      },
+      {
+        "analysis_status": "ok",
+        "bit_position": 93,
+        "core_changed": false,
+        "dedup_structure_count": 3,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "periodicidad",
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "perturbed_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "perturbed_signature": [
+          "densidad_estable",
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "seed": 20260523,
+        "steps": 200,
+        "total_changed": true,
+        "width": 128,
+        "world": "rule_108"
+      },
+      {
+        "analysis_status": "ok",
+        "bit_position": 94,
+        "core_changed": false,
+        "dedup_structure_count": 3,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "periodicidad",
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "perturbed_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "perturbed_signature": [
+          "densidad_estable",
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "seed": 20260523,
+        "steps": 200,
+        "total_changed": true,
+        "width": 128,
+        "world": "rule_108"
+      },
+      {
+        "analysis_status": "ok",
+        "bit_position": 95,
+        "core_changed": false,
+        "dedup_structure_count": 3,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "periodicidad",
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "perturbed_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "perturbed_signature": [
+          "densidad_estable",
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "seed": 20260523,
+        "steps": 200,
+        "total_changed": true,
+        "width": 128,
+        "world": "rule_108"
+      },
+      {
+        "analysis_status": "ok",
+        "bit_position": 96,
+        "core_changed": false,
+        "dedup_structure_count": 3,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "periodicidad",
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "perturbed_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "perturbed_signature": [
+          "densidad_estable",
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "seed": 20260523,
+        "steps": 200,
+        "total_changed": true,
+        "width": 128,
+        "world": "rule_108"
+      },
+      {
+        "analysis_status": "ok",
+        "bit_position": 97,
+        "core_changed": false,
+        "dedup_structure_count": 3,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "periodicidad",
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "perturbed_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "perturbed_signature": [
+          "densidad_estable",
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "seed": 20260523,
+        "steps": 200,
+        "total_changed": true,
+        "width": 128,
+        "world": "rule_108"
+      },
+      {
+        "analysis_status": "ok",
+        "bit_position": 98,
+        "core_changed": false,
+        "dedup_structure_count": 3,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "periodicidad",
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "perturbed_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "perturbed_signature": [
+          "densidad_estable",
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "seed": 20260523,
+        "steps": 200,
+        "total_changed": true,
+        "width": 128,
+        "world": "rule_108"
+      },
+      {
+        "analysis_status": "ok",
+        "bit_position": 99,
+        "core_changed": false,
+        "dedup_structure_count": 3,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "periodicidad",
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "perturbed_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "perturbed_signature": [
+          "densidad_estable",
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "seed": 20260523,
+        "steps": 200,
+        "total_changed": true,
+        "width": 128,
+        "world": "rule_108"
+      },
+      {
+        "analysis_status": "ok",
+        "bit_position": 100,
+        "core_changed": false,
+        "dedup_structure_count": 3,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "periodicidad",
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "perturbed_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "perturbed_signature": [
+          "densidad_estable",
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "seed": 20260523,
+        "steps": 200,
+        "total_changed": true,
+        "width": 128,
+        "world": "rule_108"
+      },
+      {
+        "analysis_status": "ok",
+        "bit_position": 101,
+        "core_changed": false,
+        "dedup_structure_count": 3,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "periodicidad",
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "perturbed_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "perturbed_signature": [
+          "densidad_estable",
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "seed": 20260523,
+        "steps": 200,
+        "total_changed": true,
+        "width": 128,
+        "world": "rule_108"
+      },
+      {
+        "analysis_status": "ok",
+        "bit_position": 102,
+        "core_changed": false,
+        "dedup_structure_count": 3,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "periodicidad",
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "perturbed_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "perturbed_signature": [
+          "densidad_estable",
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "seed": 20260523,
+        "steps": 200,
+        "total_changed": true,
+        "width": 128,
+        "world": "rule_108"
+      },
+      {
+        "analysis_status": "ok",
+        "bit_position": 103,
+        "core_changed": false,
+        "dedup_structure_count": 3,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "periodicidad",
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "perturbed_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "perturbed_signature": [
+          "densidad_estable",
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "seed": 20260523,
+        "steps": 200,
+        "total_changed": true,
+        "width": 128,
+        "world": "rule_108"
+      },
+      {
+        "analysis_status": "ok",
+        "bit_position": 104,
+        "core_changed": false,
+        "dedup_structure_count": 3,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "periodicidad",
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "perturbed_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "perturbed_signature": [
+          "densidad_estable",
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "seed": 20260523,
+        "steps": 200,
+        "total_changed": true,
+        "width": 128,
+        "world": "rule_108"
+      },
+      {
+        "analysis_status": "ok",
+        "bit_position": 105,
+        "core_changed": false,
+        "dedup_structure_count": 3,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "periodicidad",
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "perturbed_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "perturbed_signature": [
+          "densidad_estable",
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "seed": 20260523,
+        "steps": 200,
+        "total_changed": true,
+        "width": 128,
+        "world": "rule_108"
+      },
+      {
+        "analysis_status": "ok",
+        "bit_position": 106,
+        "core_changed": false,
+        "dedup_structure_count": 3,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "periodicidad",
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "perturbed_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "perturbed_signature": [
+          "densidad_estable",
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "seed": 20260523,
+        "steps": 200,
+        "total_changed": true,
+        "width": 128,
+        "world": "rule_108"
+      },
+      {
+        "analysis_status": "ok",
+        "bit_position": 107,
+        "core_changed": false,
+        "dedup_structure_count": 3,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "periodicidad",
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "perturbed_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "perturbed_signature": [
+          "densidad_estable",
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "seed": 20260523,
+        "steps": 200,
+        "total_changed": true,
+        "width": 128,
+        "world": "rule_108"
+      },
+      {
+        "analysis_status": "ok",
+        "bit_position": 108,
+        "core_changed": false,
+        "dedup_structure_count": 3,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "periodicidad",
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "perturbed_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "perturbed_signature": [
+          "densidad_estable",
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "seed": 20260523,
+        "steps": 200,
+        "total_changed": true,
+        "width": 128,
+        "world": "rule_108"
+      },
+      {
+        "analysis_status": "ok",
+        "bit_position": 109,
+        "core_changed": false,
+        "dedup_structure_count": 3,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "periodicidad",
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "perturbed_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "perturbed_signature": [
+          "densidad_estable",
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "seed": 20260523,
+        "steps": 200,
+        "total_changed": true,
+        "width": 128,
+        "world": "rule_108"
+      },
+      {
+        "analysis_status": "ok",
+        "bit_position": 110,
+        "core_changed": false,
+        "dedup_structure_count": 3,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "periodicidad",
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "perturbed_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "perturbed_signature": [
+          "densidad_estable",
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "seed": 20260523,
+        "steps": 200,
+        "total_changed": true,
+        "width": 128,
+        "world": "rule_108"
+      },
+      {
+        "analysis_status": "ok",
+        "bit_position": 111,
+        "core_changed": false,
+        "dedup_structure_count": 3,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "periodicidad",
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "perturbed_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "perturbed_signature": [
+          "densidad_estable",
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "seed": 20260523,
+        "steps": 200,
+        "total_changed": true,
+        "width": 128,
+        "world": "rule_108"
+      },
+      {
+        "analysis_status": "ok",
+        "bit_position": 112,
+        "core_changed": false,
+        "dedup_structure_count": 3,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "periodicidad",
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "perturbed_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "perturbed_signature": [
+          "densidad_estable",
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "seed": 20260523,
+        "steps": 200,
+        "total_changed": true,
+        "width": 128,
+        "world": "rule_108"
+      },
+      {
+        "analysis_status": "ok",
+        "bit_position": 113,
+        "core_changed": false,
+        "dedup_structure_count": 3,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "periodicidad",
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "perturbed_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "perturbed_signature": [
+          "densidad_estable",
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "seed": 20260523,
+        "steps": 200,
+        "total_changed": true,
+        "width": 128,
+        "world": "rule_108"
+      },
+      {
+        "analysis_status": "ok",
+        "bit_position": 114,
+        "core_changed": false,
+        "dedup_structure_count": 3,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "periodicidad",
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "perturbed_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "perturbed_signature": [
+          "densidad_estable",
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "seed": 20260523,
+        "steps": 200,
+        "total_changed": true,
+        "width": 128,
+        "world": "rule_108"
+      },
+      {
+        "analysis_status": "ok",
+        "bit_position": 115,
+        "core_changed": false,
+        "dedup_structure_count": 3,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "periodicidad",
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "perturbed_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "perturbed_signature": [
+          "densidad_estable",
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "seed": 20260523,
+        "steps": 200,
+        "total_changed": true,
+        "width": 128,
+        "world": "rule_108"
+      },
+      {
+        "analysis_status": "ok",
+        "bit_position": 116,
+        "core_changed": false,
+        "dedup_structure_count": 3,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "periodicidad",
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "perturbed_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "perturbed_signature": [
+          "densidad_estable",
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "seed": 20260523,
+        "steps": 200,
+        "total_changed": true,
+        "width": 128,
+        "world": "rule_108"
+      },
+      {
+        "analysis_status": "ok",
+        "bit_position": 117,
+        "core_changed": false,
+        "dedup_structure_count": 3,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "periodicidad",
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "perturbed_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "perturbed_signature": [
+          "densidad_estable",
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "seed": 20260523,
+        "steps": 200,
+        "total_changed": true,
+        "width": 128,
+        "world": "rule_108"
+      },
+      {
+        "analysis_status": "ok",
+        "bit_position": 118,
+        "core_changed": false,
+        "dedup_structure_count": 3,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "periodicidad",
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "perturbed_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "perturbed_signature": [
+          "densidad_estable",
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "seed": 20260523,
+        "steps": 200,
+        "total_changed": true,
+        "width": 128,
+        "world": "rule_108"
+      },
+      {
+        "analysis_status": "ok",
+        "bit_position": 119,
+        "core_changed": false,
+        "dedup_structure_count": 3,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "periodicidad",
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "perturbed_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "perturbed_signature": [
+          "densidad_estable",
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "seed": 20260523,
+        "steps": 200,
+        "total_changed": true,
+        "width": 128,
+        "world": "rule_108"
+      },
+      {
+        "analysis_status": "ok",
+        "bit_position": 120,
+        "core_changed": false,
+        "dedup_structure_count": 3,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "periodicidad",
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "perturbed_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "perturbed_signature": [
+          "densidad_estable",
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "seed": 20260523,
+        "steps": 200,
+        "total_changed": true,
+        "width": 128,
+        "world": "rule_108"
+      },
+      {
+        "analysis_status": "ok",
+        "bit_position": 121,
+        "core_changed": false,
+        "dedup_structure_count": 3,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "periodicidad",
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "perturbed_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "perturbed_signature": [
+          "densidad_estable",
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "seed": 20260523,
+        "steps": 200,
+        "total_changed": true,
+        "width": 128,
+        "world": "rule_108"
+      },
+      {
+        "analysis_status": "ok",
+        "bit_position": 122,
+        "core_changed": false,
+        "dedup_structure_count": 3,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "periodicidad",
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "perturbed_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "perturbed_signature": [
+          "densidad_estable",
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "seed": 20260523,
+        "steps": 200,
+        "total_changed": true,
+        "width": 128,
+        "world": "rule_108"
+      },
+      {
+        "analysis_status": "ok",
+        "bit_position": 123,
+        "core_changed": false,
+        "dedup_structure_count": 3,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "periodicidad",
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "perturbed_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "perturbed_signature": [
+          "densidad_estable",
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "seed": 20260523,
+        "steps": 200,
+        "total_changed": true,
+        "width": 128,
+        "world": "rule_108"
+      },
+      {
+        "analysis_status": "ok",
+        "bit_position": 124,
+        "core_changed": false,
+        "dedup_structure_count": 3,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "periodicidad",
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "perturbed_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "perturbed_signature": [
+          "densidad_estable",
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "seed": 20260523,
+        "steps": 200,
+        "total_changed": true,
+        "width": 128,
+        "world": "rule_108"
+      },
+      {
+        "analysis_status": "ok",
+        "bit_position": 125,
+        "core_changed": false,
+        "dedup_structure_count": 3,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "periodicidad",
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "perturbed_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "perturbed_signature": [
+          "densidad_estable",
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "seed": 20260523,
+        "steps": 200,
+        "total_changed": true,
+        "width": 128,
+        "world": "rule_108"
+      },
+      {
+        "analysis_status": "ok",
+        "bit_position": 126,
+        "core_changed": false,
+        "dedup_structure_count": 3,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "periodicidad",
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "perturbed_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "perturbed_signature": [
+          "densidad_estable",
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "seed": 20260523,
+        "steps": 200,
+        "total_changed": true,
+        "width": 128,
+        "world": "rule_108"
+      },
+      {
+        "analysis_status": "ok",
+        "bit_position": 127,
+        "core_changed": false,
+        "dedup_structure_count": 3,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "periodicidad",
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "perturbed_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "perturbed_signature": [
+          "densidad_estable",
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "reference_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "seed": 20260523,
+        "steps": 200,
+        "total_changed": true,
+        "width": 128,
+        "world": "rule_108"
+      }
+    ],
+    "rule_id": 108,
+    "seed": 20260523,
+    "steps": 200,
+    "total_fragility_vec": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      0,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "total_position_map": {
+      "bin_means": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0.875,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "bin_range": 0.125,
+      "left_mean": 1,
+      "pattern": "dispersed",
+      "right_mean": 0.984375,
+      "top10_positions": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    "width": 128
+  }
+}

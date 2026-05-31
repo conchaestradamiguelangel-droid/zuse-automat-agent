@@ -1,0 +1,1882 @@
+{
+  "rule_108": {
+    "classification": "oscilador-local",
+    "control_ic_type": "point",
+    "ic_type": "pair_gap1",
+    "law_frequencies": {
+      "complejidad_alta": {
+        "class": "absent",
+        "count": 0,
+        "rate": 0.0
+      },
+      "densidad_estable": {
+        "class": "absent",
+        "count": 0,
+        "rate": 0.0
+      },
+      "frontera_temporal": {
+        "class": "absent",
+        "count": 0,
+        "rate": 0.0
+      },
+      "periodicidad": {
+        "class": "core",
+        "count": 6,
+        "rate": 1.0
+      },
+      "temporal_scale_stability": {
+        "class": "absent",
+        "count": 0,
+        "rate": 0.0
+      },
+      "tipo_unico": {
+        "class": "core",
+        "count": 6,
+        "rate": 1.0
+      },
+      "velocidad_constante": {
+        "class": "absent",
+        "count": 0,
+        "rate": 0.0
+      }
+    },
+    "mean_dedup_structure_count": 1,
+    "mean_final_active_span": 3,
+    "mean_n_laws": 2,
+    "motif": "#.# <-> ###",
+    "noise_visits": 0,
+    "non_empty_ratio": 1.0,
+    "non_empty_visits": 6,
+    "ok_visits": 6,
+    "peak_diversity": 0.16666666666666666,
+    "rows": [
+      {
+        "analysis_ok": true,
+        "analysis_status": "ok",
+        "core_signature": [
+          "tipo_unico"
+        ],
+        "dedup_structure_count": 1,
+        "details": [
+          {
+            "accepted": false,
+            "evidence": {
+              "max_velocity": 4.6357196484215215e-17,
+              "n_structures_tested": 0,
+              "passing_count": 0,
+              "passing_fraction": 0.0
+            },
+            "name": "velocidad_constante",
+            "reason": "sin_movimiento_lineal"
+          },
+          {
+            "accepted": false,
+            "evidence": {
+              "oscillator_count": 0
+            },
+            "name": "periodicidad",
+            "reason": "sin_osciladores"
+          },
+          {
+            "accepted": true,
+            "evidence": {
+              "density_cv": 0.0,
+              "density_mean": 0.0078125
+            },
+            "name": "densidad_estable",
+            "reason": "densidad_estable"
+          },
+          {
+            "accepted": true,
+            "evidence": {
+              "n_tipos": 1,
+              "tipos_presentes": [
+                "bloque"
+              ]
+            },
+            "name": "tipo_unico",
+            "reason": "tipo_unico_dominante"
+          },
+          {
+            "accepted": false,
+            "evidence": {
+              "entropy_mean": 0.06591441234324169,
+              "transition_rate": 0.0
+            },
+            "name": "complejidad_alta",
+            "reason": "complejidad_baja"
+          },
+          {
+            "accepted": false,
+            "evidence": {
+              "entropy_mean": 0.06591441234324169,
+              "threshold_max": 0.4352,
+              "transition_rate": 0.0
+            },
+            "name": "frontera_temporal",
+            "reason": "caos_puro_o_sin_entropia"
+          },
+          {
+            "accepted": false,
+            "evidence": {
+              "C": 19.03,
+              "gzip_ratio": 0.004975124378109453,
+              "temporal_load": Infinity,
+              "transition_rate": 0.0
+            },
+            "name": "temporal_scale_stability",
+            "reason": "sin_transiciones_temporales"
+          }
+        ],
+        "dominant_type": "bloque",
+        "final_active_count": 1,
+        "final_active_span": 1,
+        "ic_type": "point",
+        "laws_accepted": [
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "max_active_count": 1,
+        "max_active_span": 1,
+        "raw_structure_count": 3,
+        "seed": 20260523,
+        "signature": [
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "steps": 200,
+        "type_counts": {
+          "bloque": 3
+        },
+        "width": 128
+      },
+      {
+        "analysis_ok": true,
+        "analysis_status": "ok",
+        "core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "dedup_structure_count": 1,
+        "details": [
+          {
+            "accepted": false,
+            "evidence": {
+              "max_velocity": 4.6357196484215215e-17,
+              "n_structures_tested": 0,
+              "passing_count": 0,
+              "passing_fraction": 0.0
+            },
+            "name": "velocidad_constante",
+            "reason": "sin_movimiento_lineal"
+          },
+          {
+            "accepted": true,
+            "evidence": {
+              "oscillator_count": 5
+            },
+            "name": "periodicidad",
+            "reason": "oscilador_detectado"
+          },
+          {
+            "accepted": false,
+            "evidence": {
+              "density_cv": 0.2001967152600554,
+              "density_mean": 0.01951181592039801
+            },
+            "name": "densidad_estable",
+            "reason": "densidad_variable"
+          },
+          {
+            "accepted": true,
+            "evidence": {
+              "n_tipos": 1,
+              "tipos_presentes": [
+                "oscilador"
+              ]
+            },
+            "name": "tipo_unico",
+            "reason": "tipo_unico_dominante"
+          },
+          {
+            "accepted": false,
+            "evidence": {
+              "entropy_mean": 0.13811191639644074,
+              "transition_rate": 0.0078125
+            },
+            "name": "complejidad_alta",
+            "reason": "complejidad_baja"
+          },
+          {
+            "accepted": false,
+            "evidence": {
+              "entropy_mean": 0.13811191639644074,
+              "threshold_max": 0.4352,
+              "transition_rate": 0.0078125
+            },
+            "name": "frontera_temporal",
+            "reason": "caos_puro_o_sin_entropia"
+          },
+          {
+            "accepted": false,
+            "evidence": {
+              "C": 19.03,
+              "gzip_ratio": 0.005635883084577115,
+              "temporal_load": 144.27860696517413,
+              "transition_rate": 0.0078125
+            },
+            "name": "temporal_scale_stability",
+            "reason": "escala_temporal_inestable"
+          }
+        ],
+        "dominant_type": "oscilador",
+        "final_active_count": 2,
+        "final_active_span": 3,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "max_active_count": 3,
+        "max_active_span": 3,
+        "raw_structure_count": 5,
+        "seed": 20260523,
+        "signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "steps": 200,
+        "type_counts": {
+          "oscilador": 5
+        },
+        "width": 128
+      },
+      {
+        "analysis_ok": true,
+        "analysis_status": "ok",
+        "core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "dedup_structure_count": 1,
+        "details": [
+          {
+            "accepted": false,
+            "evidence": {
+              "max_velocity": 0.00014777597162716553,
+              "n_structures_tested": 0,
+              "passing_count": 0,
+              "passing_fraction": 0.0
+            },
+            "name": "velocidad_constante",
+            "reason": "sin_movimiento_lineal"
+          },
+          {
+            "accepted": true,
+            "evidence": {
+              "oscillator_count": 5
+            },
+            "name": "periodicidad",
+            "reason": "oscilador_detectado"
+          },
+          {
+            "accepted": false,
+            "evidence": {
+              "density_cv": 0.19979870988228168,
+              "density_mean": 0.01955068407960199
+            },
+            "name": "densidad_estable",
+            "reason": "densidad_variable"
+          },
+          {
+            "accepted": true,
+            "evidence": {
+              "n_tipos": 1,
+              "tipos_presentes": [
+                "oscilador"
+              ]
+            },
+            "name": "tipo_unico",
+            "reason": "tipo_unico_dominante"
+          },
+          {
+            "accepted": false,
+            "evidence": {
+              "entropy_mean": 0.13833188480735745,
+              "transition_rate": 0.0078125
+            },
+            "name": "complejidad_alta",
+            "reason": "complejidad_baja"
+          },
+          {
+            "accepted": false,
+            "evidence": {
+              "entropy_mean": 0.13833188480735745,
+              "threshold_max": 0.4352,
+              "transition_rate": 0.0078125
+            },
+            "name": "frontera_temporal",
+            "reason": "caos_puro_o_sin_entropia"
+          },
+          {
+            "accepted": false,
+            "evidence": {
+              "C": 19.03,
+              "gzip_ratio": 0.005597014925373134,
+              "temporal_load": 143.28358208955223,
+              "transition_rate": 0.0078125
+            },
+            "name": "temporal_scale_stability",
+            "reason": "escala_temporal_inestable"
+          }
+        ],
+        "dominant_type": "oscilador",
+        "final_active_count": 3,
+        "final_active_span": 3,
+        "ic_type": "triple",
+        "laws_accepted": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "max_active_count": 3,
+        "max_active_span": 3,
+        "raw_structure_count": 5,
+        "seed": 20260523,
+        "signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "steps": 200,
+        "type_counts": {
+          "oscilador": 5
+        },
+        "width": 128
+      },
+      {
+        "analysis_ok": true,
+        "analysis_status": "ok",
+        "core_signature": [
+          "tipo_unico"
+        ],
+        "dedup_structure_count": 1,
+        "details": [
+          {
+            "accepted": false,
+            "evidence": {
+              "max_velocity": 4.6357196484215215e-17,
+              "n_structures_tested": 0,
+              "passing_count": 0,
+              "passing_fraction": 0.0
+            },
+            "name": "velocidad_constante",
+            "reason": "sin_movimiento_lineal"
+          },
+          {
+            "accepted": false,
+            "evidence": {
+              "oscillator_count": 0
+            },
+            "name": "periodicidad",
+            "reason": "sin_osciladores"
+          },
+          {
+            "accepted": true,
+            "evidence": {
+              "density_cv": 0.0,
+              "density_mean": 0.0078125
+            },
+            "name": "densidad_estable",
+            "reason": "densidad_estable"
+          },
+          {
+            "accepted": true,
+            "evidence": {
+              "n_tipos": 1,
+              "tipos_presentes": [
+                "bloque"
+              ]
+            },
+            "name": "tipo_unico",
+            "reason": "tipo_unico_dominante"
+          },
+          {
+            "accepted": false,
+            "evidence": {
+              "entropy_mean": 0.06591441234324169,
+              "transition_rate": 0.0
+            },
+            "name": "complejidad_alta",
+            "reason": "complejidad_baja"
+          },
+          {
+            "accepted": false,
+            "evidence": {
+              "entropy_mean": 0.06591441234324169,
+              "threshold_max": 0.4352,
+              "transition_rate": 0.0
+            },
+            "name": "frontera_temporal",
+            "reason": "caos_puro_o_sin_entropia"
+          },
+          {
+            "accepted": false,
+            "evidence": {
+              "C": 19.03,
+              "gzip_ratio": 0.004975124378109453,
+              "temporal_load": Infinity,
+              "transition_rate": 0.0
+            },
+            "name": "temporal_scale_stability",
+            "reason": "sin_transiciones_temporales"
+          }
+        ],
+        "dominant_type": "bloque",
+        "final_active_count": 1,
+        "final_active_span": 1,
+        "ic_type": "point",
+        "laws_accepted": [
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "max_active_count": 1,
+        "max_active_span": 1,
+        "raw_structure_count": 3,
+        "seed": 20260524,
+        "signature": [
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "steps": 200,
+        "type_counts": {
+          "bloque": 3
+        },
+        "width": 128
+      },
+      {
+        "analysis_ok": true,
+        "analysis_status": "ok",
+        "core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "dedup_structure_count": 1,
+        "details": [
+          {
+            "accepted": false,
+            "evidence": {
+              "max_velocity": 4.6357196484215215e-17,
+              "n_structures_tested": 0,
+              "passing_count": 0,
+              "passing_fraction": 0.0
+            },
+            "name": "velocidad_constante",
+            "reason": "sin_movimiento_lineal"
+          },
+          {
+            "accepted": true,
+            "evidence": {
+              "oscillator_count": 5
+            },
+            "name": "periodicidad",
+            "reason": "oscilador_detectado"
+          },
+          {
+            "accepted": false,
+            "evidence": {
+              "density_cv": 0.2001967152600554,
+              "density_mean": 0.01951181592039801
+            },
+            "name": "densidad_estable",
+            "reason": "densidad_variable"
+          },
+          {
+            "accepted": true,
+            "evidence": {
+              "n_tipos": 1,
+              "tipos_presentes": [
+                "oscilador"
+              ]
+            },
+            "name": "tipo_unico",
+            "reason": "tipo_unico_dominante"
+          },
+          {
+            "accepted": false,
+            "evidence": {
+              "entropy_mean": 0.13811191639644074,
+              "transition_rate": 0.0078125
+            },
+            "name": "complejidad_alta",
+            "reason": "complejidad_baja"
+          },
+          {
+            "accepted": false,
+            "evidence": {
+              "entropy_mean": 0.13811191639644074,
+              "threshold_max": 0.4352,
+              "transition_rate": 0.0078125
+            },
+            "name": "frontera_temporal",
+            "reason": "caos_puro_o_sin_entropia"
+          },
+          {
+            "accepted": false,
+            "evidence": {
+              "C": 19.03,
+              "gzip_ratio": 0.005635883084577115,
+              "temporal_load": 144.27860696517413,
+              "transition_rate": 0.0078125
+            },
+            "name": "temporal_scale_stability",
+            "reason": "escala_temporal_inestable"
+          }
+        ],
+        "dominant_type": "oscilador",
+        "final_active_count": 2,
+        "final_active_span": 3,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "max_active_count": 3,
+        "max_active_span": 3,
+        "raw_structure_count": 5,
+        "seed": 20260524,
+        "signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "steps": 200,
+        "type_counts": {
+          "oscilador": 5
+        },
+        "width": 128
+      },
+      {
+        "analysis_ok": true,
+        "analysis_status": "ok",
+        "core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "dedup_structure_count": 1,
+        "details": [
+          {
+            "accepted": false,
+            "evidence": {
+              "max_velocity": 0.00014777597162716553,
+              "n_structures_tested": 0,
+              "passing_count": 0,
+              "passing_fraction": 0.0
+            },
+            "name": "velocidad_constante",
+            "reason": "sin_movimiento_lineal"
+          },
+          {
+            "accepted": true,
+            "evidence": {
+              "oscillator_count": 5
+            },
+            "name": "periodicidad",
+            "reason": "oscilador_detectado"
+          },
+          {
+            "accepted": false,
+            "evidence": {
+              "density_cv": 0.19979870988228168,
+              "density_mean": 0.01955068407960199
+            },
+            "name": "densidad_estable",
+            "reason": "densidad_variable"
+          },
+          {
+            "accepted": true,
+            "evidence": {
+              "n_tipos": 1,
+              "tipos_presentes": [
+                "oscilador"
+              ]
+            },
+            "name": "tipo_unico",
+            "reason": "tipo_unico_dominante"
+          },
+          {
+            "accepted": false,
+            "evidence": {
+              "entropy_mean": 0.13833188480735745,
+              "transition_rate": 0.0078125
+            },
+            "name": "complejidad_alta",
+            "reason": "complejidad_baja"
+          },
+          {
+            "accepted": false,
+            "evidence": {
+              "entropy_mean": 0.13833188480735745,
+              "threshold_max": 0.4352,
+              "transition_rate": 0.0078125
+            },
+            "name": "frontera_temporal",
+            "reason": "caos_puro_o_sin_entropia"
+          },
+          {
+            "accepted": false,
+            "evidence": {
+              "C": 19.03,
+              "gzip_ratio": 0.005597014925373134,
+              "temporal_load": 143.28358208955223,
+              "transition_rate": 0.0078125
+            },
+            "name": "temporal_scale_stability",
+            "reason": "escala_temporal_inestable"
+          }
+        ],
+        "dominant_type": "oscilador",
+        "final_active_count": 3,
+        "final_active_span": 3,
+        "ic_type": "triple",
+        "laws_accepted": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "max_active_count": 3,
+        "max_active_span": 3,
+        "raw_structure_count": 5,
+        "seed": 20260524,
+        "signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "steps": 200,
+        "type_counts": {
+          "oscilador": 5
+        },
+        "width": 128
+      },
+      {
+        "analysis_ok": true,
+        "analysis_status": "ok",
+        "core_signature": [
+          "tipo_unico"
+        ],
+        "dedup_structure_count": 1,
+        "details": [
+          {
+            "accepted": false,
+            "evidence": {
+              "max_velocity": 4.6357196484215215e-17,
+              "n_structures_tested": 0,
+              "passing_count": 0,
+              "passing_fraction": 0.0
+            },
+            "name": "velocidad_constante",
+            "reason": "sin_movimiento_lineal"
+          },
+          {
+            "accepted": false,
+            "evidence": {
+              "oscillator_count": 0
+            },
+            "name": "periodicidad",
+            "reason": "sin_osciladores"
+          },
+          {
+            "accepted": true,
+            "evidence": {
+              "density_cv": 0.0,
+              "density_mean": 0.0078125
+            },
+            "name": "densidad_estable",
+            "reason": "densidad_estable"
+          },
+          {
+            "accepted": true,
+            "evidence": {
+              "n_tipos": 1,
+              "tipos_presentes": [
+                "bloque"
+              ]
+            },
+            "name": "tipo_unico",
+            "reason": "tipo_unico_dominante"
+          },
+          {
+            "accepted": false,
+            "evidence": {
+              "entropy_mean": 0.06591441234324169,
+              "transition_rate": 0.0
+            },
+            "name": "complejidad_alta",
+            "reason": "complejidad_baja"
+          },
+          {
+            "accepted": false,
+            "evidence": {
+              "entropy_mean": 0.06591441234324169,
+              "threshold_max": 0.4352,
+              "transition_rate": 0.0
+            },
+            "name": "frontera_temporal",
+            "reason": "caos_puro_o_sin_entropia"
+          },
+          {
+            "accepted": false,
+            "evidence": {
+              "C": 19.03,
+              "gzip_ratio": 0.004975124378109453,
+              "temporal_load": Infinity,
+              "transition_rate": 0.0
+            },
+            "name": "temporal_scale_stability",
+            "reason": "sin_transiciones_temporales"
+          }
+        ],
+        "dominant_type": "bloque",
+        "final_active_count": 1,
+        "final_active_span": 1,
+        "ic_type": "point",
+        "laws_accepted": [
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "max_active_count": 1,
+        "max_active_span": 1,
+        "raw_structure_count": 3,
+        "seed": 20260525,
+        "signature": [
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "steps": 200,
+        "type_counts": {
+          "bloque": 3
+        },
+        "width": 128
+      },
+      {
+        "analysis_ok": true,
+        "analysis_status": "ok",
+        "core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "dedup_structure_count": 1,
+        "details": [
+          {
+            "accepted": false,
+            "evidence": {
+              "max_velocity": 4.6357196484215215e-17,
+              "n_structures_tested": 0,
+              "passing_count": 0,
+              "passing_fraction": 0.0
+            },
+            "name": "velocidad_constante",
+            "reason": "sin_movimiento_lineal"
+          },
+          {
+            "accepted": true,
+            "evidence": {
+              "oscillator_count": 5
+            },
+            "name": "periodicidad",
+            "reason": "oscilador_detectado"
+          },
+          {
+            "accepted": false,
+            "evidence": {
+              "density_cv": 0.2001967152600554,
+              "density_mean": 0.01951181592039801
+            },
+            "name": "densidad_estable",
+            "reason": "densidad_variable"
+          },
+          {
+            "accepted": true,
+            "evidence": {
+              "n_tipos": 1,
+              "tipos_presentes": [
+                "oscilador"
+              ]
+            },
+            "name": "tipo_unico",
+            "reason": "tipo_unico_dominante"
+          },
+          {
+            "accepted": false,
+            "evidence": {
+              "entropy_mean": 0.13811191639644074,
+              "transition_rate": 0.0078125
+            },
+            "name": "complejidad_alta",
+            "reason": "complejidad_baja"
+          },
+          {
+            "accepted": false,
+            "evidence": {
+              "entropy_mean": 0.13811191639644074,
+              "threshold_max": 0.4352,
+              "transition_rate": 0.0078125
+            },
+            "name": "frontera_temporal",
+            "reason": "caos_puro_o_sin_entropia"
+          },
+          {
+            "accepted": false,
+            "evidence": {
+              "C": 19.03,
+              "gzip_ratio": 0.005635883084577115,
+              "temporal_load": 144.27860696517413,
+              "transition_rate": 0.0078125
+            },
+            "name": "temporal_scale_stability",
+            "reason": "escala_temporal_inestable"
+          }
+        ],
+        "dominant_type": "oscilador",
+        "final_active_count": 2,
+        "final_active_span": 3,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "max_active_count": 3,
+        "max_active_span": 3,
+        "raw_structure_count": 5,
+        "seed": 20260525,
+        "signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "steps": 200,
+        "type_counts": {
+          "oscilador": 5
+        },
+        "width": 128
+      },
+      {
+        "analysis_ok": true,
+        "analysis_status": "ok",
+        "core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "dedup_structure_count": 1,
+        "details": [
+          {
+            "accepted": false,
+            "evidence": {
+              "max_velocity": 0.00014777597162716553,
+              "n_structures_tested": 0,
+              "passing_count": 0,
+              "passing_fraction": 0.0
+            },
+            "name": "velocidad_constante",
+            "reason": "sin_movimiento_lineal"
+          },
+          {
+            "accepted": true,
+            "evidence": {
+              "oscillator_count": 5
+            },
+            "name": "periodicidad",
+            "reason": "oscilador_detectado"
+          },
+          {
+            "accepted": false,
+            "evidence": {
+              "density_cv": 0.19979870988228168,
+              "density_mean": 0.01955068407960199
+            },
+            "name": "densidad_estable",
+            "reason": "densidad_variable"
+          },
+          {
+            "accepted": true,
+            "evidence": {
+              "n_tipos": 1,
+              "tipos_presentes": [
+                "oscilador"
+              ]
+            },
+            "name": "tipo_unico",
+            "reason": "tipo_unico_dominante"
+          },
+          {
+            "accepted": false,
+            "evidence": {
+              "entropy_mean": 0.13833188480735745,
+              "transition_rate": 0.0078125
+            },
+            "name": "complejidad_alta",
+            "reason": "complejidad_baja"
+          },
+          {
+            "accepted": false,
+            "evidence": {
+              "entropy_mean": 0.13833188480735745,
+              "threshold_max": 0.4352,
+              "transition_rate": 0.0078125
+            },
+            "name": "frontera_temporal",
+            "reason": "caos_puro_o_sin_entropia"
+          },
+          {
+            "accepted": false,
+            "evidence": {
+              "C": 19.03,
+              "gzip_ratio": 0.005597014925373134,
+              "temporal_load": 143.28358208955223,
+              "transition_rate": 0.0078125
+            },
+            "name": "temporal_scale_stability",
+            "reason": "escala_temporal_inestable"
+          }
+        ],
+        "dominant_type": "oscilador",
+        "final_active_count": 3,
+        "final_active_span": 3,
+        "ic_type": "triple",
+        "laws_accepted": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "max_active_count": 3,
+        "max_active_span": 3,
+        "raw_structure_count": 5,
+        "seed": 20260525,
+        "signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "steps": 200,
+        "type_counts": {
+          "oscilador": 5
+        },
+        "width": 128
+      },
+      {
+        "analysis_ok": true,
+        "analysis_status": "ok",
+        "core_signature": [
+          "tipo_unico"
+        ],
+        "dedup_structure_count": 1,
+        "details": [
+          {
+            "accepted": false,
+            "evidence": {
+              "max_velocity": 4.6357196484215215e-17,
+              "n_structures_tested": 0,
+              "passing_count": 0,
+              "passing_fraction": 0.0
+            },
+            "name": "velocidad_constante",
+            "reason": "sin_movimiento_lineal"
+          },
+          {
+            "accepted": false,
+            "evidence": {
+              "oscillator_count": 0
+            },
+            "name": "periodicidad",
+            "reason": "sin_osciladores"
+          },
+          {
+            "accepted": true,
+            "evidence": {
+              "density_cv": 0.0,
+              "density_mean": 0.0078125
+            },
+            "name": "densidad_estable",
+            "reason": "densidad_estable"
+          },
+          {
+            "accepted": true,
+            "evidence": {
+              "n_tipos": 1,
+              "tipos_presentes": [
+                "bloque"
+              ]
+            },
+            "name": "tipo_unico",
+            "reason": "tipo_unico_dominante"
+          },
+          {
+            "accepted": false,
+            "evidence": {
+              "entropy_mean": 0.06591441234324169,
+              "transition_rate": 0.0
+            },
+            "name": "complejidad_alta",
+            "reason": "complejidad_baja"
+          },
+          {
+            "accepted": false,
+            "evidence": {
+              "entropy_mean": 0.06591441234324169,
+              "threshold_max": 0.4352,
+              "transition_rate": 0.0
+            },
+            "name": "frontera_temporal",
+            "reason": "caos_puro_o_sin_entropia"
+          },
+          {
+            "accepted": false,
+            "evidence": {
+              "C": 19.03,
+              "gzip_ratio": 0.004975124378109453,
+              "temporal_load": Infinity,
+              "transition_rate": 0.0
+            },
+            "name": "temporal_scale_stability",
+            "reason": "sin_transiciones_temporales"
+          }
+        ],
+        "dominant_type": "bloque",
+        "final_active_count": 1,
+        "final_active_span": 1,
+        "ic_type": "point",
+        "laws_accepted": [
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "max_active_count": 1,
+        "max_active_span": 1,
+        "raw_structure_count": 3,
+        "seed": 20260526,
+        "signature": [
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "steps": 200,
+        "type_counts": {
+          "bloque": 3
+        },
+        "width": 128
+      },
+      {
+        "analysis_ok": true,
+        "analysis_status": "ok",
+        "core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "dedup_structure_count": 1,
+        "details": [
+          {
+            "accepted": false,
+            "evidence": {
+              "max_velocity": 4.6357196484215215e-17,
+              "n_structures_tested": 0,
+              "passing_count": 0,
+              "passing_fraction": 0.0
+            },
+            "name": "velocidad_constante",
+            "reason": "sin_movimiento_lineal"
+          },
+          {
+            "accepted": true,
+            "evidence": {
+              "oscillator_count": 5
+            },
+            "name": "periodicidad",
+            "reason": "oscilador_detectado"
+          },
+          {
+            "accepted": false,
+            "evidence": {
+              "density_cv": 0.2001967152600554,
+              "density_mean": 0.01951181592039801
+            },
+            "name": "densidad_estable",
+            "reason": "densidad_variable"
+          },
+          {
+            "accepted": true,
+            "evidence": {
+              "n_tipos": 1,
+              "tipos_presentes": [
+                "oscilador"
+              ]
+            },
+            "name": "tipo_unico",
+            "reason": "tipo_unico_dominante"
+          },
+          {
+            "accepted": false,
+            "evidence": {
+              "entropy_mean": 0.13811191639644074,
+              "transition_rate": 0.0078125
+            },
+            "name": "complejidad_alta",
+            "reason": "complejidad_baja"
+          },
+          {
+            "accepted": false,
+            "evidence": {
+              "entropy_mean": 0.13811191639644074,
+              "threshold_max": 0.4352,
+              "transition_rate": 0.0078125
+            },
+            "name": "frontera_temporal",
+            "reason": "caos_puro_o_sin_entropia"
+          },
+          {
+            "accepted": false,
+            "evidence": {
+              "C": 19.03,
+              "gzip_ratio": 0.005635883084577115,
+              "temporal_load": 144.27860696517413,
+              "transition_rate": 0.0078125
+            },
+            "name": "temporal_scale_stability",
+            "reason": "escala_temporal_inestable"
+          }
+        ],
+        "dominant_type": "oscilador",
+        "final_active_count": 2,
+        "final_active_span": 3,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "max_active_count": 3,
+        "max_active_span": 3,
+        "raw_structure_count": 5,
+        "seed": 20260526,
+        "signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "steps": 200,
+        "type_counts": {
+          "oscilador": 5
+        },
+        "width": 128
+      },
+      {
+        "analysis_ok": true,
+        "analysis_status": "ok",
+        "core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "dedup_structure_count": 1,
+        "details": [
+          {
+            "accepted": false,
+            "evidence": {
+              "max_velocity": 0.00014777597162716553,
+              "n_structures_tested": 0,
+              "passing_count": 0,
+              "passing_fraction": 0.0
+            },
+            "name": "velocidad_constante",
+            "reason": "sin_movimiento_lineal"
+          },
+          {
+            "accepted": true,
+            "evidence": {
+              "oscillator_count": 5
+            },
+            "name": "periodicidad",
+            "reason": "oscilador_detectado"
+          },
+          {
+            "accepted": false,
+            "evidence": {
+              "density_cv": 0.19979870988228168,
+              "density_mean": 0.01955068407960199
+            },
+            "name": "densidad_estable",
+            "reason": "densidad_variable"
+          },
+          {
+            "accepted": true,
+            "evidence": {
+              "n_tipos": 1,
+              "tipos_presentes": [
+                "oscilador"
+              ]
+            },
+            "name": "tipo_unico",
+            "reason": "tipo_unico_dominante"
+          },
+          {
+            "accepted": false,
+            "evidence": {
+              "entropy_mean": 0.13833188480735745,
+              "transition_rate": 0.0078125
+            },
+            "name": "complejidad_alta",
+            "reason": "complejidad_baja"
+          },
+          {
+            "accepted": false,
+            "evidence": {
+              "entropy_mean": 0.13833188480735745,
+              "threshold_max": 0.4352,
+              "transition_rate": 0.0078125
+            },
+            "name": "frontera_temporal",
+            "reason": "caos_puro_o_sin_entropia"
+          },
+          {
+            "accepted": false,
+            "evidence": {
+              "C": 19.03,
+              "gzip_ratio": 0.005597014925373134,
+              "temporal_load": 143.28358208955223,
+              "transition_rate": 0.0078125
+            },
+            "name": "temporal_scale_stability",
+            "reason": "escala_temporal_inestable"
+          }
+        ],
+        "dominant_type": "oscilador",
+        "final_active_count": 3,
+        "final_active_span": 3,
+        "ic_type": "triple",
+        "laws_accepted": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "max_active_count": 3,
+        "max_active_span": 3,
+        "raw_structure_count": 5,
+        "seed": 20260526,
+        "signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "steps": 200,
+        "type_counts": {
+          "oscilador": 5
+        },
+        "width": 128
+      },
+      {
+        "analysis_ok": true,
+        "analysis_status": "ok",
+        "core_signature": [
+          "tipo_unico"
+        ],
+        "dedup_structure_count": 1,
+        "details": [
+          {
+            "accepted": false,
+            "evidence": {
+              "max_velocity": 4.6357196484215215e-17,
+              "n_structures_tested": 0,
+              "passing_count": 0,
+              "passing_fraction": 0.0
+            },
+            "name": "velocidad_constante",
+            "reason": "sin_movimiento_lineal"
+          },
+          {
+            "accepted": false,
+            "evidence": {
+              "oscillator_count": 0
+            },
+            "name": "periodicidad",
+            "reason": "sin_osciladores"
+          },
+          {
+            "accepted": true,
+            "evidence": {
+              "density_cv": 0.0,
+              "density_mean": 0.0078125
+            },
+            "name": "densidad_estable",
+            "reason": "densidad_estable"
+          },
+          {
+            "accepted": true,
+            "evidence": {
+              "n_tipos": 1,
+              "tipos_presentes": [
+                "bloque"
+              ]
+            },
+            "name": "tipo_unico",
+            "reason": "tipo_unico_dominante"
+          },
+          {
+            "accepted": false,
+            "evidence": {
+              "entropy_mean": 0.06591441234324169,
+              "transition_rate": 0.0
+            },
+            "name": "complejidad_alta",
+            "reason": "complejidad_baja"
+          },
+          {
+            "accepted": false,
+            "evidence": {
+              "entropy_mean": 0.06591441234324169,
+              "threshold_max": 0.4352,
+              "transition_rate": 0.0
+            },
+            "name": "frontera_temporal",
+            "reason": "caos_puro_o_sin_entropia"
+          },
+          {
+            "accepted": false,
+            "evidence": {
+              "C": 19.03,
+              "gzip_ratio": 0.004975124378109453,
+              "temporal_load": Infinity,
+              "transition_rate": 0.0
+            },
+            "name": "temporal_scale_stability",
+            "reason": "sin_transiciones_temporales"
+          }
+        ],
+        "dominant_type": "bloque",
+        "final_active_count": 1,
+        "final_active_span": 1,
+        "ic_type": "point",
+        "laws_accepted": [
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "max_active_count": 1,
+        "max_active_span": 1,
+        "raw_structure_count": 3,
+        "seed": 20260527,
+        "signature": [
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "steps": 200,
+        "type_counts": {
+          "bloque": 3
+        },
+        "width": 128
+      },
+      {
+        "analysis_ok": true,
+        "analysis_status": "ok",
+        "core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "dedup_structure_count": 1,
+        "details": [
+          {
+            "accepted": false,
+            "evidence": {
+              "max_velocity": 4.6357196484215215e-17,
+              "n_structures_tested": 0,
+              "passing_count": 0,
+              "passing_fraction": 0.0
+            },
+            "name": "velocidad_constante",
+            "reason": "sin_movimiento_lineal"
+          },
+          {
+            "accepted": true,
+            "evidence": {
+              "oscillator_count": 5
+            },
+            "name": "periodicidad",
+            "reason": "oscilador_detectado"
+          },
+          {
+            "accepted": false,
+            "evidence": {
+              "density_cv": 0.2001967152600554,
+              "density_mean": 0.01951181592039801
+            },
+            "name": "densidad_estable",
+            "reason": "densidad_variable"
+          },
+          {
+            "accepted": true,
+            "evidence": {
+              "n_tipos": 1,
+              "tipos_presentes": [
+                "oscilador"
+              ]
+            },
+            "name": "tipo_unico",
+            "reason": "tipo_unico_dominante"
+          },
+          {
+            "accepted": false,
+            "evidence": {
+              "entropy_mean": 0.13811191639644074,
+              "transition_rate": 0.0078125
+            },
+            "name": "complejidad_alta",
+            "reason": "complejidad_baja"
+          },
+          {
+            "accepted": false,
+            "evidence": {
+              "entropy_mean": 0.13811191639644074,
+              "threshold_max": 0.4352,
+              "transition_rate": 0.0078125
+            },
+            "name": "frontera_temporal",
+            "reason": "caos_puro_o_sin_entropia"
+          },
+          {
+            "accepted": false,
+            "evidence": {
+              "C": 19.03,
+              "gzip_ratio": 0.005635883084577115,
+              "temporal_load": 144.27860696517413,
+              "transition_rate": 0.0078125
+            },
+            "name": "temporal_scale_stability",
+            "reason": "escala_temporal_inestable"
+          }
+        ],
+        "dominant_type": "oscilador",
+        "final_active_count": 2,
+        "final_active_span": 3,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "max_active_count": 3,
+        "max_active_span": 3,
+        "raw_structure_count": 5,
+        "seed": 20260527,
+        "signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "steps": 200,
+        "type_counts": {
+          "oscilador": 5
+        },
+        "width": 128
+      },
+      {
+        "analysis_ok": true,
+        "analysis_status": "ok",
+        "core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "dedup_structure_count": 1,
+        "details": [
+          {
+            "accepted": false,
+            "evidence": {
+              "max_velocity": 0.00014777597162716553,
+              "n_structures_tested": 0,
+              "passing_count": 0,
+              "passing_fraction": 0.0
+            },
+            "name": "velocidad_constante",
+            "reason": "sin_movimiento_lineal"
+          },
+          {
+            "accepted": true,
+            "evidence": {
+              "oscillator_count": 5
+            },
+            "name": "periodicidad",
+            "reason": "oscilador_detectado"
+          },
+          {
+            "accepted": false,
+            "evidence": {
+              "density_cv": 0.19979870988228168,
+              "density_mean": 0.01955068407960199
+            },
+            "name": "densidad_estable",
+            "reason": "densidad_variable"
+          },
+          {
+            "accepted": true,
+            "evidence": {
+              "n_tipos": 1,
+              "tipos_presentes": [
+                "oscilador"
+              ]
+            },
+            "name": "tipo_unico",
+            "reason": "tipo_unico_dominante"
+          },
+          {
+            "accepted": false,
+            "evidence": {
+              "entropy_mean": 0.13833188480735745,
+              "transition_rate": 0.0078125
+            },
+            "name": "complejidad_alta",
+            "reason": "complejidad_baja"
+          },
+          {
+            "accepted": false,
+            "evidence": {
+              "entropy_mean": 0.13833188480735745,
+              "threshold_max": 0.4352,
+              "transition_rate": 0.0078125
+            },
+            "name": "frontera_temporal",
+            "reason": "caos_puro_o_sin_entropia"
+          },
+          {
+            "accepted": false,
+            "evidence": {
+              "C": 19.03,
+              "gzip_ratio": 0.005597014925373134,
+              "temporal_load": 143.28358208955223,
+              "transition_rate": 0.0078125
+            },
+            "name": "temporal_scale_stability",
+            "reason": "escala_temporal_inestable"
+          }
+        ],
+        "dominant_type": "oscilador",
+        "final_active_count": 3,
+        "final_active_span": 3,
+        "ic_type": "triple",
+        "laws_accepted": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "max_active_count": 3,
+        "max_active_span": 3,
+        "raw_structure_count": 5,
+        "seed": 20260527,
+        "signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "steps": 200,
+        "type_counts": {
+          "oscilador": 5
+        },
+        "width": 128
+      },
+      {
+        "analysis_ok": true,
+        "analysis_status": "ok",
+        "core_signature": [
+          "tipo_unico"
+        ],
+        "dedup_structure_count": 1,
+        "details": [
+          {
+            "accepted": false,
+            "evidence": {
+              "max_velocity": 4.6357196484215215e-17,
+              "n_structures_tested": 0,
+              "passing_count": 0,
+              "passing_fraction": 0.0
+            },
+            "name": "velocidad_constante",
+            "reason": "sin_movimiento_lineal"
+          },
+          {
+            "accepted": false,
+            "evidence": {
+              "oscillator_count": 0
+            },
+            "name": "periodicidad",
+            "reason": "sin_osciladores"
+          },
+          {
+            "accepted": true,
+            "evidence": {
+              "density_cv": 0.0,
+              "density_mean": 0.0078125
+            },
+            "name": "densidad_estable",
+            "reason": "densidad_estable"
+          },
+          {
+            "accepted": true,
+            "evidence": {
+              "n_tipos": 1,
+              "tipos_presentes": [
+                "bloque"
+              ]
+            },
+            "name": "tipo_unico",
+            "reason": "tipo_unico_dominante"
+          },
+          {
+            "accepted": false,
+            "evidence": {
+              "entropy_mean": 0.06591441234324169,
+              "transition_rate": 0.0
+            },
+            "name": "complejidad_alta",
+            "reason": "complejidad_baja"
+          },
+          {
+            "accepted": false,
+            "evidence": {
+              "entropy_mean": 0.06591441234324169,
+              "threshold_max": 0.4352,
+              "transition_rate": 0.0
+            },
+            "name": "frontera_temporal",
+            "reason": "caos_puro_o_sin_entropia"
+          },
+          {
+            "accepted": false,
+            "evidence": {
+              "C": 19.03,
+              "gzip_ratio": 0.004975124378109453,
+              "temporal_load": Infinity,
+              "transition_rate": 0.0
+            },
+            "name": "temporal_scale_stability",
+            "reason": "sin_transiciones_temporales"
+          }
+        ],
+        "dominant_type": "bloque",
+        "final_active_count": 1,
+        "final_active_span": 1,
+        "ic_type": "point",
+        "laws_accepted": [
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "max_active_count": 1,
+        "max_active_span": 1,
+        "raw_structure_count": 3,
+        "seed": 20260528,
+        "signature": [
+          "densidad_estable",
+          "tipo_unico"
+        ],
+        "steps": 200,
+        "type_counts": {
+          "bloque": 3
+        },
+        "width": 128
+      },
+      {
+        "analysis_ok": true,
+        "analysis_status": "ok",
+        "core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "dedup_structure_count": 1,
+        "details": [
+          {
+            "accepted": false,
+            "evidence": {
+              "max_velocity": 4.6357196484215215e-17,
+              "n_structures_tested": 0,
+              "passing_count": 0,
+              "passing_fraction": 0.0
+            },
+            "name": "velocidad_constante",
+            "reason": "sin_movimiento_lineal"
+          },
+          {
+            "accepted": true,
+            "evidence": {
+              "oscillator_count": 5
+            },
+            "name": "periodicidad",
+            "reason": "oscilador_detectado"
+          },
+          {
+            "accepted": false,
+            "evidence": {
+              "density_cv": 0.2001967152600554,
+              "density_mean": 0.01951181592039801
+            },
+            "name": "densidad_estable",
+            "reason": "densidad_variable"
+          },
+          {
+            "accepted": true,
+            "evidence": {
+              "n_tipos": 1,
+              "tipos_presentes": [
+                "oscilador"
+              ]
+            },
+            "name": "tipo_unico",
+            "reason": "tipo_unico_dominante"
+          },
+          {
+            "accepted": false,
+            "evidence": {
+              "entropy_mean": 0.13811191639644074,
+              "transition_rate": 0.0078125
+            },
+            "name": "complejidad_alta",
+            "reason": "complejidad_baja"
+          },
+          {
+            "accepted": false,
+            "evidence": {
+              "entropy_mean": 0.13811191639644074,
+              "threshold_max": 0.4352,
+              "transition_rate": 0.0078125
+            },
+            "name": "frontera_temporal",
+            "reason": "caos_puro_o_sin_entropia"
+          },
+          {
+            "accepted": false,
+            "evidence": {
+              "C": 19.03,
+              "gzip_ratio": 0.005635883084577115,
+              "temporal_load": 144.27860696517413,
+              "transition_rate": 0.0078125
+            },
+            "name": "temporal_scale_stability",
+            "reason": "escala_temporal_inestable"
+          }
+        ],
+        "dominant_type": "oscilador",
+        "final_active_count": 2,
+        "final_active_span": 3,
+        "ic_type": "pair_gap1",
+        "laws_accepted": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "max_active_count": 3,
+        "max_active_span": 3,
+        "raw_structure_count": 5,
+        "seed": 20260528,
+        "signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "steps": 200,
+        "type_counts": {
+          "oscilador": 5
+        },
+        "width": 128
+      },
+      {
+        "analysis_ok": true,
+        "analysis_status": "ok",
+        "core_signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "dedup_structure_count": 1,
+        "details": [
+          {
+            "accepted": false,
+            "evidence": {
+              "max_velocity": 0.00014777597162716553,
+              "n_structures_tested": 0,
+              "passing_count": 0,
+              "passing_fraction": 0.0
+            },
+            "name": "velocidad_constante",
+            "reason": "sin_movimiento_lineal"
+          },
+          {
+            "accepted": true,
+            "evidence": {
+              "oscillator_count": 5
+            },
+            "name": "periodicidad",
+            "reason": "oscilador_detectado"
+          },
+          {
+            "accepted": false,
+            "evidence": {
+              "density_cv": 0.19979870988228168,
+              "density_mean": 0.01955068407960199
+            },
+            "name": "densidad_estable",
+            "reason": "densidad_variable"
+          },
+          {
+            "accepted": true,
+            "evidence": {
+              "n_tipos": 1,
+              "tipos_presentes": [
+                "oscilador"
+              ]
+            },
+            "name": "tipo_unico",
+            "reason": "tipo_unico_dominante"
+          },
+          {
+            "accepted": false,
+            "evidence": {
+              "entropy_mean": 0.13833188480735745,
+              "transition_rate": 0.0078125
+            },
+            "name": "complejidad_alta",
+            "reason": "complejidad_baja"
+          },
+          {
+            "accepted": false,
+            "evidence": {
+              "entropy_mean": 0.13833188480735745,
+              "threshold_max": 0.4352,
+              "transition_rate": 0.0078125
+            },
+            "name": "frontera_temporal",
+            "reason": "caos_puro_o_sin_entropia"
+          },
+          {
+            "accepted": false,
+            "evidence": {
+              "C": 19.03,
+              "gzip_ratio": 0.005597014925373134,
+              "temporal_load": 143.28358208955223,
+              "transition_rate": 0.0078125
+            },
+            "name": "temporal_scale_stability",
+            "reason": "escala_temporal_inestable"
+          }
+        ],
+        "dominant_type": "oscilador",
+        "final_active_count": 3,
+        "final_active_span": 3,
+        "ic_type": "triple",
+        "laws_accepted": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "max_active_count": 3,
+        "max_active_span": 3,
+        "raw_structure_count": 5,
+        "seed": 20260528,
+        "signature": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "steps": 200,
+        "type_counts": {
+          "oscilador": 5
+        },
+        "width": 128
+      }
+    ],
+    "rule_id": 108,
+    "seeds": [
+      20260523,
+      20260524,
+      20260525,
+      20260526,
+      20260527,
+      20260528
+    ],
+    "signatures": {
+      "periodicidad + tipo_unico": 6
+    },
+    "steps": 200,
+    "total_visits": 6,
+    "width": 128
+  }
+}
