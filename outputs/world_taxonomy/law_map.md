@@ -3,7 +3,7 @@
 Source journal: `outputs/experiments_2026-05-27/journal_8c_long.jsonl`
 
 Additional formal profiles: `outputs/frontera_sweep/top_rules_profile.json`
-when present.
+and `outputs/periodicity_fase14/rule51_profile.json` when present.
 
 Schema check: world field detected as `world_type`. First-row keys include:
 `action_reason, action_taken, analysis_status, consensus, cycle_id, dedup_structure_count, details, dominant_type, inflation_ratio, is_new_law_signature, law_signature, laws_accepted, laws_evaluated, laws_rejected, laws_status, metrics, scale_attempt_count, score, steps, structure_count, timestamp, width, world_avg_score_prev, world_has_multiregime_evidence_prev, world_is_multiregime_candidate_prev, world_peak_diversity_prev, world_score_variance_prev, world_signature_diversity_prev, world_type, world_unique_signatures_prev, world_visit_count`.
@@ -18,6 +18,9 @@ This taxonomy separates four mechanisms that looked similar before Fase 8:
   diversity, but most visits are silent at the explored scale.
 - **frontera-rich-estable**: the world has low signature diversity but high
   stable law richness (`mean_laws >= 4.0`).
+- **periodicidad-global**: the world has low signature diversity and
+  `periodicidad` in at least `0.9` of non-empty
+  visits. This captures global frame-periodic dynamics such as `rule_51`.
 - **noise-bounded**: the world fails before law evaluation at high scale because
   `analysis_status == "ruido_no_analizable"`.
 - **sin-evidencia-multiregimen**: no sufficient evidence of multi-regime behavior
@@ -36,6 +39,7 @@ Thresholds used:
 - `NON_EMPTY_RATIO_THRESHOLD = 0.5`
 - `NOISE_RATIO_THRESHOLD = 0.5`
 - `RICH_LAWS_THRESHOLD = 4.0`
+- `PERIODICITY_GLOBAL_THRESHOLD = 0.9`
 
 Classification function:
 
@@ -51,6 +55,9 @@ def classify_world(stats):
             return "multiregimen-escala-dependiente"
         else:
             return "multiregimen-productivo"
+    periodicity_rate = stats['law_counts'].get('periodicidad', 0) / max(1, stats['non_empty_visits'])
+    if stats.get('allow_periodicidad_global') and periodicity_rate >= PERIODICITY_GLOBAL_THRESHOLD:
+        return "periodicidad-global"
     if stats['mean_laws'] >= RICH_LAWS_THRESHOLD:
         return "frontera-rich-estable"
     return "sin-evidencia-multiregimen"
@@ -73,6 +80,7 @@ def classify_world(stats):
 | rule_209 | unknown | frontera-rich-estable | 6 | 1.000 | 0.000 | 0.167 | 6.000 | velocidad_constante + densidad_estable + tipo_unico + complejidad_alta + frontera_temporal + temporal_scale_stability | 0.000 | dispersed |
 | rule_30 | class-3 (chaotic) | noise-bounded | 10 | 0.400 | 0.600 | 0.000 | 1.100 | densidad_estable + complejidad_alta + temporal_scale_stability | ? | ? |
 | rule_46 | unknown | frontera-rich-estable | 6 | 1.000 | 0.000 | 0.333 | 5.833 | velocidad_constante + densidad_estable + tipo_unico + complejidad_alta + frontera_temporal + temporal_scale_stability | 0.031 | dispersed |
+| rule_51 | global period-2 complement | periodicidad-global | 6 | 1.000 | 0.000 | 0.333 | 4.500 | periodicidad + densidad_estable + tipo_unico + complejidad_alta + temporal_scale_stability | 0.193 | dispersed |
 | rule_54 | class-4 | multiregimen-productivo | 12 | 0.667 | 0.333 | 0.800 | 1.917 | complejidad_alta + temporal_scale_stability | 0.714 | clustered |
 | rule_90 | class-3 (additive/XOR) | multiregimen-escala-dependiente | 14 | 0.357 | 0.000 | 0.600 | 0.500 | temporal_scale_stability | 0.172 | clustered |
 | synthetic_bloque | unknown | sin-evidencia-multiregimen | 14 | 1.000 | 0.000 | 0.200 | 2.000 | densidad_estable + tipo_unico | ? | ? |
@@ -113,6 +121,7 @@ Cell states:
 | rule_209 | ✓ | - | ✓ | ✓ | ✓ | ✓ | ✓ |
 | rule_30 | - | - | ✓ | - | ✓ | - | ✓ |
 | rule_46 | ✓ | - | ✓ | ✓ | ✓ | ✓ | ✓ |
+| rule_51 | - | ✓ | ✓ | ✓ | ✓ | - | ✓ |
 | rule_54 | ✓ | - | · | · | ✓ | - | ✓ |
 | rule_90 | · | - | · | - | · | - | ✓ |
 | synthetic_bloque | - | - | ✓ | ✓ | - | - | - |

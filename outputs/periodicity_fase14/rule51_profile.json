@@ -1,0 +1,216 @@
+{
+  "rule_51": {
+    "classification": "periodicidad-global",
+    "law_frequencies": {
+      "complejidad_alta": {
+        "class": "core",
+        "count": 6,
+        "rate": 1.0
+      },
+      "densidad_estable": {
+        "class": "present",
+        "count": 3,
+        "rate": 0.5
+      },
+      "frontera_temporal": {
+        "class": "absent",
+        "count": 0,
+        "rate": 0.0
+      },
+      "periodicidad": {
+        "class": "core",
+        "count": 6,
+        "rate": 1.0
+      },
+      "temporal_scale_stability": {
+        "class": "core",
+        "count": 6,
+        "rate": 1.0
+      },
+      "tipo_unico": {
+        "class": "core",
+        "count": 6,
+        "rate": 1.0
+      },
+      "velocidad_constante": {
+        "class": "absent",
+        "count": 0,
+        "rate": 0.0
+      }
+    },
+    "mean_dedup_structure_count": 14,
+    "mean_entropy": 0.9864223871799439,
+    "mean_n_laws": 4.5,
+    "mean_transition_rate": 1.0,
+    "noise_visits": 0,
+    "non_empty_ratio": 1.0,
+    "non_empty_visits": 6,
+    "ok_visits": 6,
+    "peak_diversity": 0.3333333333333333,
+    "rows": [
+      {
+        "analysis_ok": true,
+        "analysis_status": "ok",
+        "dedup_structure_count": 13,
+        "dominant_type": "oscilador",
+        "inflation_ratio": 3.3076923076923075,
+        "laws_accepted": [
+          "periodicidad",
+          "tipo_unico",
+          "complejidad_alta",
+          "temporal_scale_stability"
+        ],
+        "metrics": {
+          "density_mean": 0.4988724226804124,
+          "entropy_mean": 0.9652016987500657,
+          "entropy_var": 1.232595164407831e-32,
+          "gzip_ratio": 0.015302835051546391,
+          "mutual_info_mean": 0.9652016987500657,
+          "transition_rate": 1.0
+        },
+        "n_laws_accepted": 4,
+        "seed": 20260523,
+        "structure_count": 43
+      },
+      {
+        "analysis_ok": true,
+        "analysis_status": "ok",
+        "dedup_structure_count": 14,
+        "dominant_type": "oscilador",
+        "inflation_ratio": 3.642857142857143,
+        "laws_accepted": [
+          "periodicidad",
+          "densidad_estable",
+          "tipo_unico",
+          "complejidad_alta",
+          "temporal_scale_stability"
+        ],
+        "metrics": {
+          "density_mean": 0.5,
+          "entropy_mean": 1.0,
+          "entropy_var": 0.0,
+          "gzip_ratio": 0.015141752577319588,
+          "mutual_info_mean": 1.0,
+          "transition_rate": 1.0
+        },
+        "n_laws_accepted": 5,
+        "seed": 20260524,
+        "structure_count": 51
+      },
+      {
+        "analysis_ok": true,
+        "analysis_status": "ok",
+        "dedup_structure_count": 14,
+        "dominant_type": "oscilador",
+        "inflation_ratio": 3.0714285714285716,
+        "laws_accepted": [
+          "periodicidad",
+          "tipo_unico",
+          "complejidad_alta",
+          "temporal_scale_stability"
+        ],
+        "metrics": {
+          "density_mean": 0.499194587628866,
+          "entropy_mean": 0.9823166080205502,
+          "entropy_var": 1.232595164407831e-32,
+          "gzip_ratio": 0.014497422680412372,
+          "mutual_info_mean": 0.9823166080205502,
+          "transition_rate": 1.0
+        },
+        "n_laws_accepted": 4,
+        "seed": 20260525,
+        "structure_count": 43
+      },
+      {
+        "analysis_ok": true,
+        "analysis_status": "ok",
+        "dedup_structure_count": 15,
+        "dominant_type": "oscilador",
+        "inflation_ratio": 2.8666666666666667,
+        "laws_accepted": [
+          "periodicidad",
+          "densidad_estable",
+          "tipo_unico",
+          "complejidad_alta",
+          "temporal_scale_stability"
+        ],
+        "metrics": {
+          "density_mean": 0.5006443298969072,
+          "entropy_mean": 0.9886994082884973,
+          "entropy_var": 1.232595164407831e-32,
+          "gzip_ratio": 0.014497422680412372,
+          "mutual_info_mean": 0.9886994082884973,
+          "transition_rate": 1.0
+        },
+        "n_laws_accepted": 5,
+        "seed": 20260526,
+        "structure_count": 43
+      },
+      {
+        "analysis_ok": true,
+        "analysis_status": "ok",
+        "dedup_structure_count": 15,
+        "dominant_type": "oscilador",
+        "inflation_ratio": 2.7333333333333334,
+        "laws_accepted": [
+          "periodicidad",
+          "tipo_unico",
+          "complejidad_alta",
+          "temporal_scale_stability"
+        ],
+        "metrics": {
+          "density_mean": 0.5008054123711341,
+          "entropy_mean": 0.9823166080205502,
+          "entropy_var": 1.232595164407831e-32,
+          "gzip_ratio": 0.015302835051546391,
+          "mutual_info_mean": 0.9823166080205502,
+          "transition_rate": 1.0
+        },
+        "n_laws_accepted": 4,
+        "seed": 20260527,
+        "structure_count": 41
+      },
+      {
+        "analysis_ok": true,
+        "analysis_status": "ok",
+        "dedup_structure_count": 13,
+        "dominant_type": "oscilador",
+        "inflation_ratio": 3.0,
+        "laws_accepted": [
+          "periodicidad",
+          "densidad_estable",
+          "tipo_unico",
+          "complejidad_alta",
+          "temporal_scale_stability"
+        ],
+        "metrics": {
+          "density_mean": 0.5,
+          "entropy_mean": 1.0,
+          "entropy_var": 0.0,
+          "gzip_ratio": 0.015302835051546391,
+          "mutual_info_mean": 1.0,
+          "transition_rate": 1.0
+        },
+        "n_laws_accepted": 5,
+        "seed": 20260528,
+        "structure_count": 39
+      }
+    ],
+    "rule_id": 51,
+    "seeds": [
+      20260523,
+      20260524,
+      20260525,
+      20260526,
+      20260527,
+      20260528
+    ],
+    "signatures": {
+      "periodicidad + densidad_estable + tipo_unico + complejidad_alta + temporal_scale_stability": 3,
+      "periodicidad + tipo_unico + complejidad_alta + temporal_scale_stability": 3
+    },
+    "steps": 96,
+    "total_visits": 6,
+    "width": 64
+  }
+}

@@ -21,7 +21,10 @@ from typing import Any
 
 ROOT = Path(__file__).resolve().parents[2]
 JOURNAL = ROOT / "outputs" / "experiments_2026-05-27" / "journal_8c_long.jsonl"
-EXTRA_PROFILE = ROOT / "outputs" / "frontera_sweep" / "top_rules_profile.json"
+EXTRA_PROFILES = [
+    ROOT / "outputs" / "frontera_sweep" / "top_rules_profile.json",
+    ROOT / "outputs" / "periodicity_fase14" / "rule51_profile.json",
+]
 FRAGILITY_PROFILE = ROOT / "outputs" / "fragility_fase10" / "fragility_position_map.json"
 OUT = ROOT / "outputs" / "world_taxonomy" / "law_map.md"
 
@@ -29,6 +32,7 @@ DIVERSITY_THRESHOLD = 0.5
 NON_EMPTY_RATIO_THRESHOLD = 0.5
 NOISE_RATIO_THRESHOLD = 0.5
 RICH_LAWS_THRESHOLD = 4.0
+PERIODICITY_GLOBAL_THRESHOLD = 0.9
 
 LAW_COLUMNS = [
     ("vel", "velocidad_constante"),
@@ -44,6 +48,7 @@ ECA_CLASS = {
     "rule_18": "class-3 (moving wave fronts)",
     "rule_30": "class-3 (chaotic)",
     "rule_54": "class-4",
+    "rule_51": "global period-2 complement",
     "rule_90": "class-3 (additive/XOR)",
     "rule_109": "class-4",
     "rule_110": "class-4",
@@ -101,6 +106,9 @@ def classify_world(stats: dict[str, Any]) -> str:
         if stats["non_empty_ratio"] < NON_EMPTY_RATIO_THRESHOLD:
             return "multiregimen-escala-dependiente"
         return "multiregimen-productivo"
+    periodicity_rate = stats["law_counts"].get("periodicidad", 0) / max(1, stats["non_empty_visits"])
+    if stats.get("allow_periodicidad_global") and periodicity_rate >= PERIODICITY_GLOBAL_THRESHOLD:
+        return "periodicidad-global"
     if stats["mean_laws"] >= RICH_LAWS_THRESHOLD:
         return "frontera-rich-estable"
     return "sin-evidencia-multiregimen"
@@ -166,44 +174,46 @@ def compute_stats(rows: list[dict[str, Any]], world_field: str) -> dict[str, dic
 
 def load_extra_profiles() -> dict[str, dict[str, Any]]:
     """Load optional formal profiles into the same stats shape as journal rows."""
-    if not EXTRA_PROFILE.exists():
-        return {}
-    profiles = json.loads(EXTRA_PROFILE.read_text(encoding="utf-8"))
     extras: dict[str, dict[str, Any]] = {}
-    for world, profile in profiles.items():
-        total_visits = int(profile["total_visits"])
-        non_empty_visits = int(profile["non_empty_visits"])
-        noise_visits = int(profile["noise_visits"])
-        law_counts = Counter(
-            {
-                law: int(info["count"])
-                for law, info in profile["law_frequencies"].items()
+    for profile_path in EXTRA_PROFILES:
+        if not profile_path.exists():
+            continue
+        profiles = json.loads(profile_path.read_text(encoding="utf-8"))
+        for world, profile in profiles.items():
+            total_visits = int(profile["total_visits"])
+            non_empty_visits = int(profile["non_empty_visits"])
+            noise_visits = int(profile["noise_visits"])
+            law_counts = Counter(
+                {
+                    law: int(info["count"])
+                    for law, info in profile["law_frequencies"].items()
+                }
+            )
+            signatures = Counter(
+                {
+                    tuple(signature.split(" + ")) if signature != "EMPTY" else (): int(count)
+                    for signature, count in profile["signatures"].items()
+                }
+            )
+            non_empty_signatures = Counter({sig: count for sig, count in signatures.items() if sig})
+            dominant_signature = non_empty_signatures.most_common(1)[0][0] if non_empty_signatures else None
+            stats = {
+                "world": world,
+                "eca_class": ECA_CLASS.get(world, "unknown"),
+                "total_visits": total_visits,
+                "non_empty_visits": non_empty_visits,
+                "noise_visits": noise_visits,
+                "silence_visits": total_visits - non_empty_visits - noise_visits,
+                "mean_laws": float(profile["mean_n_laws"]),
+                "peak_diversity": profile["peak_diversity"],
+                "non_empty_ratio": float(profile["non_empty_ratio"]),
+                "noise_ratio": noise_visits / total_visits if total_visits else 0.0,
+                "dominant_signature": dominant_signature,
+                "law_counts": law_counts,
+                "allow_periodicidad_global": world == "rule_51",
             }
-        )
-        signatures = Counter(
-            {
-                tuple(signature.split(" + ")) if signature != "EMPTY" else (): int(count)
-                for signature, count in profile["signatures"].items()
-            }
-        )
-        non_empty_signatures = Counter({sig: count for sig, count in signatures.items() if sig})
-        dominant_signature = non_empty_signatures.most_common(1)[0][0] if non_empty_signatures else None
-        stats = {
-            "world": world,
-            "eca_class": ECA_CLASS.get(world, "unknown"),
-            "total_visits": total_visits,
-            "non_empty_visits": non_empty_visits,
-            "noise_visits": noise_visits,
-            "silence_visits": total_visits - non_empty_visits - noise_visits,
-            "mean_laws": float(profile["mean_n_laws"]),
-            "peak_diversity": profile["peak_diversity"],
-            "non_empty_ratio": float(profile["non_empty_ratio"]),
-            "noise_ratio": noise_visits / total_visits if total_visits else 0.0,
-            "dominant_signature": dominant_signature,
-            "law_counts": law_counts,
-        }
-        stats["category"] = classify_world(stats)
-        extras[world] = stats
+            stats["category"] = classify_world(stats)
+            extras[world] = stats
     return extras
 
 
@@ -289,7 +299,7 @@ def render_markdown(stats_by_world: dict[str, dict[str, Any]], world_field: str,
 Source journal: `outputs/experiments_2026-05-27/journal_8c_long.jsonl`
 
 Additional formal profiles: `outputs/frontera_sweep/top_rules_profile.json`
-when present.
+and `outputs/periodicity_fase14/rule51_profile.json` when present.
 
 Schema check: world field detected as `{world_field}`. First-row keys include:
 `{schema_excerpt}`.
@@ -304,6 +314,9 @@ This taxonomy separates four mechanisms that looked similar before Fase 8:
   diversity, but most visits are silent at the explored scale.
 - **frontera-rich-estable**: the world has low signature diversity but high
   stable law richness (`mean_laws >= {RICH_LAWS_THRESHOLD}`).
+- **periodicidad-global**: the world has low signature diversity and
+  `periodicidad` in at least `{PERIODICITY_GLOBAL_THRESHOLD:.1f}` of non-empty
+  visits. This captures global frame-periodic dynamics such as `rule_51`.
 - **noise-bounded**: the world fails before law evaluation at high scale because
   `analysis_status == "ruido_no_analizable"`.
 - **sin-evidencia-multiregimen**: no sufficient evidence of multi-regime behavior
@@ -322,6 +335,7 @@ Thresholds used:
 - `NON_EMPTY_RATIO_THRESHOLD = {NON_EMPTY_RATIO_THRESHOLD}`
 - `NOISE_RATIO_THRESHOLD = {NOISE_RATIO_THRESHOLD}`
 - `RICH_LAWS_THRESHOLD = {RICH_LAWS_THRESHOLD}`
+- `PERIODICITY_GLOBAL_THRESHOLD = {PERIODICITY_GLOBAL_THRESHOLD}`
 
 Classification function:
 
@@ -337,6 +351,9 @@ def classify_world(stats):
             return "multiregimen-escala-dependiente"
         else:
             return "multiregimen-productivo"
+    periodicity_rate = stats['law_counts'].get('periodicidad', 0) / max(1, stats['non_empty_visits'])
+    if stats.get('allow_periodicidad_global') and periodicity_rate >= PERIODICITY_GLOBAL_THRESHOLD:
+        return "periodicidad-global"
     if stats['mean_laws'] >= RICH_LAWS_THRESHOLD:
         return "frontera-rich-estable"
     return "sin-evidencia-multiregimen"

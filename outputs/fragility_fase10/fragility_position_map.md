@@ -1,4 +1,4 @@
-# Fragility Position Map - Fase 10b/12a/12c
+# Fragility Position Map - Fase 10b/12a/12c/15a
 
 ## Method
 
@@ -178,6 +178,27 @@ Left half (0-31) mean: 0.031 | Right half (32-63) mean: 0.031
 
 Pattern: dispersed (bin_range = 0.083)
 
+### rule_51 (3 seeds)
+
+Bin fragility (8 bins x 8 positions):
+
+| Bin | Positions | Mean fragility |
+| --- | --- | --- |
+| 0 | 0-7 | 0.250 |
+| 1 | 8-15 | 0.208 |
+| 2 | 16-23 | 0.083 |
+| 3 | 24-31 | 0.208 |
+| 4 | 32-39 | 0.208 |
+| 5 | 40-47 | 0.167 |
+| 6 | 48-55 | 0.292 |
+| 7 | 56-63 | 0.125 |
+
+Top 10 fragile positions: [1, 2, 3, 4, 5, 7, 8, 10, 13, 14]
+
+Left half (0-31) mean: 0.188 | Right half (32-63) mean: 0.198
+
+Pattern: dispersed (bin_range = 0.208)
+
 ### rule_54 (3 seeds)
 
 Bin fragility (8 bins x 8 positions):
@@ -232,11 +253,12 @@ Pattern: clustered (bin_range = 0.333)
 | rule_208 | 0.000 | 0.000 | 0.000 | dispersed |
 | rule_209 | 0.000 | 0.000 | 0.000 | dispersed |
 | rule_46 | 0.031 | 0.031 | 0.083 | dispersed |
+| rule_51 | 0.188 | 0.198 | 0.208 | dispersed |
 | rule_54 | 0.656 | 0.771 | 0.458 | clustered |
 | rule_90 | 0.177 | 0.167 | 0.333 | clustered |
 
 ## Conclusion
 
-`rule_137` remains a dispersed high-fragility productive basin. `rule_54` is even more fragile in total, but for a different reason: many perturbations cross the noise gate rather than merely shifting to another productive signature.
+`rule_51` adds a global-periodic world with moderate signature fragility: periodicity survives, but density-related signature components can change under one-bit flips.
 
-`rule_46`, `rule_208`, and `rule_209` remain stable frontier-rich worlds. `rule_208` and `rule_209` have zero positional fragility in this sample; `rule_46` has only sparse low-level fragility.
+`rule_137` remains the clearest dispersed high-fragility productive basin. `rule_54` remains the clearest noise-boundary fragility case.

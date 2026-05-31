@@ -48,12 +48,14 @@ CANONICAL_STEPS = {
     "rule_54": 96,
     "rule_110": 24,
     "rule_124": 24,
+    "rule_51": 96,
 }
 
 FORMAL_CASES = {
     "rule_46": [20260523, 20260524, 20260525],
     "rule_208": [20260523, 20260524, 20260525],
     "rule_209": [20260523, 20260524, 20260525],
+    "rule_51": [20260523, 20260524, 20260525],
 }
 
 MAX_SEEDS_PER_WORLD = 3
@@ -336,7 +338,7 @@ def render_report(
         "fragility is productive: perturbations either preserve the law "
         "signature or move to another non-empty signature."
         if all_silence_noise_zero
-        else "Nine of ten measured worlds still have `f_noise = 0`; `rule_54` "
+        else "Ten of eleven measured worlds still have `f_noise = 0`; `rule_54` "
         "is the exception with `f_noise = 0.375`. This qualifies the earlier "
         "Fase 10 finding: productive fragility is the dominant mechanism, but "
         "`rule_54` defines a second mechanism, noise-boundary fragility."
@@ -365,6 +367,7 @@ def render_report(
         "rule_18": "multiregimen-productivo",
         "rule_54": "multiregimen-productivo",
         "rule_137": "multiregimen-productivo",
+        "rule_51": "periodicidad-global",
     }
     pattern_by_world = {
         "rule_208": "-",
@@ -377,6 +380,7 @@ def render_report(
         "rule_18": "clustered",
         "rule_54": "clustered",
         "rule_137": "dispersed",
+        "rule_51": "dispersed",
     }
     spectrum_rows = [
         [
@@ -440,9 +444,10 @@ Selected cases:
 
 {markdown_table(["world", "category", "f_total", "pattern"], spectrum_rows)}
 
-The spectrum is ordered and category-aligned: `frontera-rich-estable` occupies
-the low-fragility end, while `multiregimen-productivo` occupies the upper end.
-There is no overlap in the measured set.
+The spectrum is category-aligned at the extremes: `frontera-rich-estable`
+occupies the low-fragility end, while `multiregimen-productivo` occupies the
+upper end. `periodicidad-global` (`rule_51`) sits in the middle: periodicity is
+robust, but the full law signature can still change.
 
 `rule_208` and `rule_209` both have `f_total = 0.000`. Since they are linked by
 the complement symmetry `0 <-> 1`, this suggests complement symmetry preserves
@@ -451,6 +456,10 @@ not only the law signature but also the basin width.
 `rule_54` is the new exception: it is the most fragile measured world by
 `f_total`, but its fragility is partly noise-boundary fragility (`f_noise =
 0.375`), not only productive signature switching.
+
+`rule_51` disproves the naive prediction `f_total ~= 0`: global periodicity
+survives all flips, but the complete law signature changes when
+`densidad_estable` toggles.
 
 ## Interpretation
 
@@ -470,6 +479,8 @@ diversity and nearly invariant six-law signatures.
 
 Fase 12c adds the remaining measured `multiregimen-productivo` worlds:
 `rule_54`, `rule_110`, and `rule_124`.
+
+Fase 15a adds `rule_51` as `periodicidad-global`.
 
 ## Key Finding: frontera-rich-estable Basins Are Wide
 

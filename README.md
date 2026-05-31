@@ -1,6 +1,6 @@
 # ZUSE AUTOMAT AGENT
 
-Estado: Fase 13 completada. Atlas de 18 mundos; espectro de fragilidad medido.
+Estado: Fase 15a completada. Atlas de 19 mundos; espectro de fragilidad medido.
 
 Premisas rectoras:
 
@@ -48,7 +48,7 @@ python -m unittest discover -s tests
 ## Scientific Artifacts
 
 - [World taxonomy and law coverage matrix](outputs/world_taxonomy/law_map.md)
-  -- formal classification of 18 worlds, per-law coverage across the 7 current
+  -- formal classification of 19 worlds, per-law coverage across the 7 current
   cycle laws, and measured basin fragility where available.
 - [Physical-tree findings](outputs/pysr_fase7/FINDINGS.md) -- meta-analysis of
   physical metrics predicting law richness, updated with the
@@ -57,6 +57,9 @@ python -m unittest discover -s tests
   fragility spectrum and the two observed fragility mechanisms.
 - [Rule 54 noise-gate anatomy](outputs/rule54_gate_fase13/rule54_gate_report.md)
   -- detailed diagnosis of the `rule_54` dedup noise-boundary mechanism.
+- [Periodicity sweep](outputs/periodicity_fase14/periodicity_sweep_report.md)
+  -- ECA validation of `periodicidad`, with `rule_51` as global period-2
+  positive control.
 
 ## Current Scientific Map
 
@@ -68,6 +71,8 @@ Fases 11-13 establish two robust results:
 - Basin fragility separates world families. `frontera-rich-estable` worlds have
   broad basins (`f_total` 0.000-0.031), while `multiregimen-productivo` worlds
   occupy the high-fragility range.
+- `periodicidad` is validated on real ECA dynamics via `rule_51`, but as
+  global frame-periodicity rather than a local particle oscillator.
 
 Two high-fragility mechanisms are currently distinguished:
 
@@ -75,6 +80,8 @@ Two high-fragility mechanisms are currently distinguished:
   dispersed). Perturbations move between productive law signatures.
 - Noise-boundary fragility: `rule_54` (`f_total=0.714`, `f_noise=0.375`,
   clustered). Perturbations cross the deduplicated structure gate.
+- Global periodicity: `rule_51` (`f_total=0.193`, `f_noise=0.000`, dispersed).
+  Periodicity survives flips, but the full law signature can change.
 
 ## Estado de fases
 
