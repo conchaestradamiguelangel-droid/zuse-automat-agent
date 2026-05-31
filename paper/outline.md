@@ -650,13 +650,59 @@ interpretation layer is incomplete.
 
 ## 10. Next Work
 
-- Convert the outline into a full preprint with figures and tables.
-- Add figures:
-  - world taxonomy table,
-  - law coverage matrix,
-  - `f_total`/`f_core` spectrum,
-  - `rule_108` oscillator motif,
-  - `rule_54` gate and observer non-equivariance.
-- Optionally extend local-oscillator search to moving oscillators, wider IC
-  words, or non-zero backgrounds.
-- Revisit PySR once Julia setup is stable.
+### 10.1 Symmetry-invariant observers
+
+The two observer artifacts identified in Section 8 — `tipo_unico` mirror
+asymmetry and dedup translation non-equivariance — share a root cause: the
+heuristic observers do not encode the symmetries of the underlying CA. A
+natural next step is to build observers that canonicalize structure
+representations under spatial reflection and translation before counting. This
+would make `tipo_unico` a mirror-invariant physical property and dedup counts
+stable across IC positions, strengthening the evidential basis for both the
+atlas and the fragility measurements.
+
+### 10.2 Extended local oscillator search
+
+The `rule_108` uniqueness result holds under the current stationary protocol
+(zero background, exact period, IC words of length <= 8, span <= 32). Three
+natural extensions remain:
+
+- **Moving oscillators**: relax the stationarity requirement to allow
+  oscillators that translate at constant velocity (glider-like periodicity).
+- **Longer IC words**: extend the IC sweep from length 8 to length 12..16 to
+  test whether longer seed patterns produce oscillators in rules that failed
+  the length-8 protocol.
+- **Non-zero backgrounds**: replace the quiescent zero background with a
+  uniform-one or periodic background to test whether `rule_108` retains its
+  uniqueness or whether other rules enter the family under different
+  background conditions.
+
+Each extension is a controlled experiment with the same measurement protocol;
+only the IC or background definition changes.
+
+### 10.3 PySR symbolic regression
+
+The decision-tree calibration for `frontera_temporal` and
+`temporal_scale_stability` (Section 4) provides thresholds but not formulas.
+PySR symbolic regression on the fragility spectrum (`f_total`, `f_core`,
+`f_gap` as functions of rule properties and IC metrics) could yield
+interpretable expressions for why some worlds have wide basins and others do
+not. The Julia dependency required by PySR is the only technical blocker; the
+datasets are ready.
+
+### 10.4 Figures
+
+The following five figures are planned for the preprint draft:
+
+1. **World taxonomy table** — the full 20-world atlas with categories, law
+   coverage symbols, and fragility columns, formatted as a paper-ready table.
+2. **Law coverage matrix** — the `✓ / · / - / ?` matrix from
+   `outputs/world_taxonomy/law_map.md`, rendered as a heatmap or binary grid.
+3. **`f_total` / `f_core` spectrum** — a two-axis scatter or bar chart showing
+   all measured worlds positioned by `f_total` and `f_core`, with the four
+   fragility mechanisms labeled.
+4. **`rule_108` oscillator motif** — a space-time diagram of the `#.# <-> ###`
+   two-step cycle, showing several periods on a quiescent background.
+5. **`rule_54` gate and observer non-equivariance** — a dual figure: the
+   Fase 13 noise-gate crossing diagram (reference dedup vs perturbed dedup)
+   alongside the Fase 19 per-position dedup variation (15..24 across k=0..63).
