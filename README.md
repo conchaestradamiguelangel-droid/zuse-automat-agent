@@ -1,6 +1,6 @@
 # ZUSE AUTOMAT AGENT
 
-Estado: Fase 17 completada. Atlas de 20 mundos; rule_108 integrado como oscilador-local.
+Estado: Fase 18 completada. rule_108 es el unico oscilador-local ECA hallado en barrido pequeno.
 
 Premisas rectoras:
 
@@ -66,10 +66,13 @@ python -m unittest discover -s tests
 - [Local oscillator search](outputs/local_oscillators_fase16/local_oscillator_report.md)
   -- quiescent-background ECA search; `rule_108` provides a local period-2
   oscillator witness (`#.# <-> ###`).
+- [Local oscillator family sweep](outputs/local_oscillator_family_fase18/local_oscillator_family_report.md)
+  -- exhaustive quiescent ECA sweep over binary IC words of length 1..8;
+  `rule_108` is unique under this protocol.
 
 ## Current Scientific Map
 
-Fases 11-17 establish these robust results:
+Fases 11-18 establish these robust results:
 
 - `frontera_temporal` is not intrinsically rare. It was under-sampled by the
   initial atlas and is now represented by the `frontera-rich-estable` family:
@@ -80,6 +83,9 @@ Fases 11-17 establish these robust results:
 - `periodicidad` is validated on real ECA dynamics in two forms:
   `rule_51` gives global frame-periodicity, while `rule_108` gives a local
   period-2 oscillator on a quiescent background (`#.# <-> ###`).
+- Exhaustive local-word sweep through length 8 found no other quiescent ECA
+  rule with a local oscillator. `rule_108` is unique under the current
+  stationary local-periodicity protocol.
 
 Three high-fragility mechanisms are currently distinguished:
 

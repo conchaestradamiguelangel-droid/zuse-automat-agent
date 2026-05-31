@@ -1,11 +1,12 @@
-# ZAA Scientific Synthesis — Fases 11-17
+# ZAA Scientific Synthesis — Fases 11-18
 
 Date: 2026-05-31
 
 This document consolidates the current scientific map of ZAA after the ECA
 sweep, world taxonomy, basin-fragility diagnostics, `rule_54` gate anatomy,
 `rule_51` periodicity validation, `core_fragility`, the Fase 16 local
-oscillator search, and the Fase 17 formal `rule_108` atlas profile.
+oscillator search, the Fase 17 formal `rule_108` atlas profile, and the
+Fase 18 local oscillator family sweep.
 
 Primary artifacts:
 
@@ -18,6 +19,7 @@ Primary artifacts:
 - `outputs/local_oscillators_fase16/local_oscillator_report.md`
 - `outputs/profile_fase17/rule108_seed_profile.json`
 - `outputs/profile_fase17/rule108_fragility.json`
+- `outputs/local_oscillator_family_fase18/local_oscillator_family_report.md`
 
 ## 1. Current Atlas
 
@@ -147,6 +149,27 @@ Formal `rule_108` profile:
 Interpretation: almost any extra bit changes secondary laws (`f_total=0.992`),
 but the oscillator core is highly robust (`core_fragility=0.047`) and its
 fragility is localized around the motif.
+
+Fase 18 asks whether `rule_108` is isolated or part of a broader ECA rule
+family. It exhaustively tests all ECA rules with quiescent zero background
+(`f(0,0,0)=0`) against all non-zero binary IC words of length `1..8`, centered
+on a zero background.
+
+Result:
+
+- Rules tested: 128.
+- IC words per rule: 510.
+- Physical local-oscillator candidates: 179.
+- Rules with candidates: 1.
+- Unique rule: `rule_108`.
+- Periods found: only `T=2`.
+- Production-valid candidates: 132.
+
+Interpretation: under the current stationary local-periodicity protocol,
+`rule_108` is unique as an ECA rule. The family structure is not across rules;
+it is internal to `rule_108`, where many short IC words converge to exact
+local period-2 motifs. No period greater than 2 appears for words of length
+<= 8.
 
 ## 4. Fragility Has Two Axes
 

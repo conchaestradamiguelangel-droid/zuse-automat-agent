@@ -1,0 +1,48 @@
+{
+  "rules": {
+    "rule_108": {
+      "best_witness": {
+        "analysis_status": "ok",
+        "dedup_structure_count": 1,
+        "laws_accepted": [
+          "periodicidad",
+          "tipo_unico"
+        ],
+        "motif": [
+          "###",
+          "#.#"
+        ],
+        "period": 2,
+        "span": 3,
+        "word": "101",
+        "word_len": 3
+      },
+      "candidate_count": 179,
+      "periodicity_production_count": 132,
+      "periods": {
+        "2": 179
+      },
+      "spans": {
+        "3": 42,
+        "5": 20,
+        "6": 48,
+        "7": 42,
+        "8": 27
+      }
+    }
+  },
+  "rules_with_candidates": 1,
+  "setup": {
+    "burn_in": 80,
+    "ic_word_lengths": [
+      1,
+      8
+    ],
+    "max_local_span": 32,
+    "max_period": 16,
+    "rules_tested": 128,
+    "steps": 200,
+    "width": 128
+  },
+  "total_candidates": 179
+}
