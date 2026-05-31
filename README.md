@@ -50,6 +50,9 @@ python -m unittest discover -s tests
 - [World taxonomy and law coverage matrix](outputs/world_taxonomy/law_map.md)
   -- formal classification of 19 worlds, per-law coverage across the 7 current
   cycle laws, and measured basin fragility where available.
+- [Scientific synthesis](outputs/scientific_synthesis/FINDINGS.md) -- unified
+  summary of world families, law coverage, basin fragility, core fragility, and
+  open questions.
 - [Physical-tree findings](outputs/pysr_fase7/FINDINGS.md) -- meta-analysis of
   physical metrics predicting law richness, updated with the
   `frontera-rich-estable` family.
@@ -63,7 +66,7 @@ python -m unittest discover -s tests
 
 ## Current Scientific Map
 
-Fases 11-13 establish two robust results:
+Fases 11-15b establish these robust results:
 
 - `frontera_temporal` is not intrinsically rare. It was under-sampled by the
   initial atlas and is now represented by the `frontera-rich-estable` family:
