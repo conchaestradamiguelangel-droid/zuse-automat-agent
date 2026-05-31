@@ -114,19 +114,58 @@ signature in the atlas can be reproduced from deterministic scripts.
 
 ## 4. Seven Cycle Laws
 
-List and define the current law set:
+Each law is evaluated per run (one world, one seed, one step count) after the
+observer and dedup stages succeed (`analysis_status == ok`). The output is
+binary: accepted or rejected. Law signatures are frozensets of accepted law
+names.
 
-1. `velocidad_constante`
-2. `periodicidad`
-3. `densidad_estable`
-4. `tipo_unico`
-5. `complejidad_alta`
-6. `frontera_temporal`
-7. `temporal_scale_stability`
+### Formal Criteria
 
-For each law, include its operational criterion and the level at which it
-applies. Note explicitly that `tipo_unico` is an observer-dependent exploratory
-signal, not a mirror-invariant physical law.
+| # | Law | Inputs | Criterion | Constants |
+| --- | --- | --- | --- | --- |
+| 1 | `velocidad_constante` | Position tracks of moving structures | At least 50% of moving tracks (`velocity > 0.05` cells/step) have linear `x(t)` with normalized residual `< 0.15` | - |
+| 2 | `periodicidad` | Structure type list | At least one structure classified as `oscilador` | - |
+| 3 | `densidad_estable` | Frame density time series | Coefficient of variation `CV = sigma(rho) / mu(rho) < 0.15` | - |
+| 4 | `tipo_unico` | Structure type set | Exactly one structure type present | - |
+| 5 | `complejidad_alta` | Frame metrics | `entropy_mean > 0.80` and `transition_rate > 0.25` | - |
+| 6 | `frontera_temporal` | Frame metrics | `entropy_mean > 0.80` and `0.28 < transition_rate < 0.4352` | upper threshold calibrated 2026-05-24 |
+| 7 | `temporal_scale_stability` | Frame metrics + steps | `temporal_load = steps * gzip_ratio / transition_rate < 19.03` | threshold calibrated 2026-05-24 |
+
+`temporal_scale_stability` rejects any run with `transition_rate = 0`
+(quiescent or static configurations), since temporal load is undefined
+(`infinity`).
+
+### Calibrated Constants
+
+The `frontera_temporal` upper threshold `0.4352` is the midpoint between the
+maximum `transition_rate` observed for `rule_110` (`0.4147`) and the minimum
+for `rule_30` (`0.4557`) across six canonical seeds at `steps = 24`,
+`width = 64`.
+
+The `temporal_scale_stability` threshold `19.03` was fit on
+`datasets/fase2c_v3.csv` (120 ECA scale samples). A decision tree at
+`max_depth = 4` achieved accuracy `0.908`, precision `0.886`, and recall
+`0.954` on the `analysis_ok` label.
+
+Both constants are valid for the atlas protocol (`width = 64`, `steps` roughly
+`24..200`) and should be recalibrated if width or step range changes
+substantially.
+
+### Caveats
+
+`tipo_unico` is an observer-dependent exploratory signal, not a mirror-invariant
+physical property. Fase 6b showed that `rule_110` and `rule_124` are left-right
+mirrors of each other with identical dynamics, yet `tipo_unico` can fire
+asymmetrically depending on orientation. `tipo_unico` is retained in the atlas
+for its exploratory value but should not be used as evidence of physical
+asymmetry.
+
+`frontera_temporal` and `temporal_scale_stability` both depend on
+`transition_rate`. Fase 4a and later tree analyses identify transition rate as
+the main discriminator separating organized frontier dynamics from pure chaos
+or static order. Other metrics (`density_mean`, `gzip_ratio`,
+`mutual_info_mean`) are useful context features but should not be treated as
+independent causal evidence without ablation.
 
 ## 5. World Atlas: 20 Worlds and Dynamic Categories
 
