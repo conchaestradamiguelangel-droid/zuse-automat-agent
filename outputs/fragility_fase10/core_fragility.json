@@ -1,0 +1,112 @@
+{
+  "rule_109": {
+    "core_laws": "reference_signature_per_seed",
+    "f_core": 0.25,
+    "f_noise": 0.0,
+    "f_secondary": 0.0,
+    "f_silence": 0.0,
+    "f_total": 0.25,
+    "n_flips": 64,
+    "world": "rule_109"
+  },
+  "rule_110": {
+    "core_laws": "reference_signature_per_seed",
+    "f_core": 0.19791666666666666,
+    "f_noise": 0.0,
+    "f_secondary": 0.125,
+    "f_silence": 0.0,
+    "f_total": 0.3229166666666667,
+    "n_flips": 192,
+    "world": "rule_110"
+  },
+  "rule_124": {
+    "core_laws": "reference_signature_per_seed",
+    "f_core": 0.08333333333333333,
+    "f_noise": 0.0,
+    "f_secondary": 0.140625,
+    "f_silence": 0.0,
+    "f_total": 0.22395833333333334,
+    "n_flips": 192,
+    "world": "rule_124"
+  },
+  "rule_137": {
+    "core_laws": "reference_signature_per_seed",
+    "f_core": 0.3125,
+    "f_noise": 0.0,
+    "f_secondary": 0.3177083333333333,
+    "f_silence": 0.0,
+    "f_total": 0.6302083333333334,
+    "n_flips": 192,
+    "world": "rule_137"
+  },
+  "rule_18": {
+    "core_laws": "reference_signature_per_seed",
+    "f_core": 0.13541666666666666,
+    "f_noise": 0.0,
+    "f_secondary": 0.21354166666666666,
+    "f_silence": 0.0,
+    "f_total": 0.3489583333333333,
+    "n_flips": 192,
+    "world": "rule_18"
+  },
+  "rule_208": {
+    "core_laws": "complejidad_alta + densidad_estable + frontera_temporal + temporal_scale_stability + tipo_unico + velocidad_constante",
+    "f_core": 0.0,
+    "f_noise": 0.0,
+    "f_secondary": 0.0,
+    "f_silence": 0.0,
+    "f_total": 0.0,
+    "n_flips": 192,
+    "world": "rule_208"
+  },
+  "rule_209": {
+    "core_laws": "complejidad_alta + densidad_estable + frontera_temporal + temporal_scale_stability + tipo_unico + velocidad_constante",
+    "f_core": 0.0,
+    "f_noise": 0.0,
+    "f_secondary": 0.0,
+    "f_silence": 0.0,
+    "f_total": 0.0,
+    "n_flips": 192,
+    "world": "rule_209"
+  },
+  "rule_46": {
+    "core_laws": "complejidad_alta + densidad_estable + frontera_temporal + temporal_scale_stability + tipo_unico + velocidad_constante",
+    "f_core": 0.03125,
+    "f_noise": 0.0,
+    "f_secondary": 0.0,
+    "f_silence": 0.0,
+    "f_total": 0.03125,
+    "n_flips": 192,
+    "world": "rule_46"
+  },
+  "rule_51": {
+    "core_laws": "periodicidad",
+    "f_core": 0.0,
+    "f_noise": 0.0,
+    "f_secondary": 0.19270833333333334,
+    "f_silence": 0.0,
+    "f_total": 0.19270833333333334,
+    "n_flips": 192,
+    "world": "rule_51"
+  },
+  "rule_54": {
+    "core_laws": "reference_signature_per_seed",
+    "f_core": 0.6770833333333334,
+    "f_noise": 0.375,
+    "f_secondary": 0.036458333333333336,
+    "f_silence": 0.0,
+    "f_total": 0.7135416666666666,
+    "n_flips": 192,
+    "world": "rule_54"
+  },
+  "rule_90": {
+    "core_laws": "temporal_scale_stability",
+    "f_core": 0.0,
+    "f_noise": 0.0,
+    "f_secondary": 0.171875,
+    "f_silence": 0.0,
+    "f_total": 0.171875,
+    "n_flips": 192,
+    "world": "rule_90"
+  }
+}

@@ -26,6 +26,7 @@ EXTRA_PROFILES = [
     ROOT / "outputs" / "periodicity_fase14" / "rule51_profile.json",
 ]
 FRAGILITY_PROFILE = ROOT / "outputs" / "fragility_fase10" / "fragility_position_map.json"
+CORE_FRAGILITY_PROFILE = ROOT / "outputs" / "fragility_fase10" / "core_fragility.json"
 OUT = ROOT / "outputs" / "world_taxonomy" / "law_map.md"
 
 DIVERSITY_THRESHOLD = 0.5
@@ -230,6 +231,13 @@ def apply_fragility_profiles(stats_by_world: dict[str, dict[str, Any]]) -> None:
         stats_by_world[world]["fragility_total"] = fragility_total
         stats_by_world[world]["fragility_pattern"] = payload.get("pattern")
 
+    if CORE_FRAGILITY_PROFILE.exists():
+        core_data = json.loads(CORE_FRAGILITY_PROFILE.read_text(encoding="utf-8"))
+        for world, payload in core_data.items():
+            if world not in stats_by_world:
+                continue
+            stats_by_world[world]["core_fragility"] = payload.get("f_core")
+
 
 def law_cell(stats: dict[str, Any], law_name: str) -> str:
     non_empty_visits = stats["non_empty_visits"]
@@ -282,6 +290,7 @@ def render_markdown(stats_by_world: dict[str, dict[str, Any]], world_field: str,
                 fmt_float(stats["mean_laws"]),
                 signature_label(stats["dominant_signature"]),
                 fmt_optional_float(stats.get("fragility_total")),
+                fmt_optional_float(stats.get("core_fragility")),
                 stats.get("fragility_pattern") or "?",
             ]
         )
@@ -373,6 +382,7 @@ def classify_world(stats):
             "mean_laws",
             "dominant_signature",
             "fragility_total",
+            "core_fragility",
             "fragility_pattern",
         ],
         classification_rows,

@@ -65,27 +65,27 @@ def classify_world(stats):
 
 ## World Classification Table
 
-| world | eca_class | category | total_visits | non_empty_ratio | noise_ratio | peak_diversity | mean_laws | dominant_signature | fragility_total | fragility_pattern |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| life_blinker | unknown | sin-evidencia-multiregimen | 18 | 1.000 | 0.000 | 0.200 | 3.000 | periodicidad + densidad_estable + tipo_unico | ? | ? |
-| life_block | unknown | sin-evidencia-multiregimen | 12 | 1.000 | 0.000 | 0.200 | 2.000 | densidad_estable + tipo_unico | ? | ? |
-| life_glider | unknown | sin-evidencia-multiregimen | 14 | 1.000 | 0.000 | 0.333 | 2.357 | densidad_estable + tipo_unico | ? | ? |
-| rule_109 | class-4 | multiregimen-productivo | 15 | 0.667 | 0.333 | 0.667 | 2.000 | densidad_estable + complejidad_alta + frontera_temporal | 0.250 | clustered |
-| rule_110 | class-4 | multiregimen-productivo | 11 | 0.636 | 0.364 | 0.600 | 2.727 | velocidad_constante + densidad_estable + complejidad_alta + frontera_temporal | 0.323 | clustered |
-| rule_124 | unknown | multiregimen-productivo | 12 | 0.583 | 0.417 | 0.600 | 2.167 | densidad_estable + complejidad_alta + frontera_temporal + temporal_scale_stability | 0.224 | dispersed |
-| rule_137 | class-4 | multiregimen-productivo | 15 | 0.800 | 0.200 | 0.833 | 2.867 | densidad_estable + complejidad_alta + frontera_temporal | 0.630 | dispersed |
-| rule_150 | class-3 (additive) | noise-bounded | 8 | 0.250 | 0.750 | 0.000 | 0.750 | densidad_estable + complejidad_alta + temporal_scale_stability | ? | ? |
-| rule_18 | class-3 (moving wave fronts) | multiregimen-productivo | 13 | 0.769 | 0.231 | 0.800 | 2.308 | velocidad_constante + tipo_unico + temporal_scale_stability | 0.349 | clustered |
-| rule_208 | unknown | frontera-rich-estable | 6 | 1.000 | 0.000 | 0.167 | 6.000 | velocidad_constante + densidad_estable + tipo_unico + complejidad_alta + frontera_temporal + temporal_scale_stability | 0.000 | dispersed |
-| rule_209 | unknown | frontera-rich-estable | 6 | 1.000 | 0.000 | 0.167 | 6.000 | velocidad_constante + densidad_estable + tipo_unico + complejidad_alta + frontera_temporal + temporal_scale_stability | 0.000 | dispersed |
-| rule_30 | class-3 (chaotic) | noise-bounded | 10 | 0.400 | 0.600 | 0.000 | 1.100 | densidad_estable + complejidad_alta + temporal_scale_stability | ? | ? |
-| rule_46 | unknown | frontera-rich-estable | 6 | 1.000 | 0.000 | 0.333 | 5.833 | velocidad_constante + densidad_estable + tipo_unico + complejidad_alta + frontera_temporal + temporal_scale_stability | 0.031 | dispersed |
-| rule_51 | global period-2 complement | periodicidad-global | 6 | 1.000 | 0.000 | 0.333 | 4.500 | periodicidad + densidad_estable + tipo_unico + complejidad_alta + temporal_scale_stability | 0.193 | dispersed |
-| rule_54 | class-4 | multiregimen-productivo | 12 | 0.667 | 0.333 | 0.800 | 1.917 | complejidad_alta + temporal_scale_stability | 0.714 | clustered |
-| rule_90 | class-3 (additive/XOR) | multiregimen-escala-dependiente | 14 | 0.357 | 0.000 | 0.600 | 0.500 | temporal_scale_stability | 0.172 | clustered |
-| synthetic_bloque | unknown | sin-evidencia-multiregimen | 14 | 1.000 | 0.000 | 0.200 | 2.000 | densidad_estable + tipo_unico | ? | ? |
-| synthetic_glider | unknown | sin-evidencia-multiregimen | 18 | 1.000 | 0.000 | 0.400 | 3.167 | velocidad_constante + densidad_estable + tipo_unico | ? | ? |
-| synthetic_oscilador | unknown | sin-evidencia-multiregimen | 14 | 1.000 | 0.000 | 0.400 | 2.286 | periodicidad + tipo_unico | ? | ? |
+| world | eca_class | category | total_visits | non_empty_ratio | noise_ratio | peak_diversity | mean_laws | dominant_signature | fragility_total | core_fragility | fragility_pattern |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| life_blinker | unknown | sin-evidencia-multiregimen | 18 | 1.000 | 0.000 | 0.200 | 3.000 | periodicidad + densidad_estable + tipo_unico | ? | ? | ? |
+| life_block | unknown | sin-evidencia-multiregimen | 12 | 1.000 | 0.000 | 0.200 | 2.000 | densidad_estable + tipo_unico | ? | ? | ? |
+| life_glider | unknown | sin-evidencia-multiregimen | 14 | 1.000 | 0.000 | 0.333 | 2.357 | densidad_estable + tipo_unico | ? | ? | ? |
+| rule_109 | class-4 | multiregimen-productivo | 15 | 0.667 | 0.333 | 0.667 | 2.000 | densidad_estable + complejidad_alta + frontera_temporal | 0.250 | 0.250 | clustered |
+| rule_110 | class-4 | multiregimen-productivo | 11 | 0.636 | 0.364 | 0.600 | 2.727 | velocidad_constante + densidad_estable + complejidad_alta + frontera_temporal | 0.323 | 0.198 | clustered |
+| rule_124 | unknown | multiregimen-productivo | 12 | 0.583 | 0.417 | 0.600 | 2.167 | densidad_estable + complejidad_alta + frontera_temporal + temporal_scale_stability | 0.224 | 0.083 | dispersed |
+| rule_137 | class-4 | multiregimen-productivo | 15 | 0.800 | 0.200 | 0.833 | 2.867 | densidad_estable + complejidad_alta + frontera_temporal | 0.630 | 0.312 | dispersed |
+| rule_150 | class-3 (additive) | noise-bounded | 8 | 0.250 | 0.750 | 0.000 | 0.750 | densidad_estable + complejidad_alta + temporal_scale_stability | ? | ? | ? |
+| rule_18 | class-3 (moving wave fronts) | multiregimen-productivo | 13 | 0.769 | 0.231 | 0.800 | 2.308 | velocidad_constante + tipo_unico + temporal_scale_stability | 0.349 | 0.135 | clustered |
+| rule_208 | unknown | frontera-rich-estable | 6 | 1.000 | 0.000 | 0.167 | 6.000 | velocidad_constante + densidad_estable + tipo_unico + complejidad_alta + frontera_temporal + temporal_scale_stability | 0.000 | 0.000 | dispersed |
+| rule_209 | unknown | frontera-rich-estable | 6 | 1.000 | 0.000 | 0.167 | 6.000 | velocidad_constante + densidad_estable + tipo_unico + complejidad_alta + frontera_temporal + temporal_scale_stability | 0.000 | 0.000 | dispersed |
+| rule_30 | class-3 (chaotic) | noise-bounded | 10 | 0.400 | 0.600 | 0.000 | 1.100 | densidad_estable + complejidad_alta + temporal_scale_stability | ? | ? | ? |
+| rule_46 | unknown | frontera-rich-estable | 6 | 1.000 | 0.000 | 0.333 | 5.833 | velocidad_constante + densidad_estable + tipo_unico + complejidad_alta + frontera_temporal + temporal_scale_stability | 0.031 | 0.031 | dispersed |
+| rule_51 | global period-2 complement | periodicidad-global | 6 | 1.000 | 0.000 | 0.333 | 4.500 | periodicidad + densidad_estable + tipo_unico + complejidad_alta + temporal_scale_stability | 0.193 | 0.000 | dispersed |
+| rule_54 | class-4 | multiregimen-productivo | 12 | 0.667 | 0.333 | 0.800 | 1.917 | complejidad_alta + temporal_scale_stability | 0.714 | 0.677 | clustered |
+| rule_90 | class-3 (additive/XOR) | multiregimen-escala-dependiente | 14 | 0.357 | 0.000 | 0.600 | 0.500 | temporal_scale_stability | 0.172 | 0.000 | clustered |
+| synthetic_bloque | unknown | sin-evidencia-multiregimen | 14 | 1.000 | 0.000 | 0.200 | 2.000 | densidad_estable + tipo_unico | ? | ? | ? |
+| synthetic_glider | unknown | sin-evidencia-multiregimen | 18 | 1.000 | 0.000 | 0.400 | 3.167 | velocidad_constante + densidad_estable + tipo_unico | ? | ? | ? |
+| synthetic_oscilador | unknown | sin-evidencia-multiregimen | 14 | 1.000 | 0.000 | 0.400 | 2.286 | periodicidad + tipo_unico | ? | ? | ? |
 
 ## Law Coverage Matrix
 

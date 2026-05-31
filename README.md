@@ -82,6 +82,8 @@ Two high-fragility mechanisms are currently distinguished:
   clustered). Perturbations cross the deduplicated structure gate.
 - Global periodicity: `rule_51` (`f_total=0.193`, `f_noise=0.000`, dispersed).
   Periodicity survives flips, but the full law signature can change.
+- Core fragility separates behavioral robustness from secondary-law churn:
+  `rule_51` has `core_fragility=0.000` even though `f_total=0.193`.
 
 ## Estado de fases
 
