@@ -2,20 +2,40 @@
 
 ## Abstract
 
-We present ZUSE Automat Agent, a deterministic, policy-driven discovery loop
-for elementary cellular automata (ECA) that builds an empirical atlas of cycle
-laws, world families, and basin fragility without a language model in the
-discovery loop. Running across 20 ECA worlds with a fixed seven-law evaluator
-and a dedup-gated observer stack, the system accumulates multi-seed evidence,
-classifies worlds into five dynamic families, and measures one-bit IC
-fragility along two independent axes. Key results include: (1) an exhaustively
-verified unique local period-2 ECA oscillator (`rule_108`, motif
-`#.# <-> ###`), (2) four mechanisms of IC fragility ranging from zero measured
-fragility (`rule_208/209`) to quiescent-background activation (`rule_108`,
-`f_gap = 0.945`), and (3) a measured non-equivariance of the observer/dedup
-pipeline under translation-invariant ECA dynamics, separating physical laws
-from measurement artifacts. Every result is reproducible from deterministic
-scripts with no stochastic components in the discovery loop.
+We present ZUSE Automat Agent (ZUSE), a deterministic, policy-driven discovery
+loop for elementary cellular automata (ECA) that builds an empirical atlas of
+cycle laws, world families, and basin fragility without a language model in the
+discovery loop. The pipeline combines a fixed seven-law evaluator, a
+dedup-gated observer stack, and persistent multi-seed world records, and is
+applied to a 20-world sample spanning ECA rules, Conway's Game of Life
+patterns, and synthetic controls.
+
+The seven laws — *velocidad_constante*, *periodicidad*, *densidad_estable*,
+*tipo_unico*, *complejidad_alta*, *frontera_temporal*, and
+*temporal_scale_stability* — are calibrated empirically (*frontera_temporal*
+upper bound 0.4352; *temporal_scale_stability* threshold 19.03, decision-tree
+accuracy 0.908). Laws are separated into two groups: structure-observer laws
+that depend on the full observer stack, and frame-metric laws that depend only
+on aggregate frame statistics.
+
+Key results: (1) *frontera_temporal* is not intrinsically rare — it activates
+in 38 of 256 ECA rules under at least two of three seeds, and in 17 of 256
+under all three; (2) the 20-world atlas reveals seven dynamic categories
+(*frontera-rich-estable*, *periodicidad-global*, *oscilador-local*,
+*multiregimen-productivo*, *multiregimen-escala-dependiente*, *noise-bounded*,
+*sin-evidencia-multiregimen*), finer than Wolfram's four-class taxonomy; (3)
+one-bit IC fragility spans from perfectly stable basins (`rule_208/209`,
+`f_total = 0.000`) to near-total signature churn (`rule_108`, `f_total =
+0.992`), separated by three mechanistically distinct regimes — productive
+basin switching, noise-boundary crossing, and quiescent-background activation;
+(4) an exhaustive protocol over 128 quiescent ECA rules and 510 IC words per
+rule confirms `rule_108` as the unique ECA rule producing stationary local
+period-2 oscillators; and (5) a controlled single-bit experiment demonstrates
+that ECA frames are translation-invariant while the observer/dedup pipeline is
+not, separating physical law from measurement artifact.
+
+Every result is reproducible from deterministic scripts with no stochastic
+components in the discovery loop.
 
 ## 1. Introduction
 
@@ -43,7 +63,7 @@ in the discovery loop: law proposals, world selection, and evidence evaluation
 are all deterministic. Language-model assistance is restricted to post-run
 interpretation and documentation.
 
-The result is an empirical atlas of 20 worlds with five dynamic categories,
+The result is an empirical atlas of 20 worlds with seven operational categories,
 measured fragility along two axes (`f_total` and `f_core`), and explicit
 characterization of two observer artifacts. The atlas is not a new taxonomy of
 Wolfram's classes; it is a finer-grained, evidence-based map of a 20-world
