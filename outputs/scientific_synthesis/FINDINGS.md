@@ -1,10 +1,11 @@
-# ZAA Scientific Synthesis — Fases 11-15b
+# ZAA Scientific Synthesis — Fases 11-16
 
 Date: 2026-05-31
 
 This document consolidates the current scientific map of ZAA after the ECA
 sweep, world taxonomy, basin-fragility diagnostics, `rule_54` gate anatomy,
-`rule_51` periodicity validation, and `core_fragility`.
+`rule_51` periodicity validation, `core_fragility`, and the Fase 16 local
+oscillator search.
 
 Primary artifacts:
 
@@ -14,6 +15,7 @@ Primary artifacts:
 - `outputs/fragility_fase10/core_fragility_report.md`
 - `outputs/rule54_gate_fase13/rule54_gate_report.md`
 - `outputs/periodicity_fase14/periodicity_sweep_report.md`
+- `outputs/local_oscillators_fase16/local_oscillator_report.md`
 
 ## 1. Current Atlas
 
@@ -33,6 +35,7 @@ The world taxonomy currently distinguishes:
 | --- | --- | --- |
 | `frontera-rich-estable` | `rule_46`, `rule_208`, `rule_209` | stable high law richness, low diversity |
 | `periodicidad-global` | `rule_51` | global period-2 frame complementation |
+| `periodicidad-local` | `rule_108` | local period-2 particle on quiescent background |
 | `multiregimen-productivo` | `rule_137`, `rule_54`, `rule_110`, `rule_124`, `rule_109`, `rule_18` | productive signature diversity |
 | `multiregimen-escala-dependiente` | `rule_90` | non-empty signatures at some scales, high-scale silence |
 | `noise-bounded` | `rule_30`, `rule_150` | crosses the dedup noise gate |
@@ -68,7 +71,7 @@ Conclusion: `frontera_temporal` is demanding but not intrinsically rare. It is
 the marker of a stable high-richness boundary family that the original atlas
 under-sampled.
 
-## 3. periodicidad Exists in ECA, but as Global Periodicity
+## 3. periodicidad Exists in ECA in Global and Local Forms
 
 Fase 14 tested periodicity across atlas ECA worlds and known periodic
 candidates.
@@ -94,9 +97,31 @@ Formal `rule_51` profile:
 | core laws | `periodicidad` |
 | core_fragility | 0.000 |
 
-Interpretation: `periodicidad` is validated on real ECA dynamics, but the
-current ECA positive is global frame periodicity, not a local particle
-oscillator.
+Fase 16 then searched for the stricter case: a local oscillator on a stable
+zero background. The rule filter required `f(0,0,0)=0`, and the ICs were
+minimal localized seeds (`point`, `pair_gap1`, `triple`) at width 128 and
+steps 200.
+
+Result:
+
+- Candidate rules: 116 after excluding atlas and trivial zero-convergers.
+- Rows evaluated: 348.
+- Local oscillator candidates: 2.
+- Positive rule: `rule_108`.
+
+`rule_108` from `pair_gap1` or `triple` converges immediately to the stationary
+period-2 motif:
+
+```text
+#.# <-> ###
+```
+
+The active region stays localized with span <= 3 for 200 steps, the background
+remains quiescent, and the production pipeline accepts `periodicidad`.
+
+Interpretation: `periodicidad` is now validated on real ECA dynamics in two
+forms. `rule_51` is global frame periodicity; `rule_108` is a genuine local
+period-2 particle oscillator.
 
 ## 4. Fragility Has Two Axes
 
@@ -177,17 +202,12 @@ The `frontera-rich-estable` family is the robust end of the atlas:
 
 ## 7. Open Questions
 
-1. **Local ECA oscillators**  
-   `rule_51` validates global periodicity. A local particle oscillator in ECA
-   remains unconfirmed and likely requires designed ICs or known literature
-   patterns.
-
-2. **`rule_54` gate geometry**  
+1. **`rule_54` gate geometry**  
    Fase 13 found a multi-hot clustered sensitivity pattern. A controlled IC
    experiment could test whether bit position 5 is structurally special or
    seed-specific.
 
-3. **Symbolic formulas**  
+2. **Symbolic formulas**  
    The physical tree has strong empirical signal, but PySR/Julia remains a
    technical blocker. The current robust conclusion is a family map, not one
    universal equation.

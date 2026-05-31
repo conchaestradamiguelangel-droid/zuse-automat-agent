@@ -1,6 +1,6 @@
 # ZUSE AUTOMAT AGENT
 
-Estado: Fase 15a completada. Atlas de 19 mundos; espectro de fragilidad medido.
+Estado: Fase 16 completada. Oscilador local ECA encontrado en rule_108.
 
 Premisas rectoras:
 
@@ -63,10 +63,13 @@ python -m unittest discover -s tests
 - [Periodicity sweep](outputs/periodicity_fase14/periodicity_sweep_report.md)
   -- ECA validation of `periodicidad`, with `rule_51` as global period-2
   positive control.
+- [Local oscillator search](outputs/local_oscillators_fase16/local_oscillator_report.md)
+  -- quiescent-background ECA search; `rule_108` provides a local period-2
+  oscillator witness (`#.# <-> ###`).
 
 ## Current Scientific Map
 
-Fases 11-15b establish these robust results:
+Fases 11-16 establish these robust results:
 
 - `frontera_temporal` is not intrinsically rare. It was under-sampled by the
   initial atlas and is now represented by the `frontera-rich-estable` family:
@@ -74,8 +77,9 @@ Fases 11-15b establish these robust results:
 - Basin fragility separates world families. `frontera-rich-estable` worlds have
   broad basins (`f_total` 0.000-0.031), while `multiregimen-productivo` worlds
   occupy the high-fragility range.
-- `periodicidad` is validated on real ECA dynamics via `rule_51`, but as
-  global frame-periodicity rather than a local particle oscillator.
+- `periodicidad` is validated on real ECA dynamics in two forms:
+  `rule_51` gives global frame-periodicity, while `rule_108` gives a local
+  period-2 oscillator on a quiescent background (`#.# <-> ###`).
 
 Two high-fragility mechanisms are currently distinguished:
 
@@ -85,6 +89,8 @@ Two high-fragility mechanisms are currently distinguished:
   clustered). Perturbations cross the deduplicated structure gate.
 - Global periodicity: `rule_51` (`f_total=0.193`, `f_noise=0.000`, dispersed).
   Periodicity survives flips, but the full law signature can change.
+- Local periodicity: `rule_108`, where minimal ICs `pair_gap1` and `triple`
+  converge to the bounded oscillator `#.# <-> ###` for 200 steps.
 - Core fragility separates behavioral robustness from secondary-law churn:
   `rule_51` has `core_fragility=0.000` even though `f_total=0.193`.
 
