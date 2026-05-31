@@ -1,18 +1,56 @@
 # ZUSE Automat Agent: Empirical Law Discovery in Elementary Cellular Automata
 
-## Abstract (Provisional)
+## Abstract
 
-We present ZUSE Automat Agent, a deterministic discovery loop for elementary
-cellular automata (ECA) that builds an empirical atlas of laws, world families,
-and basin fragility without an LLM in the discovery loop. Across 20 worlds, 7
-cycle laws, and controlled perturbation experiments, the system distinguishes
-cycle-level laws from world-level regimes and from observer-induced artifacts.
-Key findings include a unique local period-2 ECA oscillator in `rule_108`,
-stable high-richness frontier worlds (`rule_46`, `rule_208`, `rule_209`), three
-mechanisms of fragility, and a measured non-equivariance of the observer/dedup
-pipeline despite translation-invariant ECA dynamics.
+We present ZUSE Automat Agent, a deterministic, policy-driven discovery loop
+for elementary cellular automata (ECA) that builds an empirical atlas of cycle
+laws, world families, and basin fragility without a language model in the
+discovery loop. Running across 20 ECA worlds with a fixed seven-law evaluator
+and a dedup-gated observer stack, the system accumulates multi-seed evidence,
+classifies worlds into five dynamic families, and measures one-bit IC
+fragility along two independent axes. Key results include: (1) an exhaustively
+verified unique local period-2 ECA oscillator (`rule_108`, motif
+`#.# <-> ###`), (2) four mechanisms of IC fragility ranging from zero measured
+fragility (`rule_208/209`) to quiescent-background activation (`rule_108`,
+`f_gap = 0.945`), and (3) a measured non-equivariance of the observer/dedup
+pipeline under translation-invariant ECA dynamics, separating physical laws
+from measurement artifacts. Every result is reproducible from deterministic
+scripts with no stochastic components in the discovery loop.
 
-## 1. Contributions
+## 1. Introduction
+
+Elementary cellular automata are among the simplest systems known to exhibit
+complex behavior. A radius-1, binary, one-dimensional CA is fully specified by
+a single integer from 0 to 255, yet even within this minimal space, Wolfram's
+empirical taxonomy finds four qualitatively distinct dynamic classes: uniform,
+periodic, locally chaotic, and complex. Cook's proof that Rule 110 supports
+universal computation establishes that complexity in ECA is not merely visual:
+it has computational consequences.
+
+Two questions remain largely open after Wolfram's program. First, the taxonomy
+is qualitative and coarse: all complex rules fall into Class 4 regardless of
+their intra-class differences in structure type, periodicity, fragility, or
+scale behavior. Second, the boundary between the dynamics of the rule and the
+properties of the measurement instrument is rarely made explicit. When an
+observer reports that a run contains gliders, it conflates the CA physics with
+the heuristic that defined the glider label.
+
+ZUSE Automat Agent addresses both questions through a deterministic,
+policy-driven discovery loop. The agent runs ECA worlds, applies a fixed stack
+of heuristic observers, evaluates seven binary cycle laws, and stores
+multi-seed evidence in persistent world records. No language model participates
+in the discovery loop: law proposals, world selection, and evidence evaluation
+are all deterministic. Language-model assistance is restricted to post-run
+interpretation and documentation.
+
+The result is an empirical atlas of 20 worlds with five dynamic categories,
+measured fragility along two axes (`f_total` and `f_core`), and explicit
+characterization of two observer artifacts. The atlas is not a new taxonomy of
+Wolfram's classes; it is a finer-grained, evidence-based map of a 20-world
+sample that separates cycle-level laws, world-level regimes, and pipeline
+behavior.
+
+### 1.1 Contributions
 
 We make the following contributions:
 
