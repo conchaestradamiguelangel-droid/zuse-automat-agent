@@ -92,18 +92,57 @@ We make the following contributions:
 
 ## 2. Related Work
 
-Position the work against:
+### 2.1 ECA taxonomy and complexity
 
-- Wolfram's ECA classes and the broader empirical program in *A New Kind of
-  Science*.
-- Cook's proof of universal computation in Rule 110.
-- Automated scientific discovery systems such as AI Feynman, emphasizing the
-  contrast between symbolic-regression discovery and ZUSE's deterministic
-  observer/law/policy loop.
+Wolfram's systematic study of elementary cellular automata established the
+canonical four-class taxonomy: Class 1 (uniform), Class 2 (periodic), Class 3
+(chaotic), and Class 4 (complex) [Wolfram 2002]. This taxonomy is qualitative
+and based on visual inspection of space-time diagrams. ZUSE extends it by
+measuring intra-class structure: two Class-4 rules (`rule_137` and `rule_54`)
+differ not only in fragility magnitude but in fragility mechanism, a distinction
+the four-class taxonomy does not capture.
 
-This section should clarify that ZUSE is not an LLM scientist; it is a
-transparent experiment engine that accumulates evidence about cellular
-automaton worlds.
+Cook's proof that Rule 110 supports universal computation [Cook 2004]
+established that ECA complexity has computational consequences beyond visual
+appearance. `rule_110` appears in the ZUSE atlas as a
+`multiregimen-productivo` world with measured `f_total = 0.323` and a stable
+frontera signature. ZUSE does not reproduce or extend the universality proof;
+it characterizes `rule_110` empirically alongside other complex worlds without
+privileging it.
+
+### 2.2 Automated scientific discovery
+
+AI Feynman [Udrescu & Tegmark 2020] demonstrated symbolic regression over
+physical datasets, recovering known equations from data with interpretable
+structure. The contrast with ZUSE is deliberate: AI Feynman uses neural
+networks to propose candidate laws from continuous-variable data, while ZUSE
+applies fixed binary evaluators to discrete CA dynamics and accumulates
+evidence without a generative component. ZUSE is not a symbolic regression
+system; it is a policy-driven measurement pipeline whose outputs are law
+signatures, not formulas.
+
+More broadly, systems such as Eureqa [Schmidt & Lipson 2009] and recent
+LLM-based discovery agents frame discovery as hypothesis generation followed
+by verification. ZUSE inverts this framing: laws are fixed a priori, and the
+discovery consists of finding which worlds satisfy them and under what
+conditions. This makes every accepted law signature verifiable from
+deterministic scripts, at the cost of not proposing new laws automatically.
+
+### 2.3 ZUSE as evidence engine, not LLM scientist
+
+Recent work on LLM-based scientific agents (e.g., The AI Scientist [Lu et al.
+2024]) demonstrates that language models can propose hypotheses, design
+experiments, and write papers with minimal human intervention. ZUSE occupies a
+different position in this space: the language model is explicitly excluded
+from the discovery loop and restricted to post-run interpretation and
+documentation.
+
+This separation is a design choice, not a limitation. It means that the atlas
+findings are fully reproducible from the deterministic loop code, and that
+language-model involvement can be audited at the documentation layer without
+contaminating the empirical results. The cost is that ZUSE cannot propose new
+laws; the benefit is that every accepted law has a transparent, non-generative
+provenance.
 
 ## 3. System: ZUSE Automat Agent
 
