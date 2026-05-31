@@ -290,10 +290,69 @@ period was found.
 
 ### 7.2 `rule_54` — Noise Gate Anatomy
 
-`rule_54` demonstrates noise-boundary fragility. In random complex ICs, local
-bit flips can push `dedup_structure_count` over the threshold 40. Fase 19 shows
-that a single active cell never approaches the gate, so the mechanism requires
-complex IC geometry.
+`rule_54` is the clearest example of noise-boundary fragility: perturbations do
+not merely move the run to another productive signature, but can push the
+observer output across the deduplicated structure gate. The production gate is:
+
+```text
+dedup_structure_count > 40 -> ruido_no_analizable
+```
+
+#### Fase 13: anatomy of the gate
+
+Fase 13 measured three productive `rule_54` ICs at `steps = 96` and perturbed
+each by all 64 one-bit flips. The reference deduplicated counts were close to
+the gate:
+
+| seed | reference dedup | noisy flips / 64 |
+| --- | --- | --- |
+| `20260638` | `32` | `14` |
+| `20260640` | `33` | `18` |
+| `20260642` | `39` | `40` |
+
+Across the three seeds, `72/192` flips crossed into `ruido_no_analizable`
+(`f_noise = 0.375`). Every noisy flip crossed for the same reason:
+`dedup_structure_count > 40`. No alternative noise mechanism was observed.
+
+The sensitive positions formed a clustered, multi-hot pattern rather than a
+single contiguous block. Bins near the periodic boundary (`0..7` and `56..63`)
+were repeatedly implicated, and bit 5 was the only bit whose flip crossed the
+gate in all three measured seeds.
+
+#### Fase 19: controlled single-bit negative case
+
+Fase 19 tested whether bit 5 was a special absolute coordinate of `rule_54`.
+It replaced the complex ICs with controlled single-bit ICs: for each
+`k = 0..63`, the initial state contained only one active bit at position `k`.
+
+The result separates CA physics from the observer pipeline:
+
+- The ECA frames are translation-invariant after shift normalization.
+- The observer/dedup counts are not translation-equivariant for this
+  wide-spreading pattern: `dedup_structure_count` ranges from `15` to `24`
+  across positions.
+- The law signature is identical for all 64 positions:
+  `temporal_scale_stability`.
+- Every single-bit IC remains far below the gate (`dedup <= 24 < 40`).
+
+Therefore, bit 5 is not a privileged coordinate of `rule_54`. The Fase 13
+signal arises from the interaction between complex IC geometry and the
+observer/gate pipeline. Complex ICs close to the threshold can be pushed across
+it by local flips; a single active cell cannot.
+
+#### Mechanism
+
+`rule_54` has high total and core fragility (`f_total = 0.714`,
+`f_core = 0.677`), but its mechanism differs from `rule_137`. In `rule_137`,
+perturbations tend to move between productive regimes. In `rule_54`, a large
+fraction of perturbations cross an analysis boundary: the run becomes too
+fragmented for the current observer/dedup gate.
+
+This makes `rule_54` a methodological case study as much as a dynamical one.
+It shows that the atlas can identify worlds whose measured fragility is
+dominated by proximity to an observer threshold. It also motivates the caveat that
+absolute structure counts should not be treated as symmetry-invariant physical
+observables without equivariance checks.
 
 ### 7.3 `rule_137` — Productive Basin Switching
 
