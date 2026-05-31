@@ -112,6 +112,14 @@ We make the following contributions:
 
 ## 2. Related Work
 
+ZUSE sits at the intersection of three bodies of prior work: empirical ECA
+taxonomy, automated law discovery, and LLM-based scientific agents. It is
+related to each tradition but positioned differently from all three: it extends
+ECA taxonomy inward (intra-class rather than inter-class), it inverts the
+discovery framing of symbolic regression systems (fixed evaluators rather than
+generative hypotheses), and it excludes the LLM from the loop rather than
+centering it.
+
 ### 2.1 ECA taxonomy and complexity
 
 Wolfram's systematic study of elementary cellular automata established the
@@ -124,11 +132,14 @@ the four-class taxonomy does not capture.
 
 Cook's proof that Rule 110 supports universal computation [Cook2004]
 established that ECA complexity has computational consequences beyond visual
-appearance. `rule_110` appears in the ZUSE atlas as a
-`multiregimen-productivo` world with measured `f_total = 0.323` and a stable
-frontera signature. ZUSE does not reproduce or extend the universality proof;
-it characterizes `rule_110` empirically alongside other complex worlds without
-privileging it.
+appearance. But computational class is a coarse lens: `rule_110` and
+`rule_54` are both Class 4, yet ZUSE finds that their fragility mechanisms are
+qualitatively different — productive basin switching versus noise-boundary
+crossing. `rule_110` appears in the ZUSE atlas as a
+`multiregimen-productivo` world with `f_total = 0.323` and a stable frontera
+signature. The computational proof characterizes what `rule_110` *can*
+compute; ZUSE characterizes what it *typically does* under random
+initialization.
 
 ### 2.2 Automated scientific discovery
 
