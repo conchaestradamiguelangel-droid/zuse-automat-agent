@@ -325,24 +325,102 @@ independent causal evidence without ablation.
 
 ## 5. World Atlas: 20 Worlds and Dynamic Categories
 
-Use `outputs/world_taxonomy/law_map.md` as the source table.
+The atlas is derived from `outputs/world_taxonomy/law_map.md`. It contains 20
+worlds: ECA rules, designed synthetic controls, and Life-like controls. Each
+world is summarized by law coverage, non-empty visit ratio, noise ratio,
+signature diversity, mean law count, dominant signature, and measured
+fragility where available.
 
-Primary categories:
+The atlas is not a score table. A high `mean_laws` value, high signature
+diversity, and low fragility mean different things. The taxonomy therefore
+separates five positive dynamic families from two bookkeeping categories:
+`noise-bounded` for worlds stopped by the dedup gate, and
+`sin-evidencia-multiregimen` for controls or worlds without sufficient evidence
+for one of the positive families.
 
-- `frontera-rich-estable`
-- `periodicidad-global`
-- `oscilador-local`
-- `multiregimen-productivo`
-- `multiregimen-escala-dependiente`
-- `noise-bounded`
+### 5.1 Category definitions
 
-Control/no-evidence bucket:
+| category | operational signal | representative worlds |
+| --- | --- | --- |
+| `frontera-rich-estable` | low signature diversity, high stable law richness (`mean_laws >= 4.0`) | `rule_46`, `rule_208`, `rule_209` |
+| `periodicidad-global` | global period-2 behavior; `periodicidad` in nearly all non-empty visits | `rule_51` |
+| `oscilador-local` | bounded local period-2 structure on a quiescent background | `rule_108` |
+| `multiregimen-productivo` | multiple non-empty law signatures with productive visits | `rule_18`, `rule_54`, `rule_109`, `rule_110`, `rule_124`, `rule_137` |
+| `multiregimen-escala-dependiente` | real signature diversity but most high-scale visits become analyzable silence | `rule_90` |
+| `noise-bounded` | pre-law failure under the deduplicated structure gate | `rule_30`, `rule_150` |
+| `sin-evidencia-multiregimen` | no sufficient evidence of multi-regime or stable-rich behavior in the current protocol | `life_blinker`, `life_block`, `life_glider`, `synthetic_bloque`, `synthetic_glider`, `synthetic_oscilador` |
 
-- `sin-evidencia-multiregimen` for controls and worlds without sufficient
-  multi-regime evidence
+This classification is intentionally operational. A world can be reclassified
+if a wider protocol produces different evidence; the atlas records what the
+current deterministic protocol has measured.
 
-The text should explain that the atlas is not just a score table: it separates
-families by law coverage, diversity, fragility, and mechanism.
+### 5.2 Law coverage
+
+The law coverage matrix uses seven columns:
+
+```text
+velocidad_constante
+periodicidad
+densidad_estable
+tipo_unico
+complejidad_alta
+frontera_temporal
+temporal_scale_stability
+```
+
+Each cell has one of four states: accepted in the dominant signature or in at
+least half of non-empty visits (`✓`), observed but below half (`·`), never
+observed in non-empty visits (`-`), or unknown because no non-empty visits
+exist (`?`).
+
+The matrix reveals three broad patterns:
+
+1. **Synthetic and Life-like controls validate observer semantics.**
+   `life_blinker` and `synthetic_oscilador` activate `periodicidad`; block-like
+   worlds activate `densidad_estable` and `tipo_unico`; synthetic gliders
+   activate `velocidad_constante`.
+
+2. **Class-4 and frontier worlds separate into distinct families.**
+   `rule_137`, `rule_110`, `rule_124`, `rule_109`, and `rule_54` are
+   multi-regime worlds with two or three dominant laws. By contrast,
+   `rule_46`, `rule_208`, and `rule_209` activate six of seven laws with low
+   diversity.
+
+3. **`periodicidad` is not a generic ECA law.**
+   It appears in designed oscillators, in the global complement rule
+   (`rule_51`), and in the local oscillator (`rule_108`), but not in the
+   complex frontier worlds. This is why Section 7 treats `rule_108` separately
+   rather than folding it into ordinary stable-rich behavior.
+
+### 5.3 Key atlas rows
+
+The following rows anchor the category structure:
+
+| world | category | mean_laws | peak_diversity | dominant signature |
+| --- | --- | ---: | ---: | --- |
+| `rule_208` | `frontera-rich-estable` | `6.000` | `0.167` | `velocidad_constante + densidad_estable + tipo_unico + complejidad_alta + frontera_temporal + temporal_scale_stability` |
+| `rule_209` | `frontera-rich-estable` | `6.000` | `0.167` | `velocidad_constante + densidad_estable + tipo_unico + complejidad_alta + frontera_temporal + temporal_scale_stability` |
+| `rule_46` | `frontera-rich-estable` | `5.833` | `0.333` | `velocidad_constante + densidad_estable + tipo_unico + complejidad_alta + frontera_temporal + temporal_scale_stability` |
+| `rule_137` | `multiregimen-productivo` | `2.867` | `0.833` | `densidad_estable + complejidad_alta + frontera_temporal` |
+| `rule_54` | `multiregimen-productivo` | `1.917` | `0.800` | `complejidad_alta + temporal_scale_stability` |
+| `rule_51` | `periodicidad-global` | `4.500` | `0.333` | `periodicidad + densidad_estable + tipo_unico + complejidad_alta + temporal_scale_stability` |
+| `rule_108` | `oscilador-local` | `2.000` | `0.167` | `periodicidad + tipo_unico` |
+| `rule_90` | `multiregimen-escala-dependiente` | `0.500` | `0.600` | `temporal_scale_stability` |
+
+These rows show why the taxonomy cannot be reduced to a single richness score.
+`rule_208` and `rule_209` are maximally rich and stable; `rule_137` is less
+rich but highly diverse; `rule_108` is law-sparse but category-defining because
+it is the only local oscillator; `rule_90` has high diversity evidence but low
+non-empty yield because its high-scale visits become silent.
+
+### 5.4 Scientific role of the atlas
+
+The atlas is the bridge between cycle-level laws and world-level claims. A law
+signature describes one run. A world category describes how signatures behave
+across seeds, scales, and perturbations. This distinction is what makes later
+fragility measurements interpretable: `f_total = 0.630` in `rule_137` means
+something different from `f_total = 0.992` in `rule_108` because the atlas
+identifies different category-defining cores.
 
 ## 6. Fragility: `f_total`, `f_core`, `f_gap`
 
