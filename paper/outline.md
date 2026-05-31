@@ -520,17 +520,76 @@ under-sampled stable high-richness boundary worlds. In the full ECA sweep,
 
 ## 8. Observer Artifacts and Pipeline Equivariance
 
-Fase 19 separates ECA dynamics from observer behavior:
+The ZUSE pipeline contains two classes of observer artifact that the atlas
+identifies and characterizes. Framing these artifacts as results — not just
+implementation limitations — is important: they define the boundary between
+what the system measures reliably and what it does not.
 
-- The `rule_54` single-bit frames are translation-invariant after shift
-  normalization.
-- The observer/dedup pipeline returns different structure counts depending on
-  absolute position (`dedup_structure_count` 15..24).
-- The law signature remains stable, but absolute counts are not safe as
-  translation-equivariant physical evidence.
+### 8.1 Mirror asymmetry in `tipo_unico` (Fase 6b)
 
-This section should frame observer artifacts as part of the scientific result,
-not just an implementation flaw.
+`rule_110` and `rule_124` are left-right mirrors of each other: the rule table
+for `rule_124` is obtained by reflecting every neighborhood
+`f(l,c,r) -> f(r,c,l)` in the `rule_110` table. Under periodic boundary
+conditions, the two rules produce physically equivalent dynamics up to spatial
+reflection.
+
+Despite this equivalence, `tipo_unico` can fire asymmetrically: it may be
+accepted for one orientation and rejected for the other, depending on which
+structure types the heuristic observers label from the specific frame sequence.
+Since `tipo_unico` counts whether exactly one structure type appears, its value
+depends on the labeling convention of the observers, not only on the CA
+dynamics.
+
+`tipo_unico` is retained in the atlas for its exploratory value: it reliably
+distinguishes runs with homogeneous structure populations from runs with mixed
+populations. It should not be used as evidence of physical left-right
+asymmetry.
+
+### 8.2 Translation non-equivariance of the dedup pipeline (Fase 19)
+
+ECA with periodic boundary conditions is translation-invariant: shifting the
+initial condition by any number of cells produces the same dynamics up to a
+spatial shift. A pipeline that correctly identifies physical structures should
+therefore return the same structure count for all translations of the same IC.
+
+Fase 19 tested this directly: 64 single-bit ICs for `rule_54`, one active bit
+at each position `k = 0..63`, with `width = 64` and `steps = 96`. The ECA
+frames were confirmed translation-invariant (frame identity after shift
+normalization: `True`). The observer/dedup pipeline was not:
+
+| metric | range across 64 positions |
+| --- | --- |
+| `dedup_structure_count` | `15..24` (29 distinct result classes) |
+| `raw_structure_count` | `45..72` |
+| law signature | `temporal_scale_stability` (all 64 identical) |
+| `analysis_status` | `ok` (all 64) |
+
+The mechanism is a boundary interaction: `rule_54` produces wide-spreading
+patterns that cross the periodic frame boundary. The dedup algorithm's handling
+of cyclic-span structures varies depending on the absolute IC position relative
+to where structure boundaries fall on the lattice. The result is a
+position-dependent count that is not a translation-equivariant physical
+observable.
+
+### 8.3 Implications for the atlas
+
+Both artifacts are bounded in their effect:
+
+- `tipo_unico` asymmetry is a labeling artifact, not a count artifact. It
+  affects which laws are accepted, but only for runs where the structure
+  population is near the one-type boundary. Runs with clearly homogeneous
+  or clearly mixed populations are unaffected.
+
+- Dedup non-equivariance affects absolute structure counts but not law
+  signatures. In Fase 19, all 64 translated ICs produce identical law
+  signatures despite varying dedup counts. The noise gate (`dedup > 40`) is
+  never approached by single-bit ICs, and law evaluation depends on count
+  magnitude only through the gate.
+
+The atlas therefore relies on law signatures as the primary evidence unit.
+Absolute dedup counts appear in world profiles as context and should be
+interpreted with the translation-equivariance caveat. Future work on
+symmetry-invariant observers would remove both artifacts.
 
 ## 9. Limitations
 
