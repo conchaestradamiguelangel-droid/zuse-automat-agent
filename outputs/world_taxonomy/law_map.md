@@ -6,6 +6,12 @@ Additional formal profiles: `outputs/frontera_sweep/top_rules_profile.json`,
 `outputs/periodicity_fase14/rule51_profile.json`, and
 `outputs/profile_fase17/rule108_seed_profile.json` when present.
 
+Candidate-tier frontera profiles are documented separately in
+`outputs/frontera_sweep/remaining_candidate_profiles.md` and
+`outputs/frontera_sweep/top4_long_journal_fase20b/top4_long_report.md`.
+They are not merged into the canonical table below unless they survive
+long-journal validation.
+
 Schema check: world field detected as `world_type`. First-row keys include:
 `action_reason, action_taken, analysis_status, consensus, cycle_id, dedup_structure_count, details, dominant_type, inflation_ratio, is_new_law_signature, law_signature, laws_accepted, laws_evaluated, laws_rejected, laws_status, metrics, scale_attempt_count, score, steps, structure_count, timestamp, width, world_avg_score_prev, world_has_multiregime_evidence_prev, world_is_multiregime_candidate_prev, world_peak_diversity_prev, world_score_variance_prev, world_signature_diversity_prev, world_type, world_unique_signatures_prev, world_visit_count`.
 
@@ -37,6 +43,19 @@ Mechanical distinction:
   but `laws_accepted=[]`.
 - `rule_150` style failure is pre-analysis: the deduplicated structure gate marks
   the cycle as `ruido_no_analizable`, so laws are not evaluated.
+
+Candidate tier:
+
+- **frontera-short-scale** is not a canonical atlas category. It names rules
+  that are rich in `frontera_temporal` at the fixed formal sweep scale
+  (`steps=24`) but have not survived long-journal validation. Fase 20a found
+  24 additional candidate-protocol `frontera-rich-estable` rules among the
+  remaining sweep candidates. Fase 20b then tested the four strongest
+  (`rule_84`, `rule_138`, `rule_212`, `rule_213`) with a 160-cycle policy
+  journal: none remained canonical `frontera-rich-estable`; `rule_138` became
+  `noise-bounded`, while the other three fell to
+  `sin-evidencia-multiregimen`. This establishes the long journal as the
+  atlas-grade gatekeeper.
 
 Thresholds used:
 

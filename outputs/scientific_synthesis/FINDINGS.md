@@ -123,6 +123,10 @@ formal scale, then lose `frontera_temporal` frequency or approach the noise
 gate under policy scaling. They should not be promoted to the canonical atlas
 without a scale-aware category or additional controlled protocol.
 
+This defines a candidate tier, **frontera-short-scale**: rules that are
+frontier-rich under the fixed sweep protocol but fail atlas-grade long-journal
+validation. This is a filter result, not a canonical world category.
+
 Conclusion: `frontera_temporal` is demanding but not intrinsically rare. It is
 the marker of a broad stable high-richness boundary band that the original
 atlas under-sampled, not a three-rule anomaly. However, only long-journal
