@@ -30,9 +30,11 @@ one-bit IC fragility spans from perfectly stable basins (`rule_208/209`,
 basin switching, noise-boundary crossing, and quiescent-background activation;
 (4) an exhaustive protocol over 128 quiescent ECA rules and 510 IC words per
 rule confirms `rule_108` as the unique ECA rule producing stationary local
-period-2 oscillators; and (5) a controlled single-bit experiment demonstrates
-that ECA frames are translation-invariant while the observer/dedup pipeline is
-not, separating physical law from measurement artifact.
+period-2 oscillators; (5) designed periodic ICs activate production
+`periodicidad` in 207 of 256 ECA rules, showing that the law is IC-family
+sensitive rather than inaccessible; and (6) a controlled single-bit experiment
+demonstrates that ECA frames are translation-invariant while the observer/dedup
+pipeline is not, separating physical law from measurement artifact.
 
 Every result is reproducible from deterministic scripts with no stochastic
 components in the discovery loop.
@@ -80,12 +82,15 @@ We make the following contributions:
    world-record history, a dedup-gated observer stack, and a seven-law evaluator
    into a single reproducible pipeline.
 
-2. **A five-category empirical atlas of 20 ECA worlds** — We classify 20 worlds
-   into five dynamic families (*frontera-rich-estable*, *periodicidad-global*,
-   *oscilador-local*, *multiregimen-productivo*,
-   *multiregimen-escala-dependiente*) using law coverage, signature diversity,
-   and fragility. The atlas extends Wolfram's four-class taxonomy by capturing
-   intra-class structure and multi-scale silencing.
+2. **A seven-category empirical atlas of 20 worlds** — We classify 20 worlds
+   spanning ECA rules, Conway's Game of Life patterns, and synthetic controls
+   into seven operational categories (*frontera-rich-estable*,
+   *periodicidad-global*, *oscilador-local*, *multiregimen-productivo*,
+   *multiregimen-escala-dependiente*, *noise-bounded*,
+   *sin-evidencia-multiregimen*) using law coverage, signature diversity, and
+   fragility. The atlas extends Wolfram's four-class taxonomy by capturing
+   intra-class structure, scale-dependent silencing, and negative-control
+   regimes.
 
 3. **A two-dimensional fragility framework** — We measure `f_total` and
    `f_core` separately, defining `f_gap = f_total - f_core` as a quantitative
@@ -161,8 +166,8 @@ deterministic scripts, at the cost of not proposing new laws automatically.
 
 ### 2.3 ZUSE as evidence engine, not LLM scientist
 
-Recent work on LLM-based scientific agents (e.g., The AI Scientist [Lu et al.
-2024]) demonstrates that language models can propose hypotheses, design
+Recent work on LLM-based scientific agents (e.g., The AI Scientist [Lu2024])
+demonstrates that language models can propose hypotheses, design
 experiments, and write papers with minimal human intervention. ZUSE occupies a
 different position in this space: the language model is explicitly excluded
 from the discovery loop and restricted to post-run interpretation and
