@@ -25,9 +25,11 @@ under all three; (2) the 20-world atlas reveals seven dynamic categories
 *multiregimen-productivo*, *multiregimen-escala-dependiente*, *noise-bounded*,
 *sin-evidencia-multiregimen*), finer than Wolfram's four-class taxonomy; (3)
 one-bit IC fragility spans from perfectly stable basins (`rule_208/209`,
-`f_total = 0.000`) to near-total signature churn (`rule_108`, `f_total =
-0.992`), separated by three mechanistically distinct regimes — productive
-basin switching, noise-boundary crossing, and quiescent-background activation;
+`f_total = 0.000`) to exact fixture disruption (`life_blinker`, `f_total =
+1.000`), with `rule_108` as the ECA outlier (`f_total = 0.992`, `f_gap =
+0.945`). These cases separate three mechanistically distinct regimes:
+productive basin switching, noise-boundary crossing, and quiescent-background
+activation;
 (4) an exhaustive protocol over 128 quiescent ECA rules and 510 IC words per
 rule confirms `rule_108` as the unique ECA rule producing stationary local
 period-2 oscillators; (5) designed periodic ICs activate production
@@ -450,14 +452,14 @@ for one of the positive families.
 | `rule_18` | `multiregimen-productivo` | 2.308 | 0.800 | 0.349 | 0.135 |
 | `rule_137` | `multiregimen-productivo` | 2.867 | 0.833 | 0.630 | 0.312 |
 | `rule_54` | `multiregimen-productivo` | 1.917 | 0.800 | 0.714 | 0.677 |
-| `rule_30` | `noise-bounded` | 1.100 | 0.000 | ? | ? |
-| `rule_150` | `noise-bounded` | 0.750 | 0.000 | ? | ? |
-| `life_blinker` | `sin-evidencia-multiregimen` | 3.000 | 0.200 | ? | ? |
-| `life_block` | `sin-evidencia-multiregimen` | 2.000 | 0.200 | ? | ? |
-| `life_glider` | `sin-evidencia-multiregimen` | 2.357 | 0.333 | ? | ? |
-| `synthetic_bloque` | `sin-evidencia-multiregimen` | 2.000 | 0.200 | ? | ? |
-| `synthetic_glider` | `sin-evidencia-multiregimen` | 3.167 | 0.400 | ? | ? |
-| `synthetic_oscilador` | `sin-evidencia-multiregimen` | 2.286 | 0.400 | ? | ? |
+| `rule_30` | `noise-bounded` | 1.100 | 0.000 | 0.021 | 0.021 |
+| `rule_150` | `noise-bounded` | 0.750 | 0.000 | 0.023 | 0.023 |
+| `life_blinker` | `sin-evidencia-multiregimen` | 3.000 | 0.200 | 1.000 | 1.000 |
+| `life_block` | `sin-evidencia-multiregimen` | 2.000 | 0.200 | 0.016 | 0.016 |
+| `life_glider` | `sin-evidencia-multiregimen` | 2.357 | 0.333 | 0.032 | 0.032 |
+| `synthetic_bloque` | `sin-evidencia-multiregimen` | 2.000 | 0.200 | n/a | n/a |
+| `synthetic_glider` | `sin-evidencia-multiregimen` | 3.167 | 0.400 | n/a | n/a |
+| `synthetic_oscilador` | `sin-evidencia-multiregimen` | 2.286 | 0.400 | n/a | n/a |
 
 This classification is intentionally operational. A world can be reclassified
 if a wider protocol produces different evidence; the atlas records what the
@@ -627,7 +629,11 @@ averaged.
 | --- | --- | ---: | ---: | ---: | ---: |
 | `rule_208` | `frontera-rich-estable` | 0.000 | 0.000 | 0.000 | 0.000 |
 | `rule_209` | `frontera-rich-estable` | 0.000 | 0.000 | 0.000 | 0.000 |
+| `life_block` | `sin-evidencia-multiregimen` | 0.016 | 0.016 | 0.000 | 0.000 |
+| `rule_30` | `noise-bounded` | 0.021 | 0.021 | 0.000 | 0.000 |
+| `rule_150` | `noise-bounded` | 0.023 | 0.023 | 0.000 | 0.000 |
 | `rule_46` | `frontera-rich-estable` | 0.031 | 0.031 | 0.000 | 0.000 |
+| `life_glider` | `sin-evidencia-multiregimen` | 0.032 | 0.032 | 0.000 | 0.000 |
 | `rule_90` | `multiregimen-escala-dependiente` | 0.172 | 0.000 | 0.172 | 0.000 |
 | `rule_51` | `periodicidad-global` | 0.193 | 0.000 | 0.193 | 0.000 |
 | `rule_124` | `multiregimen-productivo` | 0.224 | 0.083 | 0.141 | 0.000 |
@@ -637,12 +643,17 @@ averaged.
 | `rule_137` | `multiregimen-productivo` | 0.630 | 0.312 | 0.318 | 0.000 |
 | `rule_54` | `multiregimen-productivo` | 0.714 | 0.677 | 0.037 | 0.375 |
 | `rule_108` | `oscilador-local` | 0.992 | 0.047 | 0.945 | 0.000 |
+| `life_blinker` | `sin-evidencia-multiregimen` | 1.000 | 1.000 | 0.000 | 0.000 |
 
 | world | category | f_total | f_core | f_gap | mechanism |
 | --- | --- | ---: | ---: | ---: | --- |
 | `rule_208` | `frontera-rich-estable` | 0.000 | 0.000 | 0.000 | stable basin |
 | `rule_209` | `frontera-rich-estable` | 0.000 | 0.000 | 0.000 | stable basin |
+| `life_block` | `sin-evidencia-multiregimen` | 0.016 | 0.016 | 0.000 | stable Life fixture |
+| `rule_30` | `noise-bounded` | 0.021 | 0.021 | 0.000 | productive pocket |
+| `rule_150` | `noise-bounded` | 0.023 | 0.023 | 0.000 | productive pocket |
 | `rule_46` | `frontera-rich-estable` | 0.031 | 0.031 | 0.000 | stable basin |
+| `life_glider` | `sin-evidencia-multiregimen` | 0.032 | 0.032 | 0.000 | stable Life fixture |
 | `rule_90` | `multiregimen-escala-dependiente` | 0.172 | 0.000 | 0.172 | secondary churn |
 | `rule_51` | `periodicidad-global` | 0.193 | 0.000 | 0.193 | secondary churn |
 | `rule_124` | `multiregimen-productivo` | 0.224 | 0.083 | 0.141 | productive switching |
@@ -652,11 +663,14 @@ averaged.
 | `rule_137` | `multiregimen-productivo` | 0.630 | 0.312 | 0.318 | productive switching |
 | `rule_54` | `multiregimen-productivo` | 0.714 | 0.677 | 0.037 | noise-boundary |
 | `rule_108` | `oscilador-local` | 0.992 | 0.047 | 0.945 | quiescent-background activation |
+| `life_blinker` | `sin-evidencia-multiregimen` | 1.000 | 1.000 | 0.000 | periodic fixture disruption |
 
 The spectrum is category-aligned at the extremes: `frontera-rich-estable`
-occupies the low end, while `multiregimen-productivo` occupies the upper end.
-`rule_108` is a structural outlier at `f_total = 0.992` because its mechanism
-differs from all others.
+occupies the low end, while `multiregimen-productivo` occupies the upper ECA
+range. The `life_blinker` control reaches `f_total = 1.000` because any
+single-cell perturbation breaks the exact Life oscillator fixture. `rule_108`
+remains the main ECA structural outlier: `f_total = 0.992` with only
+`f_core = 0.047`.
 
 ### 6.5 Four fragility mechanisms
 
@@ -668,7 +682,7 @@ preserve the reference signature. The basin for the six-law frontier signature
 is wide enough that no measured single-bit perturbation escapes it. `rule_46`
 is nearly identical (`f_total = 0.031`).
 
-**Productive basin switching** (`rule_137`, and all other
+**Productive basin switching** (`rule_137`, and the non-noise-boundary
 `multiregimen-productivo` worlds): perturbations move the IC among productive
 law-signature regimes. The world never falls into silence or noise;
 `f_noise = 0.000` throughout. `rule_137` is the strongest clean case

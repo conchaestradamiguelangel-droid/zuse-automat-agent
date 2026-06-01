@@ -1,0 +1,280 @@
+{
+  "cases": [
+    {
+      "counts": {
+        "other_sig": 1024
+      },
+      "f_core": 1.0,
+      "f_noise": 0.0,
+      "f_other_sig": 1.0,
+      "f_silence": 0.0,
+      "f_total": 1.0,
+      "n_flips": 1024,
+      "reference_dedup_structure_count": 1,
+      "reference_signature": [
+        "densidad_estable",
+        "periodicidad",
+        "tipo_unico"
+      ],
+      "reference_status": "ok",
+      "seed": "fixture",
+      "steps": 24,
+      "world": "life_blinker"
+    },
+    {
+      "counts": {
+        "other_sig": 16,
+        "same_sig": 1008
+      },
+      "f_core": 0.015625,
+      "f_noise": 0.0,
+      "f_other_sig": 0.015625,
+      "f_silence": 0.0,
+      "f_total": 0.015625,
+      "n_flips": 1024,
+      "reference_dedup_structure_count": 1,
+      "reference_signature": [
+        "densidad_estable",
+        "tipo_unico"
+      ],
+      "reference_status": "ok",
+      "seed": "fixture",
+      "steps": 24,
+      "world": "life_block"
+    },
+    {
+      "counts": {
+        "other_sig": 33,
+        "same_sig": 991
+      },
+      "f_core": 0.0322265625,
+      "f_noise": 0.0,
+      "f_other_sig": 0.0322265625,
+      "f_silence": 0.0,
+      "f_total": 0.0322265625,
+      "n_flips": 1024,
+      "reference_dedup_structure_count": 1,
+      "reference_signature": [
+        "densidad_estable",
+        "tipo_unico",
+        "velocidad_constante"
+      ],
+      "reference_status": "ok",
+      "seed": "fixture",
+      "steps": 24,
+      "world": "life_glider"
+    },
+    {
+      "counts": {
+        "same_sig": 64
+      },
+      "f_core": 0.0,
+      "f_noise": 0.0,
+      "f_other_sig": 0.0,
+      "f_silence": 0.0,
+      "f_total": 0.0,
+      "n_flips": 64,
+      "reference_dedup_structure_count": 21,
+      "reference_signature": [
+        "complejidad_alta",
+        "densidad_estable",
+        "temporal_scale_stability"
+      ],
+      "reference_status": "ok",
+      "seed": "20260577",
+      "steps": 24,
+      "world": "rule_150"
+    },
+    {
+      "counts": {
+        "other_sig": 3,
+        "same_sig": 61
+      },
+      "f_core": 0.046875,
+      "f_noise": 0.0,
+      "f_other_sig": 0.046875,
+      "f_silence": 0.0,
+      "f_total": 0.046875,
+      "n_flips": 64,
+      "reference_dedup_structure_count": 36,
+      "reference_signature": [
+        "complejidad_alta",
+        "densidad_estable",
+        "temporal_scale_stability"
+      ],
+      "reference_status": "ok",
+      "seed": "20260578",
+      "steps": 48,
+      "world": "rule_150"
+    },
+    {
+      "counts": {
+        "other_sig": 1,
+        "same_sig": 63
+      },
+      "f_core": 0.015625,
+      "f_noise": 0.0,
+      "f_other_sig": 0.015625,
+      "f_silence": 0.0,
+      "f_total": 0.015625,
+      "n_flips": 64,
+      "reference_dedup_structure_count": 18,
+      "reference_signature": [
+        "complejidad_alta",
+        "densidad_estable",
+        "temporal_scale_stability"
+      ],
+      "reference_status": "ok",
+      "seed": "20260544",
+      "steps": 24,
+      "world": "rule_30"
+    },
+    {
+      "counts": {
+        "other_sig": 2,
+        "same_sig": 62
+      },
+      "f_core": 0.03125,
+      "f_noise": 0.0,
+      "f_other_sig": 0.03125,
+      "f_silence": 0.0,
+      "f_total": 0.03125,
+      "n_flips": 64,
+      "reference_dedup_structure_count": 19,
+      "reference_signature": [
+        "complejidad_alta",
+        "densidad_estable",
+        "temporal_scale_stability"
+      ],
+      "reference_status": "ok",
+      "seed": "20260546",
+      "steps": 24,
+      "world": "rule_30"
+    },
+    {
+      "counts": {
+        "other_sig": 1,
+        "same_sig": 63
+      },
+      "f_core": 0.015625,
+      "f_noise": 0.0,
+      "f_other_sig": 0.015625,
+      "f_silence": 0.0,
+      "f_total": 0.015625,
+      "n_flips": 64,
+      "reference_dedup_structure_count": 19,
+      "reference_signature": [
+        "complejidad_alta",
+        "densidad_estable",
+        "temporal_scale_stability"
+      ],
+      "reference_status": "ok",
+      "seed": "20260610",
+      "steps": 24,
+      "world": "rule_30"
+    }
+  ],
+  "worlds": {
+    "life_blinker": {
+      "f_core": 1.0,
+      "f_noise": 0.0,
+      "f_other_sig": 1.0,
+      "f_silence": 0.0,
+      "f_total": 1.0,
+      "n_cases": 1,
+      "n_flips": 1024,
+      "reference_signatures": [
+        "densidad_estable + periodicidad + tipo_unico"
+      ],
+      "world": "life_blinker"
+    },
+    "life_block": {
+      "f_core": 0.015625,
+      "f_noise": 0.0,
+      "f_other_sig": 0.015625,
+      "f_silence": 0.0,
+      "f_total": 0.015625,
+      "n_cases": 1,
+      "n_flips": 1024,
+      "reference_signatures": [
+        "densidad_estable + tipo_unico"
+      ],
+      "world": "life_block"
+    },
+    "life_glider": {
+      "f_core": 0.0322265625,
+      "f_noise": 0.0,
+      "f_other_sig": 0.0322265625,
+      "f_silence": 0.0,
+      "f_total": 0.0322265625,
+      "n_cases": 1,
+      "n_flips": 1024,
+      "reference_signatures": [
+        "densidad_estable + tipo_unico + velocidad_constante"
+      ],
+      "world": "life_glider"
+    },
+    "rule_150": {
+      "f_core": 0.0234375,
+      "f_noise": 0.0,
+      "f_other_sig": 0.0234375,
+      "f_silence": 0.0,
+      "f_total": 0.0234375,
+      "n_cases": 2,
+      "n_flips": 128,
+      "reference_signatures": [
+        "complejidad_alta + densidad_estable + temporal_scale_stability"
+      ],
+      "world": "rule_150"
+    },
+    "rule_30": {
+      "f_core": 0.020833333333333332,
+      "f_noise": 0.0,
+      "f_other_sig": 0.020833333333333332,
+      "f_silence": 0.0,
+      "f_total": 0.020833333333333332,
+      "n_cases": 3,
+      "n_flips": 192,
+      "reference_signatures": [
+        "complejidad_alta + densidad_estable + temporal_scale_stability"
+      ],
+      "world": "rule_30"
+    },
+    "synthetic_bloque": {
+      "f_core": null,
+      "f_noise": null,
+      "f_other_sig": null,
+      "f_silence": null,
+      "f_total": null,
+      "n_cases": 0,
+      "n_flips": 0,
+      "note": "n/a: synthetic frame generator, no physical IC perturbation protocol",
+      "reference_signatures": [],
+      "world": "synthetic_bloque"
+    },
+    "synthetic_glider": {
+      "f_core": null,
+      "f_noise": null,
+      "f_other_sig": null,
+      "f_silence": null,
+      "f_total": null,
+      "n_cases": 0,
+      "n_flips": 0,
+      "note": "n/a: synthetic frame generator, no physical IC perturbation protocol",
+      "reference_signatures": [],
+      "world": "synthetic_glider"
+    },
+    "synthetic_oscilador": {
+      "f_core": null,
+      "f_noise": null,
+      "f_other_sig": null,
+      "f_silence": null,
+      "f_total": null,
+      "n_cases": 0,
+      "n_flips": 0,
+      "note": "n/a: synthetic frame generator, no physical IC perturbation protocol",
+      "reference_signatures": [],
+      "world": "synthetic_oscilador"
+    }
+  }
+}

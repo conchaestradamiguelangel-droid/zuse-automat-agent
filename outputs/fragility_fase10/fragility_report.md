@@ -117,7 +117,7 @@ robust, but the full law signature can still change.
 the complement symmetry `0 <-> 1`, this suggests complement symmetry preserves
 not only the law signature but also the basin width.
 
-`rule_54` is the new exception: it is the most fragile measured world by
+`rule_54` is the new ECA mechanism exception: it is highly fragile by
 `f_total`, but its fragility is partly noise-boundary fragility (`f_noise =
 0.375`), not only productive signature switching.
 
@@ -185,10 +185,37 @@ Verdict: **cluster_confirmado**. Cluster confirmado como propiedad robusta de `r
 
 ## Two Fragility Mechanisms
 
-Ten of eleven measured worlds still have `f_noise = 0`; `rule_54` is the exception with `f_noise = 0.375`. This qualifies the earlier Fase 10 finding: productive fragility is the dominant mechanism, but `rule_54` defines a second mechanism, noise-boundary fragility.
+Ten of eleven measured worlds in the original ECA fragility set still have
+`f_noise = 0`; `rule_54` is the exception with `f_noise = 0.375`. This
+qualifies the earlier Fase 10 finding: productive fragility is the dominant
+mechanism, but `rule_54` defines a second mechanism, noise-boundary fragility.
 
 - Productive basin switching: `rule_137` (`f_noise = 0.000`, dispersed) has
   many productive attractors available.
 - Noise-boundary fragility: `rule_54` (`f_noise = 0.375`, clustered) sits close
   to the deduplicated structure threshold and can fall into noise under local
   perturbation.
+
+## Fase 22: Physical Atlas Completion
+
+Fase 22 measured the remaining atlas worlds with genuine perturbable initial
+conditions: `rule_30`, `rule_150`, `life_blinker`, `life_block`, and
+`life_glider`.
+
+The three synthetic controls (`synthetic_bloque`, `synthetic_glider`,
+`synthetic_oscilador`) remain `n/a` by design: they are frame generators, not
+dynamical systems evolved from an IC. Assigning them `f_total` would invent a
+new perturbation protocol.
+
+| world | protocol | n_flips | f_total | f_core | f_noise | interpretation |
+| --- | --- | ---: | ---: | ---: | ---: | --- |
+| `rule_30` | ECA productive pockets | 192 | 0.021 | 0.021 | 0.000 | robust when measured inside non-empty visits |
+| `rule_150` | ECA productive pockets | 128 | 0.023 | 0.023 | 0.000 | robust when measured inside non-empty visits |
+| `life_block` | 2D one-cell flips | 1024 | 0.016 | 0.016 | 0.000 | stable Life fixture |
+| `life_glider` | 2D one-cell flips | 1024 | 0.032 | 0.032 | 0.000 | stable Life fixture |
+| `life_blinker` | 2D one-cell flips | 1024 | 1.000 | 1.000 | 0.000 | exact oscillator fixture disrupted by any extra cell |
+
+The result closes the physical fragility atlas: all non-synthetic worlds now
+have measured `f_total` and `f_core`. The surprise is `life_blinker`: its
+fixture is physically simple but signature-fragile, because any additional cell
+breaks the exact periodic reference signature under the 2D observer protocol.

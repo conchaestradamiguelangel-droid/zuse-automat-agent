@@ -435,7 +435,34 @@ The `frontera-rich-estable` family is the robust end of the atlas:
 `rule_208` is independent of that pair. The zero-fragility result for
 `rule_208/209` suggests very wide basins for stable high-richness dynamics.
 
-## 7. Open Questions
+## 7. Physical Fragility Atlas Completion
+
+Fase 22 completes fragility for every non-synthetic atlas world. The remaining
+physical worlds were `rule_30`, `rule_150`, and the three Life fixtures:
+
+| world | category | protocol | f_total | f_core | f_noise |
+| --- | --- | --- | ---: | ---: | ---: |
+| `rule_30` | noise-bounded | productive ECA pockets | 0.021 | 0.021 | 0.000 |
+| `rule_150` | noise-bounded | productive ECA pockets | 0.023 | 0.023 | 0.000 |
+| `life_block` | sin-evidencia-multiregimen | 2D one-cell flips | 0.016 | 0.016 | 0.000 |
+| `life_glider` | sin-evidencia-multiregimen | 2D one-cell flips | 0.032 | 0.032 | 0.000 |
+| `life_blinker` | sin-evidencia-multiregimen | 2D one-cell flips | 1.000 | 1.000 | 0.000 |
+
+The synthetic controls remain `n/a`: they are frame generators rather than
+dynamical systems evolved from a perturbable IC. This is a methodological
+boundary, not missing data.
+
+Two conclusions follow:
+
+- The `noise-bounded` category is not intrinsically fragile inside its
+  productive pockets. `rule_30` and `rule_150` have low conditional fragility;
+  their category is defined by frequent pre-law noise at scale, not by
+  instability of the non-empty signatures that survive the gate.
+- `life_blinker` is the most signature-fragile control (`f_total = 1.000`):
+  any one-cell perturbation breaks the exact period-2 fixture signature. This
+  is fixture disruption, not basin switching or noise-boundary fragility.
+
+## 8. Open Questions
 
 1. **Symbolic formulas**  
    The physical tree has strong empirical signal, but PySR/Julia remains a
@@ -448,7 +475,7 @@ The `frontera-rich-estable` family is the robust end of the atlas:
    This does not affect the law signature in the controlled case, but it is a
    known limitation if future work uses absolute counts as physical evidence.
 
-## 8. Bottom Line
+## 9. Bottom Line
 
 The current atlas is no longer just a list of laws by world. It is a structured
 map with:
