@@ -211,6 +211,66 @@ The atlas now separates three high-fragility mechanisms. The third one only
 became visible after `rule_108`: a near-empty quiescent background can be very
 sensitive in full signature while its local core remains stable.
 
+### Fase 13a — Fase 12 Fragility Arc Consolidated
+
+Fase 12 closes the first complete fragility arc: the measured spectrum covers
+10 worlds before adding the later `rule_51` and `rule_108` special cases. The
+core result is not just the ranking by `f_total`, but the split between two
+mechanisms that can both produce high fragility.
+
+#### Spectrum Ordered by `f_total`
+
+| world | category | f_total | f_noise | pattern |
+| --- | --- | ---: | ---: | --- |
+| `rule_208` | `frontera-rich-estable` | 0.000 | 0.000 | - |
+| `rule_209` | `frontera-rich-estable` | 0.000 | 0.000 | - |
+| `rule_46` | `frontera-rich-estable` | 0.031 | 0.000 | - |
+| `rule_90` | `multiregimen-escala-dependiente` | 0.172 | 0.000 | clustered |
+| `rule_124` | `multiregimen-productivo` | 0.224 | 0.000 | dispersed |
+| `rule_109` | `multiregimen-productivo` | 0.250 | 0.000 | clustered |
+| `rule_110` | `multiregimen-productivo` | 0.323 | 0.000 | clustered |
+| `rule_18` | `multiregimen-productivo` | 0.349 | 0.000 | clustered |
+| `rule_137` | `multiregimen-productivo` | 0.630 | 0.000 | dispersed |
+| `rule_54` | `multiregimen-productivo` | 0.714 | 0.375 | clustered |
+
+#### Mechanism Split
+
+`rule_137` and `rule_54` are both high-fragility worlds, but their mechanisms
+are different.
+
+- **Productive basin switching**: `rule_137` has `f_total = 0.630` and
+  `f_noise = 0.000`. One-bit perturbations move the IC between productive law
+  signatures without collapsing the run into noise.
+- **Noise-boundary fragility**: `rule_54` has `f_total = 0.714` and
+  `f_noise = 0.375`. A large fraction of perturbations cross the deduplicated
+  structure gate rather than merely switching productive signatures.
+
+Thus high `f_total` is not a single phenomenon. It can mean a dense landscape
+of productive basins (`rule_137`) or proximity to the observer noise boundary
+(`rule_54`).
+
+#### The `f_noise = 0` Rule and Its Exception
+
+Nine of the ten Fase 12 worlds have `f_noise = 0.000`. This makes productive
+fragility the default mechanism in the measured spectrum: perturbations
+usually change signatures without making the run unanalyzable.
+
+`rule_54` is the documented exception. Its `f_noise = 0.375` identifies a
+separate mechanism: fragility caused by the run sitting close to the
+`dedup_structure_count > 40` threshold.
+
+#### Spatial Pattern: `rule_124` as Second Dispersed World
+
+`rule_137` is not the only world with spatially dispersed fragility.
+`rule_124` is the second dispersed case in the measured Fase 12 set:
+
+- `rule_137`: `f_total = 0.630`, dispersed, high-intensity productive switching.
+- `rule_124`: `f_total = 0.224`, dispersed, lower-intensity productive switching.
+
+This distinction matters: **dispersed** describes the spatial geometry of
+sensitivity, not its magnitude. `rule_124` shows that global sensitivity can
+exist even when the total fragility is moderate.
+
 ### Productive Basin Switching
 
 Example: `rule_137`
