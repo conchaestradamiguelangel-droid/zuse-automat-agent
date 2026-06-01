@@ -164,6 +164,25 @@ This confirms the pre-run hypothesis: stable high-richness worlds have broad
 law-signature basins, unlike `rule_137`, whose signature changes under most
 single-bit perturbations.
 
+
+## Fase 13b: rule_109 Multi-Seed Confirmation
+
+Fase 13b reran `rule_109` at `steps=48`, `width=64` with two fresh seeds
+(`20260601`, `20260602`) and compared them against the original seed
+`20260554`.
+
+| seed | f_total | f_other_sig | f_silence | f_noise | bin_range | peak_bin | central_peak |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 20260554 | 0.250 | 0.250 | 0.000 | 0.000 | 0.875 | 1 | no |
+| 20260601 | 0.469 | 0.469 | 0.000 | 0.000 | 0.750 | 3 | yes |
+| 20260602 | 0.203 | 0.203 | 0.000 | 0.000 | 0.625 | 3 | yes |
+
+Mean across the three seeds: `f_total = 0.307`, entirely productive
+(`f_silence = 0.000`, `f_noise = 0.000`). The aggregate position map remains
+clustered (`bin_range = 0.500`), with strongest overlap in positions `24-31`.
+
+Verdict: **cluster_confirmado**. Cluster confirmado como propiedad robusta de `rule_109`: al menos 2/3 seeds tienen `bin_range > 0.5` y pico central.
+
 ## Two Fragility Mechanisms
 
 Ten of eleven measured worlds still have `f_noise = 0`; `rule_54` is the exception with `f_noise = 0.375`. This qualifies the earlier Fase 10 finding: productive fragility is the dominant mechanism, but `rule_54` defines a second mechanism, noise-boundary fragility.
