@@ -1,4 +1,4 @@
-# ZAA Scientific Synthesis — Fases 11-19
+# ZAA Scientific Synthesis — Fases 11-20a
 
 Date: 2026-05-31
 
@@ -6,8 +6,9 @@ This document consolidates the current scientific map of ZAA after the ECA
 sweep, world taxonomy, basin-fragility diagnostics, `rule_54` gate anatomy,
 `rule_51` periodicity validation, `core_fragility`, the Fase 16 local
 oscillator search, the Fase 17 formal `rule_108` atlas profile, and the
-Fase 18 local oscillator family sweep, and the Fase 19 controlled `rule_54`
-single-bit experiment.
+Fase 18 local oscillator family sweep, the Fase 19 controlled `rule_54`
+single-bit experiment, and the Fase 20a profile of the remaining
+`frontera_temporal` sweep candidates.
 
 Primary artifacts:
 
@@ -22,6 +23,7 @@ Primary artifacts:
 - `outputs/profile_fase17/rule108_seed_profile.json`
 - `outputs/profile_fase17/rule108_fragility.json`
 - `outputs/local_oscillator_family_fase18/local_oscillator_family_report.md`
+- `outputs/frontera_sweep/remaining_candidate_profiles.md`
 
 ## 1. Current Atlas
 
@@ -73,9 +75,35 @@ Formal profiles:
 | `rule_208` | `frontera-rich-estable` | 6.000 | 0.167 | six-law frontier signature |
 | `rule_209` | `frontera-rich-estable` | 6.000 | 0.167 | six-law frontier signature |
 
+Fase 20a then profiled the 35 remaining sweep candidates under the same formal
+six-seed protocol (`steps=24`, `width=64`, seeds `20260523..20260528`).
+These candidate-protocol labels do not automatically overwrite the long-journal
+atlas categories, but they answer whether the top-three rules were isolated
+outliers.
+
+Result:
+
+| candidate-protocol category | count |
+| --- | --- |
+| `frontera-rich-estable` | 24 |
+| `multiregimen-productivo` | 8 |
+| `sin-evidencia-multiregimen` | 3 |
+
+Highest-richness additional candidates:
+
+| world | category | mean_laws | peak_diversity |
+| --- | --- | --- | --- |
+| `rule_84` | `frontera-rich-estable` | 5.833 | 0.333 |
+| `rule_138` | `frontera-rich-estable` | 5.833 | 0.333 |
+| `rule_212` | `frontera-rich-estable` | 5.833 | 0.333 |
+| `rule_213` | `frontera-rich-estable` | 5.833 | 0.333 |
+| `rule_174` | `frontera-rich-estable` | 5.667 | 0.333 |
+| `rule_116` | `frontera-rich-estable` | 5.667 | 0.500 |
+| `rule_244` | `frontera-rich-estable` | 5.667 | 0.500 |
+
 Conclusion: `frontera_temporal` is demanding but not intrinsically rare. It is
-the marker of a stable high-richness boundary family that the original atlas
-under-sampled.
+the marker of a broad stable high-richness boundary band that the original
+atlas under-sampled, not a three-rule anomaly.
 
 ## 3. periodicidad Exists in ECA in Global and Local Forms
 
