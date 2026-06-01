@@ -1,4 +1,4 @@
-# ZAA Scientific Synthesis — Fases 11-20a
+# ZAA Scientific Synthesis — Fases 11-20b
 
 Date: 2026-05-31
 
@@ -7,8 +7,9 @@ sweep, world taxonomy, basin-fragility diagnostics, `rule_54` gate anatomy,
 `rule_51` periodicity validation, `core_fragility`, the Fase 16 local
 oscillator search, the Fase 17 formal `rule_108` atlas profile, and the
 Fase 18 local oscillator family sweep, the Fase 19 controlled `rule_54`
-single-bit experiment, and the Fase 20a profile of the remaining
-`frontera_temporal` sweep candidates.
+single-bit experiment, the Fase 20a profile of the remaining
+`frontera_temporal` sweep candidates, and the Fase 20b long-journal check
+of the top four new candidates.
 
 Primary artifacts:
 
@@ -24,6 +25,7 @@ Primary artifacts:
 - `outputs/profile_fase17/rule108_fragility.json`
 - `outputs/local_oscillator_family_fase18/local_oscillator_family_report.md`
 - `outputs/frontera_sweep/remaining_candidate_profiles.md`
+- `outputs/frontera_sweep/top4_long_journal_fase20b/top4_long_report.md`
 
 ## 1. Current Atlas
 
@@ -101,9 +103,31 @@ Highest-richness additional candidates:
 | `rule_116` | `frontera-rich-estable` | 5.667 | 0.500 |
 | `rule_244` | `frontera-rich-estable` | 5.667 | 0.500 |
 
+Fase 20b tested selective atlas integration by running an independent
+160-cycle policy journal over the four strongest new candidates
+(`rule_84`, `rule_138`, `rule_212`, `rule_213`) without modifying production
+`WORLD_SEQUENCE`.
+
+Long-journal result:
+
+| world | long-journal category | visits | mean_laws | peak_diversity | noise_ratio |
+| --- | --- | --- | --- | --- | --- |
+| `rule_84` | `sin-evidencia-multiregimen` | 40 | 3.125 | 0.143 | 0.300 |
+| `rule_138` | `noise-bounded` | 41 | 2.561 | 0.167 | 0.561 |
+| `rule_212` | `sin-evidencia-multiregimen` | 40 | 3.300 | 0.143 | 0.300 |
+| `rule_213` | `sin-evidencia-multiregimen` | 39 | 3.000 | 0.148 | 0.308 |
+
+Interpretation: the `steps=24` candidate profile is a useful frontera filter,
+but not atlas-grade stability evidence. The top four are rich at the short
+formal scale, then lose `frontera_temporal` frequency or approach the noise
+gate under policy scaling. They should not be promoted to the canonical atlas
+without a scale-aware category or additional controlled protocol.
+
 Conclusion: `frontera_temporal` is demanding but not intrinsically rare. It is
 the marker of a broad stable high-richness boundary band that the original
-atlas under-sampled, not a three-rule anomaly.
+atlas under-sampled, not a three-rule anomaly. However, only long-journal
+validation distinguishes stable atlas worlds from short-scale frontera
+candidates.
 
 ## 3. periodicidad Exists in ECA in Global and Local Forms
 

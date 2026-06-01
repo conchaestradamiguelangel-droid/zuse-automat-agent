@@ -1,0 +1,274 @@
+{
+  "config": {
+    "base_seed": 20260610,
+    "cycles": 160,
+    "steps": 24,
+    "width": 64,
+    "worlds": [
+      "rule_84",
+      "rule_138",
+      "rule_212",
+      "rule_213"
+    ]
+  },
+  "stats_by_world": {
+    "rule_138": {
+      "actions": {
+        "change_world": 36,
+        "increase_steps": 3,
+        "repeat_vary_seed": 2
+      },
+      "classification": "noise-bounded",
+      "dominant_signature": "velocidad_constante + densidad_estable + tipo_unico + complejidad_alta + frontera_temporal + temporal_scale_stability",
+      "law_frequencies": {
+        "complejidad_alta": {
+          "count": 17,
+          "rate": 0.9444444444444444
+        },
+        "densidad_estable": {
+          "count": 18,
+          "rate": 1.0
+        },
+        "frontera_temporal": {
+          "count": 17,
+          "rate": 0.9444444444444444
+        },
+        "periodicidad": {
+          "count": 0,
+          "rate": 0.0
+        },
+        "temporal_scale_stability": {
+          "count": 18,
+          "rate": 1.0
+        },
+        "tipo_unico": {
+          "count": 17,
+          "rate": 0.9444444444444444
+        },
+        "velocidad_constante": {
+          "count": 18,
+          "rate": 1.0
+        }
+      },
+      "max_dedup": 57,
+      "max_steps": 192,
+      "mean_dedup": 40.0,
+      "mean_laws": 2.5609756097560976,
+      "mean_steps": 166.14634146341464,
+      "noise_ratio": 0.5609756097560976,
+      "noise_visits": 23,
+      "non_empty_ratio": 0.43902439024390244,
+      "non_empty_visits": 18,
+      "peak_diversity": 0.16666666666666666,
+      "reasons": {
+        "firma_conocida_buscar_escala": 3,
+        "firma_leyes_nueva_explorar_mas": 2,
+        "max_repeats_o_max_steps_alcanzado": 1,
+        "noise_boundary_alcanzado": 12,
+        "ruido_no_analizable": 23
+      },
+      "signature_counts": {
+        "velocidad_constante + densidad_estable + complejidad_alta + frontera_temporal + temporal_scale_stability": 1,
+        "velocidad_constante + densidad_estable + tipo_unico + complejidad_alta + frontera_temporal + temporal_scale_stability": 16,
+        "velocidad_constante + densidad_estable + tipo_unico + temporal_scale_stability": 1
+      },
+      "silence_visits": 0,
+      "total_visits": 41,
+      "world": "rule_138"
+    },
+    "rule_212": {
+      "actions": {
+        "change_world": 36,
+        "increase_steps": 3,
+        "repeat_vary_seed": 1
+      },
+      "classification": "sin-evidencia-multiregimen",
+      "dominant_signature": "velocidad_constante + densidad_estable + complejidad_alta + temporal_scale_stability",
+      "law_frequencies": {
+        "complejidad_alta": {
+          "count": 28,
+          "rate": 1.0
+        },
+        "densidad_estable": {
+          "count": 28,
+          "rate": 1.0
+        },
+        "frontera_temporal": {
+          "count": 13,
+          "rate": 0.4642857142857143
+        },
+        "periodicidad": {
+          "count": 0,
+          "rate": 0.0
+        },
+        "temporal_scale_stability": {
+          "count": 28,
+          "rate": 1.0
+        },
+        "tipo_unico": {
+          "count": 7,
+          "rate": 0.25
+        },
+        "velocidad_constante": {
+          "count": 28,
+          "rate": 1.0
+        }
+      },
+      "max_dedup": 59,
+      "max_steps": 192,
+      "mean_dedup": 40.75,
+      "mean_laws": 3.3,
+      "mean_steps": 170.425,
+      "noise_ratio": 0.3,
+      "noise_visits": 12,
+      "non_empty_ratio": 0.7,
+      "non_empty_visits": 28,
+      "peak_diversity": 0.14285714285714285,
+      "reasons": {
+        "firma_conocida_buscar_escala": 3,
+        "firma_leyes_nueva_explorar_mas": 1,
+        "max_repeats_o_max_steps_alcanzado": 1,
+        "noise_boundary_alcanzado": 23,
+        "ruido_no_analizable": 12
+      },
+      "signature_counts": {
+        "velocidad_constante + densidad_estable + complejidad_alta + frontera_temporal + temporal_scale_stability": 7,
+        "velocidad_constante + densidad_estable + complejidad_alta + temporal_scale_stability": 14,
+        "velocidad_constante + densidad_estable + tipo_unico + complejidad_alta + frontera_temporal + temporal_scale_stability": 6,
+        "velocidad_constante + densidad_estable + tipo_unico + complejidad_alta + temporal_scale_stability": 1
+      },
+      "silence_visits": 0,
+      "total_visits": 40,
+      "world": "rule_212"
+    },
+    "rule_213": {
+      "actions": {
+        "change_world": 35,
+        "increase_steps": 3,
+        "repeat_vary_seed": 1
+      },
+      "classification": "sin-evidencia-multiregimen",
+      "dominant_signature": "velocidad_constante + densidad_estable + complejidad_alta + temporal_scale_stability",
+      "law_frequencies": {
+        "complejidad_alta": {
+          "count": 27,
+          "rate": 1.0
+        },
+        "densidad_estable": {
+          "count": 27,
+          "rate": 1.0
+        },
+        "frontera_temporal": {
+          "count": 6,
+          "rate": 0.2222222222222222
+        },
+        "periodicidad": {
+          "count": 0,
+          "rate": 0.0
+        },
+        "temporal_scale_stability": {
+          "count": 27,
+          "rate": 1.0
+        },
+        "tipo_unico": {
+          "count": 3,
+          "rate": 0.1111111111111111
+        },
+        "velocidad_constante": {
+          "count": 27,
+          "rate": 1.0
+        }
+      },
+      "max_dedup": 47,
+      "max_steps": 192,
+      "mean_dedup": 38.256410256410255,
+      "mean_laws": 3,
+      "mean_steps": 176.6153846153846,
+      "noise_ratio": 0.3076923076923077,
+      "noise_visits": 12,
+      "non_empty_ratio": 0.6923076923076923,
+      "non_empty_visits": 27,
+      "peak_diversity": 0.14814814814814814,
+      "reasons": {
+        "firma_conocida_buscar_escala": 3,
+        "firma_leyes_nueva_explorar_mas": 1,
+        "noise_boundary_alcanzado": 23,
+        "ruido_no_analizable": 12
+      },
+      "signature_counts": {
+        "velocidad_constante + densidad_estable + complejidad_alta + frontera_temporal + temporal_scale_stability": 5,
+        "velocidad_constante + densidad_estable + complejidad_alta + temporal_scale_stability": 19,
+        "velocidad_constante + densidad_estable + tipo_unico + complejidad_alta + frontera_temporal + temporal_scale_stability": 1,
+        "velocidad_constante + densidad_estable + tipo_unico + complejidad_alta + temporal_scale_stability": 2
+      },
+      "silence_visits": 0,
+      "total_visits": 39,
+      "world": "rule_213"
+    },
+    "rule_84": {
+      "actions": {
+        "change_world": 36,
+        "increase_steps": 3,
+        "repeat_vary_seed": 1
+      },
+      "classification": "sin-evidencia-multiregimen",
+      "dominant_signature": "velocidad_constante + densidad_estable + complejidad_alta + temporal_scale_stability",
+      "law_frequencies": {
+        "complejidad_alta": {
+          "count": 28,
+          "rate": 1.0
+        },
+        "densidad_estable": {
+          "count": 28,
+          "rate": 1.0
+        },
+        "frontera_temporal": {
+          "count": 7,
+          "rate": 0.25
+        },
+        "periodicidad": {
+          "count": 0,
+          "rate": 0.0
+        },
+        "temporal_scale_stability": {
+          "count": 28,
+          "rate": 1.0
+        },
+        "tipo_unico": {
+          "count": 6,
+          "rate": 0.21428571428571427
+        },
+        "velocidad_constante": {
+          "count": 28,
+          "rate": 1.0
+        }
+      },
+      "max_dedup": 58,
+      "max_steps": 192,
+      "mean_dedup": 38.75,
+      "mean_laws": 3.125,
+      "mean_steps": 168.15,
+      "noise_ratio": 0.3,
+      "noise_visits": 12,
+      "non_empty_ratio": 0.7,
+      "non_empty_visits": 28,
+      "peak_diversity": 0.14285714285714285,
+      "reasons": {
+        "firma_conocida_buscar_escala": 3,
+        "firma_leyes_nueva_explorar_mas": 1,
+        "max_repeats_o_max_steps_alcanzado": 1,
+        "noise_boundary_alcanzado": 23,
+        "ruido_no_analizable": 12
+      },
+      "signature_counts": {
+        "velocidad_constante + densidad_estable + complejidad_alta + frontera_temporal + temporal_scale_stability": 3,
+        "velocidad_constante + densidad_estable + complejidad_alta + temporal_scale_stability": 19,
+        "velocidad_constante + densidad_estable + tipo_unico + complejidad_alta + frontera_temporal + temporal_scale_stability": 4,
+        "velocidad_constante + densidad_estable + tipo_unico + complejidad_alta + temporal_scale_stability": 2
+      },
+      "silence_visits": 0,
+      "total_visits": 40,
+      "world": "rule_84"
+    }
+  }
+}
