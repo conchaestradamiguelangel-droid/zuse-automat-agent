@@ -520,11 +520,14 @@ The matrix reveals three broad patterns:
    `rule_46`, `rule_208`, and `rule_209` activate six of seven laws with low
    diversity.
 
-3. **`periodicidad` is not a generic ECA law.**
-   It appears in designed oscillators, in the global complement rule
-   (`rule_51`), and in the local oscillator (`rule_108`), but not in the
-   complex frontier worlds. This is why Section 7 treats `rule_108` separately
-   rather than folding it into ordinary stable-rich behavior.
+3. **`periodicidad` is IC-family sensitive.**
+   Under random ICs it appears in designed controls, in the global complement
+   rule (`rule_51`), and in the local oscillator (`rule_108`), but not in the
+   complex frontier worlds. Under explicitly periodic ICs, however, Fase 21a
+   finds production `periodicidad` in `207/256` ECA rules. The law is therefore
+   not dead or ECA-inaccessible; it is controlled by the IC family. This is why
+   Section 7 treats `rule_108` separately rather than folding it into ordinary
+   stable-rich behavior.
 
 ### 5.3 Key atlas rows
 

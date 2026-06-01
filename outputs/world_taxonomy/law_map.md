@@ -57,6 +57,16 @@ Candidate tier:
   `sin-evidencia-multiregimen`. This establishes the long journal as the
   atlas-grade gatekeeper.
 
+Periodic IC note:
+
+- **periodicidad-ic-disenada** is also not a canonical atlas category. Fase 21a
+  tested 32 explicit periodic ICs against all ECA rules and found production
+  `periodicidad` hits in `207/256` rules. This closes the periodicity gap:
+  random ICs rarely activate observer-level periodicity, but designed periodic
+  backgrounds make it common. Canonical atlas entries still require a world
+  profile such as `rule_51` (`periodicidad-global`) or `rule_108`
+  (`oscilador-local`).
+
 Thresholds used:
 
 - `DIVERSITY_THRESHOLD = 0.5`

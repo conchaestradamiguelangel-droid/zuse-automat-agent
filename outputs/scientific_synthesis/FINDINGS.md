@@ -1,4 +1,4 @@
-# ZAA Scientific Synthesis — Fases 11-20b
+# ZAA Scientific Synthesis — Fases 11-21a
 
 Date: 2026-05-31
 
@@ -9,7 +9,7 @@ oscillator search, the Fase 17 formal `rule_108` atlas profile, and the
 Fase 18 local oscillator family sweep, the Fase 19 controlled `rule_54`
 single-bit experiment, the Fase 20a profile of the remaining
 `frontera_temporal` sweep candidates, and the Fase 20b long-journal check
-of the top four new candidates.
+of the top four new candidates, and the Fase 21a designed periodic-IC sweep.
 
 Primary artifacts:
 
@@ -26,6 +26,7 @@ Primary artifacts:
 - `outputs/local_oscillator_family_fase18/local_oscillator_family_report.md`
 - `outputs/frontera_sweep/remaining_candidate_profiles.md`
 - `outputs/frontera_sweep/top4_long_journal_fase20b/top4_long_report.md`
+- `outputs/periodicity_fase21/periodic_ic_sweep_report.md`
 
 ## 1. Current Atlas
 
@@ -144,6 +145,29 @@ Result:
 - `rule_51`: `50/50` periodicity hits, all production-valid.
 - `rule_15` and `rule_57`: `0/50`.
 
+Fase 21a then replaced random ICs with explicit spatially periodic ICs:
+32 designed 8-bit words repeated into `width=64`, tested across all ECA
+rules `0..255` at `steps=96`.
+
+Result:
+
+- Total runs: `8192`.
+- Frame-periodic cases: `2128/8192`.
+- Production `periodicidad` hits: `2086/8192`.
+- ECA rules with at least one production hit: `207/256`.
+
+Strongest rules:
+
+| world | hits/32 | mechanism |
+| --- | --- | --- |
+| `rule_51` | 32/32 | global period-2 complementation |
+| `rule_15` | 30/32 | periodic background induced by designed IC |
+| `rule_85` | 30/32 | periodic background induced by designed IC |
+| `rule_105` | 30/32 | periodic background induced by designed IC |
+| `rule_170` | 30/32 | periodic background induced by designed IC |
+| `rule_240` | 30/32 | periodic background induced by designed IC |
+| `rule_150` | 28/32 | additive periodic background |
+
 `rule_51` implements `f(a,b,c) = NOT b`, so every cell complements itself each
 step independently of neighbors. This produces deterministic period-2 global
 frame dynamics.
@@ -181,9 +205,11 @@ period-2 motif:
 The active region stays localized with span <= 3 for 200 steps, the background
 remains quiescent, and the production pipeline accepts `periodicidad`.
 
-Interpretation: `periodicidad` is now validated on real ECA dynamics in two
-forms. `rule_51` is global frame periodicity; `rule_108` is a genuine local
-period-2 particle oscillator.
+Interpretation: `periodicidad` is now validated on real ECA dynamics in three
+forms. Random ICs rarely produce observer-level periodicity. Designed periodic
+ICs make it widespread (`207/256` rules), mostly as periodic backgrounds or
+spatially repeated temporal cycles. `rule_51` is the clean global case, and
+`rule_108` is the stricter local period-2 particle oscillator.
 
 Fase 17 integrates `rule_108` formally into the atlas. The canonical IC is
 `pair_gap1` on a quiescent zero background; the point IC is a negative control
