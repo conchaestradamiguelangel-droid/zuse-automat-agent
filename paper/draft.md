@@ -448,7 +448,7 @@ for one of the positive families.
 | `rule_90` | `multiregimen-escala-dependiente` | 0.500 | 0.600 | 0.172 | 0.000 |
 | `rule_110` | `multiregimen-productivo` | 2.727 | 0.600 | 0.323 | 0.198 |
 | `rule_124` | `multiregimen-productivo` | 2.167 | 0.600 | 0.224 | 0.083 |
-| `rule_109` | `multiregimen-productivo` | 2.000 | 0.667 | 0.250 | 0.250 |
+| `rule_109` | `multiregimen-productivo` | 2.000 | 0.667 | 0.307 | 0.307 |
 | `rule_18` | `multiregimen-productivo` | 2.308 | 0.800 | 0.349 | 0.135 |
 | `rule_137` | `multiregimen-productivo` | 2.867 | 0.833 | 0.630 | 0.312 |
 | `rule_54` | `multiregimen-productivo` | 1.917 | 0.800 | 0.714 | 0.677 |
@@ -625,45 +625,25 @@ averaged.
 
 ### 6.4 Fragility spectrum
 
-| world | category | `f_total` | `f_core` | `f_gap` | `f_noise` |
-| --- | --- | ---: | ---: | ---: | ---: |
-| `rule_208` | `frontera-rich-estable` | 0.000 | 0.000 | 0.000 | 0.000 |
-| `rule_209` | `frontera-rich-estable` | 0.000 | 0.000 | 0.000 | 0.000 |
-| `life_block` | `sin-evidencia-multiregimen` | 0.016 | 0.016 | 0.000 | 0.000 |
-| `rule_30` | `noise-bounded` | 0.021 | 0.021 | 0.000 | 0.000 |
-| `rule_150` | `noise-bounded` | 0.023 | 0.023 | 0.000 | 0.000 |
-| `rule_46` | `frontera-rich-estable` | 0.031 | 0.031 | 0.000 | 0.000 |
-| `life_glider` | `sin-evidencia-multiregimen` | 0.032 | 0.032 | 0.000 | 0.000 |
-| `rule_90` | `multiregimen-escala-dependiente` | 0.172 | 0.000 | 0.172 | 0.000 |
-| `rule_51` | `periodicidad-global` | 0.193 | 0.000 | 0.193 | 0.000 |
-| `rule_124` | `multiregimen-productivo` | 0.224 | 0.083 | 0.141 | 0.000 |
-| `rule_109` | `multiregimen-productivo` | 0.250 | 0.250 | 0.000 | 0.000 |
-| `rule_110` | `multiregimen-productivo` | 0.323 | 0.198 | 0.125 | 0.000 |
-| `rule_18` | `multiregimen-productivo` | 0.349 | 0.135 | 0.214 | 0.000 |
-| `rule_137` | `multiregimen-productivo` | 0.630 | 0.312 | 0.318 | 0.000 |
-| `rule_54` | `multiregimen-productivo` | 0.714 | 0.677 | 0.037 | 0.375 |
-| `rule_108` | `oscilador-local` | 0.992 | 0.047 | 0.945 | 0.000 |
-| `life_blinker` | `sin-evidencia-multiregimen` | 1.000 | 1.000 | 0.000 | 0.000 |
-
-| world | category | f_total | f_core | f_gap | mechanism |
-| --- | --- | ---: | ---: | ---: | --- |
-| `rule_208` | `frontera-rich-estable` | 0.000 | 0.000 | 0.000 | stable basin |
-| `rule_209` | `frontera-rich-estable` | 0.000 | 0.000 | 0.000 | stable basin |
-| `life_block` | `sin-evidencia-multiregimen` | 0.016 | 0.016 | 0.000 | stable Life fixture |
-| `rule_30` | `noise-bounded` | 0.021 | 0.021 | 0.000 | productive pocket |
-| `rule_150` | `noise-bounded` | 0.023 | 0.023 | 0.000 | productive pocket |
-| `rule_46` | `frontera-rich-estable` | 0.031 | 0.031 | 0.000 | stable basin |
-| `life_glider` | `sin-evidencia-multiregimen` | 0.032 | 0.032 | 0.000 | stable Life fixture |
-| `rule_90` | `multiregimen-escala-dependiente` | 0.172 | 0.000 | 0.172 | secondary churn |
-| `rule_51` | `periodicidad-global` | 0.193 | 0.000 | 0.193 | secondary churn |
-| `rule_124` | `multiregimen-productivo` | 0.224 | 0.083 | 0.141 | productive switching |
-| `rule_109` | `multiregimen-productivo` | 0.250 | 0.250 | 0.000 | productive switching |
-| `rule_110` | `multiregimen-productivo` | 0.323 | 0.198 | 0.125 | productive switching |
-| `rule_18` | `multiregimen-productivo` | 0.349 | 0.135 | 0.214 | productive switching |
-| `rule_137` | `multiregimen-productivo` | 0.630 | 0.312 | 0.318 | productive switching |
-| `rule_54` | `multiregimen-productivo` | 0.714 | 0.677 | 0.037 | noise-boundary |
-| `rule_108` | `oscilador-local` | 0.992 | 0.047 | 0.945 | quiescent-background activation |
-| `life_blinker` | `sin-evidencia-multiregimen` | 1.000 | 1.000 | 0.000 | periodic fixture disruption |
+| world | category | `f_total` | `f_core` | `f_gap` | `f_noise` | mechanism |
+| --- | --- | ---: | ---: | ---: | ---: | --- |
+| `rule_208` | `frontera-rich-estable` | 0.000 | 0.000 | 0.000 | 0.000 | stable basin |
+| `rule_209` | `frontera-rich-estable` | 0.000 | 0.000 | 0.000 | 0.000 | stable basin |
+| `life_block` | `sin-evidencia-multiregimen` | 0.016 | 0.016 | 0.000 | 0.000 | stable Life fixture |
+| `rule_30` | `noise-bounded` | 0.021 | 0.021 | 0.000 | 0.000 | productive pocket |
+| `rule_150` | `noise-bounded` | 0.023 | 0.023 | 0.000 | 0.000 | productive pocket |
+| `rule_46` | `frontera-rich-estable` | 0.031 | 0.031 | 0.000 | 0.000 | stable basin |
+| `life_glider` | `sin-evidencia-multiregimen` | 0.032 | 0.032 | 0.000 | 0.000 | stable Life fixture |
+| `rule_90` | `multiregimen-escala-dependiente` | 0.172 | 0.000 | 0.172 | 0.000 | secondary churn |
+| `rule_51` | `periodicidad-global` | 0.193 | 0.000 | 0.193 | 0.000 | secondary churn |
+| `rule_124` | `multiregimen-productivo` | 0.224 | 0.083 | 0.141 | 0.000 | productive switching |
+| `rule_109` | `multiregimen-productivo` | 0.307 | 0.307 | 0.000 | 0.000 | productive switching |
+| `rule_110` | `multiregimen-productivo` | 0.323 | 0.198 | 0.125 | 0.000 | productive switching |
+| `rule_18` | `multiregimen-productivo` | 0.349 | 0.135 | 0.214 | 0.000 | productive switching |
+| `rule_137` | `multiregimen-productivo` | 0.630 | 0.312 | 0.318 | 0.000 | productive switching |
+| `rule_54` | `multiregimen-productivo` | 0.714 | 0.677 | 0.037 | 0.375 | noise-boundary |
+| `rule_108` | `oscilador-local` | 0.992 | 0.047 | 0.945 | 0.000 | quiescent-background activation |
+| `life_blinker` | `sin-evidencia-multiregimen` | 1.000 | 1.000 | 0.000 | 0.000 | periodic fixture disruption |
 
 The spectrum is category-aligned at the extremes: `frontera-rich-estable`
 occupies the low end, while `multiregimen-productivo` occupies the upper ECA
@@ -672,15 +652,25 @@ single-cell perturbation breaks the exact Life oscillator fixture. `rule_108`
 remains the main ECA structural outlier: `f_total = 0.992` with only
 `f_core = 0.047`.
 
-### 6.5 Four fragility mechanisms
+### 6.5 Fragility mechanisms
 
-The atlas identifies four distinct mechanisms by which one-bit IC perturbations
-change law signatures:
+The atlas identifies several distinct mechanisms by which one-bit IC
+perturbations change law signatures:
 
 **Stable basin** (`rule_208`, `rule_209`): `f_total = 0.000`. All perturbations
 preserve the reference signature. The basin for the six-law frontier signature
 is wide enough that no measured single-bit perturbation escapes it. `rule_46`
 is nearly identical (`f_total = 0.031`).
+
+**Stable Life fixture** (`life_block`, `life_glider`): perturbations rarely
+change the reference signature (`f_total <= 0.032`) because the fixture remains
+structurally recognizable after most one-cell flips. This is fixture-level
+robustness, not evidence of a broad ECA basin.
+
+**Productive pocket** (`rule_30`, `rule_150`): the worlds are noise-bounded in
+the long journal, but the non-empty pockets that survive the gate are stable
+under one-bit perturbation (`f_total ~= 0.02`). Their category is defined by
+frequent pre-law noise at scale, not by fragility of the productive signatures.
 
 **Productive basin switching** (`rule_137`, and the non-noise-boundary
 `multiregimen-productivo` worlds): perturbations move the IC among productive
@@ -695,6 +685,11 @@ requires complex ICs near the dedup threshold; single-bit ICs from bare
 backgrounds do not approach the gate (Section 8). `f_noise = 0.375` makes
 `rule_54` the only measured world where noise-gate crossings dominate
 fragility.
+
+**Periodic fixture disruption** (`life_blinker`): any one-cell perturbation
+breaks the exact Life period-2 reference signature (`f_total = 1.000`). This
+is not basin switching or noise-boundary crossing; it is the brittleness of a
+minimal periodic fixture under full-grid perturbation.
 
 **Quiescent-background activation** (`rule_108`): the canonical IC has only two
 active bits on a zero background. Nearly any background perturbation ignites
@@ -1175,6 +1170,12 @@ example: it is classified as `multiregimen-escala-dependiente` because
 high-scale visits become silent under the current protocol, but the underlying
 XOR dynamics have algebraic structure that the current seven laws do not
 capture.
+
+Fase 20 gives the same warning for `frontera_temporal`: 24 additional rules
+were rich in `frontera_temporal` at sweep scale, but the top four failed
+long-journal validation. Category assignment is therefore protocol-scale
+dependent; short-scale richness is candidate evidence, not atlas-grade
+classification.
 
 ### 9.5 PySR symbolic regression pending
 

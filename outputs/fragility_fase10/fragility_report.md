@@ -80,7 +80,7 @@ Selected cases:
 
 | world | f_other_sig | f_silence | f_noise | f_total |
 | --- | --- | --- | --- | --- |
-| rule_109 | 0.250 | 0.000 | 0.000 | 0.250 |
+| rule_109 | 0.307 | 0.000 | 0.000 | 0.307 |
 | rule_110 | 0.323 | 0.000 | 0.000 | 0.323 |
 | rule_124 | 0.224 | 0.000 | 0.000 | 0.224 |
 | rule_137 | 0.630 | 0.000 | 0.000 | 0.630 |
@@ -102,7 +102,7 @@ Selected cases:
 | rule_90 | multiregimen-escala-dependiente | 0.172 | clustered |
 | rule_51 | periodicidad-global | 0.193 | dispersed |
 | rule_124 | multiregimen-productivo | 0.224 | dispersed |
-| rule_109 | multiregimen-productivo | 0.250 | clustered |
+| rule_109 | multiregimen-productivo | 0.307 | clustered |
 | rule_110 | multiregimen-productivo | 0.323 | clustered |
 | rule_18 | multiregimen-productivo | 0.349 | clustered |
 | rule_137 | multiregimen-productivo | 0.630 | dispersed |
@@ -127,7 +127,7 @@ survives all flips, but the complete law signature changes when
 
 ## Interpretation
 
-- `rule_109`: total fragility `0.250`, dominated by `other_sig` (`0.250`); perturbations mostly move the IC into other productive law signatures.
+- `rule_109`: total fragility `0.307`, dominated by `other_sig` (`0.307`); perturbations mostly move the IC into other productive law signatures. This is the Fase 13b multi-seed mean, superseding the original single-seed estimate (`0.250`).
 - `rule_110`: total fragility `0.323`, dominated by `other_sig` (`0.323`); perturbations mostly move the IC into other productive law signatures.
 - `rule_124`: total fragility `0.224`, dominated by `other_sig` (`0.224`); perturbations mostly move the IC into other productive law signatures.
 - `rule_137`: total fragility `0.630`, dominated by `other_sig` (`0.630`); perturbations mostly move the IC into other productive law signatures.

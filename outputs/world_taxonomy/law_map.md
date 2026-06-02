@@ -115,7 +115,7 @@ def classify_world(stats):
 | life_block | unknown | sin-evidencia-multiregimen | 12 | 1.000 | 0.000 | 0.200 | 2.000 | densidad_estable + tipo_unico | 0.016 | 0.016 | 2d-fixture |
 | life_glider | unknown | sin-evidencia-multiregimen | 14 | 1.000 | 0.000 | 0.333 | 2.357 | densidad_estable + tipo_unico | 0.032 | 0.032 | 2d-fixture |
 | rule_108 | local period-2 oscillator | oscilador-local | 6 | 1.000 | 0.000 | 0.167 | 2.000 | periodicidad + tipo_unico | 0.992 | 0.047 | clustered |
-| rule_109 | class-4 | multiregimen-productivo | 15 | 0.667 | 0.333 | 0.667 | 2.000 | densidad_estable + complejidad_alta + frontera_temporal | 0.250 | 0.250 | clustered |
+| rule_109 | class-4 | multiregimen-productivo | 15 | 0.667 | 0.333 | 0.667 | 2.000 | densidad_estable + complejidad_alta + frontera_temporal | 0.307 | 0.307 | clustered |
 | rule_110 | class-4 | multiregimen-productivo | 11 | 0.636 | 0.364 | 0.600 | 2.727 | velocidad_constante + densidad_estable + complejidad_alta + frontera_temporal | 0.323 | 0.198 | clustered |
 | rule_124 | unknown | multiregimen-productivo | 12 | 0.583 | 0.417 | 0.600 | 2.167 | densidad_estable + complejidad_alta + frontera_temporal + temporal_scale_stability | 0.224 | 0.083 | dispersed |
 | rule_137 | class-4 | multiregimen-productivo | 15 | 0.800 | 0.200 | 0.833 | 2.867 | densidad_estable + complejidad_alta + frontera_temporal | 0.630 | 0.312 | dispersed |

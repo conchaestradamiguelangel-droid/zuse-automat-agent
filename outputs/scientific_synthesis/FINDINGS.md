@@ -273,7 +273,7 @@ secondary laws change.
 | `rule_90` | `multiregimen-escala-dependiente` | 0.172 | 0.000 | secondary-law churn only |
 | `rule_51` | `periodicidad-global` | 0.193 | 0.000 | periodicity survives, density churns |
 | `rule_124` | `multiregimen-productivo` | 0.224 | 0.083 | mostly secondary churn |
-| `rule_109` | `multiregimen-productivo` | 0.250 | 0.250 | core changes match total changes |
+| `rule_109` | `multiregimen-productivo` | 0.307 | 0.307 | core changes match total changes |
 | `rule_110` | `multiregimen-productivo` | 0.323 | 0.198 | mixed core/secondary changes |
 | `rule_18` | `multiregimen-productivo` | 0.349 | 0.135 | mixed, mostly secondary |
 | `rule_137` | `multiregimen-productivo` | 0.630 | 0.312 | high productive-regime fragility |
@@ -309,7 +309,7 @@ mechanisms that can both produce high fragility.
 | `rule_46` | `frontera-rich-estable` | 0.031 | 0.000 | - |
 | `rule_90` | `multiregimen-escala-dependiente` | 0.172 | 0.000 | clustered |
 | `rule_124` | `multiregimen-productivo` | 0.224 | 0.000 | dispersed |
-| `rule_109` | `multiregimen-productivo` | 0.250 | 0.000 | clustered |
+| `rule_109` | `multiregimen-productivo` | 0.307 | 0.000 | clustered |
 | `rule_110` | `multiregimen-productivo` | 0.323 | 0.000 | clustered |
 | `rule_18` | `multiregimen-productivo` | 0.349 | 0.000 | clustered |
 | `rule_137` | `multiregimen-productivo` | 0.630 | 0.000 | dispersed |
