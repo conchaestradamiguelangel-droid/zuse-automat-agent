@@ -1,0 +1,2043 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>ZUSE Automat Agent: Empirical Law Discovery in Elementary Cellular Automata</title>
+  <style>
+    @page {
+      size: A4;
+      margin: 16mm 15mm 18mm 15mm;
+    }
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      max-width: 980px;
+      margin: 0 auto;
+      color: #111;
+      font-family: "Arial", "Helvetica", sans-serif;
+      font-size: 10.5pt;
+      line-height: 1.42;
+    }
+    h1, h2, h3, h4 {
+      color: #111;
+      line-height: 1.18;
+      page-break-after: avoid;
+    }
+    h1 {
+      font-size: 22pt;
+      margin: 0 0 18pt;
+      text-align: left;
+    }
+    h2 {
+      font-size: 15.5pt;
+      border-bottom: 1px solid #bbb;
+      margin: 22pt 0 9pt;
+      padding-bottom: 3pt;
+    }
+    h3 {
+      font-size: 12.5pt;
+      margin: 15pt 0 6pt;
+    }
+    h4 {
+      font-size: 11pt;
+      margin: 12pt 0 4pt;
+    }
+    p {
+      margin: 0 0 8pt;
+    }
+    ul, ol {
+      margin-top: 0;
+      margin-bottom: 8pt;
+      padding-left: 18pt;
+    }
+    li {
+      margin: 2pt 0;
+    }
+    code {
+      font-family: "Consolas", "Liberation Mono", monospace;
+      font-size: 0.9em;
+      background: #f4f4f4;
+      padding: 0 2px;
+      border-radius: 2px;
+    }
+    pre {
+      background: #f6f6f6;
+      border: 1px solid #ddd;
+      padding: 7pt;
+      overflow-wrap: anywhere;
+      white-space: pre-wrap;
+      page-break-inside: avoid;
+    }
+    pre code {
+      background: transparent;
+      padding: 0;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 8pt 0 12pt;
+      table-layout: fixed;
+      page-break-inside: auto;
+      font-size: 7.4pt;
+      line-height: 1.22;
+    }
+    thead {
+      display: table-header-group;
+    }
+    tr {
+      page-break-inside: avoid;
+      page-break-after: auto;
+    }
+    th, td {
+      border: 1px solid #cfcfcf;
+      padding: 3pt 4pt;
+      vertical-align: top;
+      overflow-wrap: anywhere;
+      word-break: normal;
+    }
+    th {
+      background: #eeeeee;
+      font-weight: 700;
+    }
+    blockquote {
+      margin: 8pt 0;
+      padding: 6pt 10pt;
+      border-left: 3pt solid #777;
+      background: #f7f7f7;
+    }
+    a {
+      color: #0645ad;
+      text-decoration: none;
+    }
+    strong {
+      font-weight: 700;
+    }
+  </style>
+</head>
+<body>
+<h1>ZUSE Automat Agent: Empirical Law Discovery in Elementary Cellular Automata</h1>
+<h2>Abstract</h2>
+<p>We present ZUSE Automat Agent (ZUSE), a deterministic, policy-driven discovery
+loop for elementary cellular automata (ECA) that builds an empirical atlas of
+cycle laws, world families, and basin fragility without a language model in the
+discovery loop. The pipeline combines a fixed seven-law evaluator, a
+dedup-gated observer stack, and persistent multi-seed world records, and is
+applied to a 20-world sample spanning ECA rules, Conway&#39;s Game of Life
+patterns, and synthetic controls.</p>
+<p>The seven laws — <em>velocidad_constante</em>, <em>periodicidad</em>, <em>densidad_estable</em>,
+<em>tipo_unico</em>, <em>complejidad_alta</em>, <em>frontera_temporal</em>, and
+<em>temporal_scale_stability</em> — are calibrated empirically (<em>frontera_temporal</em>
+upper bound 0.4352; <em>temporal_scale_stability</em> threshold 19.03, decision-tree
+accuracy 0.908). Laws are separated into two groups: structure-observer laws
+that depend on the full observer stack, and frame-metric laws that depend only
+on aggregate frame statistics.</p>
+<p>Key results: (1) <em>frontera_temporal</em> is not intrinsically rare — it activates
+in 38 of 256 ECA rules under at least two of three seeds, and in 17 of 256
+under all three; (2) the 20-world atlas reveals seven dynamic categories
+(<em>frontera-rich-estable</em>, <em>periodicidad-global</em>, <em>oscilador-local</em>,
+<em>multiregimen-productivo</em>, <em>multiregimen-escala-dependiente</em>, <em>noise-bounded</em>,
+<em>sin-evidencia-multiregimen</em>), finer than Wolfram&#39;s four-class taxonomy; (3)
+one-bit IC fragility spans from perfectly stable basins (<code>rule_208/209</code>,
+<code>f_total = 0.000</code>) to exact fixture disruption (<code>life_blinker</code>, <code>f_total = 1.000</code>), with <code>rule_108</code> as the ECA outlier (<code>f_total = 0.992</code>, <code>f_gap = 0.945</code>). These cases separate three mechanistically distinct regimes:
+productive basin switching, noise-boundary crossing, and quiescent-background
+activation;
+(4) an exhaustive protocol over 128 quiescent ECA rules and 510 IC words per
+rule confirms <code>rule_108</code> as the unique ECA rule producing stationary local
+period-2 oscillators; (5) designed periodic ICs activate production
+<code>periodicidad</code> in 207 of 256 ECA rules, showing that the law is IC-family
+sensitive rather than inaccessible; and (6) a controlled single-bit experiment
+demonstrates that ECA frames are translation-invariant while the observer/dedup
+pipeline is not, separating physical law from measurement artifact.</p>
+<p>Every result is reproducible from deterministic scripts with no stochastic
+components in the discovery loop.</p>
+<h2>1. Introduction</h2>
+<p>Elementary cellular automata are among the simplest systems known to exhibit
+complex behavior. A radius-1, binary, one-dimensional CA is fully specified by
+a single integer from 0 to 255, yet even within this minimal space, Wolfram&#39;s
+empirical taxonomy finds four qualitatively distinct dynamic classes: uniform,
+periodic, locally chaotic, and complex. Cook&#39;s proof that Rule 110 supports
+universal computation establishes that complexity in ECA is not merely visual:
+it has computational consequences.</p>
+<p>Two questions remain largely open after Wolfram&#39;s program. First, the taxonomy
+is qualitative and coarse: all complex rules fall into Class 4 regardless of
+their intra-class differences in structure type, periodicity, fragility, or
+scale behavior. Second, the boundary between the dynamics of the rule and the
+properties of the measurement instrument is rarely made explicit. When an
+observer reports that a run contains gliders, it conflates the CA physics with
+the heuristic that defined the glider label.</p>
+<p>ZUSE Automat Agent addresses both questions through a deterministic,
+policy-driven discovery loop. The agent runs ECA worlds, applies a fixed stack
+of heuristic observers, evaluates seven binary cycle laws, and stores
+multi-seed evidence in persistent world records. No language model participates
+in the discovery loop: law proposals, world selection, and evidence evaluation
+are all deterministic. Language-model assistance is restricted to post-run
+interpretation and documentation.</p>
+<p>The result is an empirical atlas of 20 worlds with seven operational categories,
+measured fragility along two axes (<code>f_total</code> and <code>f_core</code>), and explicit
+characterization of two observer artifacts. The atlas is not a new taxonomy of
+Wolfram&#39;s classes; it is a finer-grained, evidence-based map of a 20-world
+sample that separates cycle-level laws, world-level regimes, and pipeline
+behavior.</p>
+<h3>1.1 Contributions</h3>
+<p>We make the following contributions:</p>
+<ol>
+<li><p><strong>ZUSE Automat Agent</strong> — A deterministic, policy-driven discovery loop for
+ECA that accumulates multi-seed law evidence across worlds without symbolic
+regression or LLM guidance in the loop. The agent combines persistent
+world-record history, a dedup-gated observer stack, and a seven-law evaluator
+into a single reproducible pipeline.</p>
+</li>
+<li><p><strong>A seven-category empirical atlas of 20 worlds</strong> — We classify 20 worlds
+spanning ECA rules, Conway&#39;s Game of Life patterns, and synthetic controls
+into seven operational categories (<em>frontera-rich-estable</em>,
+<em>periodicidad-global</em>, <em>oscilador-local</em>, <em>multiregimen-productivo</em>,
+<em>multiregimen-escala-dependiente</em>, <em>noise-bounded</em>,
+<em>sin-evidencia-multiregimen</em>) using law coverage, signature diversity, and
+fragility. The atlas extends Wolfram&#39;s four-class taxonomy by capturing
+intra-class structure, scale-dependent silencing, and negative-control
+regimes.</p>
+</li>
+<li><p><strong>A two-dimensional fragility framework</strong> — We measure <code>f_total</code> and
+<code>f_core</code> separately, defining <code>f_gap = f_total - f_core</code> as a quantitative
+measure of secondary-law churn. Four distinct mechanisms are identified:
+stable basin (<code>rule_208/209</code>, <code>f_total = 0.000</code>), productive basin switching
+(<code>rule_137</code>, <code>f_gap = 0.318</code>), noise-boundary fragility (<code>rule_54</code>,
+<code>f_core = 0.677</code>), and quiescent-background activation (<code>rule_108</code>,
+<code>f_gap = 0.945</code>).</p>
+</li>
+<li><p><strong><code>rule_108</code> as the unique stationary local-period-2 ECA oscillator</strong> —
+Under an exhaustive protocol (128 quiescent ECA rules, 510 IC words per
+rule, span &lt;= 32, period &lt;= 16), <code>rule_108</code> is the only ECA rule that
+produces stationary local period-2 oscillators. The motif <code>#.# &lt;-&gt; ###</code>
+follows algebraically from <code>f(0,1,0) = f(1,0,1) = 1</code> and
+<code>f(1,1,1) = 0</code>, and the rule&#39;s left-right symmetry
+(<code>f(l,c,r) = f(r,c,l)</code>) explains why the oscillator does not drift.</p>
+</li>
+<li><p><strong>A measured separation between ECA dynamics and observer artifacts</strong> —
+<code>rule_54</code> single-bit-IC frames are provably translation-invariant
+(confirmed by frame identity after shift normalization), while observer
+dedup counts range from 15 to 24 across IC positions. This non-equivariance
+is characterized as a pipeline property: absolute structure counts depend
+on IC context, but law signatures remain stable.</p>
+</li>
+</ol>
+<h2>2. Related Work</h2>
+<p>ZUSE sits at the intersection of three bodies of prior work: empirical ECA
+taxonomy, automated law discovery, and LLM-based scientific agents. It is
+related to each tradition but positioned differently from all three: it extends
+ECA taxonomy inward (intra-class rather than inter-class), it inverts the
+discovery framing of symbolic regression systems (fixed evaluators rather than
+generative hypotheses), and it excludes the LLM from the loop rather than
+centering it.</p>
+<h3>2.1 ECA taxonomy and complexity</h3>
+<p>Wolfram&#39;s systematic study of elementary cellular automata established the
+canonical four-class taxonomy: Class 1 (uniform), Class 2 (periodic), Class 3
+(chaotic), and Class 4 (complex) [Wolfram2002]. This taxonomy is qualitative
+and based on visual inspection of space-time diagrams. ZUSE extends it by
+measuring intra-class structure: two Class-4 rules (<code>rule_137</code> and <code>rule_54</code>)
+differ not only in fragility magnitude but in fragility mechanism, a distinction
+the four-class taxonomy does not capture.</p>
+<p>Cook&#39;s proof that Rule 110 supports universal computation [Cook2004]
+established that ECA complexity has computational consequences beyond visual
+appearance. But computational class is a coarse lens: <code>rule_110</code> and
+<code>rule_54</code> are both Class 4, yet ZUSE finds that their fragility mechanisms are
+qualitatively different — productive basin switching versus noise-boundary
+crossing. <code>rule_110</code> appears in the ZUSE atlas as a
+<code>multiregimen-productivo</code> world with <code>f_total = 0.323</code> and a stable frontera
+signature. The computational proof characterizes what <code>rule_110</code> <em>can</em>
+compute; ZUSE characterizes what it <em>typically does</em> under random
+initialization.</p>
+<h3>2.2 Automated scientific discovery</h3>
+<p>AI Feynman [Udrescu2020] demonstrated symbolic regression over
+physical datasets, recovering known equations from data with interpretable
+structure. The contrast with ZUSE is deliberate: AI Feynman uses neural
+networks to propose candidate laws from continuous-variable data, while ZUSE
+applies fixed binary evaluators to discrete CA dynamics and accumulates
+evidence without a generative component. ZUSE is not a symbolic regression
+system; it is a policy-driven measurement pipeline whose outputs are law
+signatures, not formulas.</p>
+<p>More broadly, systems such as Eureqa [Schmidt2009] and recent
+LLM-based discovery agents frame discovery as hypothesis generation followed
+by verification. ZUSE inverts this framing: laws are fixed a priori, and the
+discovery consists of finding which worlds satisfy them and under what
+conditions. This makes every accepted law signature verifiable from
+deterministic scripts, at the cost of not proposing new laws automatically.</p>
+<h3>2.3 ZUSE as evidence engine, not LLM scientist</h3>
+<p>Recent work on LLM-based scientific agents (e.g., The AI Scientist [Lu2024])
+demonstrates that language models can propose hypotheses, design
+experiments, and write papers with minimal human intervention. ZUSE occupies a
+different position in this space: the language model is explicitly excluded
+from the discovery loop and restricted to post-run interpretation and
+documentation.</p>
+<p>This separation is a design choice, not a limitation. It means that the atlas
+findings are fully reproducible from the deterministic loop code, and that
+language-model involvement can be audited at the documentation layer without
+contaminating the empirical results. The cost is that ZUSE cannot propose new
+laws; the benefit is that every accepted law has a transparent, non-generative
+provenance.</p>
+<h2>3. System: ZUSE Automat Agent</h2>
+<p>ZUSE Automat Agent is a deterministic discovery loop over cellular automaton
+worlds. A world is a simulator plus an initial-condition protocol and a time
+window. For ECA worlds, the simulator is the standard binary radius-1 update
+rule with periodic boundary conditions. The agent runs a world, computes frame
+metrics, extracts candidate structures, evaluates a fixed set of laws, updates
+world-level history, and chooses the next action through a transparent policy.</p>
+<h3>3.1 Inputs and outputs</h3>
+<p>A single agent cycle takes as input:</p>
+<ul>
+<li><strong>World identifier</strong>: the ECA rule number (<code>0..255</code>) or a named synthetic
+world.</li>
+<li><strong>IC protocol</strong>: either a random seed for standard runs or a designed IC
+vector for controlled experiments.</li>
+<li><strong>Width and steps</strong>: fixed integers, typically <code>width = 64</code> and
+<code>steps = 24..200</code>, depending on the world&#39;s scale protocol.</li>
+</ul>
+<p>The outputs of a single cycle are:</p>
+<ul>
+<li><strong>Frame metrics</strong>: density mean, entropy mean, temporal transition rate, gzip
+ratio, and mutual information mean.</li>
+<li><strong>Analysis status</strong>: <code>ok</code> or <code>ruido_no_analizable</code> after the noise gate.</li>
+<li><strong>Structure records</strong>: raw <code>Estructura</code> outputs with type labels and span
+information, plus <code>dedup_structure_count</code>.</li>
+<li><strong>Law signature</strong>: frozenset of accepted law names, or the empty set if the
+run is noise-gated.</li>
+</ul>
+<h3>3.2 Loop structure</h3>
+<p>The loop has five layers:</p>
+<ol>
+<li><p><strong>Simulation.</strong> ECA frames are generated from explicit initial conditions
+with fixed <code>width</code>, <code>steps</code>, and <code>seed</code> or with designed ICs for controlled
+experiments. The simulator itself is not learned.</p>
+</li>
+<li><p><strong>Frame metrics.</strong> Each run is summarized by density, entropy, temporal
+transition rate, gzip compressibility, and temporal mutual information.
+These features support both individual laws (<code>complejidad_alta</code>,
+<code>frontera_temporal</code>, <code>temporal_scale_stability</code>) and later meta-analysis.</p>
+</li>
+<li><p><strong>Observers and deduplication.</strong> A stack of heuristic observers converts
+frame histories into <code>Estructura</code> records with type labels such as <code>glider</code>,
+<code>bloque</code>, and <code>oscilador</code>. The raw observer outputs are intentionally kept
+for audit, while <code>deduplicate_structures</code> estimates the number of physical
+structures. The production noise gate uses <code>dedup_structure_count &gt; 40</code>.</p>
+</li>
+<li><p><strong>Cycle-law evaluation.</strong> Seven laws are evaluated on each analyzable run.
+The result is a law signature: the set of accepted laws for that cycle.
+Noise-gated runs skip law evaluation rather than forcing a low-confidence
+signature.</p>
+</li>
+<li><p><strong>Policy and memory.</strong> The agent stores a persistent <code>WorldRecord</code> per
+world and chooses the next action after each cycle.</p>
+</li>
+</ol>
+<h3>3.3 State: WorldRecord</h3>
+<p>Each world maintains a <code>WorldRecord</code> with the following fields relevant to
+atlas construction:</p>
+<table>
+<thead>
+<tr>
+<th>field</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>visit_count</code></td>
+<td>total cycles run on this world</td>
+</tr>
+<tr>
+<td><code>scores</code></td>
+<td>per-cycle scores used by the policy</td>
+</tr>
+<tr>
+<td><code>noise_count</code> / <code>noise_fraction</code></td>
+<td>count and fraction of noise-gated cycles</td>
+</tr>
+<tr>
+<td><code>law_signatures</code></td>
+<td>list of accepted law signatures as frozensets</td>
+</tr>
+<tr>
+<td><code>unique_law_signature_count</code></td>
+<td>count of distinct non-empty signatures</td>
+</tr>
+<tr>
+<td><code>non_empty_signature_visit_count</code></td>
+<td>visits where at least one law was accepted</td>
+</tr>
+<tr>
+<td><code>law_signature_diversity</code></td>
+<td>unique non-empty signatures divided by non-empty visits, reported after at least five non-empty visits</td>
+</tr>
+<tr>
+<td><code>peak_signature_diversity</code></td>
+<td>maximum clean diversity observed so far</td>
+</tr>
+<tr>
+<td><code>has_multiregime_evidence</code></td>
+<td>monotone boolean, set once peak diversity exceeds <code>0.5</code> under low noise</td>
+</tr>
+<tr>
+<td><code>params_tried</code></td>
+<td>tested <code>(steps, width, law_signature)</code> tuples</td>
+</tr>
+<tr>
+<td><code>max_ok_steps</code> / <code>first_noise_steps</code></td>
+<td>scale boundary diagnostics</td>
+</tr>
+</tbody></table>
+<p>The important design choice is that empty signatures are retained for audit but
+excluded from diversity. A world is not multi-regime merely because it
+alternates between laws and silence; multi-regime evidence requires multiple
+non-empty law signatures.</p>
+<h3>3.4 Journal</h3>
+<p>Every cycle result is appended to a JSONL journal
+(<code>outputs/experiments_*/journal_*.jsonl</code>). Each line is a self-contained JSON
+record with cycle identifier, world identifier, steps, width, frame metrics,
+analysis status, structure counts, law signature, action taken, and the
+previous WorldRecord state visible to the policy at decision time. The journal
+is the primary reproducibility artifact: the atlas in Section 5, the fragility
+measurements in Section 6, and the case studies in Section 7 are all derived
+from journal queries and controlled follow-up scripts.</p>
+<h3>3.5 Policy</h3>
+<p>The policy selects the next action from four options:</p>
+<ul>
+<li><strong>Vary seed</strong> (<code>repeat_vary_seed</code>): run the same world with a new IC. Used
+when the world has a new law signature or confirmed multi-regime evidence
+and the current cycle is productive.</li>
+<li><strong>Increase scale</strong> (<code>increase_steps</code>): raise <code>steps</code> to test scale-dependent
+behavior. Used when the current world produces analyzable signal and has not
+reached a known noise boundary.</li>
+<li><strong>Change world</strong> (<code>change_world</code>): move to the next world. Used when the
+current world is noise-bounded, reaches a known noise boundary, has exhausted
+repeats, or converges to unproductive silence at maximum scale.</li>
+<li><strong>Stop by exhaustion</strong>: after the requested cycle budget, persist state and
+journal artifacts.</li>
+</ul>
+<p>The policy has no learned parameters. Its thresholds are fixed constants or
+explicit guards in code: <code>dedup_structure_count &gt; 40</code> for the noise gate,
+signature diversity <code>&gt; 0.5</code> for multi-regime evidence, <code>noise_fraction &lt; 0.20</code>
+for clean diversity, and at least five non-empty visits before diversity is
+reported.</p>
+<h3>3.6 Non-generative design</h3>
+<p>The agent is deliberately non-generative inside the loop. No LLM proposes laws,
+selects worlds, or evaluates a cycle. Symbolic regression was used only outside
+the loop for calibration and analysis; it is not part of the online discovery
+policy. The LLM-assisted work reported here occurs after runs are complete: it
+helps design follow-up experiments, interpret artifacts, and write
+documentation. This separation is important because every accepted law
+signature in the atlas can be reproduced from deterministic scripts.</p>
+<h2>4. Seven Cycle Laws</h2>
+<p>The seven laws are the primary evidence units linking raw ECA frames to the
+world categories, fragility scores, and observer artifacts reported in Sections
+5-8. Each law is evaluated per run — one world, one initial condition, one step
+count — once the observer and dedup pipeline reports <code>analysis_status = ok</code>.
+The output is binary: accepted or rejected. Law signatures are frozensets of
+accepted law names.</p>
+<h3>4.1 Design rationale</h3>
+<p>The seven laws were chosen to span distinct aspects of CA behavior using
+measurements available from a single fixed-length run. They divide into two
+groups by input type:</p>
+<ul>
+<li><p><strong>Structure-observer laws</strong> (<code>velocidad_constante</code>, <code>periodicidad</code>,
+<code>densidad_estable</code>, <code>tipo_unico</code>): depend on the output of the heuristic
+observer stack. They can only fire if the run is analyzable
+(<code>analysis_status = ok</code>) and the observers detect at least one structure.</p>
+</li>
+<li><p><strong>Frame-metric laws</strong> (<code>complejidad_alta</code>, <code>frontera_temporal</code>,
+<code>temporal_scale_stability</code>): depend only on summary statistics computed
+directly from the frame array, without reference to individual structures.</p>
+</li>
+</ul>
+<p>This split is intentional. Frame-metric laws are symmetry-agnostic: they fire
+regardless of where structures are in the lattice, how many there are, or
+whether the observers identify them correctly. Structure-observer laws are
+richer but carry the observer&#39;s heuristic assumptions. Section 8 reports two
+cases where structure-observer laws produce artifacts that frame-metric laws
+do not.</p>
+<p>All laws produce binary output (accepted / rejected). The choice of binary
+rather than continuous output is also intentional: it makes signatures
+comparable across runs and worlds without requiring score normalization, and it
+forces explicit calibration of each threshold.</p>
+<h3>4.2 Formal criteria</h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Law</th>
+<th>Inputs</th>
+<th>Criterion</th>
+<th>Constants</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td><code>velocidad_constante</code></td>
+<td>Position tracks of moving structures</td>
+<td>At least 50% of moving tracks (<code>velocity &gt; 0.05</code> cells/step) have linear <code>x(t)</code> with normalized residual <code>&lt; 0.15</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td>2</td>
+<td><code>periodicidad</code></td>
+<td>Structure type list</td>
+<td>At least one structure classified as <code>oscilador</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td>3</td>
+<td><code>densidad_estable</code></td>
+<td>Frame density time series</td>
+<td>Coefficient of variation <code>CV = sigma(rho) / mu(rho) &lt; 0.15</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td>4</td>
+<td><code>tipo_unico</code></td>
+<td>Structure type set</td>
+<td>Exactly one structure type present</td>
+<td>-</td>
+</tr>
+<tr>
+<td>5</td>
+<td><code>complejidad_alta</code></td>
+<td>Frame metrics</td>
+<td><code>entropy_mean &gt; 0.80</code> and <code>transition_rate &gt; 0.25</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td>6</td>
+<td><code>frontera_temporal</code></td>
+<td>Frame metrics</td>
+<td><code>entropy_mean &gt; 0.80</code> and <code>0.28 &lt; transition_rate &lt; 0.4352</code></td>
+<td>upper threshold calibrated 2026-05-24</td>
+</tr>
+<tr>
+<td>7</td>
+<td><code>temporal_scale_stability</code></td>
+<td>Frame metrics + steps</td>
+<td><code>temporal_load = steps * gzip_ratio / transition_rate &lt; 19.03</code></td>
+<td>threshold calibrated 2026-05-24</td>
+</tr>
+</tbody></table>
+<p><code>temporal_scale_stability</code> rejects any run with <code>transition_rate = 0</code>
+(quiescent or static configurations), since temporal load is undefined
+(<code>infinity</code>).</p>
+<h3>4.3 Calibrated constants</h3>
+<p>Neither threshold can be derived analytically: the boundary between organized
+frontier dynamics and pure chaos has no closed form in ECA. Both constants
+were set empirically on real ECA runs and are valid within the atlas protocol
+(<code>width = 64</code>, <code>steps</code> roughly <code>24..200</code>).</p>
+<p>The <code>frontera_temporal</code> upper threshold <code>0.4352</code> is the midpoint between the
+maximum <code>transition_rate</code> observed for <code>rule_110</code> (<code>0.4147</code>) and the minimum
+for <code>rule_30</code> (<code>0.4557</code>) across six canonical seeds at <code>steps = 24</code>,
+<code>width = 64</code>.</p>
+<p>The <code>temporal_scale_stability</code> threshold <code>19.03</code> was fit on
+<code>datasets/fase2c_v3.csv</code> (120 ECA scale samples). A decision tree at
+<code>max_depth = 4</code> achieved accuracy <code>0.908</code>, precision <code>0.886</code>, and recall
+<code>0.954</code> on the <code>analysis_ok</code> label.</p>
+<h3>4.4 Caveats</h3>
+<p><code>tipo_unico</code> is an observer-dependent exploratory signal, not a mirror-invariant
+physical property. Fase 6b showed that <code>rule_110</code> and <code>rule_124</code> are left-right
+mirrors of each other with identical dynamics, yet <code>tipo_unico</code> can fire
+asymmetrically depending on orientation. <code>tipo_unico</code> is retained in the atlas
+for its exploratory value but should not be used as evidence of physical
+asymmetry.</p>
+<p><code>frontera_temporal</code> and <code>temporal_scale_stability</code> both depend on
+<code>transition_rate</code>. Fase 4a and later tree analyses identify transition rate as
+the main discriminator separating organized frontier dynamics from pure chaos
+or static order. Other metrics (<code>density_mean</code>, <code>gzip_ratio</code>,
+<code>mutual_info_mean</code>) are useful context features but should not be treated as
+independent causal evidence without ablation.</p>
+<p>These caveats do not weaken the atlas: they clarify which signals reflect
+physical ECA dynamics and which reflect the current observer design. Section 8
+returns to both artifacts with controlled experiments.</p>
+<h3>4.5 Law signatures and the atlas</h3>
+<p>A law signature is a frozenset of accepted law names for one run. The empty
+frozenset is valid and indicates a run that passed the noise gate but accepted
+no law. Law signatures are the unit of evidence in the atlas: the world
+categories in Section 5 are defined by how signatures distribute across seeds
+and scales, and the fragility measurements in Section 6 count how often
+signatures change under perturbation.</p>
+<p><code>frontera_temporal</code> is a proper subset of <code>complejidad_alta</code> by construction
+(it adds the upper bound on transition rate). Any run that accepts
+<code>frontera_temporal</code> also accepts <code>complejidad_alta</code>; the converse is not
+required. This containment is visible in the law coverage matrix: every <code>✓</code> in
+the <code>frontera_temporal</code> column co-occurs with a <code>✓</code> in the
+<code>complejidad_alta</code> column.</p>
+<h2>5. World Atlas: 20 Worlds and Dynamic Categories</h2>
+<p>The atlas is derived from <code>outputs/world_taxonomy/law_map.md</code>. It contains 20
+worlds: ECA rules, designed synthetic controls, and Life-like controls. Each
+world is summarized by law coverage, non-empty visit ratio, noise ratio,
+signature diversity, mean law count, dominant signature, and measured
+fragility where available.</p>
+<p>The atlas is not a score table. A high <code>mean_laws</code> value, high signature
+diversity, and low fragility mean different things. The taxonomy therefore
+separates five positive dynamic families from two bookkeeping categories:
+<code>noise-bounded</code> for worlds stopped by the dedup gate, and
+<code>sin-evidencia-multiregimen</code> for controls or worlds without sufficient evidence
+for one of the positive families.</p>
+<h3>5.1 Category definitions</h3>
+<table>
+<thead>
+<tr>
+<th>category</th>
+<th>operational signal</th>
+<th>representative worlds</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>frontera-rich-estable</code></td>
+<td>low signature diversity, high stable law richness (<code>mean_laws &gt;= 4.0</code>)</td>
+<td><code>rule_46</code>, <code>rule_208</code>, <code>rule_209</code></td>
+</tr>
+<tr>
+<td><code>periodicidad-global</code></td>
+<td>global period-2 behavior; <code>periodicidad</code> in nearly all non-empty visits</td>
+<td><code>rule_51</code></td>
+</tr>
+<tr>
+<td><code>oscilador-local</code></td>
+<td>bounded local period-2 structure on a quiescent background</td>
+<td><code>rule_108</code></td>
+</tr>
+<tr>
+<td><code>multiregimen-productivo</code></td>
+<td>multiple non-empty law signatures with productive visits</td>
+<td><code>rule_18</code>, <code>rule_54</code>, <code>rule_109</code>, <code>rule_110</code>, <code>rule_124</code>, <code>rule_137</code></td>
+</tr>
+<tr>
+<td><code>multiregimen-escala-dependiente</code></td>
+<td>real signature diversity but most high-scale visits become analyzable silence</td>
+<td><code>rule_90</code></td>
+</tr>
+<tr>
+<td><code>noise-bounded</code></td>
+<td>pre-law failure under the deduplicated structure gate</td>
+<td><code>rule_30</code>, <code>rule_150</code></td>
+</tr>
+<tr>
+<td><code>sin-evidencia-multiregimen</code></td>
+<td>no sufficient evidence of multi-regime or stable-rich behavior in the current protocol</td>
+<td><code>life_blinker</code>, <code>life_block</code>, <code>life_glider</code>, <code>synthetic_bloque</code>, <code>synthetic_glider</code>, <code>synthetic_oscilador</code></td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>world</th>
+<th>category</th>
+<th align="right">mean_laws</th>
+<th align="right">peak_diversity</th>
+<th align="right">f_total</th>
+<th align="right">f_core</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>rule_208</code></td>
+<td><code>frontera-rich-estable</code></td>
+<td align="right">6.000</td>
+<td align="right">0.167</td>
+<td align="right">0.000</td>
+<td align="right">0.000</td>
+</tr>
+<tr>
+<td><code>rule_209</code></td>
+<td><code>frontera-rich-estable</code></td>
+<td align="right">6.000</td>
+<td align="right">0.167</td>
+<td align="right">0.000</td>
+<td align="right">0.000</td>
+</tr>
+<tr>
+<td><code>rule_46</code></td>
+<td><code>frontera-rich-estable</code></td>
+<td align="right">5.833</td>
+<td align="right">0.333</td>
+<td align="right">0.031</td>
+<td align="right">0.031</td>
+</tr>
+<tr>
+<td><code>rule_51</code></td>
+<td><code>periodicidad-global</code></td>
+<td align="right">4.500</td>
+<td align="right">0.333</td>
+<td align="right">0.193</td>
+<td align="right">0.000</td>
+</tr>
+<tr>
+<td><code>rule_108</code></td>
+<td><code>oscilador-local</code></td>
+<td align="right">2.000</td>
+<td align="right">0.167</td>
+<td align="right">0.992</td>
+<td align="right">0.047</td>
+</tr>
+<tr>
+<td><code>rule_90</code></td>
+<td><code>multiregimen-escala-dependiente</code></td>
+<td align="right">0.500</td>
+<td align="right">0.600</td>
+<td align="right">0.172</td>
+<td align="right">0.000</td>
+</tr>
+<tr>
+<td><code>rule_110</code></td>
+<td><code>multiregimen-productivo</code></td>
+<td align="right">2.727</td>
+<td align="right">0.600</td>
+<td align="right">0.323</td>
+<td align="right">0.198</td>
+</tr>
+<tr>
+<td><code>rule_124</code></td>
+<td><code>multiregimen-productivo</code></td>
+<td align="right">2.167</td>
+<td align="right">0.600</td>
+<td align="right">0.224</td>
+<td align="right">0.083</td>
+</tr>
+<tr>
+<td><code>rule_109</code></td>
+<td><code>multiregimen-productivo</code></td>
+<td align="right">2.000</td>
+<td align="right">0.667</td>
+<td align="right">0.307</td>
+<td align="right">0.307</td>
+</tr>
+<tr>
+<td><code>rule_18</code></td>
+<td><code>multiregimen-productivo</code></td>
+<td align="right">2.308</td>
+<td align="right">0.800</td>
+<td align="right">0.349</td>
+<td align="right">0.135</td>
+</tr>
+<tr>
+<td><code>rule_137</code></td>
+<td><code>multiregimen-productivo</code></td>
+<td align="right">2.867</td>
+<td align="right">0.833</td>
+<td align="right">0.630</td>
+<td align="right">0.312</td>
+</tr>
+<tr>
+<td><code>rule_54</code></td>
+<td><code>multiregimen-productivo</code></td>
+<td align="right">1.917</td>
+<td align="right">0.800</td>
+<td align="right">0.714</td>
+<td align="right">0.677</td>
+</tr>
+<tr>
+<td><code>rule_30</code></td>
+<td><code>noise-bounded</code></td>
+<td align="right">1.100</td>
+<td align="right">0.000</td>
+<td align="right">0.021</td>
+<td align="right">0.021</td>
+</tr>
+<tr>
+<td><code>rule_150</code></td>
+<td><code>noise-bounded</code></td>
+<td align="right">0.750</td>
+<td align="right">0.000</td>
+<td align="right">0.023</td>
+<td align="right">0.023</td>
+</tr>
+<tr>
+<td><code>life_blinker</code></td>
+<td><code>sin-evidencia-multiregimen</code></td>
+<td align="right">3.000</td>
+<td align="right">0.200</td>
+<td align="right">1.000</td>
+<td align="right">1.000</td>
+</tr>
+<tr>
+<td><code>life_block</code></td>
+<td><code>sin-evidencia-multiregimen</code></td>
+<td align="right">2.000</td>
+<td align="right">0.200</td>
+<td align="right">0.016</td>
+<td align="right">0.016</td>
+</tr>
+<tr>
+<td><code>life_glider</code></td>
+<td><code>sin-evidencia-multiregimen</code></td>
+<td align="right">2.357</td>
+<td align="right">0.333</td>
+<td align="right">0.032</td>
+<td align="right">0.032</td>
+</tr>
+<tr>
+<td><code>synthetic_bloque</code></td>
+<td><code>sin-evidencia-multiregimen</code></td>
+<td align="right">2.000</td>
+<td align="right">0.200</td>
+<td align="right">n/a</td>
+<td align="right">n/a</td>
+</tr>
+<tr>
+<td><code>synthetic_glider</code></td>
+<td><code>sin-evidencia-multiregimen</code></td>
+<td align="right">3.167</td>
+<td align="right">0.400</td>
+<td align="right">n/a</td>
+<td align="right">n/a</td>
+</tr>
+<tr>
+<td><code>synthetic_oscilador</code></td>
+<td><code>sin-evidencia-multiregimen</code></td>
+<td align="right">2.286</td>
+<td align="right">0.400</td>
+<td align="right">n/a</td>
+<td align="right">n/a</td>
+</tr>
+</tbody></table>
+<p>This classification is intentionally operational. A world can be reclassified
+if a wider protocol produces different evidence; the atlas records what the
+current deterministic protocol has measured.</p>
+<h3>5.2 Law coverage</h3>
+<p>The law coverage matrix uses seven columns:</p>
+<pre><code class="language-text">velocidad_constante
+periodicidad
+densidad_estable
+tipo_unico
+complejidad_alta
+frontera_temporal
+temporal_scale_stability
+</code></pre>
+<p>Each cell has one of four states: accepted in the dominant signature or in at
+least half of non-empty visits (<code>✓</code>), observed but below half (<code>·</code>), never
+observed in non-empty visits (<code>-</code>), or unknown because no non-empty visits
+exist (<code>?</code>).</p>
+<p>Cell states:</p>
+<ul>
+<li><code>✓</code>: law appears in the dominant signature or in at least 50% of non-empty visits.</li>
+<li><code>·</code>: law appears in at least one non-empty visit but in less than 50%.</li>
+<li><code>-</code>: non-empty visits exist and the law never appears.</li>
+<li><code>?</code>: no non-empty visits.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>world</th>
+<th>vel</th>
+<th>per</th>
+<th>den</th>
+<th>tipo</th>
+<th>compl</th>
+<th>front</th>
+<th>tss</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>life_blinker</code></td>
+<td>-</td>
+<td>✓</td>
+<td>✓</td>
+<td>✓</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>life_block</code></td>
+<td>-</td>
+<td>-</td>
+<td>✓</td>
+<td>✓</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>life_glider</code></td>
+<td>·</td>
+<td>-</td>
+<td>✓</td>
+<td>✓</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>rule_108</code></td>
+<td>-</td>
+<td>✓</td>
+<td>-</td>
+<td>✓</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>rule_109</code></td>
+<td>-</td>
+<td>-</td>
+<td>✓</td>
+<td>·</td>
+<td>✓</td>
+<td>✓</td>
+<td>✓</td>
+</tr>
+<tr>
+<td><code>rule_110</code></td>
+<td>✓</td>
+<td>-</td>
+<td>✓</td>
+<td>-</td>
+<td>✓</td>
+<td>✓</td>
+<td>·</td>
+</tr>
+<tr>
+<td><code>rule_124</code></td>
+<td>·</td>
+<td>-</td>
+<td>✓</td>
+<td>-</td>
+<td>✓</td>
+<td>✓</td>
+<td>✓</td>
+</tr>
+<tr>
+<td><code>rule_137</code></td>
+<td>·</td>
+<td>-</td>
+<td>✓</td>
+<td>·</td>
+<td>✓</td>
+<td>✓</td>
+<td>✓</td>
+</tr>
+<tr>
+<td><code>rule_150</code></td>
+<td>-</td>
+<td>-</td>
+<td>✓</td>
+<td>-</td>
+<td>✓</td>
+<td>-</td>
+<td>✓</td>
+</tr>
+<tr>
+<td><code>rule_18</code></td>
+<td>✓</td>
+<td>-</td>
+<td>-</td>
+<td>✓</td>
+<td>✓</td>
+<td>-</td>
+<td>✓</td>
+</tr>
+<tr>
+<td><code>rule_208</code></td>
+<td>✓</td>
+<td>-</td>
+<td>✓</td>
+<td>✓</td>
+<td>✓</td>
+<td>✓</td>
+<td>✓</td>
+</tr>
+<tr>
+<td><code>rule_209</code></td>
+<td>✓</td>
+<td>-</td>
+<td>✓</td>
+<td>✓</td>
+<td>✓</td>
+<td>✓</td>
+<td>✓</td>
+</tr>
+<tr>
+<td><code>rule_30</code></td>
+<td>-</td>
+<td>-</td>
+<td>✓</td>
+<td>-</td>
+<td>✓</td>
+<td>-</td>
+<td>✓</td>
+</tr>
+<tr>
+<td><code>rule_46</code></td>
+<td>✓</td>
+<td>-</td>
+<td>✓</td>
+<td>✓</td>
+<td>✓</td>
+<td>✓</td>
+<td>✓</td>
+</tr>
+<tr>
+<td><code>rule_51</code></td>
+<td>-</td>
+<td>✓</td>
+<td>✓</td>
+<td>✓</td>
+<td>✓</td>
+<td>-</td>
+<td>✓</td>
+</tr>
+<tr>
+<td><code>rule_54</code></td>
+<td>✓</td>
+<td>-</td>
+<td>·</td>
+<td>·</td>
+<td>✓</td>
+<td>-</td>
+<td>✓</td>
+</tr>
+<tr>
+<td><code>rule_90</code></td>
+<td>·</td>
+<td>-</td>
+<td>·</td>
+<td>-</td>
+<td>·</td>
+<td>-</td>
+<td>✓</td>
+</tr>
+<tr>
+<td><code>synthetic_bloque</code></td>
+<td>-</td>
+<td>-</td>
+<td>✓</td>
+<td>✓</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>synthetic_glider</code></td>
+<td>✓</td>
+<td>-</td>
+<td>✓</td>
+<td>✓</td>
+<td>-</td>
+<td>-</td>
+<td>·</td>
+</tr>
+<tr>
+<td><code>synthetic_oscilador</code></td>
+<td>-</td>
+<td>✓</td>
+<td>-</td>
+<td>✓</td>
+<td>-</td>
+<td>-</td>
+<td>·</td>
+</tr>
+</tbody></table>
+<p>The matrix reveals three broad patterns:</p>
+<ol>
+<li><p><strong>Synthetic and Life-like controls validate observer semantics.</strong>
+<code>life_blinker</code> and <code>synthetic_oscilador</code> activate <code>periodicidad</code>; block-like
+worlds activate <code>densidad_estable</code> and <code>tipo_unico</code>; synthetic gliders
+activate <code>velocidad_constante</code>.</p>
+</li>
+<li><p><strong>Class-4 and frontier worlds separate into distinct families.</strong>
+<code>rule_137</code>, <code>rule_110</code>, <code>rule_124</code>, <code>rule_109</code>, and <code>rule_54</code> are
+multi-regime worlds with two or three dominant laws. By contrast,
+<code>rule_46</code>, <code>rule_208</code>, and <code>rule_209</code> activate six of seven laws with low
+diversity.</p>
+</li>
+<li><p><strong><code>periodicidad</code> is IC-family sensitive.</strong>
+Under random ICs it appears in designed controls, in the global complement
+rule (<code>rule_51</code>), and in the local oscillator (<code>rule_108</code>), but not in the
+complex frontier worlds. Under explicitly periodic ICs, however, Fase 21a
+finds production <code>periodicidad</code> in <code>207/256</code> ECA rules. The law is therefore
+not dead or ECA-inaccessible; it is controlled by the IC family. This is why
+Section 7 treats <code>rule_108</code> separately rather than folding it into ordinary
+stable-rich behavior.</p>
+</li>
+</ol>
+<h3>5.3 Key atlas rows</h3>
+<p>The following rows anchor the category structure:</p>
+<table>
+<thead>
+<tr>
+<th>world</th>
+<th>category</th>
+<th align="right">mean_laws</th>
+<th align="right">peak_diversity</th>
+<th>dominant signature</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>rule_208</code></td>
+<td><code>frontera-rich-estable</code></td>
+<td align="right"><code>6.000</code></td>
+<td align="right"><code>0.167</code></td>
+<td><code>velocidad_constante + densidad_estable + tipo_unico + complejidad_alta + frontera_temporal + temporal_scale_stability</code></td>
+</tr>
+<tr>
+<td><code>rule_209</code></td>
+<td><code>frontera-rich-estable</code></td>
+<td align="right"><code>6.000</code></td>
+<td align="right"><code>0.167</code></td>
+<td><code>velocidad_constante + densidad_estable + tipo_unico + complejidad_alta + frontera_temporal + temporal_scale_stability</code></td>
+</tr>
+<tr>
+<td><code>rule_46</code></td>
+<td><code>frontera-rich-estable</code></td>
+<td align="right"><code>5.833</code></td>
+<td align="right"><code>0.333</code></td>
+<td><code>velocidad_constante + densidad_estable + tipo_unico + complejidad_alta + frontera_temporal + temporal_scale_stability</code></td>
+</tr>
+<tr>
+<td><code>rule_137</code></td>
+<td><code>multiregimen-productivo</code></td>
+<td align="right"><code>2.867</code></td>
+<td align="right"><code>0.833</code></td>
+<td><code>densidad_estable + complejidad_alta + frontera_temporal</code></td>
+</tr>
+<tr>
+<td><code>rule_54</code></td>
+<td><code>multiregimen-productivo</code></td>
+<td align="right"><code>1.917</code></td>
+<td align="right"><code>0.800</code></td>
+<td><code>complejidad_alta + temporal_scale_stability</code></td>
+</tr>
+<tr>
+<td><code>rule_51</code></td>
+<td><code>periodicidad-global</code></td>
+<td align="right"><code>4.500</code></td>
+<td align="right"><code>0.333</code></td>
+<td><code>periodicidad + densidad_estable + tipo_unico + complejidad_alta + temporal_scale_stability</code></td>
+</tr>
+<tr>
+<td><code>rule_108</code></td>
+<td><code>oscilador-local</code></td>
+<td align="right"><code>2.000</code></td>
+<td align="right"><code>0.167</code></td>
+<td><code>periodicidad + tipo_unico</code></td>
+</tr>
+<tr>
+<td><code>rule_90</code></td>
+<td><code>multiregimen-escala-dependiente</code></td>
+<td align="right"><code>0.500</code></td>
+<td align="right"><code>0.600</code></td>
+<td><code>temporal_scale_stability</code></td>
+</tr>
+</tbody></table>
+<p>These rows show why the taxonomy cannot be reduced to a single richness score.
+<code>rule_208</code> and <code>rule_209</code> are maximally rich and stable; <code>rule_137</code> is less
+rich but highly diverse; <code>rule_108</code> is law-sparse but category-defining because
+it is the only local oscillator; <code>rule_90</code> has high diversity evidence but low
+non-empty yield because its high-scale visits become silent.</p>
+<h3>5.4 Scientific role of the atlas</h3>
+<p>The atlas is the bridge between cycle-level laws and world-level claims. A law
+signature describes one run. A world category describes how signatures behave
+across seeds, scales, and perturbations. This distinction is what makes later
+fragility measurements interpretable: <code>f_total = 0.630</code> in <code>rule_137</code> means
+something different from <code>f_total = 0.992</code> in <code>rule_108</code> because the atlas
+identifies different category-defining cores.</p>
+<h2>6. Fragility: <code>f_total</code>, <code>f_core</code>, <code>f_gap</code></h2>
+<h3>6.1 Protocol</h3>
+<p>Fragility is measured by exhaustive one-bit IC perturbation. For each measured
+world and canonical seed, every bit in the IC is flipped individually, and the
+resulting run is evaluated through the full pipeline (simulation, frame
+metrics, observers, dedup, law evaluation). The reference is the law signature
+of the unperturbed run.</p>
+<p>Protocol parameters:</p>
+<ul>
+<li><strong>IC width</strong>: <code>64</code> for most fragility measurements; <code>128</code> for the designed
+<code>rule_108</code> local-oscillator IC.</li>
+<li><strong>Perturbations per seed</strong>: one per bit position (<code>64</code> or <code>128</code>, depending on
+IC width).</li>
+<li><strong>Seeds per world</strong>: usually <code>3</code> canonical seeds, giving <code>192</code> perturbations
+for width-64 worlds. Designed-IC worlds such as <code>rule_108</code> use a canonical
+IC rather than random seeds.</li>
+<li><strong>Steps</strong>: world-specific canonical steps (e.g., <code>24</code> for <code>rule_46</code>, <code>48</code>
+for <code>rule_137</code>, <code>96</code> for <code>rule_54</code>).</li>
+</ul>
+<h3>6.2 Metrics</h3>
+<p>Three primary fragility metrics are defined:</p>
+<ul>
+<li><strong><code>f_total</code></strong>: fraction of perturbations that produce a different law
+signature from the reference (including noise-gated runs and silence).</li>
+<li><strong><code>f_core</code></strong>: fraction that changes the category-defining core laws. Noise
+and silence count as core changes because the defining regime is lost.</li>
+<li><strong><code>f_gap = f_total - f_core</code></strong>: secondary-law churn. Perturbations that
+change the signature without affecting the core-defining laws.</li>
+</ul>
+<p>A fourth component is tracked separately:</p>
+<ul>
+<li><strong><code>f_noise</code></strong>: fraction of perturbations that produce
+<code>analysis_status = ruido_no_analizable</code> (noise-gate crossing).</li>
+</ul>
+<p><code>f_noise</code> is a component of <code>f_total</code> and <code>f_core</code>; it is reported separately
+because it identifies a specific observer-boundary mechanism.</p>
+<h3>6.3 Core-law convention</h3>
+<p>Core laws are defined per category:</p>
+<table>
+<thead>
+<tr>
+<th>category</th>
+<th>core laws</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>frontera-rich-estable</code></td>
+<td>the full six-law frontier signature</td>
+</tr>
+<tr>
+<td><code>periodicidad-global</code></td>
+<td><code>periodicidad</code></td>
+</tr>
+<tr>
+<td><code>oscilador-local</code></td>
+<td><code>periodicidad</code> and <code>tipo_unico</code></td>
+</tr>
+<tr>
+<td><code>multiregimen-productivo</code></td>
+<td>the reference signature of that specific seed</td>
+</tr>
+<tr>
+<td><code>multiregimen-escala-dependiente</code></td>
+<td><code>temporal_scale_stability</code></td>
+</tr>
+</tbody></table>
+<p>For <code>multiregimen-productivo</code> worlds, the reference signature varies by seed.
+<code>f_core</code> is therefore computed per seed against that seed&#39;s reference and then
+averaged.</p>
+<h3>6.4 Fragility spectrum</h3>
+<table>
+<thead>
+<tr>
+<th>world</th>
+<th>category</th>
+<th align="right"><code>f_total</code></th>
+<th align="right"><code>f_core</code></th>
+<th align="right"><code>f_gap</code></th>
+<th align="right"><code>f_noise</code></th>
+<th>mechanism</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>rule_208</code></td>
+<td><code>frontera-rich-estable</code></td>
+<td align="right">0.000</td>
+<td align="right">0.000</td>
+<td align="right">0.000</td>
+<td align="right">0.000</td>
+<td>stable basin</td>
+</tr>
+<tr>
+<td><code>rule_209</code></td>
+<td><code>frontera-rich-estable</code></td>
+<td align="right">0.000</td>
+<td align="right">0.000</td>
+<td align="right">0.000</td>
+<td align="right">0.000</td>
+<td>stable basin</td>
+</tr>
+<tr>
+<td><code>life_block</code></td>
+<td><code>sin-evidencia-multiregimen</code></td>
+<td align="right">0.016</td>
+<td align="right">0.016</td>
+<td align="right">0.000</td>
+<td align="right">0.000</td>
+<td>stable Life fixture</td>
+</tr>
+<tr>
+<td><code>rule_30</code></td>
+<td><code>noise-bounded</code></td>
+<td align="right">0.021</td>
+<td align="right">0.021</td>
+<td align="right">0.000</td>
+<td align="right">0.000</td>
+<td>productive pocket</td>
+</tr>
+<tr>
+<td><code>rule_150</code></td>
+<td><code>noise-bounded</code></td>
+<td align="right">0.023</td>
+<td align="right">0.023</td>
+<td align="right">0.000</td>
+<td align="right">0.000</td>
+<td>productive pocket</td>
+</tr>
+<tr>
+<td><code>rule_46</code></td>
+<td><code>frontera-rich-estable</code></td>
+<td align="right">0.031</td>
+<td align="right">0.031</td>
+<td align="right">0.000</td>
+<td align="right">0.000</td>
+<td>stable basin</td>
+</tr>
+<tr>
+<td><code>life_glider</code></td>
+<td><code>sin-evidencia-multiregimen</code></td>
+<td align="right">0.032</td>
+<td align="right">0.032</td>
+<td align="right">0.000</td>
+<td align="right">0.000</td>
+<td>stable Life fixture</td>
+</tr>
+<tr>
+<td><code>rule_90</code></td>
+<td><code>multiregimen-escala-dependiente</code></td>
+<td align="right">0.172</td>
+<td align="right">0.000</td>
+<td align="right">0.172</td>
+<td align="right">0.000</td>
+<td>secondary churn</td>
+</tr>
+<tr>
+<td><code>rule_51</code></td>
+<td><code>periodicidad-global</code></td>
+<td align="right">0.193</td>
+<td align="right">0.000</td>
+<td align="right">0.193</td>
+<td align="right">0.000</td>
+<td>secondary churn</td>
+</tr>
+<tr>
+<td><code>rule_124</code></td>
+<td><code>multiregimen-productivo</code></td>
+<td align="right">0.224</td>
+<td align="right">0.083</td>
+<td align="right">0.141</td>
+<td align="right">0.000</td>
+<td>productive switching</td>
+</tr>
+<tr>
+<td><code>rule_109</code></td>
+<td><code>multiregimen-productivo</code></td>
+<td align="right">0.307</td>
+<td align="right">0.307</td>
+<td align="right">0.000</td>
+<td align="right">0.000</td>
+<td>productive switching</td>
+</tr>
+<tr>
+<td><code>rule_110</code></td>
+<td><code>multiregimen-productivo</code></td>
+<td align="right">0.323</td>
+<td align="right">0.198</td>
+<td align="right">0.125</td>
+<td align="right">0.000</td>
+<td>productive switching</td>
+</tr>
+<tr>
+<td><code>rule_18</code></td>
+<td><code>multiregimen-productivo</code></td>
+<td align="right">0.349</td>
+<td align="right">0.135</td>
+<td align="right">0.214</td>
+<td align="right">0.000</td>
+<td>productive switching</td>
+</tr>
+<tr>
+<td><code>rule_137</code></td>
+<td><code>multiregimen-productivo</code></td>
+<td align="right">0.630</td>
+<td align="right">0.312</td>
+<td align="right">0.318</td>
+<td align="right">0.000</td>
+<td>productive switching</td>
+</tr>
+<tr>
+<td><code>rule_54</code></td>
+<td><code>multiregimen-productivo</code></td>
+<td align="right">0.714</td>
+<td align="right">0.677</td>
+<td align="right">0.037</td>
+<td align="right">0.375</td>
+<td>noise-boundary</td>
+</tr>
+<tr>
+<td><code>rule_108</code></td>
+<td><code>oscilador-local</code></td>
+<td align="right">0.992</td>
+<td align="right">0.047</td>
+<td align="right">0.945</td>
+<td align="right">0.000</td>
+<td>quiescent-background activation</td>
+</tr>
+<tr>
+<td><code>life_blinker</code></td>
+<td><code>sin-evidencia-multiregimen</code></td>
+<td align="right">1.000</td>
+<td align="right">1.000</td>
+<td align="right">0.000</td>
+<td align="right">0.000</td>
+<td>periodic fixture disruption</td>
+</tr>
+</tbody></table>
+<p>The spectrum is category-aligned at the extremes: <code>frontera-rich-estable</code>
+occupies the low end, while <code>multiregimen-productivo</code> occupies the upper ECA
+range. The <code>life_blinker</code> control reaches <code>f_total = 1.000</code> because any
+single-cell perturbation breaks the exact Life oscillator fixture. <code>rule_108</code>
+remains the main ECA structural outlier: <code>f_total = 0.992</code> with only
+<code>f_core = 0.047</code>.</p>
+<h3>6.5 Fragility mechanisms</h3>
+<p>The atlas identifies several distinct mechanisms by which one-bit IC
+perturbations change law signatures:</p>
+<p><strong>Stable basin</strong> (<code>rule_208</code>, <code>rule_209</code>): <code>f_total = 0.000</code>. All perturbations
+preserve the reference signature. The basin for the six-law frontier signature
+is wide enough that no measured single-bit perturbation escapes it. <code>rule_46</code>
+is nearly identical (<code>f_total = 0.031</code>).</p>
+<p><strong>Stable Life fixture</strong> (<code>life_block</code>, <code>life_glider</code>): perturbations rarely
+change the reference signature (<code>f_total &lt;= 0.032</code>) because the fixture remains
+structurally recognizable after most one-cell flips. This is fixture-level
+robustness, not evidence of a broad ECA basin.</p>
+<p><strong>Productive pocket</strong> (<code>rule_30</code>, <code>rule_150</code>): the worlds are noise-bounded in
+the long journal, but the non-empty pockets that survive the gate are stable
+under one-bit perturbation (<code>f_total ~= 0.02</code>). Their category is defined by
+frequent pre-law noise at scale, not by fragility of the productive signatures.</p>
+<p><strong>Productive basin switching</strong> (<code>rule_137</code>, and the non-noise-boundary
+<code>multiregimen-productivo</code> worlds): perturbations move the IC among productive
+law-signature regimes. The world never falls into silence or noise;
+<code>f_noise = 0.000</code> throughout. <code>rule_137</code> is the strongest clean case
+(<code>f_total = 0.630</code>), with more than 80% of perturbations switching regime in
+the two most fragile measured seeds.</p>
+<p><strong>Noise-boundary fragility</strong> (<code>rule_54</code>): perturbations cross the observer
+noise gate rather than moving between productive regimes. The mechanism
+requires complex ICs near the dedup threshold; single-bit ICs from bare
+backgrounds do not approach the gate (Section 8). <code>f_noise = 0.375</code> makes
+<code>rule_54</code> the only measured world where noise-gate crossings dominate
+fragility.</p>
+<p><strong>Periodic fixture disruption</strong> (<code>life_blinker</code>): any one-cell perturbation
+breaks the exact Life period-2 reference signature (<code>f_total = 1.000</code>). This
+is not basin switching or noise-boundary crossing; it is the brittleness of a
+minimal periodic fixture under full-grid perturbation.</p>
+<p><strong>Quiescent-background activation</strong> (<code>rule_108</code>): the canonical IC has only two
+active bits on a zero background. Nearly any background perturbation ignites
+new dynamics and changes secondary laws, producing <code>f_total = 0.992</code>. The core
+oscillator survives unless the perturbation lands near the motif
+(<code>f_core = 0.047</code>). The result is the largest <code>f_gap</code> in the atlas (<code>0.945</code>):
+nearly all fragility is secondary, not core.</p>
+<h3>6.6 The <code>f_core</code> / <code>f_gap</code> separation</h3>
+<p>The main result of the fragility analysis is the separation between core and
+secondary law changes:</p>
+<ul>
+<li><code>rule_51</code> (<code>periodicidad-global</code>): <code>f_total = 0.193</code>, <code>f_core = 0.000</code>.
+Global periodicity survives all measured perturbations; only secondary laws
+(<code>densidad_estable</code>) toggle.</li>
+<li><code>rule_108</code> (<code>oscilador-local</code>): <code>f_total = 0.992</code>, <code>f_core = 0.047</code>. The
+local oscillator survives nearly all perturbations; secondary laws are
+maximally sensitive.</li>
+<li><code>rule_54</code> (<code>multiregimen-productivo</code>): <code>f_total = 0.714</code>,
+<code>f_core = 0.677</code>. The core productive signature changes frequently;
+<code>f_gap = 0.037</code> is near zero.</li>
+<li><code>rule_137</code> (<code>multiregimen-productivo</code>): <code>f_total = 0.630</code>,
+<code>f_core = 0.312</code>. Both core and secondary transitions are common;
+<code>f_gap</code> is approximately equal to <code>f_core</code>.</li>
+</ul>
+<p>These four cases span the space of possible (<code>f_core</code>, <code>f_gap</code>) combinations.
+Together they demonstrate that <code>f_total</code> alone is insufficient: two worlds can
+have similar total fragility with opposite core/secondary decompositions.</p>
+<h2>7. Case Studies</h2>
+<h3>7.1 <code>rule_108</code> — Unique Local Oscillator</h3>
+<h4>Discovery and formal profile</h4>
+<p><code>rule_108</code> was identified during a targeted local-oscillator search (Fase 16)
+using minimal ICs on a quiescent background (<code>f(0,0,0) = 0</code>). The canonical IC
+is a pair of active cells separated by one gap (<code>#.#</code>, word <code>101</code> in binary).
+Under <code>rule_108</code>, this IC produces an exact period-2 local oscillator
+(Figure 4): the gap fills in each step (<code>#.# -&gt; ###</code>) and then empties again,
+repeating indefinitely with zero drift.</p>
+<p><strong>Figure 4. <code>rule_108</code> period-2 oscillator motif.</strong></p>
+<pre><code class="language-text">Step t:   . . . # . # . . .
+Step t+1: . . . # # # . . .
+Step t+2: . . . # . # . . .   (repeats)
+</code></pre>
+<p><em>Space-time diagram to be rendered as bitmap figure. Active cells shown as <code>#</code>,
+quiescent background as <code>.</code>. Span &lt;= 3, period <code>T = 2</code>.</em></p>
+<p>The oscillator is stationary (center of mass fixed), bounded (<code>span &lt;= 3</code>),
+and stable over 200 steps with zero drift on a uniform-zero background.</p>
+<p>Formal profile (6 canonical seed labels, <code>width = 128</code>, <code>steps = 200</code>,
+IC = <code>pair_gap1</code>): <code>periodicidad</code> and <code>tipo_unico</code> are accepted in <code>6/6</code>
+runs. Mean <code>dedup_structure_count = 1.000</code>. The oscillator is deterministic
+given the canonical IC; the seed labels are retained only to keep the profile
+format consistent with other atlas worlds.</p>
+<h4>Algebraic derivation</h4>
+<p>The oscillator follows from three entries in the <code>rule_108</code> table:</p>
+<table>
+<thead>
+<tr>
+<th>Neighborhood</th>
+<th>Output</th>
+<th>Role</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>010</code></td>
+<td><code>1</code></td>
+<td>isolated active center stays active</td>
+</tr>
+<tr>
+<td><code>101</code></td>
+<td><code>1</code></td>
+<td>gap fills in: <code>#.# -&gt; ###</code></td>
+</tr>
+<tr>
+<td><code>111</code></td>
+<td><code>0</code></td>
+<td>center empties: <code>### -&gt; #.#</code></td>
+</tr>
+</tbody></table>
+<p><code>rule_108</code> is left-right symmetric (<code>f(l,c,r) = f(r,c,l)</code>), which explains why
+the oscillator does not drift: the two flanking cells exert equal influence on
+the center.</p>
+<h4>Fragility: quiescent-background activation</h4>
+<p><code>rule_108</code> has the largest fragility gap in the atlas:</p>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>f_total</code></td>
+<td><code>0.992</code></td>
+</tr>
+<tr>
+<td><code>f_core</code></td>
+<td><code>0.047</code></td>
+</tr>
+<tr>
+<td><code>f_gap</code></td>
+<td><code>0.945</code></td>
+</tr>
+<tr>
+<td>Core positions</td>
+<td><code>61, 62, 63, 65, 66, 67</code></td>
+</tr>
+<tr>
+<td>Pattern</td>
+<td><code>clustered</code></td>
+</tr>
+</tbody></table>
+<p>The mechanism is geometric. The canonical IC (<code>pair_gap1</code>, 2 active bits in
+<code>width = 128</code>) leaves more than 120 cells at zero. A one-bit perturbation at
+any of those background positions activates the quiescent background: because
+<code>f(0,1,0) = 1</code>, an isolated <code>1</code> on a zero background immediately grows,
+producing new detectable structures. This changes secondary laws while leaving
+<code>periodicidad</code> and <code>tipo_unico</code> intact as long as the oscillator core is
+undisturbed. A perturbation within the core neighborhood (positions <code>61..63</code>,
+<code>65..67</code>) displaces or destroys the oscillator, accounting for
+<code>f_core = 0.047</code>.</p>
+<p>This constitutes a third fragility mechanism, distinct from productive basin
+switching (<code>rule_137</code>, Section 7.3) and noise-boundary fragility (<code>rule_54</code>,
+Section 7.2): quiescent-background activation. The core behavior is robust,
+but the minimal IC makes secondary laws highly sensitive to background
+activation.</p>
+<h4>Uniqueness</h4>
+<p>Fase 18 ran an exhaustive search over all 128 ECA rules with quiescent
+backgrounds (<code>f(0,0,0) = 0</code>), testing 510 IC words per rule (all non-empty
+binary words of length 1..8), with <code>width = 128</code>, <code>steps = 200</code>, and burn-in
+of 80 steps. Only <code>rule_108</code> produced local period-2 oscillators. No other
+rule produced any local oscillator under this protocol for periods <code>2..16</code> and
+span <code>&lt;= 32</code>.</p>
+<p>The family is internal to <code>rule_108</code>: 132 out of 179 candidate IC words are
+accepted by the production observer as <code>periodicidad</code>, with oscillator spans
+3, 5, 6, 7, and 8. All confirmed oscillators have period exactly 2; no longer
+period was found.</p>
+<h3>7.2 <code>rule_54</code> — Noise Gate Anatomy</h3>
+<p><code>rule_54</code> is the clearest example of noise-boundary fragility: perturbations do
+not merely move the run to another productive signature, but can push the
+observer output across the deduplicated structure gate. The production gate is:</p>
+<pre><code class="language-text">dedup_structure_count &gt; 40 -&gt; ruido_no_analizable
+</code></pre>
+<h4>Fase 13: anatomy of the gate</h4>
+<p>Fase 13 measured three productive <code>rule_54</code> ICs at <code>steps = 96</code> and perturbed
+each by all 64 one-bit flips. The reference deduplicated counts were close to
+the gate:</p>
+<table>
+<thead>
+<tr>
+<th>seed</th>
+<th>reference dedup</th>
+<th>noisy flips / 64</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>20260638</code></td>
+<td><code>32</code></td>
+<td><code>14</code></td>
+</tr>
+<tr>
+<td><code>20260640</code></td>
+<td><code>33</code></td>
+<td><code>18</code></td>
+</tr>
+<tr>
+<td><code>20260642</code></td>
+<td><code>39</code></td>
+<td><code>40</code></td>
+</tr>
+</tbody></table>
+<p>Across the three seeds, <code>72/192</code> flips crossed into <code>ruido_no_analizable</code>
+(<code>f_noise = 0.375</code>). Every noisy flip crossed for the same reason:
+<code>dedup_structure_count &gt; 40</code>. No alternative noise mechanism was observed.</p>
+<p>The sensitive positions formed a clustered, multi-hot pattern rather than a
+single contiguous block. Bins near the periodic boundary (<code>0..7</code> and <code>56..63</code>)
+were repeatedly implicated, and bit 5 was the only bit whose flip crossed the
+gate in all three measured seeds.</p>
+<h4>Fase 19: controlled single-bit negative case</h4>
+<p>Fase 19 tested whether bit 5 was a special absolute coordinate of <code>rule_54</code>.
+It replaced the complex ICs with controlled single-bit ICs: for each
+<code>k = 0..63</code>, the initial state contained only one active bit at position <code>k</code>.</p>
+<p>The result separates CA physics from the observer pipeline:</p>
+<ul>
+<li>The ECA frames are translation-invariant after shift normalization.</li>
+<li>The observer/dedup counts are not translation-equivariant for this
+wide-spreading pattern: <code>dedup_structure_count</code> ranges from <code>15</code> to <code>24</code>
+across positions.</li>
+<li>The law signature is identical for all 64 positions:
+<code>temporal_scale_stability</code>.</li>
+<li>Every single-bit IC remains far below the gate (<code>dedup &lt;= 24 &lt; 40</code>).</li>
+</ul>
+<p>Therefore, bit 5 is not a privileged coordinate of <code>rule_54</code>. The Fase 13
+signal arises from the interaction between complex IC geometry and the
+observer/gate pipeline. Complex ICs close to the threshold can be pushed across
+it by local flips; a single active cell cannot.</p>
+<h4>Mechanism</h4>
+<p><code>rule_54</code> has high total and core fragility (<code>f_total = 0.714</code>,
+<code>f_core = 0.677</code>), but its mechanism differs from <code>rule_137</code>. In <code>rule_137</code>,
+perturbations tend to move between productive regimes. In <code>rule_54</code>, a large
+fraction of perturbations cross an analysis boundary: the run becomes too
+fragmented for the current observer/dedup gate.</p>
+<p>This makes <code>rule_54</code> a methodological case study as much as a dynamical one.
+It shows that the atlas can identify worlds whose measured fragility is
+dominated by proximity to an observer threshold. It also motivates the caveat that
+absolute structure counts should not be treated as symmetry-invariant physical
+observables without equivariance checks.</p>
+<h3>7.3 <code>rule_137</code> — Productive Basin Switching</h3>
+<p><code>rule_137</code> is the primary example of productive basin switching: one-bit IC
+perturbations change the law signature without ever crossing the noise gate or
+reaching silence. All fragility is productive (<code>f_noise = 0.000</code>,
+<code>f_silence = 0.000</code>), making it the cleanest case in the atlas for
+inter-basin transitions.</p>
+<h4>Fragility profile</h4>
+<p>Three canonical seeds at <code>steps = 48</code>, <code>width = 64</code>:</p>
+<table>
+<thead>
+<tr>
+<th>seed</th>
+<th>reference signature</th>
+<th>f_total</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>20260633</code></td>
+<td><code>complejidad_alta + frontera_temporal</code></td>
+<td><code>0.812</code></td>
+</tr>
+<tr>
+<td><code>20260635</code></td>
+<td><code>complejidad_alta + densidad_estable + frontera_temporal</code></td>
+<td><code>0.219</code></td>
+</tr>
+<tr>
+<td><code>20260673</code></td>
+<td><code>complejidad_alta + densidad_estable + frontera_temporal + temporal_scale_stability + tipo_unico + velocidad_constante</code></td>
+<td><code>0.859</code></td>
+</tr>
+</tbody></table>
+<p>Aggregate: <code>f_total = 0.630</code>, <code>f_core = 0.312</code>, <code>f_gap = 0.318</code>.</p>
+<p>The per-seed range (<code>0.219..0.859</code>) is the widest in the atlas. Even the least
+fragile measured seed has <code>f_total &gt; 0.2</code>. The most fragile seeds (20260633 and
+20260673) flip on more than 80% of one-bit perturbations.</p>
+<h4>Mechanism</h4>
+<p><code>f_noise = 0.000</code>: no perturbed IC crosses the deduplicated structure gate. The
+world remains analyzable throughout. The fragility is a property of productive
+basin geography, not proximity to an observer threshold.</p>
+<p>The pattern is <code>dispersed</code>: sensitive positions are distributed across the IC
+width rather than concentrated near a motif. This is consistent with a world
+that has many narrow productive basins whose boundaries intersect throughout
+the IC space.</p>
+<p><code>peak_diversity = 0.833</code> — the highest in the atlas. The canonical seeds
+themselves already visit multiple distinct productive regimes. The fragility
+measurement extends this: not just that the world can reach different signatures
+under different seeds, but that a single-bit perturbation to any one canonical
+IC is enough to move between regimes.</p>
+<h4>f_core and f_gap interpretation</h4>
+<p><code>f_core = 0.312</code> reflects genuine regime switching: flips that remove or
+change laws defining the canonical signature. <code>f_gap = 0.318</code> reflects
+secondary-law churn: the core productive signature survives, but laws on the
+signature boundary (such as <code>densidad_estable</code> or <code>tipo_unico</code>) toggle.</p>
+<p>The two components are roughly equal (0.312 vs 0.318), meaning <code>rule_137</code> sits
+in a region where both core-regime transitions and secondary-law transitions are
+common. This is structurally different from <code>rule_108</code> (<code>f_gap = 0.945</code>, where
+the core oscillator is robust and secondary laws dominate) and from <code>rule_54</code>
+(<code>f_gap = 0.037</code>, where the core productive signature changes but almost no
+fragility is secondary).</p>
+<h4>Contrast with <code>rule_54</code> and <code>rule_108</code></h4>
+<p><code>rule_54</code> and <code>rule_137</code> both have high <code>f_total</code> (0.714 vs 0.630), but the
+mechanisms are opposite: <code>rule_54</code> fragility is dominated by noise-gate
+crossings (<code>f_noise = 0.375</code>), while <code>rule_137</code> fragility is entirely
+productive. A perturbed <code>rule_137</code> IC stays analyzable and law-rich; it is
+simply in a different productive regime.</p>
+<p><code>rule_108</code> contrasts from the opposite direction: its <code>f_core = 0.047</code> shows
+that the defining behavior (the local oscillator) is nearly indestructible,
+while <code>rule_137</code>&#39;s <code>f_core = 0.312</code> shows that its defining signatures change
+under nearly a third of all one-bit flips.</p>
+<h3>7.4 <code>rule_46</code>, <code>rule_208</code>, <code>rule_209</code> — Stable-Rich Frontier</h3>
+<p>These three worlds define the <code>frontera-rich-estable</code> category: low signature
+diversity, near-maximal law richness, and very low fragility. They are the
+counterexample that revised the early atlas interpretation of
+<code>frontera_temporal</code>.</p>
+<p>The first 15-world atlas made <code>frontera_temporal</code> look rare: it appeared only
+as a minority law in class-4 multi-regime worlds such as <code>rule_137</code>,
+<code>rule_110</code>, and <code>rule_54</code>. Fase 11 showed that this was a sampling artifact.
+A sweep over all 256 ECA rules (<code>seeds = 20260523..20260525</code>, <code>W = 64</code>,
+<code>T = 24</code>) found 38 rules where <code>frontera_temporal</code> activates in at least two
+of three seeds, and 17 rules where it activates in all three.</p>
+<p>The top rules by law richness were <code>rule_46</code>, <code>rule_208</code>, and <code>rule_209</code>.
+Formal six-seed profiles (<code>20260523..20260528</code>, <code>W = 64</code>, <code>T = 24</code>) placed all
+three in a new category:</p>
+<table>
+<thead>
+<tr>
+<th>world</th>
+<th align="right">mean laws</th>
+<th align="right">peak diversity</th>
+<th>category</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>rule_46</code></td>
+<td align="right"><code>5.833</code></td>
+<td align="right"><code>0.333</code></td>
+<td><code>frontera-rich-estable</code></td>
+</tr>
+<tr>
+<td><code>rule_208</code></td>
+<td align="right"><code>6.000</code></td>
+<td align="right"><code>0.167</code></td>
+<td><code>frontera-rich-estable</code></td>
+</tr>
+<tr>
+<td><code>rule_209</code></td>
+<td align="right"><code>6.000</code></td>
+<td align="right"><code>0.167</code></td>
+<td><code>frontera-rich-estable</code></td>
+</tr>
+</tbody></table>
+<p>The dominant signature is the same six-law set:</p>
+<pre><code class="language-text">velocidad_constante
+densidad_estable
+tipo_unico
+complejidad_alta
+frontera_temporal
+temporal_scale_stability
+</code></pre>
+<p>Only <code>periodicidad</code> is absent. This makes the family nearly maximal under the
+current seven-law system without relying on multi-regime exploration.</p>
+<h4>Stable richness rather than multi-regime diversity</h4>
+<p>The category is defined by the conjunction of high richness and low diversity.
+<code>rule_137</code> is rich because it moves among several productive law signatures.
+The frontier-rich worlds are rich because the same high-law signature appears
+reliably across seeds.</p>
+<p>This distinction matters operationally. A policy that only looks for signature
+diversity would miss these worlds, even though they produce more accepted laws
+per visit than any multi-regime world in the atlas. The Fase 11 taxonomy update
+therefore adds:</p>
+<pre><code class="language-text">frontera-rich-estable := mean_laws &gt;= 4.0 and peak_diversity &lt;= 0.5
+</code></pre>
+<p>evaluated after noise-bounded and multi-regime cases.</p>
+<h4>Complement symmetry and independent convergence</h4>
+<p><code>rule_46</code> and <code>rule_209</code> are a complement pair (<code>46 = 255 - 209</code>): exchanging
+zeros and ones maps one into the other. Their shared profile is therefore one
+physical phenomenon seen through global bit inversion.</p>
+<p><code>rule_208</code> is more surprising. Its complement is <code>rule_47</code>, not <code>rule_46</code> or
+<code>rule_209</code>, yet it reaches the same maximum-richness profile. This suggests
+that the <code>frontera-rich-estable</code> regime is not a single isolated symmetry
+orbit; at least two distinct ECA regions converge to the same six-law
+frontier.</p>
+<h4>Fragility</h4>
+<p>Fase 12 measured one-bit fragility for the three worlds using the same protocol
+as <code>rule_137</code> and <code>rule_54</code>:</p>
+<table>
+<thead>
+<tr>
+<th>world</th>
+<th align="right">f_total</th>
+<th align="right">f_core</th>
+<th align="right">f_noise</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>rule_46</code></td>
+<td align="right"><code>0.031</code></td>
+<td align="right"><code>0.031</code></td>
+<td align="right"><code>0.000</code></td>
+</tr>
+<tr>
+<td><code>rule_208</code></td>
+<td align="right"><code>0.000</code></td>
+<td align="right"><code>0.000</code></td>
+<td align="right"><code>0.000</code></td>
+</tr>
+<tr>
+<td><code>rule_209</code></td>
+<td align="right"><code>0.000</code></td>
+<td align="right"><code>0.000</code></td>
+<td align="right"><code>0.000</code></td>
+</tr>
+</tbody></table>
+<p>The result is the opposite end of the fragility spectrum from <code>rule_137</code>.
+Where <code>rule_137</code> has many narrow productive basins (<code>f_total = 0.630</code>),
+<code>rule_208</code> and <code>rule_209</code> have measured basins so wide that no single-bit flip
+changes the law signature. <code>rule_46</code> is only slightly fragile: two of 192
+single-bit perturbations change signature across the three measured seeds.</p>
+<p>This confirms that high law richness does not imply high fragility. Richness
+can arise either from many neighboring productive regimes (<code>rule_137</code>) or from
+a single broad, stable regime (<code>rule_46/208/209</code>).</p>
+<h4>Scientific revision</h4>
+<p>The correct conclusion is not that <code>frontera_temporal</code> is intrinsically rare.
+It is rare in the original discovery atlas because the original world sequence
+under-sampled stable high-richness boundary worlds. In the full ECA sweep,
+<code>frontera_temporal</code> is a robust marker of the <code>frontera-rich-estable</code> family.</p>
+<h2>8. Observer Artifacts and Pipeline Equivariance</h2>
+<p>The ZUSE pipeline contains two classes of observer artifact that the atlas
+identifies and characterizes. Framing these artifacts as results — not just
+implementation limitations — is important: they define the boundary between
+what the system measures reliably and what it does not.</p>
+<h3>8.1 Mirror asymmetry in <code>tipo_unico</code> (Fase 6b)</h3>
+<p><code>rule_110</code> and <code>rule_124</code> are left-right mirrors of each other: the rule table
+for <code>rule_124</code> is obtained by reflecting every neighborhood
+<code>f(l,c,r) -&gt; f(r,c,l)</code> in the <code>rule_110</code> table. Under periodic boundary
+conditions, the two rules produce physically equivalent dynamics up to spatial
+reflection.</p>
+<p>Despite this equivalence, <code>tipo_unico</code> can fire asymmetrically: it may be
+accepted for one orientation and rejected for the other, depending on which
+structure types the heuristic observers label from the specific frame sequence.
+Since <code>tipo_unico</code> counts whether exactly one structure type appears, its value
+depends on the labeling convention of the observers, not only on the CA
+dynamics.</p>
+<p><code>tipo_unico</code> is retained in the atlas for its exploratory value: it reliably
+distinguishes runs with homogeneous structure populations from runs with mixed
+populations. It should not be used as evidence of physical left-right
+asymmetry.</p>
+<h3>8.2 Translation non-equivariance of the dedup pipeline (Fase 19)</h3>
+<p>ECA with periodic boundary conditions is translation-invariant: shifting the
+initial condition by any number of cells produces the same dynamics up to a
+spatial shift. A pipeline that correctly identifies physical structures should
+therefore return the same structure count for all translations of the same IC.</p>
+<p>Fase 19 tested this directly: 64 single-bit ICs for <code>rule_54</code>, one active bit
+at each position <code>k = 0..63</code>, with <code>width = 64</code> and <code>steps = 96</code>. The ECA
+frames were confirmed translation-invariant (frame identity after shift
+normalization: <code>True</code>). The observer/dedup pipeline was not:</p>
+<table>
+<thead>
+<tr>
+<th>metric</th>
+<th>range across 64 positions</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>dedup_structure_count</code></td>
+<td><code>15..24</code> (29 distinct result classes)</td>
+</tr>
+<tr>
+<td><code>raw_structure_count</code></td>
+<td><code>45..72</code></td>
+</tr>
+<tr>
+<td>law signature</td>
+<td><code>temporal_scale_stability</code> (all 64 identical)</td>
+</tr>
+<tr>
+<td><code>analysis_status</code></td>
+<td><code>ok</code> (all 64)</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>metric</th>
+<th>value</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>ICs tested</td>
+<td>64 single-bit positions (<code>k = 0..63</code>)</td>
+</tr>
+<tr>
+<td>ECA translation-invariant</td>
+<td>True</td>
+</tr>
+<tr>
+<td>Unique result classes (observer)</td>
+<td>29</td>
+</tr>
+<tr>
+<td>dedup range observed</td>
+<td>15-24</td>
+</tr>
+<tr>
+<td>Noise gate threshold</td>
+<td>&gt; 40</td>
+</tr>
+<tr>
+<td>Closest single-bit IC to gate</td>
+<td><code>k = 55</code>, <code>dedup = 24</code></td>
+</tr>
+<tr>
+<td>Complex-IC reference (Fase 13)</td>
+<td><code>dedup = 32..39</code></td>
+</tr>
+<tr>
+<td>Law signature (all 64 positions)</td>
+<td><code>temporal_scale_stability</code></td>
+</tr>
+<tr>
+<td>Conclusion</td>
+<td>noise-gate crossing requires complex IC geometry; single-bit ICs stay at least 16 below gate</td>
+</tr>
+</tbody></table>
+<p>The mechanism is a boundary interaction: <code>rule_54</code> produces wide-spreading
+patterns that cross the periodic frame boundary. The dedup algorithm&#39;s handling
+of cyclic-span structures varies depending on the absolute IC position relative
+to where structure boundaries fall on the lattice. The result is a
+position-dependent count that is not a translation-equivariant physical
+observable.</p>
+<h3>8.3 Implications for the atlas</h3>
+<p>Both artifacts are bounded in their effect:</p>
+<ul>
+<li><p><code>tipo_unico</code> asymmetry is a labeling artifact, not a count artifact. It
+affects which laws are accepted, but only for runs where the structure
+population is near the one-type boundary. Runs with clearly homogeneous
+or clearly mixed populations are unaffected.</p>
+</li>
+<li><p>Dedup non-equivariance affects absolute structure counts but not law
+signatures. In Fase 19, all 64 translated ICs produce identical law
+signatures despite varying dedup counts. The noise gate (<code>dedup &gt; 40</code>) is
+never approached by single-bit ICs, and law evaluation depends on count
+magnitude only through the gate.</p>
+</li>
+</ul>
+<p>The atlas therefore relies on law signatures as the primary evidence unit.
+Absolute dedup counts appear in world profiles as context and should be
+interpreted with the translation-equivariance caveat. Future work on
+symmetry-invariant observers would remove both artifacts.</p>
+<h2>9. Limitations</h2>
+<h3>9.1 Fixed protocol parameters</h3>
+<p>The atlas is valid for the parameter regime used: <code>width = 64</code> (formal
+profiles), <code>width = 128</code> (rule_108 oscillator), <code>steps</code> roughly <code>24..200</code>, and
+the IC protocols defined per world. The two calibrated thresholds —
+<code>frontera_temporal</code> upper bound <code>0.4352</code> and <code>temporal_scale_stability</code>
+threshold <code>19.03</code> — were fit on data from this regime. Applying the atlas to
+significantly different widths or step counts requires recalibration. This is
+not a flaw in the methodology; it is the expected scope of an empirically
+grounded atlas.</p>
+<h3>9.2 Heuristic observers</h3>
+<p>The observer stack uses geometric heuristics to label structures as <code>glider</code>,
+<code>bloque</code>, or <code>oscilador</code>. These heuristics are not derived from first
+principles and are not provably complete or sound for arbitrary ECA dynamics.
+As shown in Section 8, they are not translation-equivariant for wide-spreading
+patterns and are not mirror-invariant for <code>tipo_unico</code>. The atlas is built on
+law signatures, which are more robust than absolute observer counts, but the
+underlying observers remain heuristic. Replacing them with symmetry-invariant
+observers would be a meaningful improvement.</p>
+<h3>9.3 Bounded local oscillator protocol</h3>
+<p>The uniqueness claim for <code>rule_108</code> holds under a specific protocol: quiescent
+zero background, stationary exact periodicity (no drift), IC words of binary
+length 1..8 (510 non-zero words per rule), and period detection window 2..16
+with local span &lt;= 32. Moving oscillators, longer IC words, non-zero
+backgrounds, or longer detection periods are outside the current protocol. The
+claim is therefore: no other quiescent ECA rule produces a stationary
+local-period oscillator under this protocol. It is not a claim about ECA
+oscillators in general.</p>
+<h3>9.4 Empirical atlas, not axiomatic classification</h3>
+<p>The world categories are induced from observed law signatures across a finite
+number of seeds and step counts. A world classified as
+<code>multiregimen-productivo</code> on 6..15 visits could exhibit different behavior at
+larger scale, with different IC distributions, or under longer runs. The
+categories are stable empirical summaries, not theorems. <code>rule_90</code> is a clear
+example: it is classified as <code>multiregimen-escala-dependiente</code> because
+high-scale visits become silent under the current protocol, but the underlying
+XOR dynamics have algebraic structure that the current seven laws do not
+capture.</p>
+<p>Fase 20 gives the same warning for <code>frontera_temporal</code>: 24 additional rules
+were rich in <code>frontera_temporal</code> at sweep scale, but the top four failed
+long-journal validation. Category assignment is therefore protocol-scale
+dependent; short-scale richness is candidate evidence, not atlas-grade
+classification.</p>
+<h3>9.5 PySR symbolic regression pending</h3>
+<p>The decision-tree analyses (Section 4, temporal calibration) provide strong
+empirical signal but not closed-form symbolic expressions. PySR was planned as
+a follow-up to produce interpretable formulas for the calibrated thresholds and
+fragility spectra. The Julia dependency required by PySR remains unresolved.
+Current conclusions rely on deterministic scripts and tree-based models. This
+does not affect the validity of the atlas findings, but the symbolic
+interpretation layer is incomplete.</p>
+<h2>10. Next Work</h2>
+<h3>10.1 Symmetry-invariant observers</h3>
+<p>The two observer artifacts identified in Section 8 — <code>tipo_unico</code> mirror
+asymmetry and dedup translation non-equivariance — share a root cause: the
+heuristic observers do not encode the symmetries of the underlying CA. A
+natural next step is to build observers that canonicalize structure
+representations under spatial reflection and translation before counting. This
+would make <code>tipo_unico</code> a mirror-invariant physical property and dedup counts
+stable across IC positions, strengthening the evidential basis for both the
+atlas and the fragility measurements.</p>
+<h3>10.2 Extended local oscillator search</h3>
+<p>The <code>rule_108</code> uniqueness result holds under the current stationary protocol
+(zero background, exact period, IC words of length &lt;= 8, span &lt;= 32). Three
+natural extensions remain:</p>
+<ul>
+<li><strong>Moving oscillators</strong>: relax the stationarity requirement to allow
+oscillators that translate at constant velocity (glider-like periodicity).</li>
+<li><strong>Longer IC words</strong>: extend the IC sweep from length 8 to length 12..16 to
+test whether longer seed patterns produce oscillators in rules that failed
+the length-8 protocol.</li>
+<li><strong>Non-zero backgrounds</strong>: replace the quiescent zero background with a
+uniform-one or periodic background to test whether <code>rule_108</code> retains its
+uniqueness or whether other rules enter the family under different
+background conditions.</li>
+</ul>
+<p>Each extension is a controlled experiment with the same measurement protocol;
+only the IC or background definition changes.</p>
+<h3>10.3 PySR symbolic regression</h3>
+<p>The decision-tree calibration for <code>frontera_temporal</code> and
+<code>temporal_scale_stability</code> (Section 4) provides thresholds but not formulas.
+PySR symbolic regression on the fragility spectrum (<code>f_total</code>, <code>f_core</code>,
+<code>f_gap</code> as functions of rule properties and IC metrics) could yield
+interpretable expressions for why some worlds have wide basins and others do
+not. The Julia dependency required by PySR is the only technical blocker; the
+datasets are ready.</p>
+<h3>10.4 Figures</h3>
+<p>The following five figures are planned for the preprint draft:</p>
+<ol>
+<li><strong>World taxonomy table</strong> — the full 20-world atlas with categories, law
+coverage symbols, and fragility columns, formatted as a paper-ready table.</li>
+<li><strong>Law coverage matrix</strong> — the <code>✓ / · / - / ?</code> matrix from
+<code>outputs/world_taxonomy/law_map.md</code>, rendered as a heatmap or binary grid.</li>
+<li><strong><code>f_total</code> / <code>f_core</code> spectrum</strong> — a two-axis scatter or bar chart showing
+all measured worlds positioned by <code>f_total</code> and <code>f_core</code>, with the four
+fragility mechanisms labeled.</li>
+<li><strong><code>rule_108</code> oscillator motif</strong> — a space-time diagram of the <code>#.# &lt;-&gt; ###</code>
+two-step cycle, showing several periods on a quiescent background.</li>
+<li><strong><code>rule_54</code> gate and observer non-equivariance</strong> — a dual figure: the
+Fase 13 noise-gate crossing diagram (reference dedup vs perturbed dedup)
+alongside the Fase 19 per-position dedup variation (15..24 across k=0..63).</li>
+</ol>
+<h2>References</h2>
+<p>[Wolfram2002] Stephen Wolfram. <em>A New Kind of Science</em>. Wolfram Media,
+Champaign, IL, 2002. <a href="https://www.wolframscience.com/nks/">https://www.wolframscience.com/nks/</a></p>
+<p>[Cook2004] Matthew Cook. &quot;Universality in Elementary Cellular Automata.&quot;
+<em>Complex Systems</em> 15(1): 1-40, 2004.
+<a href="https://www.complex-systems.com/abstracts/v15_i01_a01/">https://www.complex-systems.com/abstracts/v15_i01_a01/</a></p>
+<p>[Udrescu2020] Silviu-Marian Udrescu and Max Tegmark. &quot;AI Feynman: A
+physics-inspired method for symbolic regression.&quot; <em>Science Advances</em> 6(16):
+eaay2631, 2020. <a href="https://doi.org/10.1126/sciadv.aay2631">https://doi.org/10.1126/sciadv.aay2631</a></p>
+<p>[Schmidt2009] Michael Schmidt and Hod Lipson. &quot;Distilling Free-Form Natural
+Laws from Experimental Data.&quot; <em>Science</em> 324(5923): 81-85, 2009.
+<a href="https://doi.org/10.1126/science.1165893">https://doi.org/10.1126/science.1165893</a></p>
+<p>[Lu2024] Chris Lu, Cong Lu, Robert Tjarko Lange, Jakob Foerster, Jeff Clune,
+and David Ha. &quot;The AI Scientist: Towards Fully Automated Open-Ended Scientific
+Discovery.&quot; arXiv:2408.06292, 2024. <a href="https://arxiv.org/abs/2408.06292">https://arxiv.org/abs/2408.06292</a></p>
+
+</body>
+</html>
