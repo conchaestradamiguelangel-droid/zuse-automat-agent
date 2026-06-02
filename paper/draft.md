@@ -1245,3 +1245,24 @@ The following five figures are planned for the preprint draft:
 5. **`rule_54` gate and observer non-equivariance** — a dual figure: the
    Fase 13 noise-gate crossing diagram (reference dedup vs perturbed dedup)
    alongside the Fase 19 per-position dedup variation (15..24 across k=0..63).
+
+## References
+
+[Wolfram2002] Stephen Wolfram. *A New Kind of Science*. Wolfram Media,
+Champaign, IL, 2002. https://www.wolframscience.com/nks/
+
+[Cook2004] Matthew Cook. "Universality in Elementary Cellular Automata."
+*Complex Systems* 15(1): 1-40, 2004.
+https://www.complex-systems.com/abstracts/v15_i01_a01/
+
+[Udrescu2020] Silviu-Marian Udrescu and Max Tegmark. "AI Feynman: A
+physics-inspired method for symbolic regression." *Science Advances* 6(16):
+eaay2631, 2020. https://doi.org/10.1126/sciadv.aay2631
+
+[Schmidt2009] Michael Schmidt and Hod Lipson. "Distilling Free-Form Natural
+Laws from Experimental Data." *Science* 324(5923): 81-85, 2009.
+https://doi.org/10.1126/science.1165893
+
+[Lu2024] Chris Lu, Cong Lu, Robert Tjarko Lange, Jakob Foerster, Jeff Clune,
+and David Ha. "The AI Scientist: Towards Fully Automated Open-Ended Scientific
+Discovery." arXiv:2408.06292, 2024. https://arxiv.org/abs/2408.06292
