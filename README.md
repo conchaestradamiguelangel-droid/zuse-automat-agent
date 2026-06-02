@@ -1,6 +1,12 @@
 # ZUSE AUTOMAT AGENT
 
-Estado: Fase 19 completada. rule_54 single-bit control confirma gate por IC compleja.
+Estado: preprint v1.0 publicado en Zenodo.
+
+Preprint: [ZUSE Automat Agent: Empirical Law Discovery in Elementary Cellular Automata](https://doi.org/10.5281/zenodo.20516375)
+
+DOI de version: `10.5281/zenodo.20516375`
+
+DOI de todas las versiones: `10.5281/zenodo.20516374`
 
 Premisas rectoras:
 
