@@ -1,256 +1,84 @@
-# ZUSE AUTOMAT AGENT
+# ZUSE Automat Agent
 
-Estado: preprint v1.0 publicado en Zenodo.
+Deterministic empirical law discovery for elementary cellular automata (ECA).
 
-Preprint: [ZUSE Automat Agent: Empirical Law Discovery in Elementary Cellular Automata](https://doi.org/10.5281/zenodo.20516375)
+ZUSE Automat Agent runs cellular-automata worlds, applies a fixed observer stack,
+evaluates seven binary cycle laws, and stores multi-seed evidence in reproducible
+journals. The discovery loop is policy-driven and deterministic: no language
+model participates in world selection, law evaluation, scoring, or acceptance.
 
-DOI de version: `10.5281/zenodo.20516375`
+## Preprint
 
-DOI de todas las versiones: `10.5281/zenodo.20516374`
-
-Premisas rectoras:
-
-1. VELOCIDAD
-2. ESCALABILIDAD
-3. CUANTICA
-
-## Fase 0a
-
-Objetivo: laboratorio reproducible minimo para automatas celulares elementales
-(ECA): 2 estados, radio 1, 256 reglas.
-
-Incluye:
-
-- Motor ECA 1D con Numpy.
-- Motor generico 1D para `k` estados y radio `r` mediante tabla local o
-  callable, sin exploracion exhaustiva del espacio de reglas.
-- Metricas base: entropia, compresibilidad gzip, informacion mutua temporal,
-  densidad y transiciones activas.
-- Almacenamiento SQLite.
-- Visualizador PNG con Pillow.
-- Reportes Markdown por regla.
-- CLI minima para simular reglas y generar dataset.
-- Observadores 1D iniciales sobre datos sinteticos: correlacion, patches
-  ligeros y diferencia de frames.
-
-## Uso rapido
-
-```powershell
-python -m zaa simulate --rule 110 --steps 200 --width 256 --out outputs\rule110
-python -m zaa dataset --steps 1000 --width 256 --cis 10 --db data\zaa.sqlite
-python -m zaa benchmark --rule 110 --steps 1000000 --width 256
-python -m zaa observe-synthetic --kind glider
-python -m zaa generate-rule110-fixtures --out fixtures\pending
-python -m zaa validate-rule110-fixtures --pending fixtures\pending --validated fixtures\validated
-python -m zaa observe-life --kind glider
-python -m zaa gate-g1a1 --fixtures fixtures\validated
-python -m zaa laws-2a --fixtures fixtures\validated --out reports\fase2a
-python -m zaa discover --world synthetic_glider --cycles 5
-python -m zaa discover --world life_glider --cycles 3 --journal journal.jsonl
-python -m zaa discover --world rule_30 --cycles 5 --steps 200 --width 256
-python -m unittest discover -s tests
-```
+- Version DOI: [10.5281/zenodo.20516375](https://doi.org/10.5281/zenodo.20516375)
+- All-versions DOI: [10.5281/zenodo.20516374](https://doi.org/10.5281/zenodo.20516374)
+- PDF: [paper/zuse_preprint.pdf](paper/zuse_preprint.pdf)
 
 ## Scientific Artifacts
 
-- [World taxonomy and law coverage matrix](outputs/world_taxonomy/law_map.md)
-  -- formal classification of 20 worlds, per-law coverage across the 7 current
-  cycle laws, and measured basin fragility where available.
-- [Scientific synthesis](outputs/scientific_synthesis/FINDINGS.md) -- unified
-  summary of world families, law coverage, basin fragility, core fragility, and
-  open questions.
-- [Physical-tree findings](outputs/pysr_fase7/FINDINGS.md) -- meta-analysis of
-  physical metrics predicting law richness, updated with the
-  `frontera-rich-estable` family.
-- [Fragility report](outputs/fragility_fase10/fragility_report.md) -- basin
-  fragility spectrum and the two observed fragility mechanisms.
-- [Rule 54 noise-gate anatomy](outputs/rule54_gate_fase13/rule54_gate_report.md)
-  -- detailed diagnosis of the `rule_54` dedup noise-boundary mechanism.
-- [Rule 54 controlled single-bit IC](outputs/rule54_controlled_ic_fase19/rule54_single_bit_report.md)
-  -- translation-invariance control showing that single-bit `rule_54` stays
-  far below the dedup noise gate.
-- [Periodicity sweep](outputs/periodicity_fase14/periodicity_sweep_report.md)
-  -- ECA validation of `periodicidad`, with `rule_51` as global period-2
-  positive control.
-- [Local oscillator search](outputs/local_oscillators_fase16/local_oscillator_report.md)
-  -- quiescent-background ECA search; `rule_108` provides a local period-2
-  oscillator witness (`#.# <-> ###`).
-- [Local oscillator family sweep](outputs/local_oscillator_family_fase18/local_oscillator_family_report.md)
-  -- exhaustive quiescent ECA sweep over binary IC words of length 1..8;
-  `rule_108` is unique under this protocol.
+- [World taxonomy and law coverage matrix](outputs/world_taxonomy/law_map.md):
+  formal classification of 20 worlds, seven-law coverage, and measured
+  fragility where available.
+- [Scientific synthesis](outputs/scientific_synthesis/FINDINGS.md): consolidated
+  findings across world families, law coverage, fragility mechanisms, and open
+  questions.
+- [Physical-tree findings](outputs/pysr_fase7/FINDINGS.md): meta-analysis of
+  physical metrics that predict law richness.
+- [Fragility report](outputs/fragility_fase10/fragility_report.md): basin
+  fragility spectrum and observed mechanisms.
+- [Rule 54 noise-gate anatomy](outputs/rule54_gate_fase13/rule54_gate_report.md):
+  diagnosis of the dedup noise-boundary mechanism.
+- [Local oscillator family sweep](outputs/local_oscillator_family_fase18/local_oscillator_family_report.md):
+  exhaustive quiescent ECA sweep; `rule_108` is unique under the current local
+  oscillator protocol.
+- [Periodicity sweep](outputs/periodicity_fase21/periodic_ic_sweep_report.md):
+  designed periodic ICs validate `periodicidad` across ECA.
 
-## Current Scientific Map
+## Install
 
-Fases 11-19 establish these robust results:
+```powershell
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+pip install -r requirements.txt
+```
 
-- `frontera_temporal` is not intrinsically rare. It was under-sampled by the
-  initial atlas and is now represented by the `frontera-rich-estable` family:
-  `rule_46`, `rule_208`, and `rule_209`.
-- Basin fragility separates world families. `frontera-rich-estable` worlds have
-  broad basins (`f_total` 0.000-0.031), while `multiregimen-productivo` worlds
-  occupy the high-fragility range.
-- `periodicidad` is validated on real ECA dynamics in two forms:
-  `rule_51` gives global frame-periodicity, while `rule_108` gives a local
-  period-2 oscillator on a quiescent background (`#.# <-> ###`).
-- Exhaustive local-word sweep through length 8 found no other quiescent ECA
-  rule with a local oscillator. `rule_108` is unique under the current
-  stationary local-periodicity protocol.
-- `rule_54` noise-gate fragility requires complex IC geometry. Single-bit ICs
-  are dynamically translation-invariant, always keep the same law signature
-  (`temporal_scale_stability`), and stay below the dedup threshold.
+## Quick Start
 
-Three high-fragility mechanisms are currently distinguished:
+Run a simulation:
 
-- Productive basin switching: `rule_137` (`f_total=0.630`, `f_noise=0.000`,
-  dispersed). Perturbations move between productive law signatures.
-- Noise-boundary fragility: `rule_54` (`f_total=0.714`, `f_noise=0.375`,
-  clustered). Perturbations cross the deduplicated structure gate.
-- Quiescent-background activation: `rule_108` (`f_total=0.992`,
-  `core_fragility=0.047`, gap `0.945`). Background perturbations change
-  secondary laws, while the local oscillator core (`#.# <-> ###`) usually
-  survives; the fragile core positions are concentrated near the motif.
-- Global periodicity: `rule_51` (`f_total=0.193`, `f_noise=0.000`, dispersed).
-  Periodicity survives flips, but the full law signature can change.
-- Core fragility separates behavioral robustness from secondary-law churn:
-  `rule_51` has `core_fragility=0.000` even though `f_total=0.193`.
+```powershell
+python -m zaa simulate --rule 110 --steps 200 --width 256 --out outputs\rule110
+```
 
-## Estado de fases
+Run a short deterministic discovery loop:
 
-- Fase 0a: congelada en git.
-- Fase 0b: congelada en git.
-- Fase 1a: iniciado el pipeline de observadores 1D con datos sinteticos.
-  La validacion real contra Rule 110 queda pendiente de fixtures congelados.
-- Fase 1b: motor Game of Life y observadores 2D iniciales.
-- Fase 2b: pipeline mecanico inicial de colisiones sinteticas. No conectado
-  todavia a Rule 110 real.
-- Fase 2b-real / Fase B: fixtures Rule 110 activos. `FIX-A`, `FIX-B` y
-  `FIX-C1` validan gliders simples. `FIX-D` y `FIX-E` estan ya en
-  `fixtures/validated/` como colisiones validadas computacionalmente mediante
-  `dual_reference_diff`, con outcomes y evidencia visual en metadata/PNGs.
-- Fase 3a/3b: discovery loop mecanico activo. Mundos: sinteticos 1D, Game of
-  Life, ECA arbitrario. Sin LLM. Sin Rule 110 real (tracker bloqueado).
-  Fase 3b anade exploracion por ciclo (seed variante), metricas correctas para
-  GoL 3D y filtro de ruido (`structure_count > 100` ->
-  `ruido_no_analizable`). Comando:
-  `python -m zaa discover --world synthetic_glider --cycles 5`.
-- Fase 3c: evaluacion de leyes por ciclo. Para mundos `ok`: velocidad
-  constante, periodicidad, densidad estable y tipo unico. Para ruido:
-  `laws_status=skipped_noise`. El resultado queda en el journal por ciclo.
-- Fase 3d: politica heuristica v0. El agente decide cada ciclo:
-  `repeat_vary_seed`, `increase_steps`, `change_world` o
-  `skip_rule110_real`. Sin ML. Sin LLM. Sin Rule 110 real. Politica
-  transparente if/else. Registra `action_taken`, `action_reason` y `score` en
-  journal.
-- Fase 3d-v1 / 3a-fix: politica mas agresiva con `MAX_REPEATS_DEFAULT=1`
-  y `repeat_vary_seed` condicionado a mejora de score. La ley
-  `velocidad_constante` pasa de "mejor caso" a fraccion de estructuras:
-  acepta solo si `passing_fraction >= 0.5` entre estructuras en movimiento.
-- Fase 3e: historial por mundo dentro del run. `WorldRecord` acumula
-  `visit_count`, `scores` y `noise_count`. La politica evita mundos
-  consistentemente ruidosos (`noise_fraction >= 0.75`, `visit_count >= 2`).
-- Fase 3f: firma de leyes como novedad exploratoria. El agente registra
-  `law_signature` e `is_new_law_signature`; una firma nueva dispara
-  `firma_leyes_nueva_explorar_mas`.
-- Fase 3g: persistencia entre runs con `--state-file`. Se guardan/cargan
-  `world_history` y firmas conocidas en JSON (`schema_version=1`).
-- Quinta ley: `complejidad_alta`, basada en entropia media y tasa de
-  transicion (`entropy_mean > 0.8` y `transition_rate > 0.25`). Separa caos
-  estable de orden simple; `rule_30` obtiene firma
-  `(complejidad_alta, densidad_estable)`.
-- Fase 3h: exploracion parametrica por firma conocida. Si una firma ya es
-  conocida pero tiene al menos dos leyes aceptadas, el agente prueba mas
-  escala (`firma_conocida_buscar_escala`) incrementando `steps`.
-- Fase 3i: parametros por mundo. `steps` deja de heredarse globalmente entre
-  mundos; cada mundo conserva su propia escala. Esto elimino la contaminacion
-  por carry-over que hacia que `rule_30` y `rule_110` heredaran `steps=400`.
-- Fase 4a (commit 2cd91c1): 7a ley `temporal_scale_stability`
-  (`temporal_load = steps * gzip_ratio / transition_rate < 19.03`).
-  Calibrada con PySR sobre dataset ECA caotico (90.8% accuracy).
-  Cierra alerta rule_30/rule_110: `frontera_temporal`
-  (`tr` en `(0.28, 0.44]`) los distingue desde Fase 3i.
-  `rule_110` tr=0.402, `rule_30` tr=0.456.
-- Fase 4b (commit 04948eb): filtro diagnostico anti-eter
-  `filter_structures_by_start_frame(structures, T=18)` en
-  `zaa/observers.py`. T=18 es constante empirica para width=64, no heuristica
-  perezosa. El eter de Rule 110 madura en frame ~18; el filtro retiene solo
-  estructuras nacidas antes de ese umbral.
-- Fase B (commit 85c397b): `FIX-D` y `FIX-E` validados computacionalmente
-  mediante `dual_reference_diff`. Metodo: comparar run contra referencias de
-  un solo glider para aislar cada componente y la zona de colision.
-  Outcomes:
-  - `FIX-D` (`A+B`): `glider_B_consumed_ether_phase_transition`.
-  - `FIX-E` (`A+C1`): `glider_C1_transformed_compound_output`.
-  `diff_from_pure_ether` es valido solo para CI = `ether_state(width) +
-  perturbacion`. Para discovery aleatorio, T=18 es la herramienta correcta.
+```powershell
+python -m zaa discover --world rule_110 --cycles 5 --journal journal.jsonl
+```
 
-## Estado de colisiones Rule 110 - Fase B
+Run the test suite:
 
-`diff_from_pure_ether` + `observar_regiones_rule110` son validos para runs
-cuya CI es `ether_state(width) + perturbacion` (fixtures canonicos). En ese
-caso el defecto de costura (`width mod 14 != 0`) cancela en el diff porque
-ambas simulaciones parten del mismo IC.
+```powershell
+python -m unittest discover -s tests
+```
 
-Para discovery con IC aleatoria: el diff canonico produce ~50% de actividad
-residual (el defecto de costura no cancela). En ese caso, `T=18` es la
-herramienta correcta (`filter_structures_by_start_frame`).
+## Reproducibility
 
-`FIX-D` y `FIX-E` estan en `fixtures/validated/` con metadata enriquecida y
-6 diff PNGs como evidencia visual.
+See [REPRODUCIBILITY.md](REPRODUCIBILITY.md) for the commands used to regenerate
+the atlas, fragility reports, oscillator sweeps, and periodicity results.
 
-## Alertas metodologicas vivas
+Large raw JSONL outputs are not tracked in git when they exceed 1 MB. The
+corresponding scripts and summary reports are tracked, and the raw files can be
+regenerated from the commands in the reproducibility guide.
 
-### Rule 110 - alerta CERRADA
+## Citation
 
-La firma `(complejidad_alta, densidad_estable)` era compartida por `rule_110`
-y `rule_30` con 5 leyes. Cerrada en Fase 4a: `frontera_temporal`
-(`tr` en `(0.28, 0.44]`) distingue los dos:
+```text
+Concha Estrada, M. A. (2026). ZUSE Automat Agent: Empirical Law Discovery in
+Elementary Cellular Automata (v1.0). Zenodo.
+https://doi.org/10.5281/zenodo.20516375
+```
 
-- `rule_110`: tr=0.402 -> `frontera_temporal=True`
-- `rule_30`: tr=0.456 -> `frontera_temporal=False`
+## License
 
-Para `steps > 24` en discovery, `temporal_scale_stability` actua como
-limite de ventana: `temporal_load = steps * gzip_ratio / tr < 19.03`.
-
-### Gate G1a.1
-
-`gate-g1a1` pasa sobre los fixtures validados de Rule 110 usando
-`diff(frames, ether_puro)` y un tracker de regiones conectadas 1D. El evaluador
-informa `coherent_detection`, `structure_count` y `emitted_types` para separar
-"pasa por tipo presente" de "detecta una particula compacta".
-
-La deuda metodologica restante es mejorar la independencia real de observadores:
-el tracker de regiones reduce la fragmentacion, pero O2 sigue siendo un
-stand-in sin k-means genuino.
-
-### Fase 2a
-
-Las leyes `velocidad_constante`, `periodicidad` y `conteo_estructuras` se aceptan
-en fixtures Rule 110 porque se evalua contra metadata computacionalmente
-validada del fixture. Sirven como prueba mecanica del pipeline MDL, pero no son
-observacion independiente. La evaluacion no circular actual es
-`paridad_total`, que se calcula sobre frames reales y se rechaza correctamente.
-
-## Fixtures Rule 110
-
-`python -m zaa generate-rule110-fixtures` genera candidatos `.npz` y PNG en
-`fixtures/pending/`. Los candidatos se mueven a `fixtures/validated/` mediante
-validacion computacional (`dual_reference_diff`) o revision visual humana.
-
-- `FIX-A`, `FIX-B`, `FIX-C1`: validados computacionalmente (gliders simples).
-- `FIX-D`, `FIX-E`: validados computacionalmente (colisiones, outcomes
-  documentados en metadata).
-
-## Dependencias actuales
-
-Requeridas:
-
-- Python 3.11+
-- numpy
-- scipy
-- pillow
-- pysr  # instalado - calibracion Fase 4a
-
-Opcionales en fases posteriores:
-
-- numba
-- scikit-learn
+Code is released under the [MIT License](LICENSE). The preprint is distributed
+under Creative Commons Attribution 4.0 International via Zenodo.

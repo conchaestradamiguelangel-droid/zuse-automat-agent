@@ -3,6 +3,10 @@ __pycache__/
 .pytest_cache/
 .venv/
 .env
+.julia/
+.mypy_cache/
+.ruff_cache/
+.coverage
 
 data/
 outputs/
