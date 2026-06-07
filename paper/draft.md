@@ -465,6 +465,14 @@ This classification is intentionally operational. A world can be reclassified
 if a wider protocol produces different evidence; the atlas records what the
 current deterministic protocol has measured.
 
+The same principle applies to `frontera_temporal` candidates. Fase 20a found
+many additional ECA rules that are rich in `frontera_temporal` at the fixed
+sweep scale (`steps = 24`), but Fase 20b showed that the strongest four new
+candidates do not remain `frontera-rich-estable` under long-journal policy
+scaling. Fase 20c therefore treats `frontera-short-scale` as a candidate tier,
+not as an atlas-grade category. The atlas promotes worlds only when short-scale
+richness survives the broader validation protocol.
+
 ### 5.2 Law coverage
 
 The law coverage matrix uses seven columns:
@@ -624,6 +632,13 @@ For `multiregimen-productivo` worlds, the reference signature varies by seed.
 averaged.
 
 ### 6.4 Fragility spectrum
+
+Fase 22 completes the physical fragility spectrum for all measured non-synthetic
+worlds in the atlas. Synthetic controls are excluded from `f_total` and
+`f_core` because they are frame generators rather than evolved systems with a
+perturbable initial condition. The completed spectrum includes ECA worlds,
+Life fixtures, stable-rich frontier worlds, noise-bounded productive pockets,
+and the designed `rule_108` local-oscillator IC.
 
 | world | category | `f_total` | `f_core` | `f_gap` | `f_noise` | mechanism |
 | --- | --- | ---: | ---: | ---: | ---: | --- |
@@ -1176,6 +1191,13 @@ were rich in `frontera_temporal` at sweep scale, but the top four failed
 long-journal validation. Category assignment is therefore protocol-scale
 dependent; short-scale richness is candidate evidence, not atlas-grade
 classification.
+
+Fase 21 gives an analogous warning for `periodicidad`. With random ICs,
+production `periodicidad` is rare in ECA; with explicitly periodic IC families,
+it appears in `207/256` rules. The law is therefore not inaccessible to ECA,
+but it is strongly conditioned by the IC family. Atlas rows should be read as
+claims about a stated rule/IC/scale protocol, not as intrinsic properties of
+the rule table alone.
 
 ### 9.5 PySR symbolic regression pending
 
