@@ -464,6 +464,60 @@ Two conclusions follow:
 
 ## 8. Open Questions
 
+### Resolved: Moving Local Oscillators
+
+Fase moving oscillators (2026-06-11) tested the next protocol proposed after
+the `rule_108` stationary-oscillator result.
+
+Protocol:
+
+- Rules: all `128` quiescent ECA rules (`f(0,0,0)=0`)
+- ICs: `502` non-zero binary words of exact length `1..8`
+- Width: `256`
+- Steps: `300`
+- Burn-in: `80`
+- Detector: direct physical recurrence, not the ZAA observer/dedup/law pipeline
+
+Result:
+
+- `8` rules produce moving local oscillators:
+  `rule_6`, `rule_20`, `rule_38`, `rule_52`, `rule_134`, `rule_148`,
+  `rule_166`, `rule_180`.
+- All witnesses have period `T=2`.
+- All move with drift `|dx|=2` per period, i.e. velocity `1` cell/step, the
+  maximum possible speed for radius-1 ECA.
+- The minimal phase pattern is:
+
+```text
+[0] <-> [0, 1]
+```
+
+The rules form four mirror pairs:
+
+| left-moving | right-moving |
+| --- | --- |
+| `rule_6` | `rule_20` |
+| `rule_38` | `rule_52` |
+| `rule_134` | `rule_148` |
+| `rule_166` | `rule_180` |
+
+The family is algebraically simple. The bits controlling neighborhoods `101`
+and `111` (`b5` and `b7`) do not participate in the minimal traveling cycle,
+so they parameterize variants of the same physical mechanism rather than eight
+independent discoveries.
+
+Comparison with Fase 18:
+
+- Stationary local oscillator: unique rule, `rule_108`, with motif
+  `#.# <-> ###`.
+- Moving local oscillator: one minimal glider family across eight rules, with
+  motif `[0] <-> [0,1]`.
+
+Interpretation: moving local oscillators do exist in quiescent ECA under this
+protocol, but only as a very small maximum-speed family. These rules are not
+promoted into the canonical atlas because they have not passed the long-journal
+ZAA protocol; they are documented as a direct physical sweep result.
+
 1. **Symbolic formulas**  
    The physical tree has strong empirical signal, but PySR/Julia remains a
    technical blocker. The current robust conclusion is a family map, not one
