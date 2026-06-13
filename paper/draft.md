@@ -30,7 +30,7 @@ one-bit IC fragility spans from perfectly stable basins (`rule_208/209`,
 0.945`). These cases separate three mechanistically distinct regimes:
 productive basin switching, noise-boundary crossing, and quiescent-background
 activation;
-(4) an exhaustive protocol over 128 quiescent ECA rules and 510 IC words per
+(4) an exhaustive protocol over 128 quiescent ECA rules and 502 non-zero IC words per
 rule confirms `rule_108` as the unique ECA rule producing stationary local
 period-2 oscillators; (5) designed periodic ICs activate production
 `periodicidad` in 207 of 256 ECA rules, showing that the law is IC-family
@@ -103,7 +103,7 @@ We make the following contributions:
    `f_gap = 0.945`).
 
 4. **`rule_108` as the unique stationary local-period-2 ECA oscillator** —
-   Under an exhaustive protocol (128 quiescent ECA rules, 510 IC words per
+   Under an exhaustive protocol (128 quiescent ECA rules, 502 non-zero IC words per
    rule, span <= 32, period <= 16), `rule_108` is the only ECA rule that
    produces stationary local period-2 oscillators. The motif `#.# <-> ###`
    follows algebraically from `f(0,1,0) = f(1,0,1) = 1` and
@@ -813,11 +813,14 @@ activation.
 #### Uniqueness
 
 Fase 18 ran an exhaustive search over all 128 ECA rules with quiescent
-backgrounds (`f(0,0,0) = 0`), testing 510 IC words per rule (all non-empty
-binary words of length 1..8), with `width = 128`, `steps = 200`, and burn-in
-of 80 steps. Only `rule_108` produced local period-2 oscillators. No other
-rule produced any local oscillator under this protocol for periods `2..16` and
-span `<= 32`.
+backgrounds (`f(0,0,0) = 0`), testing 502 non-zero IC words per rule (all
+non-empty binary words of length 1..8), with `width = 128`, `steps = 200`,
+burn-in of 80 steps, and requiring zero drift (stationary oscillators only).
+Only `rule_108` produced stationary local period-2 oscillators; no other rule
+produced a stationary local oscillator for periods `2..16` and span `<= 32`.
+
+A companion sweep with the stationarity requirement relaxed found a distinct
+family of moving local oscillators -- see Section 7.5.
 
 The family is internal to `rule_108`: 132 out of 179 candidate IC words are
 accepted by the production observer as `periodicidad`, with oscillator spans
@@ -1054,6 +1057,72 @@ It is rare in the original discovery atlas because the original world sequence
 under-sampled stable high-richness boundary worlds. In the full ECA sweep,
 `frontera_temporal` is a robust marker of the `frontera-rich-estable` family.
 
+### 7.5 Moving Oscillator Family -- Minimal Period-2 Gliders
+
+A companion sweep to Fase 18 searched all 128 quiescent ECA rules
+(`f(0,0,0) = 0`) for oscillators that translate at constant velocity. The
+detection protocol matched Fase 18 except: the zero-drift requirement was
+replaced by a requirement of constant non-zero drift confirmed over three
+consecutive periods; `width` was extended to `256` and `steps` to `300` to
+give moving patterns room to travel. The 502 non-zero IC words of length 1..8
+were tested per rule (64,256 total runs, 312 s).
+
+Eight rules produce moving oscillators: `rule_6`, `rule_20`, `rule_38`,
+`rule_52`, `rule_134`, `rule_148`, `rule_166`, `rule_180`. All share the same
+minimal glider pattern:
+
+| Step | Active shape (normalized offsets) |
+| --- | --- |
+| `t` | `[0]` -- single active cell |
+| `t+1` | `[0, 1]` -- two adjacent active cells |
+| `t+2` | `[0]` displaced by `+/-2` |
+
+The oscillator alternates between one and two active cells while traveling at
+speed 1 cell per step -- the maximum velocity for a radius-1 ECA. Mean active
+span per period is 0.5 (alternating span 0 and span 1). All eight rules are
+confirmed `edge_touch = False` within `width = 256`.
+
+#### Structure: four mirror pairs
+
+The eight rules form four left-right symmetric pairs:
+
+| Left-moving | Right-moving | `b5` | `b7` |
+| --- | --- | --- | --- |
+| `rule_6` | `rule_20` | 0 | 0 |
+| `rule_38` | `rule_52` | 1 | 0 |
+| `rule_134` | `rule_148` | 0 | 1 |
+| `rule_166` | `rule_180` | 1 | 1 |
+
+Bits `b5` (neighborhood `101`) and `b7` (neighborhood `111`) vary across the
+family but do not participate in the glider cycle: neither neighborhood occurs
+during quiescent travel with a two-cell active pattern. The eight rules are
+therefore a single physical family parametrized by two inactive bit choices
+and the left-right direction.
+
+#### Contrast with `rule_108`
+
+| Property | `rule_108` | Moving family |
+| --- | --- | --- |
+| Drift per period | 0 | +/-2 |
+| Period `T` | 2 | 2 |
+| Mean active span | ~2 | 0.5 |
+| Speed | 0 (stationary) | 1 (maximum) |
+| Rules in scope | 1 | 8 (4 mirror pairs) |
+
+The two families do not overlap. `rule_108` does not appear among the eight
+moving rules, and none of the eight moving rules produce stationary local
+oscillators under Fase 18. Together, the two sweeps partition the quiescent
+local oscillator landscape into a unique stationary oscillator (`rule_108`) and
+a unique minimal glider family (8 rules, 4 mirror pairs).
+
+#### Uniqueness within the protocol
+
+No IC word of length 1..8 produced a moving oscillator with `T > 2` or
+`|drift| != 2` in any quiescent rule. The minimal glider `[0] <-> [0, 1]` at
+period 2 and maximum speed is the only moving local oscillator family under
+this protocol. Extensions to longer IC words and non-zero backgrounds remain
+open (Section 10.2).
+
 ## 8. Observer Artifacts and Pipeline Equivariance
 
 The ZUSE pipeline contains two classes of observer artifact that the atlas
@@ -1167,12 +1236,13 @@ observers would be a meaningful improvement.
 
 The uniqueness claim for `rule_108` holds under a specific protocol: quiescent
 zero background, stationary exact periodicity (no drift), IC words of binary
-length 1..8 (510 non-zero words per rule), and period detection window 2..16
-with local span <= 32. Moving oscillators, longer IC words, non-zero
-backgrounds, or longer detection periods are outside the current protocol. The
-claim is therefore: no other quiescent ECA rule produces a stationary
-local-period oscillator under this protocol. It is not a claim about ECA
-oscillators in general.
+length 1..8 (502 non-zero words per rule), and period detection window 2..16
+with local span <= 32. Longer IC words, non-zero backgrounds, or longer
+detection periods are outside the current stationary protocol. Moving
+oscillators under quiescent zero background were searched in a companion sweep
+-- Section 7.5 reports the result. The claim is therefore: no other quiescent
+ECA rule produces a stationary local-period oscillator under this protocol. It
+is not a claim about ECA oscillators in general.
 
 ### 9.4 Empirical atlas, not axiomatic classification
 
@@ -1199,15 +1269,20 @@ but it is strongly conditioned by the IC family. Atlas rows should be read as
 claims about a stated rule/IC/scale protocol, not as intrinsic properties of
 the rule table alone.
 
-### 9.5 PySR symbolic regression pending
+### 9.5 PySR symbolic regression -- negative result
 
 The decision-tree analyses (Section 4, temporal calibration) provide strong
 empirical signal but not closed-form symbolic expressions. PySR was planned as
 a follow-up to produce interpretable formulas for the calibrated thresholds and
-fragility spectra. The Julia dependency required by PySR remains unresolved.
-Current conclusions rely on deterministic scripts and tree-based models. This
-does not affect the validity of the atlas findings, but the symbolic
-interpretation layer is incomplete.
+fragility spectra. PySR 1.5.10 was subsequently unblocked. A full regression
+over 15 atlas worlds (five features: `mean_laws`, `peak_diversity`,
+`noise_ratio`, `non_empty_ratio`, `f_core`; target `f_total`; 40 iterations)
+produced a best expression of complexity 9 with `MSE = 0.035`, above the
+threshold for a paper-worthy finding. The dominant predictor is `f_core`; the
+residual is driven by `rule_108` as a structural outlier (`f_gap = 0.945`) that
+is not predictable from aggregate features without a mechanism feature. The
+symbolic layer remains incomplete, and this negative result is consistent with
+the `f_core`/`f_gap` separation documented in Section 6.
 
 ## 10. Next Work
 
@@ -1228,8 +1303,11 @@ The `rule_108` uniqueness result holds under the current stationary protocol
 (zero background, exact period, IC words of length <= 8, span <= 32). Three
 natural extensions remain:
 
-- **Moving oscillators**: relax the stationarity requirement to allow
-  oscillators that translate at constant velocity (glider-like periodicity).
+- **Moving oscillators**: completed. A companion sweep over all 128 quiescent
+  rules found eight rules producing minimal period-2 speed-1 gliders (Section
+  7.5). No longer-period or slower-speed moving oscillators were found under
+  this protocol. Extensions to longer IC words and non-zero backgrounds remain
+  open.
 - **Longer IC words**: extend the IC sweep from length 8 to length 12..16 to
   test whether longer seed patterns produce oscillators in rules that failed
   the length-8 protocol.
@@ -1246,10 +1324,10 @@ only the IC or background definition changes.
 The decision-tree calibration for `frontera_temporal` and
 `temporal_scale_stability` (Section 4) provides thresholds but not formulas.
 PySR symbolic regression on the fragility spectrum (`f_total`, `f_core`,
-`f_gap` as functions of rule properties and IC metrics) could yield
-interpretable expressions for why some worlds have wide basins and others do
-not. The Julia dependency required by PySR is the only technical blocker; the
-datasets are ready.
+`f_gap` as functions of rule properties and IC metrics) is now technically
+available, but the first atlas-wide run did not produce a compact paper-worthy
+formula. The next useful symbolic-regression target would require mechanism
+features rather than aggregate atlas features alone.
 
 ### 10.4 Figures
 
