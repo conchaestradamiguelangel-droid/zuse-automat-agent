@@ -1082,6 +1082,23 @@ speed 1 cell per step -- the maximum velocity for a radius-1 ECA. Mean active
 span per period is 0.5 (alternating span 0 and span 1). All eight rules are
 confirmed `edge_touch = False` within `width = 256`.
 
+**Figure 6. Moving oscillator (glider) -- period T=2, speed 1.**
+
+```text
+rule_20 (drift +2)          rule_6 (drift -2)
+
+t=0:  . . . 1 . . . . .    . . . . . 1 . . .
+t=1:  . . . 1 1 . . . .    . . . . 1 1 . . .
+t=2:  . . . . . 1 . . .    . . . 1 . . . . .   <- period boundary
+t=3:  . . . . . 1 1 . .    . . 1 1 . . . . .
+t=4:  . . . . . . . 1 .    . 1 . . . . . . .   <- period boundary
+```
+
+Active cells shown as `1`, quiescent background as `.`. Each period advances
+the pattern two positions in the travel direction.
+
+![Figure 6. Moving oscillator glider diagram.](figures/fig6_moving_oscillator.png)
+
 #### Structure: four mirror pairs
 
 The eight rules form four left-right symmetric pairs:
@@ -1331,7 +1348,7 @@ features rather than aggregate atlas features alone.
 
 ### 10.4 Figures
 
-The following five figures are planned for the preprint draft:
+The following six figures are planned for the preprint draft:
 
 1. **World taxonomy table** — the full 20-world atlas with categories, law
    coverage symbols, and fragility columns, formatted as a paper-ready table.
@@ -1345,6 +1362,11 @@ The following five figures are planned for the preprint draft:
 5. **`rule_54` gate and observer non-equivariance** — a dual figure: the
    Fase 13 noise-gate crossing diagram (reference dedup vs perturbed dedup)
    alongside the Fase 19 per-position dedup variation (15..24 across k=0..63).
+
+6. **Moving oscillator space-time diagram** -- dual panel showing `rule_20`
+   (right-moving) and `rule_6` (left-moving) over 8 time steps, with active
+   cells dark and quiescent background light. Illustrates the `[0] <-> [0,1]`
+   glider cycle and the `+/-2` drift per period.
 
 ## References
 
