@@ -9,8 +9,11 @@ model participates in world selection, law evaluation, scoring, or acceptance.
 
 ## Preprint
 
-- Version DOI: [10.5281/zenodo.20516375](https://doi.org/10.5281/zenodo.20516375)
-- All-versions DOI: [10.5281/zenodo.20516374](https://doi.org/10.5281/zenodo.20516374)
+**Latest: v1.1** — Moving Oscillator Family (8 rules), exhaustive rule_108 protocol, PySR negative result.
+
+- v1.1 DOI: [10.5281/zenodo.20687470](https://doi.org/10.5281/zenodo.20687470)
+- v1.0 DOI: [10.5281/zenodo.20516375](https://doi.org/10.5281/zenodo.20516375)
+- All-versions DOI: [10.5281/zenodo.20687469](https://doi.org/10.5281/zenodo.20687469)
 - PDF: [paper/zuse_preprint.pdf](paper/zuse_preprint.pdf)
 
 ## Scientific Artifacts
@@ -74,8 +77,8 @@ regenerated from the commands in the reproducibility guide.
 
 ```text
 Concha Estrada, M. A. (2026). ZUSE Automat Agent: Empirical Law Discovery in
-Elementary Cellular Automata (v1.0). Zenodo.
-https://doi.org/10.5281/zenodo.20516375
+Elementary Cellular Automata (v1.1). Zenodo.
+https://doi.org/10.5281/zenodo.20687470
 ```
 
 ## License
