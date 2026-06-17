@@ -518,6 +518,24 @@ protocol, but only as a very small maximum-speed family. These rules are not
 promoted into the canonical atlas because they have not passed the long-journal
 ZAA protocol; they are documented as a direct physical sweep result.
 
+### Extended IC sweep: length 9..12
+
+A follow-up sweep extended both the stationary and moving oscillator searches
+to IC words of length 9..12 (7,676 non-zero words per sweep), covering 982,528
+rule/IC runs each.
+
+Stationary: 3,802 detections, all in rule_108. No new stationary oscillator
+rule beyond the length-1..8 baseline. Minimum witness is the embedded `101`
+motif (`000000101` at length 9).
+
+Moving: 2,059 detections, all in the same eight-rule family
+(rule_6/20/38/52/134/148/166/180). No new moving oscillator rule. The sweep
+also filtered 9,822 period-1 moving particle aliases across 32 rules.
+
+Conclusion: IC words of length 1..8 are sufficient to discover the complete
+oscillator landscape under this protocol up to seed length 12. Extensions to
+IC length >12 and non-zero backgrounds remain open.
+
 1. **Symbolic formulas**  
    The physical tree has strong empirical signal, but PySR/Julia remains a
    technical blocker. The current robust conclusion is a family map, not one
