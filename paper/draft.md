@@ -822,6 +822,12 @@ produced a stationary local oscillator for periods `2..16` and span `<= 32`.
 A companion sweep with the stationarity requirement relaxed found a distinct
 family of moving local oscillators -- see Section 7.5.
 
+The longer-IC extension strengthens the same conclusion. Extending the
+stationary sweep to all 7,676 non-zero IC words of length 9..12
+(`982,528` rule/IC runs) produced 3,802 detections, all in `rule_108`. No new
+stationary oscillator rule appears beyond the length-1..8 baseline; the
+minimum witness is still the embedded `101` motif (`000000101` at length 9).
+
 The family is internal to `rule_108`: 132 out of 179 candidate IC words are
 accepted by the production observer as `periodicidad`, with oscillator spans
 3, 5, 6, 7, and 8. All confirmed oscillators have period exactly 2; no longer
@@ -1137,8 +1143,17 @@ a unique minimal glider family (8 rules, 4 mirror pairs).
 No IC word of length 1..8 produced a moving oscillator with `T > 2` or
 `|drift| != 2` in any quiescent rule. The minimal glider `[0] <-> [0, 1]` at
 period 2 and maximum speed is the only moving local oscillator family under
-this protocol. Extensions to longer IC words and non-zero backgrounds remain
-open (Section 10.2).
+this protocol.
+
+The longer-IC extension reaches the same result. Testing all 7,676 non-zero IC
+words of length 9..12 over all 128 quiescent rules (`982,528` rule/IC runs)
+produced 2,059 moving detections, all within the same eight-rule family. No
+new moving-oscillator rule appears. The minimal witnesses are still the old
+glider seeds embedded in longer words (`000000001` for right movers,
+`000000010` for left movers). The sweep also filtered 9,822 period-1 moving
+particle aliases across 32 rules; these are moving particles, not internal
+period-2 oscillators. Extensions to IC words longer than 12 and non-zero
+backgrounds remain open (Section 10.2).
 
 ## 8. Observer Artifacts and Pipeline Equivariance
 
@@ -1253,13 +1268,14 @@ observers would be a meaningful improvement.
 
 The uniqueness claim for `rule_108` holds under a specific protocol: quiescent
 zero background, stationary exact periodicity (no drift), IC words of binary
-length 1..8 (502 non-zero words per rule), and period detection window 2..16
-with local span <= 32. Longer IC words, non-zero backgrounds, or longer
-detection periods are outside the current stationary protocol. Moving
-oscillators under quiescent zero background were searched in a companion sweep
--- Section 7.5 reports the result. The claim is therefore: no other quiescent
-ECA rule produces a stationary local-period oscillator under this protocol. It
-is not a claim about ECA oscillators in general.
+length 1..12 (502 words of length 1..8 plus 7,676 words of length 9..12), and
+period detection window 2..16 with local span <= 32. IC words longer than 12,
+non-zero backgrounds, or longer detection periods are outside the current
+stationary protocol. Moving oscillators under quiescent zero background were
+searched in a companion sweep -- Section 7.5 reports the result. The claim is
+therefore: no other quiescent ECA rule produces a stationary local-period
+oscillator under this protocol. It is not a claim about ECA oscillators in
+general.
 
 ### 9.4 Empirical atlas, not axiomatic classification
 
@@ -1317,17 +1333,17 @@ atlas and the fragility measurements.
 ### 10.2 Extended local oscillator search
 
 The `rule_108` uniqueness result holds under the current stationary protocol
-(zero background, exact period, IC words of length <= 8, span <= 32). Three
-natural extensions remain:
+(zero background, exact period, IC words of length <= 12, span <= 32). One
+extension has now been completed, and two natural extensions remain:
 
 - **Moving oscillators**: completed. A companion sweep over all 128 quiescent
   rules found eight rules producing minimal period-2 speed-1 gliders (Section
   7.5). No longer-period or slower-speed moving oscillators were found under
-  this protocol. Extensions to longer IC words and non-zero backgrounds remain
-  open.
-- **Longer IC words**: extend the IC sweep from length 8 to length 12..16 to
-  test whether longer seed patterns produce oscillators in rules that failed
-  the length-8 protocol.
+  this protocol. The follow-up length-9..12 sweep found no additional
+  stationary or moving oscillator rules.
+- **Longer IC words beyond 12**: extend the IC sweep from length 12 to length
+  16 or beyond to test whether substantially wider seed patterns produce
+  oscillators in rules that failed the length-12 protocol.
 - **Non-zero backgrounds**: replace the quiescent zero background with a
   uniform-one or periodic background to test whether `rule_108` retains its
   uniqueness or whether other rules enter the family under different
