@@ -1152,8 +1152,52 @@ new moving-oscillator rule appears. The minimal witnesses are still the old
 glider seeds embedded in longer words (`000000001` for right movers,
 `000000010` for left movers). The sweep also filtered 9,822 period-1 moving
 particle aliases across 32 rules; these are moving particles, not internal
-period-2 oscillators. Extensions to IC words longer than 12 and non-zero
-backgrounds remain open (Section 10.2).
+period-2 oscillators. Extensions to IC words longer than 12 remain open
+(Section 10.2). The non-zero background extension is reported in Section 7.6.
+
+### 7.6 Periodic-background oscillator sweep
+
+The two sweeps above restrict the background to quiescent zero cells. A third
+sweep tests whether replacing the background with a non-zero periodic tiling
+changes the oscillator landscape.
+
+**Protocol.** All 256 ECA rules are tested against 15 unique non-zero periodic
+backgrounds with template lengths 1, 2, and 4. Each rule/background pair is
+tested against 502 non-zero IC words of length 1..8 centered in a width-256
+grid for 300 steps with 80 burn-in. The detector identifies exact recurrence
+of the localized difference between the perturbed run and the unperturbed
+background orbit; global background periodicity alone is not counted as a
+local oscillator. Total: 1,927,680 rule/background/IC runs, 122,253 candidate
+detections.
+
+**Result.** Thirty rules produce stationary local oscillators under at least
+one non-zero periodic background; 36 rules produce moving oscillators. Of
+the 30 stationary rules, 29 are new relative to the zero-background baseline.
+Of the 36 moving rules, 28 are new.
+
+The following phenomena appear under non-zero backgrounds but not under the
+quiescent zero background:
+
+- **Period-4 stationary oscillators.** `rule_54` and `rule_147` produce
+  stationary period-4 oscillators under `0001` background.
+- **Period-4 moving oscillator.** `rule_180` produces a T=4 glider with
+  drift +4 under `0001` background (shapes `[0] -> [0,1] -> [0,2,3] -> [0]`),
+  distinct from its T=2 speed-1 glider under quiescent background.
+- **Speed-0.5 gliders.** Multiple rules (including `rule_3`, `rule_17`,
+  `rule_27`, `rule_35`, `rule_39`) produce T=2 gliders with drift +/-1 under
+  non-zero backgrounds, corresponding to 0.5 cells per step. Under quiescent
+  zero background the only observed glider speed was 1 cell/step.
+- **`rule_108` under all-one background.** `rule_108` appears in the
+  stationary list with background `1` and the same motif `### / #.#` as
+  the quiescent result, confirming that the rule_108 oscillator is intrinsic
+  to the rule table.
+
+**Separation of regimes.** The zero-background uniqueness claims (Sections 7.1
+and 7.5) are not contradicted: they describe the quiescent regime. Under zero
+background, the quiescent local oscillator space is sparse (1 stationary rule,
+8 moving rules); under non-zero periodic backgrounds, the landscape expands
+substantially (30 stationary, 36 moving) and includes period and speed classes
+absent from the quiescent regime. The two regimes should not be merged.
 
 ## 8. Observer Artifacts and Pipeline Equivariance
 
@@ -1269,9 +1313,12 @@ observers would be a meaningful improvement.
 The uniqueness claim for `rule_108` holds under a specific protocol: quiescent
 zero background, stationary exact periodicity (no drift), IC words of binary
 length 1..12 (502 words of length 1..8 plus 7,676 words of length 9..12), and
-period detection window 2..16 with local span <= 32. IC words longer than 12,
-non-zero backgrounds, or longer detection periods are outside the current
-stationary protocol. Moving oscillators under quiescent zero background were
+period detection window 2..16 with local span <= 32. IC words longer than 12
+or longer detection periods are outside the current stationary protocol. A
+separate periodic-background sweep (Section 7.6) confirms that non-zero
+backgrounds substantially change the oscillator landscape; those results define
+a different regime and do not apply to the zero-background uniqueness claim.
+Moving oscillators under quiescent zero background were
 searched in a companion sweep -- Section 7.5 reports the result. The claim is
 therefore: no other quiescent ECA rule produces a stationary local-period
 oscillator under this protocol. It is not a claim about ECA oscillators in
@@ -1344,10 +1391,13 @@ extension has now been completed, and two natural extensions remain:
 - **Longer IC words beyond 12**: extend the IC sweep from length 12 to length
   16 or beyond to test whether substantially wider seed patterns produce
   oscillators in rules that failed the length-12 protocol.
-- **Non-zero backgrounds**: replace the quiescent zero background with a
-  uniform-one or periodic background to test whether `rule_108` retains its
-  uniqueness or whether other rules enter the family under different
-  background conditions.
+- **Non-zero backgrounds**: completed. A sweep over 15 non-zero periodic
+  backgrounds (template lengths 1, 2, 4) across all 256 rules and 502 IC
+  words (1,927,680 runs) found that the periodic-background regime is
+  substantially richer than the quiescent regime: 30 stationary rules,
+  36 moving rules, including period-4 oscillators and speed-0.5 gliders not
+  present under zero background. `rule_108` persists under all-one background
+  with the same motif. Full results in Section 7.6.
 
 Each extension is a controlled experiment with the same measurement protocol;
 only the IC or background definition changes.

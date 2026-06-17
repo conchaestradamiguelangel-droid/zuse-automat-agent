@@ -533,8 +533,43 @@ Moving: 2,059 detections, all in the same eight-rule family
 also filtered 9,822 period-1 moving particle aliases across 32 rules.
 
 Conclusion: IC words of length 1..8 are sufficient to discover the complete
-oscillator landscape under this protocol up to seed length 12. Extensions to
-IC length >12 and non-zero backgrounds remain open.
+zero-background oscillator landscape under this protocol up to seed length 12.
+Extensions to IC length >12 remain open; the non-zero background extension is
+reported below as a separate regime.
+
+### Periodic-background oscillator sweep
+
+A separate sweep replaced the quiescent zero background with 15 unique
+non-zero periodic backgrounds (template lengths 1, 2, and 4) and tested all
+256 ECA rules against 502 non-zero IC words (1,927,680 runs total). The
+detector identifies local perturbations relative to the unperturbed background
+orbit; global background periodicity alone does not count as a local
+oscillator.
+
+Stationary oscillators: 30 rules, of which 29 are new relative to the
+zero-background baseline. Moving oscillators: 36 rules, of which 28 are new.
+
+Key phenomena not present under zero background:
+
+- Period-4 stationary oscillators: rule_54 and rule_147 under `0001`
+  background.
+- Period-4 moving oscillator: rule_180 with drift +4 under `0001` background
+  (shapes `[0] -> [0,1] -> [0,2,3] -> [0]`), distinct from its T=2
+  speed-1 glider under quiescent background.
+- Speed-0.5 gliders: multiple rules (rule_3, rule_17, rule_27, rule_35,
+  rule_39 and others) produce T=2 gliders with drift +/-1 under non-zero
+  backgrounds. Under quiescent zero background the only observed speed was
+  1 cell/step.
+- rule_108 reappears under all-one background with the same motif ### / #.#,
+  confirming the oscillator is intrinsic to the rule table, not a product of
+  the zero-background condition.
+
+Scientific reading: the zero-background and periodic-background regimes are
+distinct. The zero-background uniqueness claims (rule_108 stationary, 8-rule
+moving family) remain valid and are not contradicted. The periodic-background
+sweep defines a separate background-conditioned oscillator landscape that is
+substantially richer and includes period and speed classes absent from the
+quiescent regime.
 
 1. **Symbolic formulas**  
    The physical tree has strong empirical signal, but PySR/Julia remains a
