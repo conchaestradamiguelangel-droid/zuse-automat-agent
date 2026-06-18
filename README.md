@@ -9,8 +9,9 @@ model participates in world selection, law evaluation, scoring, or acceptance.
 
 ## Preprint
 
-**Latest: v1.2** — Periodic-background oscillator sweep (30 stationary rules, 36 moving rules), period-4 oscillators, speed-0.5 gliders.
+**Latest: v1.3** — Primitive period-8 background sweep: 23 new rule/type pairs, periods up to T=15, and speed-2/3 gliders.
 
+- v1.3 DOI: [10.5281/zenodo.20753499](https://doi.org/10.5281/zenodo.20753499)
 - v1.2 DOI: [10.5281/zenodo.20738025](https://doi.org/10.5281/zenodo.20738025)
 - v1.1 DOI: [10.5281/zenodo.20687470](https://doi.org/10.5281/zenodo.20687470)
 - v1.0 DOI: [10.5281/zenodo.20516375](https://doi.org/10.5281/zenodo.20516375)
@@ -78,8 +79,8 @@ regenerated from the commands in the reproducibility guide.
 
 ```text
 Concha Estrada, M. A. (2026). ZUSE Automat Agent: Empirical Law Discovery in
-Elementary Cellular Automata (v1.2). Zenodo.
-https://doi.org/10.5281/zenodo.20738025
+Elementary Cellular Automata (v1.3). Zenodo.
+https://doi.org/10.5281/zenodo.20753499
 ```
 
 ## License
