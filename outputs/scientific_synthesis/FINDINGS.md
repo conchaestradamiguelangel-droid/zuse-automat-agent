@@ -571,6 +571,76 @@ sweep defines a separate background-conditioned oscillator landscape that is
 substantially richer and includes period and speed classes absent from the
 quiescent regime.
 
+### Period-8 background oscillator sweep (Fase 24)
+
+A further sweep extended the periodic-background protocol to length-8 primitive
+binary backgrounds, testing whether longer background periods produce new
+oscillator rules, longer periods T, or glider speeds outside the set observed
+under backgrounds of length 1, 2, and 4.
+
+Protocol:
+
+- All 256 ECA rules.
+- 30 primitive binary necklaces of length 8 (lexicographically minimal
+  rotation, minimal period exactly 8). The count follows from Mobius inversion:
+  `(1/8) * (2^8 - 2^4) = 30`.
+- 502 non-zero IC words of length 1..8 per rule/background pair.
+- Width 256, steps 300, burn-in 80. Period search 2..16, max span 32.
+- Same differential detector as Fase 23: exact recurrence of localized
+  difference from the unperturbed background orbit.
+- Total: 3,855,360 runs. Elapsed: 1,343.8 s.
+
+Result:
+
+- Candidate detections: 323,872.
+- Filtered period-1 aliases: 95,121.
+- New stationary rules beyond the length-1/2/4 baseline: rule_62, rule_118,
+  rule_131, rule_145 - 4 rules, all T=3.
+- New moving rules: rule_7, rule_9, rule_21, rule_25, rule_31, rule_45, rule_61,
+  rule_65, rule_67, rule_75, rule_87, rule_88, rule_89, rule_101, rule_103,
+  rule_111, rule_125, rule_173, rule_229 - 19 rules.
+
+New period classes not observed under shorter backgrounds:
+
+- T=6, T=8, T=10, T=12, T=15. Under lengths 1/2/4 the maximum observed period
+  was T=4.
+- T=15 is a non-trivial period not divisible by the background length (8). No
+  mechanism is inferred from the current data; it requires further
+  investigation.
+
+New glider speed:
+
+- Speed 2/3 cell/step (drift +/-2, T=3). The observed speed set prior to this
+  sweep was {0, 0.5, 1.0}; 2/3 is a new rational class with denominator 3.
+- Observed in: rule_9 (drift -2, T=3, background `00001001`), rule_65
+  (drift +2, T=3, background `00000001`), rule_111 (drift -2, T=3), and
+  rule_125 (drift +2, T=3).
+- Whether these four rules form mirror pairs under ECA left-right reflection
+  has not been verified from rule-table algebra. The left- and right-moving
+  variants at the same speed are recorded as an observation.
+
+Background phase dependence:
+
+A rotation sub-test sampled 10 rules and applied all 8 rotations of their
+canonical background with the IC fixed. Results: 0/10 rotationally robust,
+10/10 phase-dependent. Two sensitivity regimes appeared:
+
+- Near-robust (7/8 rotations active): rule_62 and rule_118
+  (background `00000001`, T=3).
+- Strongly phase-sensitive (1/8 rotations active): rule_9, rule_65, rule_111,
+  rule_125, and rule_45.
+
+This test varies background phase with the IC fixed. It measures alignment
+sensitivity, not an observer translation artifact. A strictly
+observer-equivariant test would co-translate both background and IC; that test
+has not been applied and remains open.
+
+Scientific reading: period-8 primitive backgrounds enlarge the oscillator
+landscape relative to shorter backgrounds. The three Fase-24 questions are
+answered affirmatively: new rules appear, new periods T>4 include T=15, and a
+new glider speed class (2/3 cell/step) appears. The zero-background uniqueness
+claims (rule_108 stationary, 8-rule moving family) are unaffected.
+
 1. **Symbolic formulas**  
    The physical tree has strong empirical signal, but PySR/Julia remains a
    technical blocker. The current robust conclusion is a family map, not one

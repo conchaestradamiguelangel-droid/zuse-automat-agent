@@ -1199,6 +1199,60 @@ background, the quiescent local oscillator space is sparse (1 stationary rule,
 substantially (30 stationary, 36 moving) and includes period and speed classes
 absent from the quiescent regime. The two regimes should not be merged.
 
+### 7.7 Period-8 background oscillator sweep (Fase 24)
+
+A fourth oscillator sweep extended the periodic-background protocol to
+length-8 primitive binary backgrounds, testing three questions: do longer
+background periods introduce new oscillator rules, new period classes T>4, or
+glider speeds outside {0, 0.5, 1}?
+
+**Protocol.** All 256 ECA rules are tested against 30 primitive binary
+necklaces of length 8. A length-8 binary string is primitive if its minimal
+period is exactly 8; the necklace representative is the lexicographically
+smallest member of its rotation class. The count of 30 follows from Mobius
+inversion: `(2^8 - 2^4) / 8 = 30`. Each rule/background pair is tested against
+502 non-zero IC words of length 1..8 in a width-256 grid, 300 steps, 80
+burn-in. The differential detector and period search window (2..16, span <=
+32) are unchanged from Section 7.6. Total: 3,855,360 runs.
+
+**Result.** The sweep produces 323,872 candidate detections after filtering
+95,121 period-1 aliases. New stationary rules beyond the length-1/2/4
+baseline are `rule_62`, `rule_118`, `rule_131`, and `rule_145` (4 rules, all
+T=3). New moving rules are `rule_7`, `rule_9`, `rule_21`, `rule_25`,
+`rule_31`, `rule_45`, `rule_61`, `rule_65`, `rule_67`, `rule_75`, `rule_87`,
+`rule_88`, `rule_89`, `rule_101`, `rule_103`, `rule_111`, `rule_125`,
+`rule_173`, and `rule_229` (19 rules).
+
+**New period classes.** Periods T=6, 8, 10, 12, and 15 appear for the first
+time; under backgrounds of length 1, 2, and 4 the maximum observed period was
+T=4. T=15 is a non-trivial period not divisible by the background length (8).
+No mechanism is claimed from the current data; it is reported as an emergent
+period requiring further investigation.
+
+**New glider speed.** Speed 2/3 cell/step (drift +/-2, T=3) is observed for
+the first time; the prior speed set was {0, 0.5, 1}. Representative cases are
+`rule_9` (drift -2, T=3, background `00001001`) and `rule_65` (drift +2,
+T=3, background `00000001`). Two further rules with the same speed signature,
+`rule_111` and `rule_125`, appear in the candidate table. Whether these four
+rules form algebraically conjugate pairs under ECA left-right reflection has
+not been verified from rule-table algebra and remains open.
+
+**Phase dependence.** A rotation sub-test applied all 8 rotations of the
+canonical background to 10 sampled rules while holding the IC fixed. None of
+the 10 samples was active in all eight rotations. `rule_62` and `rule_118`
+activate in 7 of 8 background rotations; `rule_9`, `rule_65`, `rule_111`,
+`rule_125`, and `rule_45` activate in 1 of 8. This phase dependence indicates
+that the IC requires a particular alignment with the background to nucleate
+the oscillator. It is a physical constraint, not by itself an observer
+translation artifact. A strict observer-equivariance test would co-translate
+both IC and background; that test has not been applied.
+
+**Summary.** All three Fase-24 questions are answered affirmatively:
+period-8 backgrounds introduce 4 new stationary rules and 19 new moving
+rules, expand the period set to include T=6, 8, 10, 12, and 15, and introduce
+speed 2/3 cell/step as a new rational class. The zero-background uniqueness
+claims of Sections 7.1 and 7.5 are unaffected.
+
 ## 8. Observer Artifacts and Pipeline Equivariance
 
 The ZUSE pipeline contains two classes of observer artifact that the atlas
@@ -1324,6 +1378,12 @@ therefore: no other quiescent ECA rule produces a stationary local-period
 oscillator under this protocol. It is not a claim about ECA oscillators in
 general.
 
+The period-8 background sweep (Section 7.7) is also bounded by background
+phase. Its rotation sub-test holds the IC fixed while rotating the background,
+so it measures IC/background alignment sensitivity rather than observer
+translation equivariance. A strict equivariance test would co-translate both
+the IC and the background and remains open.
+
 ### 9.4 Empirical atlas, not axiomatic classification
 
 The world categories are induced from observed law signatures across a finite
@@ -1380,8 +1440,8 @@ atlas and the fragility measurements.
 ### 10.2 Extended local oscillator search
 
 The `rule_108` uniqueness result holds under the current stationary protocol
-(zero background, exact period, IC words of length <= 12, span <= 32). One
-extension has now been completed, and two natural extensions remain:
+(zero background, exact period, IC words of length <= 12, span <= 32).
+Several controlled extensions have now been completed:
 
 - **Moving oscillators**: completed. A companion sweep over all 128 quiescent
   rules found eight rules producing minimal period-2 speed-1 gliders (Section
@@ -1398,6 +1458,12 @@ extension has now been completed, and two natural extensions remain:
   36 moving rules, including period-4 oscillators and speed-0.5 gliders not
   present under zero background. `rule_108` persists under all-one background
   with the same motif. Full results in Section 7.6.
+- **Period-8 backgrounds**: completed. A sweep over 30 primitive length-8
+  binary necklaces (3,855,360 runs) found 4 new stationary rules, 19 new
+  moving rules, five new period classes (T=6, 8, 10, 12, 15), and a new glider
+  speed (2/3 cell/step, T=3). All 10 sampled results were background-phase
+  dependent; a strict co-translation equivariance test remains open. Full
+  results are in Section 7.7.
 
 Each extension is a controlled experiment with the same measurement protocol;
 only the IC or background definition changes.
