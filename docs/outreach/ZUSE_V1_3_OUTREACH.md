@@ -6,7 +6,8 @@ Canonical links:
 
 - Preprint v1.3: https://doi.org/10.5281/zenodo.20753499
 - GitHub Release v1.3: https://github.com/conchaestradamiguelangel-droid/zuse-automat-agent/releases/tag/v1.3
-- All versions: https://doi.org/10.5281/zenodo.20738024
+- v1.3 series: https://doi.org/10.5281/zenodo.20753498
+- Previous series (v1.2 and earlier): https://doi.org/10.5281/zenodo.20738024
 - GitHub: https://github.com/conchaestradamiguelangel-droid/zuse-automat-agent
 
 ## Show HN Draft

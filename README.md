@@ -15,7 +15,8 @@ model participates in world selection, law evaluation, scoring, or acceptance.
 - v1.2 DOI: [10.5281/zenodo.20738025](https://doi.org/10.5281/zenodo.20738025)
 - v1.1 DOI: [10.5281/zenodo.20687470](https://doi.org/10.5281/zenodo.20687470)
 - v1.0 DOI: [10.5281/zenodo.20516375](https://doi.org/10.5281/zenodo.20516375)
-- All-versions DOI: [10.5281/zenodo.20738024](https://doi.org/10.5281/zenodo.20738024)
+- v1.3 series DOI: [10.5281/zenodo.20753498](https://doi.org/10.5281/zenodo.20753498)
+- Previous-series DOI (v1.2 and earlier): [10.5281/zenodo.20738024](https://doi.org/10.5281/zenodo.20738024)
 - PDF: [paper/zuse_preprint.pdf](paper/zuse_preprint.pdf)
 
 ## Scientific Artifacts
