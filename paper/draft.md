@@ -36,7 +36,18 @@ period-2 oscillators; (5) designed periodic ICs activate production
 `periodicidad` in 207 of 256 ECA rules, showing that the law is IC-family
 sensitive rather than inaccessible; and (6) a controlled single-bit experiment
 demonstrates that ECA frames are translation-invariant while the observer/dedup
-pipeline is not, separating physical law from measurement artifact.
+pipeline is not, separating physical law from measurement artifact; and (7)
+three progressive background-oscillator sweeps reveal that the local
+oscillator landscape is strongly background-conditioned. Under quiescent zero
+background, only `rule_108` (stationary, T=2) and eight rules (moving, T=2,
+speed 1 cell/step) produce local oscillators. Under non-zero periodic
+backgrounds of template length 1, 2, and 4 (1,927,680 runs), the landscape
+expands to 30 stationary and 36 moving rules, introducing period-4 oscillators
+and speed-0.5 gliders. Under 30 primitive length-8 binary backgrounds
+(3,855,360 runs), 23 further rule/type pairs appear, the observed period
+extends to T=15, and speed 2/3 cell/step is observed for the first time. Phase
+sensitivity is detected in all 10 sampled rules from the length-8 sweep; a
+strict IC/background co-translation equivariance test has not been applied.
 
 Every result is reproducible from deterministic scripts with no stochastic
 components in the discovery loop.
