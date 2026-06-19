@@ -1249,9 +1249,11 @@ the first time; the prior speed set was {0, 0.5, 1}. Representative cases are
 `rule_9` (drift -2, T=3, background `00001001`) and `rule_65` (drift +2,
 T=3, background `00000001`). Two further rules with the same speed signature,
 `rule_111` and `rule_125`, appear in the candidate table. Direct rule-table
-reflection confirms two exact left-right mirror pairs: `rule_9 <-> rule_65`
-and `rule_111 <-> rule_125`. The paired rules carry opposite drift signs with
-the same T=3 speed magnitude.
+reflection, `g(l,c,r) = f(r,c,l)`, confirms two exact left-right mirror pairs:
+`rule_9 <-> rule_65` and `rule_111 <-> rule_125`. The paired rules carry
+opposite drift signs with the same T=3 speed magnitude, giving the speed-2/3
+family the same left/right mirror structure as the speed-1 family in Section
+7.5.
 
 **Phase dependence.** A rotation sub-test applied all 8 rotations of the
 canonical background to 10 sampled rules while holding the IC fixed. None of

@@ -615,9 +615,11 @@ New glider speed:
 - Observed in: rule_9 (drift -2, T=3, background `00001001`), rule_65
   (drift +2, T=3, background `00000001`), rule_111 (drift -2, T=3), and
   rule_125 (drift +2, T=3).
-- Direct rule-table reflection confirms two exact mirror pairs:
-  rule_9 <-> rule_65 and rule_111 <-> rule_125. Each pair carries opposite
-  drift signs with the same T=3 speed magnitude.
+- Direct rule-table reflection, `g(l,c,r) = f(r,c,l)`, confirms two exact
+  mirror pairs: rule_9 <-> rule_65 and rule_111 <-> rule_125. Each pair
+  carries opposite drift signs with the same T=3 speed magnitude. The
+  speed-2/3 family therefore has the same left/right mirror structure as the
+  speed-1 family.
 
 Background phase dependence:
 
