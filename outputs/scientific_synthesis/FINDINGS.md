@@ -615,9 +615,9 @@ New glider speed:
 - Observed in: rule_9 (drift -2, T=3, background `00001001`), rule_65
   (drift +2, T=3, background `00000001`), rule_111 (drift -2, T=3), and
   rule_125 (drift +2, T=3).
-- Whether these four rules form mirror pairs under ECA left-right reflection
-  has not been verified from rule-table algebra. The left- and right-moving
-  variants at the same speed are recorded as an observation.
+- Direct rule-table reflection confirms two exact mirror pairs:
+  rule_9 <-> rule_65 and rule_111 <-> rule_125. Each pair carries opposite
+  drift signs with the same T=3 speed magnitude.
 
 Background phase dependence:
 
@@ -660,6 +660,37 @@ observed failures are a boundary artifact of `linear_shape`, not a failure of
 the simulator or physical phase relation. Reanalysis with circular geometry
 confirms that background-phase dependence remains real, while its severity for
 moving rules was overstated by the linear observer.
+
+### T=15 anatomy (Fase 26)
+
+Fase 26 filters all 221 `T=15` detections from the primitive length-8 sweep and
+reruns one minimal witness for each of the 20 rule/background pairs.
+
+The family is algebraically narrow:
+
+- Only `rule_73` (123 detections) and `rule_109` (98 detections) participate.
+- Both rules are left-right symmetric.
+- They are exact black/white conjugates of one another.
+- The 221 detections span 14 primitive backgrounds and 25 temporal motifs up
+  to cycle phase.
+- The minimum witness is `rule_109`, background `00011001`, IC `01`.
+
+Every participating unperturbed background has temporal period `T_bg=3`.
+The local oscillator therefore has a reproducible locking ratio
+`T_local/T_bg = 15/3 = 5`; it is not a direct copy of the spatial template
+length 8. Exact `T=15` recurrence persists through step 900 in all 20/20
+minimal representatives, with period detection scanning upward from `T=1`.
+
+The basin is narrow despite that temporal persistence:
+
+- Fixed-IC background rotations preserve `T=15` in 23/160 runs.
+- One-bit mutations of the minimal witnesses preserve `T=15` in 4/134 runs.
+- Most alternatives fall into shorter periods `T=3` or `T=6`; a small number
+  produce `T=12` or no localized period in the search window.
+
+This establishes `T=15` as a persistent, background-locked oscillator family,
+not a one-run accident. The rule-table derivation of the five-to-one locking
+mechanism remains open.
 
 Scientific reading: period-8 primitive backgrounds enlarge the oscillator
 landscape relative to shorter backgrounds. The three Fase-24 questions are

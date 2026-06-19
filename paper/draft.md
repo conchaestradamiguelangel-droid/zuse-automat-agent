@@ -49,6 +49,9 @@ extends to T=15, and speed 2/3 cell/step is observed for the first time. Phase
 sensitivity is detected in all 10 sampled rules from the length-8 sweep; a
 strict IC/background co-translation test confirms exact physical equivariance
 in 80/80 runs after correcting a cyclic-boundary artifact in `linear_shape`.
+The `T=15` family is confined to the reflection-symmetric, black/white-conjugate
+pair `rule_73/rule_109`, locks at five times the background temporal period,
+and persists through step 900 in all 20 minimal rule/background representatives.
 
 Every result is reproducible from deterministic scripts with no stochastic
 components in the discovery loop.
@@ -1245,9 +1248,10 @@ period requiring further investigation.
 the first time; the prior speed set was {0, 0.5, 1}. Representative cases are
 `rule_9` (drift -2, T=3, background `00001001`) and `rule_65` (drift +2,
 T=3, background `00000001`). Two further rules with the same speed signature,
-`rule_111` and `rule_125`, appear in the candidate table. Whether these four
-rules form algebraically conjugate pairs under ECA left-right reflection has
-not been verified from rule-table algebra and remains open.
+`rule_111` and `rule_125`, appear in the candidate table. Direct rule-table
+reflection confirms two exact left-right mirror pairs: `rule_9 <-> rule_65`
+and `rule_111 <-> rule_125`. The paired rules carry opposite drift signs with
+the same T=3 speed magnitude.
 
 **Phase dependence.** A rotation sub-test applied all 8 rotations of the
 canonical background to 10 sampled rules while holding the IC fixed. None of
@@ -1273,6 +1277,38 @@ period-8 backgrounds introduce 4 new stationary rules and 19 new moving
 rules, expand the period set to include T=6, 8, 10, 12, and 15, and introduce
 speed 2/3 cell/step as a new rational class. The zero-background uniqueness
 claims of Sections 7.1 and 7.5 are unaffected.
+
+### 7.8 Anatomy of the T=15 family (Fase 26)
+
+The longest period observed in Fase 24 was analyzed separately to determine
+whether it represented a single accidental witness or a coherent family.
+All 221 `T=15` detections are stationary and occur in only two rules:
+`rule_73` (123 detections) and `rule_109` (98). Both rules are left-right
+symmetric, and black/white conjugation maps each rule exactly to the other.
+The detections cover 14 primitive length-8 backgrounds, 20 rule/background
+pairs, and 25 temporal motifs up to cycle phase. The minimum witness is
+`rule_109` on background `00011001` with the two-cell IC word `01`.
+
+**Temporal locking.** Every participating unperturbed background enters a
+temporal orbit of period `T_bg=3` (with transient length 0..2). The localized
+perturbation has fundamental period `T_local=15`, giving the same locking ratio
+`T_local/T_bg=5` in all 20 rule/background pairs. Thus `T=15` is not inherited
+directly from the spatial background length 8. Long-horizon reruns of one
+minimal witness per pair preserve exact recurrence through step 900 in 20/20
+cases; the detector scans upward from period 1 and therefore excludes smaller
+fundamental periods.
+
+**Basin width.** Persistence in time does not imply robustness to initialization.
+Holding the IC fixed while rotating the background preserves `T=15` in only
+23/160 runs. One-bit mutations of the 20 minimal IC witnesses preserve it in
+4/134 runs. Most failed perturbations settle into shorter localized periods
+`T=3` or `T=6`; a small number produce `T=12` or no localized period in the
+search window. The family is therefore temporally exact but basin-narrow.
+
+These results establish a persistent background-locked family rather than a
+single numerical coincidence. They do not yet derive the five-to-one locking
+ratio from the `rule_73/rule_109` tables; that algebraic mechanism remains an
+open question.
 
 ## 8. Observer Artifacts and Pipeline Equivariance
 
@@ -1414,6 +1450,12 @@ canonicalization recovers 80/80. Fixed-IC phase dependence remains in all 10
 sampled cases after correction, so it is physical alignment sensitivity rather
 than pure observer non-equivariance.
 
+Fase 26 strengthens the longest-period result without converting it into a
+general theorem. All 20 minimal `T=15` rule/background representatives persist
+through step 900 and share a background temporal period of 3, but only 23/160
+background phases and 4/134 one-bit IC mutations retain `T=15`. The result is
+therefore robust in time and narrow in basin under the tested protocol.
+
 ### 9.4 Empirical atlas, not axiomatic classification
 
 The world categories are induced from observed law signatures across a finite
@@ -1495,6 +1537,12 @@ Several controlled extensions have now been completed:
   dependent after circular-geometry correction. Fase 25 confirms exact
   co-translation equivariance in 80/80 runs with circular shape
   canonicalization. Full results are in Section 7.7.
+- **T=15 anatomy**: completed. All 221 detections belong to the
+  reflection-symmetric, black/white-conjugate pair `rule_73/rule_109`. The 20
+  minimal rule/background representatives remain exact through step 900 and
+  lock at five times the background temporal period (`15/3`). The basin is
+  narrow: 23/160 background phases and 4/134 one-bit IC mutations retain
+  `T=15`. Full results are in Section 7.8.
 
 Each extension is a controlled experiment with the same measurement protocol;
 only the IC or background definition changes.

@@ -1,0 +1,2143 @@
+{
+  "background_count": 14,
+  "background_counts": {
+    "00000011": 24,
+    "00001001": 7,
+    "00001011": 5,
+    "00001101": 4,
+    "00001111": 22,
+    "00010011": 21,
+    "00011001": 9,
+    "00101101": 31,
+    "00101111": 6,
+    "00110101": 33,
+    "00110111": 13,
+    "00111011": 12,
+    "00111111": 24,
+    "01101111": 10
+  },
+  "global_minimum": {
+    "background": "00011001",
+    "rule": 109,
+    "word": "01",
+    "word_len": 2
+  },
+  "representatives": [
+    {
+      "background": "00000011",
+      "background_cycle": [
+        "00000011",
+        "01111011",
+        "01001011"
+      ],
+      "background_temporal_period": 3,
+      "background_transient": 0,
+      "fase24_detection_count": 2,
+      "long_run_period": 15,
+      "long_run_persists": true,
+      "long_run_steps": 900,
+      "minimal_word": "0000011",
+      "minimal_word_len": 7,
+      "mutation_count": 7,
+      "mutation_results": [
+        {
+          "bit_index": 0,
+          "detected_period": 6,
+          "t15": false,
+          "word": "1000011"
+        },
+        {
+          "bit_index": 1,
+          "detected_period": 6,
+          "t15": false,
+          "word": "0100011"
+        },
+        {
+          "bit_index": 2,
+          "detected_period": 6,
+          "t15": false,
+          "word": "0010011"
+        },
+        {
+          "bit_index": 3,
+          "detected_period": 6,
+          "t15": false,
+          "word": "0001011"
+        },
+        {
+          "bit_index": 4,
+          "detected_period": 3,
+          "t15": false,
+          "word": "0000111"
+        },
+        {
+          "bit_index": 5,
+          "detected_period": null,
+          "t15": false,
+          "word": "0000001"
+        },
+        {
+          "bit_index": 6,
+          "detected_period": 6,
+          "t15": false,
+          "word": "0000010"
+        }
+      ],
+      "mutation_t15_count": 0,
+      "phase_results": [
+        {
+          "detected_period": 15,
+          "shift": 0,
+          "t15": true
+        },
+        {
+          "detected_period": null,
+          "shift": 1,
+          "t15": false
+        },
+        {
+          "detected_period": 6,
+          "shift": 2,
+          "t15": false
+        },
+        {
+          "detected_period": 6,
+          "shift": 3,
+          "t15": false
+        },
+        {
+          "detected_period": null,
+          "shift": 4,
+          "t15": false
+        },
+        {
+          "detected_period": 3,
+          "shift": 5,
+          "t15": false
+        },
+        {
+          "detected_period": null,
+          "shift": 6,
+          "t15": false
+        },
+        {
+          "detected_period": null,
+          "shift": 7,
+          "t15": false
+        }
+      ],
+      "phase_t15_count": 1,
+      "rule": 73
+    },
+    {
+      "background": "00001001",
+      "background_cycle": [
+        "01100000",
+        "01101111",
+        "01101001"
+      ],
+      "background_temporal_period": 3,
+      "background_transient": 1,
+      "fase24_detection_count": 4,
+      "long_run_period": 15,
+      "long_run_persists": true,
+      "long_run_steps": 900,
+      "minimal_word": "00110010",
+      "minimal_word_len": 8,
+      "mutation_count": 8,
+      "mutation_results": [
+        {
+          "bit_index": 0,
+          "detected_period": null,
+          "t15": false,
+          "word": "10110010"
+        },
+        {
+          "bit_index": 1,
+          "detected_period": 3,
+          "t15": false,
+          "word": "01110010"
+        },
+        {
+          "bit_index": 2,
+          "detected_period": 6,
+          "t15": false,
+          "word": "00010010"
+        },
+        {
+          "bit_index": 3,
+          "detected_period": 6,
+          "t15": false,
+          "word": "00100010"
+        },
+        {
+          "bit_index": 4,
+          "detected_period": 6,
+          "t15": false,
+          "word": "00111010"
+        },
+        {
+          "bit_index": 5,
+          "detected_period": 3,
+          "t15": false,
+          "word": "00110110"
+        },
+        {
+          "bit_index": 6,
+          "detected_period": 3,
+          "t15": false,
+          "word": "00110000"
+        },
+        {
+          "bit_index": 7,
+          "detected_period": 3,
+          "t15": false,
+          "word": "00110011"
+        }
+      ],
+      "mutation_t15_count": 0,
+      "phase_results": [
+        {
+          "detected_period": 15,
+          "shift": 0,
+          "t15": true
+        },
+        {
+          "detected_period": 15,
+          "shift": 1,
+          "t15": true
+        },
+        {
+          "detected_period": 6,
+          "shift": 2,
+          "t15": false
+        },
+        {
+          "detected_period": 6,
+          "shift": 3,
+          "t15": false
+        },
+        {
+          "detected_period": 6,
+          "shift": 4,
+          "t15": false
+        },
+        {
+          "detected_period": 6,
+          "shift": 5,
+          "t15": false
+        },
+        {
+          "detected_period": 6,
+          "shift": 6,
+          "t15": false
+        },
+        {
+          "detected_period": 6,
+          "shift": 7,
+          "t15": false
+        }
+      ],
+      "phase_t15_count": 2,
+      "rule": 73
+    },
+    {
+      "background": "00001111",
+      "background_cycle": [
+        "01101001",
+        "01100000",
+        "01101111"
+      ],
+      "background_temporal_period": 3,
+      "background_transient": 1,
+      "fase24_detection_count": 8,
+      "long_run_period": 15,
+      "long_run_persists": true,
+      "long_run_steps": 900,
+      "minimal_word": "00100000",
+      "minimal_word_len": 8,
+      "mutation_count": 8,
+      "mutation_results": [
+        {
+          "bit_index": 0,
+          "detected_period": 3,
+          "t15": false,
+          "word": "10100000"
+        },
+        {
+          "bit_index": 1,
+          "detected_period": 3,
+          "t15": false,
+          "word": "01100000"
+        },
+        {
+          "bit_index": 2,
+          "detected_period": 15,
+          "t15": true,
+          "word": "00000000"
+        },
+        {
+          "bit_index": 3,
+          "detected_period": 3,
+          "t15": false,
+          "word": "00110000"
+        },
+        {
+          "bit_index": 4,
+          "detected_period": 6,
+          "t15": false,
+          "word": "00101000"
+        },
+        {
+          "bit_index": 5,
+          "detected_period": 6,
+          "t15": false,
+          "word": "00100100"
+        },
+        {
+          "bit_index": 6,
+          "detected_period": 6,
+          "t15": false,
+          "word": "00100010"
+        },
+        {
+          "bit_index": 7,
+          "detected_period": 6,
+          "t15": false,
+          "word": "00100001"
+        }
+      ],
+      "mutation_t15_count": 1,
+      "phase_results": [
+        {
+          "detected_period": 15,
+          "shift": 0,
+          "t15": true
+        },
+        {
+          "detected_period": 15,
+          "shift": 1,
+          "t15": true
+        },
+        {
+          "detected_period": 6,
+          "shift": 2,
+          "t15": false
+        },
+        {
+          "detected_period": 6,
+          "shift": 3,
+          "t15": false
+        },
+        {
+          "detected_period": 3,
+          "shift": 4,
+          "t15": false
+        },
+        {
+          "detected_period": 6,
+          "shift": 5,
+          "t15": false
+        },
+        {
+          "detected_period": 3,
+          "shift": 6,
+          "t15": false
+        },
+        {
+          "detected_period": 3,
+          "shift": 7,
+          "t15": false
+        }
+      ],
+      "phase_t15_count": 2,
+      "rule": 73
+    },
+    {
+      "background": "00101101",
+      "background_cycle": [
+        "00101101",
+        "00001100",
+        "11101101"
+      ],
+      "background_temporal_period": 3,
+      "background_transient": 0,
+      "fase24_detection_count": 31,
+      "long_run_period": 15,
+      "long_run_persists": true,
+      "long_run_steps": 900,
+      "minimal_word": "010110",
+      "minimal_word_len": 6,
+      "mutation_count": 6,
+      "mutation_results": [
+        {
+          "bit_index": 0,
+          "detected_period": 3,
+          "t15": false,
+          "word": "110110"
+        },
+        {
+          "bit_index": 1,
+          "detected_period": 6,
+          "t15": false,
+          "word": "000110"
+        },
+        {
+          "bit_index": 2,
+          "detected_period": 6,
+          "t15": false,
+          "word": "011110"
+        },
+        {
+          "bit_index": 3,
+          "detected_period": 3,
+          "t15": false,
+          "word": "010010"
+        },
+        {
+          "bit_index": 4,
+          "detected_period": 6,
+          "t15": false,
+          "word": "010100"
+        },
+        {
+          "bit_index": 5,
+          "detected_period": 3,
+          "t15": false,
+          "word": "010111"
+        }
+      ],
+      "mutation_t15_count": 0,
+      "phase_results": [
+        {
+          "detected_period": 15,
+          "shift": 0,
+          "t15": true
+        },
+        {
+          "detected_period": null,
+          "shift": 1,
+          "t15": false
+        },
+        {
+          "detected_period": 6,
+          "shift": 2,
+          "t15": false
+        },
+        {
+          "detected_period": 6,
+          "shift": 3,
+          "t15": false
+        },
+        {
+          "detected_period": null,
+          "shift": 4,
+          "t15": false
+        },
+        {
+          "detected_period": 6,
+          "shift": 5,
+          "t15": false
+        },
+        {
+          "detected_period": 6,
+          "shift": 6,
+          "t15": false
+        },
+        {
+          "detected_period": 6,
+          "shift": 7,
+          "t15": false
+        }
+      ],
+      "phase_t15_count": 1,
+      "rule": 73
+    },
+    {
+      "background": "00101111",
+      "background_cycle": [
+        "01100000",
+        "01101111",
+        "01101001"
+      ],
+      "background_temporal_period": 3,
+      "background_transient": 2,
+      "fase24_detection_count": 6,
+      "long_run_period": 15,
+      "long_run_persists": true,
+      "long_run_steps": 900,
+      "minimal_word": "0000111",
+      "minimal_word_len": 7,
+      "mutation_count": 7,
+      "mutation_results": [
+        {
+          "bit_index": 0,
+          "detected_period": null,
+          "t15": false,
+          "word": "1000111"
+        },
+        {
+          "bit_index": 1,
+          "detected_period": null,
+          "t15": false,
+          "word": "0100111"
+        },
+        {
+          "bit_index": 2,
+          "detected_period": null,
+          "t15": false,
+          "word": "0010111"
+        },
+        {
+          "bit_index": 3,
+          "detected_period": 6,
+          "t15": false,
+          "word": "0001111"
+        },
+        {
+          "bit_index": 4,
+          "detected_period": 6,
+          "t15": false,
+          "word": "0000011"
+        },
+        {
+          "bit_index": 5,
+          "detected_period": 6,
+          "t15": false,
+          "word": "0000101"
+        },
+        {
+          "bit_index": 6,
+          "detected_period": 3,
+          "t15": false,
+          "word": "0000110"
+        }
+      ],
+      "mutation_t15_count": 0,
+      "phase_results": [
+        {
+          "detected_period": 15,
+          "shift": 0,
+          "t15": true
+        },
+        {
+          "detected_period": 3,
+          "shift": 1,
+          "t15": false
+        },
+        {
+          "detected_period": null,
+          "shift": 2,
+          "t15": false
+        },
+        {
+          "detected_period": 3,
+          "shift": 3,
+          "t15": false
+        },
+        {
+          "detected_period": 3,
+          "shift": 4,
+          "t15": false
+        },
+        {
+          "detected_period": null,
+          "shift": 5,
+          "t15": false
+        },
+        {
+          "detected_period": 6,
+          "shift": 6,
+          "t15": false
+        },
+        {
+          "detected_period": 6,
+          "shift": 7,
+          "t15": false
+        }
+      ],
+      "phase_t15_count": 1,
+      "rule": 73
+    },
+    {
+      "background": "00110101",
+      "background_cycle": [
+        "00110000",
+        "10110111",
+        "10110100"
+      ],
+      "background_temporal_period": 3,
+      "background_transient": 1,
+      "fase24_detection_count": 22,
+      "long_run_period": 15,
+      "long_run_persists": true,
+      "long_run_steps": 900,
+      "minimal_word": "011010",
+      "minimal_word_len": 6,
+      "mutation_count": 6,
+      "mutation_results": [
+        {
+          "bit_index": 0,
+          "detected_period": 3,
+          "t15": false,
+          "word": "111010"
+        },
+        {
+          "bit_index": 1,
+          "detected_period": 6,
+          "t15": false,
+          "word": "001010"
+        },
+        {
+          "bit_index": 2,
+          "detected_period": 3,
+          "t15": false,
+          "word": "010010"
+        },
+        {
+          "bit_index": 3,
+          "detected_period": 6,
+          "t15": false,
+          "word": "011110"
+        },
+        {
+          "bit_index": 4,
+          "detected_period": 6,
+          "t15": false,
+          "word": "011000"
+        },
+        {
+          "bit_index": 5,
+          "detected_period": 3,
+          "t15": false,
+          "word": "011011"
+        }
+      ],
+      "mutation_t15_count": 0,
+      "phase_results": [
+        {
+          "detected_period": 15,
+          "shift": 0,
+          "t15": true
+        },
+        {
+          "detected_period": 6,
+          "shift": 1,
+          "t15": false
+        },
+        {
+          "detected_period": 6,
+          "shift": 2,
+          "t15": false
+        },
+        {
+          "detected_period": 6,
+          "shift": 3,
+          "t15": false
+        },
+        {
+          "detected_period": null,
+          "shift": 4,
+          "t15": false
+        },
+        {
+          "detected_period": 6,
+          "shift": 5,
+          "t15": false
+        },
+        {
+          "detected_period": 6,
+          "shift": 6,
+          "t15": false
+        },
+        {
+          "detected_period": null,
+          "shift": 7,
+          "t15": false
+        }
+      ],
+      "phase_t15_count": 1,
+      "rule": 73
+    },
+    {
+      "background": "00110111",
+      "background_cycle": [
+        "00110000",
+        "10110111",
+        "10110100"
+      ],
+      "background_temporal_period": 3,
+      "background_transient": 2,
+      "fase24_detection_count": 13,
+      "long_run_period": 15,
+      "long_run_persists": true,
+      "long_run_steps": 900,
+      "minimal_word": "011011",
+      "minimal_word_len": 6,
+      "mutation_count": 6,
+      "mutation_results": [
+        {
+          "bit_index": 0,
+          "detected_period": 3,
+          "t15": false,
+          "word": "111011"
+        },
+        {
+          "bit_index": 1,
+          "detected_period": 6,
+          "t15": false,
+          "word": "001011"
+        },
+        {
+          "bit_index": 2,
+          "detected_period": 3,
+          "t15": false,
+          "word": "010011"
+        },
+        {
+          "bit_index": 3,
+          "detected_period": 6,
+          "t15": false,
+          "word": "011111"
+        },
+        {
+          "bit_index": 4,
+          "detected_period": 3,
+          "t15": false,
+          "word": "011001"
+        },
+        {
+          "bit_index": 5,
+          "detected_period": 3,
+          "t15": false,
+          "word": "011010"
+        }
+      ],
+      "mutation_t15_count": 0,
+      "phase_results": [
+        {
+          "detected_period": 15,
+          "shift": 0,
+          "t15": true
+        },
+        {
+          "detected_period": null,
+          "shift": 1,
+          "t15": false
+        },
+        {
+          "detected_period": 3,
+          "shift": 2,
+          "t15": false
+        },
+        {
+          "detected_period": 6,
+          "shift": 3,
+          "t15": false
+        },
+        {
+          "detected_period": null,
+          "shift": 4,
+          "t15": false
+        },
+        {
+          "detected_period": 6,
+          "shift": 5,
+          "t15": false
+        },
+        {
+          "detected_period": 6,
+          "shift": 6,
+          "t15": false
+        },
+        {
+          "detected_period": 6,
+          "shift": 7,
+          "t15": false
+        }
+      ],
+      "phase_t15_count": 1,
+      "rule": 73
+    },
+    {
+      "background": "00111011",
+      "background_cycle": [
+        "00000011",
+        "01111011",
+        "01001011"
+      ],
+      "background_temporal_period": 3,
+      "background_transient": 2,
+      "fase24_detection_count": 12,
+      "long_run_period": 15,
+      "long_run_persists": true,
+      "long_run_steps": 900,
+      "minimal_word": "00100100",
+      "minimal_word_len": 8,
+      "mutation_count": 8,
+      "mutation_results": [
+        {
+          "bit_index": 0,
+          "detected_period": 3,
+          "t15": false,
+          "word": "10100100"
+        },
+        {
+          "bit_index": 1,
+          "detected_period": 6,
+          "t15": false,
+          "word": "01100100"
+        },
+        {
+          "bit_index": 2,
+          "detected_period": 3,
+          "t15": false,
+          "word": "00000100"
+        },
+        {
+          "bit_index": 3,
+          "detected_period": 3,
+          "t15": false,
+          "word": "00110100"
+        },
+        {
+          "bit_index": 4,
+          "detected_period": 3,
+          "t15": false,
+          "word": "00101100"
+        },
+        {
+          "bit_index": 5,
+          "detected_period": 6,
+          "t15": false,
+          "word": "00100000"
+        },
+        {
+          "bit_index": 6,
+          "detected_period": 6,
+          "t15": false,
+          "word": "00100110"
+        },
+        {
+          "bit_index": 7,
+          "detected_period": 6,
+          "t15": false,
+          "word": "00100101"
+        }
+      ],
+      "mutation_t15_count": 0,
+      "phase_results": [
+        {
+          "detected_period": 15,
+          "shift": 0,
+          "t15": true
+        },
+        {
+          "detected_period": null,
+          "shift": 1,
+          "t15": false
+        },
+        {
+          "detected_period": null,
+          "shift": 2,
+          "t15": false
+        },
+        {
+          "detected_period": 12,
+          "shift": 3,
+          "t15": false
+        },
+        {
+          "detected_period": 6,
+          "shift": 4,
+          "t15": false
+        },
+        {
+          "detected_period": 3,
+          "shift": 5,
+          "t15": false
+        },
+        {
+          "detected_period": 6,
+          "shift": 6,
+          "t15": false
+        },
+        {
+          "detected_period": 6,
+          "shift": 7,
+          "t15": false
+        }
+      ],
+      "phase_t15_count": 1,
+      "rule": 73
+    },
+    {
+      "background": "00111111",
+      "background_cycle": [
+        "00001100",
+        "11101101",
+        "00101101"
+      ],
+      "background_temporal_period": 3,
+      "background_transient": 2,
+      "fase24_detection_count": 23,
+      "long_run_period": 15,
+      "long_run_persists": true,
+      "long_run_steps": 900,
+      "minimal_word": "0001100",
+      "minimal_word_len": 7,
+      "mutation_count": 7,
+      "mutation_results": [
+        {
+          "bit_index": 0,
+          "detected_period": 15,
+          "t15": true,
+          "word": "1001100"
+        },
+        {
+          "bit_index": 1,
+          "detected_period": null,
+          "t15": false,
+          "word": "0101100"
+        },
+        {
+          "bit_index": 2,
+          "detected_period": 3,
+          "t15": false,
+          "word": "0011100"
+        },
+        {
+          "bit_index": 3,
+          "detected_period": null,
+          "t15": false,
+          "word": "0000100"
+        },
+        {
+          "bit_index": 4,
+          "detected_period": null,
+          "t15": false,
+          "word": "0001000"
+        },
+        {
+          "bit_index": 5,
+          "detected_period": 3,
+          "t15": false,
+          "word": "0001110"
+        },
+        {
+          "bit_index": 6,
+          "detected_period": null,
+          "t15": false,
+          "word": "0001101"
+        }
+      ],
+      "mutation_t15_count": 1,
+      "phase_results": [
+        {
+          "detected_period": 15,
+          "shift": 0,
+          "t15": true
+        },
+        {
+          "detected_period": 6,
+          "shift": 1,
+          "t15": false
+        },
+        {
+          "detected_period": 6,
+          "shift": 2,
+          "t15": false
+        },
+        {
+          "detected_period": 6,
+          "shift": 3,
+          "t15": false
+        },
+        {
+          "detected_period": 6,
+          "shift": 4,
+          "t15": false
+        },
+        {
+          "detected_period": 6,
+          "shift": 5,
+          "t15": false
+        },
+        {
+          "detected_period": 3,
+          "shift": 6,
+          "t15": false
+        },
+        {
+          "detected_period": null,
+          "shift": 7,
+          "t15": false
+        }
+      ],
+      "phase_t15_count": 1,
+      "rule": 73
+    },
+    {
+      "background": "01101111",
+      "background_cycle": [
+        "01101111",
+        "01101001",
+        "01100000"
+      ],
+      "background_temporal_period": 3,
+      "background_transient": 0,
+      "fase24_detection_count": 2,
+      "long_run_period": 15,
+      "long_run_persists": true,
+      "long_run_steps": 900,
+      "minimal_word": "01101110",
+      "minimal_word_len": 8,
+      "mutation_count": 8,
+      "mutation_results": [
+        {
+          "bit_index": 0,
+          "detected_period": 3,
+          "t15": false,
+          "word": "11101110"
+        },
+        {
+          "bit_index": 1,
+          "detected_period": 6,
+          "t15": false,
+          "word": "00101110"
+        },
+        {
+          "bit_index": 2,
+          "detected_period": 3,
+          "t15": false,
+          "word": "01001110"
+        },
+        {
+          "bit_index": 3,
+          "detected_period": 6,
+          "t15": false,
+          "word": "01111110"
+        },
+        {
+          "bit_index": 4,
+          "detected_period": 3,
+          "t15": false,
+          "word": "01100110"
+        },
+        {
+          "bit_index": 5,
+          "detected_period": 3,
+          "t15": false,
+          "word": "01101010"
+        },
+        {
+          "bit_index": 6,
+          "detected_period": 6,
+          "t15": false,
+          "word": "01101100"
+        },
+        {
+          "bit_index": 7,
+          "detected_period": 15,
+          "t15": true,
+          "word": "01101111"
+        }
+      ],
+      "mutation_t15_count": 1,
+      "phase_results": [
+        {
+          "detected_period": 15,
+          "shift": 0,
+          "t15": true
+        },
+        {
+          "detected_period": null,
+          "shift": 1,
+          "t15": false
+        },
+        {
+          "detected_period": 6,
+          "shift": 2,
+          "t15": false
+        },
+        {
+          "detected_period": 6,
+          "shift": 3,
+          "t15": false
+        },
+        {
+          "detected_period": null,
+          "shift": 4,
+          "t15": false
+        },
+        {
+          "detected_period": 6,
+          "shift": 5,
+          "t15": false
+        },
+        {
+          "detected_period": 3,
+          "shift": 6,
+          "t15": false
+        },
+        {
+          "detected_period": null,
+          "shift": 7,
+          "t15": false
+        }
+      ],
+      "phase_t15_count": 1,
+      "rule": 73
+    },
+    {
+      "background": "00000011",
+      "background_cycle": [
+        "11001111",
+        "01001000",
+        "01001011"
+      ],
+      "background_temporal_period": 3,
+      "background_transient": 2,
+      "fase24_detection_count": 22,
+      "long_run_period": 15,
+      "long_run_persists": true,
+      "long_run_steps": 900,
+      "minimal_word": "1110101",
+      "minimal_word_len": 7,
+      "mutation_count": 7,
+      "mutation_results": [
+        {
+          "bit_index": 0,
+          "detected_period": 6,
+          "t15": false,
+          "word": "0110101"
+        },
+        {
+          "bit_index": 1,
+          "detected_period": null,
+          "t15": false,
+          "word": "1010101"
+        },
+        {
+          "bit_index": 2,
+          "detected_period": 6,
+          "t15": false,
+          "word": "1100101"
+        },
+        {
+          "bit_index": 3,
+          "detected_period": null,
+          "t15": false,
+          "word": "1111101"
+        },
+        {
+          "bit_index": 4,
+          "detected_period": 12,
+          "t15": false,
+          "word": "1110001"
+        },
+        {
+          "bit_index": 5,
+          "detected_period": 6,
+          "t15": false,
+          "word": "1110111"
+        },
+        {
+          "bit_index": 6,
+          "detected_period": 6,
+          "t15": false,
+          "word": "1110100"
+        }
+      ],
+      "mutation_t15_count": 0,
+      "phase_results": [
+        {
+          "detected_period": 15,
+          "shift": 0,
+          "t15": true
+        },
+        {
+          "detected_period": null,
+          "shift": 1,
+          "t15": false
+        },
+        {
+          "detected_period": 3,
+          "shift": 2,
+          "t15": false
+        },
+        {
+          "detected_period": null,
+          "shift": 3,
+          "t15": false
+        },
+        {
+          "detected_period": null,
+          "shift": 4,
+          "t15": false
+        },
+        {
+          "detected_period": 12,
+          "shift": 5,
+          "t15": false
+        },
+        {
+          "detected_period": 6,
+          "shift": 6,
+          "t15": false
+        },
+        {
+          "detected_period": 6,
+          "shift": 7,
+          "t15": false
+        }
+      ],
+      "phase_t15_count": 1,
+      "rule": 109
+    },
+    {
+      "background": "00001001",
+      "background_cycle": [
+        "00001001",
+        "01101001",
+        "11111001"
+      ],
+      "background_temporal_period": 3,
+      "background_transient": 0,
+      "fase24_detection_count": 3,
+      "long_run_period": 15,
+      "long_run_persists": true,
+      "long_run_steps": 900,
+      "minimal_word": "0001001",
+      "minimal_word_len": 7,
+      "mutation_count": 7,
+      "mutation_results": [
+        {
+          "bit_index": 0,
+          "detected_period": 6,
+          "t15": false,
+          "word": "1001001"
+        },
+        {
+          "bit_index": 1,
+          "detected_period": 3,
+          "t15": false,
+          "word": "0101001"
+        },
+        {
+          "bit_index": 2,
+          "detected_period": 3,
+          "t15": false,
+          "word": "0011001"
+        },
+        {
+          "bit_index": 3,
+          "detected_period": 6,
+          "t15": false,
+          "word": "0000001"
+        },
+        {
+          "bit_index": 4,
+          "detected_period": 3,
+          "t15": false,
+          "word": "0001101"
+        },
+        {
+          "bit_index": 5,
+          "detected_period": 6,
+          "t15": false,
+          "word": "0001011"
+        },
+        {
+          "bit_index": 6,
+          "detected_period": 3,
+          "t15": false,
+          "word": "0001000"
+        }
+      ],
+      "mutation_t15_count": 0,
+      "phase_results": [
+        {
+          "detected_period": 15,
+          "shift": 0,
+          "t15": true
+        },
+        {
+          "detected_period": null,
+          "shift": 1,
+          "t15": false
+        },
+        {
+          "detected_period": 6,
+          "shift": 2,
+          "t15": false
+        },
+        {
+          "detected_period": 6,
+          "shift": 3,
+          "t15": false
+        },
+        {
+          "detected_period": null,
+          "shift": 4,
+          "t15": false
+        },
+        {
+          "detected_period": 6,
+          "shift": 5,
+          "t15": false
+        },
+        {
+          "detected_period": 6,
+          "shift": 6,
+          "t15": false
+        },
+        {
+          "detected_period": null,
+          "shift": 7,
+          "t15": false
+        }
+      ],
+      "phase_t15_count": 1,
+      "rule": 109
+    },
+    {
+      "background": "00001011",
+      "background_cycle": [
+        "11111001",
+        "00001001",
+        "01101001"
+      ],
+      "background_temporal_period": 3,
+      "background_transient": 2,
+      "fase24_detection_count": 5,
+      "long_run_period": 15,
+      "long_run_persists": true,
+      "long_run_steps": 900,
+      "minimal_word": "0001001",
+      "minimal_word_len": 7,
+      "mutation_count": 7,
+      "mutation_results": [
+        {
+          "bit_index": 0,
+          "detected_period": 6,
+          "t15": false,
+          "word": "1001001"
+        },
+        {
+          "bit_index": 1,
+          "detected_period": 3,
+          "t15": false,
+          "word": "0101001"
+        },
+        {
+          "bit_index": 2,
+          "detected_period": 3,
+          "t15": false,
+          "word": "0011001"
+        },
+        {
+          "bit_index": 3,
+          "detected_period": 6,
+          "t15": false,
+          "word": "0000001"
+        },
+        {
+          "bit_index": 4,
+          "detected_period": 6,
+          "t15": false,
+          "word": "0001101"
+        },
+        {
+          "bit_index": 5,
+          "detected_period": 6,
+          "t15": false,
+          "word": "0001011"
+        },
+        {
+          "bit_index": 6,
+          "detected_period": 3,
+          "t15": false,
+          "word": "0001000"
+        }
+      ],
+      "mutation_t15_count": 0,
+      "phase_results": [
+        {
+          "detected_period": 15,
+          "shift": 0,
+          "t15": true
+        },
+        {
+          "detected_period": 15,
+          "shift": 1,
+          "t15": true
+        },
+        {
+          "detected_period": 6,
+          "shift": 2,
+          "t15": false
+        },
+        {
+          "detected_period": 6,
+          "shift": 3,
+          "t15": false
+        },
+        {
+          "detected_period": null,
+          "shift": 4,
+          "t15": false
+        },
+        {
+          "detected_period": 6,
+          "shift": 5,
+          "t15": false
+        },
+        {
+          "detected_period": 6,
+          "shift": 6,
+          "t15": false
+        },
+        {
+          "detected_period": null,
+          "shift": 7,
+          "t15": false
+        }
+      ],
+      "phase_t15_count": 2,
+      "rule": 109
+    },
+    {
+      "background": "00001101",
+      "background_cycle": [
+        "11111001",
+        "00001001",
+        "01101001"
+      ],
+      "background_temporal_period": 3,
+      "background_transient": 2,
+      "fase24_detection_count": 4,
+      "long_run_period": 15,
+      "long_run_persists": true,
+      "long_run_steps": 900,
+      "minimal_word": "0100001",
+      "minimal_word_len": 7,
+      "mutation_count": 7,
+      "mutation_results": [
+        {
+          "bit_index": 0,
+          "detected_period": null,
+          "t15": false,
+          "word": "1100001"
+        },
+        {
+          "bit_index": 1,
+          "detected_period": 6,
+          "t15": false,
+          "word": "0000001"
+        },
+        {
+          "bit_index": 2,
+          "detected_period": 6,
+          "t15": false,
+          "word": "0110001"
+        },
+        {
+          "bit_index": 3,
+          "detected_period": 6,
+          "t15": false,
+          "word": "0101001"
+        },
+        {
+          "bit_index": 4,
+          "detected_period": 6,
+          "t15": false,
+          "word": "0100101"
+        },
+        {
+          "bit_index": 5,
+          "detected_period": 6,
+          "t15": false,
+          "word": "0100011"
+        },
+        {
+          "bit_index": 6,
+          "detected_period": 12,
+          "t15": false,
+          "word": "0100000"
+        }
+      ],
+      "mutation_t15_count": 0,
+      "phase_results": [
+        {
+          "detected_period": 15,
+          "shift": 0,
+          "t15": true
+        },
+        {
+          "detected_period": 6,
+          "shift": 1,
+          "t15": false
+        },
+        {
+          "detected_period": null,
+          "shift": 2,
+          "t15": false
+        },
+        {
+          "detected_period": 3,
+          "shift": 3,
+          "t15": false
+        },
+        {
+          "detected_period": null,
+          "shift": 4,
+          "t15": false
+        },
+        {
+          "detected_period": null,
+          "shift": 5,
+          "t15": false
+        },
+        {
+          "detected_period": 6,
+          "shift": 6,
+          "t15": false
+        },
+        {
+          "detected_period": null,
+          "shift": 7,
+          "t15": false
+        }
+      ],
+      "phase_t15_count": 1,
+      "rule": 109
+    },
+    {
+      "background": "00001111",
+      "background_cycle": [
+        "01101001",
+        "11111001",
+        "00001001"
+      ],
+      "background_temporal_period": 3,
+      "background_transient": 1,
+      "fase24_detection_count": 14,
+      "long_run_period": 15,
+      "long_run_persists": true,
+      "long_run_steps": 900,
+      "minimal_word": "0001001",
+      "minimal_word_len": 7,
+      "mutation_count": 7,
+      "mutation_results": [
+        {
+          "bit_index": 0,
+          "detected_period": 6,
+          "t15": false,
+          "word": "1001001"
+        },
+        {
+          "bit_index": 1,
+          "detected_period": 3,
+          "t15": false,
+          "word": "0101001"
+        },
+        {
+          "bit_index": 2,
+          "detected_period": 3,
+          "t15": false,
+          "word": "0011001"
+        },
+        {
+          "bit_index": 3,
+          "detected_period": 6,
+          "t15": false,
+          "word": "0000001"
+        },
+        {
+          "bit_index": 4,
+          "detected_period": 15,
+          "t15": true,
+          "word": "0001101"
+        },
+        {
+          "bit_index": 5,
+          "detected_period": 6,
+          "t15": false,
+          "word": "0001011"
+        },
+        {
+          "bit_index": 6,
+          "detected_period": 3,
+          "t15": false,
+          "word": "0001000"
+        }
+      ],
+      "mutation_t15_count": 1,
+      "phase_results": [
+        {
+          "detected_period": 15,
+          "shift": 0,
+          "t15": true
+        },
+        {
+          "detected_period": null,
+          "shift": 1,
+          "t15": false
+        },
+        {
+          "detected_period": 6,
+          "shift": 2,
+          "t15": false
+        },
+        {
+          "detected_period": 6,
+          "shift": 3,
+          "t15": false
+        },
+        {
+          "detected_period": null,
+          "shift": 4,
+          "t15": false
+        },
+        {
+          "detected_period": 6,
+          "shift": 5,
+          "t15": false
+        },
+        {
+          "detected_period": 6,
+          "shift": 6,
+          "t15": false
+        },
+        {
+          "detected_period": null,
+          "shift": 7,
+          "t15": false
+        }
+      ],
+      "phase_t15_count": 1,
+      "rule": 109
+    },
+    {
+      "background": "00010011",
+      "background_cycle": [
+        "11110011",
+        "00010010",
+        "11010010"
+      ],
+      "background_temporal_period": 3,
+      "background_transient": 2,
+      "fase24_detection_count": 21,
+      "long_run_period": 15,
+      "long_run_persists": true,
+      "long_run_steps": 900,
+      "minimal_word": "01001",
+      "minimal_word_len": 5,
+      "mutation_count": 5,
+      "mutation_results": [
+        {
+          "bit_index": 0,
+          "detected_period": 3,
+          "t15": false,
+          "word": "11001"
+        },
+        {
+          "bit_index": 1,
+          "detected_period": 6,
+          "t15": false,
+          "word": "00001"
+        },
+        {
+          "bit_index": 2,
+          "detected_period": 3,
+          "t15": false,
+          "word": "01101"
+        },
+        {
+          "bit_index": 3,
+          "detected_period": 6,
+          "t15": false,
+          "word": "01011"
+        },
+        {
+          "bit_index": 4,
+          "detected_period": 3,
+          "t15": false,
+          "word": "01000"
+        }
+      ],
+      "mutation_t15_count": 0,
+      "phase_results": [
+        {
+          "detected_period": 15,
+          "shift": 0,
+          "t15": true
+        },
+        {
+          "detected_period": 6,
+          "shift": 1,
+          "t15": false
+        },
+        {
+          "detected_period": 6,
+          "shift": 2,
+          "t15": false
+        },
+        {
+          "detected_period": 6,
+          "shift": 3,
+          "t15": false
+        },
+        {
+          "detected_period": null,
+          "shift": 4,
+          "t15": false
+        },
+        {
+          "detected_period": 6,
+          "shift": 5,
+          "t15": false
+        },
+        {
+          "detected_period": 3,
+          "shift": 6,
+          "t15": false
+        },
+        {
+          "detected_period": 6,
+          "shift": 7,
+          "t15": false
+        }
+      ],
+      "phase_t15_count": 1,
+      "rule": 109
+    },
+    {
+      "background": "00011001",
+      "background_cycle": [
+        "11111001",
+        "00001001",
+        "01101001"
+      ],
+      "background_temporal_period": 3,
+      "background_transient": 2,
+      "fase24_detection_count": 9,
+      "long_run_period": 15,
+      "long_run_persists": true,
+      "long_run_steps": 900,
+      "minimal_word": "01",
+      "minimal_word_len": 2,
+      "mutation_count": 2,
+      "mutation_results": [
+        {
+          "bit_index": 0,
+          "detected_period": 3,
+          "t15": false,
+          "word": "11"
+        },
+        {
+          "bit_index": 1,
+          "detected_period": 6,
+          "t15": false,
+          "word": "00"
+        }
+      ],
+      "mutation_t15_count": 0,
+      "phase_results": [
+        {
+          "detected_period": 15,
+          "shift": 0,
+          "t15": true
+        },
+        {
+          "detected_period": null,
+          "shift": 1,
+          "t15": false
+        },
+        {
+          "detected_period": 3,
+          "shift": 2,
+          "t15": false
+        },
+        {
+          "detected_period": 3,
+          "shift": 3,
+          "t15": false
+        },
+        {
+          "detected_period": null,
+          "shift": 4,
+          "t15": false
+        },
+        {
+          "detected_period": null,
+          "shift": 5,
+          "t15": false
+        },
+        {
+          "detected_period": 6,
+          "shift": 6,
+          "t15": false
+        },
+        {
+          "detected_period": 3,
+          "shift": 7,
+          "t15": false
+        }
+      ],
+      "phase_t15_count": 1,
+      "rule": 109
+    },
+    {
+      "background": "00110101",
+      "background_cycle": [
+        "00111111",
+        "00100001",
+        "00101101"
+      ],
+      "background_temporal_period": 3,
+      "background_transient": 1,
+      "fase24_detection_count": 11,
+      "long_run_period": 15,
+      "long_run_persists": true,
+      "long_run_steps": 900,
+      "minimal_word": "010101",
+      "minimal_word_len": 6,
+      "mutation_count": 6,
+      "mutation_results": [
+        {
+          "bit_index": 0,
+          "detected_period": 3,
+          "t15": false,
+          "word": "110101"
+        },
+        {
+          "bit_index": 1,
+          "detected_period": 6,
+          "t15": false,
+          "word": "000101"
+        },
+        {
+          "bit_index": 2,
+          "detected_period": 6,
+          "t15": false,
+          "word": "011101"
+        },
+        {
+          "bit_index": 3,
+          "detected_period": 3,
+          "t15": false,
+          "word": "010001"
+        },
+        {
+          "bit_index": 4,
+          "detected_period": 6,
+          "t15": false,
+          "word": "010111"
+        },
+        {
+          "bit_index": 5,
+          "detected_period": 6,
+          "t15": false,
+          "word": "010100"
+        }
+      ],
+      "mutation_t15_count": 0,
+      "phase_results": [
+        {
+          "detected_period": 15,
+          "shift": 0,
+          "t15": true
+        },
+        {
+          "detected_period": null,
+          "shift": 1,
+          "t15": false
+        },
+        {
+          "detected_period": 3,
+          "shift": 2,
+          "t15": false
+        },
+        {
+          "detected_period": 3,
+          "shift": 3,
+          "t15": false
+        },
+        {
+          "detected_period": null,
+          "shift": 4,
+          "t15": false
+        },
+        {
+          "detected_period": 3,
+          "shift": 5,
+          "t15": false
+        },
+        {
+          "detected_period": 6,
+          "shift": 6,
+          "t15": false
+        },
+        {
+          "detected_period": 3,
+          "shift": 7,
+          "t15": false
+        }
+      ],
+      "phase_t15_count": 1,
+      "rule": 109
+    },
+    {
+      "background": "00111111",
+      "background_cycle": [
+        "00111111",
+        "00100001",
+        "00101101"
+      ],
+      "background_temporal_period": 3,
+      "background_transient": 0,
+      "fase24_detection_count": 1,
+      "long_run_period": 15,
+      "long_run_persists": true,
+      "long_run_steps": 900,
+      "minimal_word": "00111111",
+      "minimal_word_len": 8,
+      "mutation_count": 8,
+      "mutation_results": [
+        {
+          "bit_index": 0,
+          "detected_period": 6,
+          "t15": false,
+          "word": "10111111"
+        },
+        {
+          "bit_index": 1,
+          "detected_period": null,
+          "t15": false,
+          "word": "01111111"
+        },
+        {
+          "bit_index": 2,
+          "detected_period": 3,
+          "t15": false,
+          "word": "00011111"
+        },
+        {
+          "bit_index": 3,
+          "detected_period": 6,
+          "t15": false,
+          "word": "00101111"
+        },
+        {
+          "bit_index": 4,
+          "detected_period": 6,
+          "t15": false,
+          "word": "00110111"
+        },
+        {
+          "bit_index": 5,
+          "detected_period": 6,
+          "t15": false,
+          "word": "00111011"
+        },
+        {
+          "bit_index": 6,
+          "detected_period": 6,
+          "t15": false,
+          "word": "00111101"
+        },
+        {
+          "bit_index": 7,
+          "detected_period": 6,
+          "t15": false,
+          "word": "00111110"
+        }
+      ],
+      "mutation_t15_count": 0,
+      "phase_results": [
+        {
+          "detected_period": 15,
+          "shift": 0,
+          "t15": true
+        },
+        {
+          "detected_period": null,
+          "shift": 1,
+          "t15": false
+        },
+        {
+          "detected_period": null,
+          "shift": 2,
+          "t15": false
+        },
+        {
+          "detected_period": 3,
+          "shift": 3,
+          "t15": false
+        },
+        {
+          "detected_period": null,
+          "shift": 4,
+          "t15": false
+        },
+        {
+          "detected_period": 6,
+          "shift": 5,
+          "t15": false
+        },
+        {
+          "detected_period": 6,
+          "shift": 6,
+          "t15": false
+        },
+        {
+          "detected_period": null,
+          "shift": 7,
+          "t15": false
+        }
+      ],
+      "phase_t15_count": 1,
+      "rule": 109
+    },
+    {
+      "background": "01101111",
+      "background_cycle": [
+        "11111001",
+        "00001001",
+        "01101001"
+      ],
+      "background_temporal_period": 3,
+      "background_transient": 1,
+      "fase24_detection_count": 8,
+      "long_run_period": 15,
+      "long_run_persists": true,
+      "long_run_steps": 900,
+      "minimal_word": "0101001",
+      "minimal_word_len": 7,
+      "mutation_count": 7,
+      "mutation_results": [
+        {
+          "bit_index": 0,
+          "detected_period": 6,
+          "t15": false,
+          "word": "1101001"
+        },
+        {
+          "bit_index": 1,
+          "detected_period": 3,
+          "t15": false,
+          "word": "0001001"
+        },
+        {
+          "bit_index": 2,
+          "detected_period": 6,
+          "t15": false,
+          "word": "0111001"
+        },
+        {
+          "bit_index": 3,
+          "detected_period": 6,
+          "t15": false,
+          "word": "0100001"
+        },
+        {
+          "bit_index": 4,
+          "detected_period": 3,
+          "t15": false,
+          "word": "0101101"
+        },
+        {
+          "bit_index": 5,
+          "detected_period": null,
+          "t15": false,
+          "word": "0101011"
+        },
+        {
+          "bit_index": 6,
+          "detected_period": 3,
+          "t15": false,
+          "word": "0101000"
+        }
+      ],
+      "mutation_t15_count": 0,
+      "phase_results": [
+        {
+          "detected_period": 15,
+          "shift": 0,
+          "t15": true
+        },
+        {
+          "detected_period": 6,
+          "shift": 1,
+          "t15": false
+        },
+        {
+          "detected_period": 6,
+          "shift": 2,
+          "t15": false
+        },
+        {
+          "detected_period": 6,
+          "shift": 3,
+          "t15": false
+        },
+        {
+          "detected_period": 6,
+          "shift": 4,
+          "t15": false
+        },
+        {
+          "detected_period": 6,
+          "shift": 5,
+          "t15": false
+        },
+        {
+          "detected_period": 6,
+          "shift": 6,
+          "t15": false
+        },
+        {
+          "detected_period": null,
+          "shift": 7,
+          "t15": false
+        }
+      ],
+      "phase_t15_count": 1,
+      "rule": 109
+    }
+  ],
+  "rule_background_pairs": 20,
+  "rule_counts": {
+    "73": 123,
+    "109": 98
+  },
+  "rule_symmetry": {
+    "109": {
+      "black_white_conjugate": 73,
+      "reflection": 109,
+      "reflection_symmetric": true
+    },
+    "73": {
+      "black_white_conjugate": 109,
+      "reflection": 73,
+      "reflection_symmetric": true
+    }
+  },
+  "rules": [
+    73,
+    109
+  ],
+  "source_record_count": 221,
+  "unique_temporal_motifs": 25,
+  "word_length_counts": {
+    "2": 1,
+    "3": 1,
+    "4": 1,
+    "5": 2,
+    "6": 8,
+    "7": 45,
+    "8": 163
+  }
+}
