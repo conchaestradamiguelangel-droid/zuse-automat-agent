@@ -9,12 +9,15 @@ model participates in world selection, law evaluation, scoring, or acceptance.
 
 ## Preprint
 
-**Latest: v1.3** — Primitive period-8 background sweep: 23 new rule/type pairs, periods up to T=15, and speed-2/3 gliders.
+**Latest: v1.4** — Strict co-translation validation and anatomy of the
+stationary T=15 oscillator family.
 
+- v1.4 DOI: [10.5281/zenodo.20767477](https://doi.org/10.5281/zenodo.20767477)
 - v1.3 DOI: [10.5281/zenodo.20753499](https://doi.org/10.5281/zenodo.20753499)
 - v1.2 DOI: [10.5281/zenodo.20738025](https://doi.org/10.5281/zenodo.20738025)
 - v1.1 DOI: [10.5281/zenodo.20687470](https://doi.org/10.5281/zenodo.20687470)
 - v1.0 DOI: [10.5281/zenodo.20516375](https://doi.org/10.5281/zenodo.20516375)
+- v1.4 series DOI: [10.5281/zenodo.20767476](https://doi.org/10.5281/zenodo.20767476)
 - v1.3 series DOI: [10.5281/zenodo.20753498](https://doi.org/10.5281/zenodo.20753498)
 - Previous-series DOI (v1.2 and earlier): [10.5281/zenodo.20738024](https://doi.org/10.5281/zenodo.20738024)
 - PDF: [paper/zuse_preprint.pdf](paper/zuse_preprint.pdf)
@@ -80,8 +83,8 @@ regenerated from the commands in the reproducibility guide.
 
 ```text
 Concha Estrada, M. A. (2026). ZUSE Automat Agent: Empirical Law Discovery in
-Elementary Cellular Automata (v1.3). Zenodo.
-https://doi.org/10.5281/zenodo.20753499
+Elementary Cellular Automata (v1.4). Zenodo.
+https://doi.org/10.5281/zenodo.20767477
 ```
 
 ## License
