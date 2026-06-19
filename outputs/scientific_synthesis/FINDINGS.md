@@ -623,17 +623,43 @@ Background phase dependence:
 
 A rotation sub-test sampled 10 rules and applied all 8 rotations of their
 canonical background with the IC fixed. Results: 0/10 rotationally robust,
-10/10 phase-dependent. Two sensitivity regimes appeared:
+10/10 phase-dependent after circular-geometry correction. Representative
+sensitivity levels:
 
 - Near-robust (7/8 rotations active): rule_62 and rule_118
   (background `00000001`, T=3).
-- Strongly phase-sensitive (1/8 rotations active): rule_9, rule_65, rule_111,
-  rule_125, and rule_45.
+- Moving cases: rule_9 and rule_65 activate in 6/8 phases, rule_125 in 5/8,
+  and rule_111 and rule_45 in 2/8.
 
 This test varies background phase with the IC fixed. It measures alignment
-sensitivity, not an observer translation artifact. A strictly
-observer-equivariant test would co-translate both background and IC; that test
-has not been applied and remains open.
+sensitivity rather than pure translation. The original linear-shape observer
+underestimated several moving-rule counts because cyclic boundary crossings
+were rejected.
+
+### Strict co-translation test (Fase 25)
+
+Fase 25 co-translated both the periodic background and IC through `k=0..7` for
+the same 10 cases (80 runs), preserving their relative alignment exactly.
+
+Results:
+
+- Background initial states: 80/80 exact translations.
+- Full 301-frame background orbits: 80/80 exact translations.
+- Initial XOR perturbations: 80/80 exact translations.
+- Full 301-frame XOR perturbation orbits: 80/80 exact translations.
+- Original `linear_shape` signature recovery: 58/80 runs, 5/10 cases.
+- Failure mechanism: 22/22 misses are `cyclic_wrap_linearization`; localized
+  moving differences straddle positions 255 and 0, producing a false linear
+  span near 255.
+- Circular shape canonicalization (cut at the largest empty arc and unwrap
+  position continuously): 80/80 signatures, 10/10 cases.
+
+Conclusion: the ECA physics and differential recurrence detector are
+co-translation equivariant when cyclic geometry is represented correctly. The
+observed failures are a boundary artifact of `linear_shape`, not a failure of
+the simulator or physical phase relation. Reanalysis with circular geometry
+confirms that background-phase dependence remains real, while its severity for
+moving rules was overstated by the linear observer.
 
 Scientific reading: period-8 primitive backgrounds enlarge the oscillator
 landscape relative to shorter backgrounds. The three Fase-24 questions are

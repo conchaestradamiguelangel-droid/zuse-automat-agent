@@ -36,10 +36,11 @@ Compared with the previous length-1/2/4 background sweep, it finds:
 - new periods T=6, 8, 10, 12, and 15
 - a new glider speed: 2/3 cell per step (drift +/-2, T=3)
 
-A rotation sub-test shows background-phase dependence in all 10 sampled cases:
-some oscillators activate in 7/8 phases, while others require one specific
-phase (1/8). This measures physical IC/background alignment sensitivity; a
-strict observer-equivariance test would co-translate both IC and background.
+A rotation sub-test shows background-phase dependence in all 10 sampled cases.
+A subsequent strict co-translation test confirms exact physical equivariance
+in 80/80 runs after correcting cyclic boundary handling. Circular reanalysis
+revises several moving counts upward (for example, rule_9 and rule_65 from 1/8
+to 6/8), but no sampled case is active in all eight background phases.
 
 Earlier results remain unchanged: under quiescent zero background, rule_108 is
 the unique stationary local period-2 oscillator found under the tested
@@ -76,9 +77,10 @@ Results beyond the previous length-1/2/4 background sweep:
 - a new glider speed of 2/3 cell per step (drift +/-2, T=3)
 
 The T=15 result is reported as a non-trivial emergent period; no mechanism is
-claimed yet. A rotation test also finds strong background-phase dependence:
-near-robust cases activate in 7/8 phases, while strongly phase-sensitive cases
-activate in only 1/8.
+claimed yet. A strict co-translation test confirms exact physical equivariance
+in 80/80 runs after circularizing the shape representation. Background-phase
+dependence remains in all 10 sampled cases, although the original linear
+observer overstated sensitivity for moving rules.
 
 The quiescent-zero uniqueness claims remain unchanged.
 
@@ -120,9 +122,10 @@ whether these form reflection-conjugate pairs.
 T=15 is especially interesting because it is not divisible by the background
 period 8. I am reporting it as an emergent period without proposing a mechanism.
 
-All 10 sampled cases were background-phase dependent when the background was
-rotated with the IC held fixed. This measures alignment sensitivity, not by
-itself an observer artifact.
+All 10 sampled cases remain background-phase dependent after circular geometry
+correction. A strict co-translation test recovers 80/80 signatures, proving
+that the remaining dependence is alignment sensitivity rather than absolute
+position sensitivity.
 
 Preprint v1.3:
 https://doi.org/10.5281/zenodo.20753499
@@ -176,9 +179,11 @@ signature.
 
 ### Does phase dependence mean the observer is wrong?
 
-No. The rotation test holds the IC fixed while changing the background phase.
-It therefore measures physical alignment sensitivity. Testing observer
-translation equivariance requires co-translating both the IC and background.
+No. Fase 25 co-translates the IC and background and confirms 80/80 physical
+and corrected-detector matches. The original linear shape representation lost
+22 moving runs at the periodic boundary, but circular canonicalization restores
+them. The phase dependence that remains after correction is physical alignment
+sensitivity.
 
 ### Does v1.3 invalidate the rule_108 uniqueness result?
 

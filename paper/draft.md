@@ -47,7 +47,8 @@ and speed-0.5 gliders. Under 30 primitive length-8 binary backgrounds
 (3,855,360 runs), 23 further rule/type pairs appear, the observed period
 extends to T=15, and speed 2/3 cell/step is observed for the first time. Phase
 sensitivity is detected in all 10 sampled rules from the length-8 sweep; a
-strict IC/background co-translation equivariance test has not been applied.
+strict IC/background co-translation test confirms exact physical equivariance
+in 80/80 runs after correcting a cyclic-boundary artifact in `linear_shape`.
 
 Every result is reproducible from deterministic scripts with no stochastic
 components in the discovery loop.
@@ -1250,13 +1251,22 @@ not been verified from rule-table algebra and remains open.
 
 **Phase dependence.** A rotation sub-test applied all 8 rotations of the
 canonical background to 10 sampled rules while holding the IC fixed. None of
-the 10 samples was active in all eight rotations. `rule_62` and `rule_118`
-activate in 7 of 8 background rotations; `rule_9`, `rule_65`, `rule_111`,
-`rule_125`, and `rule_45` activate in 1 of 8. This phase dependence indicates
-that the IC requires a particular alignment with the background to nucleate
-the oscillator. It is a physical constraint, not by itself an observer
-translation artifact. A strict observer-equivariance test would co-translate
-both IC and background; that test has not been applied.
+the 10 samples is active in all eight rotations after circular-geometry
+correction. `rule_62` and `rule_118` activate in 7 of 8 background rotations;
+moving cases range from 6/8 (`rule_9`, `rule_65`) to 2/8 (`rule_111`,
+`rule_45`). The IC therefore requires a particular alignment with the
+background to nucleate the oscillator.
+
+**Co-translation test (Fase 25).** A strict test co-translates both background
+and IC through `k=0..7` for the same 10 cases. The background and XOR
+perturbation orbits are exact translations in 80/80 runs. The original
+`linear_shape` preprocessing recovers only 58/80 signatures: 22 moving runs
+cross positions 255/0, causing a false linear span and rejection. Circular
+shape canonicalization (largest-gap cut plus continuous position unwrapping)
+recovers 80/80 signatures and all 10/10 cases. Thus the physics and recurrence
+detector are co-translation equivariant once cyclic geometry is represented
+correctly. The remaining fixed-IC phase dependence is physical, although the
+linear observer overstated its severity for moving rules.
 
 **Summary.** All three Fase-24 questions are answered affirmatively:
 period-8 backgrounds introduce 4 new stationary rules and 19 new moving
@@ -1329,6 +1339,13 @@ to where structure boundaries fall on the lattice. The result is a
 position-dependent count that is not a translation-equivariant physical
 observable.
 
+Fase 25 isolates a second instance of the same geometric failure mode in the
+local-oscillator detector. Co-translated background and XOR perturbation orbits
+are identical in 80/80 runs, but `linear_shape` loses 22 moving signatures when
+the localized difference straddles positions 255 and 0. Circular
+canonicalization restores 80/80 signatures. This directly attributes the
+non-equivariance to linear treatment of a periodic lattice.
+
 ### 8.3 Implications for the atlas
 
 Both artifacts are bounded in their effect:
@@ -1390,10 +1407,12 @@ oscillator under this protocol. It is not a claim about ECA oscillators in
 general.
 
 The period-8 background sweep (Section 7.7) is also bounded by background
-phase. Its rotation sub-test holds the IC fixed while rotating the background,
-so it measures IC/background alignment sensitivity rather than observer
-translation equivariance. A strict equivariance test would co-translate both
-the IC and the background and remains open.
+phase. Fase 25 completed the strict co-translation test: the physical orbits
+are exact translations in 80/80 runs, while the original linear observer
+recovers 58/80 signatures because of cyclic boundary crossings. Circular
+canonicalization recovers 80/80. Fixed-IC phase dependence remains in all 10
+sampled cases after correction, so it is physical alignment sensitivity rather
+than pure observer non-equivariance.
 
 ### 9.4 Empirical atlas, not axiomatic classification
 
@@ -1473,8 +1492,9 @@ Several controlled extensions have now been completed:
   binary necklaces (3,855,360 runs) found 4 new stationary rules, 19 new
   moving rules, five new period classes (T=6, 8, 10, 12, 15), and a new glider
   speed (2/3 cell/step, T=3). All 10 sampled results were background-phase
-  dependent; a strict co-translation equivariance test remains open. Full
-  results are in Section 7.7.
+  dependent after circular-geometry correction. Fase 25 confirms exact
+  co-translation equivariance in 80/80 runs with circular shape
+  canonicalization. Full results are in Section 7.7.
 
 Each extension is a controlled experiment with the same measurement protocol;
 only the IC or background definition changes.
