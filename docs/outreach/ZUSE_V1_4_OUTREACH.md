@@ -10,6 +10,11 @@ Canonical links:
 - v1.3 series: https://doi.org/10.5281/zenodo.20753498
 - GitHub: https://github.com/conchaestradamiguelangel-droid/zuse-automat-agent
 
+Series note: Zenodo assigned v1.4 to concept DOI `20767476`, independently
+from the v1.3 concept DOI `20753498`, because of how the new version was
+created from the newer standalone record. Both series are retained explicitly
+in the project metadata.
+
 ## Show HN Draft
 
 Title:
