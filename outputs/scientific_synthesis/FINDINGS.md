@@ -694,6 +694,43 @@ This establishes `T=15` as a persistent, background-locked oscillator family,
 not a one-run accident. The rule-table derivation of the five-to-one locking
 mechanism remains open.
 
+### Five-state locking mechanism (Fase 27)
+
+**Protocol.** Each of the 20 minimal `T=15` representatives from Fase 26 is
+simulated at width 256. After burn-in, the localized XOR defect
+`D(t) = X(t) XOR B(t)` is sampled at `t = 81 + 3k` for `k=0..20`, covering
+four complete candidate five-cycles. Acceptance requires all eight checks:
+the background returns to the exact same phase at every sample; the first five
+defect states are mutually distinct; the fifth transition closes the cycle;
+the minimal cycle under `F^3` has length five; four consecutive cycles repeat
+in both canonical and raw-position encodings; transitions are deterministic
+across cycles; and the oscillator is stationary over each local period.
+
+**Results - 20/20 representatives (gate: positive).**
+
+- Background returns to exact phase every 3 steps: 20/20.
+- Five sampled defect states `S0..S4` are mutually distinct: 20/20.
+- Minimal cycle under `F^3` has length five: 20/20.
+- Four consecutive cycles are identical in canonical and raw encodings: 20/20.
+- Deterministic transitions are consistent across cycles: 20/20.
+- All 20 oscillators are stationary (`drift=0`).
+
+**Established mechanism.** Each background period (`T_bg=3` steps) advances
+the defect by exactly one node in a five-cycle under `F^3`. Five background
+periods are necessary and sufficient to complete the defect cycle, yielding
+`T_local = 5 * T_bg = 15`. The 5:1 ratio is therefore the cycle length of the
+defect under `F^3`, not a coincidence of spatial parameters.
+
+**Open.** The five defect states have not been reduced to a closed-form
+symbolic identity from the rule-table algebra of `rule_73/rule_109`. The
+finite-state mechanism is established computationally; its symbolic
+derivation remains open.
+
+**Script.** `outputs/periodic_backgrounds_len8/analyze_locking_mechanism.py`
+
+**Outputs.** `locking_mechanism_results.jsonl`,
+`locking_mechanism_report.md`.
+
 Scientific reading: period-8 primitive backgrounds enlarge the oscillator
 landscape relative to shorter backgrounds. The three Fase-24 questions are
 answered affirmatively: new rules appear, new periods T>4 include T=15, and a

@@ -1312,6 +1312,38 @@ single numerical coincidence. They do not yet derive the five-to-one locking
 ratio from the `rule_73/rule_109` tables; that algebraic mechanism remains an
 open question.
 
+### 7.9 Five-state locking mechanism (Fase 27)
+
+Fase 26 measured `T_local/T_bg=5` across all 20 minimal `T=15`
+representatives but left the origin of that ratio open. Fase 27 closes the
+computational half of the question by tracking the localized XOR defect
+`D(t) = X(t) XOR B(t)` once per background period.
+
+**Protocol.** After burn-in, the defect is sampled at
+`t = 81 + k*T_bg` for `k=0..20`, covering four complete candidate
+five-cycles for each of the 20 minimal `(rule, background, IC)` witnesses from
+Fase 26. Acceptance requires eight simultaneous checks: the background returns
+to the exact same phase at every sample; the first five defect states are
+mutually distinct; the fifth transition closes the cycle; no shorter cycle
+under `F^3` explains the sequence; four consecutive cycles repeat in both
+canonical and raw-position encodings; transitions remain deterministic across
+cycles; and the oscillator is stationary over every local period.
+
+**Results.** All eight checks are satisfied for 20/20 representatives. Every
+`T=15` oscillator in the family is stationary (`drift=0`). The defect cycles
+through exactly five distinct states under `F^3`, the three-step evolution
+operator, and five applications of `F^3` are necessary and sufficient to
+restore the complete background-plus-defect configuration. The same result
+holds over four consecutive cycles in both relative-shape and absolute-position
+encodings.
+
+**Interpretation.** The locking ratio `T_local/T_bg=5` is the cycle length of
+the defect under `F^3`, not a resonance with the spatial background length 8.
+The result is a computational state-cycle derivation: it establishes the
+finite-state mechanism without reducing the five nodes to a closed-form
+symbolic identity over the rule-table algebra of `rule_73/rule_109`. That
+symbolic derivation remains open.
+
 ## 8. Observer Artifacts and Pipeline Equivariance
 
 The ZUSE pipeline contains two classes of observer artifact that the atlas
@@ -1458,6 +1490,14 @@ through step 900 and share a background temporal period of 3, but only 23/160
 background phases and 4/134 one-bit IC mutations retain `T=15`. The result is
 therefore robust in time and narrow in basin under the tested protocol.
 
+Fase 27 establishes the state-cycle mechanism of the 5:1 locking
+computationally. After burn-in, the localized defect `D(t) = X(t) XOR B(t)`
+cycles through exactly five distinct states under `F^3` across all 20 minimal
+representatives (Section 7.9). The 5:1 ratio is therefore the cycle length of
+the defect under the three-step operator, not a spatial resonance. The
+symbolic derivation of why this five-cycle appears in `rule_73/rule_109` but
+not in other rules over `T_bg=3` backgrounds remains open.
+
 ### 9.4 Empirical atlas, not axiomatic classification
 
 The world categories are induced from observed law signatures across a finite
@@ -1545,6 +1585,10 @@ Several controlled extensions have now been completed:
   lock at five times the background temporal period (`15/3`). The basin is
   narrow: 23/160 background phases and 4/134 one-bit IC mutations retain
   `T=15`. Full results are in Section 7.8.
+- **Five-state locking mechanism**: completed. The localized defect cycles
+  through five distinct states under `F^3`. The ratio
+  `T_local/T_bg=5` is the defect cycle length, confirmed in all 20 minimal
+  representatives. Full results are in Section 7.9.
 
 Each extension is a controlled experiment with the same measurement protocol;
 only the IC or background definition changes.
