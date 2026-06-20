@@ -52,6 +52,9 @@ in 80/80 runs after correcting a cyclic-boundary artifact in `linear_shape`.
 The `T=15` family is confined to the reflection-symmetric, black/white-conjugate
 pair `rule_73/rule_109`, locks at five times the background temporal period,
 and persists through step 900 in all 20 minimal rule/background representatives.
+Sampling the localized defect once per background period reveals a minimal
+five-state cycle under `F^3` in 20/20 representatives, establishing the
+computational mechanism of the measured 5:1 locking ratio.
 
 Every result is reproducible from deterministic scripts with no stochastic
 components in the discovery loop.
@@ -1241,8 +1244,8 @@ T=3). New moving rules are `rule_7`, `rule_9`, `rule_21`, `rule_25`,
 **New period classes.** Periods T=6, 8, 10, 12, and 15 appear for the first
 time; under backgrounds of length 1, 2, and 4 the maximum observed period was
 T=4. T=15 is a non-trivial period not divisible by the background length (8).
-No mechanism is claimed from the current data; it is reported as an emergent
-period requiring further investigation.
+Fase 24 reports it as an emergent period; Sections 7.8 and 7.9 subsequently
+identify its rule family and establish its five-state mechanism under `F^3`.
 
 **New glider speed.** Speed 2/3 cell/step (drift +/-2, T=3) is observed for
 the first time; the prior speed set was {0, 0.5, 1}. Representative cases are
@@ -1308,9 +1311,8 @@ Holding the IC fixed while rotating the background preserves `T=15` in only
 search window. The family is therefore temporally exact but basin-narrow.
 
 These results establish a persistent background-locked family rather than a
-single numerical coincidence. They do not yet derive the five-to-one locking
-ratio from the `rule_73/rule_109` tables; that algebraic mechanism remains an
-open question.
+single numerical coincidence. Fase 26 measures but does not explain the
+five-to-one locking ratio; Fase 27 addresses its finite-state mechanism next.
 
 ### 7.9 Five-state locking mechanism (Fase 27)
 
