@@ -4,12 +4,13 @@ Published preprint:
 
 - **Title:** ZUSE Automat Agent: Empirical Law Discovery in Elementary Cellular Automata
 - **Author:** Miguel Ángel Concha Estrada
-- **Version DOI:** https://doi.org/10.5281/zenodo.20767477
+- **Version DOI:** https://doi.org/10.5281/zenodo.20768585
+- **v1.5 series DOI:** https://doi.org/10.5281/zenodo.20768584
 - **v1.4 series DOI:** https://doi.org/10.5281/zenodo.20767476
 - **v1.3 series DOI:** https://doi.org/10.5281/zenodo.20753498
 - **Previous-series DOI (v1.2 and earlier):** https://doi.org/10.5281/zenodo.20738024
-- **Version:** v1.4
-- **Publication date:** 2026-06-19
+- **Version:** v1.5
+- **Publication date:** 2026-06-20
 - **License:** Creative Commons Attribution 4.0 International (CC BY 4.0)
 
 Local artifacts:
