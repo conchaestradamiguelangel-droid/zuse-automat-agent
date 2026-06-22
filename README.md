@@ -9,15 +9,17 @@ model participates in world selection, law evaluation, scoring, or acceptance.
 
 ## Preprint
 
-**Latest: v1.5** — Five-state mechanism of the stationary T=15 oscillator
-family under the three-step operator `F^3`.
+**Latest: v1.6** — Induced defect algebra, analytical black/white
+conjugation, and limits of sparse truth-table explanations.
 
+- v1.6 DOI: [10.5281/zenodo.20792051](https://doi.org/10.5281/zenodo.20792051)
 - v1.5 DOI: [10.5281/zenodo.20768585](https://doi.org/10.5281/zenodo.20768585)
 - v1.4 DOI: [10.5281/zenodo.20767477](https://doi.org/10.5281/zenodo.20767477)
 - v1.3 DOI: [10.5281/zenodo.20753499](https://doi.org/10.5281/zenodo.20753499)
 - v1.2 DOI: [10.5281/zenodo.20738025](https://doi.org/10.5281/zenodo.20738025)
 - v1.1 DOI: [10.5281/zenodo.20687470](https://doi.org/10.5281/zenodo.20687470)
 - v1.0 DOI: [10.5281/zenodo.20516375](https://doi.org/10.5281/zenodo.20516375)
+- v1.6 series DOI: [10.5281/zenodo.20792050](https://doi.org/10.5281/zenodo.20792050)
 - v1.5 series DOI: [10.5281/zenodo.20768584](https://doi.org/10.5281/zenodo.20768584)
 - v1.4 series DOI: [10.5281/zenodo.20767476](https://doi.org/10.5281/zenodo.20767476)
 - v1.3 series DOI: [10.5281/zenodo.20753498](https://doi.org/10.5281/zenodo.20753498)
@@ -85,8 +87,8 @@ regenerated from the commands in the reproducibility guide.
 
 ```text
 Concha Estrada, M. A. (2026). ZUSE Automat Agent: Empirical Law Discovery in
-Elementary Cellular Automata (v1.5). Zenodo.
-https://doi.org/10.5281/zenodo.20768585
+Elementary Cellular Automata (v1.6). Zenodo.
+https://doi.org/10.5281/zenodo.20792051
 ```
 
 ## License
