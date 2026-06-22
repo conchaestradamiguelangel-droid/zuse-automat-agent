@@ -54,7 +54,10 @@ pair `rule_73/rule_109`, locks at five times the background temporal period,
 and persists through step 900 in all 20 minimal rule/background representatives.
 Sampling the localized defect once per background period reveals a minimal
 five-state cycle under `F^3` in 20/20 representatives, establishing the
-computational mechanism of the measured 5:1 locking ratio.
+computational mechanism of the measured 5:1 locking ratio. The induced defect
+rule `delta_f(b,d)=f(b XOR d) XOR f(b)` further yields an exact analytical
+conjugation identity between `rule_73` and `rule_109`; exhaustive checks reject
+a fixed sparse truth-table support as the universal source of the cycle.
 
 Every result is reproducible from deterministic scripts with no stochastic
 components in the discovery loop.
@@ -1346,6 +1349,45 @@ finite-state mechanism without reducing the five nodes to a closed-form
 symbolic identity over the rule-table algebra of `rule_73/rule_109`. That
 symbolic derivation remains open.
 
+### 7.10 Induced defect rule and exact conjugation (Fase 28)
+
+Fase 28 examines the local algebra inside the five-state cycle. A localized
+XOR defect does not evolve under the original ECA rule `f` in isolation. If
+`b` is a three-bit background neighborhood and `d` its XOR-defect
+neighborhood, the exact induced update is
+
+`delta_f(b,d) = f(b XOR d) XOR f(b)`.
+
+The analysis profiles this induced rule over all 300 microsteps contained in
+the 100 `F^3` edges from the 20 minimal representatives.
+
+**Analytical conjugation.** Let `C` denote bitwise complementation. Since
+`rule_109` is the black/white conjugate of `rule_73`, their global maps satisfy
+`F_109(C(X)) = C(F_73(X))`. If both the full state and background are
+complemented, induction gives `X_109(t)=C(X_73(t))` and
+`B_109(t)=C(B_73(t))` for every `t`. Therefore:
+
+`D_109(t) = C(X_73(t)) XOR C(B_73(t)) = D_73(t)`.
+
+At local level, the equivalent identity is
+`delta_109(C(b),d) = delta_73(b,d)`. Thus the defect orbit is invariant, not
+complemented, under the simultaneous black/white conjugation. This statement
+is analytical; exhaustive checks over all 64 local `(b,d)` combinations and
+10/10 complemented orbit pairs serve as implementation validation.
+
+**Sparse-support hypothesis rejected.** Every one of the 100 `F^3`
+macro-transitions uses all eight ordinary truth-table entries in its causal
+defect cone. No single induced `(b,d)` key appears in every macro-transition.
+The five-cycle therefore cannot be explained by one fixed sparse subset of
+local entries.
+
+The negative result still exposes phase structure. The sizes of the induced-key
+intersections for transitions `S0->S1` through `S4->S0` are
+`[9,6,7,5,4]` for `rule_73` and `[11,11,10,9,8]` for `rule_109`. These
+signatures are rule-specific rather than universal. A closed-form derivation
+must therefore encode spatial phase or a higher-order block state, rather than
+truth-table entry presence alone.
+
 ## 8. Observer Artifacts and Pipeline Equivariance
 
 The ZUSE pipeline contains two classes of observer artifact that the atlas
@@ -1500,6 +1542,12 @@ the defect under the three-step operator, not a spatial resonance. The
 symbolic derivation of why this five-cycle appears in `rule_73/rule_109` but
 not in other rules over `T_bg=3` backgrounds remains open.
 
+Fase 28 proves the black/white conjugation of the defect dynamics analytically
+and verifies it exhaustively at local and orbit levels (Section 7.10). It also
+rules out one tempting simplification: no fixed sparse subset of induced local
+transitions is shared by all 100 `F^3` edges. The remaining symbolic problem
+requires phase-aware or higher-order block variables.
+
 ### 9.4 Empirical atlas, not axiomatic classification
 
 The world categories are induced from observed law signatures across a finite
@@ -1591,6 +1639,12 @@ Several controlled extensions have now been completed:
   through five distinct states under `F^3`. The ratio
   `T_local/T_bg=5` is the defect cycle length, confirmed in all 20 minimal
   representatives. Full results are in Section 7.9.
+- **Induced defect algebra**: partial. The exact law
+  `delta_f(b,d)=f(b XOR d) XOR f(b)` proves that the `rule_73` and `rule_109`
+  defect orbits are identical under simultaneous black/white conjugation.
+  Profiling all 100 `F^3` edges rejects a universal sparse-entry explanation
+  and points instead to spatial phase or higher-order block states. Full
+  results are in Section 7.10.
 
 Each extension is a controlled experiment with the same measurement protocol;
 only the IC or background definition changes.

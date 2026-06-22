@@ -731,6 +731,47 @@ derivation remains open.
 **Outputs.** `locking_mechanism_results.jsonl`,
 `locking_mechanism_report.md`.
 
+### Induced defect rule and exact conjugation (Fase 28)
+
+Fase 28 analyzes all 300 microsteps inside the 100 `F^3` edges from Fase 27.
+The relevant local law is not the original ECA rule alone. For background
+neighborhood `b` and XOR-defect neighborhood `d`, the defect obeys:
+
+`delta_f(b,d) = f(b XOR d) XOR f(b)`.
+
+**Analytical result.** Let `C` denote bitwise complementation. Since
+`rule_109` is the black/white conjugate of `rule_73`,
+`F_109(C(X)) = C(F_73(X))`. Simultaneously complementing the full state and
+background therefore gives, by induction,
+`X_109(t)=C(X_73(t))` and `B_109(t)=C(B_73(t))`. Hence:
+
+`D_109(t) = C(X_73(t)) XOR C(B_73(t)) = D_73(t)`.
+
+Equivalently,
+`delta_109(C(b),d) = delta_73(b,d)`. This is an analytical identity, not an
+empirical generalization. The script confirms all 64 local `(b,d)` cases and
+10/10 complemented orbit pairs as implementation sanity checks.
+
+**Rejected sparse-support hypothesis.** Every one of the 100 `F^3` edges uses
+all eight ordinary rule entries in its causal defect cone. No single induced
+`(b,d)` key appears in all 100 edges. Therefore, the five-cycle is not driven
+by one fixed sparse subset of truth-table entries.
+
+Non-trivial phase-specific intersections remain within each rule:
+
+- `rule_73`: intersection sizes `[9, 6, 7, 5, 4]` for `S0->S1` through
+  `S4->S0`.
+- `rule_109`: intersection sizes `[11, 11, 10, 9, 8]`.
+
+These signatures are rule-specific rather than universal. A future symbolic
+derivation must encode spatial phase or a higher-order block state; entry
+presence alone is insufficient.
+
+**Script.** `outputs/periodic_backgrounds_len8/analyze_symbolic_locking.py`
+
+**Outputs.** `symbolic_locking_results.json`,
+`symbolic_locking_report.md`.
+
 Scientific reading: period-8 primitive backgrounds enlarge the oscillator
 landscape relative to shorter backgrounds. The three Fase-24 questions are
 answered affirmatively: new rules appear, new periods T>4 include T=15, and a

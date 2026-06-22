@@ -10,8 +10,8 @@ The defect does not evolve under `f` alone. For a background neighborhood
 All three microsteps of each of the five `F^3` transitions are profiled
 for all 20 minimal T=15 representatives.
 
-**Status:** `PARTIAL` - exact conjugation is established, while the
-proposed sparse universal-entry explanation is rejected.
+**Status:** `MIXED` - black/white conjugation is proved analytically,
+while the proposed sparse universal-entry explanation is rejected.
 
 ## Global support
 
@@ -27,6 +27,20 @@ single induced `(b,d)` key appears in all 100 macro-transitions. The
 original sparse-entry hypothesis is therefore rejected by the data.
 
 ## Black/white conjugation
+
+**Proposition.** Let `C` denote bitwise complementation. Because
+`rule_109` is the black/white conjugate of `rule_73`, their global
+maps satisfy `F_109(C(X)) = C(F_73(X))`. Therefore, if both the full
+state and background are complemented, induction gives
+`X_109(t)=C(X_73(t))` and `B_109(t)=C(B_73(t))` for every `t`.
+Consequently:
+
+`D_109(t) = C(X_73(t)) XOR C(B_73(t)) = D_73(t)`.
+
+Equivalently, the induced local rules obey the exact identity
+`delta_109(C(b),d) = delta_73(b,d)`. This is an analytical result;
+the exhaustive local and orbit checks below are implementation sanity
+checks rather than the basis of the proof.
 
 - Exact local identity `delta_109(complement(b),d) = delta_73(b,d)`: `64/64`.
 - Exact orbit-level conjugation tests: `10/10`.
@@ -64,7 +78,8 @@ backgrounds and between the conjugate rules. Their sizes by phase are:
 
 No non-empty induced transition key is shared by all 100 F^3 edges. Therefore the five-cycle is not driven by a fixed sparse subset of local table entries; it depends on phase- and background-specific spatial organization of the full induced defect rule. Independently, the exact identity delta_109(complement(b),d)=delta_73(b,d) predicts that every rule_73 defect orbit has an identical rule_109 orbit under simultaneous black/white complementation of background and full IC. One counterexample to either the 64-row local identity or the orbit mapping would falsify the conjugation claim.
 
-The positive result is the exact conjugation law. The negative result is
+The positive result is the analytically proved conjugation law. The
+negative result is
 equally informative: neither ordinary table-entry reduction nor one fixed
 induced-key support explains all five-cycle edges. A minimal Boolean
 derivation of the five-cycle must therefore encode spatial phase or a

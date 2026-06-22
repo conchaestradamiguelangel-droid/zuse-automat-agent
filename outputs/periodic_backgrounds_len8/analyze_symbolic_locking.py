@@ -395,8 +395,8 @@ def render_report(result: dict) -> str:
         "All three microsteps of each of the five `F^3` transitions are profiled",
         "for all 20 minimal T=15 representatives.",
         "",
-        "**Status:** `PARTIAL` - exact conjugation is established, while the",
-        "proposed sparse universal-entry explanation is rejected.",
+        "**Status:** `MIXED` - black/white conjugation is proved analytically,",
+        "while the proposed sparse universal-entry explanation is rejected.",
         "",
         "## Global support",
         "",
@@ -417,6 +417,20 @@ def render_report(result: dict) -> str:
         "original sparse-entry hypothesis is therefore rejected by the data.",
         "",
         "## Black/white conjugation",
+        "",
+        "**Proposition.** Let `C` denote bitwise complementation. Because",
+        "`rule_109` is the black/white conjugate of `rule_73`, their global",
+        "maps satisfy `F_109(C(X)) = C(F_73(X))`. Therefore, if both the full",
+        "state and background are complemented, induction gives",
+        "`X_109(t)=C(X_73(t))` and `B_109(t)=C(B_73(t))` for every `t`.",
+        "Consequently:",
+        "",
+        "`D_109(t) = C(X_73(t)) XOR C(B_73(t)) = D_73(t)`.",
+        "",
+        "Equivalently, the induced local rules obey the exact identity",
+        "`delta_109(C(b),d) = delta_73(b,d)`. This is an analytical result;",
+        "the exhaustive local and orbit checks below are implementation sanity",
+        "checks rather than the basis of the proof.",
         "",
         f"- Exact local identity "
         f"`delta_109(complement(b),d) = delta_73(b,d)`: "
@@ -467,7 +481,8 @@ def render_report(result: dict) -> str:
             "",
             aggregate_result["hypothesis"],
             "",
-            "The positive result is the exact conjugation law. The negative result is",
+        "The positive result is the analytically proved conjugation law. The",
+        "negative result is",
             "equally informative: neither ordinary table-entry reduction nor one fixed",
             "induced-key support explains all five-cycle edges. A minimal Boolean",
             "derivation of the five-cycle must therefore encode spatial phase or a",
@@ -492,10 +507,10 @@ def main() -> None:
     profiles = [profile_representative(base, representative) for representative in representatives]
     conjugation = conjugation_tests(base, representatives)
     result = {
-        "status": "PARTIAL",
+        "status": "MIXED",
         "summary": (
-            "Exact black/white conjugation established; sparse universal-entry "
-            "explanation rejected."
+            "Black/white defect conjugation proved analytically and checked "
+            "computationally; sparse universal-entry explanation rejected."
         ),
         "representatives": profiles,
         "aggregate": aggregate(profiles, conjugation),

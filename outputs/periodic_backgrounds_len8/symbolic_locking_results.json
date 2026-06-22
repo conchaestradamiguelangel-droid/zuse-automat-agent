@@ -20883,6 +20883,6 @@
       ]
     }
   ],
-  "status": "PARTIAL",
-  "summary": "Exact black/white conjugation established; sparse universal-entry explanation rejected."
+  "status": "MIXED",
+  "summary": "Black/white defect conjugation proved analytically and checked computationally; sparse universal-entry explanation rejected."
 }
