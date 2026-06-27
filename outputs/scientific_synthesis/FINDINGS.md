@@ -772,6 +772,70 @@ presence alone is insufficient.
 **Outputs.** `symbolic_locking_results.json`,
 `symbolic_locking_report.md`.
 
+### Block-locality limits (Fase 29)
+
+Fase 29 tests whether the T=15 five-state cycle can be described as either a
+pure defect-only dynamic or a fixed ordered local block. The input is the same
+20 minimal `rule_73/rule_109` representatives from Fase 27.
+
+For each representative, the canonical XOR-defect shape is sampled at
+`t = 81, 84, 87, 90, 93`. If the mechanism were background-independent, each
+phase would have one shared shape per rule. Instead:
+
+- `rule_73`: 8, 9, 9, 9, 9 distinct shapes across the five phases.
+- `rule_109`: 8, 8, 8, 8, 8 distinct shapes across the five phases.
+
+The ordered block scan uses the active defect span plus up to three padding
+cells on each side. No nontrivial shared block signature exists in any phase
+for either rule. The only exact shared length-1 tokens are trivial
+background-context tokens of the form `d000->0` across all three microsteps.
+The first divergence appears already at `W=0`, meaning the active defect span
+itself carries background-specific context before any exterior padding is
+added.
+
+**Verdict.** `NO_LOCAL_BLOCK_DERIVATION`. The T=15 mechanism is not reducible
+to one universal defect shape or one fixed local block signature. A derivation
+must encode background spatial phase, a larger state variable, or both.
+
+**Script.** `outputs/periodic_backgrounds_len8/analyze_phase_blocks.py`
+
+**Outputs.** `phase_blocks_results.json`, `phase_blocks_report.md`.
+
+### Background-indexed shape families (Fase 30)
+
+Fase 30 asks whether the background dependence found in Fase 29 is arbitrary
+or structured. Two five-state defect cycles are treated as equivalent if one
+is a cyclic phase rotation of the other.
+
+The 20 representatives collapse into a finite family map:
+
+- `rule_73`: 7 phase-rotated shape families, largest family size 3.
+- `rule_109`: 8 phase-rotated shape families, largest family size 3.
+- Global after merging exact phase-rotated cycles across both rules:
+  13 families.
+
+Two families are shared across the conjugate rules. One has size 3
+(two `rule_73` backgrounds and one `rule_109` background). A second has size 2:
+background `00110101` produces phase-rotationally equivalent defect cycles
+under both `rule_73` and `rule_109`. This is not a direct consequence of the
+black/white conjugation identity from Fase 28, because the bitwise complement
+of `00110101` is `11001010`, a distinct word.
+
+Simple background descriptors do not determine the shape family:
+`active_count`, `transition_count`, and `active_transition_pair` all leave
+ambiguous buckets. The canonical temporal orbit of the background under the
+same rule is exact in the representative set, but this mostly restates the
+full background orbit rather than giving a compact symbolic law.
+
+**Verdict.** `PARTIAL_POSITIVE`. The T=15 cycle is not one universal defect
+cycle, but neither is it arbitrary. The correct symbolic target is now sharper:
+map the temporal background orbit and IC alignment to one of 13 finite
+defect-cycle families plus a phase offset.
+
+**Script.** `outputs/periodic_backgrounds_len8/analyze_shape_families.py`
+
+**Outputs.** `shape_families_results.json`, `shape_families_report.md`.
+
 Scientific reading: period-8 primitive backgrounds enlarge the oscillator
 landscape relative to shorter backgrounds. The three Fase-24 questions are
 answered affirmatively: new rules appear, new periods T>4 include T=15, and a

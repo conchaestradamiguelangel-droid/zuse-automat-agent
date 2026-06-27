@@ -7,6 +7,13 @@ const root = path.resolve(__dirname, "..");
 const draftPath = path.join(__dirname, "draft.md");
 const htmlPath = path.join(__dirname, "zuse_preprint.html");
 const pdfPath = path.join(__dirname, "zuse_preprint.pdf");
+const fallbackChromiumPath = path.join(
+  process.env.LOCALAPPDATA || "",
+  "ms-playwright",
+  "chromium-1223",
+  "chrome-win64",
+  "chrome.exe"
+);
 
 function htmlEscape(text) {
   return text
@@ -152,7 +159,11 @@ ${body}
 fs.writeFileSync(htmlPath, html, "utf8");
 
 (async () => {
-  const browser = await chromium.launch({ headless: true });
+  const launchOptions = { headless: true };
+  if (fs.existsSync(fallbackChromiumPath)) {
+    launchOptions.executablePath = fallbackChromiumPath;
+  }
+  const browser = await chromium.launch(launchOptions);
   const page = await browser.newPage();
   await page.goto(`file://${htmlPath.replace(/\\/g, "/")}`, { waitUntil: "networkidle" });
   await page.pdf({

@@ -142,13 +142,34 @@ one-bit IC fragility spans from perfectly stable basins (<code>rule_208/209</cod
 <code>f_total = 0.000</code>) to exact fixture disruption (<code>life_blinker</code>, <code>f_total = 1.000</code>), with <code>rule_108</code> as the ECA outlier (<code>f_total = 0.992</code>, <code>f_gap = 0.945</code>). These cases separate three mechanistically distinct regimes:
 productive basin switching, noise-boundary crossing, and quiescent-background
 activation;
-(4) an exhaustive protocol over 128 quiescent ECA rules and 510 IC words per
+(4) an exhaustive protocol over 128 quiescent ECA rules and 502 non-zero IC words per
 rule confirms <code>rule_108</code> as the unique ECA rule producing stationary local
 period-2 oscillators; (5) designed periodic ICs activate production
 <code>periodicidad</code> in 207 of 256 ECA rules, showing that the law is IC-family
 sensitive rather than inaccessible; and (6) a controlled single-bit experiment
 demonstrates that ECA frames are translation-invariant while the observer/dedup
-pipeline is not, separating physical law from measurement artifact.</p>
+pipeline is not, separating physical law from measurement artifact; and (7)
+three progressive background-oscillator sweeps reveal that the local
+oscillator landscape is strongly background-conditioned. Under quiescent zero
+background, only <code>rule_108</code> (stationary, T=2) and eight rules (moving, T=2,
+speed 1 cell/step) produce local oscillators. Under non-zero periodic
+backgrounds of template length 1, 2, and 4 (1,927,680 runs), the landscape
+expands to 30 stationary and 36 moving rules, introducing period-4 oscillators
+and speed-0.5 gliders. Under 30 primitive length-8 binary backgrounds
+(3,855,360 runs), 23 further rule/type pairs appear, the observed period
+extends to T=15, and speed 2/3 cell/step is observed for the first time. Phase
+sensitivity is detected in all 10 sampled rules from the length-8 sweep; a
+strict IC/background co-translation test confirms exact physical equivariance
+in 80/80 runs after correcting a cyclic-boundary artifact in <code>linear_shape</code>.
+The <code>T=15</code> family is confined to the reflection-symmetric, black/white-conjugate
+pair <code>rule_73/rule_109</code>, locks at five times the background temporal period,
+and persists through step 900 in all 20 minimal rule/background representatives.
+Sampling the localized defect once per background period reveals a minimal
+five-state cycle under <code>F^3</code> in 20/20 representatives, establishing the
+computational mechanism of the measured 5:1 locking ratio. The induced defect
+rule <code>delta_f(b,d)=f(b XOR d) XOR f(b)</code> further yields an exact analytical
+conjugation identity between <code>rule_73</code> and <code>rule_109</code>; exhaustive checks reject
+a fixed sparse truth-table support as the universal source of the cycle.</p>
 <p>Every result is reproducible from deterministic scripts with no stochastic
 components in the discovery loop.</p>
 <h2>1. Introduction</h2>
@@ -207,7 +228,7 @@ stable basin (<code>rule_208/209</code>, <code>f_total = 0.000</code>), producti
 <code>f_gap = 0.945</code>).</p>
 </li>
 <li><p><strong><code>rule_108</code> as the unique stationary local-period-2 ECA oscillator</strong> —
-Under an exhaustive protocol (128 quiescent ECA rules, 510 IC words per
+Under an exhaustive protocol (128 quiescent ECA rules, 502 non-zero IC words per
 rule, span &lt;= 32, period &lt;= 16), <code>rule_108</code> is the only ECA rule that
 produces stationary local period-2 oscillators. The motif <code>#.# &lt;-&gt; ###</code>
 follows algebraically from <code>f(0,1,0) = f(1,0,1) = 1</code> and
@@ -796,6 +817,13 @@ for one of the positive families.</p>
 <p>This classification is intentionally operational. A world can be reclassified
 if a wider protocol produces different evidence; the atlas records what the
 current deterministic protocol has measured.</p>
+<p>The same principle applies to <code>frontera_temporal</code> candidates. Fase 20a found
+many additional ECA rules that are rich in <code>frontera_temporal</code> at the fixed
+sweep scale (<code>steps = 24</code>), but Fase 20b showed that the strongest four new
+candidates do not remain <code>frontera-rich-estable</code> under long-journal policy
+scaling. Fase 20c therefore treats <code>frontera-short-scale</code> as a candidate tier,
+not as an atlas-grade category. The atlas promotes worlds only when short-scale
+richness survives the broader validation protocol.</p>
 <h3>5.2 Law coverage</h3>
 <p>The law coverage matrix uses seven columns:</p>
 <pre><code class="language-text">velocidad_constante
@@ -1205,6 +1233,12 @@ because it identifies a specific observer-boundary mechanism.</p>
 <code>f_core</code> is therefore computed per seed against that seed&#39;s reference and then
 averaged.</p>
 <h3>6.4 Fragility spectrum</h3>
+<p>Fase 22 completes the physical fragility spectrum for all measured non-synthetic
+worlds in the atlas. Synthetic controls are excluded from <code>f_total</code> and
+<code>f_core</code> because they are frame generators rather than evolved systems with a
+perturbable initial condition. The completed spectrum includes ECA worlds,
+Life fixtures, stable-rich frontier worlds, noise-bounded productive pockets,
+and the designed <code>rule_108</code> local-oscillator IC.</p>
 <table>
 <thead>
 <tr>
@@ -1532,11 +1566,18 @@ but the minimal IC makes secondary laws highly sensitive to background
 activation.</p>
 <h4>Uniqueness</h4>
 <p>Fase 18 ran an exhaustive search over all 128 ECA rules with quiescent
-backgrounds (<code>f(0,0,0) = 0</code>), testing 510 IC words per rule (all non-empty
-binary words of length 1..8), with <code>width = 128</code>, <code>steps = 200</code>, and burn-in
-of 80 steps. Only <code>rule_108</code> produced local period-2 oscillators. No other
-rule produced any local oscillator under this protocol for periods <code>2..16</code> and
-span <code>&lt;= 32</code>.</p>
+backgrounds (<code>f(0,0,0) = 0</code>), testing 502 non-zero IC words per rule (all
+non-empty binary words of length 1..8), with <code>width = 128</code>, <code>steps = 200</code>,
+burn-in of 80 steps, and requiring zero drift (stationary oscillators only).
+Only <code>rule_108</code> produced stationary local period-2 oscillators; no other rule
+produced a stationary local oscillator for periods <code>2..16</code> and span <code>&lt;= 32</code>.</p>
+<p>A companion sweep with the stationarity requirement relaxed found a distinct
+family of moving local oscillators -- see Section 7.5.</p>
+<p>The longer-IC extension strengthens the same conclusion. Extending the
+stationary sweep to all 7,676 non-zero IC words of length 9..12
+(<code>982,528</code> rule/IC runs) produced 3,802 detections, all in <code>rule_108</code>. No new
+stationary oscillator rule appears beyond the length-1..8 baseline; the
+minimum witness is still the embedded <code>101</code> motif (<code>000000101</code> at length 9).</p>
 <p>The family is internal to <code>rule_108</code>: 132 out of 179 candidate IC words are
 accepted by the production observer as <code>periodicidad</code>, with oscillator spans
 3, 5, 6, 7, and 8. All confirmed oscillators have period exactly 2; no longer
@@ -1798,6 +1839,365 @@ a single broad, stable regime (<code>rule_46/208/209</code>).</p>
 It is rare in the original discovery atlas because the original world sequence
 under-sampled stable high-richness boundary worlds. In the full ECA sweep,
 <code>frontera_temporal</code> is a robust marker of the <code>frontera-rich-estable</code> family.</p>
+<h3>7.5 Moving Oscillator Family -- Minimal Period-2 Gliders</h3>
+<p>A companion sweep to Fase 18 searched all 128 quiescent ECA rules
+(<code>f(0,0,0) = 0</code>) for oscillators that translate at constant velocity. The
+detection protocol matched Fase 18 except: the zero-drift requirement was
+replaced by a requirement of constant non-zero drift confirmed over three
+consecutive periods; <code>width</code> was extended to <code>256</code> and <code>steps</code> to <code>300</code> to
+give moving patterns room to travel. The 502 non-zero IC words of length 1..8
+were tested per rule (64,256 total runs, 312 s).</p>
+<p>Eight rules produce moving oscillators: <code>rule_6</code>, <code>rule_20</code>, <code>rule_38</code>,
+<code>rule_52</code>, <code>rule_134</code>, <code>rule_148</code>, <code>rule_166</code>, <code>rule_180</code>. All share the same
+minimal glider pattern:</p>
+<table>
+<thead>
+<tr>
+<th>Step</th>
+<th>Active shape (normalized offsets)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>t</code></td>
+<td><code>[0]</code> -- single active cell</td>
+</tr>
+<tr>
+<td><code>t+1</code></td>
+<td><code>[0, 1]</code> -- two adjacent active cells</td>
+</tr>
+<tr>
+<td><code>t+2</code></td>
+<td><code>[0]</code> displaced by <code>+/-2</code></td>
+</tr>
+</tbody></table>
+<p>The oscillator alternates between one and two active cells while traveling at
+speed 1 cell per step -- the maximum velocity for a radius-1 ECA. Mean active
+span per period is 0.5 (alternating span 0 and span 1). All eight rules are
+confirmed <code>edge_touch = False</code> within <code>width = 256</code>.</p>
+<p><strong>Figure 6. Moving oscillator (glider) -- period T=2, speed 1.</strong></p>
+<pre><code class="language-text">rule_20 (drift +2)          rule_6 (drift -2)
+
+t=0:  . . . 1 . . . . .    . . . . . 1 . . .
+t=1:  . . . 1 1 . . . .    . . . . 1 1 . . .
+t=2:  . . . . . 1 . . .    . . . 1 . . . . .   &lt;- period boundary
+t=3:  . . . . . 1 1 . .    . . 1 1 . . . . .
+t=4:  . . . . . . . 1 .    . 1 . . . . . . .   &lt;- period boundary
+</code></pre>
+<p>Active cells shown as <code>1</code>, quiescent background as <code>.</code>. Each period advances
+the pattern two positions in the travel direction.</p>
+<p><img src="figures/fig6_moving_oscillator.png" alt="Figure 6. Moving oscillator glider diagram."></p>
+<h4>Structure: four mirror pairs</h4>
+<p>The eight rules form four left-right symmetric pairs:</p>
+<table>
+<thead>
+<tr>
+<th>Left-moving</th>
+<th>Right-moving</th>
+<th><code>b5</code></th>
+<th><code>b7</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>rule_6</code></td>
+<td><code>rule_20</code></td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td><code>rule_38</code></td>
+<td><code>rule_52</code></td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td><code>rule_134</code></td>
+<td><code>rule_148</code></td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td><code>rule_166</code></td>
+<td><code>rule_180</code></td>
+<td>1</td>
+<td>1</td>
+</tr>
+</tbody></table>
+<p>Bits <code>b5</code> (neighborhood <code>101</code>) and <code>b7</code> (neighborhood <code>111</code>) vary across the
+family but do not participate in the glider cycle: neither neighborhood occurs
+during quiescent travel with a two-cell active pattern. The eight rules are
+therefore a single physical family parametrized by two inactive bit choices
+and the left-right direction.</p>
+<h4>Contrast with <code>rule_108</code></h4>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th><code>rule_108</code></th>
+<th>Moving family</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Drift per period</td>
+<td>0</td>
+<td>+/-2</td>
+</tr>
+<tr>
+<td>Period <code>T</code></td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Mean active span</td>
+<td>~2</td>
+<td>0.5</td>
+</tr>
+<tr>
+<td>Speed</td>
+<td>0 (stationary)</td>
+<td>1 (maximum)</td>
+</tr>
+<tr>
+<td>Rules in scope</td>
+<td>1</td>
+<td>8 (4 mirror pairs)</td>
+</tr>
+</tbody></table>
+<p>The two families do not overlap. <code>rule_108</code> does not appear among the eight
+moving rules, and none of the eight moving rules produce stationary local
+oscillators under Fase 18. Together, the two sweeps partition the quiescent
+local oscillator landscape into a unique stationary oscillator (<code>rule_108</code>) and
+a unique minimal glider family (8 rules, 4 mirror pairs).</p>
+<h4>Uniqueness within the protocol</h4>
+<p>No IC word of length 1..8 produced a moving oscillator with <code>T &gt; 2</code> or
+<code>|drift| != 2</code> in any quiescent rule. The minimal glider <code>[0] &lt;-&gt; [0, 1]</code> at
+period 2 and maximum speed is the only moving local oscillator family under
+this protocol.</p>
+<p>The longer-IC extension reaches the same result. Testing all 7,676 non-zero IC
+words of length 9..12 over all 128 quiescent rules (<code>982,528</code> rule/IC runs)
+produced 2,059 moving detections, all within the same eight-rule family. No
+new moving-oscillator rule appears. The minimal witnesses are still the old
+glider seeds embedded in longer words (<code>000000001</code> for right movers,
+<code>000000010</code> for left movers). The sweep also filtered 9,822 period-1 moving
+particle aliases across 32 rules; these are moving particles, not internal
+period-2 oscillators. Extensions to IC words longer than 12 remain open
+(Section 10.2). The non-zero background extension is reported in Section 7.6.</p>
+<h3>7.6 Periodic-background oscillator sweep</h3>
+<p>The two sweeps above restrict the background to quiescent zero cells. A third
+sweep tests whether replacing the background with a non-zero periodic tiling
+changes the oscillator landscape.</p>
+<p><strong>Protocol.</strong> All 256 ECA rules are tested against 15 unique non-zero periodic
+backgrounds with template lengths 1, 2, and 4. Each rule/background pair is
+tested against 502 non-zero IC words of length 1..8 centered in a width-256
+grid for 300 steps with 80 burn-in. The detector identifies exact recurrence
+of the localized difference between the perturbed run and the unperturbed
+background orbit; global background periodicity alone is not counted as a
+local oscillator. Total: 1,927,680 rule/background/IC runs, 122,253 candidate
+detections.</p>
+<p><strong>Result.</strong> Thirty rules produce stationary local oscillators under at least
+one non-zero periodic background; 36 rules produce moving oscillators. Of
+the 30 stationary rules, 29 are new relative to the zero-background baseline.
+Of the 36 moving rules, 28 are new.</p>
+<p>The following phenomena appear under non-zero backgrounds but not under the
+quiescent zero background:</p>
+<ul>
+<li><strong>Period-4 stationary oscillators.</strong> <code>rule_54</code> and <code>rule_147</code> produce
+stationary period-4 oscillators under <code>0001</code> background.</li>
+<li><strong>Period-4 moving oscillator.</strong> <code>rule_180</code> produces a T=4 glider with
+drift +4 under <code>0001</code> background (shapes <code>[0] -&gt; [0,1] -&gt; [0,2,3] -&gt; [0]</code>),
+distinct from its T=2 speed-1 glider under quiescent background.</li>
+<li><strong>Speed-0.5 gliders.</strong> Multiple rules (including <code>rule_3</code>, <code>rule_17</code>,
+<code>rule_27</code>, <code>rule_35</code>, <code>rule_39</code>) produce T=2 gliders with drift +/-1 under
+non-zero backgrounds, corresponding to 0.5 cells per step. Under quiescent
+zero background the only observed glider speed was 1 cell/step.</li>
+<li><strong><code>rule_108</code> under all-one background.</strong> <code>rule_108</code> appears in the
+stationary list with background <code>1</code> and the same motif <code>### / #.#</code> as
+the quiescent result, confirming that the rule_108 oscillator is intrinsic
+to the rule table.</li>
+</ul>
+<p><strong>Separation of regimes.</strong> The zero-background uniqueness claims (Sections 7.1
+and 7.5) are not contradicted: they describe the quiescent regime. Under zero
+background, the quiescent local oscillator space is sparse (1 stationary rule,
+8 moving rules); under non-zero periodic backgrounds, the landscape expands
+substantially (30 stationary, 36 moving) and includes period and speed classes
+absent from the quiescent regime. The two regimes should not be merged.</p>
+<h3>7.7 Period-8 background oscillator sweep (Fase 24)</h3>
+<p>A fourth oscillator sweep extended the periodic-background protocol to
+length-8 primitive binary backgrounds, testing three questions: do longer
+background periods introduce new oscillator rules, new period classes T&gt;4, or
+glider speeds outside {0, 0.5, 1}?</p>
+<p><strong>Protocol.</strong> All 256 ECA rules are tested against 30 primitive binary
+necklaces of length 8. A length-8 binary string is primitive if its minimal
+period is exactly 8; the necklace representative is the lexicographically
+smallest member of its rotation class. The count of 30 follows from Mobius
+inversion: <code>(2^8 - 2^4) / 8 = 30</code>. Each rule/background pair is tested against
+502 non-zero IC words of length 1..8 in a width-256 grid, 300 steps, 80
+burn-in. The differential detector and period search window (2..16, span &lt;=
+32) are unchanged from Section 7.6. Total: 3,855,360 runs.</p>
+<p><strong>Result.</strong> The sweep produces 323,872 candidate detections after filtering
+95,121 period-1 aliases. New stationary rules beyond the length-1/2/4
+baseline are <code>rule_62</code>, <code>rule_118</code>, <code>rule_131</code>, and <code>rule_145</code> (4 rules, all
+T=3). New moving rules are <code>rule_7</code>, <code>rule_9</code>, <code>rule_21</code>, <code>rule_25</code>,
+<code>rule_31</code>, <code>rule_45</code>, <code>rule_61</code>, <code>rule_65</code>, <code>rule_67</code>, <code>rule_75</code>, <code>rule_87</code>,
+<code>rule_88</code>, <code>rule_89</code>, <code>rule_101</code>, <code>rule_103</code>, <code>rule_111</code>, <code>rule_125</code>,
+<code>rule_173</code>, and <code>rule_229</code> (19 rules).</p>
+<p><strong>New period classes.</strong> Periods T=6, 8, 10, 12, and 15 appear for the first
+time; under backgrounds of length 1, 2, and 4 the maximum observed period was
+T=4. T=15 is a non-trivial period not divisible by the background length (8).
+Fase 24 reports it as an emergent period; Sections 7.8 and 7.9 subsequently
+identify its rule family and establish its five-state mechanism under <code>F^3</code>.</p>
+<p><strong>New glider speed.</strong> Speed 2/3 cell/step (drift +/-2, T=3) is observed for
+the first time; the prior speed set was {0, 0.5, 1}. Representative cases are
+<code>rule_9</code> (drift -2, T=3, background <code>00001001</code>) and <code>rule_65</code> (drift +2,
+T=3, background <code>00000001</code>). Two further rules with the same speed signature,
+<code>rule_111</code> and <code>rule_125</code>, appear in the candidate table. Direct rule-table
+reflection, <code>g(l,c,r) = f(r,c,l)</code>, confirms two exact left-right mirror pairs:
+<code>rule_9 &lt;-&gt; rule_65</code> and <code>rule_111 &lt;-&gt; rule_125</code>. The paired rules carry
+opposite drift signs with the same T=3 speed magnitude, giving the speed-2/3
+family the same left/right mirror structure as the speed-1 family in Section
+7.5.</p>
+<p><strong>Phase dependence.</strong> A rotation sub-test applied all 8 rotations of the
+canonical background to 10 sampled rules while holding the IC fixed. None of
+the 10 samples is active in all eight rotations after circular-geometry
+correction. <code>rule_62</code> and <code>rule_118</code> activate in 7 of 8 background rotations;
+moving cases range from 6/8 (<code>rule_9</code>, <code>rule_65</code>) to 2/8 (<code>rule_111</code>,
+<code>rule_45</code>). The IC therefore requires a particular alignment with the
+background to nucleate the oscillator.</p>
+<p><strong>Co-translation test (Fase 25).</strong> A strict test co-translates both background
+and IC through <code>k=0..7</code> for the same 10 cases. The background and XOR
+perturbation orbits are exact translations in 80/80 runs. The original
+<code>linear_shape</code> preprocessing recovers only 58/80 signatures: 22 moving runs
+cross positions 255/0, causing a false linear span and rejection. Circular
+shape canonicalization (largest-gap cut plus continuous position unwrapping)
+recovers 80/80 signatures and all 10/10 cases. Thus the physics and recurrence
+detector are co-translation equivariant once cyclic geometry is represented
+correctly. The remaining fixed-IC phase dependence is physical, although the
+linear observer overstated its severity for moving rules.</p>
+<p><strong>Summary.</strong> All three Fase-24 questions are answered affirmatively:
+period-8 backgrounds introduce 4 new stationary rules and 19 new moving
+rules, expand the period set to include T=6, 8, 10, 12, and 15, and introduce
+speed 2/3 cell/step as a new rational class. The zero-background uniqueness
+claims of Sections 7.1 and 7.5 are unaffected.</p>
+<h3>7.8 Anatomy of the T=15 family (Fase 26)</h3>
+<p>The longest period observed in Fase 24 was analyzed separately to determine
+whether it represented a single accidental witness or a coherent family.
+All 221 <code>T=15</code> detections are stationary and occur in only two rules:
+<code>rule_73</code> (123 detections) and <code>rule_109</code> (98). Both rules are left-right
+symmetric, and black/white conjugation maps each rule exactly to the other.
+The detections cover 14 primitive length-8 backgrounds, 20 rule/background
+pairs, and 25 temporal motifs up to cycle phase. The minimum witness is
+<code>rule_109</code> on background <code>00011001</code> with the two-cell IC word <code>01</code>.</p>
+<p><strong>Temporal locking.</strong> Every participating unperturbed background enters a
+temporal orbit of period <code>T_bg=3</code> (with transient length 0..2). The localized
+perturbation has fundamental period <code>T_local=15</code>, giving the same locking ratio
+<code>T_local/T_bg=5</code> in all 20 rule/background pairs. Thus <code>T=15</code> is not inherited
+directly from the spatial background length 8. Long-horizon reruns of one
+minimal witness per pair preserve exact recurrence through step 900 in 20/20
+cases; the detector scans upward from period 1 and therefore excludes smaller
+fundamental periods.</p>
+<p><strong>Basin width.</strong> Persistence in time does not imply robustness to initialization.
+Holding the IC fixed while rotating the background preserves <code>T=15</code> in only
+23/160 runs. One-bit mutations of the 20 minimal IC witnesses preserve it in
+4/134 runs. Most failed perturbations settle into shorter localized periods
+<code>T=3</code> or <code>T=6</code>; a small number produce <code>T=12</code> or no localized period in the
+search window. The family is therefore temporally exact but basin-narrow.</p>
+<p>These results establish a persistent background-locked family rather than a
+single numerical coincidence. Fase 26 measures but does not explain the
+five-to-one locking ratio; Fase 27 addresses its finite-state mechanism next.</p>
+<h3>7.9 Five-state locking mechanism (Fase 27)</h3>
+<p>Fase 26 measured <code>T_local/T_bg=5</code> across all 20 minimal <code>T=15</code>
+representatives but left the origin of that ratio open. Fase 27 closes the
+computational half of the question by tracking the localized XOR defect
+<code>D(t) = X(t) XOR B(t)</code> once per background period.</p>
+<p><strong>Protocol.</strong> After burn-in, the defect is sampled at
+<code>t = 81 + k*T_bg</code> for <code>k=0..20</code>, covering four complete candidate
+five-cycles for each of the 20 minimal <code>(rule, background, IC)</code> witnesses from
+Fase 26. Acceptance requires eight simultaneous checks: the background returns
+to the exact same phase at every sample; the first five defect states are
+mutually distinct; the fifth transition closes the cycle; no shorter cycle
+under <code>F^3</code> explains the sequence; four consecutive cycles repeat in both
+canonical and raw-position encodings; transitions remain deterministic across
+cycles; and the oscillator is stationary over every local period.</p>
+<p><strong>Results.</strong> All eight checks are satisfied for 20/20 representatives. Every
+<code>T=15</code> oscillator in the family is stationary (<code>drift=0</code>). The defect cycles
+through exactly five distinct states under <code>F^3</code>, the three-step evolution
+operator, and five applications of <code>F^3</code> are necessary and sufficient to
+restore the complete background-plus-defect configuration. The same result
+holds over four consecutive cycles in both relative-shape and absolute-position
+encodings.</p>
+<p><strong>Interpretation.</strong> The locking ratio <code>T_local/T_bg=5</code> is the cycle length of
+the defect under <code>F^3</code>, not a resonance with the spatial background length 8.
+The result is a computational state-cycle derivation: it establishes the
+finite-state mechanism without reducing the five nodes to a closed-form
+symbolic identity over the rule-table algebra of <code>rule_73/rule_109</code>. That
+symbolic derivation remains open.</p>
+<h3>7.10 Induced defect rule and exact conjugation (Fase 28)</h3>
+<p>Fase 28 examines the local algebra inside the five-state cycle. A localized
+XOR defect does not evolve under the original ECA rule <code>f</code> in isolation. If
+<code>b</code> is a three-bit background neighborhood and <code>d</code> its XOR-defect
+neighborhood, the exact induced update is</p>
+<p><code>delta_f(b,d) = f(b XOR d) XOR f(b)</code>.</p>
+<p>The analysis profiles this induced rule over all 300 microsteps contained in
+the 100 <code>F^3</code> edges from the 20 minimal representatives.</p>
+<p><strong>Analytical conjugation.</strong> Let <code>C</code> denote bitwise complementation. Since
+<code>rule_109</code> is the black/white conjugate of <code>rule_73</code>, their global maps satisfy
+<code>F_109(C(X)) = C(F_73(X))</code>. If both the full state and background are
+complemented, induction gives <code>X_109(t)=C(X_73(t))</code> and
+<code>B_109(t)=C(B_73(t))</code> for every <code>t</code>. Therefore:</p>
+<p><code>D_109(t) = C(X_73(t)) XOR C(B_73(t)) = D_73(t)</code>.</p>
+<p>At local level, the equivalent identity is
+<code>delta_109(C(b),d) = delta_73(b,d)</code>. Thus the defect orbit is invariant, not
+complemented, under the simultaneous black/white conjugation. This statement
+is analytical; exhaustive checks over all 64 local <code>(b,d)</code> combinations and
+10/10 complemented orbit pairs serve as implementation validation.</p>
+<p><strong>Sparse-support hypothesis rejected.</strong> Every one of the 100 <code>F^3</code>
+macro-transitions uses all eight ordinary truth-table entries in its causal
+defect cone. No single induced <code>(b,d)</code> key appears in every macro-transition.
+The five-cycle therefore cannot be explained by one fixed sparse subset of
+local entries.</p>
+<p>The negative result still exposes phase structure. The sizes of the induced-key
+intersections for transitions <code>S0-&gt;S1</code> through <code>S4-&gt;S0</code> are
+<code>[9,6,7,5,4]</code> for <code>rule_73</code> and <code>[11,11,10,9,8]</code> for <code>rule_109</code>. These
+signatures are rule-specific rather than universal. A closed-form derivation
+must therefore encode spatial phase or a higher-order block state, rather than
+truth-table entry presence alone.</p>
+<h3>7.11 Block-locality limits and background-indexed shape families (Fase 29–30)</h3>
+<p>Section 7.10 concludes that a closed-form derivation of the five-cycle must
+encode spatial phase rather than truth-table entry presence alone. Fase 29 and
+Fase 30 test two complementary refinements of that conclusion.</p>
+<p><strong>Defect-shape locality (Fase 29).</strong> For each of the 20 minimal representatives
+and each of the five cycle phases, the canonical XOR-defect shape is computed
+at sample times <code>t = 81, 84, 87, 90, 93</code>. If the T=15 cycle were a pure
+defect-only dynamic, every background would produce the same canonical shape in
+each phase. Instead, <code>rule_73</code> produces 8–9 distinct shapes per phase across
+its 10 backgrounds, and <code>rule_109</code> produces 8. Extending the comparison window
+outward to fixed local blocks (active defect span plus up to three padding
+cells on each side) does not help: no nontrivial block signature is shared
+across all backgrounds in any phase. The <code>W=0</code> result in the block-signature
+scan shows that the active defect span itself already carries
+background-dependent context — no additional padding is needed before the
+discrimination occurs. Only the trivial token <code>d000-&gt;0</code> (background cells
+evolving to background under all three microsteps) is universal.</p>
+<p><strong>Shape families (Fase 30).</strong> Although the defect shapes are
+background-dependent, they are not unstructured. Treating two five-state cycles
+as equivalent when one is a cyclic phase rotation of the other, the 20
+representatives decompose into 7 distinct families for <code>rule_73</code> and 8 for
+<code>rule_109</code>, yielding 13 global families. The largest family has 3 members. Two
+families are shared across the conjugate rules: one of size 3 (two <code>rule_73</code>
+backgrounds and one <code>rule_109</code> background) and one of size 2 (background word
+<code>00110101</code> producing phase-rotationally equivalent defect cycles under both
+rules). This second coincidence is not implied by the analytical conjugation of
+Fase 28 — the bitwise complement of <code>00110101</code> is <code>11001010</code>, a distinct word
+— so it is an independent structural coincidence. Scalar background
+descriptors (<code>active_count</code>, <code>transition_count</code>, <code>active_transition_pair</code>) do
+not determine the family. The canonical temporal orbit of the background under
+the same rule is exact in this representative set, but this is largely a
+restatement of full background identity rather than a compact symbolic law.</p>
+<p><strong>Interpretation.</strong> Fase 29 and Fase 30 together bracket the derivation
+problem: a correct symbolic account must use the full temporal background orbit
+(or an equivalent compact encoding), and maps that orbit to one of a finite set
+of defect-cycle shapes plus a phase offset. A derivation predicting a single
+universal five-state cycle is falsified by Fase 29; a derivation predicting
+arbitrary unclustered shape variation is refuted by Fase 30.</p>
 <h2>8. Observer Artifacts and Pipeline Equivariance</h2>
 <p>The ZUSE pipeline contains two classes of observer artifact that the atlas
 identifies and characterizes. Framing these artifacts as results — not just
@@ -1902,6 +2302,12 @@ of cyclic-span structures varies depending on the absolute IC position relative
 to where structure boundaries fall on the lattice. The result is a
 position-dependent count that is not a translation-equivariant physical
 observable.</p>
+<p>Fase 25 isolates a second instance of the same geometric failure mode in the
+local-oscillator detector. Co-translated background and XOR perturbation orbits
+are identical in 80/80 runs, but <code>linear_shape</code> loses 22 moving signatures when
+the localized difference straddles positions 255 and 0. Circular
+canonicalization restores 80/80 signatures. This directly attributes the
+non-equivariance to linear treatment of a periodic lattice.</p>
 <h3>8.3 Implications for the atlas</h3>
 <p>Both artifacts are bounded in their effect:</p>
 <ul>
@@ -1943,12 +2349,49 @@ observers would be a meaningful improvement.</p>
 <h3>9.3 Bounded local oscillator protocol</h3>
 <p>The uniqueness claim for <code>rule_108</code> holds under a specific protocol: quiescent
 zero background, stationary exact periodicity (no drift), IC words of binary
-length 1..8 (510 non-zero words per rule), and period detection window 2..16
-with local span &lt;= 32. Moving oscillators, longer IC words, non-zero
-backgrounds, or longer detection periods are outside the current protocol. The
-claim is therefore: no other quiescent ECA rule produces a stationary
-local-period oscillator under this protocol. It is not a claim about ECA
-oscillators in general.</p>
+length 1..12 (502 words of length 1..8 plus 7,676 words of length 9..12), and
+period detection window 2..16 with local span &lt;= 32. IC words longer than 12
+or longer detection periods are outside the current stationary protocol. A
+separate periodic-background sweep (Section 7.6) confirms that non-zero
+backgrounds substantially change the oscillator landscape; those results define
+a different regime and do not apply to the zero-background uniqueness claim.
+Moving oscillators under quiescent zero background were
+searched in a companion sweep -- Section 7.5 reports the result. The claim is
+therefore: no other quiescent ECA rule produces a stationary local-period
+oscillator under this protocol. It is not a claim about ECA oscillators in
+general.</p>
+<p>The period-8 background sweep (Section 7.7) is also bounded by background
+phase. Fase 25 completed the strict co-translation test: the physical orbits
+are exact translations in 80/80 runs, while the original linear observer
+recovers 58/80 signatures because of cyclic boundary crossings. Circular
+canonicalization recovers 80/80. Fixed-IC phase dependence remains in all 10
+sampled cases after correction, so it is physical alignment sensitivity rather
+than pure observer non-equivariance.</p>
+<p>Fase 26 strengthens the longest-period result without converting it into a
+general theorem. All 20 minimal <code>T=15</code> rule/background representatives persist
+through step 900 and share a background temporal period of 3, but only 23/160
+background phases and 4/134 one-bit IC mutations retain <code>T=15</code>. The result is
+therefore robust in time and narrow in basin under the tested protocol.</p>
+<p>Fase 27 establishes the state-cycle mechanism of the 5:1 locking
+computationally. After burn-in, the localized defect <code>D(t) = X(t) XOR B(t)</code>
+cycles through exactly five distinct states under <code>F^3</code> across all 20 minimal
+representatives (Section 7.9). The 5:1 ratio is therefore the cycle length of
+the defect under the three-step operator, not a spatial resonance. The
+symbolic derivation of why this five-cycle appears in <code>rule_73/rule_109</code> but
+not in other rules over <code>T_bg=3</code> backgrounds remains open.</p>
+<p>Fase 28 proves the black/white conjugation of the defect dynamics analytically
+and verifies it exhaustively at local and orbit levels (Section 7.10). It also
+rules out one tempting simplification: no fixed sparse subset of induced local
+transitions is shared by all 100 <code>F^3</code> edges. The remaining symbolic problem
+requires phase-aware or higher-order block variables.</p>
+<p>Fase 29 and Fase 30 sharpen that boundary. The T=15 cycle is not a pure
+defect-only dynamic: canonical defect shapes are background-specific already at
+<code>W=0</code>, and no nontrivial fixed local block signature is shared across all
+backgrounds. But the variation is not arbitrary. The 20 representatives collapse
+into 13 phase-rotated defect-cycle families, including two families shared
+across <code>rule_73</code> and <code>rule_109</code>. The open problem is therefore not simply
+&quot;find the local rule&quot;; it is to map the temporal background orbit and IC
+alignment to a finite shape family and phase offset.</p>
 <h3>9.4 Empirical atlas, not axiomatic classification</h3>
 <p>The world categories are induced from observed law signatures across a finite
 number of seeds and step counts. A world classified as
@@ -1964,14 +2407,25 @@ were rich in <code>frontera_temporal</code> at sweep scale, but the top four fai
 long-journal validation. Category assignment is therefore protocol-scale
 dependent; short-scale richness is candidate evidence, not atlas-grade
 classification.</p>
-<h3>9.5 PySR symbolic regression pending</h3>
+<p>Fase 21 gives an analogous warning for <code>periodicidad</code>. With random ICs,
+production <code>periodicidad</code> is rare in ECA; with explicitly periodic IC families,
+it appears in <code>207/256</code> rules. The law is therefore not inaccessible to ECA,
+but it is strongly conditioned by the IC family. Atlas rows should be read as
+claims about a stated rule/IC/scale protocol, not as intrinsic properties of
+the rule table alone.</p>
+<h3>9.5 PySR symbolic regression -- negative result</h3>
 <p>The decision-tree analyses (Section 4, temporal calibration) provide strong
 empirical signal but not closed-form symbolic expressions. PySR was planned as
 a follow-up to produce interpretable formulas for the calibrated thresholds and
-fragility spectra. The Julia dependency required by PySR remains unresolved.
-Current conclusions rely on deterministic scripts and tree-based models. This
-does not affect the validity of the atlas findings, but the symbolic
-interpretation layer is incomplete.</p>
+fragility spectra. PySR 1.5.10 was subsequently unblocked. A full regression
+over 15 atlas worlds (five features: <code>mean_laws</code>, <code>peak_diversity</code>,
+<code>noise_ratio</code>, <code>non_empty_ratio</code>, <code>f_core</code>; target <code>f_total</code>; 40 iterations)
+produced a best expression of complexity 9 with <code>MSE = 0.035</code>, above the
+threshold for a paper-worthy finding. The dominant predictor is <code>f_core</code>; the
+residual is driven by <code>rule_108</code> as a structural outlier (<code>f_gap = 0.945</code>) that
+is not predictable from aggregate features without a mechanism feature. The
+symbolic layer remains incomplete, and this negative result is consistent with
+the <code>f_core</code>/<code>f_gap</code> separation documented in Section 6.</p>
 <h2>10. Next Work</h2>
 <h3>10.1 Symmetry-invariant observers</h3>
 <p>The two observer artifacts identified in Section 8 — <code>tipo_unico</code> mirror
@@ -1984,18 +2438,54 @@ stable across IC positions, strengthening the evidential basis for both the
 atlas and the fragility measurements.</p>
 <h3>10.2 Extended local oscillator search</h3>
 <p>The <code>rule_108</code> uniqueness result holds under the current stationary protocol
-(zero background, exact period, IC words of length &lt;= 8, span &lt;= 32). Three
-natural extensions remain:</p>
+(zero background, exact period, IC words of length &lt;= 12, span &lt;= 32).
+Several controlled extensions have now been completed:</p>
 <ul>
-<li><strong>Moving oscillators</strong>: relax the stationarity requirement to allow
-oscillators that translate at constant velocity (glider-like periodicity).</li>
-<li><strong>Longer IC words</strong>: extend the IC sweep from length 8 to length 12..16 to
-test whether longer seed patterns produce oscillators in rules that failed
-the length-8 protocol.</li>
-<li><strong>Non-zero backgrounds</strong>: replace the quiescent zero background with a
-uniform-one or periodic background to test whether <code>rule_108</code> retains its
-uniqueness or whether other rules enter the family under different
-background conditions.</li>
+<li><strong>Moving oscillators</strong>: completed. A companion sweep over all 128 quiescent
+rules found eight rules producing minimal period-2 speed-1 gliders (Section
+7.5). No longer-period or slower-speed moving oscillators were found under
+this protocol. The follow-up length-9..12 sweep found no additional
+stationary or moving oscillator rules.</li>
+<li><strong>Longer IC words beyond 12</strong>: extend the IC sweep from length 12 to length
+16 or beyond to test whether substantially wider seed patterns produce
+oscillators in rules that failed the length-12 protocol.</li>
+<li><strong>Non-zero backgrounds</strong>: completed. A sweep over 15 non-zero periodic
+backgrounds (template lengths 1, 2, 4) across all 256 rules and 502 IC
+words (1,927,680 runs) found that the periodic-background regime is
+substantially richer than the quiescent regime: 30 stationary rules,
+36 moving rules, including period-4 oscillators and speed-0.5 gliders not
+present under zero background. <code>rule_108</code> persists under all-one background
+with the same motif. Full results in Section 7.6.</li>
+<li><strong>Period-8 backgrounds</strong>: completed. A sweep over 30 primitive length-8
+binary necklaces (3,855,360 runs) found 4 new stationary rules, 19 new
+moving rules, five new period classes (T=6, 8, 10, 12, 15), and a new glider
+speed (2/3 cell/step, T=3). All 10 sampled results were background-phase
+dependent after circular-geometry correction. Fase 25 confirms exact
+co-translation equivariance in 80/80 runs with circular shape
+canonicalization. Full results are in Section 7.7.</li>
+<li><strong>T=15 anatomy</strong>: completed. All 221 detections belong to the
+reflection-symmetric, black/white-conjugate pair <code>rule_73/rule_109</code>. The 20
+minimal rule/background representatives remain exact through step 900 and
+lock at five times the background temporal period (<code>15/3</code>). The basin is
+narrow: 23/160 background phases and 4/134 one-bit IC mutations retain
+<code>T=15</code>. Full results are in Section 7.8.</li>
+<li><strong>Five-state locking mechanism</strong>: completed. The localized defect cycles
+through five distinct states under <code>F^3</code>. The ratio
+<code>T_local/T_bg=5</code> is the defect cycle length, confirmed in all 20 minimal
+representatives. Full results are in Section 7.9.</li>
+<li><strong>Induced defect algebra</strong>: partial. The exact law
+<code>delta_f(b,d)=f(b XOR d) XOR f(b)</code> proves that the <code>rule_73</code> and <code>rule_109</code>
+defect orbits are identical under simultaneous black/white conjugation.
+Profiling all 100 <code>F^3</code> edges rejects a universal sparse-entry explanation
+and points instead to spatial phase or higher-order block states. Full
+results are in Section 7.10.</li>
+<li><strong>Block locality and shape families</strong>: partial-positive. Fixed local
+defect blocks do not explain the T=15 cycle: the active defect already
+carries background-specific context at <code>W=0</code>, and no nontrivial shared block
+signature exists across all backgrounds. The variation is nevertheless
+finite: 20 representatives collapse into 13 phase-rotated shape families,
+with two families shared across the conjugate rules. Full results are in
+Section 7.11.</li>
 </ul>
 <p>Each extension is a controlled experiment with the same measurement protocol;
 only the IC or background definition changes.</p>
@@ -2003,25 +2493,35 @@ only the IC or background definition changes.</p>
 <p>The decision-tree calibration for <code>frontera_temporal</code> and
 <code>temporal_scale_stability</code> (Section 4) provides thresholds but not formulas.
 PySR symbolic regression on the fragility spectrum (<code>f_total</code>, <code>f_core</code>,
-<code>f_gap</code> as functions of rule properties and IC metrics) could yield
-interpretable expressions for why some worlds have wide basins and others do
-not. The Julia dependency required by PySR is the only technical blocker; the
-datasets are ready.</p>
+<code>f_gap</code> as functions of rule properties and IC metrics) is now technically
+available, but the first atlas-wide run did not produce a compact paper-worthy
+formula. The next useful symbolic-regression target would require mechanism
+features rather than aggregate atlas features alone.</p>
 <h3>10.4 Figures</h3>
-<p>The following five figures are planned for the preprint draft:</p>
+<p>The following six figures are planned for the preprint draft:</p>
 <ol>
-<li><strong>World taxonomy table</strong> — the full 20-world atlas with categories, law
-coverage symbols, and fragility columns, formatted as a paper-ready table.</li>
-<li><strong>Law coverage matrix</strong> — the <code>✓ / · / - / ?</code> matrix from
-<code>outputs/world_taxonomy/law_map.md</code>, rendered as a heatmap or binary grid.</li>
-<li><strong><code>f_total</code> / <code>f_core</code> spectrum</strong> — a two-axis scatter or bar chart showing
+<li><p><strong>World taxonomy table</strong> — the full 20-world atlas with categories, law
+coverage symbols, and fragility columns, formatted as a paper-ready table.</p>
+</li>
+<li><p><strong>Law coverage matrix</strong> — the <code>✓ / · / - / ?</code> matrix from
+<code>outputs/world_taxonomy/law_map.md</code>, rendered as a heatmap or binary grid.</p>
+</li>
+<li><p><strong><code>f_total</code> / <code>f_core</code> spectrum</strong> — a two-axis scatter or bar chart showing
 all measured worlds positioned by <code>f_total</code> and <code>f_core</code>, with the four
-fragility mechanisms labeled.</li>
-<li><strong><code>rule_108</code> oscillator motif</strong> — a space-time diagram of the <code>#.# &lt;-&gt; ###</code>
-two-step cycle, showing several periods on a quiescent background.</li>
-<li><strong><code>rule_54</code> gate and observer non-equivariance</strong> — a dual figure: the
+fragility mechanisms labeled.</p>
+</li>
+<li><p><strong><code>rule_108</code> oscillator motif</strong> — a space-time diagram of the <code>#.# &lt;-&gt; ###</code>
+two-step cycle, showing several periods on a quiescent background.</p>
+</li>
+<li><p><strong><code>rule_54</code> gate and observer non-equivariance</strong> — a dual figure: the
 Fase 13 noise-gate crossing diagram (reference dedup vs perturbed dedup)
-alongside the Fase 19 per-position dedup variation (15..24 across k=0..63).</li>
+alongside the Fase 19 per-position dedup variation (15..24 across k=0..63).</p>
+</li>
+<li><p><strong>Moving oscillator space-time diagram</strong> -- dual panel showing <code>rule_20</code>
+(right-moving) and <code>rule_6</code> (left-moving) over 8 time steps, with active
+cells dark and quiescent background light. Illustrates the <code>[0] &lt;-&gt; [0,1]</code>
+glider cycle and the <code>+/-2</code> drift per period.</p>
+</li>
 </ol>
 <h2>References</h2>
 <p>[Wolfram2002] Stephen Wolfram. <em>A New Kind of Science</em>. Wolfram Media,

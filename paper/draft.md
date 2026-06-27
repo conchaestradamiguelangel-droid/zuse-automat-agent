@@ -1388,6 +1388,49 @@ signatures are rule-specific rather than universal. A closed-form derivation
 must therefore encode spatial phase or a higher-order block state, rather than
 truth-table entry presence alone.
 
+### 7.11 Block-locality limits and background-indexed shape families (Fase 29–30)
+
+Section 7.10 concludes that a closed-form derivation of the five-cycle must
+encode spatial phase rather than truth-table entry presence alone. Fase 29 and
+Fase 30 test two complementary refinements of that conclusion.
+
+**Defect-shape locality (Fase 29).** For each of the 20 minimal representatives
+and each of the five cycle phases, the canonical XOR-defect shape is computed
+at sample times `t = 81, 84, 87, 90, 93`. If the T=15 cycle were a pure
+defect-only dynamic, every background would produce the same canonical shape in
+each phase. Instead, `rule_73` produces 8–9 distinct shapes per phase across
+its 10 backgrounds, and `rule_109` produces 8. Extending the comparison window
+outward to fixed local blocks (active defect span plus up to three padding
+cells on each side) does not help: no nontrivial block signature is shared
+across all backgrounds in any phase. The `W=0` result in the block-signature
+scan shows that the active defect span itself already carries
+background-dependent context — no additional padding is needed before the
+discrimination occurs. Only the trivial token `d000->0` (background cells
+evolving to background under all three microsteps) is universal.
+
+**Shape families (Fase 30).** Although the defect shapes are
+background-dependent, they are not unstructured. Treating two five-state cycles
+as equivalent when one is a cyclic phase rotation of the other, the 20
+representatives decompose into 7 distinct families for `rule_73` and 8 for
+`rule_109`, yielding 13 global families. The largest family has 3 members. Two
+families are shared across the conjugate rules: one of size 3 (two `rule_73`
+backgrounds and one `rule_109` background) and one of size 2 (background word
+`00110101` producing phase-rotationally equivalent defect cycles under both
+rules). This second coincidence is not implied by the analytical conjugation of
+Fase 28 — the bitwise complement of `00110101` is `11001010`, a distinct word
+— so it is an independent structural coincidence. Scalar background
+descriptors (`active_count`, `transition_count`, `active_transition_pair`) do
+not determine the family. The canonical temporal orbit of the background under
+the same rule is exact in this representative set, but this is largely a
+restatement of full background identity rather than a compact symbolic law.
+
+**Interpretation.** Fase 29 and Fase 30 together bracket the derivation
+problem: a correct symbolic account must use the full temporal background orbit
+(or an equivalent compact encoding), and maps that orbit to one of a finite set
+of defect-cycle shapes plus a phase offset. A derivation predicting a single
+universal five-state cycle is falsified by Fase 29; a derivation predicting
+arbitrary unclustered shape variation is refuted by Fase 30.
+
 ## 8. Observer Artifacts and Pipeline Equivariance
 
 The ZUSE pipeline contains two classes of observer artifact that the atlas
@@ -1548,6 +1591,15 @@ rules out one tempting simplification: no fixed sparse subset of induced local
 transitions is shared by all 100 `F^3` edges. The remaining symbolic problem
 requires phase-aware or higher-order block variables.
 
+Fase 29 and Fase 30 sharpen that boundary. The T=15 cycle is not a pure
+defect-only dynamic: canonical defect shapes are background-specific already at
+`W=0`, and no nontrivial fixed local block signature is shared across all
+backgrounds. But the variation is not arbitrary. The 20 representatives collapse
+into 13 phase-rotated defect-cycle families, including two families shared
+across `rule_73` and `rule_109`. The open problem is therefore not simply
+"find the local rule"; it is to map the temporal background orbit and IC
+alignment to a finite shape family and phase offset.
+
 ### 9.4 Empirical atlas, not axiomatic classification
 
 The world categories are induced from observed law signatures across a finite
@@ -1645,6 +1697,13 @@ Several controlled extensions have now been completed:
   Profiling all 100 `F^3` edges rejects a universal sparse-entry explanation
   and points instead to spatial phase or higher-order block states. Full
   results are in Section 7.10.
+- **Block locality and shape families**: partial-positive. Fixed local
+  defect blocks do not explain the T=15 cycle: the active defect already
+  carries background-specific context at `W=0`, and no nontrivial shared block
+  signature exists across all backgrounds. The variation is nevertheless
+  finite: 20 representatives collapse into 13 phase-rotated shape families,
+  with two families shared across the conjugate rules. Full results are in
+  Section 7.11.
 
 Each extension is a controlled experiment with the same measurement protocol;
 only the IC or background definition changes.
