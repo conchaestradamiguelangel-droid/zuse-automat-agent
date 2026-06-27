@@ -1,4 +1,4 @@
-# ZUSE Automat Agent
+﻿# ZUSE Automat Agent
 
 Deterministic empirical law discovery for elementary cellular automata (ECA).
 
@@ -9,9 +9,10 @@ model participates in world selection, law evaluation, scoring, or acceptance.
 
 ## Preprint
 
-**Latest: v1.6** — Induced defect algebra, analytical black/white
-conjugation, and limits of sparse truth-table explanations.
+**Latest: v1.7** - Block-locality limits and background-indexed shape
+families for the T=15 oscillator symbolic-boundary analysis.
 
+- v1.7 DOI: [10.5281/zenodo.20971738](https://doi.org/10.5281/zenodo.20971738)
 - v1.6 DOI: [10.5281/zenodo.20792051](https://doi.org/10.5281/zenodo.20792051)
 - v1.5 DOI: [10.5281/zenodo.20768585](https://doi.org/10.5281/zenodo.20768585)
 - v1.4 DOI: [10.5281/zenodo.20767477](https://doi.org/10.5281/zenodo.20767477)
@@ -19,13 +20,13 @@ conjugation, and limits of sparse truth-table explanations.
 - v1.2 DOI: [10.5281/zenodo.20738025](https://doi.org/10.5281/zenodo.20738025)
 - v1.1 DOI: [10.5281/zenodo.20687470](https://doi.org/10.5281/zenodo.20687470)
 - v1.0 DOI: [10.5281/zenodo.20516375](https://doi.org/10.5281/zenodo.20516375)
+- v1.7 series DOI: [10.5281/zenodo.20971737](https://doi.org/10.5281/zenodo.20971737)
 - v1.6 series DOI: [10.5281/zenodo.20792050](https://doi.org/10.5281/zenodo.20792050)
 - v1.5 series DOI: [10.5281/zenodo.20768584](https://doi.org/10.5281/zenodo.20768584)
 - v1.4 series DOI: [10.5281/zenodo.20767476](https://doi.org/10.5281/zenodo.20767476)
 - v1.3 series DOI: [10.5281/zenodo.20753498](https://doi.org/10.5281/zenodo.20753498)
 - Previous-series DOI (v1.2 and earlier): [10.5281/zenodo.20738024](https://doi.org/10.5281/zenodo.20738024)
 - PDF: [paper/zuse_preprint.pdf](paper/zuse_preprint.pdf)
-
 ## Scientific Artifacts
 
 - [World taxonomy and law coverage matrix](outputs/world_taxonomy/law_map.md):
@@ -87,11 +88,12 @@ regenerated from the commands in the reproducibility guide.
 
 ```text
 Concha Estrada, M. A. (2026). ZUSE Automat Agent: Empirical Law Discovery in
-Elementary Cellular Automata (v1.6). Zenodo.
-https://doi.org/10.5281/zenodo.20792051
+Elementary Cellular Automata (v1.7). Zenodo.
+https://doi.org/10.5281/zenodo.20971738
 ```
 
 ## License
 
 Code is released under the [MIT License](LICENSE). The preprint is distributed
 under Creative Commons Attribution 4.0 International via Zenodo.
+
