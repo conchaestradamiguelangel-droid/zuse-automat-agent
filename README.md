@@ -1,4 +1,4 @@
-﻿# ZUSE Automat Agent
+# ZUSE Automat Agent
 
 Deterministic empirical law discovery for elementary cellular automata (ECA).
 
@@ -9,9 +9,9 @@ model participates in world selection, law evaluation, scoring, or acceptance.
 
 ## Preprint
 
-**Latest: v1.8** - Compact state variable for the T=15 oscillator family:
-`(rule, subpatterns_len4, IC/background alignment)`.
+**Latest: v1.9** - External length-9/10 validation of the T=15 mechanism: 90 detections across 8 new backgrounds.
 
+- v1.9 DOI: [10.5281/zenodo.21001633](https://doi.org/10.5281/zenodo.21001633)
 - v1.8 DOI: [10.5281/zenodo.21000646](https://doi.org/10.5281/zenodo.21000646)
 - v1.7 DOI: [10.5281/zenodo.20971738](https://doi.org/10.5281/zenodo.20971738)
 - v1.6 DOI: [10.5281/zenodo.20792051](https://doi.org/10.5281/zenodo.20792051)
@@ -21,6 +21,7 @@ model participates in world selection, law evaluation, scoring, or acceptance.
 - v1.2 DOI: [10.5281/zenodo.20738025](https://doi.org/10.5281/zenodo.20738025)
 - v1.1 DOI: [10.5281/zenodo.20687470](https://doi.org/10.5281/zenodo.20687470)
 - v1.0 DOI: [10.5281/zenodo.20516375](https://doi.org/10.5281/zenodo.20516375)
+- v1.9 series DOI: [10.5281/zenodo.21001632](https://doi.org/10.5281/zenodo.21001632)
 - v1.8 series DOI: [10.5281/zenodo.21000645](https://doi.org/10.5281/zenodo.21000645)
 - v1.7 series DOI: [10.5281/zenodo.20971737](https://doi.org/10.5281/zenodo.20971737)
 - v1.6 series DOI: [10.5281/zenodo.20792050](https://doi.org/10.5281/zenodo.20792050)
@@ -90,8 +91,8 @@ regenerated from the commands in the reproducibility guide.
 
 ```text
 Concha Estrada, M. A. (2026). ZUSE Automat Agent: Empirical Law Discovery in
-Elementary Cellular Automata (v1.8). Zenodo.
-https://doi.org/10.5281/zenodo.21000646
+Elementary Cellular Automata (v1.9). Zenodo.
+https://doi.org/10.5281/zenodo.21001633
 ```
 
 ## License
