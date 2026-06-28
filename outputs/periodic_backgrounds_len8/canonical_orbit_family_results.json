@@ -1,0 +1,1175 @@
+{
+  "analysis": {
+    "all_family_one_orbit": false,
+    "all_orbit_one_family": false,
+    "family_count": 13,
+    "family_rows": [
+      {
+        "backgrounds": [
+          "00001001",
+          "00010011",
+          "00011001"
+        ],
+        "canonical_orbit_set_count": 1,
+        "canonical_orbit_sets": [
+          [
+            "00001001",
+            "00101101",
+            "00111111"
+          ]
+        ],
+        "family_id": "F00",
+        "members": 3,
+        "one_rule_orbit": true,
+        "rule_orbit_key_count": 1,
+        "rule_orbit_keys": [
+          "109:b2f2515010581b5b"
+        ],
+        "rules": [
+          109
+        ]
+      },
+      {
+        "backgrounds": [
+          "00110111",
+          "00111011",
+          "01101111"
+        ],
+        "canonical_orbit_set_count": 1,
+        "canonical_orbit_sets": [
+          [
+            "00000011",
+            "00101101",
+            "01101111"
+          ]
+        ],
+        "family_id": "F01",
+        "members": 3,
+        "one_rule_orbit": true,
+        "rule_orbit_key_count": 1,
+        "rule_orbit_keys": [
+          "73:7fa678d693b74ab5"
+        ],
+        "rules": [
+          73
+        ]
+      },
+      {
+        "backgrounds": [
+          "00001111",
+          "00111111",
+          "00001101"
+        ],
+        "canonical_orbit_set_count": 2,
+        "canonical_orbit_sets": [
+          [
+            "00000011",
+            "00101101",
+            "01101111"
+          ],
+          [
+            "00001001",
+            "00101101",
+            "00111111"
+          ]
+        ],
+        "family_id": "F02",
+        "members": 3,
+        "one_rule_orbit": false,
+        "rule_orbit_key_count": 2,
+        "rule_orbit_keys": [
+          "109:b2f2515010581b5b",
+          "73:7fa678d693b74ab5"
+        ],
+        "rules": [
+          73,
+          109
+        ]
+      },
+      {
+        "backgrounds": [
+          "00110101",
+          "00110101"
+        ],
+        "canonical_orbit_set_count": 2,
+        "canonical_orbit_sets": [
+          [
+            "00000011",
+            "00101101",
+            "01101111"
+          ],
+          [
+            "00001001",
+            "00101101",
+            "00111111"
+          ]
+        ],
+        "family_id": "F03",
+        "members": 2,
+        "one_rule_orbit": false,
+        "rule_orbit_key_count": 2,
+        "rule_orbit_keys": [
+          "109:b2f2515010581b5b",
+          "73:7fa678d693b74ab5"
+        ],
+        "rules": [
+          73,
+          109
+        ]
+      },
+      {
+        "backgrounds": [
+          "00101111"
+        ],
+        "canonical_orbit_set_count": 1,
+        "canonical_orbit_sets": [
+          [
+            "00000011",
+            "00101101",
+            "01101111"
+          ]
+        ],
+        "family_id": "F04",
+        "members": 1,
+        "one_rule_orbit": true,
+        "rule_orbit_key_count": 1,
+        "rule_orbit_keys": [
+          "73:7fa678d693b74ab5"
+        ],
+        "rules": [
+          73
+        ]
+      },
+      {
+        "backgrounds": [
+          "00001011"
+        ],
+        "canonical_orbit_set_count": 1,
+        "canonical_orbit_sets": [
+          [
+            "00001001",
+            "00101101",
+            "00111111"
+          ]
+        ],
+        "family_id": "F05",
+        "members": 1,
+        "one_rule_orbit": true,
+        "rule_orbit_key_count": 1,
+        "rule_orbit_keys": [
+          "109:b2f2515010581b5b"
+        ],
+        "rules": [
+          109
+        ]
+      },
+      {
+        "backgrounds": [
+          "00101101"
+        ],
+        "canonical_orbit_set_count": 1,
+        "canonical_orbit_sets": [
+          [
+            "00000011",
+            "00101101",
+            "01101111"
+          ]
+        ],
+        "family_id": "F06",
+        "members": 1,
+        "one_rule_orbit": true,
+        "rule_orbit_key_count": 1,
+        "rule_orbit_keys": [
+          "73:7fa678d693b74ab5"
+        ],
+        "rules": [
+          73
+        ]
+      },
+      {
+        "backgrounds": [
+          "00111111"
+        ],
+        "canonical_orbit_set_count": 1,
+        "canonical_orbit_sets": [
+          [
+            "00001001",
+            "00101101",
+            "00111111"
+          ]
+        ],
+        "family_id": "F07",
+        "members": 1,
+        "one_rule_orbit": true,
+        "rule_orbit_key_count": 1,
+        "rule_orbit_keys": [
+          "109:b2f2515010581b5b"
+        ],
+        "rules": [
+          109
+        ]
+      },
+      {
+        "backgrounds": [
+          "00001111"
+        ],
+        "canonical_orbit_set_count": 1,
+        "canonical_orbit_sets": [
+          [
+            "00001001",
+            "00101101",
+            "00111111"
+          ]
+        ],
+        "family_id": "F08",
+        "members": 1,
+        "one_rule_orbit": true,
+        "rule_orbit_key_count": 1,
+        "rule_orbit_keys": [
+          "109:b2f2515010581b5b"
+        ],
+        "rules": [
+          109
+        ]
+      },
+      {
+        "backgrounds": [
+          "00000011"
+        ],
+        "canonical_orbit_set_count": 1,
+        "canonical_orbit_sets": [
+          [
+            "00000011",
+            "00101101",
+            "01101111"
+          ]
+        ],
+        "family_id": "F09",
+        "members": 1,
+        "one_rule_orbit": true,
+        "rule_orbit_key_count": 1,
+        "rule_orbit_keys": [
+          "73:7fa678d693b74ab5"
+        ],
+        "rules": [
+          73
+        ]
+      },
+      {
+        "backgrounds": [
+          "00001001"
+        ],
+        "canonical_orbit_set_count": 1,
+        "canonical_orbit_sets": [
+          [
+            "00000011",
+            "00101101",
+            "01101111"
+          ]
+        ],
+        "family_id": "F10",
+        "members": 1,
+        "one_rule_orbit": true,
+        "rule_orbit_key_count": 1,
+        "rule_orbit_keys": [
+          "73:7fa678d693b74ab5"
+        ],
+        "rules": [
+          73
+        ]
+      },
+      {
+        "backgrounds": [
+          "01101111"
+        ],
+        "canonical_orbit_set_count": 1,
+        "canonical_orbit_sets": [
+          [
+            "00001001",
+            "00101101",
+            "00111111"
+          ]
+        ],
+        "family_id": "F11",
+        "members": 1,
+        "one_rule_orbit": true,
+        "rule_orbit_key_count": 1,
+        "rule_orbit_keys": [
+          "109:b2f2515010581b5b"
+        ],
+        "rules": [
+          109
+        ]
+      },
+      {
+        "backgrounds": [
+          "00000011"
+        ],
+        "canonical_orbit_set_count": 1,
+        "canonical_orbit_sets": [
+          [
+            "00001001",
+            "00101101",
+            "00111111"
+          ]
+        ],
+        "family_id": "F12",
+        "members": 1,
+        "one_rule_orbit": true,
+        "rule_orbit_key_count": 1,
+        "rule_orbit_keys": [
+          "109:b2f2515010581b5b"
+        ],
+        "rules": [
+          109
+        ]
+      }
+    ],
+    "orbit_only_count": 2,
+    "orbit_only_rows": [
+      {
+        "backgrounds": [
+          "00110111",
+          "00111011",
+          "01101111",
+          "00001111",
+          "00111111",
+          "00110101",
+          "00101111",
+          "00101101",
+          "00000011",
+          "00001001"
+        ],
+        "families": [
+          "F01",
+          "F02",
+          "F03",
+          "F04",
+          "F06",
+          "F09",
+          "F10"
+        ],
+        "family_count": 7,
+        "members": 10,
+        "orbit_hash": "7fa678d693b74ab5",
+        "rules": [
+          73
+        ]
+      },
+      {
+        "backgrounds": [
+          "00001001",
+          "00010011",
+          "00011001",
+          "00001101",
+          "00110101",
+          "00001011",
+          "00111111",
+          "00001111",
+          "01101111",
+          "00000011"
+        ],
+        "families": [
+          "F00",
+          "F02",
+          "F03",
+          "F05",
+          "F07",
+          "F08",
+          "F11",
+          "F12"
+        ],
+        "family_count": 8,
+        "members": 10,
+        "orbit_hash": "b2f2515010581b5b",
+        "rules": [
+          109
+        ]
+      }
+    ],
+    "orbit_rows": [
+      {
+        "backgrounds": [
+          "00001001",
+          "00010011",
+          "00011001",
+          "00001101",
+          "00110101",
+          "00001011",
+          "00111111",
+          "00001111",
+          "01101111",
+          "00000011"
+        ],
+        "families": [
+          "F00",
+          "F02",
+          "F03",
+          "F05",
+          "F07",
+          "F08",
+          "F11",
+          "F12"
+        ],
+        "family_count": 8,
+        "members": 10,
+        "one_family": false,
+        "rule_orbit_key": "109:b2f2515010581b5b",
+        "rules": [
+          109
+        ]
+      },
+      {
+        "backgrounds": [
+          "00110111",
+          "00111011",
+          "01101111",
+          "00001111",
+          "00111111",
+          "00110101",
+          "00101111",
+          "00101101",
+          "00000011",
+          "00001001"
+        ],
+        "families": [
+          "F01",
+          "F02",
+          "F03",
+          "F04",
+          "F06",
+          "F09",
+          "F10"
+        ],
+        "family_count": 7,
+        "members": 10,
+        "one_family": false,
+        "rule_orbit_key": "73:7fa678d693b74ab5",
+        "rules": [
+          73
+        ]
+      }
+    ],
+    "rule_orbit_count": 2,
+    "status": "CANONICAL_ORBIT_NOT_ENOUGH"
+  },
+  "record_count": 20,
+  "rows": [
+    {
+      "background": "00001001",
+      "family_id": "F00",
+      "family_size": 3,
+      "ic": "0001001",
+      "orbit": {
+        "canonical_cycle_sequence": [
+          "00001001",
+          "00101101",
+          "00111111"
+        ],
+        "canonical_cycle_sequence_hash": "b2f2515010581b5b",
+        "canonical_cycle_set": [
+          "00001001",
+          "00101101",
+          "00111111"
+        ],
+        "canonical_cycle_set_hash": "b2f2515010581b5b",
+        "cycle": [
+          "00001001",
+          "01101001",
+          "11111001"
+        ],
+        "period": 3,
+        "preperiod": 0
+      },
+      "phase_shift_to_canonical": 0,
+      "rule": 109,
+      "rule_orbit_key": "109:b2f2515010581b5b",
+      "temporal_orbit_canonical_from_fase30": [
+        "00001001",
+        "01101001",
+        "11111001"
+      ]
+    },
+    {
+      "background": "00010011",
+      "family_id": "F00",
+      "family_size": 3,
+      "ic": "01001",
+      "orbit": {
+        "canonical_cycle_sequence": [
+          "00111111",
+          "00001001",
+          "00101101"
+        ],
+        "canonical_cycle_sequence_hash": "ea81a576e75208d5",
+        "canonical_cycle_set": [
+          "00001001",
+          "00101101",
+          "00111111"
+        ],
+        "canonical_cycle_set_hash": "b2f2515010581b5b",
+        "cycle": [
+          "11110011",
+          "00010010",
+          "11010010"
+        ],
+        "period": 3,
+        "preperiod": 2
+      },
+      "phase_shift_to_canonical": 0,
+      "rule": 109,
+      "rule_orbit_key": "109:b2f2515010581b5b",
+      "temporal_orbit_canonical_from_fase30": [
+        "00010010",
+        "00010011",
+        "01010011",
+        "11110011"
+      ]
+    },
+    {
+      "background": "00011001",
+      "family_id": "F00",
+      "family_size": 3,
+      "ic": "01",
+      "orbit": {
+        "canonical_cycle_sequence": [
+          "00111111",
+          "00001001",
+          "00101101"
+        ],
+        "canonical_cycle_sequence_hash": "ea81a576e75208d5",
+        "canonical_cycle_set": [
+          "00001001",
+          "00101101",
+          "00111111"
+        ],
+        "canonical_cycle_set_hash": "b2f2515010581b5b",
+        "cycle": [
+          "11111001",
+          "00001001",
+          "01101001"
+        ],
+        "period": 3,
+        "preperiod": 2
+      },
+      "phase_shift_to_canonical": 0,
+      "rule": 109,
+      "rule_orbit_key": "109:b2f2515010581b5b",
+      "temporal_orbit_canonical_from_fase30": [
+        "00001001",
+        "00011001",
+        "01011001",
+        "11111001"
+      ]
+    },
+    {
+      "background": "00110111",
+      "family_id": "F01",
+      "family_size": 3,
+      "ic": "011011",
+      "orbit": {
+        "canonical_cycle_sequence": [
+          "00000011",
+          "01101111",
+          "00101101"
+        ],
+        "canonical_cycle_sequence_hash": "7091348f276fece4",
+        "canonical_cycle_set": [
+          "00000011",
+          "00101101",
+          "01101111"
+        ],
+        "canonical_cycle_set_hash": "7fa678d693b74ab5",
+        "cycle": [
+          "00110000",
+          "10110111",
+          "10110100"
+        ],
+        "period": 3,
+        "preperiod": 2
+      },
+      "phase_shift_to_canonical": 0,
+      "rule": 73,
+      "rule_orbit_key": "73:7fa678d693b74ab5",
+      "temporal_orbit_canonical_from_fase30": [
+        "00110000",
+        "10110111",
+        "00110111",
+        "00110101"
+      ]
+    },
+    {
+      "background": "00111011",
+      "family_id": "F01",
+      "family_size": 3,
+      "ic": "00100100",
+      "orbit": {
+        "canonical_cycle_sequence": [
+          "00000011",
+          "01101111",
+          "00101101"
+        ],
+        "canonical_cycle_sequence_hash": "7091348f276fece4",
+        "canonical_cycle_set": [
+          "00000011",
+          "00101101",
+          "01101111"
+        ],
+        "canonical_cycle_set_hash": "7fa678d693b74ab5",
+        "cycle": [
+          "00000011",
+          "01111011",
+          "01001011"
+        ],
+        "period": 3,
+        "preperiod": 2
+      },
+      "phase_shift_to_canonical": 3,
+      "rule": 73,
+      "rule_orbit_key": "73:7fa678d693b74ab5",
+      "temporal_orbit_canonical_from_fase30": [
+        "00000011",
+        "01111011",
+        "00111011",
+        "00101011"
+      ]
+    },
+    {
+      "background": "01101111",
+      "family_id": "F01",
+      "family_size": 3,
+      "ic": "01101110",
+      "orbit": {
+        "canonical_cycle_sequence": [
+          "01101111",
+          "00101101",
+          "00000011"
+        ],
+        "canonical_cycle_sequence_hash": "429ac603325b7b0c",
+        "canonical_cycle_set": [
+          "00000011",
+          "00101101",
+          "01101111"
+        ],
+        "canonical_cycle_set_hash": "7fa678d693b74ab5",
+        "cycle": [
+          "01101111",
+          "01101001",
+          "01100000"
+        ],
+        "period": 3,
+        "preperiod": 0
+      },
+      "phase_shift_to_canonical": 0,
+      "rule": 73,
+      "rule_orbit_key": "73:7fa678d693b74ab5",
+      "temporal_orbit_canonical_from_fase30": [
+        "01100000",
+        "01101111",
+        "01101001"
+      ]
+    },
+    {
+      "background": "00001111",
+      "family_id": "F02",
+      "family_size": 3,
+      "ic": "00100000",
+      "orbit": {
+        "canonical_cycle_sequence": [
+          "00101101",
+          "00000011",
+          "01101111"
+        ],
+        "canonical_cycle_sequence_hash": "f760cf8fc8ce501e",
+        "canonical_cycle_set": [
+          "00000011",
+          "00101101",
+          "01101111"
+        ],
+        "canonical_cycle_set_hash": "7fa678d693b74ab5",
+        "cycle": [
+          "01101001",
+          "01100000",
+          "01101111"
+        ],
+        "period": 3,
+        "preperiod": 1
+      },
+      "phase_shift_to_canonical": 1,
+      "rule": 73,
+      "rule_orbit_key": "73:7fa678d693b74ab5",
+      "temporal_orbit_canonical_from_fase30": [
+        "00001111",
+        "01101001",
+        "01100000",
+        "01101111"
+      ]
+    },
+    {
+      "background": "00111111",
+      "family_id": "F02",
+      "family_size": 3,
+      "ic": "0001100",
+      "orbit": {
+        "canonical_cycle_sequence": [
+          "00000011",
+          "01101111",
+          "00101101"
+        ],
+        "canonical_cycle_sequence_hash": "7091348f276fece4",
+        "canonical_cycle_set": [
+          "00000011",
+          "00101101",
+          "01101111"
+        ],
+        "canonical_cycle_set_hash": "7fa678d693b74ab5",
+        "cycle": [
+          "00001100",
+          "11101101",
+          "00101101"
+        ],
+        "period": 3,
+        "preperiod": 2
+      },
+      "phase_shift_to_canonical": 4,
+      "rule": 73,
+      "rule_orbit_key": "73:7fa678d693b74ab5",
+      "temporal_orbit_canonical_from_fase30": [
+        "00001100",
+        "11101101",
+        "00111111",
+        "00100001"
+      ]
+    },
+    {
+      "background": "00001101",
+      "family_id": "F02",
+      "family_size": 3,
+      "ic": "0100001",
+      "orbit": {
+        "canonical_cycle_sequence": [
+          "00111111",
+          "00001001",
+          "00101101"
+        ],
+        "canonical_cycle_sequence_hash": "ea81a576e75208d5",
+        "canonical_cycle_set": [
+          "00001001",
+          "00101101",
+          "00111111"
+        ],
+        "canonical_cycle_set_hash": "b2f2515010581b5b",
+        "cycle": [
+          "11111001",
+          "00001001",
+          "01101001"
+        ],
+        "period": 3,
+        "preperiod": 2
+      },
+      "phase_shift_to_canonical": 0,
+      "rule": 109,
+      "rule_orbit_key": "109:b2f2515010581b5b",
+      "temporal_orbit_canonical_from_fase30": [
+        "00001001",
+        "00001101",
+        "01101111",
+        "11111001"
+      ]
+    },
+    {
+      "background": "00110101",
+      "family_id": "F03",
+      "family_size": 2,
+      "ic": "011010",
+      "orbit": {
+        "canonical_cycle_sequence": [
+          "00000011",
+          "01101111",
+          "00101101"
+        ],
+        "canonical_cycle_sequence_hash": "7091348f276fece4",
+        "canonical_cycle_set": [
+          "00000011",
+          "00101101",
+          "01101111"
+        ],
+        "canonical_cycle_set_hash": "7fa678d693b74ab5",
+        "cycle": [
+          "00110000",
+          "10110111",
+          "10110100"
+        ],
+        "period": 3,
+        "preperiod": 1
+      },
+      "phase_shift_to_canonical": 3,
+      "rule": 73,
+      "rule_orbit_key": "73:7fa678d693b74ab5",
+      "temporal_orbit_canonical_from_fase30": [
+        "00110000",
+        "10110111",
+        "10110100",
+        "00110101"
+      ]
+    },
+    {
+      "background": "00110101",
+      "family_id": "F03",
+      "family_size": 2,
+      "ic": "010101",
+      "orbit": {
+        "canonical_cycle_sequence": [
+          "00111111",
+          "00001001",
+          "00101101"
+        ],
+        "canonical_cycle_sequence_hash": "ea81a576e75208d5",
+        "canonical_cycle_set": [
+          "00001001",
+          "00101101",
+          "00111111"
+        ],
+        "canonical_cycle_set_hash": "b2f2515010581b5b",
+        "cycle": [
+          "00111111",
+          "00100001",
+          "00101101"
+        ],
+        "period": 3,
+        "preperiod": 1
+      },
+      "phase_shift_to_canonical": 3,
+      "rule": 109,
+      "rule_orbit_key": "109:b2f2515010581b5b",
+      "temporal_orbit_canonical_from_fase30": [
+        "00100001",
+        "00101101",
+        "00110101",
+        "00111111"
+      ]
+    },
+    {
+      "background": "00101111",
+      "family_id": "F04",
+      "family_size": 1,
+      "ic": "0000111",
+      "orbit": {
+        "canonical_cycle_sequence": [
+          "00000011",
+          "01101111",
+          "00101101"
+        ],
+        "canonical_cycle_sequence_hash": "7091348f276fece4",
+        "canonical_cycle_set": [
+          "00000011",
+          "00101101",
+          "01101111"
+        ],
+        "canonical_cycle_set_hash": "7fa678d693b74ab5",
+        "cycle": [
+          "01100000",
+          "01101111",
+          "01101001"
+        ],
+        "period": 3,
+        "preperiod": 2
+      },
+      "phase_shift_to_canonical": 3,
+      "rule": 73,
+      "rule_orbit_key": "73:7fa678d693b74ab5",
+      "temporal_orbit_canonical_from_fase30": [
+        "00001001",
+        "01100000",
+        "01101111",
+        "00101111"
+      ]
+    },
+    {
+      "background": "00001011",
+      "family_id": "F05",
+      "family_size": 1,
+      "ic": "0001001",
+      "orbit": {
+        "canonical_cycle_sequence": [
+          "00111111",
+          "00001001",
+          "00101101"
+        ],
+        "canonical_cycle_sequence_hash": "ea81a576e75208d5",
+        "canonical_cycle_set": [
+          "00001001",
+          "00101101",
+          "00111111"
+        ],
+        "canonical_cycle_set_hash": "b2f2515010581b5b",
+        "cycle": [
+          "11111001",
+          "00001001",
+          "01101001"
+        ],
+        "period": 3,
+        "preperiod": 2
+      },
+      "phase_shift_to_canonical": 4,
+      "rule": 109,
+      "rule_orbit_key": "109:b2f2515010581b5b",
+      "temporal_orbit_canonical_from_fase30": [
+        "00001001",
+        "00001011",
+        "01101111",
+        "11111001"
+      ]
+    },
+    {
+      "background": "00101101",
+      "family_id": "F06",
+      "family_size": 1,
+      "ic": "010110",
+      "orbit": {
+        "canonical_cycle_sequence": [
+          "00101101",
+          "00000011",
+          "01101111"
+        ],
+        "canonical_cycle_sequence_hash": "f760cf8fc8ce501e",
+        "canonical_cycle_set": [
+          "00000011",
+          "00101101",
+          "01101111"
+        ],
+        "canonical_cycle_set_hash": "7fa678d693b74ab5",
+        "cycle": [
+          "00101101",
+          "00001100",
+          "11101101"
+        ],
+        "period": 3,
+        "preperiod": 0
+      },
+      "phase_shift_to_canonical": 3,
+      "rule": 73,
+      "rule_orbit_key": "73:7fa678d693b74ab5",
+      "temporal_orbit_canonical_from_fase30": [
+        "00001100",
+        "11101101",
+        "00101101"
+      ]
+    },
+    {
+      "background": "00111111",
+      "family_id": "F07",
+      "family_size": 1,
+      "ic": "00111111",
+      "orbit": {
+        "canonical_cycle_sequence": [
+          "00111111",
+          "00001001",
+          "00101101"
+        ],
+        "canonical_cycle_sequence_hash": "ea81a576e75208d5",
+        "canonical_cycle_set": [
+          "00001001",
+          "00101101",
+          "00111111"
+        ],
+        "canonical_cycle_set_hash": "b2f2515010581b5b",
+        "cycle": [
+          "00111111",
+          "00100001",
+          "00101101"
+        ],
+        "period": 3,
+        "preperiod": 0
+      },
+      "phase_shift_to_canonical": 2,
+      "rule": 109,
+      "rule_orbit_key": "109:b2f2515010581b5b",
+      "temporal_orbit_canonical_from_fase30": [
+        "00100001",
+        "00101101",
+        "00111111"
+      ]
+    },
+    {
+      "background": "00001111",
+      "family_id": "F08",
+      "family_size": 1,
+      "ic": "0001001",
+      "orbit": {
+        "canonical_cycle_sequence": [
+          "00101101",
+          "00111111",
+          "00001001"
+        ],
+        "canonical_cycle_sequence_hash": "e9b0ef4814794282",
+        "canonical_cycle_set": [
+          "00001001",
+          "00101101",
+          "00111111"
+        ],
+        "canonical_cycle_set_hash": "b2f2515010581b5b",
+        "cycle": [
+          "01101001",
+          "11111001",
+          "00001001"
+        ],
+        "period": 3,
+        "preperiod": 1
+      },
+      "phase_shift_to_canonical": 4,
+      "rule": 109,
+      "rule_orbit_key": "109:b2f2515010581b5b",
+      "temporal_orbit_canonical_from_fase30": [
+        "00001001",
+        "00001111",
+        "01101001",
+        "11111001"
+      ]
+    },
+    {
+      "background": "00000011",
+      "family_id": "F09",
+      "family_size": 1,
+      "ic": "0000011",
+      "orbit": {
+        "canonical_cycle_sequence": [
+          "00000011",
+          "01101111",
+          "00101101"
+        ],
+        "canonical_cycle_sequence_hash": "7091348f276fece4",
+        "canonical_cycle_set": [
+          "00000011",
+          "00101101",
+          "01101111"
+        ],
+        "canonical_cycle_set_hash": "7fa678d693b74ab5",
+        "cycle": [
+          "00000011",
+          "01111011",
+          "01001011"
+        ],
+        "period": 3,
+        "preperiod": 0
+      },
+      "phase_shift_to_canonical": 0,
+      "rule": 73,
+      "rule_orbit_key": "73:7fa678d693b74ab5",
+      "temporal_orbit_canonical_from_fase30": [
+        "00000011",
+        "01111011",
+        "01001011"
+      ]
+    },
+    {
+      "background": "00001001",
+      "family_id": "F10",
+      "family_size": 1,
+      "ic": "00110010",
+      "orbit": {
+        "canonical_cycle_sequence": [
+          "00000011",
+          "01101111",
+          "00101101"
+        ],
+        "canonical_cycle_sequence_hash": "7091348f276fece4",
+        "canonical_cycle_set": [
+          "00000011",
+          "00101101",
+          "01101111"
+        ],
+        "canonical_cycle_set_hash": "7fa678d693b74ab5",
+        "cycle": [
+          "01100000",
+          "01101111",
+          "01101001"
+        ],
+        "period": 3,
+        "preperiod": 1
+      },
+      "phase_shift_to_canonical": 4,
+      "rule": 73,
+      "rule_orbit_key": "73:7fa678d693b74ab5",
+      "temporal_orbit_canonical_from_fase30": [
+        "00001001",
+        "01100000",
+        "01101111",
+        "01101001"
+      ]
+    },
+    {
+      "background": "01101111",
+      "family_id": "F11",
+      "family_size": 1,
+      "ic": "0101001",
+      "orbit": {
+        "canonical_cycle_sequence": [
+          "00111111",
+          "00001001",
+          "00101101"
+        ],
+        "canonical_cycle_sequence_hash": "ea81a576e75208d5",
+        "canonical_cycle_set": [
+          "00001001",
+          "00101101",
+          "00111111"
+        ],
+        "canonical_cycle_set_hash": "b2f2515010581b5b",
+        "cycle": [
+          "11111001",
+          "00001001",
+          "01101001"
+        ],
+        "period": 3,
+        "preperiod": 1
+      },
+      "phase_shift_to_canonical": 4,
+      "rule": 109,
+      "rule_orbit_key": "109:b2f2515010581b5b",
+      "temporal_orbit_canonical_from_fase30": [
+        "00001001",
+        "01101001",
+        "01101111",
+        "11111001"
+      ]
+    },
+    {
+      "background": "00000011",
+      "family_id": "F12",
+      "family_size": 1,
+      "ic": "1110101",
+      "orbit": {
+        "canonical_cycle_sequence": [
+          "00111111",
+          "00001001",
+          "00101101"
+        ],
+        "canonical_cycle_sequence_hash": "ea81a576e75208d5",
+        "canonical_cycle_set": [
+          "00001001",
+          "00101101",
+          "00111111"
+        ],
+        "canonical_cycle_set_hash": "b2f2515010581b5b",
+        "cycle": [
+          "11001111",
+          "01001000",
+          "01001011"
+        ],
+        "period": 3,
+        "preperiod": 2
+      },
+      "phase_shift_to_canonical": 1,
+      "rule": 109,
+      "rule_orbit_key": "109:b2f2515010581b5b",
+      "temporal_orbit_canonical_from_fase30": [
+        "00000011",
+        "01111011",
+        "11001111",
+        "01001000"
+      ]
+    }
+  ],
+  "status": "CANONICAL_ORBIT_NOT_ENOUGH"
+}
