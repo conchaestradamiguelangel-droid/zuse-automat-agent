@@ -1,0 +1,849 @@
+{
+  "by_length_rule": {
+    "len10_rule109": {
+      "period_counts": {
+        "1": 4,
+        "2": 45,
+        "3": 22,
+        "8": 28
+      },
+      "period_examples": {
+        "1": [
+          "0010010011",
+          "0010110011",
+          "0011001101",
+          "0011001111"
+        ],
+        "2": [
+          "0000001001",
+          "0000001011",
+          "0000001101",
+          "0000001111",
+          "0000010011",
+          "0000011001",
+          "0000100011",
+          "0000100101",
+          "0000100111",
+          "0000101001"
+        ],
+        "3": [
+          "0000000011",
+          "0000101011",
+          "0000101101",
+          "0000110101",
+          "0000111111",
+          "0001001001",
+          "0001001011",
+          "0001001101",
+          "0001001111",
+          "0001011001"
+        ],
+        "8": [
+          "0000000001",
+          "0000000101",
+          "0000000111",
+          "0000010001",
+          "0000010101",
+          "0000010111",
+          "0000011011",
+          "0000011101",
+          "0000011111",
+          "0001000101"
+        ]
+      },
+      "preperiod_counts": {
+        "0": 18,
+        "1": 21,
+        "2": 24,
+        "3": 4,
+        "4": 8,
+        "5": 12,
+        "6": 2,
+        "7": 4,
+        "8": 6
+      },
+      "primitive_necklaces": 99,
+      "t_bg_3_count": 22,
+      "t_bg_3_records": [
+        {
+          "background": "0000000011",
+          "period": 3,
+          "preperiod": 1
+        },
+        {
+          "background": "0000101011",
+          "period": 3,
+          "preperiod": 1
+        },
+        {
+          "background": "0000101101",
+          "period": 3,
+          "preperiod": 0
+        },
+        {
+          "background": "0000110101",
+          "period": 3,
+          "preperiod": 1
+        },
+        {
+          "background": "0000111111",
+          "period": 3,
+          "preperiod": 0
+        },
+        {
+          "background": "0001001001",
+          "period": 3,
+          "preperiod": 0
+        },
+        {
+          "background": "0001001011",
+          "period": 3,
+          "preperiod": 2
+        },
+        {
+          "background": "0001001101",
+          "period": 3,
+          "preperiod": 2
+        },
+        {
+          "background": "0001001111",
+          "period": 3,
+          "preperiod": 1
+        },
+        {
+          "background": "0001011001",
+          "period": 3,
+          "preperiod": 2
+        },
+        {
+          "background": "0001101001",
+          "period": 3,
+          "preperiod": 2
+        },
+        {
+          "background": "0001101111",
+          "period": 3,
+          "preperiod": 2
+        },
+        {
+          "background": "0001111001",
+          "period": 3,
+          "preperiod": 1
+        },
+        {
+          "background": "0001111011",
+          "period": 3,
+          "preperiod": 2
+        },
+        {
+          "background": "0010010101",
+          "period": 3,
+          "preperiod": 0
+        },
+        {
+          "background": "0010011011",
+          "period": 3,
+          "preperiod": 1
+        },
+        {
+          "background": "0010011111",
+          "period": 3,
+          "preperiod": 0
+        },
+        {
+          "background": "0010101111",
+          "period": 3,
+          "preperiod": 1
+        },
+        {
+          "background": "0011011111",
+          "period": 3,
+          "preperiod": 2
+        },
+        {
+          "background": "0011110101",
+          "period": 3,
+          "preperiod": 1
+        },
+        {
+          "background": "0011111011",
+          "period": 3,
+          "preperiod": 2
+        },
+        {
+          "background": "0110111111",
+          "period": 3,
+          "preperiod": 0
+        }
+      ]
+    },
+    "len10_rule73": {
+      "period_counts": {
+        "1": 4,
+        "2": 45,
+        "3": 22,
+        "8": 28
+      },
+      "period_examples": {
+        "1": [
+          "0000110011",
+          "0010110011",
+          "0011001101",
+          "0011011011"
+        ],
+        "2": [
+          "0000000011",
+          "0000001011",
+          "0000001101",
+          "0000100011",
+          "0000100101",
+          "0000101001",
+          "0000101101",
+          "0000101111",
+          "0000110001",
+          "0000111101"
+        ],
+        "3": [
+          "0000001001",
+          "0000001111",
+          "0000010011",
+          "0000011001",
+          "0000011011",
+          "0000100111",
+          "0000101011",
+          "0000110101",
+          "0000110111",
+          "0000111001"
+        ],
+        "8": [
+          "0000000001",
+          "0000000101",
+          "0000000111",
+          "0000010001",
+          "0000010101",
+          "0000010111",
+          "0000011101",
+          "0000011111",
+          "0001000101",
+          "0001000111"
+        ]
+      },
+      "preperiod_counts": {
+        "0": 18,
+        "1": 21,
+        "2": 24,
+        "3": 4,
+        "4": 8,
+        "5": 12,
+        "6": 2,
+        "7": 4,
+        "8": 6
+      },
+      "primitive_necklaces": 99,
+      "t_bg_3_count": 22,
+      "t_bg_3_records": [
+        {
+          "background": "0000001001",
+          "period": 3,
+          "preperiod": 0
+        },
+        {
+          "background": "0000001111",
+          "period": 3,
+          "preperiod": 0
+        },
+        {
+          "background": "0000010011",
+          "period": 3,
+          "preperiod": 2
+        },
+        {
+          "background": "0000011001",
+          "period": 3,
+          "preperiod": 2
+        },
+        {
+          "background": "0000011011",
+          "period": 3,
+          "preperiod": 0
+        },
+        {
+          "background": "0000100111",
+          "period": 3,
+          "preperiod": 2
+        },
+        {
+          "background": "0000101011",
+          "period": 3,
+          "preperiod": 1
+        },
+        {
+          "background": "0000110101",
+          "period": 3,
+          "preperiod": 1
+        },
+        {
+          "background": "0000110111",
+          "period": 3,
+          "preperiod": 1
+        },
+        {
+          "background": "0000111001",
+          "period": 3,
+          "preperiod": 2
+        },
+        {
+          "background": "0000111011",
+          "period": 3,
+          "preperiod": 1
+        },
+        {
+          "background": "0010011011",
+          "period": 3,
+          "preperiod": 1
+        },
+        {
+          "background": "0010101111",
+          "period": 3,
+          "preperiod": 1
+        },
+        {
+          "background": "0010110111",
+          "period": 3,
+          "preperiod": 2
+        },
+        {
+          "background": "0010111011",
+          "period": 3,
+          "preperiod": 2
+        },
+        {
+          "background": "0010111101",
+          "period": 3,
+          "preperiod": 0
+        },
+        {
+          "background": "0011011101",
+          "period": 3,
+          "preperiod": 2
+        },
+        {
+          "background": "0011101101",
+          "period": 3,
+          "preperiod": 2
+        },
+        {
+          "background": "0011110101",
+          "period": 3,
+          "preperiod": 1
+        },
+        {
+          "background": "0011111111",
+          "period": 3,
+          "preperiod": 1
+        },
+        {
+          "background": "0101011011",
+          "period": 3,
+          "preperiod": 0
+        },
+        {
+          "background": "0110110111",
+          "period": 3,
+          "preperiod": 0
+        }
+      ]
+    },
+    "len8_rule109": {
+      "period_counts": {
+        "2": 8,
+        "3": 17,
+        "6": 5
+      },
+      "period_examples": {
+        "2": [
+          "00000101",
+          "00100101",
+          "00100111",
+          "00101111",
+          "00110111",
+          "00111011",
+          "00111101",
+          "01011011"
+        ],
+        "3": [
+          "00000001",
+          "00000011",
+          "00001001",
+          "00001011",
+          "00001101",
+          "00001111",
+          "00010011",
+          "00010101",
+          "00011001",
+          "00011011"
+        ],
+        "6": [
+          "00000111",
+          "00010111",
+          "00011101",
+          "01010111",
+          "01111111"
+        ]
+      },
+      "preperiod_counts": {
+        "0": 11,
+        "1": 12,
+        "2": 7
+      },
+      "primitive_necklaces": 30,
+      "t_bg_3_count": 17,
+      "t_bg_3_records": [
+        {
+          "background": "00000001",
+          "period": 3,
+          "preperiod": 1
+        },
+        {
+          "background": "00000011",
+          "period": 3,
+          "preperiod": 2
+        },
+        {
+          "background": "00001001",
+          "period": 3,
+          "preperiod": 0
+        },
+        {
+          "background": "00001011",
+          "period": 3,
+          "preperiod": 2
+        },
+        {
+          "background": "00001101",
+          "period": 3,
+          "preperiod": 2
+        },
+        {
+          "background": "00001111",
+          "period": 3,
+          "preperiod": 1
+        },
+        {
+          "background": "00010011",
+          "period": 3,
+          "preperiod": 2
+        },
+        {
+          "background": "00010101",
+          "period": 3,
+          "preperiod": 0
+        },
+        {
+          "background": "00011001",
+          "period": 3,
+          "preperiod": 2
+        },
+        {
+          "background": "00011011",
+          "period": 3,
+          "preperiod": 1
+        },
+        {
+          "background": "00011111",
+          "period": 3,
+          "preperiod": 0
+        },
+        {
+          "background": "00101011",
+          "period": 3,
+          "preperiod": 1
+        },
+        {
+          "background": "00101101",
+          "period": 3,
+          "preperiod": 0
+        },
+        {
+          "background": "00110101",
+          "period": 3,
+          "preperiod": 1
+        },
+        {
+          "background": "00111111",
+          "period": 3,
+          "preperiod": 0
+        },
+        {
+          "background": "01011111",
+          "period": 3,
+          "preperiod": 0
+        },
+        {
+          "background": "01101111",
+          "period": 3,
+          "preperiod": 1
+        }
+      ]
+    },
+    "len8_rule73": {
+      "period_counts": {
+        "2": 8,
+        "3": 17,
+        "6": 5
+      },
+      "period_examples": {
+        "2": [
+          "00001011",
+          "00001101",
+          "00010011",
+          "00011001",
+          "00011011",
+          "00100101",
+          "01011011",
+          "01011111"
+        ],
+        "3": [
+          "00000011",
+          "00000101",
+          "00000111",
+          "00001001",
+          "00001111",
+          "00100111",
+          "00101011",
+          "00101101",
+          "00101111",
+          "00110101"
+        ],
+        "6": [
+          "00000001",
+          "00010101",
+          "00010111",
+          "00011101",
+          "00011111"
+        ]
+      },
+      "preperiod_counts": {
+        "0": 11,
+        "1": 12,
+        "2": 7
+      },
+      "primitive_necklaces": 30,
+      "t_bg_3_count": 17,
+      "t_bg_3_records": [
+        {
+          "background": "00000011",
+          "period": 3,
+          "preperiod": 0
+        },
+        {
+          "background": "00000101",
+          "period": 3,
+          "preperiod": 0
+        },
+        {
+          "background": "00000111",
+          "period": 3,
+          "preperiod": 0
+        },
+        {
+          "background": "00001001",
+          "period": 3,
+          "preperiod": 1
+        },
+        {
+          "background": "00001111",
+          "period": 3,
+          "preperiod": 1
+        },
+        {
+          "background": "00100111",
+          "period": 3,
+          "preperiod": 1
+        },
+        {
+          "background": "00101011",
+          "period": 3,
+          "preperiod": 1
+        },
+        {
+          "background": "00101101",
+          "period": 3,
+          "preperiod": 0
+        },
+        {
+          "background": "00101111",
+          "period": 3,
+          "preperiod": 2
+        },
+        {
+          "background": "00110101",
+          "period": 3,
+          "preperiod": 1
+        },
+        {
+          "background": "00110111",
+          "period": 3,
+          "preperiod": 2
+        },
+        {
+          "background": "00111011",
+          "period": 3,
+          "preperiod": 2
+        },
+        {
+          "background": "00111101",
+          "period": 3,
+          "preperiod": 2
+        },
+        {
+          "background": "00111111",
+          "period": 3,
+          "preperiod": 2
+        },
+        {
+          "background": "01010111",
+          "period": 3,
+          "preperiod": 0
+        },
+        {
+          "background": "01101111",
+          "period": 3,
+          "preperiod": 0
+        },
+        {
+          "background": "01111111",
+          "period": 3,
+          "preperiod": 1
+        }
+      ]
+    },
+    "len9_rule109": {
+      "period_counts": {
+        "1": 5,
+        "2": 40,
+        "3": 11
+      },
+      "period_examples": {
+        "1": [
+          "001001011",
+          "001001101",
+          "001001111",
+          "001101111",
+          "001111011"
+        ],
+        "2": [
+          "000000101",
+          "000000111",
+          "000001001",
+          "000001011",
+          "000001101",
+          "000001111",
+          "000010001",
+          "000010011",
+          "000010111",
+          "000011001"
+        ],
+        "3": [
+          "000000001",
+          "000000011",
+          "000010101",
+          "000011011",
+          "000011111",
+          "000101011",
+          "000101101",
+          "000110101",
+          "000111111",
+          "010111111"
+        ]
+      },
+      "preperiod_counts": {
+        "0": 10,
+        "1": 10,
+        "2": 10,
+        "3": 5,
+        "4": 8,
+        "5": 3,
+        "6": 4,
+        "7": 6
+      },
+      "primitive_necklaces": 56,
+      "t_bg_3_count": 11,
+      "t_bg_3_records": [
+        {
+          "background": "000000001",
+          "period": 3,
+          "preperiod": 1
+        },
+        {
+          "background": "000000011",
+          "period": 3,
+          "preperiod": 1
+        },
+        {
+          "background": "000010101",
+          "period": 3,
+          "preperiod": 0
+        },
+        {
+          "background": "000011011",
+          "period": 3,
+          "preperiod": 1
+        },
+        {
+          "background": "000011111",
+          "period": 3,
+          "preperiod": 0
+        },
+        {
+          "background": "000101011",
+          "period": 3,
+          "preperiod": 1
+        },
+        {
+          "background": "000101101",
+          "period": 3,
+          "preperiod": 0
+        },
+        {
+          "background": "000110101",
+          "period": 3,
+          "preperiod": 1
+        },
+        {
+          "background": "000111111",
+          "period": 3,
+          "preperiod": 0
+        },
+        {
+          "background": "010111111",
+          "period": 3,
+          "preperiod": 0
+        },
+        {
+          "background": "011011111",
+          "period": 3,
+          "preperiod": 0
+        }
+      ]
+    },
+    "len9_rule73": {
+      "period_counts": {
+        "1": 5,
+        "2": 40,
+        "3": 11
+      },
+      "period_examples": {
+        "1": [
+          "000010011",
+          "000011001",
+          "000011011",
+          "001011011",
+          "001101101"
+        ],
+        "2": [
+          "000000001",
+          "000000011",
+          "000001011",
+          "000001101",
+          "000010001",
+          "000010101",
+          "000010111",
+          "000011101",
+          "000011111",
+          "000100011"
+        ],
+        "3": [
+          "000000101",
+          "000000111",
+          "000001001",
+          "000001111",
+          "001001111",
+          "001010111",
+          "001011101",
+          "001110101",
+          "001111111",
+          "010101111"
+        ]
+      },
+      "preperiod_counts": {
+        "0": 10,
+        "1": 10,
+        "2": 10,
+        "3": 5,
+        "4": 8,
+        "5": 3,
+        "6": 4,
+        "7": 6
+      },
+      "primitive_necklaces": 56,
+      "t_bg_3_count": 11,
+      "t_bg_3_records": [
+        {
+          "background": "000000101",
+          "period": 3,
+          "preperiod": 0
+        },
+        {
+          "background": "000000111",
+          "period": 3,
+          "preperiod": 0
+        },
+        {
+          "background": "000001001",
+          "period": 3,
+          "preperiod": 0
+        },
+        {
+          "background": "000001111",
+          "period": 3,
+          "preperiod": 0
+        },
+        {
+          "background": "001001111",
+          "period": 3,
+          "preperiod": 1
+        },
+        {
+          "background": "001010111",
+          "period": 3,
+          "preperiod": 1
+        },
+        {
+          "background": "001011101",
+          "period": 3,
+          "preperiod": 0
+        },
+        {
+          "background": "001110101",
+          "period": 3,
+          "preperiod": 1
+        },
+        {
+          "background": "001111111",
+          "period": 3,
+          "preperiod": 1
+        },
+        {
+          "background": "010101111",
+          "period": 3,
+          "preperiod": 0
+        },
+        {
+          "background": "011111111",
+          "period": 3,
+          "preperiod": 1
+        }
+      ]
+    }
+  },
+  "lengths": [
+    8,
+    9,
+    10
+  ],
+  "rules": [
+    73,
+    109
+  ]
+}
