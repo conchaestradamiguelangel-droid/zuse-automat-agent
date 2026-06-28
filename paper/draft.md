@@ -57,7 +57,13 @@ five-state cycle under `F^3` in 20/20 representatives, establishing the
 computational mechanism of the measured 5:1 locking ratio. The induced defect
 rule `delta_f(b,d)=f(b XOR d) XOR f(b)` further yields an exact analytical
 conjugation identity between `rule_73` and `rule_109`; exhaustive checks reject
-a fixed sparse truth-table support as the universal source of the cycle.
+a fixed sparse truth-table support as the universal source of the cycle. The
+remaining symbolic state reduces to 13 finite defect-cycle families and a
+compact length-8 descriptor `(rule, subpatterns_len4, IC/background
+alignment)`, validated by 140/140 co-translated rotations. A targeted external
+length-9/10 test over 66 `T_bg=3` backgrounds finds 90 additional T=15
+detections across 8 new backgrounds, showing that the mechanism is not confined
+to primitive length 8.
 
 Every result is reproducible from deterministic scripts with no stochastic
 components in the discovery loop.
@@ -1472,6 +1478,37 @@ is falsified by the `fixed_ic` mode (3/140 detections). Any derivation that
 correctly maps this triple to a defect cycle shape and phase offset is a
 complete symbolic account of the T=15 family.
 
+### 7.13 External length-9/10 validation of the T=15 mechanism (Fase 33-34)
+
+Fase 33 first audits whether the compact descriptor from Section 7.12 can be
+falsified inside the length-8 background universe. Across all binary circular
+length-8 backgrounds there are only two collisions of the `subpatterns_len4`
+descriptor: `00110111/00111011` and `00010011/00011001`. Both collisions are
+already inside the confirmed T=15 set and both preserve the same defect-cycle
+family under the corresponding rule. There is no unseen length-8 background,
+outside rotations of the 20 known representatives, that shares a T=15
+`subpatterns_len4` descriptor under the same rule. Thus the natural external
+test of the descriptor is impossible inside length 8.
+
+Fase 34 therefore moves outside the length-8 universe, but only after a
+preflight checks whether the prerequisite for the five-to-one locking mechanism
+still exists. Primitive length-9 and length-10 backgrounds do contain temporal
+period-three cases under both `rule_73` and `rule_109`: 11 backgrounds per rule
+at length 9 and 22 per rule at length 10. A targeted validation then tests only
+these 66 backgrounds, the two rules, and the same 502 non-zero IC words of
+length 1..8, for 33,132 rule/background/IC runs.
+
+The targeted sweep finds 90 T=15 detections across 8 external backgrounds:
+one length-9 background under `rule_73`, five length-10 backgrounds under
+`rule_73`, and two length-10 backgrounds under `rule_109`. No length-9
+background under `rule_109` produces a T=15 witness in this test. These
+backgrounds are not rotations of the length-8 representatives. The result
+therefore shows that the T=15 mechanism is not an artifact of primitive
+length-8 backgrounds: it generalizes when `T_bg=3` is preserved. The compact
+descriptor from Section 7.12 remains a length-8 family identifier; extending
+that descriptor to variable background length remains a separate symbolic
+problem.
+
 ## 8. Observer Artifacts and Pipeline Equivariance
 
 The ZUSE pipeline contains two classes of observer artifact that the atlas
@@ -1648,7 +1685,13 @@ multiset of length-4 background subwords separates the families, and rotational
 variants preserve the predicted family in 140/140 co-translated runs. The same
 rotations fail almost completely with fixed IC placement (3/140 detections),
 so IC/background alignment is an essential physical variable, not a bookkeeping
-detail.
+detail. Fase 33 then shows that length 8 contains no unseen same-descriptor
+backgrounds outside the known representatives and their rotations; the two
+length-4 descriptor collisions that do exist are already family-preserving.
+Fase 34 moves to primitive length-9/10 backgrounds with `T_bg=3` and finds
+90 T=15 detections across 8 external backgrounds. This confirms that the
+five-to-one mechanism generalizes beyond length 8, while leaving the variable
+length descriptor problem open.
 
 ### 9.4 Empirical atlas, not axiomatic classification
 
@@ -1761,6 +1804,12 @@ Several controlled extensions have now been completed:
   `(rule, subpatterns_len4, IC/background alignment)`: 140/140 co-translated
   rotations preserve both T=15 and the predicted family, while fixed-IC
   rotations collapse to 3/140 detections. Full results are in Section 7.12.
+- **External T=15 validation**: completed for targeted primitive length-9/10
+  backgrounds. Fase 33 proves that length 8 has no unseen same-descriptor
+  backgrounds outside rotations of the known set. Fase 34 then targets the
+  66 primitive length-9/10 backgrounds with `T_bg=3` under `rule_73/rule_109`
+  and finds 90 T=15 detections across 8 external backgrounds. Full results are
+  in Section 7.13.
 
 Each extension is a controlled experiment with the same measurement protocol;
 only the IC or background definition changes.

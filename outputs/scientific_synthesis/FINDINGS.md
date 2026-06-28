@@ -909,6 +909,50 @@ fails almost completely.
 **Outputs.** `rotation_generalization_results.jsonl`,
 `rotation_generalization_report.md`.
 
+### Descriptor collision audit and external T=15 validation (Fase 33-34)
+
+Fase 33 audits whether the compact descriptor from Fase 31-32 can be tested on
+unseen length-8 backgrounds. Across all binary circular length-8 necklaces,
+there are only two `subpatterns_len4` collisions:
+
+- `00110111 / 00111011`
+- `00010011 / 00011001`
+
+Both collisions are already inside the confirmed T=15 representative set and
+preserve the same defect-cycle family under the corresponding rule. There is
+no unseen length-8 background, outside rotations of the known representatives,
+that shares a T=15 `subpatterns_len4` descriptor under the same rule.
+
+Fase 34 therefore leaves length 8, but only after a preflight checks the
+necessary condition `T_bg=3` under `rule_73/rule_109`:
+
+- length 9: 11 primitive backgrounds per rule have `T_bg=3`;
+- length 10: 22 primitive backgrounds per rule have `T_bg=3`.
+
+The targeted validation tests those 66 backgrounds against the same 502
+non-zero IC words of length 1..8, for 33,132 runs. It finds:
+
+- 90 T=15 detections;
+- 8 positive external backgrounds;
+- one length-9 background under `rule_73`;
+- five length-10 backgrounds under `rule_73`;
+- two length-10 backgrounds under `rule_109`;
+- no length-9 T=15 witness under `rule_109`.
+
+**Verdict.** `T15_EXTERNAL_LEN9_LEN10_FOUND`. The T=15 mechanism is not confined
+to primitive length-8 backgrounds. It generalizes to external length-9/10
+backgrounds when the prerequisite `T_bg=3` is preserved. The compact descriptor
+from Fase 31-32 remains a length-8 family identifier; extending it to variable
+background length remains open.
+
+**Scripts.** `outputs/periodic_backgrounds_len8/preflight_len9_len10_tbg3.py`,
+`outputs/periodic_backgrounds_len8/targeted_len9_len10_t15.py`
+
+**Outputs.** `preflight_len9_len10_tbg3_results.json`,
+`preflight_len9_len10_tbg3_report.md`,
+`targeted_len9_len10_t15_results.jsonl`,
+`targeted_len9_len10_t15_report.md`.
+
 Scientific reading: period-8 primitive backgrounds enlarge the oscillator
 landscape relative to shorter backgrounds. The three Fase-24 questions are
 answered affirmatively: new rules appear, new periods T>4 include T=15, and a
