@@ -1,0 +1,847 @@
+{
+  "descriptor_tests": [
+    {
+      "ambiguous_bucket_count": 5,
+      "ambiguous_buckets": [
+        {
+          "backgrounds": [
+            "00011001",
+            "00001101",
+            "00001011",
+            "01101111"
+          ],
+          "descriptor": [
+            109,
+            2,
+            5
+          ],
+          "families": [
+            "F00",
+            "F02",
+            "F05",
+            "F11"
+          ]
+        },
+        {
+          "backgrounds": [
+            "00110111",
+            "00110101"
+          ],
+          "descriptor": [
+            73,
+            0,
+            4
+          ],
+          "families": [
+            "F01",
+            "F03"
+          ]
+        },
+        {
+          "backgrounds": [
+            "00111011",
+            "00000011"
+          ],
+          "descriptor": [
+            73,
+            0,
+            0
+          ],
+          "families": [
+            "F01",
+            "F09"
+          ]
+        },
+        {
+          "backgrounds": [
+            "00110101",
+            "00111111"
+          ],
+          "descriptor": [
+            109,
+            2,
+            0
+          ],
+          "families": [
+            "F03",
+            "F07"
+          ]
+        },
+        {
+          "backgrounds": [
+            "00101111",
+            "00001001"
+          ],
+          "descriptor": [
+            73,
+            0,
+            3
+          ],
+          "families": [
+            "F04",
+            "F10"
+          ]
+        }
+      ],
+      "bucket_count": 13,
+      "descriptor": "entry_embedding",
+      "determines_family": false
+    },
+    {
+      "ambiguous_bucket_count": 2,
+      "ambiguous_buckets": [
+        {
+          "backgrounds": [
+            "00001001",
+            "00011001",
+            "00001101",
+            "00001011",
+            "00001111"
+          ],
+          "descriptor": [
+            109,
+            0,
+            0
+          ],
+          "families": [
+            "F00",
+            "F02",
+            "F05",
+            "F08"
+          ]
+        },
+        {
+          "backgrounds": [
+            "01101111",
+            "00001111",
+            "00101111"
+          ],
+          "descriptor": [
+            73,
+            1,
+            0
+          ],
+          "families": [
+            "F01",
+            "F02",
+            "F04"
+          ]
+        }
+      ],
+      "bucket_count": 14,
+      "descriptor": "sample_embedding",
+      "determines_family": false
+    },
+    {
+      "ambiguous_bucket_count": 2,
+      "ambiguous_buckets": [
+        {
+          "backgrounds": [
+            "00001001",
+            "00001101",
+            "00001011",
+            "00001111"
+          ],
+          "descriptor": [
+            109,
+            0,
+            0,
+            5
+          ],
+          "families": [
+            "F00",
+            "F02",
+            "F05",
+            "F08"
+          ]
+        },
+        {
+          "backgrounds": [
+            "01101111",
+            "00001111"
+          ],
+          "descriptor": [
+            73,
+            1,
+            0,
+            4
+          ],
+          "families": [
+            "F01",
+            "F02"
+          ]
+        }
+      ],
+      "bucket_count": 16,
+      "descriptor": "sample_embedding_ic_start",
+      "determines_family": false
+    },
+    {
+      "ambiguous_bucket_count": 2,
+      "ambiguous_buckets": [
+        {
+          "backgrounds": [
+            "00001001",
+            "00001101",
+            "00001011",
+            "00001111"
+          ],
+          "descriptor": [
+            109,
+            0,
+            0,
+            7,
+            5
+          ],
+          "families": [
+            "F00",
+            "F02",
+            "F05",
+            "F08"
+          ]
+        },
+        {
+          "backgrounds": [
+            "01101111",
+            "00001111"
+          ],
+          "descriptor": [
+            73,
+            1,
+            0,
+            8,
+            4
+          ],
+          "families": [
+            "F01",
+            "F02"
+          ]
+        }
+      ],
+      "bucket_count": 16,
+      "descriptor": "sample_embedding_ic_len_start",
+      "determines_family": false
+    },
+    {
+      "ambiguous_bucket_count": 2,
+      "ambiguous_buckets": [
+        {
+          "backgrounds": [
+            "00001001",
+            "00011001",
+            "00001011",
+            "00001111"
+          ],
+          "descriptor": [
+            109,
+            0,
+            0,
+            1
+          ],
+          "families": [
+            "F00",
+            "F05",
+            "F08"
+          ]
+        },
+        {
+          "backgrounds": [
+            "01101111",
+            "00001111"
+          ],
+          "descriptor": [
+            73,
+            1,
+            0,
+            4
+          ],
+          "families": [
+            "F01",
+            "F02"
+          ]
+        }
+      ],
+      "bucket_count": 16,
+      "descriptor": "sample_embedding_defect_anchor",
+      "determines_family": false
+    },
+    {
+      "ambiguous_bucket_count": 0,
+      "ambiguous_buckets": [],
+      "bucket_count": 19,
+      "descriptor": "sample_embedding_defect_state",
+      "determines_family": true
+    },
+    {
+      "ambiguous_bucket_count": 2,
+      "ambiguous_buckets": [
+        {
+          "backgrounds": [
+            "00001001",
+            "00001011",
+            "00001111"
+          ],
+          "descriptor": [
+            109,
+            0,
+            0,
+            7,
+            5,
+            1
+          ],
+          "families": [
+            "F00",
+            "F05",
+            "F08"
+          ]
+        },
+        {
+          "backgrounds": [
+            "01101111",
+            "00001111"
+          ],
+          "descriptor": [
+            73,
+            1,
+            0,
+            8,
+            4,
+            4
+          ],
+          "families": [
+            "F01",
+            "F02"
+          ]
+        }
+      ],
+      "bucket_count": 17,
+      "descriptor": "full_embedding_without_ic_word",
+      "determines_family": false
+    }
+  ],
+  "first_success": "sample_embedding_defect_state",
+  "record_count": 20,
+  "rows": [
+    {
+      "background": "00001001",
+      "canonical_orbit": [
+        "00001001",
+        "00101101",
+        "00111111"
+      ],
+      "defect_anchor": 121,
+      "defect_anchor_mod_raw": 1,
+      "defect_anchor_mod_sample_canonical": 1,
+      "defect_state0": "11:4e5",
+      "entry_orbit_step": 0,
+      "entry_rotation_offset": 0,
+      "entry_word": "00001001",
+      "family_id": "F00",
+      "ic": "0001001",
+      "ic_len": 7,
+      "ic_start_mod_entry_canonical": 5,
+      "ic_start_mod_raw": 5,
+      "ic_start_mod_sample_canonical": 5,
+      "preperiod": 0,
+      "rule": 109,
+      "sample_orbit_step": 0,
+      "sample_rotation_offset": 0,
+      "sample_word": "00001001"
+    },
+    {
+      "background": "00010011",
+      "canonical_orbit": [
+        "00001001",
+        "00101101",
+        "00111111"
+      ],
+      "defect_anchor": 120,
+      "defect_anchor_mod_raw": 0,
+      "defect_anchor_mod_sample_canonical": 7,
+      "defect_state0": "11:4e5",
+      "entry_orbit_step": 2,
+      "entry_rotation_offset": 4,
+      "entry_word": "11110011",
+      "family_id": "F00",
+      "ic": "01001",
+      "ic_len": 5,
+      "ic_start_mod_entry_canonical": 2,
+      "ic_start_mod_raw": 6,
+      "ic_start_mod_sample_canonical": 5,
+      "preperiod": 2,
+      "rule": 109,
+      "sample_orbit_step": 0,
+      "sample_rotation_offset": 7,
+      "sample_word": "00010010"
+    },
+    {
+      "background": "00011001",
+      "canonical_orbit": [
+        "00001001",
+        "00101101",
+        "00111111"
+      ],
+      "defect_anchor": 121,
+      "defect_anchor_mod_raw": 1,
+      "defect_anchor_mod_sample_canonical": 1,
+      "defect_state0": "11:4e5",
+      "entry_orbit_step": 2,
+      "entry_rotation_offset": 5,
+      "entry_word": "11111001",
+      "family_id": "F00",
+      "ic": "01",
+      "ic_len": 2,
+      "ic_start_mod_entry_canonical": 4,
+      "ic_start_mod_raw": 7,
+      "ic_start_mod_sample_canonical": 7,
+      "preperiod": 2,
+      "rule": 109,
+      "sample_orbit_step": 0,
+      "sample_rotation_offset": 0,
+      "sample_word": "00001001"
+    },
+    {
+      "background": "00110111",
+      "canonical_orbit": [
+        "00000011",
+        "01101111",
+        "00101101"
+      ],
+      "defect_anchor": 125,
+      "defect_anchor_mod_raw": 5,
+      "defect_anchor_mod_sample_canonical": 6,
+      "defect_state0": "11:539",
+      "entry_orbit_step": 0,
+      "entry_rotation_offset": 4,
+      "entry_word": "00110000",
+      "family_id": "F01",
+      "ic": "011011",
+      "ic_len": 6,
+      "ic_start_mod_entry_canonical": 1,
+      "ic_start_mod_raw": 5,
+      "ic_start_mod_sample_canonical": 6,
+      "preperiod": 2,
+      "rule": 73,
+      "sample_orbit_step": 1,
+      "sample_rotation_offset": 1,
+      "sample_word": "10110111"
+    },
+    {
+      "background": "00111011",
+      "canonical_orbit": [
+        "00000011",
+        "01101111",
+        "00101101"
+      ],
+      "defect_anchor": 121,
+      "defect_anchor_mod_raw": 1,
+      "defect_anchor_mod_sample_canonical": 6,
+      "defect_state0": "12:f69",
+      "entry_orbit_step": 0,
+      "entry_rotation_offset": 0,
+      "entry_word": "00000011",
+      "family_id": "F01",
+      "ic": "00100100",
+      "ic_len": 8,
+      "ic_start_mod_entry_canonical": 4,
+      "ic_start_mod_raw": 4,
+      "ic_start_mod_sample_canonical": 1,
+      "preperiod": 2,
+      "rule": 73,
+      "sample_orbit_step": 1,
+      "sample_rotation_offset": 5,
+      "sample_word": "01111011"
+    },
+    {
+      "background": "01101111",
+      "canonical_orbit": [
+        "00000011",
+        "01101111",
+        "00101101"
+      ],
+      "defect_anchor": 124,
+      "defect_anchor_mod_raw": 4,
+      "defect_anchor_mod_sample_canonical": 4,
+      "defect_state0": "11:539",
+      "entry_orbit_step": 1,
+      "entry_rotation_offset": 0,
+      "entry_word": "01101111",
+      "family_id": "F01",
+      "ic": "01101110",
+      "ic_len": 8,
+      "ic_start_mod_entry_canonical": 4,
+      "ic_start_mod_raw": 4,
+      "ic_start_mod_sample_canonical": 4,
+      "preperiod": 0,
+      "rule": 73,
+      "sample_orbit_step": 1,
+      "sample_rotation_offset": 0,
+      "sample_word": "01101111"
+    },
+    {
+      "background": "00001111",
+      "canonical_orbit": [
+        "00000011",
+        "01101111",
+        "00101101"
+      ],
+      "defect_anchor": 116,
+      "defect_anchor_mod_raw": 4,
+      "defect_anchor_mod_sample_canonical": 4,
+      "defect_state0": "20:ca953",
+      "entry_orbit_step": 2,
+      "entry_rotation_offset": 5,
+      "entry_word": "01101001",
+      "family_id": "F02",
+      "ic": "00100000",
+      "ic_len": 8,
+      "ic_start_mod_entry_canonical": 1,
+      "ic_start_mod_raw": 4,
+      "ic_start_mod_sample_canonical": 4,
+      "preperiod": 1,
+      "rule": 73,
+      "sample_orbit_step": 1,
+      "sample_rotation_offset": 0,
+      "sample_word": "01101111"
+    },
+    {
+      "background": "00111111",
+      "canonical_orbit": [
+        "00000011",
+        "01101111",
+        "00101101"
+      ],
+      "defect_anchor": 120,
+      "defect_anchor_mod_raw": 0,
+      "defect_anchor_mod_sample_canonical": 3,
+      "defect_state0": "18:29ce5",
+      "entry_orbit_step": 0,
+      "entry_rotation_offset": 6,
+      "entry_word": "00001100",
+      "family_id": "F02",
+      "ic": "0001100",
+      "ic_len": 7,
+      "ic_start_mod_entry_canonical": 3,
+      "ic_start_mod_raw": 5,
+      "ic_start_mod_sample_canonical": 0,
+      "preperiod": 2,
+      "rule": 73,
+      "sample_orbit_step": 1,
+      "sample_rotation_offset": 3,
+      "sample_word": "11101101"
+    },
+    {
+      "background": "00001101",
+      "canonical_orbit": [
+        "00001001",
+        "00101101",
+        "00111111"
+      ],
+      "defect_anchor": 124,
+      "defect_anchor_mod_raw": 4,
+      "defect_anchor_mod_sample_canonical": 4,
+      "defect_state0": "12:999",
+      "entry_orbit_step": 2,
+      "entry_rotation_offset": 5,
+      "entry_word": "11111001",
+      "family_id": "F02",
+      "ic": "0100001",
+      "ic_len": 7,
+      "ic_start_mod_entry_canonical": 2,
+      "ic_start_mod_raw": 5,
+      "ic_start_mod_sample_canonical": 5,
+      "preperiod": 2,
+      "rule": 109,
+      "sample_orbit_step": 0,
+      "sample_rotation_offset": 0,
+      "sample_word": "00001001"
+    },
+    {
+      "background": "00110101",
+      "canonical_orbit": [
+        "00000011",
+        "01101111",
+        "00101101"
+      ],
+      "defect_anchor": 125,
+      "defect_anchor_mod_raw": 5,
+      "defect_anchor_mod_sample_canonical": 3,
+      "defect_state0": "12:96f",
+      "entry_orbit_step": 0,
+      "entry_rotation_offset": 4,
+      "entry_word": "00110000",
+      "family_id": "F03",
+      "ic": "011010",
+      "ic_len": 6,
+      "ic_start_mod_entry_canonical": 1,
+      "ic_start_mod_raw": 5,
+      "ic_start_mod_sample_canonical": 3,
+      "preperiod": 1,
+      "rule": 73,
+      "sample_orbit_step": 2,
+      "sample_rotation_offset": 6,
+      "sample_word": "10110100"
+    },
+    {
+      "background": "00110101",
+      "canonical_orbit": [
+        "00001001",
+        "00101101",
+        "00111111"
+      ],
+      "defect_anchor": 123,
+      "defect_anchor_mod_raw": 3,
+      "defect_anchor_mod_sample_canonical": 3,
+      "defect_state0": "12:96f",
+      "entry_orbit_step": 2,
+      "entry_rotation_offset": 0,
+      "entry_word": "00111111",
+      "family_id": "F03",
+      "ic": "010101",
+      "ic_len": 6,
+      "ic_start_mod_entry_canonical": 5,
+      "ic_start_mod_raw": 5,
+      "ic_start_mod_sample_canonical": 5,
+      "preperiod": 1,
+      "rule": 109,
+      "sample_orbit_step": 1,
+      "sample_rotation_offset": 0,
+      "sample_word": "00101101"
+    },
+    {
+      "background": "00101111",
+      "canonical_orbit": [
+        "00000011",
+        "01101111",
+        "00101101"
+      ],
+      "defect_anchor": 122,
+      "defect_anchor_mod_raw": 2,
+      "defect_anchor_mod_sample_canonical": 2,
+      "defect_state0": "13:1d09",
+      "entry_orbit_step": 0,
+      "entry_rotation_offset": 3,
+      "entry_word": "01100000",
+      "family_id": "F04",
+      "ic": "0000111",
+      "ic_len": 7,
+      "ic_start_mod_entry_canonical": 0,
+      "ic_start_mod_raw": 5,
+      "ic_start_mod_sample_canonical": 5,
+      "preperiod": 2,
+      "rule": 73,
+      "sample_orbit_step": 1,
+      "sample_rotation_offset": 0,
+      "sample_word": "01101111"
+    },
+    {
+      "background": "00001011",
+      "canonical_orbit": [
+        "00001001",
+        "00101101",
+        "00111111"
+      ],
+      "defect_anchor": 121,
+      "defect_anchor_mod_raw": 1,
+      "defect_anchor_mod_sample_canonical": 1,
+      "defect_state0": "13:1ce5",
+      "entry_orbit_step": 2,
+      "entry_rotation_offset": 5,
+      "entry_word": "11111001",
+      "family_id": "F05",
+      "ic": "0001001",
+      "ic_len": 7,
+      "ic_start_mod_entry_canonical": 2,
+      "ic_start_mod_raw": 5,
+      "ic_start_mod_sample_canonical": 5,
+      "preperiod": 2,
+      "rule": 109,
+      "sample_orbit_step": 0,
+      "sample_rotation_offset": 0,
+      "sample_word": "00001001"
+    },
+    {
+      "background": "00101101",
+      "canonical_orbit": [
+        "00000011",
+        "01101111",
+        "00101101"
+      ],
+      "defect_anchor": 119,
+      "defect_anchor_mod_raw": 7,
+      "defect_anchor_mod_sample_canonical": 7,
+      "defect_state0": "12:f69",
+      "entry_orbit_step": 2,
+      "entry_rotation_offset": 0,
+      "entry_word": "00101101",
+      "family_id": "F06",
+      "ic": "010110",
+      "ic_len": 6,
+      "ic_start_mod_entry_canonical": 5,
+      "ic_start_mod_raw": 5,
+      "ic_start_mod_sample_canonical": 5,
+      "preperiod": 0,
+      "rule": 73,
+      "sample_orbit_step": 2,
+      "sample_rotation_offset": 0,
+      "sample_word": "00101101"
+    },
+    {
+      "background": "00111111",
+      "canonical_orbit": [
+        "00001001",
+        "00101101",
+        "00111111"
+      ],
+      "defect_anchor": 124,
+      "defect_anchor_mod_raw": 4,
+      "defect_anchor_mod_sample_canonical": 4,
+      "defect_state0": "11:7cb",
+      "entry_orbit_step": 2,
+      "entry_rotation_offset": 0,
+      "entry_word": "00111111",
+      "family_id": "F07",
+      "ic": "00111111",
+      "ic_len": 8,
+      "ic_start_mod_entry_canonical": 4,
+      "ic_start_mod_raw": 4,
+      "ic_start_mod_sample_canonical": 4,
+      "preperiod": 0,
+      "rule": 109,
+      "sample_orbit_step": 2,
+      "sample_rotation_offset": 0,
+      "sample_word": "00111111"
+    },
+    {
+      "background": "00001111",
+      "canonical_orbit": [
+        "00001001",
+        "00101101",
+        "00111111"
+      ],
+      "defect_anchor": 121,
+      "defect_anchor_mod_raw": 1,
+      "defect_anchor_mod_sample_canonical": 1,
+      "defect_state0": "14:34e5",
+      "entry_orbit_step": 1,
+      "entry_rotation_offset": 5,
+      "entry_word": "01101001",
+      "family_id": "F08",
+      "ic": "0001001",
+      "ic_len": 7,
+      "ic_start_mod_entry_canonical": 2,
+      "ic_start_mod_raw": 5,
+      "ic_start_mod_sample_canonical": 5,
+      "preperiod": 1,
+      "rule": 109,
+      "sample_orbit_step": 0,
+      "sample_rotation_offset": 0,
+      "sample_word": "00001001"
+    },
+    {
+      "background": "00000011",
+      "canonical_orbit": [
+        "00000011",
+        "01101111",
+        "00101101"
+      ],
+      "defect_anchor": 121,
+      "defect_anchor_mod_raw": 1,
+      "defect_anchor_mod_sample_canonical": 1,
+      "defect_state0": "11:69f",
+      "entry_orbit_step": 0,
+      "entry_rotation_offset": 0,
+      "entry_word": "00000011",
+      "family_id": "F09",
+      "ic": "0000011",
+      "ic_len": 7,
+      "ic_start_mod_entry_canonical": 5,
+      "ic_start_mod_raw": 5,
+      "ic_start_mod_sample_canonical": 5,
+      "preperiod": 0,
+      "rule": 73,
+      "sample_orbit_step": 0,
+      "sample_rotation_offset": 0,
+      "sample_word": "00000011"
+    },
+    {
+      "background": "00001001",
+      "canonical_orbit": [
+        "00000011",
+        "01101111",
+        "00101101"
+      ],
+      "defect_anchor": 121,
+      "defect_anchor_mod_raw": 1,
+      "defect_anchor_mod_sample_canonical": 6,
+      "defect_state0": "15:4b2b",
+      "entry_orbit_step": 0,
+      "entry_rotation_offset": 3,
+      "entry_word": "01100000",
+      "family_id": "F10",
+      "ic": "00110010",
+      "ic_len": 8,
+      "ic_start_mod_entry_canonical": 7,
+      "ic_start_mod_raw": 4,
+      "ic_start_mod_sample_canonical": 1,
+      "preperiod": 1,
+      "rule": 73,
+      "sample_orbit_step": 2,
+      "sample_rotation_offset": 5,
+      "sample_word": "01101001"
+    },
+    {
+      "background": "01101111",
+      "canonical_orbit": [
+        "00001001",
+        "00101101",
+        "00111111"
+      ],
+      "defect_anchor": 120,
+      "defect_anchor_mod_raw": 0,
+      "defect_anchor_mod_sample_canonical": 5,
+      "defect_state0": "15:6f69",
+      "entry_orbit_step": 2,
+      "entry_rotation_offset": 5,
+      "entry_word": "11111001",
+      "family_id": "F11",
+      "ic": "0101001",
+      "ic_len": 7,
+      "ic_start_mod_entry_canonical": 2,
+      "ic_start_mod_raw": 5,
+      "ic_start_mod_sample_canonical": 2,
+      "preperiod": 1,
+      "rule": 109,
+      "sample_orbit_step": 1,
+      "sample_rotation_offset": 5,
+      "sample_word": "01101001"
+    },
+    {
+      "background": "00000011",
+      "canonical_orbit": [
+        "00001001",
+        "00101101",
+        "00111111"
+      ],
+      "defect_anchor": 118,
+      "defect_anchor_mod_raw": 6,
+      "defect_anchor_mod_sample_canonical": 3,
+      "defect_state0": "17:1686d",
+      "entry_orbit_step": 2,
+      "entry_rotation_offset": 2,
+      "entry_word": "11001111",
+      "family_id": "F12",
+      "ic": "1110101",
+      "ic_len": 7,
+      "ic_start_mod_entry_canonical": 7,
+      "ic_start_mod_raw": 5,
+      "ic_start_mod_sample_canonical": 2,
+      "preperiod": 2,
+      "rule": 109,
+      "sample_orbit_step": 0,
+      "sample_rotation_offset": 5,
+      "sample_word": "01001000"
+    }
+  ],
+  "status": "EMBEDDING_DESCRIPTOR_FOUND"
+}
