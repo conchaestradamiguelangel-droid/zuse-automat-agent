@@ -63,7 +63,12 @@ compact length-8 descriptor `(rule, subpatterns_len4, IC/background
 alignment)`, validated by 140/140 co-translated rotations. A targeted external
 length-9/10 test over 66 `T_bg=3` backgrounds finds 90 additional T=15
 detections across 8 new backgrounds, showing that the mechanism is not confined
-to primitive length 8.
+to primitive length 8. Subsequent transition-table and pre-burn-in analyses
+show that the post-burn-in macro-operator refines the 13 visual families, but
+that the entry phase before burn-in does not admit a compact local predictor in
+the tested descriptors: all 20 representatives enter the stable five-cycle by
+`t=12`, yet exact pre-burn-in predictors mostly collapse to singleton case
+identifiers.
 
 Every result is reproducible from deterministic scripts with no stochastic
 components in the discovery loop.
@@ -1509,6 +1514,78 @@ descriptor from Section 7.12 remains a length-8 family identifier; extending
 that descriptor to variable background length remains a separate symbolic
 problem.
 
+### 7.14 Transition tables and effective orbit embeddings (Fase 35-38)
+
+Sections 7.10--7.13 reduce the `T=15` family to finite defect-cycle shapes,
+compact length-8 descriptors, and external `T_bg=3` witnesses. Fases 35--38
+then move from visual shape families to the explicit macro-operator acting on
+the localized defect.
+
+**Transition tables (Fase 35).** For each of the 20 minimal representatives,
+the five transitions `D_i -> D_{i+1}` under `F^3` are expanded into explicit
+local transition tables over the induced defect rule
+`delta_f(b,d)=f(b XOR d) XOR f(b)`. The table signature is never shared across
+different visual families, so it is a sufficient discriminator. It is not
+identical to the visual family partition, however: the verdict is
+`TABLE_REFINES_FAMILY`. Some multi-member families share the same table exactly
+or up to cyclic phase rotation, while others split by rule or by mechanism.
+This shows that the fundamental object is the induced macro-transition table,
+with the visual family as a coarser quotient.
+
+**Effective orbit identity (Fase 36).** The clearest table identity appears in
+family `F00` under `rule_109`: the backgrounds `00001001`, `00010011`, and
+`00011001` have the same exact five-phase transition table. Fase 36 explains
+this algebraically at the orbit level. Although the three initial backgrounds
+have different preperiods, by the sampling time they have converged to the same
+canonical period-3 background orbit `{00001001, 00101101, 00111111}`. The
+shared table is therefore not accidental: after burn-in, the defect sees the
+same sequence of background states.
+
+**Canonical orbit insufficiency (Fase 37).** Generalizing the F00 explanation
+to all representatives reveals a sharper constraint. Across the confirmed
+`T=15` set there is only one canonical period-3 background orbit for
+`rule_73` and one for `rule_109`; this orbit identity is too coarse to
+determine the 13 shape families. The missing variable is not which orbit is
+reached, but how the localized defect is embedded into that orbit.
+
+**Embedding descriptor (Fase 38).** Fase 38 tests descriptors based on the
+sampled orbit step, spatial rotation offset, IC start, IC length, defect anchor,
+and the first sampled defect state. The first sufficient descriptor is
+`(rule, sample_orbit_step, sample_rotation_offset, defect_state0)`. This closes
+the post-burn-in description: once the defect has crystallized into its first
+stable-cycle state, the family is determined. The descriptor is not yet a
+closed-form prediction from the initial condition, because `defect_state0` is
+measured after burn-in.
+
+### 7.15 Pre-burn-in entry phase limits (Fase 39)
+
+Fase 39 tests the remaining left side of the causal chain:
+
+`(background, IC) -> burn-in -> defect_state0 -> family`.
+
+For each of the 20 minimal `T=15` representatives, the localized defect
+`D(t)=X(t) XOR B(t)` is traced every three ECA steps from `t=0` to the sampling
+time `t=81`. The first time at which `D(t)` belongs to one of the five stable
+cycle states is recorded as the entry time, together with the corresponding
+entry phase.
+
+The entry is always fast: observed entry times are `0, 3, 6, 9, 12`, with
+15/20 representatives entering at `t=3` and all 20 entering by `t=12`.
+However, fast entry is not the same as compact predictability. The descriptor
+tests include `rule+IC`, `rule+IC length`, post-hoc entry-time descriptors, and
+local background/IC windows of radius 1..5 around the initial perturbation.
+Exact predictors exist, but they are not compact: `rule+IC` uses 18 buckets
+with 17 singleton buckets, and the local windows produce 20 singleton buckets.
+Post-hoc descriptors involving entry time are exact for entry phase but do not
+predict it from the initial state.
+
+The verdict is `NONCOMPACT_PREBURNIN_DESCRIPTOR_FOUND`. The stable-cycle
+entry point is reached after only a few applications of `F^3`, but the tested
+pre-burn-in descriptors either fail or identify individual cases. Thus the
+current derivation is complete after burn-in and sharply delimited before
+burn-in: predicting `defect_state0` from the raw background/IC pair remains the
+irreducible part of the mechanism under the tested descriptor class.
+
 ## 8. Observer Artifacts and Pipeline Equivariance
 
 The ZUSE pipeline contains two classes of observer artifact that the atlas
@@ -1693,6 +1770,24 @@ Fase 34 moves to primitive length-9/10 backgrounds with `T_bg=3` and finds
 five-to-one mechanism generalizes beyond length 8, while leaving the variable
 length descriptor problem open.
 
+Fases 35--38 replace visual shape families with explicit macro-transition
+tables and effective orbit embeddings. The induced `F^3` transition table is a
+sufficient discriminator and refines the 13 visual families. The `F00` table
+identity is explained by convergence to the same effective period-3 background
+orbit, but that explanation is too coarse globally: each rule has only one
+canonical period-3 orbit across the confirmed set. The first sufficient
+post-burn-in descriptor is therefore `(rule, sample_orbit_step,
+sample_rotation_offset, defect_state0)`, where `defect_state0` is the first
+sampled stable-cycle defect state.
+
+Fase 39 tests whether that final measured variable can be predicted compactly
+from pre-burn-in data. The answer is negative under the tested descriptors.
+All 20 representatives enter the stable five-cycle by `t=12` and 15/20 enter at
+`t=3`, but exact pre-burn-in predictors either rely on post-hoc entry time or
+collapse into singleton case identifiers. The remaining formal problem is
+therefore precise: predict `defect_state0` from the raw background/IC pair
+without effectively replaying the early transient.
+
 ### 9.4 Empirical atlas, not axiomatic classification
 
 The world categories are induced from observed law signatures across a finite
@@ -1810,6 +1905,18 @@ Several controlled extensions have now been completed:
   66 primitive length-9/10 backgrounds with `T_bg=3` under `rule_73/rule_109`
   and finds 90 T=15 detections across 8 external backgrounds. Full results are
   in Section 7.13.
+- **Transition-table and embedding analysis**: completed for the 20 minimal
+  `T=15` representatives. The explicit `F^3` transition table is a sufficient
+  discriminator and refines the visual family partition. Family `F00` is
+  explained by convergence to a shared effective period-3 background orbit, but
+  canonical orbit identity alone is too coarse globally. The first sufficient
+  post-burn-in descriptor is `(rule, sample_orbit_step, sample_rotation_offset,
+  defect_state0)`. Full results are in Section 7.14.
+- **Pre-burn-in entry phase**: negative delimiter. The defect enters the stable
+  five-cycle quickly (all 20 by `t=12`, 15/20 at `t=3`), but the tested
+  pre-burn-in descriptors do not give a compact predictor of the entry phase:
+  exact descriptors are mostly singleton case identifiers or post-hoc
+  measurements. Full results are in Section 7.15.
 
 Each extension is a controlled experiment with the same measurement protocol;
 only the IC or background definition changes.

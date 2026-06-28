@@ -953,6 +953,82 @@ background length remains open.
 `targeted_len9_len10_t15_results.jsonl`,
 `targeted_len9_len10_t15_report.md`.
 
+### Transition tables and effective orbit embeddings (Fase 35-38)
+
+Fase 35 constructs the explicit local transition table of the localized defect
+under the macro-operator `F^3` for each of the 20 minimal `T=15`
+representatives. The table signature is a sufficient discriminator: no
+phase-canonical transition-table signature crosses visual family boundaries.
+It does not equal the visual family partition exactly, however. The verdict is
+`TABLE_REFINES_FAMILY`: the macro-transition table is the finer algebraic
+object, and the 13 visual shape families are a quotient of it.
+
+The clearest identity appears in family `F00` under `rule_109`. Backgrounds
+`00001001`, `00010011`, and `00011001` share the same exact five-phase
+transition table. Fase 36 explains this by effective background orbit
+convergence: although their initial words and preperiods differ, by sampling
+time they have reached the same canonical period-3 orbit
+`{00001001, 00101101, 00111111}`. The shared table is therefore a consequence
+of seeing the same background sequence after burn-in.
+
+Fase 37 tests whether canonical period-3 orbit identity explains all 13
+families. It does not. There is only one canonical orbit for `rule_73` and one
+for `rule_109` across the confirmed set, so orbit identity is too coarse. The
+missing variable is the embedding of the localized defect inside that orbit.
+
+Fase 38 tests embedding descriptors. The first sufficient descriptor is:
+
+`(rule, sample_orbit_step, sample_rotation_offset, defect_state0)`.
+
+This closes the post-burn-in description: once the defect has crystallized
+into its first sampled stable-cycle state, the family is determined. It is not
+a closed-form pre-burn-in predictor because `defect_state0` is measured after
+burn-in.
+
+**Scripts.** `outputs/periodic_backgrounds_len8/analyze_transition_tables.py`,
+`outputs/periodic_backgrounds_len8/analyze_f00_table_identity.py`,
+`outputs/periodic_backgrounds_len8/analyze_canonical_orbit_families.py`,
+`outputs/periodic_backgrounds_len8/analyze_defect_embedding_descriptor.py`
+
+**Outputs.** `transition_tables_results.json`,
+`transition_tables_report.md`, `f00_table_identity_results.json`,
+`f00_table_identity_report.md`, `canonical_orbit_family_results.json`,
+`canonical_orbit_family_report.md`, `defect_embedding_descriptor_results.json`,
+`defect_embedding_descriptor_report.md`.
+
+### Pre-burn-in entry phase predictors (Fase 39)
+
+Fase 39 tests whether the remaining measured variable `defect_state0` can be
+predicted compactly before the 81-step burn-in. For each of the 20 minimal
+representatives, the defect `D(t)=X(t) XOR B(t)` is sampled every three ECA
+steps from `t=0` to `t=81`, and the first stable five-cycle state is recorded.
+
+The temporal result is strong:
+
+- observed entry times: `0, 3, 6, 9, 12`;
+- 15/20 representatives enter at `t=3`;
+- all 20 representatives enter by `t=12`.
+
+The compression result is negative. Exact descriptors exist, but they are not
+compact:
+
+- `rule+IC` determines entry phase but uses 18 buckets with 17 singleton
+  buckets;
+- local background/IC windows of radius 1..5 determine entry phase only by
+  producing 20 singleton buckets;
+- descriptors involving entry time are post-hoc measurements, not predictors.
+
+**Verdict.** `NONCOMPACT_PREBURNIN_DESCRIPTOR_FOUND`. The entry into the stable
+cycle is fast, but the tested pre-burn-in descriptors either fail or identify
+individual cases. The post-burn-in mechanism is closed; the remaining formal
+problem is predicting `defect_state0` from the raw background/IC pair without
+effectively replaying the early transient.
+
+**Script.** `outputs/periodic_backgrounds_len8/analyze_preburnin_entry_phase.py`
+
+**Outputs.** `preburnin_entry_phase_results.json`,
+`preburnin_entry_phase_report.md`.
+
 Scientific reading: period-8 primitive backgrounds enlarge the oscillator
 landscape relative to shorter backgrounds. The three Fase-24 questions are
 answered affirmatively: new rules appear, new periods T>4 include T=15, and a
