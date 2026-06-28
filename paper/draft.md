@@ -1431,6 +1431,47 @@ of defect-cycle shapes plus a phase offset. A derivation predicting a single
 universal five-state cycle is falsified by Fase 29; a derivation predicting
 arbitrary unclustered shape variation is refuted by Fase 30.
 
+### 7.12 Compact state variable for the T=15 family (Fase 31–32)
+
+Fase 30 reduced the T=15 family to 13 shape families but required the full
+temporal background orbit as the discriminating descriptor. Fase 31 and Fase 32
+search for a shorter description.
+
+**Descriptor search (Fase 31).** A compact global background descriptor does
+not exist among the candidates tested (length-2..4 circular subpattern counts,
+parity, run lengths, and orbit prefixes up to 24 bits). Globally, only
+`orbit_prefix_24` determines the family, which is substantially a restatement
+of full background identity. Conditioned on the ECA rule, the shortest
+non-orbit candidate is the circular multiset of length-4 background subwords
+(`subpatterns_len4`): it separates all 10 backgrounds per rule into distinct
+buckets with zero ambiguity. A global decision tree over all features achieves
+only 0.700 training accuracy at depth 4, confirming that no shallow feature
+combination separates all 13 families simultaneously.
+
+**Rotation generalization (Fase 32).** The circular subpattern multiset is
+invariant under background rotation. Fase 32 tests whether the predicted family
+is preserved across all seven non-trivial rotations of each of the 20
+representative backgrounds, under two modes: `fixed_ic` (background rotated, IC
+position fixed) and `cotranslated_ic` (background rotated, IC shifted by the
+same amount to preserve local alignment).
+
+Under `fixed_ic`, only 3 of 140 rotations produce T=15 at all, and 1 matches
+the predicted family. Under `cotranslated_ic`, all 140 of 140 rotations produce
+T=15 and all 140 match the predicted family. The co-translation result is not
+evaluated on new backgrounds but on rotational variants of the known 20
+representatives; it validates that the descriptor is rotation-equivariant
+within the confirmed family set, not that it predicts previously unseen data.
+
+**Compact state variable.** The complete minimal description consistent with
+all observations is the triple `(rule, subpatterns_len4, IC/background
+alignment)`. The rule identity determines which of the two conjugate families
+applies; the subpattern multiset identifies the shape-family class within that
+rule; and the IC/background alignment selects the phase within the five-state
+cycle. A derivation operating on the background word alone without IC alignment
+is falsified by the `fixed_ic` mode (3/140 detections). Any derivation that
+correctly maps this triple to a defect cycle shape and phase offset is a
+complete symbolic account of the T=15 family.
+
 ## 8. Observer Artifacts and Pipeline Equivariance
 
 The ZUSE pipeline contains two classes of observer artifact that the atlas
@@ -1600,6 +1641,15 @@ across `rule_73` and `rule_109`. The open problem is therefore not simply
 "find the local rule"; it is to map the temporal background orbit and IC
 alignment to a finite shape family and phase offset.
 
+Fase 31 and Fase 32 provide the current compact description of that map. No
+tested background-only descriptor shorter than the full temporal orbit predicts
+the 13 families globally. However, conditioned on rule identity, the circular
+multiset of length-4 background subwords separates the families, and rotational
+variants preserve the predicted family in 140/140 co-translated runs. The same
+rotations fail almost completely with fixed IC placement (3/140 detections),
+so IC/background alignment is an essential physical variable, not a bookkeeping
+detail.
+
 ### 9.4 Empirical atlas, not axiomatic classification
 
 The world categories are induced from observed law signatures across a finite
@@ -1704,6 +1754,13 @@ Several controlled extensions have now been completed:
   finite: 20 representatives collapse into 13 phase-rotated shape families,
   with two families shared across the conjugate rules. Full results are in
   Section 7.11.
+- **Compact T=15 state variable**: completed for the known representative set.
+  No compact background-only descriptor predicts all 13 families globally, but
+  the rule-conditioned descriptor `subpatterns_len4` separates all backgrounds
+  per rule. Rotation generalization validates the compact state variable
+  `(rule, subpatterns_len4, IC/background alignment)`: 140/140 co-translated
+  rotations preserve both T=15 and the predicted family, while fixed-IC
+  rotations collapse to 3/140 detections. Full results are in Section 7.12.
 
 Each extension is a controlled experiment with the same measurement protocol;
 only the IC or background definition changes.

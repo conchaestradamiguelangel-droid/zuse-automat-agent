@@ -836,6 +836,79 @@ defect-cycle families plus a phase offset.
 
 **Outputs.** `shape_families_results.json`, `shape_families_report.md`.
 
+### Compact descriptor search (Fase 31)
+
+Fase 31 searches for a shorter descriptor of the T=15 shape family than the
+full temporal background orbit. The test uses the 20 representatives and 13
+shape families from Fase 30.
+
+Background-only descriptors tested:
+
+- circular subpattern multisets of length 2, 3, and 4;
+- parity;
+- circular run lengths;
+- run count;
+- first-one position;
+- temporal orbit prefixes of length 8, 16, and 24.
+
+No compact background-only descriptor determines the 13 global families.
+`orbit_prefix_24` does determine the family, but it is effectively the full
+background orbit rather than a compact law. A global decision tree over all
+numeric features achieves only 0.700 training accuracy at depth 4.
+
+Conditioned on the ECA rule, however, several descriptors separate the
+families. The shortest non-orbit candidate is:
+
+`rule + subpatterns_len4`.
+
+That descriptor means: rule identity plus the circular multiset of length-4
+background subwords. It separates all 10 backgrounds per rule into unambiguous
+shape-family buckets in the confirmed representative set.
+
+**Verdict.** `COMPACT_DESCRIPTOR_FOUND`, but only as a rule-conditioned
+candidate. It is not a global background-only law.
+
+**Script.** `outputs/periodic_backgrounds_len8/analyze_compact_descriptor.py`
+
+**Outputs.** `compact_descriptor_results.json`,
+`compact_descriptor_report.md`.
+
+### Rotation generalization of compact descriptor (Fase 32)
+
+Fase 32 tests the key falsifiable prediction of `rule + subpatterns_len4`.
+Because the length-4 circular subpattern multiset is invariant under rotation
+of the background word, every non-trivial background rotation should preserve
+the predicted shape family if the local IC/background alignment is also
+preserved.
+
+For each of the 20 minimal representatives, all seven non-trivial background
+rotations are tested in two modes:
+
+- `fixed_ic`: background rotated, IC position fixed;
+- `cotranslated_ic`: background rotated and IC placement shifted by the same
+  amount, preserving local alignment.
+
+Results:
+
+- `fixed_ic`: 3/140 rotations produce T=15; 1/140 matches the predicted family.
+- `cotranslated_ic`: 140/140 rotations produce T=15; 140/140 match the
+  predicted family.
+
+**Verdict.** `ALIGNMENT_CONDITIONED_DESCRIPTOR_CONFIRMED`. The compact state
+variable is not background alone. It is the triple:
+
+`(rule, subpatterns_len4, IC/background alignment)`.
+
+The result is a rotation-equivariance validation on known representatives and
+their rotations, not a prediction over new backgrounds. It establishes that
+IC/background alignment is a physical state variable: without it, the descriptor
+fails almost completely.
+
+**Script.** `outputs/periodic_backgrounds_len8/test_rotation_generalization.py`
+
+**Outputs.** `rotation_generalization_results.jsonl`,
+`rotation_generalization_report.md`.
+
 Scientific reading: period-8 primitive backgrounds enlarge the oscillator
 landscape relative to shorter backgrounds. The three Fase-24 questions are
 answered affirmatively: new rules appear, new periods T>4 include T=15, and a
