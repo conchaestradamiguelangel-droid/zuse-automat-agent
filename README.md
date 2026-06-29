@@ -9,8 +9,9 @@ model participates in world selection, law evaluation, scoring, or acceptance.
 
 ## Preprint
 
-**Latest: v1.12** - Minimal cone-table audit: the T=15 causal cone is dense, uses 25/25 inputs and all 8 ECA entries; only structural internal pruning remains.
+**Latest: v1.13** - ROBDD audit: the dense T=15 causal cone still depends on 25/25 inputs at the Boolean-function level; no input-elimination shortcut is found.
 
+- v1.13 DOI: [10.5281/zenodo.21045809](https://doi.org/10.5281/zenodo.21045809)
 - v1.12 DOI: [10.5281/zenodo.21044802](https://doi.org/10.5281/zenodo.21044802)
 - v1.11 DOI: [10.5281/zenodo.21034813](https://doi.org/10.5281/zenodo.21034813)
 - v1.10 DOI: [10.5281/zenodo.21009303](https://doi.org/10.5281/zenodo.21009303)
@@ -24,6 +25,7 @@ model participates in world selection, law evaluation, scoring, or acceptance.
 - v1.2 DOI: [10.5281/zenodo.20738025](https://doi.org/10.5281/zenodo.20738025)
 - v1.1 DOI: [10.5281/zenodo.20687470](https://doi.org/10.5281/zenodo.20687470)
 - v1.0 DOI: [10.5281/zenodo.20516375](https://doi.org/10.5281/zenodo.20516375)
+- v1.13 series DOI: [10.5281/zenodo.21045808](https://doi.org/10.5281/zenodo.21045808)
 - v1.12 series DOI: [10.5281/zenodo.21044801](https://doi.org/10.5281/zenodo.21044801)
 - v1.11 series DOI: [10.5281/zenodo.21034812](https://doi.org/10.5281/zenodo.21034812)
 - v1.10 series DOI: [10.5281/zenodo.21009302](https://doi.org/10.5281/zenodo.21009302)
@@ -97,8 +99,8 @@ regenerated from the commands in the reproducibility guide.
 
 ```text
 Concha Estrada, M. A. (2026). ZUSE Automat Agent: Empirical Law Discovery in
-Elementary Cellular Automata (v1.12). Zenodo.
-https://doi.org/10.5281/zenodo.21044802
+Elementary Cellular Automata (v1.13). Zenodo.
+https://doi.org/10.5281/zenodo.21045809
 ```
 
 ## License
