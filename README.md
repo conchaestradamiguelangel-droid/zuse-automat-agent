@@ -9,8 +9,9 @@ model participates in world selection, law evaluation, scoring, or acceptance.
 
 ## Preprint
 
-**Latest: v1.11** - Early causal-cone compression of the T=15 mechanism: 25 cells for 12 steps recover `defect_state0` in 20/20, a 69.1x reduction.
+**Latest: v1.12** - Minimal cone-table audit: the T=15 causal cone is dense, uses 25/25 inputs and all 8 ECA entries; only structural internal pruning remains.
 
+- v1.12 DOI: [10.5281/zenodo.21044802](https://doi.org/10.5281/zenodo.21044802)
 - v1.11 DOI: [10.5281/zenodo.21034813](https://doi.org/10.5281/zenodo.21034813)
 - v1.10 DOI: [10.5281/zenodo.21009303](https://doi.org/10.5281/zenodo.21009303)
 - v1.9 DOI: [10.5281/zenodo.21001633](https://doi.org/10.5281/zenodo.21001633)
@@ -23,6 +24,7 @@ model participates in world selection, law evaluation, scoring, or acceptance.
 - v1.2 DOI: [10.5281/zenodo.20738025](https://doi.org/10.5281/zenodo.20738025)
 - v1.1 DOI: [10.5281/zenodo.20687470](https://doi.org/10.5281/zenodo.20687470)
 - v1.0 DOI: [10.5281/zenodo.20516375](https://doi.org/10.5281/zenodo.20516375)
+- v1.12 series DOI: [10.5281/zenodo.21044801](https://doi.org/10.5281/zenodo.21044801)
 - v1.11 series DOI: [10.5281/zenodo.21034812](https://doi.org/10.5281/zenodo.21034812)
 - v1.10 series DOI: [10.5281/zenodo.21009302](https://doi.org/10.5281/zenodo.21009302)
 - v1.9 series DOI: [10.5281/zenodo.21001632](https://doi.org/10.5281/zenodo.21001632)
@@ -95,8 +97,8 @@ regenerated from the commands in the reproducibility guide.
 
 ```text
 Concha Estrada, M. A. (2026). ZUSE Automat Agent: Empirical Law Discovery in
-Elementary Cellular Automata (v1.11). Zenodo.
-https://doi.org/10.5281/zenodo.21034813
+Elementary Cellular Automata (v1.12). Zenodo.
+https://doi.org/10.5281/zenodo.21044802
 ```
 
 ## License
