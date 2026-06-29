@@ -68,7 +68,10 @@ show that the post-burn-in macro-operator refines the 13 visual families, but
 that the entry phase before burn-in does not admit a compact local predictor in
 the tested descriptors: all 20 representatives enter the stable five-cycle by
 `t=12`, yet exact pre-burn-in predictors mostly collapse to singleton case
-identifiers.
+identifiers. A targeted causal-cone test resolves this negative result
+constructively: a strict 25-cell cone simulated for 12 steps recovers the full
+post-burn-in `defect_state0` in 20/20 representatives after phase projection,
+a 69.1x compression over the full 256-by-81 simulation.
 
 Every result is reproducible from deterministic scripts with no stochastic
 components in the discovery loop.
@@ -1586,6 +1589,38 @@ current derivation is complete after burn-in and sharply delimited before
 burn-in: predicting `defect_state0` from the raw background/IC pair remains the
 irreducible part of the mechanism under the tested descriptor class.
 
+### 7.16 Early causal-cone compression (Fase 40)
+
+Fase 40 converts the negative result of Section 7.15 into a constructive
+causal compression test. Instead of seeking a closed-form pre-burn-in
+descriptor, it asks whether the relevant state can be recovered by simulating
+only the local causal cone of the initial perturbation.
+
+For each of the 20 minimal `T=15` representatives, the full reference remains
+the 256-cell simulation through `t=81`. The local predictor tests windows at
+`t = 3, 6, 9, 12`. Two window definitions are used: `span`, the full IC span
+plus a causal margin of `t` cells on each side, and `center`, the strict
+`2t+1` window around the IC center. Boundary cells just outside the local
+window are supplied by the unperturbed periodic background orbit, which is
+valid because a radius-1 perturbation cannot reach beyond the cone within
+`t` steps.
+
+The strict center cone succeeds at `t=12`. Its 25-cell, 12-step simulation
+matches the full-system defect state at `t=12` in 20/20 representatives. When
+the detected stable-cycle phase is projected forward to `t=81`, it recovers
+`defect_state0` in 20/20 representatives. The compression ratio relative to
+the full 256-by-81 simulation is 69.1x. Earlier windows are incomplete:
+`center` at `t=9` reaches 17/20 stable states, while `span` at `t=9` reaches
+19/20; both miss at least one representative.
+
+The verdict is `EARLY_CONE_PREDICTOR_FOUND`. Fase 39 showed that no compact
+closed-form descriptor was found under the tested pre-burn-in descriptors.
+Fase 40 shows that the missing state is nevertheless locally causal: the
+mechanism does not require global information, only a short exact simulation
+of the radius-1 causal cone. The remaining formal problem is therefore not
+global dependence, but replacing this 25-cell, 12-step local computation with
+a symbolic account.
+
 ## 8. Observer Artifacts and Pipeline Equivariance
 
 The ZUSE pipeline contains two classes of observer artifact that the atlas
@@ -1788,6 +1823,14 @@ collapse into singleton case identifiers. The remaining formal problem is
 therefore precise: predict `defect_state0` from the raw background/IC pair
 without effectively replaying the early transient.
 
+Fase 40 shows that "effectively replaying" does not require the full system.
+A strict 25-cell causal cone centered on the IC and simulated for 12 steps
+matches the full defect state at `t=12` in 20/20 representatives and, after
+phase projection, recovers `defect_state0` at `t=81` in 20/20. The compression
+relative to the full 256-by-81 simulation is 69.1x. Thus the unresolved
+pre-burn-in component is locally causal rather than global: the open question
+is how to replace the 25-cell, 12-step cone computation with a symbolic rule.
+
 ### 9.4 Empirical atlas, not axiomatic classification
 
 The world categories are induced from observed law signatures across a finite
@@ -1917,6 +1960,11 @@ Several controlled extensions have now been completed:
   pre-burn-in descriptors do not give a compact predictor of the entry phase:
   exact descriptors are mostly singleton case identifiers or post-hoc
   measurements. Full results are in Section 7.15.
+- **Early causal-cone predictor**: positive. The strict `2t+1` causal cone
+  centered on the IC at `t=12` (25 cells for 12 steps) matches the full defect
+  state in 20/20 representatives and recovers `defect_state0` after phase
+  projection in 20/20. This is a 69.1x compression relative to the full
+  256-by-81 simulation. Full results are in Section 7.16.
 
 Each extension is a controlled experiment with the same measurement protocol;
 only the IC or background definition changes.

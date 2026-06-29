@@ -1029,6 +1029,51 @@ effectively replaying the early transient.
 **Outputs.** `preburnin_entry_phase_results.json`,
 `preburnin_entry_phase_report.md`.
 
+### Early causal-cone predictor (Fase 40)
+
+Fase 40 tests whether the negative Fase 39 result can be turned into a
+constructive causal compression. Instead of looking for a closed-form
+pre-burn-in descriptor, it simulates only the local causal cone of the initial
+IC and asks whether that is enough to recover the stable-cycle state.
+
+Two local windows are tested:
+
+- `span`: full IC span plus a causal margin of `t` cells on each side;
+- `center`: strict `2t+1` window around the IC center.
+
+Windows are evaluated at `t = 3, 6, 9, 12`. When a cone state lands on one of
+the five stable-cycle states, its phase is projected forward to `t=81` and
+compared with the full-run `defect_state0`.
+
+Results:
+
+| mode | t | stable hits | full-state match at t | projected `defect_state0` |
+| --- | ---: | ---: | ---: | ---: |
+| `span` | 3 | 17/20 | 20/20 | 17/20 |
+| `span` | 6 | 18/20 | 20/20 | 18/20 |
+| `span` | 9 | 19/20 | 20/20 | 19/20 |
+| `span` | 12 | 20/20 | 20/20 | 20/20 |
+| `center` | 3 | 0/20 | 0/20 | 0/20 |
+| `center` | 6 | 2/20 | 3/20 | 2/20 |
+| `center` | 9 | 17/20 | 17/20 | 17/20 |
+| `center` | 12 | 20/20 | 20/20 | 20/20 |
+
+The smallest/highest-compression successful predictor is the strict center
+cone at `t=12`: 25 cells for 12 steps. This is a 69.1x compression relative to
+the full 256-by-81 simulation.
+
+**Verdict.** `EARLY_CONE_PREDICTOR_FOUND`. Fase 39 found no compact algebraic
+pre-burn-in descriptor, but Fase 40 proves that the missing state is local and
+causally compressed. The mechanism does not require global information; it
+requires a short exact computation on the radius-1 causal cone. The remaining
+symbolic task is to replace that 25-cell, 12-step computation with a compact
+rule.
+
+**Script.** `outputs/periodic_backgrounds_len8/analyze_early_cone_predictor.py`
+
+**Outputs.** `early_cone_predictor_results.json`,
+`early_cone_predictor_report.md`.
+
 Scientific reading: period-8 primitive backgrounds enlarge the oscillator
 landscape relative to shorter backgrounds. The three Fase-24 questions are
 answered affirmatively: new rules appear, new periods T>4 include T=15, and a
