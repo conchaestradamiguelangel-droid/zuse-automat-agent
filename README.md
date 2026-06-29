@@ -9,8 +9,9 @@ model participates in world selection, law evaluation, scoring, or acceptance.
 
 ## Preprint
 
-**Latest: v1.10** - Transition-table and pre-burn-in analysis of the T=15 mechanism: post-burn-in descriptor closed, compact pre-burn-in predictor not found.
+**Latest: v1.11** - Early causal-cone compression of the T=15 mechanism: 25 cells for 12 steps recover `defect_state0` in 20/20, a 69.1x reduction.
 
+- v1.11 DOI: [10.5281/zenodo.21034813](https://doi.org/10.5281/zenodo.21034813)
 - v1.10 DOI: [10.5281/zenodo.21009303](https://doi.org/10.5281/zenodo.21009303)
 - v1.9 DOI: [10.5281/zenodo.21001633](https://doi.org/10.5281/zenodo.21001633)
 - v1.8 DOI: [10.5281/zenodo.21000646](https://doi.org/10.5281/zenodo.21000646)
@@ -22,6 +23,7 @@ model participates in world selection, law evaluation, scoring, or acceptance.
 - v1.2 DOI: [10.5281/zenodo.20738025](https://doi.org/10.5281/zenodo.20738025)
 - v1.1 DOI: [10.5281/zenodo.20687470](https://doi.org/10.5281/zenodo.20687470)
 - v1.0 DOI: [10.5281/zenodo.20516375](https://doi.org/10.5281/zenodo.20516375)
+- v1.11 series DOI: [10.5281/zenodo.21034812](https://doi.org/10.5281/zenodo.21034812)
 - v1.10 series DOI: [10.5281/zenodo.21009302](https://doi.org/10.5281/zenodo.21009302)
 - v1.9 series DOI: [10.5281/zenodo.21001632](https://doi.org/10.5281/zenodo.21001632)
 - v1.8 series DOI: [10.5281/zenodo.21000645](https://doi.org/10.5281/zenodo.21000645)
@@ -93,8 +95,8 @@ regenerated from the commands in the reproducibility guide.
 
 ```text
 Concha Estrada, M. A. (2026). ZUSE Automat Agent: Empirical Law Discovery in
-Elementary Cellular Automata (v1.10). Zenodo.
-https://doi.org/10.5281/zenodo.21009303
+Elementary Cellular Automata (v1.11). Zenodo.
+https://doi.org/10.5281/zenodo.21034813
 ```
 
 ## License
