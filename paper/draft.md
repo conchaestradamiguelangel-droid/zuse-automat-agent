@@ -71,7 +71,10 @@ the tested descriptors: all 20 representatives enter the stable five-cycle by
 identifiers. A targeted causal-cone test resolves this negative result
 constructively: a strict 25-cell cone simulated for 12 steps recovers the full
 post-burn-in `defect_state0` in 20/20 representatives after phase projection,
-a 69.1x compression over the full 256-by-81 simulation.
+a 69.1x compression over the full 256-by-81 simulation. Auditing that cone
+shows no sparse subtable shortcut: all 25 initial cone inputs and all eight
+ordinary ECA entries remain active, leaving Boolean simplification of the dense
+local circuit as the remaining symbolic target.
 
 Every result is reproducible from deterministic scripts with no stochastic
 components in the discovery loop.
@@ -1621,6 +1624,31 @@ of the radius-1 causal cone. The remaining formal problem is therefore not
 global dependence, but replacing this 25-cell, 12-step local computation with
 a symbolic account.
 
+### 7.17 Minimal cone-table audit (Fase 41)
+
+Fase 41 asks whether the successful 25-cell, 12-step cone from Section 7.16
+contains a hidden smaller object: a sparse induced truth table, a reduced set
+of initial input bits, or a pruned causal subgraph. The analysis expands the
+cone into induced local updates of the form
+`delta_f(b,d)=f(b XOR d) XOR f(b)`, records the ordinary ECA truth-table entries
+used inside the cone, and computes the backwards dependency graph required to
+produce the final localized active defect support.
+
+The result is deliberately negative at the table/input level. Across the 20
+minimal representatives, the induced `(b,d)->d_next` tables are dense: they use
+49..62 of the 64 possible local background/defect keys. All eight ordinary ECA
+truth-table entries are used in every representative. The final active defect
+support still depends on all 25 initial cone inputs. Thus there is no sparse
+truth-table shortcut and no input-bit elimination under this audit.
+
+The only reduction is structural. Computing just the final active localized
+defect support uses 234..310 internal cone nodes, rather than all 325 nodes in
+the 25-cell-by-13-layer cone. This improves the circuit accounting but does not
+change the qualitative conclusion: the Fase 40 cone is close to minimal at the
+input level. The verdict is `STRUCTURAL_CONE_REDUCTION_ONLY`. The next
+symbolic target is therefore Boolean simplification of a dense 25-input,
+12-step circuit, not further causal-support reduction.
+
 ## 8. Observer Artifacts and Pipeline Equivariance
 
 The ZUSE pipeline contains two classes of observer artifact that the atlas
@@ -1831,6 +1859,15 @@ relative to the full 256-by-81 simulation is 69.1x. Thus the unresolved
 pre-burn-in component is locally causal rather than global: the open question
 is how to replace the 25-cell, 12-step cone computation with a symbolic rule.
 
+Fase 41 audits whether that local computation contains an obvious smaller
+support. It does not. All 25 initial cone inputs are required for the final
+active defect support, all eight ordinary ECA table entries are used in every
+representative, and the induced background/defect tables are dense (49..62 of
+64 possible keys). The cone has only structural pruning for active outputs
+(234..310 internal nodes instead of 325), so the remaining symbolic problem is
+Boolean minimization of a dense local circuit, not discovery of a sparse
+subtable or smaller causal support.
+
 ### 9.4 Empirical atlas, not axiomatic classification
 
 The world categories are induced from observed law signatures across a finite
@@ -1965,6 +2002,12 @@ Several controlled extensions have now been completed:
   state in 20/20 representatives and recovers `defect_state0` after phase
   projection in 20/20. This is a 69.1x compression relative to the full
   256-by-81 simulation. Full results are in Section 7.16.
+- **Minimal cone-table audit**: negative/structural. The Fase 40 cone has no
+  sparse table shortcut: induced `(b,d)->d_next` tables use 49..62 of 64 keys,
+  all eight ordinary ECA entries are used, and all 25 initial cone inputs are
+  required for the active localized output. The only reduction is structural:
+  active-output dependency uses 234..310 internal nodes instead of the full 325.
+  Full results are in Section 7.17.
 
 Each extension is a controlled experiment with the same measurement protocol;
 only the IC or background definition changes.

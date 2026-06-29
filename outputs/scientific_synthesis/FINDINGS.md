@@ -1074,6 +1074,37 @@ rule.
 **Outputs.** `early_cone_predictor_results.json`,
 `early_cone_predictor_report.md`.
 
+### Minimal cone-table audit (Fase 41)
+
+Fase 41 asks whether the successful 25-cell, 12-step cone from Fase 40 hides a
+smaller formal object: a sparse induced truth table, fewer required input bits,
+or a pruned causal dependency graph.
+
+The audit expands the cone into induced local updates
+`delta_f(b,d)=f(b XOR d) XOR f(b)` and records which ordinary ECA truth-table
+entries and induced background/defect keys are actually used. It also computes
+the backwards dependency graph needed to produce the final localized active
+defect support.
+
+Results:
+
+- induced `(b,d)->d_next` key count: 49..62 of 64 possible keys;
+- ordinary ECA rule entries used: 8/8 in every representative;
+- required initial cone inputs for the active output: 25/25 in every
+  representative;
+- active-output internal dependency nodes: 234..310 of 325 cone nodes.
+
+**Verdict.** `STRUCTURAL_CONE_REDUCTION_ONLY`. The Fase 40 cone is reducible
+internally if one computes only the active localized output, but not by a sparse
+truth-table shortcut or by eliminating initial inputs. The 25-cell cone is close
+to minimal at the input-support level. The next symbolic target is Boolean
+simplification of a dense 25-input, 12-step circuit.
+
+**Script.** `outputs/periodic_backgrounds_len8/analyze_cone_minimal_table.py`
+
+**Outputs.** `cone_minimal_table_results.json`,
+`cone_minimal_table_report.md`.
+
 Scientific reading: period-8 primitive backgrounds enlarge the oscillator
 landscape relative to shorter backgrounds. The three Fase-24 questions are
 answered affirmatively: new rules appear, new periods T>4 include T=15, and a
