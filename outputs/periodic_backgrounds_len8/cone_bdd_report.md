@@ -7,50 +7,48 @@ Fase 41 found no sparse table or input-support shortcut inside the
 diagrams (ROBDDs) for the same cone circuit and tests whether canonical
 Boolean reduction finds hidden simplification.
 
-Variable order tested: `natural` (left-to-right cone order). BDD size
-is order-dependent, but input support is a semantic property: if a
-reduced BDD contains all 25 variables, no input variable is irrelevant
-for that represented Boolean function.
+Variable orders tested: `natural`, `reverse`, and `center_out`.
 
 ## Summary by variable order
 
 | order | active nodes | vector nodes | active support | vector support |
 | --- | ---: | ---: | ---: | ---: |
 | `natural` | 17141..36966 | 51539..53901 | 25..25 | 25..25 |
+| `reverse` | 16061..36907 | 51539..53481 | 25..25 | 25..25 |
+| `center_out` | 43382..91935 | 126559..128513 | 25..25 | 25..25 |
 
 ## Representative table
 
 | family | rule | background | order | active nodes | vector nodes | active support | vector support | nonconstant outputs |
 | --- | ---: | --- | --- | ---: | ---: | ---: | ---: | ---: |
-| `F09` | 73 | `00000011` | `natural` | 25464 | 52846 | 25 | 25 | 25 |
-| `F10` | 73 | `00001001` | `natural` | 20501 | 51804 | 25 | 25 | 25 |
-| `F02` | 73 | `00001111` | `natural` | 29856 | 52048 | 25 | 25 | 25 |
-| `F06` | 73 | `00101101` | `natural` | 30464 | 52031 | 25 | 25 | 25 |
-| `F04` | 73 | `00101111` | `natural` | 23868 | 53901 | 25 | 25 | 25 |
-| `F03` | 73 | `00110101` | `natural` | 28916 | 52187 | 25 | 25 | 25 |
-| `F01` | 73 | `00110111` | `natural` | 21557 | 52185 | 25 | 25 | 25 |
-| `F01` | 73 | `00111011` | `natural` | 17141 | 52626 | 25 | 25 | 25 |
-| `F02` | 73 | `00111111` | `natural` | 31203 | 53121 | 25 | 25 | 25 |
-| `F01` | 73 | `01101111` | `natural` | 24405 | 52257 | 25 | 25 | 25 |
-| `F12` | 109 | `00000011` | `natural` | 36078 | 52022 | 25 | 25 | 25 |
-| `F00` | 109 | `00001001` | `natural` | 25363 | 52401 | 25 | 25 | 25 |
-| `F05` | 109 | `00001011` | `natural` | 30283 | 52231 | 25 | 25 | 25 |
-| `F02` | 109 | `00001101` | `natural` | 36966 | 51688 | 25 | 25 | 25 |
-| `F08` | 109 | `00001111` | `natural` | 28864 | 51909 | 25 | 25 | 25 |
-| `F00` | 109 | `00010011` | `natural` | 23258 | 53131 | 25 | 25 | 25 |
-| `F00` | 109 | `00011001` | `natural` | 27639 | 52555 | 25 | 25 | 25 |
-| `F03` | 109 | `00110101` | `natural` | 31225 | 53309 | 25 | 25 | 25 |
-| `F07` | 109 | `00111111` | `natural` | 25666 | 53178 | 25 | 25 | 25 |
-| `F11` | 109 | `01101111` | `natural` | 33759 | 51539 | 25 | 25 | 25 |
+| `F09` | 73 | `00000011` | `center_out` | 77302 | 127064 | 25 | 25 | 25 |
+| `F10` | 73 | `00001001` | `center_out` | 43382 | 126978 | 25 | 25 | 25 |
+| `F02` | 73 | `00001111` | `center_out` | 76258 | 126559 | 25 | 25 | 25 |
+| `F06` | 73 | `00101101` | `center_out` | 87889 | 127916 | 25 | 25 | 25 |
+| `F04` | 73 | `00101111` | `center_out` | 55180 | 128513 | 25 | 25 | 25 |
+| `F03` | 73 | `00110101` | `center_out` | 90176 | 127838 | 25 | 25 | 25 |
+| `F01` | 73 | `00110111` | `center_out` | 52075 | 127008 | 25 | 25 | 25 |
+| `F01` | 73 | `00111011` | `center_out` | 46811 | 128319 | 25 | 25 | 25 |
+| `F02` | 73 | `00111111` | `center_out` | 64741 | 128010 | 25 | 25 | 25 |
+| `F01` | 73 | `01101111` | `center_out` | 59839 | 127513 | 25 | 25 | 25 |
+| `F12` | 109 | `00000011` | `center_out` | 89703 | 127452 | 25 | 25 | 25 |
+| `F00` | 109 | `00001001` | `center_out` | 62385 | 127731 | 25 | 25 | 25 |
+| `F05` | 109 | `00001011` | `center_out` | 69665 | 127672 | 25 | 25 | 25 |
+| `F02` | 109 | `00001101` | `center_out` | 89802 | 126849 | 25 | 25 | 25 |
+| `F08` | 109 | `00001111` | `center_out` | 66759 | 126995 | 25 | 25 | 25 |
+| `F00` | 109 | `00010011` | `center_out` | 53860 | 127021 | 25 | 25 | 25 |
+| `F00` | 109 | `00011001` | `center_out` | 70455 | 128240 | 25 | 25 | 25 |
+| `F03` | 109 | `00110101` | `center_out` | 82985 | 128129 | 25 | 25 | 25 |
+| `F07` | 109 | `00111111` | `center_out` | 77999 | 126957 | 25 | 25 | 25 |
+| `F11` | 109 | `01101111` | `center_out` | 91935 | 127224 | 25 | 25 | 25 |
 
 ## Verdict
 
 **Status:** `BDD_NO_INPUT_REDUCTION`.
 
 ROBDD reduction confirms the Fase 41 input-support result: the
-active localized outputs still depend on all 25 cone inputs.
-The natural-order ROBDDs contain all 25 support variables for
-every representative, certifying that no input variable is
-irrelevant to the represented active-output functions. This does
-not prove global minimum BDD size over all 25! orders, but it
-does rule out Boolean input elimination.
+active localized outputs still depend on all 25 cone inputs under
+all tested variable orders. BDD node counts vary with ordering, but
+no order exposes an irrelevant input variable. This does not prove
+global minimum BDD size over all 25! orders, but it rules out the
+most useful simple Boolean reduction: input elimination.

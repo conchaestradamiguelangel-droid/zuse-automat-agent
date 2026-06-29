@@ -1105,6 +1105,35 @@ simplification of a dense 25-input, 12-step circuit.
 **Outputs.** `cone_minimal_table_results.json`,
 `cone_minimal_table_report.md`.
 
+### ROBDD cone audit (Fase 42)
+
+Fase 42 constructs reduced ordered binary decision diagrams (ROBDDs) for the
+dense 25-input, 12-step cone circuit from Fase 40/41. The question is whether
+canonical Boolean reduction exposes any irrelevant input variable.
+
+The audit uses the natural left-to-right cone variable order. BDD size is
+order-dependent, but variable support is semantic: if the reduced BDD for the
+represented function contains a variable, that variable is relevant to the
+function.
+
+Results:
+
+- active-output BDD reachable nodes: 17,141..36,966;
+- full 25-bit vector BDD reachable nodes: 51,539..53,901;
+- active-output support: 25/25 inputs in every representative;
+- full-vector support: 25/25 inputs in every representative;
+- nonconstant outputs: 25/25 in every representative.
+
+**Verdict.** `BDD_NO_INPUT_REDUCTION`. ROBDD reduction confirms the Fase 41
+input-support result at the Boolean-function level. No initial cone input is
+irrelevant to the active localized output functions. This does not prove
+globally minimal BDD size over all possible variable orders, but it rules out
+Boolean input elimination as a symbolic shortcut.
+
+**Script.** `outputs/periodic_backgrounds_len8/analyze_cone_bdd.py`
+
+**Outputs.** `cone_bdd_results.json`, `cone_bdd_report.md`.
+
 Scientific reading: period-8 primitive backgrounds enlarge the oscillator
 landscape relative to shorter backgrounds. The three Fase-24 questions are
 answered affirmatively: new rules appear, new periods T>4 include T=15, and a

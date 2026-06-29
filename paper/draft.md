@@ -74,7 +74,10 @@ post-burn-in `defect_state0` in 20/20 representatives after phase projection,
 a 69.1x compression over the full 256-by-81 simulation. Auditing that cone
 shows no sparse subtable shortcut: all 25 initial cone inputs and all eight
 ordinary ECA entries remain active, leaving Boolean simplification of the dense
-local circuit as the remaining symbolic target.
+local circuit as the remaining symbolic target. A reduced ordered BDD audit
+confirms that the active-output functions still depend on all 25 inputs under
+the natural cone order, ruling out Boolean input elimination while leaving
+global BDD-size minimization open.
 
 Every result is reproducible from deterministic scripts with no stochastic
 components in the discovery loop.
@@ -1649,6 +1652,29 @@ input level. The verdict is `STRUCTURAL_CONE_REDUCTION_ONLY`. The next
 symbolic target is therefore Boolean simplification of a dense 25-input,
 12-step circuit, not further causal-support reduction.
 
+### 7.18 ROBDD input-support audit (Fase 42)
+
+Fase 42 applies reduced ordered binary decision diagrams (ROBDDs) to the dense
+25-input, 12-step cone circuit. The goal is not to prove a globally minimal BDD
+over all possible variable orders, but to test the strongest simple Boolean
+reduction left open by Fase 41: whether any of the 25 cone inputs is
+semantically irrelevant to the active localized output functions.
+
+For each of the 20 minimal `T=15` representatives, the Boolean circuit induced
+by the strict center cone is compiled into ROBDDs under the natural
+left-to-right cone variable order. The active localized outputs produce ROBDDs
+with 17,141..36,966 reachable nodes; the full 25-bit final vector produces
+51,539..53,901 reachable nodes. In every representative, both the active-output
+functions and the full vector have support size 25/25.
+
+The verdict is `BDD_NO_INPUT_REDUCTION`. ROBDD reduction therefore confirms
+the Fase 41 input-support result at the Boolean-function level: no initial cone
+variable can be eliminated without changing the represented output functions.
+BDD size remains order-dependent, so this is not a proof of global minimum BDD
+size over all `25!` orders. It does, however, rule out the key symbolic
+shortcut of Boolean input elimination. The remaining task is expression or BDD
+size reduction of a function that genuinely depends on all 25 inputs.
+
 ## 8. Observer Artifacts and Pipeline Equivariance
 
 The ZUSE pipeline contains two classes of observer artifact that the atlas
@@ -1868,6 +1894,14 @@ representative, and the induced background/defect tables are dense (49..62 of
 Boolean minimization of a dense local circuit, not discovery of a sparse
 subtable or smaller causal support.
 
+Fase 42 verifies the input-support conclusion at the Boolean-function level.
+Natural-order ROBDDs for the active localized output functions contain all 25
+support variables in every representative, with 17,141..36,966 reachable nodes
+for active outputs and 51,539..53,901 for the full 25-bit vector. Variable
+support is semantic, not merely an artifact of the natural BDD order, so this
+rules out Boolean input elimination. It does not claim a globally minimal BDD
+size over all variable orders.
+
 ### 9.4 Empirical atlas, not axiomatic classification
 
 The world categories are induced from observed law signatures across a finite
@@ -2008,6 +2042,12 @@ Several controlled extensions have now been completed:
   required for the active localized output. The only reduction is structural:
   active-output dependency uses 234..310 internal nodes instead of the full 325.
   Full results are in Section 7.17.
+- **ROBDD cone audit**: negative/semantic. Reduced ordered BDDs under the
+  natural cone order confirm that the active-output functions depend on all
+  25 inputs in every representative. Active-output BDDs have 17,141..36,966
+  reachable nodes; the full 25-bit vector has 51,539..53,901. This rules out
+  Boolean input elimination, while not claiming globally minimal BDD size over
+  all variable orders. Full results are in Section 7.18.
 
 Each extension is a controlled experiment with the same measurement protocol;
 only the IC or background definition changes.
