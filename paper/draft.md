@@ -76,8 +76,11 @@ shows no sparse subtable shortcut: all 25 initial cone inputs and all eight
 ordinary ECA entries remain active, leaving Boolean simplification of the dense
 local circuit as the remaining symbolic target. A reduced ordered BDD audit
 confirms that the active-output functions still depend on all 25 inputs under
-the natural cone order, ruling out Boolean input elimination while leaving
-global BDD-size minimization open.
+the natural cone order, ruling out Boolean input elimination. A subsequent
+order-sensitivity and targeted SIFT audit finds no useful BDD-size shortcut:
+simple reversal improves active nodes by only 0.5% globally, and a 580-order
+SIFT pass on the most favorable representative improves 16,061 active nodes to
+16,056, far above the 10,000-node compression gate.
 
 Every result is reproducible from deterministic scripts with no stochastic
 components in the discovery loop.
@@ -1675,6 +1678,40 @@ size over all `25!` orders. It does, however, rule out the key symbolic
 shortcut of Boolean input elimination. The remaining task is expression or BDD
 size reduction of a function that genuinely depends on all 25 inputs.
 
+### 7.19 ROBDD order-sensitivity and targeted SIFT (Fase 43)
+
+Fase 43 tests the natural follow-up to Section 7.18: if all 25 inputs are
+semantically necessary, perhaps the dense Boolean circuit is still compact under
+a better variable order. This section keeps the Fase 42 support result fixed and
+asks only about representation size.
+
+**Order-sensitivity preflight (Fase 43A).** The three ROBDD orders already
+materialized in Fase 42 are compared: `natural`, `reverse`, and `center_out`.
+The best global order is `reverse`, but the improvement is small. Across the 20
+minimal representatives, total active-output reachable nodes decrease from
+552,476 under `natural` to 549,713 under `reverse`, a 0.5% reduction. The full
+25-bit vector does not improve: 1,048,969 nodes under `natural` versus
+1,049,085 under `reverse`. The `center_out` order is consistently poor, giving
+the worst active-output size in 20/20 representatives and a maximum
+order-sensitivity ratio of 3.119x. All tested orders preserve 25/25 active and
+vector support.
+
+**Targeted SIFT (Fase 43B).** The most favorable representative from the
+preflight is `rule_73` on background `00111011`, family `F01`, with IC
+`00100100`. Its best Fase-42 active-output ROBDD is the `reverse` order with
+16,061 reachable nodes. A one-pass variable-sifting search with checkpointing
+evaluates 580 orders on this representative. The best order found is
+`[22,21,20,19,23,24,18,17,16,15,14,13,12,11,10,9,8,7,6,5,4,3,2,1,0]`, with
+16,056 active-output nodes and 52,698 full-vector nodes. This is a 5-node
+active-output reduction, or 0.031%, and remains far above the explicit
+10,000-node compression gate. Support remains 25/25.
+
+The verdict is not a global optimality proof over all `25!` orders, but it
+rules out the most direct representation shortcut tested here: simple variable
+reordering, even with a targeted SIFT pass on the best known candidate, does not
+make the dense cone compact. Any future symbolic shortcut must use a different
+representation or a different abstraction, not merely ROBDD variable ordering.
+
 ## 8. Observer Artifacts and Pipeline Equivariance
 
 The ZUSE pipeline contains two classes of observer artifact that the atlas
@@ -1902,6 +1939,15 @@ support is semantic, not merely an artifact of the natural BDD order, so this
 rules out Boolean input elimination. It does not claim a globally minimal BDD
 size over all variable orders.
 
+Fase 43 then tests the most direct BDD-size escape route. Existing `natural`,
+`reverse`, and `center_out` orders show only weak useful sensitivity: `reverse`
+improves total active-output nodes by 0.5%, while `center_out` is worst in
+20/20 representatives. A checkpointed one-pass SIFT search on the most favorable
+representative evaluates 580 orders and improves 16,061 active-output nodes to
+16,056, far above the 10,000-node compression gate. This does not prove global
+BDD-size optimality, but it rules out simple variable-ordering as the missing
+symbolic shortcut.
+
 ### 9.4 Empirical atlas, not axiomatic classification
 
 The world categories are induced from observed law signatures across a finite
@@ -2048,6 +2094,11 @@ Several controlled extensions have now been completed:
   reachable nodes; the full 25-bit vector has 51,539..53,901. This rules out
   Boolean input elimination, while not claiming globally minimal BDD size over
   all variable orders. Full results are in Section 7.18.
+- **ROBDD order search**: negative/bounded. The `reverse` order improves total
+  active-output nodes by only 0.5% over `natural`, while `center_out` is worst
+  in 20/20 representatives. A targeted 580-order SIFT pass on the best known
+  representative improves 16,061 active nodes to 16,056 (0.031%), missing the
+  10,000-node compression gate. Full results are in Section 7.19.
 
 Each extension is a controlled experiment with the same measurement protocol;
 only the IC or background definition changes.

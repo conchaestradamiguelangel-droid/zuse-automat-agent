@@ -1134,6 +1134,55 @@ Boolean input elimination as a symbolic shortcut.
 
 **Outputs.** `cone_bdd_results.json`, `cone_bdd_report.md`.
 
+### ROBDD order-sensitivity and targeted SIFT (Fase 43)
+
+Fase 43 keeps the Fase 42 support result fixed and asks only whether BDD
+variable ordering makes the dense 25-input cone compact.
+
+Fase 43A analyzes the three orders already materialized in Fase 42:
+`natural`, `reverse`, and `center_out`.
+
+Results:
+
+- best global order: `reverse`;
+- total active-output nodes: 552,476 (`natural`) -> 549,713 (`reverse`);
+- active-node reduction vs natural: 0.5%;
+- total vector nodes: 1,048,969 (`natural`) -> 1,049,085 (`reverse`);
+- representatives where best order is not natural: 14/20;
+- `center_out` is worst in 20/20 representatives;
+- maximum order-sensitivity ratio: 3.119x;
+- 25/25 input support is preserved under all analyzed orders.
+
+Fase 43B then runs a checkpointed one-pass SIFT search on the most favorable
+candidate: `rule_73`, background `00111011`, IC `00100100`, family `F01`.
+
+Results:
+
+- baseline best order: `reverse`;
+- baseline active-output nodes: 16,061;
+- orders evaluated: 580;
+- best SIFT active-output nodes: 16,056;
+- reduction vs baseline: 5 nodes = 0.031%;
+- best full-vector nodes: 52,698;
+- 25/25 support preserved;
+- explicit publication gate: <10,000 active-output nodes.
+
+**Verdict.** `SIFT_TARGETED_SMALL_REDUCTION_FOUND`, but the result misses the
+10,000-node compression gate by a wide margin. Simple variable-ordering, even
+with a targeted SIFT pass on the best known candidate, is not the missing
+symbolic shortcut for the dense cone. This does not prove global ROBDD
+optimality over all possible orders; it rules out the practical next step that
+Fase 42 left open.
+
+**Scripts.**
+`outputs/periodic_backgrounds_len8/analyze_bdd_sift_order.py`,
+`outputs/periodic_backgrounds_len8/analyze_bdd_sift_targeted.py`
+
+**Outputs.**
+`bdd_sift_order_results.json`, `bdd_sift_order_report.md`,
+`bdd_sift_targeted_results.json`, `bdd_sift_targeted_report.md`,
+`bdd_sift_targeted_checkpoint.json`.
+
 Scientific reading: period-8 primitive backgrounds enlarge the oscillator
 landscape relative to shorter backgrounds. The three Fase-24 questions are
 answered affirmatively: new rules appear, new periods T>4 include T=15, and a
