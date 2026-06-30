@@ -1,0 +1,447 @@
+{
+  "baseline_best_active_nodes": 16061,
+  "baseline_best_order": "reverse",
+  "baseline_best_vector_nodes": 52705,
+  "evaluated_order_count": 580,
+  "publishable_node_gate": 10000,
+  "sift_best_active_nodes": 16056,
+  "sift_best_order": [
+    22,
+    21,
+    20,
+    19,
+    23,
+    24,
+    18,
+    17,
+    16,
+    15,
+    14,
+    13,
+    12,
+    11,
+    10,
+    9,
+    8,
+    7,
+    6,
+    5,
+    4,
+    3,
+    2,
+    1,
+    0
+  ],
+  "sift_best_vector_nodes": 52698,
+  "sift_reduction_vs_baseline_percent": 0.031,
+  "status": "SIFT_TARGETED_SMALL_REDUCTION_FOUND",
+  "support_preserved_25": true,
+  "target": {
+    "background": "00111011",
+    "family_id": "F01",
+    "ic": "00100100",
+    "rule": 73
+  },
+  "trace": [
+    {
+      "accepted": true,
+      "best_for_var_active_nodes": 16057,
+      "global_best_active_nodes": 16057,
+      "start_active_nodes": 16061,
+      "sweep_index": 0,
+      "var": 24
+    },
+    {
+      "accepted": true,
+      "best_for_var_active_nodes": 16056,
+      "global_best_active_nodes": 16056,
+      "start_active_nodes": 16057,
+      "sweep_index": 1,
+      "var": 23
+    },
+    {
+      "accepted": false,
+      "best_for_var_active_nodes": 16056,
+      "global_best_active_nodes": 16056,
+      "start_active_nodes": 16056,
+      "sweep_index": 2,
+      "var": 22
+    },
+    {
+      "accepted": false,
+      "best_for_var_active_nodes": 16056,
+      "global_best_active_nodes": 16056,
+      "start_active_nodes": 16056,
+      "sweep_index": 3,
+      "var": 21
+    },
+    {
+      "accepted": false,
+      "best_for_var_active_nodes": 16056,
+      "global_best_active_nodes": 16056,
+      "start_active_nodes": 16056,
+      "sweep_index": 4,
+      "var": 20
+    },
+    {
+      "accepted": false,
+      "best_for_var_active_nodes": 16056,
+      "global_best_active_nodes": 16056,
+      "start_active_nodes": 16056,
+      "sweep_index": 5,
+      "var": 19
+    },
+    {
+      "accepted": false,
+      "best_for_var_active_nodes": 16056,
+      "global_best_active_nodes": 16056,
+      "start_active_nodes": 16056,
+      "sweep_index": 6,
+      "var": 18
+    },
+    {
+      "accepted": false,
+      "best_for_var_active_nodes": 16056,
+      "global_best_active_nodes": 16056,
+      "start_active_nodes": 16056,
+      "sweep_index": 7,
+      "var": 17
+    },
+    {
+      "accepted": false,
+      "best_for_var_active_nodes": 16056,
+      "global_best_active_nodes": 16056,
+      "start_active_nodes": 16056,
+      "sweep_index": 8,
+      "var": 16
+    },
+    {
+      "accepted": false,
+      "best_for_var_active_nodes": 16056,
+      "global_best_active_nodes": 16056,
+      "start_active_nodes": 16056,
+      "sweep_index": 9,
+      "var": 15
+    },
+    {
+      "accepted": false,
+      "best_for_var_active_nodes": 16056,
+      "global_best_active_nodes": 16056,
+      "start_active_nodes": 16056,
+      "sweep_index": 10,
+      "var": 14
+    },
+    {
+      "accepted": false,
+      "best_for_var_active_nodes": 16056,
+      "global_best_active_nodes": 16056,
+      "start_active_nodes": 16056,
+      "sweep_index": 11,
+      "var": 13
+    },
+    {
+      "accepted": false,
+      "best_for_var_active_nodes": 16056,
+      "global_best_active_nodes": 16056,
+      "start_active_nodes": 16056,
+      "sweep_index": 12,
+      "var": 12
+    },
+    {
+      "accepted": false,
+      "best_for_var_active_nodes": 16056,
+      "global_best_active_nodes": 16056,
+      "start_active_nodes": 16056,
+      "sweep_index": 13,
+      "var": 11
+    },
+    {
+      "accepted": false,
+      "best_for_var_active_nodes": 16056,
+      "global_best_active_nodes": 16056,
+      "start_active_nodes": 16056,
+      "sweep_index": 14,
+      "var": 10
+    },
+    {
+      "accepted": false,
+      "best_for_var_active_nodes": 16056,
+      "global_best_active_nodes": 16056,
+      "start_active_nodes": 16056,
+      "sweep_index": 15,
+      "var": 9
+    },
+    {
+      "accepted": false,
+      "best_for_var_active_nodes": 16056,
+      "global_best_active_nodes": 16056,
+      "start_active_nodes": 16056,
+      "sweep_index": 16,
+      "var": 8
+    },
+    {
+      "accepted": false,
+      "best_for_var_active_nodes": 16056,
+      "global_best_active_nodes": 16056,
+      "start_active_nodes": 16056,
+      "sweep_index": 17,
+      "var": 7
+    },
+    {
+      "accepted": false,
+      "best_for_var_active_nodes": 16056,
+      "global_best_active_nodes": 16056,
+      "start_active_nodes": 16056,
+      "sweep_index": 18,
+      "var": 6
+    },
+    {
+      "accepted": false,
+      "best_for_var_active_nodes": 16056,
+      "global_best_active_nodes": 16056,
+      "start_active_nodes": 16056,
+      "sweep_index": 19,
+      "var": 5
+    },
+    {
+      "accepted": false,
+      "best_for_var_active_nodes": 16056,
+      "global_best_active_nodes": 16056,
+      "start_active_nodes": 16056,
+      "sweep_index": 20,
+      "var": 4
+    },
+    {
+      "accepted": false,
+      "best_for_var_active_nodes": 16056,
+      "global_best_active_nodes": 16056,
+      "start_active_nodes": 16056,
+      "sweep_index": 21,
+      "var": 3
+    },
+    {
+      "accepted": false,
+      "best_for_var_active_nodes": 16056,
+      "global_best_active_nodes": 16056,
+      "start_active_nodes": 16056,
+      "sweep_index": 22,
+      "var": 2
+    },
+    {
+      "accepted": false,
+      "best_for_var_active_nodes": 16056,
+      "global_best_active_nodes": 16056,
+      "start_active_nodes": 16056,
+      "sweep_index": 23,
+      "var": 1
+    },
+    {
+      "accepted": false,
+      "best_for_var_active_nodes": 16056,
+      "global_best_active_nodes": 16056,
+      "start_active_nodes": 16056,
+      "sweep_index": 24,
+      "var": 0
+    },
+    {
+      "accepted": true,
+      "best_for_var_active_nodes": 16057,
+      "global_best_active_nodes": 16057,
+      "start_active_nodes": 16061,
+      "sweep_index": 0,
+      "var": 24
+    },
+    {
+      "accepted": true,
+      "best_for_var_active_nodes": 16056,
+      "global_best_active_nodes": 16056,
+      "start_active_nodes": 16057,
+      "sweep_index": 1,
+      "var": 23
+    },
+    {
+      "accepted": false,
+      "best_for_var_active_nodes": 16056,
+      "global_best_active_nodes": 16056,
+      "start_active_nodes": 16056,
+      "sweep_index": 2,
+      "var": 22
+    },
+    {
+      "accepted": false,
+      "best_for_var_active_nodes": 16056,
+      "global_best_active_nodes": 16056,
+      "start_active_nodes": 16056,
+      "sweep_index": 3,
+      "var": 21
+    },
+    {
+      "accepted": false,
+      "best_for_var_active_nodes": 16056,
+      "global_best_active_nodes": 16056,
+      "start_active_nodes": 16056,
+      "sweep_index": 4,
+      "var": 20
+    },
+    {
+      "accepted": false,
+      "best_for_var_active_nodes": 16056,
+      "global_best_active_nodes": 16056,
+      "start_active_nodes": 16056,
+      "sweep_index": 5,
+      "var": 19
+    },
+    {
+      "accepted": false,
+      "best_for_var_active_nodes": 16056,
+      "global_best_active_nodes": 16056,
+      "start_active_nodes": 16056,
+      "sweep_index": 6,
+      "var": 18
+    },
+    {
+      "accepted": false,
+      "best_for_var_active_nodes": 16056,
+      "global_best_active_nodes": 16056,
+      "start_active_nodes": 16056,
+      "sweep_index": 7,
+      "var": 17
+    },
+    {
+      "accepted": false,
+      "best_for_var_active_nodes": 16056,
+      "global_best_active_nodes": 16056,
+      "start_active_nodes": 16056,
+      "sweep_index": 8,
+      "var": 16
+    },
+    {
+      "accepted": false,
+      "best_for_var_active_nodes": 16056,
+      "global_best_active_nodes": 16056,
+      "start_active_nodes": 16056,
+      "sweep_index": 9,
+      "var": 15
+    },
+    {
+      "accepted": false,
+      "best_for_var_active_nodes": 16056,
+      "global_best_active_nodes": 16056,
+      "start_active_nodes": 16056,
+      "sweep_index": 10,
+      "var": 14
+    },
+    {
+      "accepted": false,
+      "best_for_var_active_nodes": 16056,
+      "global_best_active_nodes": 16056,
+      "start_active_nodes": 16056,
+      "sweep_index": 11,
+      "var": 13
+    },
+    {
+      "accepted": false,
+      "best_for_var_active_nodes": 16056,
+      "global_best_active_nodes": 16056,
+      "start_active_nodes": 16056,
+      "sweep_index": 12,
+      "var": 12
+    },
+    {
+      "accepted": false,
+      "best_for_var_active_nodes": 16056,
+      "global_best_active_nodes": 16056,
+      "start_active_nodes": 16056,
+      "sweep_index": 13,
+      "var": 11
+    },
+    {
+      "accepted": false,
+      "best_for_var_active_nodes": 16056,
+      "global_best_active_nodes": 16056,
+      "start_active_nodes": 16056,
+      "sweep_index": 14,
+      "var": 10
+    },
+    {
+      "accepted": false,
+      "best_for_var_active_nodes": 16056,
+      "global_best_active_nodes": 16056,
+      "start_active_nodes": 16056,
+      "sweep_index": 15,
+      "var": 9
+    },
+    {
+      "accepted": false,
+      "best_for_var_active_nodes": 16056,
+      "global_best_active_nodes": 16056,
+      "start_active_nodes": 16056,
+      "sweep_index": 16,
+      "var": 8
+    },
+    {
+      "accepted": false,
+      "best_for_var_active_nodes": 16056,
+      "global_best_active_nodes": 16056,
+      "start_active_nodes": 16056,
+      "sweep_index": 17,
+      "var": 7
+    },
+    {
+      "accepted": false,
+      "best_for_var_active_nodes": 16056,
+      "global_best_active_nodes": 16056,
+      "start_active_nodes": 16056,
+      "sweep_index": 18,
+      "var": 6
+    },
+    {
+      "accepted": false,
+      "best_for_var_active_nodes": 16056,
+      "global_best_active_nodes": 16056,
+      "start_active_nodes": 16056,
+      "sweep_index": 19,
+      "var": 5
+    },
+    {
+      "accepted": false,
+      "best_for_var_active_nodes": 16056,
+      "global_best_active_nodes": 16056,
+      "start_active_nodes": 16056,
+      "sweep_index": 20,
+      "var": 4
+    },
+    {
+      "accepted": false,
+      "best_for_var_active_nodes": 16056,
+      "global_best_active_nodes": 16056,
+      "start_active_nodes": 16056,
+      "sweep_index": 21,
+      "var": 3
+    },
+    {
+      "accepted": false,
+      "best_for_var_active_nodes": 16056,
+      "global_best_active_nodes": 16056,
+      "start_active_nodes": 16056,
+      "sweep_index": 22,
+      "var": 2
+    },
+    {
+      "accepted": false,
+      "best_for_var_active_nodes": 16056,
+      "global_best_active_nodes": 16056,
+      "start_active_nodes": 16056,
+      "sweep_index": 23,
+      "var": 1
+    },
+    {
+      "accepted": false,
+      "best_for_var_active_nodes": 16056,
+      "global_best_active_nodes": 16056,
+      "start_active_nodes": 16056,
+      "sweep_index": 24,
+      "var": 0
+    }
+  ]
+}
