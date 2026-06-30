@@ -1,12 +1,12 @@
 cff-version: 1.2.0
 message: "If you use this work, please cite the Zenodo preprint."
 title: "ZUSE Automat Agent: Empirical Law Discovery in Elementary Cellular Automata"
-version: "v1.13"
-doi: "10.5281/zenodo.21045809"
-date-released: "2026-06-29"
+version: "v1.14"
+doi: "10.5281/zenodo.21084311"
+date-released: "2026-06-30"
 authors:
   - family-names: "Concha Estrada"
     given-names: "Miguel Ángel"
 license: "CC-BY-4.0"
 repository-code: "https://github.com/conchaestradamiguelangel-droid/zuse-automat-agent"
-url: "https://doi.org/10.5281/zenodo.21045809"
+url: "https://doi.org/10.5281/zenodo.21084311"
