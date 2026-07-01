@@ -80,7 +80,12 @@ the natural cone order, ruling out Boolean input elimination. A subsequent
 order-sensitivity and targeted SIFT audit finds no useful BDD-size shortcut:
 simple reversal improves active nodes by only 0.5% globally, and a 580-order
 SIFT pass on the most favorable representative improves 16,061 active nodes to
-16,056, far above the 10,000-node compression gate.
+16,056, far above the 10,000-node compression gate. ANF analysis of the same
+25-by-12 causal cone reveals a spatial algebraic-complexity gradient:
+active-output degree obeys `degree = 24 - d + epsilon`, with
+`epsilon in {0,1}` and zero exceptions over 174 active outputs, while
+monomial count decays approximately as `2^{-d}` with distance `d` from the
+defect center (`R^2 = 0.998197`).
 
 Every result is reproducible from deterministic scripts with no stochastic
 components in the discovery loop.
@@ -1712,6 +1717,74 @@ reordering, even with a targeted SIFT pass on the best known candidate, does not
 make the dense cone compact. Any future symbolic shortcut must use a different
 representation or a different abstraction, not merely ROBDD variable ordering.
 
+### 7.20 ANF degree audit of the T=15 cone (Fase 44)
+
+Fase 44 tests a representation class independent from ROBDDs: algebraic normal
+form (ANF, or Zhegalkin polynomial) over GF(2). The question is whether the
+dense 25-input, 12-step causal cone has a compact polynomial representation
+even though BDD support and simple variable ordering do not simplify it.
+
+The computation simulates exact truth tables in bit-packed form. Each active
+output has `2^25` truth values; the simulation stores those values as `uint64`
+blocks, then unpacks one active output at a time and applies the Mobius
+transform to obtain ANF coefficients. This avoids stochastic sampling and does
+not rely on symbolic-regression heuristics.
+
+Across the 20 minimal `T=15` representatives, Fase 44 analyzes 174 active
+outputs. Active-output ANF degree ranges from 14 to 24; no output reaches the
+formal 25-variable ceiling. Active-output monomial counts range from 9,376 to
+17,758,052. Sixty-seven of 174 active outputs have degree below 20, and every
+representative has at least one such lower-degree output.
+
+The status is `LOW_OUTPUT_ANF_DEGREE_FOUND`. The cone is not algebraically
+uniform: some outputs remain extremely large as polynomials, but others have
+substantially lower degree. Fase 44 therefore turns the remaining symbolic
+problem from a uniform-density question into a stratification question: which
+outputs are algebraically simpler, and why?
+
+### 7.21 ANF gradient laws (Fase 45)
+
+Fase 45 analyzes the 174 active outputs from Fase 44 without new simulation. It
+finds that the ANF variation is not arbitrary; it is organized by distance from
+the cone center. Let `rel_pos` be the output position relative to the center
+cell of the 25-cell cone, and let `d = |rel_pos|`.
+
+**Degree gradient.** For every active output,
+
+`degree = 24 - d + epsilon`, with `epsilon in {0,1}`.
+
+There are zero exceptions outside this one-bit epsilon band over all 174 active
+outputs. The center outputs (`d=0`) have degree exactly 24 in 13/13 cases. The
+immediate neighbors (`d=1`) have degree exactly 23 in 20/20 cases. The Pearson
+correlation between `d` and degree is -0.984525, and the linear fit is
+`degree ~= 24.093185 - 0.942523*d` with `R^2 = 0.969289`. The degree-24 cap
+also holds globally: no active output reaches degree 25.
+
+**Monomial-count gradient.** Monomial counts obey an even cleaner spatial law:
+
+`log10(monomials) ~= 7.241925 - 0.307283*d`.
+
+The Pearson correlation between `d` and `log10(monomials)` is -0.999098, with
+`R^2 = 0.998197`. The slope differs from `-log10(2)` by only -0.006253, so the
+monomial count decays almost by a factor of two per cell away from the cone
+center.
+
+The residual `epsilon` is not explained by a simple left/right symmetry. The
+center has `epsilon=0` in 13/13 cases; left outputs have `epsilon=1` in 32/87
+cases, and right outputs in 26/74 cases. Rule identity also does not close the
+residual: `rule_73` has `epsilon=1` in 23/80 active outputs, while `rule_109`
+has `epsilon=1` in 35/94. Only 16/30 matched left/right output pairs have the
+same exact degree, so the defect is algebraically asymmetric even when its
+geometric presentation is visually paired.
+
+The verdict is `ANF_GRADIENT_LAWS_CONFIRMED`. The `T=15` defect acts as the
+focus of algebraic complexity in the cone. Complexity decreases linearly in
+ANF degree and almost exponentially in monomial count with distance from the
+defect center. This structure is orthogonal to the ROBDD results of
+Sections 7.18-7.19: BDD support and variable ordering do not simplify the
+function, but ANF exposes a spatial complexity gradient invisible to those
+tree-based audits.
+
 ## 8. Observer Artifacts and Pipeline Equivariance
 
 The ZUSE pipeline contains two classes of observer artifact that the atlas
@@ -1948,6 +2021,16 @@ representative evaluates 580 orders and improves 16,061 active-output nodes to
 BDD-size optimality, but it rules out simple variable-ordering as the missing
 symbolic shortcut.
 
+Fases 44-45 then switch representation class from BDDs to ANF polynomials. They
+show that the Boolean cone is not algebraically uniform. Active-output degree
+obeys `degree = 24 - |rel_pos| + epsilon`, with `epsilon in {0,1}` and zero
+exceptions over 174 outputs; monomial counts decay with
+`log10(monomials) ~= 7.241925 - 0.307283*|rel_pos|` (`R^2=0.998197`). This
+spatial gradient is centered on the defect and is orthogonal to the BDD
+negative results. It opens a sharper symbolic question: whether the gradient
+can be derived from cone geometry and the background orbit, and what determines
+the residual epsilon for distances >= 2.
+
 ### 9.4 Empirical atlas, not axiomatic classification
 
 The world categories are induced from observed law signatures across a finite
@@ -2099,6 +2182,12 @@ Several controlled extensions have now been completed:
   in 20/20 representatives. A targeted 580-order SIFT pass on the best known
   representative improves 16,061 active nodes to 16,056 (0.031%), missing the
   10,000-node compression gate. Full results are in Section 7.19.
+- **ANF gradient**: positive/structural. Exact ANF analysis of 174 active
+  outputs shows that `degree = 24 - |rel_pos| + epsilon`, with
+  `epsilon in {0,1}` and zero exceptions, while monomial counts decay almost by
+  a factor of two per cell from the cone center (`R^2=0.998197`). The epsilon
+  residual and algebraic left/right asymmetry (16/30 matched pairs with equal
+  degree) remain open. Full results are in Sections 7.20-7.21.
 
 Each extension is a controlled experiment with the same measurement protocol;
 only the IC or background definition changes.
