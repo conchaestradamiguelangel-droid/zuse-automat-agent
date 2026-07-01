@@ -1183,6 +1183,76 @@ Fase 42 left open.
 `bdd_sift_targeted_results.json`, `bdd_sift_targeted_report.md`,
 `bdd_sift_targeted_checkpoint.json`.
 
+### ANF degree audit and algebraic stratification (Fases 44-45)
+
+Fase 44 tests a representation class independent from ROBDDs: algebraic normal
+form (ANF / Zhegalkin polynomial) over GF(2). The 25-input, 12-step cone truth
+tables are simulated exactly in bit-packed form, then transformed with the
+Mobius transform one active output at a time.
+
+Fase 44 results:
+
+- representatives: 20;
+- active outputs analyzed: 174;
+- active-output ANF degree range: 14..24;
+- active-output monomial range: 9,376..17,758,052;
+- full-degree representatives (degree 25): 0/20;
+- outputs with degree <20: 67/174;
+- every representative has at least one degree-<20 active output.
+
+Fase 45 analyzes the structure of this variation and finds two empirical laws.
+
+**Law 1 -- ANF degree gradient.**
+
+For every active output:
+
+`degree = 24 - abs(rel_pos) + epsilon`, with `epsilon in {0,1}`.
+
+Results:
+
+- exceptions outside epsilon `{0,1}`: 0/174;
+- epsilon counts: 116 with epsilon=0, 58 with epsilon=1;
+- Pearson r(`abs(rel_pos)`, degree): -0.984525;
+- linear fit: `degree ~= 24.093185 - 0.942523 * dist`, R^2=0.969289;
+- degree-24 cap holds: max degree is 24, never 25.
+
+**Law 2 -- monomial-count exponential decay.**
+
+For every active output:
+
+`log10(monomials) ~= 7.241925 - 0.307283 * abs(rel_pos)`.
+
+Results:
+
+- Pearson r(`abs(rel_pos)`, `log10(monomials)`): -0.999098;
+- R^2=0.998197;
+- slope differs from `-log10(2)` by -0.006253;
+- interpretation: monomial counts decay almost by a factor of 2 per cell away
+  from the cone center.
+
+Epsilon is not simply left/right symmetric:
+
+- center outputs: epsilon=0 in 13/13;
+- left outputs: epsilon=1 in 32/87;
+- right outputs: epsilon=1 in 26/74;
+- matched left/right pairs with same degree: 16/30.
+
+**Verdict.** `ANF_GRADIENT_LAWS_CONFIRMED`. The T=15 cone is not algebraically
+uniform. It has a spatial complexity gradient centered on the active defect:
+degree decreases approximately linearly with distance and monomial count
+decreases almost exponentially. This is not a universal compact ANF shortcut,
+because some outputs still have up to 17,758,052 monomials, but it is a
+positive structural law not visible in the ROBDD audits.
+
+**Scripts.**
+`outputs/periodic_backgrounds_len8/analyze_anf_degree.py`,
+`outputs/periodic_backgrounds_len8/analyze_anf_stratification.py`
+
+**Outputs.**
+`anf_degree_results.json`, `anf_degree_report.md`,
+`anf_degree_checkpoint.json`,
+`anf_stratification_results.json`, `anf_stratification_report.md`.
+
 Scientific reading: period-8 primitive backgrounds enlarge the oscillator
 landscape relative to shorter backgrounds. The three Fase-24 questions are
 answered affirmatively: new rules appear, new periods T>4 include T=15, and a
