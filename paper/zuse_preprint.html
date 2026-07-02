@@ -196,7 +196,11 @@ SIFT pass on the most favorable representative improves 16,061 active nodes to
 active-output degree obeys <code>degree = 24 - d + epsilon</code>, with
 <code>epsilon in {0,1}</code> and zero exceptions over 174 active outputs, while
 monomial count decays approximately as <code>2^{-d}</code> with distance <code>d</code> from the
-defect center (<code>R^2 = 0.998197</code>).</p>
+defect center (<code>R^2 = 0.998197</code>). A follow-up epsilon-residual audit finds no
+compact predictor from static rule, position, local background, family, or
+cycle-phase features: the best single feature reaches 64.89% leave-one-representative-out
+accuracy, while a depth-3 decision tree reaches 73.05% training accuracy but
+only 55.65% leave-one-representative-out accuracy.</p>
 <p>Every result is reproducible from deterministic scripts with no stochastic
 components in the discovery loop.</p>
 <h2>1. Introduction</h2>
@@ -2495,6 +2499,36 @@ defect center. This structure is orthogonal to the ROBDD results of
 Sections 7.18-7.19: BDD support and variable ordering do not simplify the
 function, but ANF exposes a spatial complexity gradient invisible to those
 tree-based audits.</p>
+<h3>7.22 Epsilon residual audit (Fase 46)</h3>
+<p>Fase 45 leaves one open bit in the ANF degree law. The backbone
+<code>degree = 24 - |rel_pos| + epsilon</code> has zero exceptions, but the residual
+<code>epsilon</code> is not explained by sign, rule identity, or simple left/right
+symmetry. Fase 46 asks whether this bit has a compact predictor from static
+features already available in the Fase 45 records.</p>
+<p>The audit excludes <code>dist=0</code> and <code>dist=1</code>, where <code>epsilon=0</code> in all known cases.
+Including those rows would inflate accuracy without explaining the residual.
+The remaining dataset contains 141 active outputs across the 20 minimal
+<code>T=15</code> representatives, with epsilon counts <code>{0: 83, 1: 58}</code> and a majority
+baseline of 58.87%.</p>
+<p>Single-feature tests are evaluated by leave-one-representative-out validation.
+The best single feature is distance itself, at 64.89% mean accuracy. This is
+weak residual signal from the same variable that defines the main gradient,
+not a new explanatory law. The next strongest feature is <code>defect_phase</code>
+(64.53%), with phases 1 and 2 tending toward <code>epsilon=1</code>; this has plausible
+physical semantics but does not generalize strongly. <code>local_bg_3mer</code> reaches
+64.18%. In contrast, <code>background_bit</code>, rule identity, and left/right sign
+collapse to the majority baseline, and <code>bg_transition</code> performs worse.</p>
+<p>A depth-3 decision tree over all tested features reaches 73.05% training
+accuracy but only 55.65% mean leave-one-representative-out accuracy, with a
+20.67% fold standard deviation. The tree&#39;s top feature is <code>family_id=F03</code>,
+followed by distance and local background features. This gap indicates
+representative/family memorization rather than a transferable epsilon rule.</p>
+<p>The verdict is <code>EPSILON_REMAINS_RESIDUAL</code>. Fase 46 does not weaken the ANF
+gradient law; it separates the strong spatial backbone from a one-bit residual
+that is not captured by static rule, position, local-background, family, or
+cycle-phase descriptors. The remaining explanation, if one exists, likely
+requires dynamic features of the ANF computation rather than a static descriptor
+of the output position.</p>
 <h2>8. Observer Artifacts and Pipeline Equivariance</h2>
 <p>The ZUSE pipeline contains two classes of observer artifact that the atlas
 identifies and characterizes. Framing these artifacts as results — not just
@@ -2757,6 +2791,13 @@ spatial gradient is centered on the defect and is orthogonal to the BDD
 negative results. It opens a sharper symbolic question: whether the gradient
 can be derived from cone geometry and the background orbit, and what determines
 the residual epsilon for distances &gt;= 2.</p>
+<p>Fase 46 tests that residual directly. After removing <code>dist=0</code> and <code>dist=1</code>,
+where <code>epsilon=0</code> trivially, it evaluates 141 active outputs using static
+features from rule identity, signed position, local background bits, family id,
+and defect phase. The best single feature reaches only 64.89%
+leave-one-representative-out accuracy, and a depth-3 decision tree falls from
+73.05% training accuracy to 55.65% leave-one-representative-out accuracy. Thus
+the epsilon bit remains residual under the current static feature class.</p>
 <h3>9.4 Empirical atlas, not axiomatic classification</h3>
 <p>The world categories are induced from observed law signatures across a finite
 number of seeds and step counts. A world classified as
@@ -2901,8 +2942,12 @@ representative improves 16,061 active nodes to 16,056 (0.031%), missing the
 outputs shows that <code>degree = 24 - |rel_pos| + epsilon</code>, with
 <code>epsilon in {0,1}</code> and zero exceptions, while monomial counts decay almost by
 a factor of two per cell from the cone center (<code>R^2=0.998197</code>). The epsilon
-residual and algebraic left/right asymmetry (16/30 matched pairs with equal
-degree) remain open. Full results are in Sections 7.20-7.21.</li>
+residual is tested directly in Fase 46: after excluding trivial <code>dist=0,1</code>
+rows, the best single-feature predictor reaches 64.89%
+leave-one-representative-out accuracy, and a depth-3 tree reaches only 55.65%
+under the same validation. The residual remains unexplained by static
+rule/position/background/family features. Full results are in
+Sections 7.20-7.22.</li>
 </ul>
 <p>Each extension is a controlled experiment with the same measurement protocol;
 only the IC or background definition changes.</p>
