@@ -200,7 +200,11 @@ defect center (<code>R^2 = 0.998197</code>). A follow-up epsilon-residual audit 
 compact predictor from static rule, position, local background, family, or
 cycle-phase features: the best single feature reaches 64.89% leave-one-representative-out
 accuracy, while a depth-3 decision tree reaches 73.05% training accuracy but
-only 55.65% leave-one-representative-out accuracy.</p>
+only 55.65% leave-one-representative-out accuracy. Recomputing the ANF profile
+layer-by-layer over the full 12-step cone reverses that negative result:
+<code>degree_growth_slope</code> predicts the epsilon bit with 94.90%
+leave-one-representative-out accuracy and zero mismatches against the final
+Fase 44 ANF degrees.</p>
 <p>Every result is reproducible from deterministic scripts with no stochastic
 components in the discovery loop.</p>
 <h2>1. Introduction</h2>
@@ -2529,6 +2533,36 @@ that is not captured by static rule, position, local-background, family, or
 cycle-phase descriptors. The remaining explanation, if one exists, likely
 requires dynamic features of the ANF computation rather than a static descriptor
 of the output position.</p>
+<h3>7.23 Dynamic ANF growth profile (Fase 47)</h3>
+<p>Fase 47 tests the explanation suggested by Fase 46: if <code>epsilon</code> is not
+predicted by static descriptors, it may be encoded in the temporal growth of
+the ANF itself. The computation reuses the exact bit-packed cone simulation of
+Fase 44, but instead of applying the Mobius transform only at the final layer,
+it computes ANF degree and monomial count for each active output at every layer
+<code>t = 1..12</code>.</p>
+<p>The audit covers the same 20 minimal <code>T=15</code> representatives and the same 141
+nontrivial residual rows with <code>dist &gt;= 2</code>. As an internal consistency check,
+the recomputed <code>t=12</code> degrees and monomial counts are compared against Fase 44;
+there are zero mismatches.</p>
+<p>The result is <code>EPSILON_DYNAMIC_RULE_FOUND</code>. The strongest single feature is
+<code>degree_growth_slope</code>, the linear slope of ANF degree over <code>t=1..12</code>. It reaches
+98.58% training accuracy and 94.90% mean leave-one-representative-out accuracy
+with 9.44% fold standard deviation. This is a 30-point LORO improvement over
+the best static feature from Fase 46. <code>monomial_growth_slope</code> is weaker but
+still informative, with 73.37% LORO accuracy, and <code>t_first_full_degree</code> reaches
+71.96%.</p>
+<p>A depth-3 decision tree over the dynamic features reaches 86.52% training
+accuracy and 85.01% mean leave-one-representative-out accuracy. Its first split
+is <code>t_first_full_degree &lt;= 11.5</code>, which predicts <code>epsilon=0</code>; outputs that do
+not reach their final degree before the last cone layer require additional
+monomial-growth and left/right-slope information. This gives a physical
+interpretation of the residual: <code>epsilon=1</code> is associated with outputs whose
+algebraic degree remains active near the causal horizon.</p>
+<p>This is not a static pre-computation shortcut. The strongest feature uses the
+complete temporal degree trajectory through the final cone layer. The result is
+therefore best interpreted as a dynamic full-profile law of ANF growth: the
+epsilon bit is not visible in static output descriptors, but it is strongly
+encoded in how algebraic degree accumulates across the 12-step cone.</p>
 <h2>8. Observer Artifacts and Pipeline Equivariance</h2>
 <p>The ZUSE pipeline contains two classes of observer artifact that the atlas
 identifies and characterizes. Framing these artifacts as results — not just
@@ -2798,6 +2832,14 @@ and defect phase. The best single feature reaches only 64.89%
 leave-one-representative-out accuracy, and a depth-3 decision tree falls from
 73.05% training accuracy to 55.65% leave-one-representative-out accuracy. Thus
 the epsilon bit remains residual under the current static feature class.</p>
+<p>Fase 47 then changes the feature class from static descriptors to dynamic ANF
+growth profiles. Recomputing ANF degree and monomial count at each cone layer
+<code>t=1..12</code> yields zero mismatches against the final Fase 44 degrees at <code>t=12</code>.
+The single feature <code>degree_growth_slope</code> predicts <code>epsilon</code> with 94.90%
+leave-one-representative-out accuracy. The result should not be read as a
+pre-computation shortcut, because the feature uses the full temporal trajectory
+through the final layer; it is instead a dynamic law explaining where the
+one-bit residual lives.</p>
 <h3>9.4 Empirical atlas, not axiomatic classification</h3>
 <p>The world categories are induced from observed law signatures across a finite
 number of seeds and step counts. A world classified as
@@ -2946,8 +2988,11 @@ residual is tested directly in Fase 46: after excluding trivial <code>dist=0,1</
 rows, the best single-feature predictor reaches 64.89%
 leave-one-representative-out accuracy, and a depth-3 tree reaches only 55.65%
 under the same validation. The residual remains unexplained by static
-rule/position/background/family features. Full results are in
-Sections 7.20-7.22.</li>
+rule/position/background/family features. Fase 47 resolves the residual at
+the dynamic-profile level: <code>degree_growth_slope</code> over <code>t=1..12</code> predicts
+epsilon with 94.90% leave-one-representative-out accuracy, with zero
+mismatches against Fase 44 at <code>t=12</code>. This is a full-trajectory law, not a
+static shortcut. Full results are in Sections 7.20-7.23.</li>
 </ul>
 <p>Each extension is a controlled experiment with the same measurement protocol;
 only the IC or background definition changes.</p>
