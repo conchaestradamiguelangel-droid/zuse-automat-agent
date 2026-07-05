@@ -9,8 +9,9 @@ model participates in world selection, law evaluation, scoring, or acceptance.
 
 ## Preprint
 
-**Latest: v1.16** - Epsilon residual audit: the ANF gradient backbone holds, but the one-bit residual is not predicted by static local/family features.
+**Latest: v1.17** - Dynamic ANF growth-profile law: the epsilon residual is predicted by the temporal degree-growth trajectory, not static descriptors.
 
+- v1.17 DOI: [10.5281/zenodo.21205501](https://doi.org/10.5281/zenodo.21205501)
 - v1.16 DOI: [10.5281/zenodo.21144178](https://doi.org/10.5281/zenodo.21144178)
 - v1.15 DOI: [10.5281/zenodo.21117311](https://doi.org/10.5281/zenodo.21117311)
 - v1.14 DOI: [10.5281/zenodo.21084311](https://doi.org/10.5281/zenodo.21084311)
@@ -28,6 +29,7 @@ model participates in world selection, law evaluation, scoring, or acceptance.
 - v1.2 DOI: [10.5281/zenodo.20738025](https://doi.org/10.5281/zenodo.20738025)
 - v1.1 DOI: [10.5281/zenodo.20687470](https://doi.org/10.5281/zenodo.20687470)
 - v1.0 DOI: [10.5281/zenodo.20516375](https://doi.org/10.5281/zenodo.20516375)
+- v1.17 series DOI: [10.5281/zenodo.21205500](https://doi.org/10.5281/zenodo.21205500)
 - v1.16 series DOI: [10.5281/zenodo.21144177](https://doi.org/10.5281/zenodo.21144177)
 - v1.15 series DOI: [10.5281/zenodo.21117310](https://doi.org/10.5281/zenodo.21117310)
 - v1.14 series DOI: [10.5281/zenodo.21084310](https://doi.org/10.5281/zenodo.21084310)
@@ -105,8 +107,8 @@ regenerated from the commands in the reproducibility guide.
 
 ```text
 Concha Estrada, M. A. (2026). ZUSE Automat Agent: Empirical Law Discovery in
-Elementary Cellular Automata (v1.16). Zenodo.
-https://doi.org/10.5281/zenodo.21144178
+Elementary Cellular Automata (v1.17). Zenodo.
+https://doi.org/10.5281/zenodo.21205501
 ```
 
 ## License
