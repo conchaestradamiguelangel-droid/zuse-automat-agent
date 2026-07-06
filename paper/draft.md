@@ -93,7 +93,9 @@ only 55.65% leave-one-representative-out accuracy. Recomputing the ANF profile
 layer-by-layer over the full 12-step cone reverses that negative result:
 `degree_growth_slope` predicts the epsilon bit with 94.90%
 leave-one-representative-out accuracy and zero mismatches against the final
-Fase 44 ANF degrees.
+Fase 44 ANF degrees. A horizon audit then shows that this is a full-profile
+effect: partial horizons up to `K=11` remain below 80% LORO accuracy, while
+`K=12` jumps to 94.90%.
 
 Every result is reproducible from deterministic scripts with no stochastic
 components in the discovery loop.
@@ -1865,6 +1867,40 @@ therefore best interpreted as a dynamic full-profile law of ANF growth: the
 epsilon bit is not visible in static output descriptors, but it is strongly
 encoded in how algebraic degree accumulates across the 12-step cone.
 
+### 7.24 Early dynamic ANF horizon audit (Fase 48)
+
+Fase 48 asks whether the Fase 47 dynamic predictor can be made earlier. The
+test reuses the stored `t=1..12` ANF histories from Fase 47; no new ECA or cone
+simulation is performed. For each horizon `K in {6,8,9,10,11,12}`, it recomputes
+the future-blind feature `degree_growth_slope_K` using only the degree profile
+from `t=1..K`, and evaluates it with the same 20-fold
+leave-one-representative-out protocol over the 141 nontrivial residual rows
+with `dist >= 2`.
+
+The result is `FULL_PROFILE_REQUIRED`. The horizon table for
+`degree_growth_slope_K` is:
+
+| Horizon K | LORO accuracy |
+| ---: | ---: |
+| 6 | 61.74% |
+| 8 | 76.56% |
+| 9 | 75.27% |
+| 10 | 76.09% |
+| 11 | 79.47% |
+| 12 | 94.90% |
+
+The transition from `K=11` to `K=12` is not gradual: the final cone layer adds
+about 15 points of predictive accuracy. This supports the interpretation that
+`epsilon` is decided at the causal horizon. Outputs with `epsilon=1` are not
+merely high-complexity outputs; they are outputs whose ANF degree trajectory
+still carries decisive information in the last step of the 12-step cone.
+
+The audit also tracks `t_first_full_degree_K`, but that feature uses the final
+expected degree from Fase 44 and is therefore not fully future-blind. The clean
+feature is `degree_growth_slope_K`. Under that feature class, no horizon before
+`K=12` reaches the 90% gate. Thus Fase 47's law is not an early dynamic shortcut;
+it is a full-horizon profile law.
+
 ## 8. Observer Artifacts and Pipeline Equivariance
 
 The ZUSE pipeline contains two classes of observer artifact that the atlas
@@ -2128,6 +2164,12 @@ pre-computation shortcut, because the feature uses the full temporal trajectory
 through the final layer; it is instead a dynamic law explaining where the
 one-bit residual lives.
 
+Fase 48 then asks whether that dynamic law appears before the final cone layer.
+The answer is negative under the tested horizon protocol: the future-blind
+`degree_growth_slope_K` feature reaches 79.47% LORO accuracy at `K=11`, then
+jumps to 94.90% at `K=12`. Thus the epsilon bit is a full-horizon ANF-growth
+property rather than an early dynamic shortcut.
+
 ### 9.4 Empirical atlas, not axiomatic classification
 
 The world categories are induced from observed law signatures across a finite
@@ -2290,8 +2332,9 @@ Several controlled extensions have now been completed:
   rule/position/background/family features. Fase 47 resolves the residual at
   the dynamic-profile level: `degree_growth_slope` over `t=1..12` predicts
   epsilon with 94.90% leave-one-representative-out accuracy, with zero
-  mismatches against Fase 44 at `t=12`. This is a full-trajectory law, not a
-  static shortcut. Full results are in Sections 7.20-7.23.
+  mismatches against Fase 44 at `t=12`. Fase 48 shows that this is a
+  full-horizon effect: `K=11` reaches only 79.47% LORO accuracy, while `K=12`
+  jumps to 94.90%. Full results are in Sections 7.20-7.24.
 
 Each extension is a controlled experiment with the same measurement protocol;
 only the IC or background definition changes.
