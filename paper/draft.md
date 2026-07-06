@@ -1901,6 +1901,44 @@ feature is `degree_growth_slope_K`. Under that feature class, no horizon before
 `K=12` reaches the 90% gate. Thus Fase 47's law is not an early dynamic shortcut;
 it is a full-horizon profile law.
 
+### 7.25 Generalization of the ANF gradient law (Fase 49)
+
+Fase 49 tests whether the ANF gradient law discovered in Sections 7.20-7.21 is
+specific to the original length-8 `T=15` representatives, or whether it also
+holds for the external `T=15` backgrounds found in Fase 34. The external set
+contains eight replay-verified backgrounds: one length-9 `rule_73` background,
+five length-10 `rule_73` backgrounds, and two length-10 `rule_109` backgrounds.
+These are genuine external backgrounds, not rotations of the length-8 set.
+
+The protocol reuses the exact bit-sliced Mobius ANF machinery from Fase 44:
+`WINDOW_CELLS=25` and `T_WINDOW=12`. Before ANF evaluation, each external
+background is replay-verified as `T=15` using its minimal witness IC from
+Fase 34. All 8/8 backgrounds pass this replay gate. The Fase 34 witnesses have
+varying active defect widths, so the test does not assume constant visual defect
+width; the 25-cell cone is fixed by the radius-1, 12-step causal horizon.
+
+Across the eight external backgrounds, Fase 49 analyzes 63 active outputs. The
+degree band remains exact:
+
+`degree = 24 - d + epsilon`, with `epsilon in {0,1}`.
+
+There are 0/63 exceptions. The active degree range is 16..24, and epsilon
+counts are `{0: 39, 1: 24}`.
+
+The monomial-count law also generalizes quantitatively. The external fit is
+
+`log10(monomials) ~= 7.224069 - 0.302890*d`, with `R^2 = 0.998263`.
+
+Compared with the length-8 reference
+`log10(monomials) ~= 7.241925 - 0.307283*d`, the intercept differs by 0.25%
+and the slope magnitude by 1.43%. This is well inside the predefined
+generalization gate.
+
+The verdict is `ANF_GRADIENT_GENERALIZES`. The ANF gradient is therefore not a
+length-8-specific artifact. It appears to be a property of the `T=15` mechanism
+when the background preserves `T_bg=3`, at least across the original length-8
+representatives and the external length-9/10 witnesses tested here.
+
 ## 8. Observer Artifacts and Pipeline Equivariance
 
 The ZUSE pipeline contains two classes of observer artifact that the atlas

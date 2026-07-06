@@ -2617,6 +2617,34 @@ expected degree from Fase 44 and is therefore not fully future-blind. The clean
 feature is <code>degree_growth_slope_K</code>. Under that feature class, no horizon before
 <code>K=12</code> reaches the 90% gate. Thus Fase 47&#39;s law is not an early dynamic shortcut;
 it is a full-horizon profile law.</p>
+<h3>7.25 Generalization of the ANF gradient law (Fase 49)</h3>
+<p>Fase 49 tests whether the ANF gradient law discovered in Sections 7.20-7.21 is
+specific to the original length-8 <code>T=15</code> representatives, or whether it also
+holds for the external <code>T=15</code> backgrounds found in Fase 34. The external set
+contains eight replay-verified backgrounds: one length-9 <code>rule_73</code> background,
+five length-10 <code>rule_73</code> backgrounds, and two length-10 <code>rule_109</code> backgrounds.
+These are genuine external backgrounds, not rotations of the length-8 set.</p>
+<p>The protocol reuses the exact bit-sliced Mobius ANF machinery from Fase 44:
+<code>WINDOW_CELLS=25</code> and <code>T_WINDOW=12</code>. Before ANF evaluation, each external
+background is replay-verified as <code>T=15</code> using its minimal witness IC from
+Fase 34. All 8/8 backgrounds pass this replay gate. The Fase 34 witnesses have
+varying active defect widths, so the test does not assume constant visual defect
+width; the 25-cell cone is fixed by the radius-1, 12-step causal horizon.</p>
+<p>Across the eight external backgrounds, Fase 49 analyzes 63 active outputs. The
+degree band remains exact:</p>
+<p><code>degree = 24 - d + epsilon</code>, with <code>epsilon in {0,1}</code>.</p>
+<p>There are 0/63 exceptions. The active degree range is 16..24, and epsilon
+counts are <code>{0: 39, 1: 24}</code>.</p>
+<p>The monomial-count law also generalizes quantitatively. The external fit is</p>
+<p><code>log10(monomials) ~= 7.224069 - 0.302890*d</code>, with <code>R^2 = 0.998263</code>.</p>
+<p>Compared with the length-8 reference
+<code>log10(monomials) ~= 7.241925 - 0.307283*d</code>, the intercept differs by 0.25%
+and the slope magnitude by 1.43%. This is well inside the predefined
+generalization gate.</p>
+<p>The verdict is <code>ANF_GRADIENT_GENERALIZES</code>. The ANF gradient is therefore not a
+length-8-specific artifact. It appears to be a property of the <code>T=15</code> mechanism
+when the background preserves <code>T_bg=3</code>, at least across the original length-8
+representatives and the external length-9/10 witnesses tested here.</p>
 <h2>8. Observer Artifacts and Pipeline Equivariance</h2>
 <p>The ZUSE pipeline contains two classes of observer artifact that the atlas
 identifies and characterizes. Framing these artifacts as results — not just
