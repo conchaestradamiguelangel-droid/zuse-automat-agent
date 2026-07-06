@@ -9,8 +9,9 @@ model participates in world selection, law evaluation, scoring, or acceptance.
 
 ## Preprint
 
-**Latest: v1.18** - Early dynamic ANF horizon audit: the epsilon residual requires the full 12-step cone profile, not a truncated dynamic shortcut.
+**Latest: v1.19** - The ANF gradient law generalizes to external length-9/10 T=15 backgrounds.
 
+- v1.19 DOI: [10.5281/zenodo.21220980](https://doi.org/10.5281/zenodo.21220980)
 - v1.18 DOI: [10.5281/zenodo.21215386](https://doi.org/10.5281/zenodo.21215386)
 - v1.17 DOI: [10.5281/zenodo.21205501](https://doi.org/10.5281/zenodo.21205501)
 - v1.16 DOI: [10.5281/zenodo.21144178](https://doi.org/10.5281/zenodo.21144178)
@@ -109,8 +110,8 @@ regenerated from the commands in the reproducibility guide.
 
 ```text
 Concha Estrada, M. A. (2026). ZUSE Automat Agent: Empirical Law Discovery in
-Elementary Cellular Automata (v1.18). Zenodo.
-https://doi.org/10.5281/zenodo.21215386
+Elementary Cellular Automata (v1.19). Zenodo.
+https://doi.org/10.5281/zenodo.21220980
 ```
 
 ## License
