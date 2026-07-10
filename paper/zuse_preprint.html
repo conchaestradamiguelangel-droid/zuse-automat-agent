@@ -206,7 +206,17 @@ layer-by-layer over the full 12-step cone reverses that negative result:
 leave-one-representative-out accuracy and zero mismatches against the final
 Fase 44 ANF degrees. A horizon audit then shows that this is a full-profile
 effect: partial horizons up to <code>K=11</code> remain below 80% LORO accuracy, while
-<code>K=12</code> jumps to 94.90%.</p>
+<code>K=12</code> jumps to 94.90%. The ANF gradient also generalizes across external
+length-9/10 <code>T=15</code> witnesses with 0/63 band exceptions and
+<code>R^2 = 0.998263</code>. Follow-up baselines outside the original <code>T=15</code> setting show
+that the gradient is not caused by period, cone size, or active-support width
+alone: compact T=2 oscillators lack enough active support, an external
+<code>rule_109</code>/<code>T=10</code> witness reproduces the T=15 slope within 0.13%, and tested
+external families (<code>rule_54</code>, <code>rule_94</code>, <code>rule_133</code>) are flat at their natural
+periods. The current evidence therefore identifies the gradient as
+mechanism-dependent, robust in the tested <code>rule_73</code>/<code>rule_109</code>
+periodic-background family, without claiming universality over untested ECA
+families.</p>
 <p>Every result is reproducible from deterministic scripts with no stochastic
 components in the discovery loop.</p>
 <h2>1. Introduction</h2>
@@ -2642,9 +2652,65 @@ counts are <code>{0: 39, 1: 24}</code>.</p>
 and the slope magnitude by 1.43%. This is well inside the predefined
 generalization gate.</p>
 <p>The verdict is <code>ANF_GRADIENT_GENERALIZES</code>. The ANF gradient is therefore not a
-length-8-specific artifact. It appears to be a property of the <code>T=15</code> mechanism
-when the background preserves <code>T_bg=3</code>, at least across the original length-8
-representatives and the external length-9/10 witnesses tested here.</p>
+length-8-specific artifact, at least across the original length-8
+representatives and the external length-9/10 witnesses tested here. The
+question of whether this gradient is specific to the <code>T=15</code> period or to a
+broader <code>rule_73</code>/<code>rule_109</code> mechanism family is addressed in Section 7.26.</p>
+<h3>7.26 Specificity of the ANF gradient beyond T=15 (Fases 50–53)</h3>
+<p>Fases 50--53 test whether the ANF gradient law from Fases 44--49 is a
+generic consequence of period, cone size, or active-support width, or whether
+it is tied to a more specific mechanism family.</p>
+<p><strong>Compact T=2 baselines (Fases 50--51).</strong> Fase 50 first tests the cleanest
+stationary local period-2 oscillator known from the quiescent-background
+catalog: <code>rule_108</code> on a zero background. Its active footprint is compact
+(<code>#.# &lt;-&gt; ###</code>), and at the 12-step comparison horizon the concrete active
+support has only 2 outputs in a single distance class. This is not enough
+support for a spatial active-output gradient. Fase 51 repeats the test for the
+four right-moving T=2 glider representatives <code>rule_20</code>, <code>rule_52</code>,
+<code>rule_148</code>, and <code>rule_180</code>, using the exact catalog ICs and a comoving final
+frame. The one-cell phase produces one active output and the two-cell phase
+control produces two adjacent active outputs, again in a single comoving
+distance class. The verdict for these compact T=2 baselines is
+<code>ANF_GRADIENT_T15_SPECIFIC</code>, but for a precise reason: compact active support
+prevents a meaningful gradient test. This does not by itself prove that the
+gradient is tied to period 15.</p>
+<p><strong>Wide periodic-background non-T15 cases (Fase 52).</strong> Fase 52 therefore moves
+to wide stationary oscillators over nontrivial periodic backgrounds. These
+cases have multiple active distance classes and are measured as XOR defects
+relative to the background orbit, matching the T=15 convention. The key
+positive witness is <code>rule_109</code> on background <code>1011</code>, with <code>T_local=10</code>. At the
+common 12-step horizon it gives</p>
+<p><code>log10(monomials) ~= 7.258688 - 0.307674*d</code>, with <code>R^2 = 0.999349</code>.</p>
+<p>The slope differs from the T=15 reference <code>-0.307283</code> by only 0.13%. This is
+not merely a similar trend; within this finite audit it is the same spatial
+monomial-decay gradient. Other non-T15 periodic-background cases are weaker or
+ambiguous: <code>rule_73</code> on background <code>0010</code> with <code>T_local=10</code> has too few active
+distance classes at the 12-step horizon (<code>reliable=no</code>); <code>rule_73</code> on
+background <code>0011</code> with <code>T_local=12</code> gives slope <code>-0.296180</code> but only
+<code>R^2 = 0.877281</code>; and <code>rule_94</code> on background <code>0010</code> with <code>T_local=3</code> is flat
+at its own period (slope <code>0.000523</code>, <code>R^2 = 0.049180</code>) but develops a slope
+<code>-0.341994</code> with <code>R^2 = 0.955626</code> only when oversampled to <code>T_WINDOW=12</code>.
+That last case is treated as a horizon effect rather than the same natural
+period law. The Fase 52 verdict is <code>ANF_GRADIENT_MECHANISM_DEPENDENT</code>.</p>
+<p><strong>External-family test (Fase 53).</strong> Fase 53 then tests wide candidates outside
+the <code>rule_73</code>/<code>rule_109</code> family, using the shortest catalog witnesses at
+maximum support <code>span=11</code>. <code>rule_54</code> on background <code>0010</code> with <code>T_local=4</code>
+has slope <code>-0.002354</code> at its own period: effectively flat. <code>rule_94</code> on
+background <code>0001</code> with <code>T_local=6</code> has slope <code>0.000000</code> and <code>R^2 = 0.000000</code>
+at its own period. <code>rule_133</code> on background <code>1011</code> with <code>T_local=6</code> also has
+slope <code>0.000000</code> and <code>R^2 = 0.000000</code> at its own period. These own-period
+tests have enough active support to be informative; the flat result is not a
+support artifact. At the common 12-step horizon, some external cases acquire
+nonzero slopes, but they do not reproduce the T=15-quality combination of
+support reliability, slope, and <code>R^2</code>. The Fase 53 verdict is
+<code>ANF_GRADIENT_FAMILY_73_109</code>.</p>
+<p><strong>Interpretation.</strong> The ANF gradient is not a consequence of period, cone
+size, or active-support width alone. It is mechanism-dependent. In the tested
+cases it appears robustly within the <code>rule_73</code>/<code>rule_109</code> periodic-background
+family, including a non-T15 <code>rule_109</code>/<code>T=10</code> witness, but not in compact T=2
+oscillators nor in the external families tested (<code>rule_54</code>, <code>rule_94</code>, and
+<code>rule_133</code>) at their natural periods. No claim is made about untested ECA
+families.</p>
 <h2>8. Observer Artifacts and Pipeline Equivariance</h2>
 <p>The ZUSE pipeline contains two classes of observer artifact that the atlas
 identifies and characterizes. Framing these artifacts as results — not just
@@ -3080,7 +3146,14 @@ the dynamic-profile level: <code>degree_growth_slope</code> over <code>t=1..12</
 epsilon with 94.90% leave-one-representative-out accuracy, with zero
 mismatches against Fase 44 at <code>t=12</code>. Fase 48 shows that this is a
 full-horizon effect: <code>K=11</code> reaches only 79.47% LORO accuracy, while <code>K=12</code>
-jumps to 94.90%. Full results are in Sections 7.20-7.24.</li>
+jumps to 94.90%. Fase 49 validates the gradient on external length-9/10
+<code>T=15</code> witnesses (0/63 exceptions, <code>R^2=0.998263</code>). Fases 50--53 then test
+specificity outside the original T=15 set: compact T=2 baselines lack enough
+active support; <code>rule_109</code>/<code>T=10</code> reproduces the T=15 slope within 0.13%;
+and the external <code>rule_54</code>, <code>rule_94</code>, and <code>rule_133</code> families are flat at
+their natural periods. The resulting claim is mechanism-dependence within
+the tested <code>rule_73</code>/<code>rule_109</code> family, not universality. Full results are
+in Sections 7.20-7.26.</li>
 </ul>
 <p>Each extension is a controlled experiment with the same measurement protocol;
 only the IC or background definition changes.</p>
