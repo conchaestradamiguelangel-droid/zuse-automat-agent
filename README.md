@@ -9,8 +9,9 @@ model participates in world selection, law evaluation, scoring, or acceptance.
 
 ## Preprint
 
-**Latest: v1.19** - The ANF gradient law generalizes to external length-9/10 T=15 backgrounds.
+**Latest: v1.20** - ANF gradient specificity beyond T=15: mechanism-dependent within the tested rule_73/rule_109 family.
 
+- v1.20 DOI: [10.5281/zenodo.21301212](https://doi.org/10.5281/zenodo.21301212)
 - v1.19 DOI: [10.5281/zenodo.21220980](https://doi.org/10.5281/zenodo.21220980)
 - v1.18 DOI: [10.5281/zenodo.21215386](https://doi.org/10.5281/zenodo.21215386)
 - v1.17 DOI: [10.5281/zenodo.21205501](https://doi.org/10.5281/zenodo.21205501)
@@ -110,8 +111,8 @@ regenerated from the commands in the reproducibility guide.
 
 ```text
 Concha Estrada, M. A. (2026). ZUSE Automat Agent: Empirical Law Discovery in
-Elementary Cellular Automata (v1.19). Zenodo.
-https://doi.org/10.5281/zenodo.21220980
+Elementary Cellular Automata (v1.20). Zenodo.
+https://doi.org/10.5281/zenodo.21301212
 ```
 
 ## License
