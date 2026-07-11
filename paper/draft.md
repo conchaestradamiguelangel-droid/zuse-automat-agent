@@ -102,10 +102,12 @@ that the gradient is not caused by period, cone size, or active-support width
 alone: compact T=2 oscillators lack enough active support, an external
 `rule_109`/`T=10` witness reproduces the T=15 slope within 0.13%, and tested
 external families (`rule_54`, `rule_94`, `rule_133`) are flat at their natural
-periods. The current evidence therefore identifies the gradient as
-mechanism-dependent, robust in the tested `rule_73`/`rule_109`
-periodic-background family, without claiming universality over untested ECA
-families.
+periods. An additional family robustness test finds
+`ANF_GRADIENT_ISOLATED_WITNESS`: the strong non-T15 natural-period witness
+remains the `rule_109`/background `1011`/`T=10` case, while added T=6 family
+cases show the gradient only at the oversampled 12-step horizon. The current
+evidence therefore identifies the gradient as mechanism-dependent without
+claiming universality over untested ECA families.
 
 Every result is reproducible from deterministic scripts with no stochastic
 components in the discovery loop.
@@ -2006,12 +2008,45 @@ support reliability, slope, and `R^2`. The Fase 53 verdict is
 `ANF_GRADIENT_FAMILY_73_109`.
 
 **Interpretation.** The ANF gradient is not a consequence of period, cone
-size, or active-support width alone. It is mechanism-dependent. In the tested
-cases it appears robustly within the `rule_73`/`rule_109` periodic-background
-family, including a non-T15 `rule_109`/`T=10` witness, but not in compact T=2
-oscillators nor in the external families tested (`rule_54`, `rule_94`, and
-`rule_133`) at their natural periods. No claim is made about untested ECA
-families.
+size, or active-support width alone. It is mechanism-dependent. The confirmed
+non-T15 witness in this audit is the `rule_109`/background `1011`/`T=10`
+case, while compact T=2 oscillators and the external families tested
+(`rule_54`, `rule_94`, and `rule_133`) do not reproduce the T15-quality
+gradient at their natural periods. Section 7.27 tests whether this non-T15
+witness broadens across additional `rule_73`/`rule_109` family members. No
+claim is made about untested ECA families.
+
+### 7.27 Additional family robustness test for the ANF gradient (Fase 54)
+
+Fase 54 tests whether the non-T15 gradient witness from Section 7.26 is an
+isolated case or part of a broader natural-period law within the
+`rule_73`/`rule_109` periodic-background family. The test uses the same
+25-input bit-sliced Mobius ANF engine as Fases 52--53. The primary criterion is
+the natural-period horizon `T_WINDOW=T_local`; the common 12-step horizon is
+reported only as a secondary comparison.
+
+Three additional family witnesses are selected from the periodic-background
+catalog:
+
+- `rule_109`, background `1011`, `T_local=6`, IC `00001001`;
+- `rule_109`, background `1101`, `T_local=10`, IC `0001000`;
+- `rule_73`, background `0010`, `T_local=6`, IC `1100111`.
+
+At their natural periods, none reproduces the T15-quality gradient. The two
+`T=6` cases are essentially flat: `rule_109`/`1011` has slope `0.000026` and
+`R^2 = 0.604938`, while `rule_73`/`0010` has slope `-0.000027` and
+`R^2 = 0.604938`. The `rule_109`/`1101`/`T=10` case has a nonzero slope
+(`-0.209698`) but lower fit quality (`R^2 = 0.880488`) and a 31.76% deviation
+from the T15 reference slope, so it is not comparable to the T15 law.
+
+At the common 12-step horizon, two of the new cases do show T15-like slopes:
+`rule_109`/`1011`/`T=6` gives slope `-0.303174` with `R^2 = 0.999487`, and
+`rule_73`/`0010`/`T=6` gives slope `-0.320463` with `R^2 = 0.999687`. Because
+these gradients appear only after oversampling to the 12-step horizon, they are
+classified as horizon effects rather than natural-period witnesses. The Fase
+54 verdict is therefore `ANF_GRADIENT_ISOLATED_WITNESS`: the strong non-T15
+natural-period witness remains the `rule_109`/background `1011`/`T=10` case
+from Fase 52.
 
 ## 8. Observer Artifacts and Pipeline Equivariance
 
@@ -2451,9 +2486,11 @@ Several controlled extensions have now been completed:
   specificity outside the original T=15 set: compact T=2 baselines lack enough
   active support; `rule_109`/`T=10` reproduces the T=15 slope within 0.13%;
   and the external `rule_54`, `rule_94`, and `rule_133` families are flat at
-  their natural periods. The resulting claim is mechanism-dependence within
-  the tested `rule_73`/`rule_109` family, not universality. Full results are
-  in Sections 7.20-7.26.
+  their natural periods. Fase 54 then tests additional `rule_73`/`rule_109`
+  family witnesses and finds `ANF_GRADIENT_ISOLATED_WITNESS`: the strong
+  non-T15 natural-period witness remains the `rule_109`/background
+  `1011`/`T=10` case, while additional T=6 family cases show the gradient only
+  at the oversampled 12-step horizon. Full results are in Sections 7.20-7.27.
 
 Each extension is a controlled experiment with the same measurement protocol;
 only the IC or background definition changes.

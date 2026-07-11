@@ -213,10 +213,12 @@ that the gradient is not caused by period, cone size, or active-support width
 alone: compact T=2 oscillators lack enough active support, an external
 <code>rule_109</code>/<code>T=10</code> witness reproduces the T=15 slope within 0.13%, and tested
 external families (<code>rule_54</code>, <code>rule_94</code>, <code>rule_133</code>) are flat at their natural
-periods. The current evidence therefore identifies the gradient as
-mechanism-dependent, robust in the tested <code>rule_73</code>/<code>rule_109</code>
-periodic-background family, without claiming universality over untested ECA
-families.</p>
+periods. An additional family robustness test finds
+<code>ANF_GRADIENT_ISOLATED_WITNESS</code>: the strong non-T15 natural-period witness
+remains the <code>rule_109</code>/background <code>1011</code>/<code>T=10</code> case, while added T=6 family
+cases show the gradient only at the oversampled 12-step horizon. The current
+evidence therefore identifies the gradient as mechanism-dependent without
+claiming universality over untested ECA families.</p>
 <p>Every result is reproducible from deterministic scripts with no stochastic
 components in the discovery loop.</p>
 <h2>1. Introduction</h2>
@@ -2705,12 +2707,41 @@ nonzero slopes, but they do not reproduce the T=15-quality combination of
 support reliability, slope, and <code>R^2</code>. The Fase 53 verdict is
 <code>ANF_GRADIENT_FAMILY_73_109</code>.</p>
 <p><strong>Interpretation.</strong> The ANF gradient is not a consequence of period, cone
-size, or active-support width alone. It is mechanism-dependent. In the tested
-cases it appears robustly within the <code>rule_73</code>/<code>rule_109</code> periodic-background
-family, including a non-T15 <code>rule_109</code>/<code>T=10</code> witness, but not in compact T=2
-oscillators nor in the external families tested (<code>rule_54</code>, <code>rule_94</code>, and
-<code>rule_133</code>) at their natural periods. No claim is made about untested ECA
-families.</p>
+size, or active-support width alone. It is mechanism-dependent. The confirmed
+non-T15 witness in this audit is the <code>rule_109</code>/background <code>1011</code>/<code>T=10</code>
+case, while compact T=2 oscillators and the external families tested
+(<code>rule_54</code>, <code>rule_94</code>, and <code>rule_133</code>) do not reproduce the T15-quality
+gradient at their natural periods. Section 7.27 tests whether this non-T15
+witness broadens across additional <code>rule_73</code>/<code>rule_109</code> family members. No
+claim is made about untested ECA families.</p>
+<h3>7.27 Additional family robustness test for the ANF gradient (Fase 54)</h3>
+<p>Fase 54 tests whether the non-T15 gradient witness from Section 7.26 is an
+isolated case or part of a broader natural-period law within the
+<code>rule_73</code>/<code>rule_109</code> periodic-background family. The test uses the same
+25-input bit-sliced Mobius ANF engine as Fases 52--53. The primary criterion is
+the natural-period horizon <code>T_WINDOW=T_local</code>; the common 12-step horizon is
+reported only as a secondary comparison.</p>
+<p>Three additional family witnesses are selected from the periodic-background
+catalog:</p>
+<ul>
+<li><code>rule_109</code>, background <code>1011</code>, <code>T_local=6</code>, IC <code>00001001</code>;</li>
+<li><code>rule_109</code>, background <code>1101</code>, <code>T_local=10</code>, IC <code>0001000</code>;</li>
+<li><code>rule_73</code>, background <code>0010</code>, <code>T_local=6</code>, IC <code>1100111</code>.</li>
+</ul>
+<p>At their natural periods, none reproduces the T15-quality gradient. The two
+<code>T=6</code> cases are essentially flat: <code>rule_109</code>/<code>1011</code> has slope <code>0.000026</code> and
+<code>R^2 = 0.604938</code>, while <code>rule_73</code>/<code>0010</code> has slope <code>-0.000027</code> and
+<code>R^2 = 0.604938</code>. The <code>rule_109</code>/<code>1101</code>/<code>T=10</code> case has a nonzero slope
+(<code>-0.209698</code>) but lower fit quality (<code>R^2 = 0.880488</code>) and a 31.76% deviation
+from the T15 reference slope, so it is not comparable to the T15 law.</p>
+<p>At the common 12-step horizon, two of the new cases do show T15-like slopes:
+<code>rule_109</code>/<code>1011</code>/<code>T=6</code> gives slope <code>-0.303174</code> with <code>R^2 = 0.999487</code>, and
+<code>rule_73</code>/<code>0010</code>/<code>T=6</code> gives slope <code>-0.320463</code> with <code>R^2 = 0.999687</code>. Because
+these gradients appear only after oversampling to the 12-step horizon, they are
+classified as horizon effects rather than natural-period witnesses. The Fase
+54 verdict is therefore <code>ANF_GRADIENT_ISOLATED_WITNESS</code>: the strong non-T15
+natural-period witness remains the <code>rule_109</code>/background <code>1011</code>/<code>T=10</code> case
+from Fase 52.</p>
 <h2>8. Observer Artifacts and Pipeline Equivariance</h2>
 <p>The ZUSE pipeline contains two classes of observer artifact that the atlas
 identifies and characterizes. Framing these artifacts as results — not just
@@ -3151,9 +3182,11 @@ jumps to 94.90%. Fase 49 validates the gradient on external length-9/10
 specificity outside the original T=15 set: compact T=2 baselines lack enough
 active support; <code>rule_109</code>/<code>T=10</code> reproduces the T=15 slope within 0.13%;
 and the external <code>rule_54</code>, <code>rule_94</code>, and <code>rule_133</code> families are flat at
-their natural periods. The resulting claim is mechanism-dependence within
-the tested <code>rule_73</code>/<code>rule_109</code> family, not universality. Full results are
-in Sections 7.20-7.26.</li>
+their natural periods. Fase 54 then tests additional <code>rule_73</code>/<code>rule_109</code>
+family witnesses and finds <code>ANF_GRADIENT_ISOLATED_WITNESS</code>: the strong
+non-T15 natural-period witness remains the <code>rule_109</code>/background
+<code>1011</code>/<code>T=10</code> case, while additional T=6 family cases show the gradient only
+at the oversampled 12-step horizon. Full results are in Sections 7.20-7.27.</li>
 </ul>
 <p>Each extension is a controlled experiment with the same measurement protocol;
 only the IC or background definition changes.</p>
