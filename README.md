@@ -9,8 +9,9 @@ model participates in world selection, law evaluation, scoring, or acceptance.
 
 ## Preprint
 
-**Latest: v1.20** - ANF gradient specificity beyond T=15: mechanism-dependent within the tested rule_73/rule_109 family.
+**Latest: v1.21** - Fase 54 isolates the non-T15 ANF-gradient witness inside the tested rule_73/rule_109 family.
 
+- v1.21 DOI: [10.5281/zenodo.21306102](https://doi.org/10.5281/zenodo.21306102)
 - v1.20 DOI: [10.5281/zenodo.21301212](https://doi.org/10.5281/zenodo.21301212)
 - v1.19 DOI: [10.5281/zenodo.21220980](https://doi.org/10.5281/zenodo.21220980)
 - v1.18 DOI: [10.5281/zenodo.21215386](https://doi.org/10.5281/zenodo.21215386)
@@ -32,6 +33,8 @@ model participates in world selection, law evaluation, scoring, or acceptance.
 - v1.2 DOI: [10.5281/zenodo.20738025](https://doi.org/10.5281/zenodo.20738025)
 - v1.1 DOI: [10.5281/zenodo.20687470](https://doi.org/10.5281/zenodo.20687470)
 - v1.0 DOI: [10.5281/zenodo.20516375](https://doi.org/10.5281/zenodo.20516375)
+- v1.21 series DOI: [10.5281/zenodo.21306101](https://doi.org/10.5281/zenodo.21306101)
+- v1.20 series DOI: [10.5281/zenodo.21301211](https://doi.org/10.5281/zenodo.21301211)
 - v1.18 series DOI: [10.5281/zenodo.21215385](https://doi.org/10.5281/zenodo.21215385)
 - v1.17 series DOI: [10.5281/zenodo.21205500](https://doi.org/10.5281/zenodo.21205500)
 - v1.16 series DOI: [10.5281/zenodo.21144177](https://doi.org/10.5281/zenodo.21144177)
@@ -111,8 +114,8 @@ regenerated from the commands in the reproducibility guide.
 
 ```text
 Concha Estrada, M. A. (2026). ZUSE Automat Agent: Empirical Law Discovery in
-Elementary Cellular Automata (v1.20). Zenodo.
-https://doi.org/10.5281/zenodo.21301212
+Elementary Cellular Automata (v1.21). Zenodo.
+https://doi.org/10.5281/zenodo.21306102
 ```
 
 ## License
