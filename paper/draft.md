@@ -102,11 +102,13 @@ that the gradient is not caused by period, cone size, or active-support width
 alone: compact T=2 oscillators lack enough active support, an external
 `rule_109`/`T=10` witness reproduces the T=15 slope within 0.13%, and tested
 external families (`rule_54`, `rule_94`, `rule_133`) are flat at their natural
-periods. An additional family robustness test finds
-`ANF_GRADIENT_ISOLATED_WITNESS`: the strong non-T15 natural-period witness
-remains the `rule_109`/background `1011`/`T=10` case, while added T=6 family
-cases show the gradient only at the oversampled 12-step horizon. The current
-evidence therefore identifies the gradient as mechanism-dependent without
+periods. A targeted family robustness test first isolates the known non-T15
+witness, but a full catalog census then finds additional `rule_109` witnesses:
+two `T=12` cases are strong at their natural period, and two `T=8` cases are
+acceptable at the common 12-step horizon. No `rule_73` or external-family case
+becomes a natural-period or acceptable-horizon witness in the census. The
+current evidence therefore identifies the gradient as mechanism-dependent and
+specifically concentrated in `rule_109` within the tested catalog, without
 claiming universality over untested ECA families.
 
 Every result is reproducible from deterministic scripts with no stochastic
@@ -2044,9 +2046,73 @@ At the common 12-step horizon, two of the new cases do show T15-like slopes:
 `rule_73`/`0010`/`T=6` gives slope `-0.320463` with `R^2 = 0.999687`. Because
 these gradients appear only after oversampling to the 12-step horizon, they are
 classified as horizon effects rather than natural-period witnesses. The Fase
-54 verdict is therefore `ANF_GRADIENT_ISOLATED_WITNESS`: the strong non-T15
-natural-period witness remains the `rule_109`/background `1011`/`T=10` case
-from Fase 52.
+54 verdict is therefore `ANF_GRADIENT_ISOLATED_WITNESS` under this targeted
+three-case test: the strong non-T15 natural-period witness remains the
+`rule_109`/background `1011`/`T=10` case from Fase 52. Section 7.28 then
+replaces this local conclusion with a full catalog census.
+
+### 7.28 ANF gradient census across the periodic-background catalog (Fase 55)
+
+Fase 55 turns the targeted robustness question into a catalog-level census. The
+test scans all stationary periodic-background oscillator groups with
+`span >= 11`, excluding compact `T_local=2` baselines and the original
+`T_local=15` family. One IC is evaluated per `(rule, background, T_local)`
+group: groups already tested in Fases 52--54 keep their exact previous ICs as
+consistency baselines, while new groups use maximum span and then shortest word
+as the tie-breaker.
+
+The preflight census contains 66 groups across six rules:
+
+- period distribution `{3: 18, 4: 8, 6: 22, 8: 6, 10: 8, 12: 4}`;
+- rule distribution `{54: 4, 73: 17, 94: 12, 109: 17, 133: 12, 147: 4}`;
+- seven groups marked `already_tested=true`.
+
+The ANF engine performs 128 measurements, with zero packed/concrete
+discrepancies. The category counts are:
+
+| Category | Count |
+| --- | ---: |
+| `NATURAL_PERIOD_STRONG` | 2 |
+| `HORIZON_ACCEPTABLE` | 3 |
+| `HORIZON_ARTIFACT` | 20 |
+| `INSUFFICIENT_SUPPORT` | 3 |
+| `NEGATIVE` | 38 |
+
+Among previously untested cases, the census finds two
+`NATURAL_PERIOD_STRONG` witnesses, both in `rule_109`:
+
+| Case | Slope | R^2 | Delta vs T15 |
+| --- | ---: | ---: | ---: |
+| `rule_109`/background `0011`/`T=12`/IC `10010100` | -0.298274 | 0.998341 | 2.93% |
+| `rule_109`/background `1100`/`T=12`/IC `00101001` | -0.298274 | 0.998341 | 2.93% |
+
+Because these cases have `T_local=12`, their natural-period measurement and
+the common `T_WINDOW=12` measurement are the same run. They are valid
+natural-period witnesses, but they are not two independent confirmations across
+different horizons.
+
+The census also finds three `HORIZON_ACCEPTABLE` cases: the already-tested
+baseline `rule_109`/background `1011`/`T=10` and two new `rule_109`/`T=8`
+witnesses:
+
+| Case | Natural-period fit | Common-horizon fit |
+| --- | --- | --- |
+| `rule_109`/background `0110`/`T=8`/IC `0000011` | slope `-0.106802`, R^2 `0.617294` | slope `-0.298928`, R^2 `0.998276`, delta `2.72%` |
+| `rule_109`/background `1100`/`T=8`/IC `00000110` | slope `-0.106802`, R^2 `0.617294` | slope `-0.298928`, R^2 `0.998276`, delta `2.72%` |
+| `rule_109`/background `1011`/`T=10`/IC `00000001` | slope `-0.196127`, R^2 `0.922575` | slope `-0.307674`, R^2 `0.999349`, delta `0.13%` |
+
+The negative pattern is equally important. No `rule_73` case reaches
+`NATURAL_PERIOD_STRONG` or `HORIZON_ACCEPTABLE`. The external rules tested
+(`rule_54`, `rule_94`, `rule_133`, and `rule_147`) also produce no strong or
+acceptable witness. Many `T_local <= 6` cases are `HORIZON_ARTIFACT`: they
+develop T15-like slopes only after oversampling to the 12-step horizon, not at
+their natural period.
+
+The Fase 55 verdict is `NEW_NATURAL_PERIOD_WITNESS_FOUND`. This updates the
+interpretation from Sections 7.26--7.27: the ANF gradient is not merely an
+isolated non-T15 witness, but neither is it shared symmetrically by
+`rule_73`/`rule_109` as a family. In the censused catalog, the robust non-T15
+evidence is concentrated in `rule_109`.
 
 ## 8. Observer Artifacts and Pipeline Equivariance
 
@@ -2487,10 +2553,13 @@ Several controlled extensions have now been completed:
   active support; `rule_109`/`T=10` reproduces the T=15 slope within 0.13%;
   and the external `rule_54`, `rule_94`, and `rule_133` families are flat at
   their natural periods. Fase 54 then tests additional `rule_73`/`rule_109`
-  family witnesses and finds `ANF_GRADIENT_ISOLATED_WITNESS`: the strong
-  non-T15 natural-period witness remains the `rule_109`/background
-  `1011`/`T=10` case, while additional T=6 family cases show the gradient only
-  at the oversampled 12-step horizon. Full results are in Sections 7.20-7.27.
+  family witnesses and temporarily isolates the known `rule_109`/background
+  `1011`/`T=10` case. Fase 55 replaces that local conclusion with a full
+  catalog census: 66 non-T15 groups with `span >= 11`, 128 ANF measurements,
+  two new `rule_109`/`T=12` natural-period witnesses, and two new
+  `rule_109`/`T=8` acceptable-horizon witnesses. No `rule_73` or external-rule
+  case becomes a strong/acceptable witness. Full results are in Sections
+  7.20-7.28.
 
 Each extension is a controlled experiment with the same measurement protocol;
 only the IC or background definition changes.

@@ -213,11 +213,13 @@ that the gradient is not caused by period, cone size, or active-support width
 alone: compact T=2 oscillators lack enough active support, an external
 <code>rule_109</code>/<code>T=10</code> witness reproduces the T=15 slope within 0.13%, and tested
 external families (<code>rule_54</code>, <code>rule_94</code>, <code>rule_133</code>) are flat at their natural
-periods. An additional family robustness test finds
-<code>ANF_GRADIENT_ISOLATED_WITNESS</code>: the strong non-T15 natural-period witness
-remains the <code>rule_109</code>/background <code>1011</code>/<code>T=10</code> case, while added T=6 family
-cases show the gradient only at the oversampled 12-step horizon. The current
-evidence therefore identifies the gradient as mechanism-dependent without
+periods. A targeted family robustness test first isolates the known non-T15
+witness, but a full catalog census then finds additional <code>rule_109</code> witnesses:
+two <code>T=12</code> cases are strong at their natural period, and two <code>T=8</code> cases are
+acceptable at the common 12-step horizon. No <code>rule_73</code> or external-family case
+becomes a natural-period or acceptable-horizon witness in the census. The
+current evidence therefore identifies the gradient as mechanism-dependent and
+specifically concentrated in <code>rule_109</code> within the tested catalog, without
 claiming universality over untested ECA families.</p>
 <p>Every result is reproducible from deterministic scripts with no stochastic
 components in the discovery loop.</p>
@@ -2739,9 +2741,120 @@ from the T15 reference slope, so it is not comparable to the T15 law.</p>
 <code>rule_73</code>/<code>0010</code>/<code>T=6</code> gives slope <code>-0.320463</code> with <code>R^2 = 0.999687</code>. Because
 these gradients appear only after oversampling to the 12-step horizon, they are
 classified as horizon effects rather than natural-period witnesses. The Fase
-54 verdict is therefore <code>ANF_GRADIENT_ISOLATED_WITNESS</code>: the strong non-T15
-natural-period witness remains the <code>rule_109</code>/background <code>1011</code>/<code>T=10</code> case
-from Fase 52.</p>
+54 verdict is therefore <code>ANF_GRADIENT_ISOLATED_WITNESS</code> under this targeted
+three-case test: the strong non-T15 natural-period witness remains the
+<code>rule_109</code>/background <code>1011</code>/<code>T=10</code> case from Fase 52. Section 7.28 then
+replaces this local conclusion with a full catalog census.</p>
+<h3>7.28 ANF gradient census across the periodic-background catalog (Fase 55)</h3>
+<p>Fase 55 turns the targeted robustness question into a catalog-level census. The
+test scans all stationary periodic-background oscillator groups with
+<code>span &gt;= 11</code>, excluding compact <code>T_local=2</code> baselines and the original
+<code>T_local=15</code> family. One IC is evaluated per <code>(rule, background, T_local)</code>
+group: groups already tested in Fases 52--54 keep their exact previous ICs as
+consistency baselines, while new groups use maximum span and then shortest word
+as the tie-breaker.</p>
+<p>The preflight census contains 66 groups across six rules:</p>
+<ul>
+<li>period distribution <code>{3: 18, 4: 8, 6: 22, 8: 6, 10: 8, 12: 4}</code>;</li>
+<li>rule distribution <code>{54: 4, 73: 17, 94: 12, 109: 17, 133: 12, 147: 4}</code>;</li>
+<li>seven groups marked <code>already_tested=true</code>.</li>
+</ul>
+<p>The ANF engine performs 128 measurements, with zero packed/concrete
+discrepancies. The category counts are:</p>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th align="right">Count</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>NATURAL_PERIOD_STRONG</code></td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td><code>HORIZON_ACCEPTABLE</code></td>
+<td align="right">3</td>
+</tr>
+<tr>
+<td><code>HORIZON_ARTIFACT</code></td>
+<td align="right">20</td>
+</tr>
+<tr>
+<td><code>INSUFFICIENT_SUPPORT</code></td>
+<td align="right">3</td>
+</tr>
+<tr>
+<td><code>NEGATIVE</code></td>
+<td align="right">38</td>
+</tr>
+</tbody></table>
+<p>Among previously untested cases, the census finds two
+<code>NATURAL_PERIOD_STRONG</code> witnesses, both in <code>rule_109</code>:</p>
+<table>
+<thead>
+<tr>
+<th>Case</th>
+<th align="right">Slope</th>
+<th align="right">R^2</th>
+<th align="right">Delta vs T15</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>rule_109</code>/background <code>0011</code>/<code>T=12</code>/IC <code>10010100</code></td>
+<td align="right">-0.298274</td>
+<td align="right">0.998341</td>
+<td align="right">2.93%</td>
+</tr>
+<tr>
+<td><code>rule_109</code>/background <code>1100</code>/<code>T=12</code>/IC <code>00101001</code></td>
+<td align="right">-0.298274</td>
+<td align="right">0.998341</td>
+<td align="right">2.93%</td>
+</tr>
+</tbody></table>
+<p>Because these cases have <code>T_local=12</code>, their natural-period measurement and
+the common <code>T_WINDOW=12</code> measurement are the same run. They are valid
+natural-period witnesses, but they are not two independent confirmations across
+different horizons.</p>
+<p>The census also finds three <code>HORIZON_ACCEPTABLE</code> cases: the already-tested
+baseline <code>rule_109</code>/background <code>1011</code>/<code>T=10</code> and two new <code>rule_109</code>/<code>T=8</code>
+witnesses:</p>
+<table>
+<thead>
+<tr>
+<th>Case</th>
+<th>Natural-period fit</th>
+<th>Common-horizon fit</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>rule_109</code>/background <code>0110</code>/<code>T=8</code>/IC <code>0000011</code></td>
+<td>slope <code>-0.106802</code>, R^2 <code>0.617294</code></td>
+<td>slope <code>-0.298928</code>, R^2 <code>0.998276</code>, delta <code>2.72%</code></td>
+</tr>
+<tr>
+<td><code>rule_109</code>/background <code>1100</code>/<code>T=8</code>/IC <code>00000110</code></td>
+<td>slope <code>-0.106802</code>, R^2 <code>0.617294</code></td>
+<td>slope <code>-0.298928</code>, R^2 <code>0.998276</code>, delta <code>2.72%</code></td>
+</tr>
+<tr>
+<td><code>rule_109</code>/background <code>1011</code>/<code>T=10</code>/IC <code>00000001</code></td>
+<td>slope <code>-0.196127</code>, R^2 <code>0.922575</code></td>
+<td>slope <code>-0.307674</code>, R^2 <code>0.999349</code>, delta <code>0.13%</code></td>
+</tr>
+</tbody></table>
+<p>The negative pattern is equally important. No <code>rule_73</code> case reaches
+<code>NATURAL_PERIOD_STRONG</code> or <code>HORIZON_ACCEPTABLE</code>. The external rules tested
+(<code>rule_54</code>, <code>rule_94</code>, <code>rule_133</code>, and <code>rule_147</code>) also produce no strong or
+acceptable witness. Many <code>T_local &lt;= 6</code> cases are <code>HORIZON_ARTIFACT</code>: they
+develop T15-like slopes only after oversampling to the 12-step horizon, not at
+their natural period.</p>
+<p>The Fase 55 verdict is <code>NEW_NATURAL_PERIOD_WITNESS_FOUND</code>. This updates the
+interpretation from Sections 7.26--7.27: the ANF gradient is not merely an
+isolated non-T15 witness, but neither is it shared symmetrically by
+<code>rule_73</code>/<code>rule_109</code> as a family. In the censused catalog, the robust non-T15
+evidence is concentrated in <code>rule_109</code>.</p>
 <h2>8. Observer Artifacts and Pipeline Equivariance</h2>
 <p>The ZUSE pipeline contains two classes of observer artifact that the atlas
 identifies and characterizes. Framing these artifacts as results — not just
@@ -3183,10 +3296,13 @@ specificity outside the original T=15 set: compact T=2 baselines lack enough
 active support; <code>rule_109</code>/<code>T=10</code> reproduces the T=15 slope within 0.13%;
 and the external <code>rule_54</code>, <code>rule_94</code>, and <code>rule_133</code> families are flat at
 their natural periods. Fase 54 then tests additional <code>rule_73</code>/<code>rule_109</code>
-family witnesses and finds <code>ANF_GRADIENT_ISOLATED_WITNESS</code>: the strong
-non-T15 natural-period witness remains the <code>rule_109</code>/background
-<code>1011</code>/<code>T=10</code> case, while additional T=6 family cases show the gradient only
-at the oversampled 12-step horizon. Full results are in Sections 7.20-7.27.</li>
+family witnesses and temporarily isolates the known <code>rule_109</code>/background
+<code>1011</code>/<code>T=10</code> case. Fase 55 replaces that local conclusion with a full
+catalog census: 66 non-T15 groups with <code>span &gt;= 11</code>, 128 ANF measurements,
+two new <code>rule_109</code>/<code>T=12</code> natural-period witnesses, and two new
+<code>rule_109</code>/<code>T=8</code> acceptable-horizon witnesses. No <code>rule_73</code> or external-rule
+case becomes a strong/acceptable witness. Full results are in Sections
+7.20-7.28.</li>
 </ul>
 <p>Each extension is a controlled experiment with the same measurement protocol;
 only the IC or background definition changes.</p>
