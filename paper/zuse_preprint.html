@@ -220,7 +220,11 @@ acceptable at the common 12-step horizon. No <code>rule_73</code> or external-fa
 becomes a natural-period or acceptable-horizon witness in the census. The
 current evidence therefore identifies the gradient as mechanism-dependent and
 specifically concentrated in <code>rule_109</code> within the tested catalog, without
-claiming universality over untested ECA families.</p>
+claiming universality over untested ECA families. A structural audit then
+identifies a candidate explanation: the relevant background-orbit evidence is
+partial, but the rule-level ANF of <code>rule_109</code> is center-mediated (<code>LC</code>, <code>CR</code>,
+<code>LCR</code>) whereas <code>rule_73</code> has an isolated center term and an <code>LR</code> term without
+the center.</p>
 <p>Every result is reproducible from deterministic scripts with no stochastic
 components in the discovery loop.</p>
 <h2>1. Introduction</h2>
@@ -2855,6 +2859,89 @@ interpretation from Sections 7.26--7.27: the ANF gradient is not merely an
 isolated non-T15 witness, but neither is it shared symmetrically by
 <code>rule_73</code>/<code>rule_109</code> as a family. In the censused catalog, the robust non-T15
 evidence is concentrated in <code>rule_109</code>.</p>
+<h3>7.29 Structural audit of the <code>rule_109</code> concentration (Fase 56)</h3>
+<p>Fase 56 asks why the Fase 55 witnesses concentrate in <code>rule_109</code>. It does not
+run new ANF simulations; instead it audits the Fase 55 census by comparing
+background rotation/complement structure, the rule-level algebraic normal forms
+of <code>rule_73</code> and <code>rule_109</code>, and direct cross-rule cases on shared backgrounds.</p>
+<p>The resulting statuses are:</p>
+<ul>
+<li><code>orbit_symmetry_status = PARTIAL</code>;</li>
+<li><code>rule_anf_status = RULE109_CENTER_MEDIATED_CONFIRMED</code>;</li>
+<li><code>cross_rule_status = RULE109_SPECIFIC_ON_SHARED_BACKGROUNDS</code>;</li>
+<li><code>overall_status = RULE109_SYMMETRY_MECHANISM_CANDIDATE</code>.</li>
+</ul>
+<p>The cyclic-orbit evidence is informative but incomplete. Several positive
+<code>rule_109</code> witnesses belong to the rotation orbit of background <code>0011</code>, but the
+already-confirmed <code>rule_109</code>/background <code>1011</code>/<code>T=10</code> witness belongs to a
+different rotation orbit. Complement evidence is also partial: for example,
+backgrounds <code>0011</code> and <code>1100</code> are complementary and both are
+<code>NATURAL_PERIOD_STRONG</code> at <code>T=12</code>, while other complements are absent from the
+census or negative at the tested support threshold.</p>
+<p>The rule-level ANF contrast is exact:</p>
+<table>
+<thead>
+<tr>
+<th align="right">Rule</th>
+<th>ANF over <code>(L,C,R)</code></th>
+<th>Center alone?</th>
+<th><code>LR</code> without center?</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="right">73</td>
+<td><code>1 XOR L XOR C XOR R XOR LR XOR LCR</code></td>
+<td>yes</td>
+<td>yes</td>
+</tr>
+<tr>
+<td align="right">109</td>
+<td><code>1 XOR L XOR LC XOR R XOR CR XOR LCR</code></td>
+<td>no</td>
+<td>no</td>
+</tr>
+</tbody></table>
+<p>Thus, in <code>rule_109</code> the center cell contributes only through neighbor-mediated
+terms (<code>LC</code>, <code>CR</code>, <code>LCR</code>); there is no isolated center term and no <code>LR</code> term
+that bypasses the center. In <code>rule_73</code>, the center contributes directly through
+<code>C</code>, and the neighbors also interact through <code>LR</code> without the center. This is a
+deterministic algebraic distinction, not a statistical fit.</p>
+<p>The direct cross-rule comparisons are consistent with the rule-specific
+interpretation:</p>
+<table>
+<thead>
+<tr>
+<th><code>rule_109</code> positive case</th>
+<th>Matching <code>rule_73</code> case</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>bg=0011</code>/<code>T=12</code>/IC <code>10010100</code> -&gt; <code>NATURAL_PERIOD_STRONG</code></td>
+<td><code>bg=0011</code>/<code>T=12</code>/IC <code>10001010</code> -&gt; <code>NEGATIVE</code></td>
+</tr>
+<tr>
+<td><code>bg=0110</code>/<code>T=8</code>/IC <code>0000011</code> -&gt; <code>HORIZON_ACCEPTABLE</code></td>
+<td>absent from census</td>
+</tr>
+<tr>
+<td><code>bg=1011</code>/<code>T=10</code>/IC <code>00000001</code> -&gt; <code>HORIZON_ACCEPTABLE</code></td>
+<td>absent from census</td>
+</tr>
+<tr>
+<td><code>bg=1100</code>/<code>T=8</code>/IC <code>00000110</code> -&gt; <code>HORIZON_ACCEPTABLE</code></td>
+<td><code>bg=1100</code>/<code>T=8</code>/IC <code>0011111</code> -&gt; <code>NEGATIVE</code></td>
+</tr>
+<tr>
+<td><code>bg=1100</code>/<code>T=12</code>/IC <code>00101001</code> -&gt; <code>NATURAL_PERIOD_STRONG</code></td>
+<td><code>bg=1100</code>/<code>T=12</code>/IC <code>00000011</code> -&gt; <code>NEGATIVE</code></td>
+</tr>
+</tbody></table>
+<p>Fase 56 therefore identifies a mechanism candidate, not a closed proof.
+Background orbit structure matters, but it does not fully explain the witness
+set. The sharper invariant is the rule-level algebraic contrast: <code>rule_109</code>
+mediates center dependence through neighbor interactions, and the available
+cross-rule comparisons show that matching <code>rule_73</code> cases do not become
+positive witnesses.</p>
 <h2>8. Observer Artifacts and Pipeline Equivariance</h2>
 <p>The ZUSE pipeline contains two classes of observer artifact that the atlas
 identifies and characterizes. Framing these artifacts as results — not just
@@ -3301,8 +3388,10 @@ family witnesses and temporarily isolates the known <code>rule_109</code>/backgr
 catalog census: 66 non-T15 groups with <code>span &gt;= 11</code>, 128 ANF measurements,
 two new <code>rule_109</code>/<code>T=12</code> natural-period witnesses, and two new
 <code>rule_109</code>/<code>T=8</code> acceptable-horizon witnesses. No <code>rule_73</code> or external-rule
-case becomes a strong/acceptable witness. Full results are in Sections
-7.20-7.28.</li>
+case becomes a strong/acceptable witness. Fase 56 audits the structural cause:
+orbit symmetry is partial, but <code>rule_109</code> has a center-mediated local ANF
+(<code>LC</code>, <code>CR</code>, <code>LCR</code>) whereas <code>rule_73</code> has an isolated center term and an
+<code>LR</code> term without the center. Full results are in Sections 7.20-7.29.</li>
 </ul>
 <p>Each extension is a controlled experiment with the same measurement protocol;
 only the IC or background definition changes.</p>

@@ -109,7 +109,11 @@ acceptable at the common 12-step horizon. No `rule_73` or external-family case
 becomes a natural-period or acceptable-horizon witness in the census. The
 current evidence therefore identifies the gradient as mechanism-dependent and
 specifically concentrated in `rule_109` within the tested catalog, without
-claiming universality over untested ECA families.
+claiming universality over untested ECA families. A structural audit then
+identifies a candidate explanation: the relevant background-orbit evidence is
+partial, but the rule-level ANF of `rule_109` is center-mediated (`LC`, `CR`,
+`LCR`) whereas `rule_73` has an isolated center term and an `LR` term without
+the center.
 
 Every result is reproducible from deterministic scripts with no stochastic
 components in the discovery loop.
@@ -2114,6 +2118,59 @@ isolated non-T15 witness, but neither is it shared symmetrically by
 `rule_73`/`rule_109` as a family. In the censused catalog, the robust non-T15
 evidence is concentrated in `rule_109`.
 
+### 7.29 Structural audit of the `rule_109` concentration (Fase 56)
+
+Fase 56 asks why the Fase 55 witnesses concentrate in `rule_109`. It does not
+run new ANF simulations; instead it audits the Fase 55 census by comparing
+background rotation/complement structure, the rule-level algebraic normal forms
+of `rule_73` and `rule_109`, and direct cross-rule cases on shared backgrounds.
+
+The resulting statuses are:
+
+- `orbit_symmetry_status = PARTIAL`;
+- `rule_anf_status = RULE109_CENTER_MEDIATED_CONFIRMED`;
+- `cross_rule_status = RULE109_SPECIFIC_ON_SHARED_BACKGROUNDS`;
+- `overall_status = RULE109_SYMMETRY_MECHANISM_CANDIDATE`.
+
+The cyclic-orbit evidence is informative but incomplete. Several positive
+`rule_109` witnesses belong to the rotation orbit of background `0011`, but the
+already-confirmed `rule_109`/background `1011`/`T=10` witness belongs to a
+different rotation orbit. Complement evidence is also partial: for example,
+backgrounds `0011` and `1100` are complementary and both are
+`NATURAL_PERIOD_STRONG` at `T=12`, while other complements are absent from the
+census or negative at the tested support threshold.
+
+The rule-level ANF contrast is exact:
+
+| Rule | ANF over `(L,C,R)` | Center alone? | `LR` without center? |
+| ---: | --- | --- | --- |
+| 73 | `1 XOR L XOR C XOR R XOR LR XOR LCR` | yes | yes |
+| 109 | `1 XOR L XOR LC XOR R XOR CR XOR LCR` | no | no |
+
+Thus, in `rule_109` the center cell contributes only through neighbor-mediated
+terms (`LC`, `CR`, `LCR`); there is no isolated center term and no `LR` term
+that bypasses the center. In `rule_73`, the center contributes directly through
+`C`, and the neighbors also interact through `LR` without the center. This is a
+deterministic algebraic distinction, not a statistical fit.
+
+The direct cross-rule comparisons are consistent with the rule-specific
+interpretation:
+
+| `rule_109` positive case | Matching `rule_73` case |
+| --- | --- |
+| `bg=0011`/`T=12`/IC `10010100` -> `NATURAL_PERIOD_STRONG` | `bg=0011`/`T=12`/IC `10001010` -> `NEGATIVE` |
+| `bg=0110`/`T=8`/IC `0000011` -> `HORIZON_ACCEPTABLE` | absent from census |
+| `bg=1011`/`T=10`/IC `00000001` -> `HORIZON_ACCEPTABLE` | absent from census |
+| `bg=1100`/`T=8`/IC `00000110` -> `HORIZON_ACCEPTABLE` | `bg=1100`/`T=8`/IC `0011111` -> `NEGATIVE` |
+| `bg=1100`/`T=12`/IC `00101001` -> `NATURAL_PERIOD_STRONG` | `bg=1100`/`T=12`/IC `00000011` -> `NEGATIVE` |
+
+Fase 56 therefore identifies a mechanism candidate, not a closed proof.
+Background orbit structure matters, but it does not fully explain the witness
+set. The sharper invariant is the rule-level algebraic contrast: `rule_109`
+mediates center dependence through neighbor interactions, and the available
+cross-rule comparisons show that matching `rule_73` cases do not become
+positive witnesses.
+
 ## 8. Observer Artifacts and Pipeline Equivariance
 
 The ZUSE pipeline contains two classes of observer artifact that the atlas
@@ -2558,8 +2615,10 @@ Several controlled extensions have now been completed:
   catalog census: 66 non-T15 groups with `span >= 11`, 128 ANF measurements,
   two new `rule_109`/`T=12` natural-period witnesses, and two new
   `rule_109`/`T=8` acceptable-horizon witnesses. No `rule_73` or external-rule
-  case becomes a strong/acceptable witness. Full results are in Sections
-  7.20-7.28.
+  case becomes a strong/acceptable witness. Fase 56 audits the structural cause:
+  orbit symmetry is partial, but `rule_109` has a center-mediated local ANF
+  (`LC`, `CR`, `LCR`) whereas `rule_73` has an isolated center term and an
+  `LR` term without the center. Full results are in Sections 7.20-7.29.
 
 Each extension is a controlled experiment with the same measurement protocol;
 only the IC or background definition changes.
