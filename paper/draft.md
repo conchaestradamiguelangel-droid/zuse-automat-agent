@@ -125,7 +125,14 @@ incomplete: `T_local >= 8` or `12/T_local <= 1.5` captures all five positives,
 but admits four false positives, and no period/horizon-only rule separates the
 17 rule_109 cases perfectly. The residual includes `bg=0011/T=8`, which is
 negative despite sharing the same cyclic background orbit as positive
-`T=8` cases, pointing to IC/background alignment as the next causal layer.
+`T=8` cases, pointing to IC/background alignment as the next causal layer. An
+alignment audit resolves that residual locally: the two positive `T=8` cases
+use adjacent IC active bits with span 2, while the negative `T=8` case uses
+separated active bits with span 6. However, validation across all 17
+`rule_109` cases falsifies this as a compact global rule: `ic_span` overlaps
+between positive and non-positive cases, and the only perfect separator is the
+exact `ic_active_bits` pattern, which is a catalog lookup rather than a causal
+descriptor. The resulting status is `ALIGNMENT_LOOKUP_ONLY`.
 
 Every result is reproducible from deterministic scripts with no stochastic
 components in the discovery loop.
@@ -2284,6 +2291,54 @@ explained by the coarse background orbit class. Fase 58 therefore narrows the
 next causal layer to background phase, IC placement, or alignment inside the
 oscillator mechanism.
 
+### 7.32 IC/background alignment audit and validation (Fases 59--60)
+
+Fase 59 audits the residual left by Fase 58. The three `rule_109/T=8` cases
+share center mediation and the same period/horizon threshold (`T_local=8`,
+`12/T_local=1.5`), but split into one negative and two acceptable-horizon
+witnesses:
+
+| Background | Category | IC word | IC active bits | IC offsets mod 4 | `ic_span` |
+| --- | --- | --- | --- | --- | ---: |
+| `0011` | `NEGATIVE` | `1000010` | `(0, 5)` | `(0, 1)` | 6 |
+| `0110` | `HORIZON_ACCEPTABLE` | `0000011` | `(5, 6)` | `(1, 2)` | 2 |
+| `1100` | `HORIZON_ACCEPTABLE` | `00000110` | `(5, 6)` | `(1, 2)` | 2 |
+
+This gives a clean local discriminator. The two positive `T=8` cases use
+adjacent active IC bits at offsets `(1,2)` with span 2, while the negative
+case uses separated active bits at offsets `(0,1)` with span 6. The Fase 59
+status is therefore `ALIGNMENT_DISCRIMINANT_FOUND` for the `T=8` residual.
+
+Background-subtracted descriptors also carry signal. For the same three
+cases, `xor_defect`, `defect_phase_offset`, and defect weights separate the
+negative value from the positive values. However, the two positives do not
+share one identical defect value. These descriptors therefore provide partial
+alignment evidence, not an exact rule.
+
+Fase 60 then validates the Fase 59 discriminator against all 17 `rule_109`
+cases in the Fase 55 census. The local rule
+
+`ic_span == 2` and `ic_active_offsets_mod4 == (1,2)`
+
+is perfect on `T=8` alone (`TP=2`, `FP=0`, `TN=1`, `FN=0`, accuracy 1.000),
+but it captures only 2/5 positives across all `rule_109` cases (`TP=2`,
+`FP=0`, `TN=12`, `FN=3`, accuracy 0.824). In particular, `ic_span` is not a
+global discriminator: positive and non-positive cases both occur with
+`ic_span` values 1, 2, and 6.
+
+The only descriptor that perfectly separates the 17 catalog cases is the exact
+`ic_active_bits` tuple. This is useful as an audit result, but it is
+lookup-like: it identifies the selected IC word pattern rather than a compact
+causal rule. Fase 60 therefore assigns the status `ALIGNMENT_LOOKUP_ONLY`.
+
+The causal audit has reached the limit of static rule, period, background
+orbit, and IC-placement descriptors available in the catalog. The chain is now:
+center mediation is necessary but not sufficient; period/horizon is
+informative but incomplete; IC alignment explains the `T=8` residual locally
+but does not become a compact global condition. A stronger causal explanation
+would require dynamic alignment features or an intervention experiment rather
+than further static descriptors alone.
+
 ## 8. Observer Artifacts and Pipeline Equivariance
 
 The ZUSE pipeline contains two classes of observer artifact that the atlas
@@ -2739,8 +2794,11 @@ Several controlled extensions have now been completed:
   captures all positives but produces four false positives, while `T_local=12`
   has no false positives but captures only 2/5 positives. The residual
   `bg=0011/T=8` shows that period/horizon is only a partial discriminator and
-  points to background phase, IC placement, or alignment. Full results are in
-  Sections 7.20-7.31.
+  points to background phase, IC placement, or alignment. Fases 59--60 then
+  test that alignment layer: IC placement separates the three `T=8` cases, but
+  the rule does not generalize to all 17 `rule_109` cases, and the only perfect
+  separator is the lookup-like exact `ic_active_bits` pattern. Full results are
+  in Sections 7.20-7.32.
 
 Each extension is a controlled experiment with the same measurement protocol;
 only the IC or background definition changes.

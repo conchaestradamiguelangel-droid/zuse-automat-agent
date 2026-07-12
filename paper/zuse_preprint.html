@@ -236,7 +236,14 @@ incomplete: <code>T_local &gt;= 8</code> or <code>12/T_local &lt;= 1.5</code> ca
 but admits four false positives, and no period/horizon-only rule separates the
 17 rule_109 cases perfectly. The residual includes <code>bg=0011/T=8</code>, which is
 negative despite sharing the same cyclic background orbit as positive
-<code>T=8</code> cases, pointing to IC/background alignment as the next causal layer.</p>
+<code>T=8</code> cases, pointing to IC/background alignment as the next causal layer. An
+alignment audit resolves that residual locally: the two positive <code>T=8</code> cases
+use adjacent IC active bits with span 2, while the negative <code>T=8</code> case uses
+separated active bits with span 6. However, validation across all 17
+<code>rule_109</code> cases falsifies this as a compact global rule: <code>ic_span</code> overlaps
+between positive and non-positive cases, and the only perfect separator is the
+exact <code>ic_active_bits</code> pattern, which is a catalog lookup rather than a causal
+descriptor. The resulting status is <code>ALIGNMENT_LOOKUP_ONLY</code>.</p>
 <p>Every result is reproducible from deterministic scripts with no stochastic
 components in the discovery loop.</p>
 <h2>1. Introduction</h2>
@@ -3178,6 +3185,75 @@ backgrounds lie in the same cyclic rotation orbit, so the residual is not
 explained by the coarse background orbit class. Fase 58 therefore narrows the
 next causal layer to background phase, IC placement, or alignment inside the
 oscillator mechanism.</p>
+<h3>7.32 IC/background alignment audit and validation (Fases 59--60)</h3>
+<p>Fase 59 audits the residual left by Fase 58. The three <code>rule_109/T=8</code> cases
+share center mediation and the same period/horizon threshold (<code>T_local=8</code>,
+<code>12/T_local=1.5</code>), but split into one negative and two acceptable-horizon
+witnesses:</p>
+<table>
+<thead>
+<tr>
+<th>Background</th>
+<th>Category</th>
+<th>IC word</th>
+<th>IC active bits</th>
+<th>IC offsets mod 4</th>
+<th align="right"><code>ic_span</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>0011</code></td>
+<td><code>NEGATIVE</code></td>
+<td><code>1000010</code></td>
+<td><code>(0, 5)</code></td>
+<td><code>(0, 1)</code></td>
+<td align="right">6</td>
+</tr>
+<tr>
+<td><code>0110</code></td>
+<td><code>HORIZON_ACCEPTABLE</code></td>
+<td><code>0000011</code></td>
+<td><code>(5, 6)</code></td>
+<td><code>(1, 2)</code></td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td><code>1100</code></td>
+<td><code>HORIZON_ACCEPTABLE</code></td>
+<td><code>00000110</code></td>
+<td><code>(5, 6)</code></td>
+<td><code>(1, 2)</code></td>
+<td align="right">2</td>
+</tr>
+</tbody></table>
+<p>This gives a clean local discriminator. The two positive <code>T=8</code> cases use
+adjacent active IC bits at offsets <code>(1,2)</code> with span 2, while the negative
+case uses separated active bits at offsets <code>(0,1)</code> with span 6. The Fase 59
+status is therefore <code>ALIGNMENT_DISCRIMINANT_FOUND</code> for the <code>T=8</code> residual.</p>
+<p>Background-subtracted descriptors also carry signal. For the same three
+cases, <code>xor_defect</code>, <code>defect_phase_offset</code>, and defect weights separate the
+negative value from the positive values. However, the two positives do not
+share one identical defect value. These descriptors therefore provide partial
+alignment evidence, not an exact rule.</p>
+<p>Fase 60 then validates the Fase 59 discriminator against all 17 <code>rule_109</code>
+cases in the Fase 55 census. The local rule</p>
+<p><code>ic_span == 2</code> and <code>ic_active_offsets_mod4 == (1,2)</code></p>
+<p>is perfect on <code>T=8</code> alone (<code>TP=2</code>, <code>FP=0</code>, <code>TN=1</code>, <code>FN=0</code>, accuracy 1.000),
+but it captures only 2/5 positives across all <code>rule_109</code> cases (<code>TP=2</code>,
+<code>FP=0</code>, <code>TN=12</code>, <code>FN=3</code>, accuracy 0.824). In particular, <code>ic_span</code> is not a
+global discriminator: positive and non-positive cases both occur with
+<code>ic_span</code> values 1, 2, and 6.</p>
+<p>The only descriptor that perfectly separates the 17 catalog cases is the exact
+<code>ic_active_bits</code> tuple. This is useful as an audit result, but it is
+lookup-like: it identifies the selected IC word pattern rather than a compact
+causal rule. Fase 60 therefore assigns the status <code>ALIGNMENT_LOOKUP_ONLY</code>.</p>
+<p>The causal audit has reached the limit of static rule, period, background
+orbit, and IC-placement descriptors available in the catalog. The chain is now:
+center mediation is necessary but not sufficient; period/horizon is
+informative but incomplete; IC alignment explains the <code>T=8</code> residual locally
+but does not become a compact global condition. A stronger causal explanation
+would require dynamic alignment features or an intervention experiment rather
+than further static descriptors alone.</p>
 <h2>8. Observer Artifacts and Pipeline Equivariance</h2>
 <p>The ZUSE pipeline contains two classes of observer artifact that the atlas
 identifies and characterizes. Framing these artifacts as results — not just
@@ -3635,8 +3711,11 @@ next candidate condition, period/horizon, inside <code>rule_109</code>: <code>T_
 captures all positives but produces four false positives, while <code>T_local=12</code>
 has no false positives but captures only 2/5 positives. The residual
 <code>bg=0011/T=8</code> shows that period/horizon is only a partial discriminator and
-points to background phase, IC placement, or alignment. Full results are in
-Sections 7.20-7.31.</li>
+points to background phase, IC placement, or alignment. Fases 59--60 then
+test that alignment layer: IC placement separates the three <code>T=8</code> cases, but
+the rule does not generalize to all 17 <code>rule_109</code> cases, and the only perfect
+separator is the lookup-like exact <code>ic_active_bits</code> pattern. Full results are
+in Sections 7.20-7.32.</li>
 </ul>
 <p>Each extension is a controlled experiment with the same measurement protocol;
 only the IC or background definition changes.</p>
