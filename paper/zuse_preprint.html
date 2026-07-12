@@ -224,7 +224,13 @@ claiming universality over untested ECA families. A structural audit then
 identifies a candidate explanation: the relevant background-orbit evidence is
 partial, but the rule-level ANF of <code>rule_109</code> is center-mediated (<code>LC</code>, <code>CR</code>,
 <code>LCR</code>) whereas <code>rule_73</code> has an isolated center term and an <code>LR</code> term without
-the center.</p>
+the center. A catalog-level causality audit over the local ANF of all 256 ECA
+rules then upgrades this candidate from mere correlation to a necessary
+condition within the Fase 55 catalog: all 5 positive ANF-gradient witnesses are
+center-mediated, while no positive witness has <code>center_mediated=False</code>.
+However, the condition is not sufficient: 12 center-mediated catalog cases are
+non-positive. The resulting status is
+<code>CAUSAL_CANDIDATE_NECESSARY_NOT_SUFFICIENT</code>.</p>
 <p>Every result is reproducible from deterministic scripts with no stochastic
 components in the discovery loop.</p>
 <h2>1. Introduction</h2>
@@ -2942,6 +2948,95 @@ set. The sharper invariant is the rule-level algebraic contrast: <code>rule_109<
 mediates center dependence through neighbor interactions, and the available
 cross-rule comparisons show that matching <code>rule_73</code> cases do not become
 positive witnesses.</p>
+<h3>7.30 Center-mediated causality audit (Fase 57)</h3>
+<p>Fase 57 tests whether the center-mediated structure identified in Fase 56 is
+necessary and/or sufficient for the ANF-gradient witnesses found in the Fase 55
+catalog. It does not run new ECA or cone simulations. Instead, it computes the
+3-variable ANF of all 256 ECA rules and joins the resulting rule-level
+classification to the existing catalog census.</p>
+<p>The local-rule classification uses:</p>
+<ul>
+<li><code>C_alone</code>: the isolated <code>C</code> monomial appears;</li>
+<li><code>LR_no_center</code>: the <code>LR</code> monomial appears without the center;</li>
+<li><code>center_mediated</code>: <code>C_alone=False</code> and <code>LR_no_center=False</code>;</li>
+<li><code>strict_center_mediated</code>: <code>center_mediated=True</code> and at least one center
+interaction monomial exists.</li>
+</ul>
+<p>Across all 256 ECA rules, 64 rules satisfy <code>center_mediated=True</code>, and 56 of
+those are strict center-mediated rules. Within the Fase 55 catalog, the tested
+rules are <code>54</code>, <code>73</code>, <code>94</code>, <code>109</code>, <code>133</code>, and <code>147</code>. Only <code>rule_109</code> is
+center-mediated under the above definition.</p>
+<p>The catalog-level table is:</p>
+<table>
+<thead>
+<tr>
+<th align="right">Rule</th>
+<th>ANF over <code>(L,C,R)</code></th>
+<th>Center-mediated?</th>
+<th align="right">Cases</th>
+<th align="right">Positive witnesses</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="right">54</td>
+<td><code>L XOR C XOR R XOR LR</code></td>
+<td>no</td>
+<td align="right">4</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="right">73</td>
+<td><code>1 XOR L XOR C XOR R XOR LR XOR LCR</code></td>
+<td>no</td>
+<td align="right">17</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="right">94</td>
+<td><code>L XOR C XOR LC XOR R XOR CR XOR LCR</code></td>
+<td>no</td>
+<td align="right">12</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="right">109</td>
+<td><code>1 XOR L XOR LC XOR R XOR CR XOR LCR</code></td>
+<td>yes</td>
+<td align="right">17</td>
+<td align="right">5</td>
+</tr>
+<tr>
+<td align="right">133</td>
+<td><code>1 XOR L XOR R XOR LR XOR LCR</code></td>
+<td>no</td>
+<td align="right">12</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="right">147</td>
+<td><code>1 XOR C XOR LR</code></td>
+<td>no</td>
+<td align="right">4</td>
+<td align="right">0</td>
+</tr>
+</tbody></table>
+<p>The necessity test is clean: the catalog contains 5 positive witnesses
+(<code>NATURAL_PERIOD_STRONG</code> or <code>HORIZON_ACCEPTABLE</code>), and 0/5 occur in rules with
+<code>center_mediated=False</code>. Thus center mediation is necessary for the observed
+positive witnesses inside the Fase 55 catalog.</p>
+<p>The sufficiency test fails: the catalog contains 12 non-positive
+center-mediated cases, all within <code>rule_109</code>. These include negative
+low-period cases such as <code>rule_109/bg=0011/T=3</code>, <code>rule_109/bg=0011/T=6</code>,
+<code>rule_109/bg=0110/T=3</code>, and <code>rule_109/bg=1100/T=6</code>, as well as horizon-artifact
+cases such as <code>rule_109/bg=1011/T=6</code> and <code>rule_109/bg=1101/T=6</code>.</p>
+<p>The resulting status is
+<code>CAUSAL_CANDIDATE_NECESSARY_NOT_SUFFICIENT</code>. The Fase 56 candidate therefore
+survives as a necessary structural condition within the catalog, but not as a
+complete causal explanation. The next discriminant is not rule-level center
+mediation alone, but center mediation plus period/horizon structure. A closed
+causal proof would require an intervention step, such as constructing synthetic
+rules or rule variants that preserve or break the center-mediated terms while
+holding the catalog protocol fixed.</p>
 <h2>8. Observer Artifacts and Pipeline Equivariance</h2>
 <p>The ZUSE pipeline contains two classes of observer artifact that the atlas
 identifies and characterizes. Framing these artifacts as results — not just
@@ -3391,7 +3486,11 @@ two new <code>rule_109</code>/<code>T=12</code> natural-period witnesses, and tw
 case becomes a strong/acceptable witness. Fase 56 audits the structural cause:
 orbit symmetry is partial, but <code>rule_109</code> has a center-mediated local ANF
 (<code>LC</code>, <code>CR</code>, <code>LCR</code>) whereas <code>rule_73</code> has an isolated center term and an
-<code>LR</code> term without the center. Full results are in Sections 7.20-7.29.</li>
+<code>LR</code> term without the center. Fase 57 then tests this candidate against the
+full catalog: center mediation is necessary for the 5 positive witnesses
+(0/5 positives have <code>center_mediated=False</code>), but not sufficient, because 12
+center-mediated <code>rule_109</code> catalog cases are non-positive. Full results are
+in Sections 7.20-7.30.</li>
 </ul>
 <p>Each extension is a controlled experiment with the same measurement protocol;
 only the IC or background definition changes.</p>

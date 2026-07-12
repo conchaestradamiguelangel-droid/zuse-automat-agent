@@ -113,7 +113,13 @@ claiming universality over untested ECA families. A structural audit then
 identifies a candidate explanation: the relevant background-orbit evidence is
 partial, but the rule-level ANF of `rule_109` is center-mediated (`LC`, `CR`,
 `LCR`) whereas `rule_73` has an isolated center term and an `LR` term without
-the center.
+the center. A catalog-level causality audit over the local ANF of all 256 ECA
+rules then upgrades this candidate from mere correlation to a necessary
+condition within the Fase 55 catalog: all 5 positive ANF-gradient witnesses are
+center-mediated, while no positive witness has `center_mediated=False`.
+However, the condition is not sufficient: 12 center-mediated catalog cases are
+non-positive. The resulting status is
+`CAUSAL_CANDIDATE_NECESSARY_NOT_SUFFICIENT`.
 
 Every result is reproducible from deterministic scripts with no stochastic
 components in the discovery loop.
@@ -2171,6 +2177,58 @@ mediates center dependence through neighbor interactions, and the available
 cross-rule comparisons show that matching `rule_73` cases do not become
 positive witnesses.
 
+### 7.30 Center-mediated causality audit (Fase 57)
+
+Fase 57 tests whether the center-mediated structure identified in Fase 56 is
+necessary and/or sufficient for the ANF-gradient witnesses found in the Fase 55
+catalog. It does not run new ECA or cone simulations. Instead, it computes the
+3-variable ANF of all 256 ECA rules and joins the resulting rule-level
+classification to the existing catalog census.
+
+The local-rule classification uses:
+
+- `C_alone`: the isolated `C` monomial appears;
+- `LR_no_center`: the `LR` monomial appears without the center;
+- `center_mediated`: `C_alone=False` and `LR_no_center=False`;
+- `strict_center_mediated`: `center_mediated=True` and at least one center
+  interaction monomial exists.
+
+Across all 256 ECA rules, 64 rules satisfy `center_mediated=True`, and 56 of
+those are strict center-mediated rules. Within the Fase 55 catalog, the tested
+rules are `54`, `73`, `94`, `109`, `133`, and `147`. Only `rule_109` is
+center-mediated under the above definition.
+
+The catalog-level table is:
+
+| Rule | ANF over `(L,C,R)` | Center-mediated? | Cases | Positive witnesses |
+| ---: | --- | --- | ---: | ---: |
+| 54 | `L XOR C XOR R XOR LR` | no | 4 | 0 |
+| 73 | `1 XOR L XOR C XOR R XOR LR XOR LCR` | no | 17 | 0 |
+| 94 | `L XOR C XOR LC XOR R XOR CR XOR LCR` | no | 12 | 0 |
+| 109 | `1 XOR L XOR LC XOR R XOR CR XOR LCR` | yes | 17 | 5 |
+| 133 | `1 XOR L XOR R XOR LR XOR LCR` | no | 12 | 0 |
+| 147 | `1 XOR C XOR LR` | no | 4 | 0 |
+
+The necessity test is clean: the catalog contains 5 positive witnesses
+(`NATURAL_PERIOD_STRONG` or `HORIZON_ACCEPTABLE`), and 0/5 occur in rules with
+`center_mediated=False`. Thus center mediation is necessary for the observed
+positive witnesses inside the Fase 55 catalog.
+
+The sufficiency test fails: the catalog contains 12 non-positive
+center-mediated cases, all within `rule_109`. These include negative
+low-period cases such as `rule_109/bg=0011/T=3`, `rule_109/bg=0011/T=6`,
+`rule_109/bg=0110/T=3`, and `rule_109/bg=1100/T=6`, as well as horizon-artifact
+cases such as `rule_109/bg=1011/T=6` and `rule_109/bg=1101/T=6`.
+
+The resulting status is
+`CAUSAL_CANDIDATE_NECESSARY_NOT_SUFFICIENT`. The Fase 56 candidate therefore
+survives as a necessary structural condition within the catalog, but not as a
+complete causal explanation. The next discriminant is not rule-level center
+mediation alone, but center mediation plus period/horizon structure. A closed
+causal proof would require an intervention step, such as constructing synthetic
+rules or rule variants that preserve or break the center-mediated terms while
+holding the catalog protocol fixed.
+
 ## 8. Observer Artifacts and Pipeline Equivariance
 
 The ZUSE pipeline contains two classes of observer artifact that the atlas
@@ -2618,7 +2676,11 @@ Several controlled extensions have now been completed:
   case becomes a strong/acceptable witness. Fase 56 audits the structural cause:
   orbit symmetry is partial, but `rule_109` has a center-mediated local ANF
   (`LC`, `CR`, `LCR`) whereas `rule_73` has an isolated center term and an
-  `LR` term without the center. Full results are in Sections 7.20-7.29.
+  `LR` term without the center. Fase 57 then tests this candidate against the
+  full catalog: center mediation is necessary for the 5 positive witnesses
+  (0/5 positives have `center_mediated=False`), but not sufficient, because 12
+  center-mediated `rule_109` catalog cases are non-positive. Full results are
+  in Sections 7.20-7.30.
 
 Each extension is a controlled experiment with the same measurement protocol;
 only the IC or background definition changes.
