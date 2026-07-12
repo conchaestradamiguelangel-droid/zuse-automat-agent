@@ -1,0 +1,57 @@
+{
+  "case_count": 17,
+  "methodological_limit": "This phase only tests the minimal union suggested by Fase 61. It is not a search over arbitrary dynamic combinations.",
+  "non_positive_count": 12,
+  "positive_count": 5,
+  "residual_positive": [
+    "bg=1100/T=8/word=00000110"
+  ],
+  "source": "rule109_dynamic_alignment_results.json",
+  "status": "DYNAMIC_UNION_PARTIAL",
+  "tests": {
+    "minimal_union": {
+      "confusion": {
+        "accuracy": 0.9411764705882353,
+        "false_negatives": [
+          "bg=1100/T=8/word=00000110"
+        ],
+        "false_positives": [],
+        "fn": 1,
+        "fp": 0,
+        "precision": 1.0,
+        "recall": 0.8,
+        "tn": 12,
+        "tp": 4,
+        "true_positives": [
+          "bg=0011/T=12/word=10010100",
+          "bg=0110/T=8/word=0000011",
+          "bg=1011/T=10/word=00000001",
+          "bg=1100/T=12/word=00101001"
+        ]
+      },
+      "rule": "size_growth_total <= -3 OR center_drift_abs <= 0.0"
+    },
+    "union_plus_max_defect_size": {
+      "confusion": {
+        "accuracy": 0.9411764705882353,
+        "false_negatives": [
+          "bg=1100/T=8/word=00000110"
+        ],
+        "false_positives": [],
+        "fn": 1,
+        "fp": 0,
+        "precision": 1.0,
+        "recall": 0.8,
+        "tn": 12,
+        "tp": 4,
+        "true_positives": [
+          "bg=0011/T=12/word=10010100",
+          "bg=0110/T=8/word=0000011",
+          "bg=1011/T=10/word=00000001",
+          "bg=1100/T=12/word=00101001"
+        ]
+      },
+      "rule": "size_growth_total <= -3 OR center_drift_abs <= 0.0 OR max_defect_size >= 12"
+    }
+  }
+}
