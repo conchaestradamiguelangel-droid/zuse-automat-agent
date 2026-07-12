@@ -9,8 +9,9 @@ model participates in world selection, law evaluation, scoring, or acceptance.
 
 ## Preprint
 
-**Latest: v1.26** - Fases 59-60 show IC alignment explains the T=8 residual locally but does not generalize as a compact causal rule.
+**Latest: v1.27** - Fases 61-62 show dynamic alignment gives a high-precision partial discriminator for the `rule_109` ANF-gradient residual, leaving `bg=1100/T=8` as the intervention target.
 
+- v1.27 DOI: [10.5281/zenodo.21328117](https://doi.org/10.5281/zenodo.21328117)
 - v1.26 DOI: [10.5281/zenodo.21327839](https://doi.org/10.5281/zenodo.21327839)
 - v1.25 DOI: [10.5281/zenodo.21327600](https://doi.org/10.5281/zenodo.21327600)
 - v1.24 DOI: [10.5281/zenodo.21327353](https://doi.org/10.5281/zenodo.21327353)
@@ -38,6 +39,7 @@ model participates in world selection, law evaluation, scoring, or acceptance.
 - v1.2 DOI: [10.5281/zenodo.20738025](https://doi.org/10.5281/zenodo.20738025)
 - v1.1 DOI: [10.5281/zenodo.20687470](https://doi.org/10.5281/zenodo.20687470)
 - v1.0 DOI: [10.5281/zenodo.20516375](https://doi.org/10.5281/zenodo.20516375)
+- v1.27 series DOI: [10.5281/zenodo.21328116](https://doi.org/10.5281/zenodo.21328116)
 - v1.26 series DOI: [10.5281/zenodo.21327838](https://doi.org/10.5281/zenodo.21327838)
 - v1.25 series DOI: [10.5281/zenodo.21327599](https://doi.org/10.5281/zenodo.21327599)
 - v1.24 series DOI: [10.5281/zenodo.21327352](https://doi.org/10.5281/zenodo.21327352)
@@ -124,8 +126,8 @@ regenerated from the commands in the reproducibility guide.
 
 ```text
 Concha Estrada, M. A. (2026). ZUSE Automat Agent: Empirical Law Discovery in
-Elementary Cellular Automata (v1.26). Zenodo.
-https://doi.org/10.5281/zenodo.21327839
+Elementary Cellular Automata (v1.27). Zenodo.
+https://doi.org/10.5281/zenodo.21328117
 ```
 
 ## License
