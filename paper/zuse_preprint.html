@@ -230,7 +230,13 @@ condition within the Fase 55 catalog: all 5 positive ANF-gradient witnesses are
 center-mediated, while no positive witness has <code>center_mediated=False</code>.
 However, the condition is not sufficient: 12 center-mediated catalog cases are
 non-positive. The resulting status is
-<code>CAUSAL_CANDIDATE_NECESSARY_NOT_SUFFICIENT</code>.</p>
+<code>CAUSAL_CANDIDATE_NECESSARY_NOT_SUFFICIENT</code>. A final rule_109-only
+period/horizon audit shows that this second layer is informative but still
+incomplete: <code>T_local &gt;= 8</code> or <code>12/T_local &lt;= 1.5</code> captures all five positives,
+but admits four false positives, and no period/horizon-only rule separates the
+17 rule_109 cases perfectly. The residual includes <code>bg=0011/T=8</code>, which is
+negative despite sharing the same cyclic background orbit as positive
+<code>T=8</code> cases, pointing to IC/background alignment as the next causal layer.</p>
 <p>Every result is reproducible from deterministic scripts with no stochastic
 components in the discovery loop.</p>
 <h2>1. Introduction</h2>
@@ -3037,6 +3043,141 @@ mediation alone, but center mediation plus period/horizon structure. A closed
 causal proof would require an intervention step, such as constructing synthetic
 rules or rule variants that preserve or break the center-mediated terms while
 holding the catalog protocol fixed.</p>
+<h3>7.31 Period/horizon audit within <code>rule_109</code> (Fase 58)</h3>
+<p>Fase 58 asks whether the missing second condition from Fase 57 is simply the
+period/horizon relation. The analysis restricts the Fase 55 census to the 17
+<code>rule_109</code> cases, all of which share the center-mediated local ANF structure,
+and tests whether <code>T_local</code>, the common horizon <code>T_WINDOW=12</code>, or the
+oversampling ratio <code>12/T_local</code> separates the 5 positive witnesses from the 12
+non-positive cases. No new ECA or ANF simulation is run.</p>
+<p>The <code>rule_109</code> case distribution is:</p>
+<table>
+<thead>
+<tr>
+<th>Background</th>
+<th align="right"><code>T_local</code></th>
+<th align="right"><code>12/T_local</code></th>
+<th>Category</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>0011</code></td>
+<td align="right">3</td>
+<td align="right">4.000</td>
+<td><code>NEGATIVE</code></td>
+</tr>
+<tr>
+<td><code>0011</code></td>
+<td align="right">6</td>
+<td align="right">2.000</td>
+<td><code>NEGATIVE</code></td>
+</tr>
+<tr>
+<td><code>0011</code></td>
+<td align="right">8</td>
+<td align="right">1.500</td>
+<td><code>NEGATIVE</code></td>
+</tr>
+<tr>
+<td><code>0011</code></td>
+<td align="right">10</td>
+<td align="right">1.200</td>
+<td><code>NEGATIVE</code></td>
+</tr>
+<tr>
+<td><code>0011</code></td>
+<td align="right">12</td>
+<td align="right">1.000</td>
+<td><code>NATURAL_PERIOD_STRONG</code></td>
+</tr>
+<tr>
+<td><code>0110</code></td>
+<td align="right">3</td>
+<td align="right">4.000</td>
+<td><code>NEGATIVE</code></td>
+</tr>
+<tr>
+<td><code>0110</code></td>
+<td align="right">6</td>
+<td align="right">2.000</td>
+<td><code>NEGATIVE</code></td>
+</tr>
+<tr>
+<td><code>0110</code></td>
+<td align="right">8</td>
+<td align="right">1.500</td>
+<td><code>HORIZON_ACCEPTABLE</code></td>
+</tr>
+<tr>
+<td><code>1011</code></td>
+<td align="right">6</td>
+<td align="right">2.000</td>
+<td><code>HORIZON_ARTIFACT</code></td>
+</tr>
+<tr>
+<td><code>1011</code></td>
+<td align="right">10</td>
+<td align="right">1.200</td>
+<td><code>HORIZON_ACCEPTABLE</code></td>
+</tr>
+<tr>
+<td><code>1100</code></td>
+<td align="right">3</td>
+<td align="right">4.000</td>
+<td><code>NEGATIVE</code></td>
+</tr>
+<tr>
+<td><code>1100</code></td>
+<td align="right">6</td>
+<td align="right">2.000</td>
+<td><code>NEGATIVE</code></td>
+</tr>
+<tr>
+<td><code>1100</code></td>
+<td align="right">8</td>
+<td align="right">1.500</td>
+<td><code>HORIZON_ACCEPTABLE</code></td>
+</tr>
+<tr>
+<td><code>1100</code></td>
+<td align="right">10</td>
+<td align="right">1.200</td>
+<td><code>NEGATIVE</code></td>
+</tr>
+<tr>
+<td><code>1100</code></td>
+<td align="right">12</td>
+<td align="right">1.000</td>
+<td><code>NATURAL_PERIOD_STRONG</code></td>
+</tr>
+<tr>
+<td><code>1101</code></td>
+<td align="right">6</td>
+<td align="right">2.000</td>
+<td><code>HORIZON_ARTIFACT</code></td>
+</tr>
+<tr>
+<td><code>1101</code></td>
+<td align="right">10</td>
+<td align="right">1.200</td>
+<td><code>NEGATIVE</code></td>
+</tr>
+</tbody></table>
+<p>Period and horizon are informative. The cleanest high-precision rule,
+<code>T_local == 12</code> (equivalently <code>12/T_local == 1</code>), has no false positives but
+captures only 2/5 positives. Conversely, <code>T_local &gt;= 8</code> (equivalently
+<code>12/T_local &lt;= 1.5</code>) captures all 5 positives but also admits 4 false
+positives: <code>bg=0011/T=8</code>, <code>bg=0011/T=10</code>, <code>bg=1100/T=10</code>, and
+<code>bg=1101/T=10</code>.</p>
+<p>Thus, no period/horizon-only rule separates the 17 <code>rule_109</code> cases perfectly.
+The resulting status is <code>PERIOD_HORIZON_PARTIAL_DISCRIMINANT</code>.</p>
+<p>The key residual is <code>rule_109/bg=0011/T=8</code>: it satisfies the horizon threshold
+<code>T_local &gt;= 8</code> and <code>12/T_local &lt;= 1.5</code>, yet remains <code>NEGATIVE</code>, whereas
+<code>bg=0110/T=8</code> and <code>bg=1100/T=8</code> are <code>HORIZON_ACCEPTABLE</code>. These three
+backgrounds lie in the same cyclic rotation orbit, so the residual is not
+explained by the coarse background orbit class. Fase 58 therefore narrows the
+next causal layer to background phase, IC placement, or alignment inside the
+oscillator mechanism.</p>
 <h2>8. Observer Artifacts and Pipeline Equivariance</h2>
 <p>The ZUSE pipeline contains two classes of observer artifact that the atlas
 identifies and characterizes. Framing these artifacts as results — not just
@@ -3489,8 +3630,13 @@ orbit symmetry is partial, but <code>rule_109</code> has a center-mediated local
 <code>LR</code> term without the center. Fase 57 then tests this candidate against the
 full catalog: center mediation is necessary for the 5 positive witnesses
 (0/5 positives have <code>center_mediated=False</code>), but not sufficient, because 12
-center-mediated <code>rule_109</code> catalog cases are non-positive. Full results are
-in Sections 7.20-7.30.</li>
+center-mediated <code>rule_109</code> catalog cases are non-positive. Fase 58 tests the
+next candidate condition, period/horizon, inside <code>rule_109</code>: <code>T_local &gt;= 8</code>
+captures all positives but produces four false positives, while <code>T_local=12</code>
+has no false positives but captures only 2/5 positives. The residual
+<code>bg=0011/T=8</code> shows that period/horizon is only a partial discriminator and
+points to background phase, IC placement, or alignment. Full results are in
+Sections 7.20-7.31.</li>
 </ul>
 <p>Each extension is a controlled experiment with the same measurement protocol;
 only the IC or background definition changes.</p>

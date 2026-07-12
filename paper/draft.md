@@ -119,7 +119,13 @@ condition within the Fase 55 catalog: all 5 positive ANF-gradient witnesses are
 center-mediated, while no positive witness has `center_mediated=False`.
 However, the condition is not sufficient: 12 center-mediated catalog cases are
 non-positive. The resulting status is
-`CAUSAL_CANDIDATE_NECESSARY_NOT_SUFFICIENT`.
+`CAUSAL_CANDIDATE_NECESSARY_NOT_SUFFICIENT`. A final rule_109-only
+period/horizon audit shows that this second layer is informative but still
+incomplete: `T_local >= 8` or `12/T_local <= 1.5` captures all five positives,
+but admits four false positives, and no period/horizon-only rule separates the
+17 rule_109 cases perfectly. The residual includes `bg=0011/T=8`, which is
+negative despite sharing the same cyclic background orbit as positive
+`T=8` cases, pointing to IC/background alignment as the next causal layer.
 
 Every result is reproducible from deterministic scripts with no stochastic
 components in the discovery loop.
@@ -2229,6 +2235,55 @@ causal proof would require an intervention step, such as constructing synthetic
 rules or rule variants that preserve or break the center-mediated terms while
 holding the catalog protocol fixed.
 
+### 7.31 Period/horizon audit within `rule_109` (Fase 58)
+
+Fase 58 asks whether the missing second condition from Fase 57 is simply the
+period/horizon relation. The analysis restricts the Fase 55 census to the 17
+`rule_109` cases, all of which share the center-mediated local ANF structure,
+and tests whether `T_local`, the common horizon `T_WINDOW=12`, or the
+oversampling ratio `12/T_local` separates the 5 positive witnesses from the 12
+non-positive cases. No new ECA or ANF simulation is run.
+
+The `rule_109` case distribution is:
+
+| Background | `T_local` | `12/T_local` | Category |
+| --- | ---: | ---: | --- |
+| `0011` | 3 | 4.000 | `NEGATIVE` |
+| `0011` | 6 | 2.000 | `NEGATIVE` |
+| `0011` | 8 | 1.500 | `NEGATIVE` |
+| `0011` | 10 | 1.200 | `NEGATIVE` |
+| `0011` | 12 | 1.000 | `NATURAL_PERIOD_STRONG` |
+| `0110` | 3 | 4.000 | `NEGATIVE` |
+| `0110` | 6 | 2.000 | `NEGATIVE` |
+| `0110` | 8 | 1.500 | `HORIZON_ACCEPTABLE` |
+| `1011` | 6 | 2.000 | `HORIZON_ARTIFACT` |
+| `1011` | 10 | 1.200 | `HORIZON_ACCEPTABLE` |
+| `1100` | 3 | 4.000 | `NEGATIVE` |
+| `1100` | 6 | 2.000 | `NEGATIVE` |
+| `1100` | 8 | 1.500 | `HORIZON_ACCEPTABLE` |
+| `1100` | 10 | 1.200 | `NEGATIVE` |
+| `1100` | 12 | 1.000 | `NATURAL_PERIOD_STRONG` |
+| `1101` | 6 | 2.000 | `HORIZON_ARTIFACT` |
+| `1101` | 10 | 1.200 | `NEGATIVE` |
+
+Period and horizon are informative. The cleanest high-precision rule,
+`T_local == 12` (equivalently `12/T_local == 1`), has no false positives but
+captures only 2/5 positives. Conversely, `T_local >= 8` (equivalently
+`12/T_local <= 1.5`) captures all 5 positives but also admits 4 false
+positives: `bg=0011/T=8`, `bg=0011/T=10`, `bg=1100/T=10`, and
+`bg=1101/T=10`.
+
+Thus, no period/horizon-only rule separates the 17 `rule_109` cases perfectly.
+The resulting status is `PERIOD_HORIZON_PARTIAL_DISCRIMINANT`.
+
+The key residual is `rule_109/bg=0011/T=8`: it satisfies the horizon threshold
+`T_local >= 8` and `12/T_local <= 1.5`, yet remains `NEGATIVE`, whereas
+`bg=0110/T=8` and `bg=1100/T=8` are `HORIZON_ACCEPTABLE`. These three
+backgrounds lie in the same cyclic rotation orbit, so the residual is not
+explained by the coarse background orbit class. Fase 58 therefore narrows the
+next causal layer to background phase, IC placement, or alignment inside the
+oscillator mechanism.
+
 ## 8. Observer Artifacts and Pipeline Equivariance
 
 The ZUSE pipeline contains two classes of observer artifact that the atlas
@@ -2679,8 +2734,13 @@ Several controlled extensions have now been completed:
   `LR` term without the center. Fase 57 then tests this candidate against the
   full catalog: center mediation is necessary for the 5 positive witnesses
   (0/5 positives have `center_mediated=False`), but not sufficient, because 12
-  center-mediated `rule_109` catalog cases are non-positive. Full results are
-  in Sections 7.20-7.30.
+  center-mediated `rule_109` catalog cases are non-positive. Fase 58 tests the
+  next candidate condition, period/horizon, inside `rule_109`: `T_local >= 8`
+  captures all positives but produces four false positives, while `T_local=12`
+  has no false positives but captures only 2/5 positives. The residual
+  `bg=0011/T=8` shows that period/horizon is only a partial discriminator and
+  points to background phase, IC placement, or alignment. Full results are in
+  Sections 7.20-7.31.
 
 Each extension is a controlled experiment with the same measurement protocol;
 only the IC or background definition changes.
