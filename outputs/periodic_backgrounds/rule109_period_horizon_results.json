@@ -1,0 +1,1001 @@
+{
+  "best_period_only_rules": [
+    {
+      "accuracy": 0.8235294117647058,
+      "false_negative_labels": [
+        "bg=0110/T=8/word=0000011/HORIZON_ACCEPTABLE",
+        "bg=1011/T=10/word=00000001/HORIZON_ACCEPTABLE",
+        "bg=1100/T=8/word=00000110/HORIZON_ACCEPTABLE"
+      ],
+      "false_positive_labels": [],
+      "fn": 3,
+      "fp": 0,
+      "perfect": false,
+      "rule": "T_local == 12",
+      "tn": 12,
+      "tp": 2
+    },
+    {
+      "accuracy": 0.8235294117647058,
+      "false_negative_labels": [
+        "bg=0110/T=8/word=0000011/HORIZON_ACCEPTABLE",
+        "bg=1011/T=10/word=00000001/HORIZON_ACCEPTABLE",
+        "bg=1100/T=8/word=00000110/HORIZON_ACCEPTABLE"
+      ],
+      "false_positive_labels": [],
+      "fn": 3,
+      "fp": 0,
+      "perfect": false,
+      "rule": "T_local >= 12",
+      "tn": 12,
+      "tp": 2
+    },
+    {
+      "accuracy": 0.8235294117647058,
+      "false_negative_labels": [
+        "bg=0110/T=8/word=0000011/HORIZON_ACCEPTABLE",
+        "bg=1011/T=10/word=00000001/HORIZON_ACCEPTABLE",
+        "bg=1100/T=8/word=00000110/HORIZON_ACCEPTABLE"
+      ],
+      "false_positive_labels": [],
+      "fn": 3,
+      "fp": 0,
+      "perfect": false,
+      "rule": "oversampling_ratio <= 1.000",
+      "tn": 12,
+      "tp": 2
+    },
+    {
+      "accuracy": 0.8235294117647058,
+      "false_negative_labels": [
+        "bg=0110/T=8/word=0000011/HORIZON_ACCEPTABLE",
+        "bg=1011/T=10/word=00000001/HORIZON_ACCEPTABLE",
+        "bg=1100/T=8/word=00000110/HORIZON_ACCEPTABLE"
+      ],
+      "false_positive_labels": [],
+      "fn": 3,
+      "fp": 0,
+      "perfect": false,
+      "rule": "oversampling_ratio == 1.000",
+      "tn": 12,
+      "tp": 2
+    },
+    {
+      "accuracy": 0.7647058823529411,
+      "false_negative_labels": [
+        "bg=0011/T=12/word=10010100/NATURAL_PERIOD_STRONG",
+        "bg=1011/T=10/word=00000001/HORIZON_ACCEPTABLE",
+        "bg=1100/T=12/word=00101001/NATURAL_PERIOD_STRONG"
+      ],
+      "false_positive_labels": [
+        "bg=0011/T=8/word=1000010/NEGATIVE"
+      ],
+      "fn": 3,
+      "fp": 1,
+      "perfect": false,
+      "rule": "T_local == 8",
+      "tn": 11,
+      "tp": 2
+    },
+    {
+      "accuracy": 0.7647058823529411,
+      "false_negative_labels": [],
+      "false_positive_labels": [
+        "bg=0011/T=8/word=1000010/NEGATIVE",
+        "bg=0011/T=10/word=10000010/NEGATIVE",
+        "bg=1100/T=10/word=00111001/NEGATIVE",
+        "bg=1101/T=10/word=0001000/NEGATIVE"
+      ],
+      "fn": 0,
+      "fp": 4,
+      "perfect": false,
+      "rule": "T_local >= 8",
+      "tn": 8,
+      "tp": 5
+    },
+    {
+      "accuracy": 0.7647058823529411,
+      "false_negative_labels": [],
+      "false_positive_labels": [
+        "bg=0011/T=8/word=1000010/NEGATIVE",
+        "bg=0011/T=10/word=10000010/NEGATIVE",
+        "bg=1100/T=10/word=00111001/NEGATIVE",
+        "bg=1101/T=10/word=0001000/NEGATIVE"
+      ],
+      "fn": 0,
+      "fp": 4,
+      "perfect": false,
+      "rule": "oversampling_ratio <= 1.500",
+      "tn": 8,
+      "tp": 5
+    },
+    {
+      "accuracy": 0.7647058823529411,
+      "false_negative_labels": [
+        "bg=0011/T=12/word=10010100/NATURAL_PERIOD_STRONG",
+        "bg=1011/T=10/word=00000001/HORIZON_ACCEPTABLE",
+        "bg=1100/T=12/word=00101001/NATURAL_PERIOD_STRONG"
+      ],
+      "false_positive_labels": [
+        "bg=0011/T=8/word=1000010/NEGATIVE"
+      ],
+      "fn": 3,
+      "fp": 1,
+      "perfect": false,
+      "rule": "oversampling_ratio == 1.500",
+      "tn": 11,
+      "tp": 2
+    },
+    {
+      "accuracy": 0.7058823529411765,
+      "false_negative_labels": [
+        "bg=0110/T=8/word=0000011/HORIZON_ACCEPTABLE",
+        "bg=1100/T=8/word=00000110/HORIZON_ACCEPTABLE"
+      ],
+      "false_positive_labels": [
+        "bg=0011/T=10/word=10000010/NEGATIVE",
+        "bg=1100/T=10/word=00111001/NEGATIVE",
+        "bg=1101/T=10/word=0001000/NEGATIVE"
+      ],
+      "fn": 2,
+      "fp": 3,
+      "perfect": false,
+      "rule": "T_local >= 10",
+      "tn": 9,
+      "tp": 3
+    },
+    {
+      "accuracy": 0.7058823529411765,
+      "false_negative_labels": [
+        "bg=0110/T=8/word=0000011/HORIZON_ACCEPTABLE",
+        "bg=1100/T=8/word=00000110/HORIZON_ACCEPTABLE"
+      ],
+      "false_positive_labels": [
+        "bg=0011/T=10/word=10000010/NEGATIVE",
+        "bg=1100/T=10/word=00111001/NEGATIVE",
+        "bg=1101/T=10/word=0001000/NEGATIVE"
+      ],
+      "fn": 2,
+      "fp": 3,
+      "perfect": false,
+      "rule": "oversampling_ratio <= 1.200",
+      "tn": 9,
+      "tp": 3
+    },
+    {
+      "accuracy": 0.5882352941176471,
+      "false_negative_labels": [
+        "bg=0011/T=12/word=10010100/NATURAL_PERIOD_STRONG",
+        "bg=0110/T=8/word=0000011/HORIZON_ACCEPTABLE",
+        "bg=1100/T=8/word=00000110/HORIZON_ACCEPTABLE",
+        "bg=1100/T=12/word=00101001/NATURAL_PERIOD_STRONG"
+      ],
+      "false_positive_labels": [
+        "bg=0011/T=10/word=10000010/NEGATIVE",
+        "bg=1100/T=10/word=00111001/NEGATIVE",
+        "bg=1101/T=10/word=0001000/NEGATIVE"
+      ],
+      "fn": 4,
+      "fp": 3,
+      "perfect": false,
+      "rule": "T_local == 10",
+      "tn": 9,
+      "tp": 1
+    },
+    {
+      "accuracy": 0.5882352941176471,
+      "false_negative_labels": [
+        "bg=0011/T=12/word=10010100/NATURAL_PERIOD_STRONG",
+        "bg=0110/T=8/word=0000011/HORIZON_ACCEPTABLE",
+        "bg=1100/T=8/word=00000110/HORIZON_ACCEPTABLE",
+        "bg=1100/T=12/word=00101001/NATURAL_PERIOD_STRONG"
+      ],
+      "false_positive_labels": [
+        "bg=0011/T=10/word=10000010/NEGATIVE",
+        "bg=1100/T=10/word=00111001/NEGATIVE",
+        "bg=1101/T=10/word=0001000/NEGATIVE"
+      ],
+      "fn": 4,
+      "fp": 3,
+      "perfect": false,
+      "rule": "oversampling_ratio == 1.200",
+      "tn": 9,
+      "tp": 1
+    }
+  ],
+  "best_rules": [
+    {
+      "accuracy": 0.8235294117647058,
+      "false_negative_labels": [
+        "bg=0110/T=8/word=0000011/HORIZON_ACCEPTABLE",
+        "bg=1011/T=10/word=00000001/HORIZON_ACCEPTABLE",
+        "bg=1100/T=8/word=00000110/HORIZON_ACCEPTABLE"
+      ],
+      "false_positive_labels": [],
+      "fn": 3,
+      "fp": 0,
+      "perfect": false,
+      "rule": "T_local == 12",
+      "tn": 12,
+      "tp": 2
+    },
+    {
+      "accuracy": 0.8235294117647058,
+      "false_negative_labels": [
+        "bg=0110/T=8/word=0000011/HORIZON_ACCEPTABLE",
+        "bg=1011/T=10/word=00000001/HORIZON_ACCEPTABLE",
+        "bg=1100/T=8/word=00000110/HORIZON_ACCEPTABLE"
+      ],
+      "false_positive_labels": [],
+      "fn": 3,
+      "fp": 0,
+      "perfect": false,
+      "rule": "T_local >= 12",
+      "tn": 12,
+      "tp": 2
+    },
+    {
+      "accuracy": 0.8235294117647058,
+      "false_negative_labels": [
+        "bg=0110/T=8/word=0000011/HORIZON_ACCEPTABLE",
+        "bg=1011/T=10/word=00000001/HORIZON_ACCEPTABLE",
+        "bg=1100/T=8/word=00000110/HORIZON_ACCEPTABLE"
+      ],
+      "false_positive_labels": [],
+      "fn": 3,
+      "fp": 0,
+      "perfect": false,
+      "rule": "T_local >= 12 AND background != 0110",
+      "tn": 12,
+      "tp": 2
+    },
+    {
+      "accuracy": 0.8235294117647058,
+      "false_negative_labels": [
+        "bg=0110/T=8/word=0000011/HORIZON_ACCEPTABLE",
+        "bg=1011/T=10/word=00000001/HORIZON_ACCEPTABLE",
+        "bg=1100/T=8/word=00000110/HORIZON_ACCEPTABLE"
+      ],
+      "false_positive_labels": [],
+      "fn": 3,
+      "fp": 0,
+      "perfect": false,
+      "rule": "T_local >= 12 AND background != 1011",
+      "tn": 12,
+      "tp": 2
+    },
+    {
+      "accuracy": 0.8235294117647058,
+      "false_negative_labels": [
+        "bg=0110/T=8/word=0000011/HORIZON_ACCEPTABLE",
+        "bg=1011/T=10/word=00000001/HORIZON_ACCEPTABLE",
+        "bg=1100/T=8/word=00000110/HORIZON_ACCEPTABLE"
+      ],
+      "false_positive_labels": [],
+      "fn": 3,
+      "fp": 0,
+      "perfect": false,
+      "rule": "T_local >= 12 AND background != 1101",
+      "tn": 12,
+      "tp": 2
+    },
+    {
+      "accuracy": 0.8235294117647058,
+      "false_negative_labels": [
+        "bg=0110/T=8/word=0000011/HORIZON_ACCEPTABLE",
+        "bg=1011/T=10/word=00000001/HORIZON_ACCEPTABLE",
+        "bg=1100/T=8/word=00000110/HORIZON_ACCEPTABLE"
+      ],
+      "false_positive_labels": [],
+      "fn": 3,
+      "fp": 0,
+      "perfect": false,
+      "rule": "T_local >= 12 AND canonical_background == 0011",
+      "tn": 12,
+      "tp": 2
+    },
+    {
+      "accuracy": 0.8235294117647058,
+      "false_negative_labels": [
+        "bg=0011/T=12/word=10010100/NATURAL_PERIOD_STRONG"
+      ],
+      "false_positive_labels": [
+        "bg=1100/T=10/word=00111001/NEGATIVE",
+        "bg=1101/T=10/word=0001000/NEGATIVE"
+      ],
+      "fn": 1,
+      "fp": 2,
+      "perfect": false,
+      "rule": "T_local >= 8 AND background != 0011",
+      "tn": 10,
+      "tp": 4
+    },
+    {
+      "accuracy": 0.8235294117647058,
+      "false_negative_labels": [],
+      "false_positive_labels": [
+        "bg=0011/T=8/word=1000010/NEGATIVE",
+        "bg=0011/T=10/word=10000010/NEGATIVE",
+        "bg=1100/T=10/word=00111001/NEGATIVE"
+      ],
+      "fn": 0,
+      "fp": 3,
+      "perfect": false,
+      "rule": "T_local >= 8 AND background != 1101",
+      "tn": 9,
+      "tp": 5
+    },
+    {
+      "accuracy": 0.8235294117647058,
+      "false_negative_labels": [
+        "bg=0110/T=8/word=0000011/HORIZON_ACCEPTABLE",
+        "bg=1011/T=10/word=00000001/HORIZON_ACCEPTABLE",
+        "bg=1100/T=8/word=00000110/HORIZON_ACCEPTABLE"
+      ],
+      "false_positive_labels": [],
+      "fn": 3,
+      "fp": 0,
+      "perfect": false,
+      "rule": "oversampling_ratio <= 1.000",
+      "tn": 12,
+      "tp": 2
+    },
+    {
+      "accuracy": 0.8235294117647058,
+      "false_negative_labels": [
+        "bg=0110/T=8/word=0000011/HORIZON_ACCEPTABLE",
+        "bg=1011/T=10/word=00000001/HORIZON_ACCEPTABLE",
+        "bg=1100/T=8/word=00000110/HORIZON_ACCEPTABLE"
+      ],
+      "false_positive_labels": [],
+      "fn": 3,
+      "fp": 0,
+      "perfect": false,
+      "rule": "oversampling_ratio <= 1.000 AND background != 0110",
+      "tn": 12,
+      "tp": 2
+    },
+    {
+      "accuracy": 0.8235294117647058,
+      "false_negative_labels": [
+        "bg=0110/T=8/word=0000011/HORIZON_ACCEPTABLE",
+        "bg=1011/T=10/word=00000001/HORIZON_ACCEPTABLE",
+        "bg=1100/T=8/word=00000110/HORIZON_ACCEPTABLE"
+      ],
+      "false_positive_labels": [],
+      "fn": 3,
+      "fp": 0,
+      "perfect": false,
+      "rule": "oversampling_ratio <= 1.000 AND background != 1011",
+      "tn": 12,
+      "tp": 2
+    },
+    {
+      "accuracy": 0.8235294117647058,
+      "false_negative_labels": [
+        "bg=0110/T=8/word=0000011/HORIZON_ACCEPTABLE",
+        "bg=1011/T=10/word=00000001/HORIZON_ACCEPTABLE",
+        "bg=1100/T=8/word=00000110/HORIZON_ACCEPTABLE"
+      ],
+      "false_positive_labels": [],
+      "fn": 3,
+      "fp": 0,
+      "perfect": false,
+      "rule": "oversampling_ratio <= 1.000 AND background != 1101",
+      "tn": 12,
+      "tp": 2
+    },
+    {
+      "accuracy": 0.8235294117647058,
+      "false_negative_labels": [
+        "bg=0110/T=8/word=0000011/HORIZON_ACCEPTABLE",
+        "bg=1011/T=10/word=00000001/HORIZON_ACCEPTABLE",
+        "bg=1100/T=8/word=00000110/HORIZON_ACCEPTABLE"
+      ],
+      "false_positive_labels": [],
+      "fn": 3,
+      "fp": 0,
+      "perfect": false,
+      "rule": "oversampling_ratio <= 1.000 AND canonical_background == 0011",
+      "tn": 12,
+      "tp": 2
+    },
+    {
+      "accuracy": 0.8235294117647058,
+      "false_negative_labels": [
+        "bg=0011/T=12/word=10010100/NATURAL_PERIOD_STRONG"
+      ],
+      "false_positive_labels": [
+        "bg=1100/T=10/word=00111001/NEGATIVE",
+        "bg=1101/T=10/word=0001000/NEGATIVE"
+      ],
+      "fn": 1,
+      "fp": 2,
+      "perfect": false,
+      "rule": "oversampling_ratio <= 1.500 AND background != 0011",
+      "tn": 10,
+      "tp": 4
+    },
+    {
+      "accuracy": 0.8235294117647058,
+      "false_negative_labels": [],
+      "false_positive_labels": [
+        "bg=0011/T=8/word=1000010/NEGATIVE",
+        "bg=0011/T=10/word=10000010/NEGATIVE",
+        "bg=1100/T=10/word=00111001/NEGATIVE"
+      ],
+      "fn": 0,
+      "fp": 3,
+      "perfect": false,
+      "rule": "oversampling_ratio <= 1.500 AND background != 1101",
+      "tn": 9,
+      "tp": 5
+    },
+    {
+      "accuracy": 0.8235294117647058,
+      "false_negative_labels": [
+        "bg=0110/T=8/word=0000011/HORIZON_ACCEPTABLE",
+        "bg=1011/T=10/word=00000001/HORIZON_ACCEPTABLE",
+        "bg=1100/T=8/word=00000110/HORIZON_ACCEPTABLE"
+      ],
+      "false_positive_labels": [],
+      "fn": 3,
+      "fp": 0,
+      "perfect": false,
+      "rule": "oversampling_ratio == 1.000",
+      "tn": 12,
+      "tp": 2
+    },
+    {
+      "accuracy": 0.7647058823529411,
+      "false_negative_labels": [
+        "bg=0011/T=12/word=10010100/NATURAL_PERIOD_STRONG",
+        "bg=1011/T=10/word=00000001/HORIZON_ACCEPTABLE",
+        "bg=1100/T=12/word=00101001/NATURAL_PERIOD_STRONG"
+      ],
+      "false_positive_labels": [
+        "bg=0011/T=8/word=1000010/NEGATIVE"
+      ],
+      "fn": 3,
+      "fp": 1,
+      "perfect": false,
+      "rule": "T_local == 8",
+      "tn": 11,
+      "tp": 2
+    },
+    {
+      "accuracy": 0.7647058823529411,
+      "false_negative_labels": [
+        "bg=0110/T=8/word=0000011/HORIZON_ACCEPTABLE",
+        "bg=1100/T=8/word=00000110/HORIZON_ACCEPTABLE"
+      ],
+      "false_positive_labels": [
+        "bg=0011/T=10/word=10000010/NEGATIVE",
+        "bg=1100/T=10/word=00111001/NEGATIVE"
+      ],
+      "fn": 2,
+      "fp": 2,
+      "perfect": false,
+      "rule": "T_local >= 10 AND background != 1101",
+      "tn": 10,
+      "tp": 3
+    },
+    {
+      "accuracy": 0.7647058823529411,
+      "false_negative_labels": [
+        "bg=0011/T=12/word=10010100/NATURAL_PERIOD_STRONG",
+        "bg=0110/T=8/word=0000011/HORIZON_ACCEPTABLE",
+        "bg=1011/T=10/word=00000001/HORIZON_ACCEPTABLE",
+        "bg=1100/T=8/word=00000110/HORIZON_ACCEPTABLE"
+      ],
+      "false_positive_labels": [],
+      "fn": 4,
+      "fp": 0,
+      "perfect": false,
+      "rule": "T_local >= 12 AND background != 0011",
+      "tn": 12,
+      "tp": 1
+    },
+    {
+      "accuracy": 0.7647058823529411,
+      "false_negative_labels": [
+        "bg=0110/T=8/word=0000011/HORIZON_ACCEPTABLE",
+        "bg=1011/T=10/word=00000001/HORIZON_ACCEPTABLE",
+        "bg=1100/T=8/word=00000110/HORIZON_ACCEPTABLE",
+        "bg=1100/T=12/word=00101001/NATURAL_PERIOD_STRONG"
+      ],
+      "false_positive_labels": [],
+      "fn": 4,
+      "fp": 0,
+      "perfect": false,
+      "rule": "T_local >= 12 AND background != 1100",
+      "tn": 12,
+      "tp": 1
+    }
+  ],
+  "categories_by_background": {
+    "0011": {
+      "NATURAL_PERIOD_STRONG": 1,
+      "NEGATIVE": 4
+    },
+    "0110": {
+      "HORIZON_ACCEPTABLE": 1,
+      "NEGATIVE": 2
+    },
+    "1011": {
+      "HORIZON_ACCEPTABLE": 1,
+      "HORIZON_ARTIFACT": 1
+    },
+    "1100": {
+      "HORIZON_ACCEPTABLE": 1,
+      "NATURAL_PERIOD_STRONG": 1,
+      "NEGATIVE": 3
+    },
+    "1101": {
+      "HORIZON_ARTIFACT": 1,
+      "NEGATIVE": 1
+    }
+  },
+  "categories_by_period": {
+    "10": {
+      "HORIZON_ACCEPTABLE": 1,
+      "NEGATIVE": 3
+    },
+    "12": {
+      "NATURAL_PERIOD_STRONG": 2
+    },
+    "3": {
+      "NEGATIVE": 3
+    },
+    "6": {
+      "HORIZON_ARTIFACT": 2,
+      "NEGATIVE": 3
+    },
+    "8": {
+      "HORIZON_ACCEPTABLE": 2,
+      "NEGATIVE": 1
+    }
+  },
+  "categories_by_ratio": {
+    "1.000": {
+      "NATURAL_PERIOD_STRONG": 2
+    },
+    "1.200": {
+      "HORIZON_ACCEPTABLE": 1,
+      "NEGATIVE": 3
+    },
+    "1.500": {
+      "HORIZON_ACCEPTABLE": 2,
+      "NEGATIVE": 1
+    },
+    "2.000": {
+      "HORIZON_ARTIFACT": 2,
+      "NEGATIVE": 3
+    },
+    "4.000": {
+      "NEGATIVE": 3
+    }
+  },
+  "common_t_window": 12,
+  "negative_count": 12,
+  "perfect_period_only_rules": [],
+  "perfect_rules": [],
+  "positive_categories": [
+    "HORIZON_ACCEPTABLE",
+    "NATURAL_PERIOD_STRONG"
+  ],
+  "positive_count": 5,
+  "rows": [
+    {
+      "T_local": 3,
+      "already_tested": false,
+      "background": "0011",
+      "background_complement": "1100",
+      "background_int": 3,
+      "background_is_1011_orbit": false,
+      "background_is_rotation_of_0011": true,
+      "background_weight": 2,
+      "canonical_background": "0011",
+      "category": "NEGATIVE",
+      "common_key": "r109_bg0011_T3_w0001100_h12",
+      "label": "rule109_bg0011_T3",
+      "natural_key": "r109_bg0011_T3_w0001100_h3",
+      "oversampling_ratio": 4.0,
+      "positive": false,
+      "ratio_eq_1": false,
+      "ratio_le_1_2": false,
+      "ratio_le_1_5": false,
+      "rule": 109,
+      "selection_reason": "max_span_shortest_word",
+      "t_window_common": 12,
+      "word": "0001100"
+    },
+    {
+      "T_local": 6,
+      "already_tested": false,
+      "background": "0011",
+      "background_complement": "1100",
+      "background_int": 3,
+      "background_is_1011_orbit": false,
+      "background_is_rotation_of_0011": true,
+      "background_weight": 2,
+      "canonical_background": "0011",
+      "category": "NEGATIVE",
+      "common_key": "r109_bg0011_T6_w1100100_h12",
+      "label": "rule109_bg0011_T6",
+      "natural_key": "r109_bg0011_T6_w1100100_h6",
+      "oversampling_ratio": 2.0,
+      "positive": false,
+      "ratio_eq_1": false,
+      "ratio_le_1_2": false,
+      "ratio_le_1_5": false,
+      "rule": 109,
+      "selection_reason": "max_span_shortest_word",
+      "t_window_common": 12,
+      "word": "1100100"
+    },
+    {
+      "T_local": 8,
+      "already_tested": false,
+      "background": "0011",
+      "background_complement": "1100",
+      "background_int": 3,
+      "background_is_1011_orbit": false,
+      "background_is_rotation_of_0011": true,
+      "background_weight": 2,
+      "canonical_background": "0011",
+      "category": "NEGATIVE",
+      "common_key": "r109_bg0011_T8_w1000010_h12",
+      "label": "rule109_bg0011_T8",
+      "natural_key": "r109_bg0011_T8_w1000010_h8",
+      "oversampling_ratio": 1.5,
+      "positive": false,
+      "ratio_eq_1": false,
+      "ratio_le_1_2": false,
+      "ratio_le_1_5": true,
+      "rule": 109,
+      "selection_reason": "max_span_shortest_word",
+      "t_window_common": 12,
+      "word": "1000010"
+    },
+    {
+      "T_local": 10,
+      "already_tested": false,
+      "background": "0011",
+      "background_complement": "1100",
+      "background_int": 3,
+      "background_is_1011_orbit": false,
+      "background_is_rotation_of_0011": true,
+      "background_weight": 2,
+      "canonical_background": "0011",
+      "category": "NEGATIVE",
+      "common_key": "r109_bg0011_T10_w10000010_h12",
+      "label": "rule109_bg0011_T10",
+      "natural_key": "r109_bg0011_T10_w10000010_h10",
+      "oversampling_ratio": 1.2,
+      "positive": false,
+      "ratio_eq_1": false,
+      "ratio_le_1_2": true,
+      "ratio_le_1_5": true,
+      "rule": 109,
+      "selection_reason": "max_span_shortest_word",
+      "t_window_common": 12,
+      "word": "10000010"
+    },
+    {
+      "T_local": 12,
+      "already_tested": false,
+      "background": "0011",
+      "background_complement": "1100",
+      "background_int": 3,
+      "background_is_1011_orbit": false,
+      "background_is_rotation_of_0011": true,
+      "background_weight": 2,
+      "canonical_background": "0011",
+      "category": "NATURAL_PERIOD_STRONG",
+      "common_key": "r109_bg0011_T12_w10010100_h12",
+      "label": "rule109_bg0011_T12",
+      "natural_key": "r109_bg0011_T12_w10010100_h12",
+      "oversampling_ratio": 1.0,
+      "positive": true,
+      "ratio_eq_1": true,
+      "ratio_le_1_2": true,
+      "ratio_le_1_5": true,
+      "rule": 109,
+      "selection_reason": "max_span_shortest_word",
+      "t_window_common": 12,
+      "word": "10010100"
+    },
+    {
+      "T_local": 3,
+      "already_tested": false,
+      "background": "0110",
+      "background_complement": "1001",
+      "background_int": 6,
+      "background_is_1011_orbit": false,
+      "background_is_rotation_of_0011": true,
+      "background_weight": 2,
+      "canonical_background": "0011",
+      "category": "NEGATIVE",
+      "common_key": "r109_bg0110_T3_w001100_h12",
+      "label": "rule109_bg0110_T3",
+      "natural_key": "r109_bg0110_T3_w001100_h3",
+      "oversampling_ratio": 4.0,
+      "positive": false,
+      "ratio_eq_1": false,
+      "ratio_le_1_2": false,
+      "ratio_le_1_5": false,
+      "rule": 109,
+      "selection_reason": "max_span_shortest_word",
+      "t_window_common": 12,
+      "word": "001100"
+    },
+    {
+      "T_local": 6,
+      "already_tested": false,
+      "background": "0110",
+      "background_complement": "1001",
+      "background_int": 6,
+      "background_is_1011_orbit": false,
+      "background_is_rotation_of_0011": true,
+      "background_weight": 2,
+      "canonical_background": "0011",
+      "category": "NEGATIVE",
+      "common_key": "r109_bg0110_T6_w0010011_h12",
+      "label": "rule109_bg0110_T6",
+      "natural_key": "r109_bg0110_T6_w0010011_h6",
+      "oversampling_ratio": 2.0,
+      "positive": false,
+      "ratio_eq_1": false,
+      "ratio_le_1_2": false,
+      "ratio_le_1_5": false,
+      "rule": 109,
+      "selection_reason": "max_span_shortest_word",
+      "t_window_common": 12,
+      "word": "0010011"
+    },
+    {
+      "T_local": 8,
+      "already_tested": false,
+      "background": "0110",
+      "background_complement": "1001",
+      "background_int": 6,
+      "background_is_1011_orbit": false,
+      "background_is_rotation_of_0011": true,
+      "background_weight": 2,
+      "canonical_background": "0011",
+      "category": "HORIZON_ACCEPTABLE",
+      "common_key": "r109_bg0110_T8_w0000011_h12",
+      "label": "rule109_bg0110_T8",
+      "natural_key": "r109_bg0110_T8_w0000011_h8",
+      "oversampling_ratio": 1.5,
+      "positive": true,
+      "ratio_eq_1": false,
+      "ratio_le_1_2": false,
+      "ratio_le_1_5": true,
+      "rule": 109,
+      "selection_reason": "max_span_shortest_word",
+      "t_window_common": 12,
+      "word": "0000011"
+    },
+    {
+      "T_local": 6,
+      "already_tested": true,
+      "background": "1011",
+      "background_complement": "0100",
+      "background_int": 11,
+      "background_is_1011_orbit": true,
+      "background_is_rotation_of_0011": false,
+      "background_weight": 3,
+      "canonical_background": "0111",
+      "category": "HORIZON_ARTIFACT",
+      "common_key": "r109_bg1011_T6_w00001001_h12",
+      "label": "rule109_bg1011_T6",
+      "natural_key": "r109_bg1011_T6_w00001001_h6",
+      "oversampling_ratio": 2.0,
+      "positive": false,
+      "ratio_eq_1": false,
+      "ratio_le_1_2": false,
+      "ratio_le_1_5": false,
+      "rule": 109,
+      "selection_reason": "already_tested_exact_word",
+      "t_window_common": 12,
+      "word": "00001001"
+    },
+    {
+      "T_local": 10,
+      "already_tested": true,
+      "background": "1011",
+      "background_complement": "0100",
+      "background_int": 11,
+      "background_is_1011_orbit": true,
+      "background_is_rotation_of_0011": false,
+      "background_weight": 3,
+      "canonical_background": "0111",
+      "category": "HORIZON_ACCEPTABLE",
+      "common_key": "r109_bg1011_T10_w00000001_h12",
+      "label": "rule109_bg1011_T10",
+      "natural_key": "r109_bg1011_T10_w00000001_h10",
+      "oversampling_ratio": 1.2,
+      "positive": true,
+      "ratio_eq_1": false,
+      "ratio_le_1_2": true,
+      "ratio_le_1_5": true,
+      "rule": 109,
+      "selection_reason": "already_tested_exact_word",
+      "t_window_common": 12,
+      "word": "00000001"
+    },
+    {
+      "T_local": 3,
+      "already_tested": false,
+      "background": "1100",
+      "background_complement": "0011",
+      "background_int": 12,
+      "background_is_1011_orbit": false,
+      "background_is_rotation_of_0011": true,
+      "background_weight": 2,
+      "canonical_background": "0011",
+      "category": "NEGATIVE",
+      "common_key": "r109_bg1100_T3_w00001110_h12",
+      "label": "rule109_bg1100_T3",
+      "natural_key": "r109_bg1100_T3_w00001110_h3",
+      "oversampling_ratio": 4.0,
+      "positive": false,
+      "ratio_eq_1": false,
+      "ratio_le_1_2": false,
+      "ratio_le_1_5": false,
+      "rule": 109,
+      "selection_reason": "max_span_shortest_word",
+      "t_window_common": 12,
+      "word": "00001110"
+    },
+    {
+      "T_local": 6,
+      "already_tested": false,
+      "background": "1100",
+      "background_complement": "0011",
+      "background_int": 12,
+      "background_is_1011_orbit": false,
+      "background_is_rotation_of_0011": true,
+      "background_weight": 2,
+      "canonical_background": "0011",
+      "category": "NEGATIVE",
+      "common_key": "r109_bg1100_T6_w00100110_h12",
+      "label": "rule109_bg1100_T6",
+      "natural_key": "r109_bg1100_T6_w00100110_h6",
+      "oversampling_ratio": 2.0,
+      "positive": false,
+      "ratio_eq_1": false,
+      "ratio_le_1_2": false,
+      "ratio_le_1_5": false,
+      "rule": 109,
+      "selection_reason": "max_span_shortest_word",
+      "t_window_common": 12,
+      "word": "00100110"
+    },
+    {
+      "T_local": 8,
+      "already_tested": false,
+      "background": "1100",
+      "background_complement": "0011",
+      "background_int": 12,
+      "background_is_1011_orbit": false,
+      "background_is_rotation_of_0011": true,
+      "background_weight": 2,
+      "canonical_background": "0011",
+      "category": "HORIZON_ACCEPTABLE",
+      "common_key": "r109_bg1100_T8_w00000110_h12",
+      "label": "rule109_bg1100_T8",
+      "natural_key": "r109_bg1100_T8_w00000110_h8",
+      "oversampling_ratio": 1.5,
+      "positive": true,
+      "ratio_eq_1": false,
+      "ratio_le_1_2": false,
+      "ratio_le_1_5": true,
+      "rule": 109,
+      "selection_reason": "max_span_shortest_word",
+      "t_window_common": 12,
+      "word": "00000110"
+    },
+    {
+      "T_local": 10,
+      "already_tested": false,
+      "background": "1100",
+      "background_complement": "0011",
+      "background_int": 12,
+      "background_is_1011_orbit": false,
+      "background_is_rotation_of_0011": true,
+      "background_weight": 2,
+      "canonical_background": "0011",
+      "category": "NEGATIVE",
+      "common_key": "r109_bg1100_T10_w00111001_h12",
+      "label": "rule109_bg1100_T10",
+      "natural_key": "r109_bg1100_T10_w00111001_h10",
+      "oversampling_ratio": 1.2,
+      "positive": false,
+      "ratio_eq_1": false,
+      "ratio_le_1_2": true,
+      "ratio_le_1_5": true,
+      "rule": 109,
+      "selection_reason": "max_span_shortest_word",
+      "t_window_common": 12,
+      "word": "00111001"
+    },
+    {
+      "T_local": 12,
+      "already_tested": false,
+      "background": "1100",
+      "background_complement": "0011",
+      "background_int": 12,
+      "background_is_1011_orbit": false,
+      "background_is_rotation_of_0011": true,
+      "background_weight": 2,
+      "canonical_background": "0011",
+      "category": "NATURAL_PERIOD_STRONG",
+      "common_key": "r109_bg1100_T12_w00101001_h12",
+      "label": "rule109_bg1100_T12",
+      "natural_key": "r109_bg1100_T12_w00101001_h12",
+      "oversampling_ratio": 1.0,
+      "positive": true,
+      "ratio_eq_1": true,
+      "ratio_le_1_2": true,
+      "ratio_le_1_5": true,
+      "rule": 109,
+      "selection_reason": "max_span_shortest_word",
+      "t_window_common": 12,
+      "word": "00101001"
+    },
+    {
+      "T_local": 6,
+      "already_tested": false,
+      "background": "1101",
+      "background_complement": "0010",
+      "background_int": 13,
+      "background_is_1011_orbit": true,
+      "background_is_rotation_of_0011": false,
+      "background_weight": 3,
+      "canonical_background": "0111",
+      "category": "HORIZON_ARTIFACT",
+      "common_key": "r109_bg1101_T6_w0000100_h12",
+      "label": "rule109_bg1101_T6",
+      "natural_key": "r109_bg1101_T6_w0000100_h6",
+      "oversampling_ratio": 2.0,
+      "positive": false,
+      "ratio_eq_1": false,
+      "ratio_le_1_2": false,
+      "ratio_le_1_5": false,
+      "rule": 109,
+      "selection_reason": "max_span_shortest_word",
+      "t_window_common": 12,
+      "word": "0000100"
+    },
+    {
+      "T_local": 10,
+      "already_tested": true,
+      "background": "1101",
+      "background_complement": "0010",
+      "background_int": 13,
+      "background_is_1011_orbit": true,
+      "background_is_rotation_of_0011": false,
+      "background_weight": 3,
+      "canonical_background": "0111",
+      "category": "NEGATIVE",
+      "common_key": "r109_bg1101_T10_w0001000_h12",
+      "label": "rule109_bg1101_T10",
+      "natural_key": "r109_bg1101_T10_w0001000_h10",
+      "oversampling_ratio": 1.2,
+      "positive": false,
+      "ratio_eq_1": false,
+      "ratio_le_1_2": true,
+      "ratio_le_1_5": true,
+      "rule": 109,
+      "selection_reason": "already_tested_exact_word",
+      "t_window_common": 12,
+      "word": "0001000"
+    }
+  ],
+  "rule109_case_count": 17,
+  "source": "anf_gradient_census_results.json",
+  "status": "PERIOD_HORIZON_PARTIAL_DISCRIMINANT"
+}
