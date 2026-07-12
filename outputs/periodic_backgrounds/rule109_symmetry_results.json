@@ -1,0 +1,478 @@
+{
+  "cross_rule_rows": [
+    {
+      "rule109_case": {
+        "T_local": 12,
+        "already_tested": false,
+        "background": "0011",
+        "category": "NATURAL_PERIOD_STRONG",
+        "common_key": "r109_bg0011_T12_w10010100_h12",
+        "label": "rule109_bg0011_T12",
+        "natural_key": "r109_bg0011_T12_w10010100_h12",
+        "rule": 109,
+        "selection_reason": "max_span_shortest_word",
+        "word": "10010100"
+      },
+      "rule73_category": "NEGATIVE",
+      "rule73_present": true,
+      "rule73_word": "10001010"
+    },
+    {
+      "rule109_case": {
+        "T_local": 8,
+        "already_tested": false,
+        "background": "0110",
+        "category": "HORIZON_ACCEPTABLE",
+        "common_key": "r109_bg0110_T8_w0000011_h12",
+        "label": "rule109_bg0110_T8",
+        "natural_key": "r109_bg0110_T8_w0000011_h8",
+        "rule": 109,
+        "selection_reason": "max_span_shortest_word",
+        "word": "0000011"
+      },
+      "rule73_category": null,
+      "rule73_present": false,
+      "rule73_word": null
+    },
+    {
+      "rule109_case": {
+        "T_local": 10,
+        "already_tested": true,
+        "background": "1011",
+        "category": "HORIZON_ACCEPTABLE",
+        "common_key": "r109_bg1011_T10_w00000001_h12",
+        "label": "rule109_bg1011_T10",
+        "natural_key": "r109_bg1011_T10_w00000001_h10",
+        "rule": 109,
+        "selection_reason": "already_tested_exact_word",
+        "word": "00000001"
+      },
+      "rule73_category": null,
+      "rule73_present": false,
+      "rule73_word": null
+    },
+    {
+      "rule109_case": {
+        "T_local": 8,
+        "already_tested": false,
+        "background": "1100",
+        "category": "HORIZON_ACCEPTABLE",
+        "common_key": "r109_bg1100_T8_w00000110_h12",
+        "label": "rule109_bg1100_T8",
+        "natural_key": "r109_bg1100_T8_w00000110_h8",
+        "rule": 109,
+        "selection_reason": "max_span_shortest_word",
+        "word": "00000110"
+      },
+      "rule73_category": "NEGATIVE",
+      "rule73_present": true,
+      "rule73_word": "0011111"
+    },
+    {
+      "rule109_case": {
+        "T_local": 12,
+        "already_tested": false,
+        "background": "1100",
+        "category": "NATURAL_PERIOD_STRONG",
+        "common_key": "r109_bg1100_T12_w00101001_h12",
+        "label": "rule109_bg1100_T12",
+        "natural_key": "r109_bg1100_T12_w00101001_h12",
+        "rule": 109,
+        "selection_reason": "max_span_shortest_word",
+        "word": "00101001"
+      },
+      "rule73_category": "NEGATIVE",
+      "rule73_present": true,
+      "rule73_word": "00000011"
+    }
+  ],
+  "positive_cases": [
+    {
+      "T_local": 12,
+      "already_tested": false,
+      "background": "0011",
+      "category": "NATURAL_PERIOD_STRONG",
+      "common_key": "r109_bg0011_T12_w10010100_h12",
+      "label": "rule109_bg0011_T12",
+      "natural_key": "r109_bg0011_T12_w10010100_h12",
+      "rule": 109,
+      "selection_reason": "max_span_shortest_word",
+      "word": "10010100"
+    },
+    {
+      "T_local": 8,
+      "already_tested": false,
+      "background": "0110",
+      "category": "HORIZON_ACCEPTABLE",
+      "common_key": "r109_bg0110_T8_w0000011_h12",
+      "label": "rule109_bg0110_T8",
+      "natural_key": "r109_bg0110_T8_w0000011_h8",
+      "rule": 109,
+      "selection_reason": "max_span_shortest_word",
+      "word": "0000011"
+    },
+    {
+      "T_local": 10,
+      "already_tested": true,
+      "background": "1011",
+      "category": "HORIZON_ACCEPTABLE",
+      "common_key": "r109_bg1011_T10_w00000001_h12",
+      "label": "rule109_bg1011_T10",
+      "natural_key": "r109_bg1011_T10_w00000001_h10",
+      "rule": 109,
+      "selection_reason": "already_tested_exact_word",
+      "word": "00000001"
+    },
+    {
+      "T_local": 8,
+      "already_tested": false,
+      "background": "1100",
+      "category": "HORIZON_ACCEPTABLE",
+      "common_key": "r109_bg1100_T8_w00000110_h12",
+      "label": "rule109_bg1100_T8",
+      "natural_key": "r109_bg1100_T8_w00000110_h8",
+      "rule": 109,
+      "selection_reason": "max_span_shortest_word",
+      "word": "00000110"
+    },
+    {
+      "T_local": 12,
+      "already_tested": false,
+      "background": "1100",
+      "category": "NATURAL_PERIOD_STRONG",
+      "common_key": "r109_bg1100_T12_w00101001_h12",
+      "label": "rule109_bg1100_T12",
+      "natural_key": "r109_bg1100_T12_w00101001_h12",
+      "rule": 109,
+      "selection_reason": "max_span_shortest_word",
+      "word": "00101001"
+    }
+  ],
+  "positive_categories": [
+    "HORIZON_ACCEPTABLE",
+    "NATURAL_PERIOD_STRONG"
+  ],
+  "positive_related": [
+    {
+      "canonical_rotation": "0011",
+      "case": {
+        "T_local": 12,
+        "already_tested": false,
+        "background": "0011",
+        "category": "NATURAL_PERIOD_STRONG",
+        "common_key": "r109_bg0011_T12_w10010100_h12",
+        "label": "rule109_bg0011_T12",
+        "natural_key": "r109_bg0011_T12_w10010100_h12",
+        "rule": 109,
+        "selection_reason": "max_span_shortest_word",
+        "word": "10010100"
+      },
+      "complement": {
+        "background": "1100",
+        "category": "NATURAL_PERIOD_STRONG",
+        "present": true,
+        "word": "00101001"
+      },
+      "rotations": [
+        {
+          "background": "0011",
+          "category": "NATURAL_PERIOD_STRONG",
+          "present": true,
+          "word": "10010100"
+        },
+        {
+          "background": "0110",
+          "category": null,
+          "present": false,
+          "word": null
+        },
+        {
+          "background": "1100",
+          "category": "NATURAL_PERIOD_STRONG",
+          "present": true,
+          "word": "00101001"
+        },
+        {
+          "background": "1001",
+          "category": null,
+          "present": false,
+          "word": null
+        }
+      ]
+    },
+    {
+      "canonical_rotation": "0011",
+      "case": {
+        "T_local": 8,
+        "already_tested": false,
+        "background": "0110",
+        "category": "HORIZON_ACCEPTABLE",
+        "common_key": "r109_bg0110_T8_w0000011_h12",
+        "label": "rule109_bg0110_T8",
+        "natural_key": "r109_bg0110_T8_w0000011_h8",
+        "rule": 109,
+        "selection_reason": "max_span_shortest_word",
+        "word": "0000011"
+      },
+      "complement": {
+        "background": "1001",
+        "category": null,
+        "present": false,
+        "word": null
+      },
+      "rotations": [
+        {
+          "background": "0110",
+          "category": "HORIZON_ACCEPTABLE",
+          "present": true,
+          "word": "0000011"
+        },
+        {
+          "background": "1100",
+          "category": "HORIZON_ACCEPTABLE",
+          "present": true,
+          "word": "00000110"
+        },
+        {
+          "background": "1001",
+          "category": null,
+          "present": false,
+          "word": null
+        },
+        {
+          "background": "0011",
+          "category": "NEGATIVE",
+          "present": true,
+          "word": "1000010"
+        }
+      ]
+    },
+    {
+      "canonical_rotation": "0111",
+      "case": {
+        "T_local": 10,
+        "already_tested": true,
+        "background": "1011",
+        "category": "HORIZON_ACCEPTABLE",
+        "common_key": "r109_bg1011_T10_w00000001_h12",
+        "label": "rule109_bg1011_T10",
+        "natural_key": "r109_bg1011_T10_w00000001_h10",
+        "rule": 109,
+        "selection_reason": "already_tested_exact_word",
+        "word": "00000001"
+      },
+      "complement": {
+        "background": "0100",
+        "category": null,
+        "present": false,
+        "word": null
+      },
+      "rotations": [
+        {
+          "background": "1011",
+          "category": "HORIZON_ACCEPTABLE",
+          "present": true,
+          "word": "00000001"
+        },
+        {
+          "background": "0111",
+          "category": null,
+          "present": false,
+          "word": null
+        },
+        {
+          "background": "1110",
+          "category": null,
+          "present": false,
+          "word": null
+        },
+        {
+          "background": "1101",
+          "category": "NEGATIVE",
+          "present": true,
+          "word": "0001000"
+        }
+      ]
+    },
+    {
+      "canonical_rotation": "0011",
+      "case": {
+        "T_local": 8,
+        "already_tested": false,
+        "background": "1100",
+        "category": "HORIZON_ACCEPTABLE",
+        "common_key": "r109_bg1100_T8_w00000110_h12",
+        "label": "rule109_bg1100_T8",
+        "natural_key": "r109_bg1100_T8_w00000110_h8",
+        "rule": 109,
+        "selection_reason": "max_span_shortest_word",
+        "word": "00000110"
+      },
+      "complement": {
+        "background": "0011",
+        "category": "NEGATIVE",
+        "present": true,
+        "word": "1000010"
+      },
+      "rotations": [
+        {
+          "background": "1100",
+          "category": "HORIZON_ACCEPTABLE",
+          "present": true,
+          "word": "00000110"
+        },
+        {
+          "background": "1001",
+          "category": null,
+          "present": false,
+          "word": null
+        },
+        {
+          "background": "0011",
+          "category": "NEGATIVE",
+          "present": true,
+          "word": "1000010"
+        },
+        {
+          "background": "0110",
+          "category": "HORIZON_ACCEPTABLE",
+          "present": true,
+          "word": "0000011"
+        }
+      ]
+    },
+    {
+      "canonical_rotation": "0011",
+      "case": {
+        "T_local": 12,
+        "already_tested": false,
+        "background": "1100",
+        "category": "NATURAL_PERIOD_STRONG",
+        "common_key": "r109_bg1100_T12_w00101001_h12",
+        "label": "rule109_bg1100_T12",
+        "natural_key": "r109_bg1100_T12_w00101001_h12",
+        "rule": 109,
+        "selection_reason": "max_span_shortest_word",
+        "word": "00101001"
+      },
+      "complement": {
+        "background": "0011",
+        "category": "NATURAL_PERIOD_STRONG",
+        "present": true,
+        "word": "10010100"
+      },
+      "rotations": [
+        {
+          "background": "1100",
+          "category": "NATURAL_PERIOD_STRONG",
+          "present": true,
+          "word": "00101001"
+        },
+        {
+          "background": "1001",
+          "category": null,
+          "present": false,
+          "word": null
+        },
+        {
+          "background": "0011",
+          "category": "NATURAL_PERIOD_STRONG",
+          "present": true,
+          "word": "10010100"
+        },
+        {
+          "background": "0110",
+          "category": null,
+          "present": false,
+          "word": null
+        }
+      ]
+    }
+  ],
+  "rule_anf": {
+    "rule_109": {
+      "center_monomials": [
+        "LC",
+        "CR",
+        "LCR"
+      ],
+      "coefficients": [
+        1,
+        1,
+        0,
+        1,
+        1,
+        0,
+        1,
+        1
+      ],
+      "expression": "1 XOR L XOR LC XOR R XOR CR XOR LCR",
+      "has_center_alone": false,
+      "has_lr_without_center": false,
+      "monomials": [
+        "1",
+        "L",
+        "LC",
+        "R",
+        "CR",
+        "LCR"
+      ],
+      "rule": 109,
+      "truth_values_LCR_index": [
+        1,
+        0,
+        1,
+        1,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    "rule_73": {
+      "center_monomials": [
+        "C",
+        "LCR"
+      ],
+      "coefficients": [
+        1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        0,
+        1
+      ],
+      "expression": "1 XOR L XOR C XOR R XOR LR XOR LCR",
+      "has_center_alone": true,
+      "has_lr_without_center": true,
+      "monomials": [
+        "1",
+        "L",
+        "C",
+        "R",
+        "LR",
+        "LCR"
+      ],
+      "rule": 73,
+      "truth_values_LCR_index": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0
+      ]
+    }
+  },
+  "source": "anf_gradient_census_results.json",
+  "statuses": {
+    "cross_rule_status": "RULE109_SPECIFIC_ON_SHARED_BACKGROUNDS",
+    "orbit_symmetry_status": "PARTIAL",
+    "overall_status": "RULE109_SYMMETRY_MECHANISM_CANDIDATE",
+    "rule_anf_status": "RULE109_CENTER_MEDIATED_CONFIRMED"
+  }
+}
