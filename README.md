@@ -9,8 +9,9 @@ model participates in world selection, law evaluation, scoring, or acceptance.
 
 ## Preprint
 
-**Latest: v1.22** - Fase 55 census finds non-T15 ANF-gradient evidence concentrated in rule_109.
+**Latest: v1.23** - Fase 56 audits the structural rule_109 candidate behind the ANF-gradient concentration.
 
+- v1.23 DOI: [10.5281/zenodo.21326792](https://doi.org/10.5281/zenodo.21326792)
 - v1.22 DOI: [10.5281/zenodo.21306875](https://doi.org/10.5281/zenodo.21306875)
 - v1.21 DOI: [10.5281/zenodo.21306102](https://doi.org/10.5281/zenodo.21306102)
 - v1.20 DOI: [10.5281/zenodo.21301212](https://doi.org/10.5281/zenodo.21301212)
@@ -34,6 +35,7 @@ model participates in world selection, law evaluation, scoring, or acceptance.
 - v1.2 DOI: [10.5281/zenodo.20738025](https://doi.org/10.5281/zenodo.20738025)
 - v1.1 DOI: [10.5281/zenodo.20687470](https://doi.org/10.5281/zenodo.20687470)
 - v1.0 DOI: [10.5281/zenodo.20516375](https://doi.org/10.5281/zenodo.20516375)
+- v1.23 series DOI: [10.5281/zenodo.21326791](https://doi.org/10.5281/zenodo.21326791)
 - v1.22 series DOI: [10.5281/zenodo.21306874](https://doi.org/10.5281/zenodo.21306874)
 - v1.21 series DOI: [10.5281/zenodo.21306101](https://doi.org/10.5281/zenodo.21306101)
 - v1.20 series DOI: [10.5281/zenodo.21301211](https://doi.org/10.5281/zenodo.21301211)
@@ -116,8 +118,8 @@ regenerated from the commands in the reproducibility guide.
 
 ```text
 Concha Estrada, M. A. (2026). ZUSE Automat Agent: Empirical Law Discovery in
-Elementary Cellular Automata (v1.22). Zenodo.
-https://doi.org/10.5281/zenodo.21306875
+Elementary Cellular Automata (v1.23). Zenodo.
+https://doi.org/10.5281/zenodo.21326792
 ```
 
 ## License
