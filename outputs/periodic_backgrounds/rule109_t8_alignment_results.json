@@ -1,0 +1,1391 @@
+{
+  "all_rule109_context": [
+    {
+      "T_local": 3,
+      "already_tested": false,
+      "background": "0011",
+      "background_window": "0011001",
+      "bg_at_ic": "10",
+      "bg_at_ic_ones": 1,
+      "bg_phase_in_0011_orbit": 0,
+      "canonical_background": "0011",
+      "category": "NEGATIVE",
+      "common_key": "r109_bg0011_T3_w0001100_h12",
+      "defect_active_bits": [
+        2,
+        4,
+        6
+      ],
+      "defect_phase_offset": [
+        0,
+        2
+      ],
+      "defect_span": 5,
+      "defect_support_size": 3,
+      "defect_weight_by_mod4": {
+        "0": 1,
+        "2": 2
+      },
+      "ic_active_bits": [
+        3,
+        4
+      ],
+      "ic_active_offsets_mod4": [
+        0,
+        3
+      ],
+      "ic_length": 7,
+      "ic_span": 2,
+      "ic_support_size": 2,
+      "ic_weight_by_mod4": {
+        "0": 1,
+        "3": 1
+      },
+      "label": "rule109_bg0011_T3",
+      "natural_key": "r109_bg0011_T3_w0001100_h3",
+      "positive": false,
+      "rule": 109,
+      "selection_reason": "max_span_shortest_word",
+      "word": "0001100",
+      "xor_defect": "0010101"
+    },
+    {
+      "T_local": 6,
+      "already_tested": false,
+      "background": "0011",
+      "background_window": "0011001",
+      "bg_at_ic": "000",
+      "bg_at_ic_ones": 0,
+      "bg_phase_in_0011_orbit": 0,
+      "canonical_background": "0011",
+      "category": "NEGATIVE",
+      "common_key": "r109_bg0011_T6_w1100100_h12",
+      "defect_active_bits": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        6
+      ],
+      "defect_phase_offset": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "defect_span": 7,
+      "defect_support_size": 6,
+      "defect_weight_by_mod4": {
+        "0": 2,
+        "1": 1,
+        "2": 2,
+        "3": 1
+      },
+      "ic_active_bits": [
+        0,
+        1,
+        4
+      ],
+      "ic_active_offsets_mod4": [
+        0,
+        1
+      ],
+      "ic_length": 7,
+      "ic_span": 5,
+      "ic_support_size": 3,
+      "ic_weight_by_mod4": {
+        "0": 2,
+        "1": 1
+      },
+      "label": "rule109_bg0011_T6",
+      "natural_key": "r109_bg0011_T6_w1100100_h6",
+      "positive": false,
+      "rule": 109,
+      "selection_reason": "max_span_shortest_word",
+      "word": "1100100",
+      "xor_defect": "1111101"
+    },
+    {
+      "T_local": 8,
+      "already_tested": false,
+      "background": "0011",
+      "background_window": "0011001",
+      "bg_at_ic": "00",
+      "bg_at_ic_ones": 0,
+      "bg_phase_in_0011_orbit": 0,
+      "canonical_background": "0011",
+      "category": "NEGATIVE",
+      "common_key": "r109_bg0011_T8_w1000010_h12",
+      "defect_active_bits": [
+        0,
+        2,
+        3,
+        5,
+        6
+      ],
+      "defect_phase_offset": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "defect_span": 7,
+      "defect_support_size": 5,
+      "defect_weight_by_mod4": {
+        "0": 1,
+        "1": 1,
+        "2": 2,
+        "3": 1
+      },
+      "ic_active_bits": [
+        0,
+        5
+      ],
+      "ic_active_offsets_mod4": [
+        0,
+        1
+      ],
+      "ic_length": 7,
+      "ic_span": 6,
+      "ic_support_size": 2,
+      "ic_weight_by_mod4": {
+        "0": 1,
+        "1": 1
+      },
+      "label": "rule109_bg0011_T8",
+      "natural_key": "r109_bg0011_T8_w1000010_h8",
+      "positive": false,
+      "rule": 109,
+      "selection_reason": "max_span_shortest_word",
+      "word": "1000010",
+      "xor_defect": "1011011"
+    },
+    {
+      "T_local": 10,
+      "already_tested": false,
+      "background": "0011",
+      "background_window": "00110011",
+      "bg_at_ic": "01",
+      "bg_at_ic_ones": 1,
+      "bg_phase_in_0011_orbit": 0,
+      "canonical_background": "0011",
+      "category": "NEGATIVE",
+      "common_key": "r109_bg0011_T10_w10000010_h12",
+      "defect_active_bits": [
+        0,
+        2,
+        3,
+        7
+      ],
+      "defect_phase_offset": [
+        0,
+        2,
+        3
+      ],
+      "defect_span": 8,
+      "defect_support_size": 4,
+      "defect_weight_by_mod4": {
+        "0": 1,
+        "2": 1,
+        "3": 2
+      },
+      "ic_active_bits": [
+        0,
+        6
+      ],
+      "ic_active_offsets_mod4": [
+        0,
+        2
+      ],
+      "ic_length": 8,
+      "ic_span": 7,
+      "ic_support_size": 2,
+      "ic_weight_by_mod4": {
+        "0": 1,
+        "2": 1
+      },
+      "label": "rule109_bg0011_T10",
+      "natural_key": "r109_bg0011_T10_w10000010_h10",
+      "positive": false,
+      "rule": 109,
+      "selection_reason": "max_span_shortest_word",
+      "word": "10000010",
+      "xor_defect": "10110001"
+    },
+    {
+      "T_local": 12,
+      "already_tested": false,
+      "background": "0011",
+      "background_window": "00110011",
+      "bg_at_ic": "010",
+      "bg_at_ic_ones": 1,
+      "bg_phase_in_0011_orbit": 0,
+      "canonical_background": "0011",
+      "category": "NATURAL_PERIOD_STRONG",
+      "common_key": "r109_bg0011_T12_w10010100_h12",
+      "defect_active_bits": [
+        0,
+        2,
+        5,
+        6,
+        7
+      ],
+      "defect_phase_offset": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "defect_span": 8,
+      "defect_support_size": 5,
+      "defect_weight_by_mod4": {
+        "0": 1,
+        "1": 1,
+        "2": 2,
+        "3": 1
+      },
+      "ic_active_bits": [
+        0,
+        3,
+        5
+      ],
+      "ic_active_offsets_mod4": [
+        0,
+        1,
+        3
+      ],
+      "ic_length": 8,
+      "ic_span": 6,
+      "ic_support_size": 3,
+      "ic_weight_by_mod4": {
+        "0": 1,
+        "1": 1,
+        "3": 1
+      },
+      "label": "rule109_bg0011_T12",
+      "natural_key": "r109_bg0011_T12_w10010100_h12",
+      "positive": true,
+      "rule": 109,
+      "selection_reason": "max_span_shortest_word",
+      "word": "10010100",
+      "xor_defect": "10100111"
+    },
+    {
+      "T_local": 3,
+      "already_tested": false,
+      "background": "0110",
+      "background_window": "011001",
+      "bg_at_ic": "10",
+      "bg_at_ic_ones": 1,
+      "bg_phase_in_0011_orbit": 1,
+      "canonical_background": "0011",
+      "category": "NEGATIVE",
+      "common_key": "r109_bg0110_T3_w001100_h12",
+      "defect_active_bits": [
+        1,
+        3,
+        5
+      ],
+      "defect_phase_offset": [
+        1,
+        3
+      ],
+      "defect_span": 5,
+      "defect_support_size": 3,
+      "defect_weight_by_mod4": {
+        "1": 2,
+        "3": 1
+      },
+      "ic_active_bits": [
+        2,
+        3
+      ],
+      "ic_active_offsets_mod4": [
+        2,
+        3
+      ],
+      "ic_length": 6,
+      "ic_span": 2,
+      "ic_support_size": 2,
+      "ic_weight_by_mod4": {
+        "2": 1,
+        "3": 1
+      },
+      "label": "rule109_bg0110_T3",
+      "natural_key": "r109_bg0110_T3_w001100_h3",
+      "positive": false,
+      "rule": 109,
+      "selection_reason": "max_span_shortest_word",
+      "word": "001100",
+      "xor_defect": "010101"
+    },
+    {
+      "T_local": 6,
+      "already_tested": false,
+      "background": "0110",
+      "background_window": "0110011",
+      "bg_at_ic": "111",
+      "bg_at_ic_ones": 3,
+      "bg_phase_in_0011_orbit": 1,
+      "canonical_background": "0011",
+      "category": "NEGATIVE",
+      "common_key": "r109_bg0110_T6_w0010011_h12",
+      "defect_active_bits": [
+        1
+      ],
+      "defect_phase_offset": [
+        1
+      ],
+      "defect_span": 1,
+      "defect_support_size": 1,
+      "defect_weight_by_mod4": {
+        "1": 1
+      },
+      "ic_active_bits": [
+        2,
+        5,
+        6
+      ],
+      "ic_active_offsets_mod4": [
+        1,
+        2
+      ],
+      "ic_length": 7,
+      "ic_span": 5,
+      "ic_support_size": 3,
+      "ic_weight_by_mod4": {
+        "1": 1,
+        "2": 2
+      },
+      "label": "rule109_bg0110_T6",
+      "natural_key": "r109_bg0110_T6_w0010011_h6",
+      "positive": false,
+      "rule": 109,
+      "selection_reason": "max_span_shortest_word",
+      "word": "0010011",
+      "xor_defect": "0100000"
+    },
+    {
+      "T_local": 8,
+      "already_tested": false,
+      "background": "0110",
+      "background_window": "0110011",
+      "bg_at_ic": "11",
+      "bg_at_ic_ones": 2,
+      "bg_phase_in_0011_orbit": 1,
+      "canonical_background": "0011",
+      "category": "HORIZON_ACCEPTABLE",
+      "common_key": "r109_bg0110_T8_w0000011_h12",
+      "defect_active_bits": [
+        1,
+        2
+      ],
+      "defect_phase_offset": [
+        1,
+        2
+      ],
+      "defect_span": 2,
+      "defect_support_size": 2,
+      "defect_weight_by_mod4": {
+        "1": 1,
+        "2": 1
+      },
+      "ic_active_bits": [
+        5,
+        6
+      ],
+      "ic_active_offsets_mod4": [
+        1,
+        2
+      ],
+      "ic_length": 7,
+      "ic_span": 2,
+      "ic_support_size": 2,
+      "ic_weight_by_mod4": {
+        "1": 1,
+        "2": 1
+      },
+      "label": "rule109_bg0110_T8",
+      "natural_key": "r109_bg0110_T8_w0000011_h8",
+      "positive": true,
+      "rule": 109,
+      "selection_reason": "max_span_shortest_word",
+      "word": "0000011",
+      "xor_defect": "0110000"
+    },
+    {
+      "T_local": 6,
+      "already_tested": true,
+      "background": "1011",
+      "background_window": "10111011",
+      "bg_at_ic": "11",
+      "bg_at_ic_ones": 2,
+      "bg_phase_in_0011_orbit": null,
+      "canonical_background": "0111",
+      "category": "HORIZON_ARTIFACT",
+      "common_key": "r109_bg1011_T6_w00001001_h12",
+      "defect_active_bits": [
+        0,
+        2,
+        3,
+        6
+      ],
+      "defect_phase_offset": [
+        0,
+        2,
+        3
+      ],
+      "defect_span": 7,
+      "defect_support_size": 4,
+      "defect_weight_by_mod4": {
+        "0": 1,
+        "2": 2,
+        "3": 1
+      },
+      "ic_active_bits": [
+        4,
+        7
+      ],
+      "ic_active_offsets_mod4": [
+        0,
+        3
+      ],
+      "ic_length": 8,
+      "ic_span": 4,
+      "ic_support_size": 2,
+      "ic_weight_by_mod4": {
+        "0": 1,
+        "3": 1
+      },
+      "label": "rule109_bg1011_T6",
+      "natural_key": "r109_bg1011_T6_w00001001_h6",
+      "positive": false,
+      "rule": 109,
+      "selection_reason": "already_tested_exact_word",
+      "word": "00001001",
+      "xor_defect": "10110010"
+    },
+    {
+      "T_local": 10,
+      "already_tested": true,
+      "background": "1011",
+      "background_window": "10111011",
+      "bg_at_ic": "1",
+      "bg_at_ic_ones": 1,
+      "bg_phase_in_0011_orbit": null,
+      "canonical_background": "0111",
+      "category": "HORIZON_ACCEPTABLE",
+      "common_key": "r109_bg1011_T10_w00000001_h12",
+      "defect_active_bits": [
+        0,
+        2,
+        3,
+        4,
+        6
+      ],
+      "defect_phase_offset": [
+        0,
+        2,
+        3
+      ],
+      "defect_span": 7,
+      "defect_support_size": 5,
+      "defect_weight_by_mod4": {
+        "0": 2,
+        "2": 2,
+        "3": 1
+      },
+      "ic_active_bits": [
+        7
+      ],
+      "ic_active_offsets_mod4": [
+        3
+      ],
+      "ic_length": 8,
+      "ic_span": 1,
+      "ic_support_size": 1,
+      "ic_weight_by_mod4": {
+        "3": 1
+      },
+      "label": "rule109_bg1011_T10",
+      "natural_key": "r109_bg1011_T10_w00000001_h10",
+      "positive": true,
+      "rule": 109,
+      "selection_reason": "already_tested_exact_word",
+      "word": "00000001",
+      "xor_defect": "10111010"
+    },
+    {
+      "T_local": 3,
+      "already_tested": false,
+      "background": "1100",
+      "background_window": "11001100",
+      "bg_at_ic": "110",
+      "bg_at_ic_ones": 2,
+      "bg_phase_in_0011_orbit": 2,
+      "canonical_background": "0011",
+      "category": "NEGATIVE",
+      "common_key": "r109_bg1100_T3_w00001110_h12",
+      "defect_active_bits": [
+        0,
+        1,
+        6
+      ],
+      "defect_phase_offset": [
+        0,
+        1,
+        2
+      ],
+      "defect_span": 7,
+      "defect_support_size": 3,
+      "defect_weight_by_mod4": {
+        "0": 1,
+        "1": 1,
+        "2": 1
+      },
+      "ic_active_bits": [
+        4,
+        5,
+        6
+      ],
+      "ic_active_offsets_mod4": [
+        0,
+        1,
+        2
+      ],
+      "ic_length": 8,
+      "ic_span": 3,
+      "ic_support_size": 3,
+      "ic_weight_by_mod4": {
+        "0": 1,
+        "1": 1,
+        "2": 1
+      },
+      "label": "rule109_bg1100_T3",
+      "natural_key": "r109_bg1100_T3_w00001110_h3",
+      "positive": false,
+      "rule": 109,
+      "selection_reason": "max_span_shortest_word",
+      "word": "00001110",
+      "xor_defect": "11000010"
+    },
+    {
+      "T_local": 6,
+      "already_tested": false,
+      "background": "1100",
+      "background_window": "11001100",
+      "bg_at_ic": "010",
+      "bg_at_ic_ones": 1,
+      "bg_phase_in_0011_orbit": 2,
+      "canonical_background": "0011",
+      "category": "NEGATIVE",
+      "common_key": "r109_bg1100_T6_w00100110_h12",
+      "defect_active_bits": [
+        0,
+        1,
+        2,
+        4,
+        6
+      ],
+      "defect_phase_offset": [
+        0,
+        1,
+        2
+      ],
+      "defect_span": 7,
+      "defect_support_size": 5,
+      "defect_weight_by_mod4": {
+        "0": 2,
+        "1": 1,
+        "2": 2
+      },
+      "ic_active_bits": [
+        2,
+        5,
+        6
+      ],
+      "ic_active_offsets_mod4": [
+        1,
+        2
+      ],
+      "ic_length": 8,
+      "ic_span": 5,
+      "ic_support_size": 3,
+      "ic_weight_by_mod4": {
+        "1": 1,
+        "2": 2
+      },
+      "label": "rule109_bg1100_T6",
+      "natural_key": "r109_bg1100_T6_w00100110_h6",
+      "positive": false,
+      "rule": 109,
+      "selection_reason": "max_span_shortest_word",
+      "word": "00100110",
+      "xor_defect": "11101010"
+    },
+    {
+      "T_local": 8,
+      "already_tested": false,
+      "background": "1100",
+      "background_window": "11001100",
+      "bg_at_ic": "10",
+      "bg_at_ic_ones": 1,
+      "bg_phase_in_0011_orbit": 2,
+      "canonical_background": "0011",
+      "category": "HORIZON_ACCEPTABLE",
+      "common_key": "r109_bg1100_T8_w00000110_h12",
+      "defect_active_bits": [
+        0,
+        1,
+        4,
+        6
+      ],
+      "defect_phase_offset": [
+        0,
+        1,
+        2
+      ],
+      "defect_span": 7,
+      "defect_support_size": 4,
+      "defect_weight_by_mod4": {
+        "0": 2,
+        "1": 1,
+        "2": 1
+      },
+      "ic_active_bits": [
+        5,
+        6
+      ],
+      "ic_active_offsets_mod4": [
+        1,
+        2
+      ],
+      "ic_length": 8,
+      "ic_span": 2,
+      "ic_support_size": 2,
+      "ic_weight_by_mod4": {
+        "1": 1,
+        "2": 1
+      },
+      "label": "rule109_bg1100_T8",
+      "natural_key": "r109_bg1100_T8_w00000110_h8",
+      "positive": true,
+      "rule": 109,
+      "selection_reason": "max_span_shortest_word",
+      "word": "00000110",
+      "xor_defect": "11001010"
+    },
+    {
+      "T_local": 10,
+      "already_tested": false,
+      "background": "1100",
+      "background_window": "11001100",
+      "bg_at_ic": "0010",
+      "bg_at_ic_ones": 1,
+      "bg_phase_in_0011_orbit": 2,
+      "canonical_background": "0011",
+      "category": "NEGATIVE",
+      "common_key": "r109_bg1100_T10_w00111001_h12",
+      "defect_active_bits": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        7
+      ],
+      "defect_phase_offset": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "defect_span": 8,
+      "defect_support_size": 6,
+      "defect_weight_by_mod4": {
+        "0": 1,
+        "1": 2,
+        "2": 1,
+        "3": 2
+      },
+      "ic_active_bits": [
+        2,
+        3,
+        4,
+        7
+      ],
+      "ic_active_offsets_mod4": [
+        0,
+        2,
+        3
+      ],
+      "ic_length": 8,
+      "ic_span": 6,
+      "ic_support_size": 4,
+      "ic_weight_by_mod4": {
+        "0": 1,
+        "2": 1,
+        "3": 2
+      },
+      "label": "rule109_bg1100_T10",
+      "natural_key": "r109_bg1100_T10_w00111001_h10",
+      "positive": false,
+      "rule": 109,
+      "selection_reason": "max_span_shortest_word",
+      "word": "00111001",
+      "xor_defect": "11110101"
+    },
+    {
+      "T_local": 12,
+      "already_tested": false,
+      "background": "1100",
+      "background_window": "11001100",
+      "bg_at_ic": "010",
+      "bg_at_ic_ones": 1,
+      "bg_phase_in_0011_orbit": 2,
+      "canonical_background": "0011",
+      "category": "NATURAL_PERIOD_STRONG",
+      "common_key": "r109_bg1100_T12_w00101001_h12",
+      "defect_active_bits": [
+        0,
+        1,
+        2,
+        5,
+        7
+      ],
+      "defect_phase_offset": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "defect_span": 8,
+      "defect_support_size": 5,
+      "defect_weight_by_mod4": {
+        "0": 1,
+        "1": 2,
+        "2": 1,
+        "3": 1
+      },
+      "ic_active_bits": [
+        2,
+        4,
+        7
+      ],
+      "ic_active_offsets_mod4": [
+        0,
+        2,
+        3
+      ],
+      "ic_length": 8,
+      "ic_span": 6,
+      "ic_support_size": 3,
+      "ic_weight_by_mod4": {
+        "0": 1,
+        "2": 1,
+        "3": 1
+      },
+      "label": "rule109_bg1100_T12",
+      "natural_key": "r109_bg1100_T12_w00101001_h12",
+      "positive": true,
+      "rule": 109,
+      "selection_reason": "max_span_shortest_word",
+      "word": "00101001",
+      "xor_defect": "11100101"
+    },
+    {
+      "T_local": 6,
+      "already_tested": false,
+      "background": "1101",
+      "background_window": "1101110",
+      "bg_at_ic": "1",
+      "bg_at_ic_ones": 1,
+      "bg_phase_in_0011_orbit": null,
+      "canonical_background": "0111",
+      "category": "HORIZON_ARTIFACT",
+      "common_key": "r109_bg1101_T6_w0000100_h12",
+      "defect_active_bits": [
+        0,
+        1,
+        3,
+        5
+      ],
+      "defect_phase_offset": [
+        0,
+        1,
+        3
+      ],
+      "defect_span": 6,
+      "defect_support_size": 4,
+      "defect_weight_by_mod4": {
+        "0": 1,
+        "1": 2,
+        "3": 1
+      },
+      "ic_active_bits": [
+        4
+      ],
+      "ic_active_offsets_mod4": [
+        0
+      ],
+      "ic_length": 7,
+      "ic_span": 1,
+      "ic_support_size": 1,
+      "ic_weight_by_mod4": {
+        "0": 1
+      },
+      "label": "rule109_bg1101_T6",
+      "natural_key": "r109_bg1101_T6_w0000100_h6",
+      "positive": false,
+      "rule": 109,
+      "selection_reason": "max_span_shortest_word",
+      "word": "0000100",
+      "xor_defect": "1101010"
+    },
+    {
+      "T_local": 10,
+      "already_tested": true,
+      "background": "1101",
+      "background_window": "1101110",
+      "bg_at_ic": "1",
+      "bg_at_ic_ones": 1,
+      "bg_phase_in_0011_orbit": null,
+      "canonical_background": "0111",
+      "category": "NEGATIVE",
+      "common_key": "r109_bg1101_T10_w0001000_h12",
+      "defect_active_bits": [
+        0,
+        1,
+        4,
+        5
+      ],
+      "defect_phase_offset": [
+        0,
+        1
+      ],
+      "defect_span": 6,
+      "defect_support_size": 4,
+      "defect_weight_by_mod4": {
+        "0": 2,
+        "1": 2
+      },
+      "ic_active_bits": [
+        3
+      ],
+      "ic_active_offsets_mod4": [
+        3
+      ],
+      "ic_length": 7,
+      "ic_span": 1,
+      "ic_support_size": 1,
+      "ic_weight_by_mod4": {
+        "3": 1
+      },
+      "label": "rule109_bg1101_T10",
+      "natural_key": "r109_bg1101_T10_w0001000_h10",
+      "positive": false,
+      "rule": 109,
+      "selection_reason": "already_tested_exact_word",
+      "word": "0001000",
+      "xor_defect": "1100110"
+    }
+  ],
+  "descriptor_summaries": {
+    "background_window": {
+      "negative_separated_from_positive": true,
+      "negative_values": [
+        "0011001"
+      ],
+      "positive_constant": false,
+      "positive_values": [
+        "0110011",
+        "11001100"
+      ],
+      "values_by_background": {
+        "0011": "0011001",
+        "0110": "0110011",
+        "1100": "11001100"
+      }
+    },
+    "bg_at_ic": {
+      "negative_separated_from_positive": true,
+      "negative_values": [
+        "00"
+      ],
+      "positive_constant": false,
+      "positive_values": [
+        "10",
+        "11"
+      ],
+      "values_by_background": {
+        "0011": "00",
+        "0110": "11",
+        "1100": "10"
+      }
+    },
+    "bg_at_ic_ones": {
+      "negative_separated_from_positive": true,
+      "negative_values": [
+        "0"
+      ],
+      "positive_constant": false,
+      "positive_values": [
+        "1",
+        "2"
+      ],
+      "values_by_background": {
+        "0011": 0,
+        "0110": 2,
+        "1100": 1
+      }
+    },
+    "bg_phase_in_0011_orbit": {
+      "negative_separated_from_positive": true,
+      "negative_values": [
+        "0"
+      ],
+      "positive_constant": false,
+      "positive_values": [
+        "1",
+        "2"
+      ],
+      "values_by_background": {
+        "0011": 0,
+        "0110": 1,
+        "1100": 2
+      }
+    },
+    "defect_active_bits": {
+      "negative_separated_from_positive": true,
+      "negative_values": [
+        "(0, 2, 3, 5, 6)"
+      ],
+      "positive_constant": false,
+      "positive_values": [
+        "(0, 1, 4, 6)",
+        "(1, 2)"
+      ],
+      "values_by_background": {
+        "0011": [
+          0,
+          2,
+          3,
+          5,
+          6
+        ],
+        "0110": [
+          1,
+          2
+        ],
+        "1100": [
+          0,
+          1,
+          4,
+          6
+        ]
+      }
+    },
+    "defect_phase_offset": {
+      "negative_separated_from_positive": true,
+      "negative_values": [
+        "(0, 1, 2, 3)"
+      ],
+      "positive_constant": false,
+      "positive_values": [
+        "(0, 1, 2)",
+        "(1, 2)"
+      ],
+      "values_by_background": {
+        "0011": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "0110": [
+          1,
+          2
+        ],
+        "1100": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    "defect_span": {
+      "negative_separated_from_positive": false,
+      "negative_values": [
+        "7"
+      ],
+      "positive_constant": false,
+      "positive_values": [
+        "2",
+        "7"
+      ],
+      "values_by_background": {
+        "0011": 7,
+        "0110": 2,
+        "1100": 7
+      }
+    },
+    "defect_support_size": {
+      "negative_separated_from_positive": true,
+      "negative_values": [
+        "5"
+      ],
+      "positive_constant": false,
+      "positive_values": [
+        "2",
+        "4"
+      ],
+      "values_by_background": {
+        "0011": 5,
+        "0110": 2,
+        "1100": 4
+      }
+    },
+    "defect_weight_by_mod4": {
+      "negative_separated_from_positive": true,
+      "negative_values": [
+        "((0, 1), (1, 1), (2, 2), (3, 1))"
+      ],
+      "positive_constant": false,
+      "positive_values": [
+        "((0, 2), (1, 1), (2, 1))",
+        "((1, 1), (2, 1))"
+      ],
+      "values_by_background": {
+        "0011": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            3,
+            1
+          ]
+        ],
+        "0110": [
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            1
+          ]
+        ],
+        "1100": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            1
+          ]
+        ]
+      }
+    },
+    "ic_active_bits": {
+      "negative_separated_from_positive": true,
+      "negative_values": [
+        "(0, 5)"
+      ],
+      "positive_constant": true,
+      "positive_values": [
+        "(5, 6)"
+      ],
+      "values_by_background": {
+        "0011": [
+          0,
+          5
+        ],
+        "0110": [
+          5,
+          6
+        ],
+        "1100": [
+          5,
+          6
+        ]
+      }
+    },
+    "ic_active_offsets_mod4": {
+      "negative_separated_from_positive": true,
+      "negative_values": [
+        "(0, 1)"
+      ],
+      "positive_constant": true,
+      "positive_values": [
+        "(1, 2)"
+      ],
+      "values_by_background": {
+        "0011": [
+          0,
+          1
+        ],
+        "0110": [
+          1,
+          2
+        ],
+        "1100": [
+          1,
+          2
+        ]
+      }
+    },
+    "ic_length": {
+      "negative_separated_from_positive": false,
+      "negative_values": [
+        "7"
+      ],
+      "positive_constant": false,
+      "positive_values": [
+        "7",
+        "8"
+      ],
+      "values_by_background": {
+        "0011": 7,
+        "0110": 7,
+        "1100": 8
+      }
+    },
+    "ic_span": {
+      "negative_separated_from_positive": true,
+      "negative_values": [
+        "6"
+      ],
+      "positive_constant": true,
+      "positive_values": [
+        "2"
+      ],
+      "values_by_background": {
+        "0011": 6,
+        "0110": 2,
+        "1100": 2
+      }
+    },
+    "ic_support_size": {
+      "negative_separated_from_positive": false,
+      "negative_values": [
+        "2"
+      ],
+      "positive_constant": true,
+      "positive_values": [
+        "2"
+      ],
+      "values_by_background": {
+        "0011": 2,
+        "0110": 2,
+        "1100": 2
+      }
+    },
+    "xor_defect": {
+      "negative_separated_from_positive": true,
+      "negative_values": [
+        "1011011"
+      ],
+      "positive_constant": false,
+      "positive_values": [
+        "0110000",
+        "11001010"
+      ],
+      "values_by_background": {
+        "0011": "1011011",
+        "0110": "0110000",
+        "1100": "11001010"
+      }
+    }
+  },
+  "methodological_limit": "The verdict is based on three T=8 cases only. Any discriminator is a hypothesis that must be validated on broader rule_109 cases before being promoted to a causal law.",
+  "partial_descriptors": [
+    "bg_phase_in_0011_orbit",
+    "background_window",
+    "bg_at_ic",
+    "bg_at_ic_ones",
+    "xor_defect",
+    "defect_active_bits",
+    "defect_phase_offset",
+    "defect_support_size",
+    "defect_weight_by_mod4"
+  ],
+  "separating_descriptors": [
+    "ic_active_bits",
+    "ic_active_offsets_mod4",
+    "ic_span"
+  ],
+  "source": "anf_gradient_census_results.json",
+  "status": "ALIGNMENT_DISCRIMINANT_FOUND",
+  "target_cases": [
+    {
+      "T_local": 8,
+      "already_tested": false,
+      "background": "0011",
+      "background_window": "0011001",
+      "bg_at_ic": "00",
+      "bg_at_ic_ones": 0,
+      "bg_phase_in_0011_orbit": 0,
+      "canonical_background": "0011",
+      "category": "NEGATIVE",
+      "common_key": "r109_bg0011_T8_w1000010_h12",
+      "defect_active_bits": [
+        0,
+        2,
+        3,
+        5,
+        6
+      ],
+      "defect_phase_offset": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "defect_span": 7,
+      "defect_support_size": 5,
+      "defect_weight_by_mod4": {
+        "0": 1,
+        "1": 1,
+        "2": 2,
+        "3": 1
+      },
+      "ic_active_bits": [
+        0,
+        5
+      ],
+      "ic_active_offsets_mod4": [
+        0,
+        1
+      ],
+      "ic_length": 7,
+      "ic_span": 6,
+      "ic_support_size": 2,
+      "ic_weight_by_mod4": {
+        "0": 1,
+        "1": 1
+      },
+      "label": "rule109_bg0011_T8",
+      "natural_key": "r109_bg0011_T8_w1000010_h8",
+      "positive": false,
+      "rule": 109,
+      "selection_reason": "max_span_shortest_word",
+      "word": "1000010",
+      "xor_defect": "1011011"
+    },
+    {
+      "T_local": 8,
+      "already_tested": false,
+      "background": "0110",
+      "background_window": "0110011",
+      "bg_at_ic": "11",
+      "bg_at_ic_ones": 2,
+      "bg_phase_in_0011_orbit": 1,
+      "canonical_background": "0011",
+      "category": "HORIZON_ACCEPTABLE",
+      "common_key": "r109_bg0110_T8_w0000011_h12",
+      "defect_active_bits": [
+        1,
+        2
+      ],
+      "defect_phase_offset": [
+        1,
+        2
+      ],
+      "defect_span": 2,
+      "defect_support_size": 2,
+      "defect_weight_by_mod4": {
+        "1": 1,
+        "2": 1
+      },
+      "ic_active_bits": [
+        5,
+        6
+      ],
+      "ic_active_offsets_mod4": [
+        1,
+        2
+      ],
+      "ic_length": 7,
+      "ic_span": 2,
+      "ic_support_size": 2,
+      "ic_weight_by_mod4": {
+        "1": 1,
+        "2": 1
+      },
+      "label": "rule109_bg0110_T8",
+      "natural_key": "r109_bg0110_T8_w0000011_h8",
+      "positive": true,
+      "rule": 109,
+      "selection_reason": "max_span_shortest_word",
+      "word": "0000011",
+      "xor_defect": "0110000"
+    },
+    {
+      "T_local": 8,
+      "already_tested": false,
+      "background": "1100",
+      "background_window": "11001100",
+      "bg_at_ic": "10",
+      "bg_at_ic_ones": 1,
+      "bg_phase_in_0011_orbit": 2,
+      "canonical_background": "0011",
+      "category": "HORIZON_ACCEPTABLE",
+      "common_key": "r109_bg1100_T8_w00000110_h12",
+      "defect_active_bits": [
+        0,
+        1,
+        4,
+        6
+      ],
+      "defect_phase_offset": [
+        0,
+        1,
+        2
+      ],
+      "defect_span": 7,
+      "defect_support_size": 4,
+      "defect_weight_by_mod4": {
+        "0": 2,
+        "1": 1,
+        "2": 1
+      },
+      "ic_active_bits": [
+        5,
+        6
+      ],
+      "ic_active_offsets_mod4": [
+        1,
+        2
+      ],
+      "ic_length": 8,
+      "ic_span": 2,
+      "ic_support_size": 2,
+      "ic_weight_by_mod4": {
+        "1": 1,
+        "2": 1
+      },
+      "label": "rule109_bg1100_T8",
+      "natural_key": "r109_bg1100_T8_w00000110_h8",
+      "positive": true,
+      "rule": 109,
+      "selection_reason": "max_span_shortest_word",
+      "word": "00000110",
+      "xor_defect": "11001010"
+    }
+  ]
+}
