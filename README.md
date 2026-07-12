@@ -9,8 +9,9 @@ model participates in world selection, law evaluation, scoring, or acceptance.
 
 ## Preprint
 
-**Latest: v1.24** - Fase 57 shows center-mediated ANF is necessary but not sufficient for catalog ANF-gradient witnesses.
+**Latest: v1.25** - Fase 58 shows period/horizon is informative but incomplete inside rule_109.
 
+- v1.25 DOI: [10.5281/zenodo.21327600](https://doi.org/10.5281/zenodo.21327600)
 - v1.24 DOI: [10.5281/zenodo.21327353](https://doi.org/10.5281/zenodo.21327353)
 - v1.23 DOI: [10.5281/zenodo.21326792](https://doi.org/10.5281/zenodo.21326792)
 - v1.22 DOI: [10.5281/zenodo.21306875](https://doi.org/10.5281/zenodo.21306875)
@@ -36,6 +37,7 @@ model participates in world selection, law evaluation, scoring, or acceptance.
 - v1.2 DOI: [10.5281/zenodo.20738025](https://doi.org/10.5281/zenodo.20738025)
 - v1.1 DOI: [10.5281/zenodo.20687470](https://doi.org/10.5281/zenodo.20687470)
 - v1.0 DOI: [10.5281/zenodo.20516375](https://doi.org/10.5281/zenodo.20516375)
+- v1.25 series DOI: [10.5281/zenodo.21327599](https://doi.org/10.5281/zenodo.21327599)
 - v1.24 series DOI: [10.5281/zenodo.21327352](https://doi.org/10.5281/zenodo.21327352)
 - v1.23 series DOI: [10.5281/zenodo.21326791](https://doi.org/10.5281/zenodo.21326791)
 - v1.22 series DOI: [10.5281/zenodo.21306874](https://doi.org/10.5281/zenodo.21306874)
@@ -120,8 +122,8 @@ regenerated from the commands in the reproducibility guide.
 
 ```text
 Concha Estrada, M. A. (2026). ZUSE Automat Agent: Empirical Law Discovery in
-Elementary Cellular Automata (v1.24). Zenodo.
-https://doi.org/10.5281/zenodo.21327353
+Elementary Cellular Automata (v1.25). Zenodo.
+https://doi.org/10.5281/zenodo.21327600
 ```
 
 ## License
