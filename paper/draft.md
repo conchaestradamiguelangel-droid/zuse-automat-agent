@@ -132,7 +132,13 @@ separated active bits with span 6. However, validation across all 17
 `rule_109` cases falsifies this as a compact global rule: `ic_span` overlaps
 between positive and non-positive cases, and the only perfect separator is the
 exact `ic_active_bits` pattern, which is a catalog lookup rather than a causal
-descriptor. The resulting status is `ALIGNMENT_LOOKUP_ONLY`.
+descriptor. The resulting status is `ALIGNMENT_LOOKUP_ONLY`. A dynamic
+alignment audit then evolves each IC-over-background state alongside the pure
+periodic background and measures the XOR defect over `t=1..12`. No single
+dynamic descriptor separates all 5 positives, but a minimal predeclared union
+captures 4/5 positives with zero false positives. The remaining residual,
+`bg=1100/T=8/word=00000110`, survives the static and dynamic audits and becomes
+the best intervention target. The resulting status is `DYNAMIC_UNION_PARTIAL`.
 
 Every result is reproducible from deterministic scripts with no stochastic
 components in the discovery loop.
@@ -2339,6 +2345,61 @@ but does not become a compact global condition. A stronger causal explanation
 would require dynamic alignment features or an intervention experiment rather
 than further static descriptors alone.
 
+### 7.33 Dynamic alignment audit and minimal union (Fases 61--62)
+
+Fase 61 tests whether the remaining causal signal is dynamic rather than
+static. For each of the 17 `rule_109` cases in the Fase 55 census, the
+analysis simulates two systems over the common horizon `t=1..12`: the IC word
+superposed on its periodic background, and the pure periodic background alone.
+The measured defect is the XOR difference
+
+`defect(t) = state_with_IC(t) XOR background_only(t)`.
+
+This avoids reconstructing the background from `T_local`: the background is
+itself evolved under `rule_109`, in parallel with the IC state. The simulation
+uses a wide window (`WIDTH=256`) and places the IC with phase compatible with
+the background period. For each time step, the audit records defect size,
+span, compactness, center of mass, and derived growth/drift descriptors.
+
+No single dynamic descriptor separates all five positive witnesses from the
+twelve non-positive cases. However, several thresholds give no false positives:
+
+| Descriptor rule | TP | FP | TN | FN | Captured positives |
+| --- | ---: | ---: | ---: | ---: | --- |
+| `max_defect_size >= 12` | 1 | 0 | 12 | 4 | `bg=1011/T=10/word=00000001` |
+| `center_drift_abs <= 0.0` | 2 | 0 | 12 | 3 | `bg=0110/T=8/word=0000011`; `bg=1011/T=10/word=00000001` |
+| `size_growth_total <= -3` | 2 | 0 | 12 | 3 | `bg=0011/T=12/word=10010100`; `bg=1100/T=12/word=00101001` |
+
+The Fase 61 status is therefore `DYNAMIC_PARTIAL`: dynamic descriptors carry
+high-precision signal, but as subfamily-specific signatures rather than a
+single separating law.
+
+Fase 62 tests one predeclared minimal union, not a broad combinatorial search:
+
+`size_growth_total <= -3 OR center_drift_abs <= 0.0`.
+
+The result is:
+
+| Rule | TP | FP | TN | FN | Accuracy | Precision | Recall |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| `size_growth_total <= -3 OR center_drift_abs <= 0.0` | 4 | 0 | 12 | 1 | 0.941 | 1.000 | 0.800 |
+
+The union captures four positive witnesses with no false positives:
+`bg=0011/T=12/word=10010100`, `bg=0110/T=8/word=0000011`,
+`bg=1011/T=10/word=00000001`, and `bg=1100/T=12/word=00101001`.
+The single remaining false negative is
+`bg=1100/T=8/word=00000110`. Adding `max_defect_size >= 12` does not improve
+recall, because it captures a positive already covered by
+`center_drift_abs <= 0.0`.
+
+The Fase 62 status is `DYNAMIC_UNION_PARTIAL`. This result is stronger than
+noise: the union has precision 1.000 and no false positives. But it still does
+not close the causal explanation. The case `bg=1100/T=8/word=00000110`
+survives center-mediated structure, period/horizon thresholds, static
+IC-alignment descriptors, single dynamic descriptors, and the minimal dynamic
+union. It is therefore the most informative remaining target for a future
+intervention experiment.
+
 ## 8. Observer Artifacts and Pipeline Equivariance
 
 The ZUSE pipeline contains two classes of observer artifact that the atlas
@@ -2797,8 +2858,12 @@ Several controlled extensions have now been completed:
   points to background phase, IC placement, or alignment. Fases 59--60 then
   test that alignment layer: IC placement separates the three `T=8` cases, but
   the rule does not generalize to all 17 `rule_109` cases, and the only perfect
-  separator is the lookup-like exact `ic_active_bits` pattern. Full results are
-  in Sections 7.20-7.32.
+  separator is the lookup-like exact `ic_active_bits` pattern. Fases 61--62
+  then test dynamic alignment: no single descriptor separates all positives,
+  but the minimal union `size_growth_total <= -3 OR center_drift_abs <= 0.0`
+  captures 4/5 positives with zero false positives, leaving
+  `bg=1100/T=8/word=00000110` as the universal residual. Full results are in
+  Sections 7.20-7.33.
 
 Each extension is a controlled experiment with the same measurement protocol;
 only the IC or background definition changes.
