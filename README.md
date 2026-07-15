@@ -9,8 +9,9 @@ model participates in world selection, law evaluation, scoring, or acceptance.
 
 ## Preprint
 
-**Latest: v1.27** - Fases 61-62 show dynamic alignment gives a high-precision partial discriminator for the `rule_109` ANF-gradient residual, leaving `bg=1100/T=8` as the intervention target.
+**Latest: v1.28** - Fase 63 shows minimal monomial-level ANF interventions around `rule_109` destroy comparable oscillator support on `bg=1100` before the ANF-gradient question can be measured.
 
+- v1.28 DOI: [10.5281/zenodo.21385190](https://doi.org/10.5281/zenodo.21385190)
 - v1.27 DOI: [10.5281/zenodo.21328117](https://doi.org/10.5281/zenodo.21328117)
 - v1.26 DOI: [10.5281/zenodo.21327839](https://doi.org/10.5281/zenodo.21327839)
 - v1.25 DOI: [10.5281/zenodo.21327600](https://doi.org/10.5281/zenodo.21327600)
@@ -39,6 +40,7 @@ model participates in world selection, law evaluation, scoring, or acceptance.
 - v1.2 DOI: [10.5281/zenodo.20738025](https://doi.org/10.5281/zenodo.20738025)
 - v1.1 DOI: [10.5281/zenodo.20687470](https://doi.org/10.5281/zenodo.20687470)
 - v1.0 DOI: [10.5281/zenodo.20516375](https://doi.org/10.5281/zenodo.20516375)
+- v1.28 series DOI: [10.5281/zenodo.21385189](https://doi.org/10.5281/zenodo.21385189)
 - v1.27 series DOI: [10.5281/zenodo.21328116](https://doi.org/10.5281/zenodo.21328116)
 - v1.26 series DOI: [10.5281/zenodo.21327838](https://doi.org/10.5281/zenodo.21327838)
 - v1.25 series DOI: [10.5281/zenodo.21327599](https://doi.org/10.5281/zenodo.21327599)
@@ -126,8 +128,8 @@ regenerated from the commands in the reproducibility guide.
 
 ```text
 Concha Estrada, M. A. (2026). ZUSE Automat Agent: Empirical Law Discovery in
-Elementary Cellular Automata (v1.27). Zenodo.
-https://doi.org/10.5281/zenodo.21328117
+Elementary Cellular Automata (v1.28). Zenodo.
+https://doi.org/10.5281/zenodo.21385190
 ```
 
 ## License
