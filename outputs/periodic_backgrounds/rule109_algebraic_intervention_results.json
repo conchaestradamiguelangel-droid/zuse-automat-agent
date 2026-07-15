@@ -1,0 +1,260 @@
+{
+  "interventions": [
+    {
+      "anf_measurements": [],
+      "anf_monomials": [
+        "1",
+        "R",
+        "CR",
+        "L",
+        "LCR"
+      ],
+      "bg1100_sweep": {
+        "alias_count": 12,
+        "moving_hits": [],
+        "processed_ic_words": 502,
+        "stationary_hits": []
+      },
+      "catalog_presence": {
+        "backgrounds": [],
+        "fase55_census_count": 0,
+        "fase55_census_present": false,
+        "periods": [],
+        "present": false,
+        "row_count": 0,
+        "stationary_count": 0
+      },
+      "center_structure": {
+        "C_alone": false,
+        "LR_no_center": false,
+        "center_interactions": [
+          "CR",
+          "LCR"
+        ],
+        "center_mediated": true,
+        "strict_center_mediated": true
+      },
+      "expected_monomials": [
+        "1",
+        "L",
+        "R",
+        "CR",
+        "LCR"
+      ],
+      "expected_ok": true,
+      "name": "remove_LC",
+      "operation": "remove monomial LC from rule_109",
+      "rule": 173,
+      "truth_table": [
+        1,
+        0,
+        1,
+        1,
+        0,
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "anf_measurements": [],
+      "anf_monomials": [
+        "1",
+        "R",
+        "L",
+        "LC",
+        "LCR"
+      ],
+      "bg1100_sweep": {
+        "alias_count": 8,
+        "moving_hits": [],
+        "processed_ic_words": 502,
+        "stationary_hits": []
+      },
+      "catalog_presence": {
+        "backgrounds": [],
+        "fase55_census_count": 0,
+        "fase55_census_present": false,
+        "periods": [],
+        "present": false,
+        "row_count": 0,
+        "stationary_count": 0
+      },
+      "center_structure": {
+        "C_alone": false,
+        "LR_no_center": false,
+        "center_interactions": [
+          "LC",
+          "LCR"
+        ],
+        "center_mediated": true,
+        "strict_center_mediated": true
+      },
+      "expected_monomials": [
+        "1",
+        "L",
+        "LC",
+        "R",
+        "LCR"
+      ],
+      "expected_ok": true,
+      "name": "remove_CR",
+      "operation": "remove monomial CR from rule_109",
+      "rule": 229,
+      "truth_table": [
+        1,
+        0,
+        1,
+        0,
+        0,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "anf_measurements": [],
+      "anf_monomials": [
+        "1",
+        "R",
+        "C",
+        "CR",
+        "L",
+        "LC",
+        "LCR"
+      ],
+      "bg1100_sweep": {
+        "alias_count": 0,
+        "moving_hits": [],
+        "processed_ic_words": 502,
+        "stationary_hits": []
+      },
+      "catalog_presence": {
+        "backgrounds": [
+          "0001",
+          "1000"
+        ],
+        "fase55_census_count": 0,
+        "fase55_census_present": false,
+        "periods": [
+          2
+        ],
+        "present": true,
+        "row_count": 2,
+        "stationary_count": 2
+      },
+      "center_structure": {
+        "C_alone": true,
+        "LR_no_center": false,
+        "center_interactions": [
+          "LC",
+          "CR",
+          "LCR"
+        ],
+        "center_mediated": false,
+        "strict_center_mediated": false
+      },
+      "expected_monomials": [
+        "1",
+        "L",
+        "C",
+        "LC",
+        "R",
+        "CR",
+        "LCR"
+      ],
+      "expected_ok": true,
+      "name": "add_C",
+      "operation": "add isolated C monomial to rule_109",
+      "rule": 161,
+      "truth_table": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "anf_measurements": [],
+      "anf_monomials": [
+        "1",
+        "R",
+        "CR",
+        "L",
+        "LR",
+        "LC",
+        "LCR"
+      ],
+      "bg1100_sweep": {
+        "alias_count": 0,
+        "moving_hits": [],
+        "processed_ic_words": 502,
+        "stationary_hits": []
+      },
+      "catalog_presence": {
+        "backgrounds": [],
+        "fase55_census_count": 0,
+        "fase55_census_present": false,
+        "periods": [],
+        "present": false,
+        "row_count": 0,
+        "stationary_count": 0
+      },
+      "center_structure": {
+        "C_alone": false,
+        "LR_no_center": true,
+        "center_interactions": [
+          "LC",
+          "CR",
+          "LCR"
+        ],
+        "center_mediated": false,
+        "strict_center_mediated": false
+      },
+      "expected_monomials": [
+        "1",
+        "L",
+        "LC",
+        "LR",
+        "R",
+        "CR",
+        "LCR"
+      ],
+      "expected_ok": true,
+      "name": "add_LR",
+      "operation": "add LR monomial without center to rule_109",
+      "rule": 205,
+      "truth_table": [
+        1,
+        0,
+        1,
+        1,
+        0,
+        0,
+        1,
+        1
+      ]
+    }
+  ],
+  "phase": 63,
+  "reference": {
+    "common_t_window": 12,
+    "min_comparable_span": 11,
+    "slope": -0.307283,
+    "slope_tolerance_percent": 10.0
+  },
+  "status": "ALGEBRAIC_INTERVENTION_PREFLIGHT_BLOCKED",
+  "target_case": {
+    "T_local": 8,
+    "background": "1100",
+    "category": "HORIZON_ACCEPTABLE",
+    "role": "residual_target",
+    "rule": 109,
+    "word": "00000110"
+  },
+  "verdict_reason": "None of the four minimal ANF interventions has a stationary oscillator on bg=1100 in the minimal sweep, so the residual intervention test cannot be run directly."
+}
