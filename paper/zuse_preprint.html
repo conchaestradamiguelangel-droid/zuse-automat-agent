@@ -257,7 +257,13 @@ are verified, but none has a stationary oscillator on <code>bg=1100</code> under
 same periodic-background protocol. The intervention test is therefore blocked
 before ANF-gradient measurement: the minimal monomial-level edits destroy the
 comparable oscillator support. The resulting status is
-<code>ALGEBRAIC_INTERVENTION_PREFLIGHT_BLOCKED</code>.</p>
+<code>ALGEBRAIC_INTERVENTION_PREFLIGHT_BLOCKED</code>. A finer Hamming-1 truth-table
+audit then tests all one-bit neighbours of <code>rule_109</code>. Seven of eight
+neighbours have no stationary or moving oscillator on <code>bg=1100</code>; the only
+survivor is the bit-0 neighbour <code>rule_108</code>, which collapses to a compact
+period-2 mechanism with slope -0.017102 and R^2 = 0.264706, not a comparable
+ANF-gradient witness. The resulting status is
+<code>HAMMING1_WITNESSES_FOUND_NOT_COMPARABLE</code>.</p>
 <p>Every result is reproducible from deterministic scripts with no stochastic
 components in the discovery loop.</p>
 <h2>1. Introduction</h2>
@@ -3464,6 +3470,148 @@ the oscillator itself. A causal intervention must therefore be finer or more
 conditioned than a whole-monomial ANF edit, for example by moving to
 Hamming-1 truth-table neighbors or by targeting the surviving residual with a
 more local dynamic analysis.</p>
+<h3>7.35 Hamming-1 neighbourhood audit (Fase 64)</h3>
+<p>Fase 64 tests whether the Fase 63 block is merely an artifact of intervention
+granularity. Whole-monomial ANF edits can flip more than one truth-table bit at
+once. The finest possible ECA intervention is therefore a Hamming-1 neighbour:</p>
+<p><code>rule_i = 109 XOR (1 &lt;&lt; i)</code>, for <code>i = 0..7</code>.</p>
+<p>The resulting neighbours are <code>108</code>, <code>111</code>, <code>105</code>, <code>101</code>, <code>125</code>, <code>77</code>, <code>45</code>,
+and <code>237</code>. Note that the bit-4 neighbour is <code>125</code>, not <code>93</code>, since
+<code>109 XOR 16 = 125</code>.</p>
+<p>Each neighbour is swept on <code>bg=1100</code> with IC words of length 1..8 under the
+same preflight protocol as Fase 63:</p>
+<table>
+<thead>
+<tr>
+<th align="right">Bit flipped</th>
+<th align="right">Rule</th>
+<th>Local ANF</th>
+<th align="right">Stationary hits</th>
+<th align="right">Moving hits</th>
+<th align="right">Max span</th>
+<th>Periods</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="right">0</td>
+<td align="right">108</td>
+<td><code>C XOR LR</code></td>
+<td align="right">237</td>
+<td align="right">0</td>
+<td align="right">9</td>
+<td><code>[2]</code></td>
+</tr>
+<tr>
+<td align="right">1</td>
+<td align="right">111</td>
+<td><code>1 XOR L XOR LR XOR LC</code></td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td><code>[]</code></td>
+</tr>
+<tr>
+<td align="right">2</td>
+<td align="right">105</td>
+<td><code>1 XOR R XOR C XOR L</code></td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td><code>[]</code></td>
+</tr>
+<tr>
+<td align="right">3</td>
+<td align="right">101</td>
+<td><code>1 XOR R XOR L XOR LC</code></td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td><code>[]</code></td>
+</tr>
+<tr>
+<td align="right">4</td>
+<td align="right">125</td>
+<td><code>1 XOR R XOR CR XOR LR</code></td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td><code>[]</code></td>
+</tr>
+<tr>
+<td align="right">5</td>
+<td align="right">77</td>
+<td><code>1 XOR R XOR CR XOR L XOR LR XOR LC</code></td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td><code>[]</code></td>
+</tr>
+<tr>
+<td align="right">6</td>
+<td align="right">45</td>
+<td><code>1 XOR R XOR CR XOR L</code></td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td><code>[]</code></td>
+</tr>
+<tr>
+<td align="right">7</td>
+<td align="right">237</td>
+<td><code>1 XOR R XOR CR XOR L XOR LC</code></td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td><code>[]</code></td>
+</tr>
+</tbody></table>
+<p>Seven of eight neighbours therefore behave like the Fase 63 monomial edits:
+they do not preserve stationary or moving oscillator support on <code>bg=1100</code>.
+The single survivor is <code>rule_108</code>, produced by flipping bit 0. It yields 237
+stationary witnesses, but all are compact period-2 oscillators with maximum
+span 9. The strongest measured witness is
+<code>rule_108/bg=1100/T=2/word=00000001</code>.</p>
+<p>Its ANF measurement is not comparable to the <code>rule_109/T=8</code> residual:</p>
+<table>
+<thead>
+<tr>
+<th align="right">T_WINDOW</th>
+<th align="right">Active outputs</th>
+<th align="right">Distance classes</th>
+<th align="right">Slope</th>
+<th align="right">R^2</th>
+<th>Comparable</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="right">2</td>
+<td align="right">5</td>
+<td align="right">4</td>
+<td align="right">-0.017102</td>
+<td align="right">0.264706</td>
+<td>false</td>
+</tr>
+<tr>
+<td align="right">12</td>
+<td align="right">5</td>
+<td align="right">4</td>
+<td align="right">-0.017102</td>
+<td align="right">0.264706</td>
+<td>false</td>
+</tr>
+</tbody></table>
+<p>Thus, Hamming-1 perturbation does not produce a comparable modified
+<code>rule_109/bg=1100/T=8</code> mechanism. It either destroys the oscillator support
+entirely, or in the bit-0 case collapses into the already known compact
+<code>rule_108/T=2</code> attractor. The Fase 64 status is
+<code>HAMMING1_WITNESSES_FOUND_NOT_COMPARABLE</code>.</p>
+<p>Together, Fases 63--64 establish a local perturbation boundary around the
+residual mechanism. Neither monomial-level ANF edits nor atomic truth-table
+bit flips yield a comparable stationary oscillator with an ANF-gradient
+signature on <code>bg=1100</code>. The <code>rule_109/bg=1100/T=8</code> residual is therefore
+locally isolated under the tested ECA perturbations; a stronger causal
+experiment would need a conditioned intervention that preserves the orbit
+rather than changing the global rule table uniformly.</p>
 <h2>8. Observer Artifacts and Pipeline Equivariance</h2>
 <p>The ZUSE pipeline contains two classes of observer artifact that the atlas
 identifies and characterizes. Framing these artifacts as results — not just
@@ -3932,7 +4080,11 @@ captures 4/5 positives with zero false positives, leaving
 four minimal monomial-level ANF interventions around <code>rule_109</code>; all four
 edits are algebraically valid, but none preserves a stationary oscillator on
 <code>bg=1100</code>, so the direct intervention test is blocked before cone-ANF
-measurement. Full results are in Sections 7.20-7.34.</li>
+measurement. Fase 64 then tests the Hamming-1 truth-table neighbourhood:
+seven neighbours have no oscillator support on <code>bg=1100</code>, while the only
+survivor, <code>rule_108</code>, collapses to a compact <code>T=2</code> mechanism with
+non-comparable ANF slope (<code>-0.017102</code>, <code>R^2=0.264706</code>). Full results are in
+Sections 7.20-7.35.</li>
 </ul>
 <p>Each extension is a controlled experiment with the same measurement protocol;
 only the IC or background definition changes.</p>
