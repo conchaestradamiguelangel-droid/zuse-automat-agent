@@ -1,0 +1,4663 @@
+{
+  "background": "1100",
+  "base_rule": 109,
+  "base_rule_binary": "01101101",
+  "neighbors": [
+    {
+      "alias_count": 0,
+      "anf_measurements": [
+        {
+          "case": {
+            "T_local": 2,
+            "background": "1100",
+            "label": "rule108_bg1100_T2_w00000001",
+            "role": "synthetic_intervention",
+            "rule": 108,
+            "word": "00000001"
+          },
+          "catalog_record": {
+            "background": "1100",
+            "kind": "stationary",
+            "motif": [
+              "##..##.##",
+              "##..##.#"
+            ],
+            "period_T": 2,
+            "rule": 108,
+            "span": 9,
+            "word": "00000001",
+            "word_len": 8
+          },
+          "measurements": [
+            {
+              "T_local": 2,
+              "active_summary": {
+                "count": 5,
+                "degree_fit": {
+                  "distinct_dist_count": 4,
+                  "intercept": 3.0,
+                  "r2": 1.0,
+                  "reliable": true,
+                  "slope": 0.0,
+                  "usable_count": 5
+                },
+                "degree_range": [
+                  3,
+                  3
+                ],
+                "distinct_dist_count": 4,
+                "log_monomial_fit": {
+                  "distinct_dist_count": 4,
+                  "intercept": 0.7189220658376776,
+                  "r2": 0.26470588235294124,
+                  "reliable": true,
+                  "slope": -0.01710176700142173,
+                  "usable_count": 5
+                },
+                "monomial_range": [
+                  4,
+                  5
+                ]
+              },
+              "all_outputs_match_concrete": true,
+              "background": "1100",
+              "catalog_motif": [
+                "##..##.##",
+                "##..##.#"
+              ],
+              "catalog_span": 9,
+              "comparable_to_t15": false,
+              "final_diff_global": [
+                124,
+                125,
+                128,
+                129,
+                131
+              ],
+              "label": "rule108_bg1100_T2_w00000001",
+              "local_final_active_indices": [
+                9,
+                10,
+                13,
+                14,
+                16
+              ],
+              "nonconstant_summary": {
+                "count": 25,
+                "degree_fit": {
+                  "distinct_dist_count": 13,
+                  "intercept": 3.21968397844194,
+                  "r2": 0.20722706077142727,
+                  "reliable": true,
+                  "slope": -0.054262616364527186,
+                  "usable_count": 25
+                },
+                "degree_range": [
+                  1,
+                  3
+                ],
+                "distinct_dist_count": 13,
+                "log_monomial_fit": {
+                  "distinct_dist_count": 13,
+                  "intercept": 0.7339147295060034,
+                  "r2": 0.24750175766420413,
+                  "reliable": true,
+                  "slope": -0.020820364440655898,
+                  "usable_count": 25
+                },
+                "monomial_range": [
+                  1,
+                  5
+                ]
+              },
+              "outputs": [
+                {
+                  "concrete_active": false,
+                  "concrete_final_actual_bit": 0,
+                  "concrete_final_diff_bit": 0,
+                  "concrete_match": true,
+                  "constant_term": 0,
+                  "degree": 1,
+                  "degree_histogram": {
+                    "1": 1
+                  },
+                  "dist": 12.5,
+                  "global_pos": 115,
+                  "log10_monomials": 0.0,
+                  "monomial_count": 1,
+                  "nonconstant": true,
+                  "output_index": 0,
+                  "packed_final_actual_bit": 0
+                },
+                {
+                  "concrete_active": false,
+                  "concrete_final_actual_bit": 1,
+                  "concrete_final_diff_bit": 0,
+                  "concrete_match": true,
+                  "constant_term": 1,
+                  "degree": 3,
+                  "degree_histogram": {
+                    "0": 1,
+                    "1": 1,
+                    "3": 1
+                  },
+                  "dist": 11.5,
+                  "global_pos": 116,
+                  "log10_monomials": 0.47712125471966244,
+                  "monomial_count": 3,
+                  "nonconstant": true,
+                  "output_index": 1,
+                  "packed_final_actual_bit": 1
+                },
+                {
+                  "concrete_active": false,
+                  "concrete_final_actual_bit": 1,
+                  "concrete_final_diff_bit": 0,
+                  "concrete_match": true,
+                  "constant_term": 1,
+                  "degree": 3,
+                  "degree_histogram": {
+                    "0": 1,
+                    "1": 1,
+                    "3": 3
+                  },
+                  "dist": 10.5,
+                  "global_pos": 117,
+                  "log10_monomials": 0.6989700043360189,
+                  "monomial_count": 5,
+                  "nonconstant": true,
+                  "output_index": 2,
+                  "packed_final_actual_bit": 1
+                },
+                {
+                  "concrete_active": false,
+                  "concrete_final_actual_bit": 0,
+                  "concrete_final_diff_bit": 0,
+                  "concrete_match": true,
+                  "constant_term": 0,
+                  "degree": 3,
+                  "degree_histogram": {
+                    "1": 1,
+                    "3": 3
+                  },
+                  "dist": 9.5,
+                  "global_pos": 118,
+                  "log10_monomials": 0.6020599913279624,
+                  "monomial_count": 4,
+                  "nonconstant": true,
+                  "output_index": 3,
+                  "packed_final_actual_bit": 0
+                },
+                {
+                  "concrete_active": false,
+                  "concrete_final_actual_bit": 0,
+                  "concrete_final_diff_bit": 0,
+                  "concrete_match": true,
+                  "constant_term": 0,
+                  "degree": 3,
+                  "degree_histogram": {
+                    "1": 1,
+                    "3": 3
+                  },
+                  "dist": 8.5,
+                  "global_pos": 119,
+                  "log10_monomials": 0.6020599913279624,
+                  "monomial_count": 4,
+                  "nonconstant": true,
+                  "output_index": 4,
+                  "packed_final_actual_bit": 0
+                },
+                {
+                  "concrete_active": false,
+                  "concrete_final_actual_bit": 1,
+                  "concrete_final_diff_bit": 0,
+                  "concrete_match": true,
+                  "constant_term": 1,
+                  "degree": 3,
+                  "degree_histogram": {
+                    "0": 1,
+                    "1": 1,
+                    "3": 3
+                  },
+                  "dist": 7.5,
+                  "global_pos": 120,
+                  "log10_monomials": 0.6989700043360189,
+                  "monomial_count": 5,
+                  "nonconstant": true,
+                  "output_index": 5,
+                  "packed_final_actual_bit": 1
+                },
+                {
+                  "concrete_active": false,
+                  "concrete_final_actual_bit": 1,
+                  "concrete_final_diff_bit": 0,
+                  "concrete_match": true,
+                  "constant_term": 1,
+                  "degree": 3,
+                  "degree_histogram": {
+                    "0": 1,
+                    "1": 1,
+                    "3": 3
+                  },
+                  "dist": 6.5,
+                  "global_pos": 121,
+                  "log10_monomials": 0.6989700043360189,
+                  "monomial_count": 5,
+                  "nonconstant": true,
+                  "output_index": 6,
+                  "packed_final_actual_bit": 1
+                },
+                {
+                  "concrete_active": false,
+                  "concrete_final_actual_bit": 0,
+                  "concrete_final_diff_bit": 0,
+                  "concrete_match": true,
+                  "constant_term": 0,
+                  "degree": 3,
+                  "degree_histogram": {
+                    "1": 1,
+                    "3": 3
+                  },
+                  "dist": 5.5,
+                  "global_pos": 122,
+                  "log10_monomials": 0.6020599913279624,
+                  "monomial_count": 4,
+                  "nonconstant": true,
+                  "output_index": 7,
+                  "packed_final_actual_bit": 0
+                },
+                {
+                  "concrete_active": false,
+                  "concrete_final_actual_bit": 0,
+                  "concrete_final_diff_bit": 0,
+                  "concrete_match": true,
+                  "constant_term": 0,
+                  "degree": 3,
+                  "degree_histogram": {
+                    "1": 1,
+                    "3": 3
+                  },
+                  "dist": 4.5,
+                  "global_pos": 123,
+                  "log10_monomials": 0.6020599913279624,
+                  "monomial_count": 4,
+                  "nonconstant": true,
+                  "output_index": 8,
+                  "packed_final_actual_bit": 0
+                },
+                {
+                  "concrete_active": true,
+                  "concrete_final_actual_bit": 0,
+                  "concrete_final_diff_bit": 1,
+                  "concrete_match": true,
+                  "constant_term": 1,
+                  "degree": 3,
+                  "degree_histogram": {
+                    "0": 1,
+                    "1": 1,
+                    "3": 3
+                  },
+                  "dist": 3.5,
+                  "global_pos": 124,
+                  "log10_monomials": 0.6989700043360189,
+                  "monomial_count": 5,
+                  "nonconstant": true,
+                  "output_index": 9,
+                  "packed_final_actual_bit": 0
+                },
+                {
+                  "concrete_active": true,
+                  "concrete_final_actual_bit": 0,
+                  "concrete_final_diff_bit": 1,
+                  "concrete_match": true,
+                  "constant_term": 1,
+                  "degree": 3,
+                  "degree_histogram": {
+                    "0": 1,
+                    "1": 1,
+                    "3": 3
+                  },
+                  "dist": 2.5,
+                  "global_pos": 125,
+                  "log10_monomials": 0.6989700043360189,
+                  "monomial_count": 5,
+                  "nonconstant": true,
+                  "output_index": 10,
+                  "packed_final_actual_bit": 0
+                },
+                {
+                  "concrete_active": false,
+                  "concrete_final_actual_bit": 0,
+                  "concrete_final_diff_bit": 0,
+                  "concrete_match": true,
+                  "constant_term": 0,
+                  "degree": 3,
+                  "degree_histogram": {
+                    "1": 1,
+                    "3": 3
+                  },
+                  "dist": 1.5,
+                  "global_pos": 126,
+                  "log10_monomials": 0.6020599913279624,
+                  "monomial_count": 4,
+                  "nonconstant": true,
+                  "output_index": 11,
+                  "packed_final_actual_bit": 0
+                },
+                {
+                  "concrete_active": false,
+                  "concrete_final_actual_bit": 0,
+                  "concrete_final_diff_bit": 0,
+                  "concrete_match": true,
+                  "constant_term": 0,
+                  "degree": 3,
+                  "degree_histogram": {
+                    "1": 1,
+                    "3": 3
+                  },
+                  "dist": 0.5,
+                  "global_pos": 127,
+                  "log10_monomials": 0.6020599913279624,
+                  "monomial_count": 4,
+                  "nonconstant": true,
+                  "output_index": 12,
+                  "packed_final_actual_bit": 0
+                },
+                {
+                  "concrete_active": true,
+                  "concrete_final_actual_bit": 0,
+                  "concrete_final_diff_bit": 1,
+                  "concrete_match": true,
+                  "constant_term": 1,
+                  "degree": 3,
+                  "degree_histogram": {
+                    "0": 1,
+                    "1": 1,
+                    "3": 3
+                  },
+                  "dist": 0.5,
+                  "global_pos": 128,
+                  "log10_monomials": 0.6989700043360189,
+                  "monomial_count": 5,
+                  "nonconstant": true,
+                  "output_index": 13,
+                  "packed_final_actual_bit": 0
+                },
+                {
+                  "concrete_active": true,
+                  "concrete_final_actual_bit": 0,
+                  "concrete_final_diff_bit": 1,
+                  "concrete_match": true,
+                  "constant_term": 1,
+                  "degree": 3,
+                  "degree_histogram": {
+                    "0": 1,
+                    "1": 1,
+                    "3": 3
+                  },
+                  "dist": 1.5,
+                  "global_pos": 129,
+                  "log10_monomials": 0.6989700043360189,
+                  "monomial_count": 5,
+                  "nonconstant": true,
+                  "output_index": 14,
+                  "packed_final_actual_bit": 0
+                },
+                {
+                  "concrete_active": false,
+                  "concrete_final_actual_bit": 0,
+                  "concrete_final_diff_bit": 0,
+                  "concrete_match": true,
+                  "constant_term": 0,
+                  "degree": 3,
+                  "degree_histogram": {
+                    "1": 1,
+                    "3": 3
+                  },
+                  "dist": 2.5,
+                  "global_pos": 130,
+                  "log10_monomials": 0.6020599913279624,
+                  "monomial_count": 4,
+                  "nonconstant": true,
+                  "output_index": 15,
+                  "packed_final_actual_bit": 0
+                },
+                {
+                  "concrete_active": true,
+                  "concrete_final_actual_bit": 1,
+                  "concrete_final_diff_bit": 1,
+                  "concrete_match": true,
+                  "constant_term": 0,
+                  "degree": 3,
+                  "degree_histogram": {
+                    "1": 1,
+                    "3": 3
+                  },
+                  "dist": 3.5,
+                  "global_pos": 131,
+                  "log10_monomials": 0.6020599913279624,
+                  "monomial_count": 4,
+                  "nonconstant": true,
+                  "output_index": 16,
+                  "packed_final_actual_bit": 1
+                },
+                {
+                  "concrete_active": false,
+                  "concrete_final_actual_bit": 1,
+                  "concrete_final_diff_bit": 0,
+                  "concrete_match": true,
+                  "constant_term": 1,
+                  "degree": 3,
+                  "degree_histogram": {
+                    "0": 1,
+                    "1": 1,
+                    "3": 3
+                  },
+                  "dist": 4.5,
+                  "global_pos": 132,
+                  "log10_monomials": 0.6989700043360189,
+                  "monomial_count": 5,
+                  "nonconstant": true,
+                  "output_index": 17,
+                  "packed_final_actual_bit": 1
+                },
+                {
+                  "concrete_active": false,
+                  "concrete_final_actual_bit": 1,
+                  "concrete_final_diff_bit": 0,
+                  "concrete_match": true,
+                  "constant_term": 1,
+                  "degree": 3,
+                  "degree_histogram": {
+                    "0": 1,
+                    "1": 1,
+                    "3": 3
+                  },
+                  "dist": 5.5,
+                  "global_pos": 133,
+                  "log10_monomials": 0.6989700043360189,
+                  "monomial_count": 5,
+                  "nonconstant": true,
+                  "output_index": 18,
+                  "packed_final_actual_bit": 1
+                },
+                {
+                  "concrete_active": false,
+                  "concrete_final_actual_bit": 0,
+                  "concrete_final_diff_bit": 0,
+                  "concrete_match": true,
+                  "constant_term": 0,
+                  "degree": 3,
+                  "degree_histogram": {
+                    "1": 1,
+                    "3": 3
+                  },
+                  "dist": 6.5,
+                  "global_pos": 134,
+                  "log10_monomials": 0.6020599913279624,
+                  "monomial_count": 4,
+                  "nonconstant": true,
+                  "output_index": 19,
+                  "packed_final_actual_bit": 0
+                },
+                {
+                  "concrete_active": false,
+                  "concrete_final_actual_bit": 0,
+                  "concrete_final_diff_bit": 0,
+                  "concrete_match": true,
+                  "constant_term": 0,
+                  "degree": 3,
+                  "degree_histogram": {
+                    "1": 1,
+                    "3": 3
+                  },
+                  "dist": 7.5,
+                  "global_pos": 135,
+                  "log10_monomials": 0.6020599913279624,
+                  "monomial_count": 4,
+                  "nonconstant": true,
+                  "output_index": 20,
+                  "packed_final_actual_bit": 0
+                },
+                {
+                  "concrete_active": false,
+                  "concrete_final_actual_bit": 1,
+                  "concrete_final_diff_bit": 0,
+                  "concrete_match": true,
+                  "constant_term": 1,
+                  "degree": 3,
+                  "degree_histogram": {
+                    "0": 1,
+                    "1": 1,
+                    "3": 3
+                  },
+                  "dist": 8.5,
+                  "global_pos": 136,
+                  "log10_monomials": 0.6989700043360189,
+                  "monomial_count": 5,
+                  "nonconstant": true,
+                  "output_index": 21,
+                  "packed_final_actual_bit": 1
+                },
+                {
+                  "concrete_active": false,
+                  "concrete_final_actual_bit": 1,
+                  "concrete_final_diff_bit": 0,
+                  "concrete_match": true,
+                  "constant_term": 1,
+                  "degree": 3,
+                  "degree_histogram": {
+                    "0": 1,
+                    "1": 1,
+                    "3": 3
+                  },
+                  "dist": 9.5,
+                  "global_pos": 137,
+                  "log10_monomials": 0.6989700043360189,
+                  "monomial_count": 5,
+                  "nonconstant": true,
+                  "output_index": 22,
+                  "packed_final_actual_bit": 1
+                },
+                {
+                  "concrete_active": false,
+                  "concrete_final_actual_bit": 0,
+                  "concrete_final_diff_bit": 0,
+                  "concrete_match": true,
+                  "constant_term": 0,
+                  "degree": 3,
+                  "degree_histogram": {
+                    "1": 1,
+                    "2": 2,
+                    "3": 1
+                  },
+                  "dist": 10.5,
+                  "global_pos": 138,
+                  "log10_monomials": 0.6020599913279624,
+                  "monomial_count": 4,
+                  "nonconstant": true,
+                  "output_index": 23,
+                  "packed_final_actual_bit": 0
+                },
+                {
+                  "concrete_active": false,
+                  "concrete_final_actual_bit": 0,
+                  "concrete_final_diff_bit": 0,
+                  "concrete_match": true,
+                  "constant_term": 0,
+                  "degree": 2,
+                  "degree_histogram": {
+                    "1": 1,
+                    "2": 1
+                  },
+                  "dist": 11.5,
+                  "global_pos": 139,
+                  "log10_monomials": 0.3010299956639812,
+                  "monomial_count": 2,
+                  "nonconstant": true,
+                  "output_index": 24,
+                  "packed_final_actual_bit": 0
+                }
+              ],
+              "positions_global": [
+                115,
+                116,
+                117,
+                118,
+                119,
+                120,
+                121,
+                122,
+                123,
+                124,
+                125,
+                126,
+                127,
+                128,
+                129,
+                130,
+                131,
+                132,
+                133,
+                134,
+                135,
+                136,
+                137,
+                138,
+                139
+              ],
+              "role": "synthetic_intervention",
+              "rule": 108,
+              "sample_diff_global": [
+                124,
+                125,
+                128,
+                129,
+                131
+              ],
+              "sample_start": 80,
+              "slope_delta_percent": 94.43452224775801,
+              "t_window": 2,
+              "window_cells": 25,
+              "word": "00000001"
+            },
+            {
+              "T_local": 2,
+              "active_summary": {
+                "count": 5,
+                "degree_fit": {
+                  "distinct_dist_count": 4,
+                  "intercept": 3.0,
+                  "r2": 1.0,
+                  "reliable": true,
+                  "slope": 0.0,
+                  "usable_count": 5
+                },
+                "degree_range": [
+                  3,
+                  3
+                ],
+                "distinct_dist_count": 4,
+                "log_monomial_fit": {
+                  "distinct_dist_count": 4,
+                  "intercept": 0.7189220658376776,
+                  "r2": 0.26470588235294124,
+                  "reliable": true,
+                  "slope": -0.01710176700142173,
+                  "usable_count": 5
+                },
+                "monomial_range": [
+                  4,
+                  5
+                ]
+              },
+              "all_outputs_match_concrete": true,
+              "background": "1100",
+              "catalog_motif": [
+                "##..##.##",
+                "##..##.#"
+              ],
+              "catalog_span": 9,
+              "comparable_to_t15": false,
+              "final_diff_global": [
+                124,
+                125,
+                128,
+                129,
+                131
+              ],
+              "label": "rule108_bg1100_T2_w00000001",
+              "local_final_active_indices": [
+                9,
+                10,
+                13,
+                14,
+                16
+              ],
+              "nonconstant_summary": {
+                "count": 25,
+                "degree_fit": {
+                  "distinct_dist_count": 13,
+                  "intercept": 3.21968397844194,
+                  "r2": 0.20722706077142727,
+                  "reliable": true,
+                  "slope": -0.054262616364527186,
+                  "usable_count": 25
+                },
+                "degree_range": [
+                  1,
+                  3
+                ],
+                "distinct_dist_count": 13,
+                "log_monomial_fit": {
+                  "distinct_dist_count": 13,
+                  "intercept": 0.7339147295060034,
+                  "r2": 0.24750175766420413,
+                  "reliable": true,
+                  "slope": -0.020820364440655898,
+                  "usable_count": 25
+                },
+                "monomial_range": [
+                  1,
+                  5
+                ]
+              },
+              "outputs": [
+                {
+                  "concrete_active": false,
+                  "concrete_final_actual_bit": 0,
+                  "concrete_final_diff_bit": 0,
+                  "concrete_match": true,
+                  "constant_term": 0,
+                  "degree": 1,
+                  "degree_histogram": {
+                    "1": 1
+                  },
+                  "dist": 12.5,
+                  "global_pos": 115,
+                  "log10_monomials": 0.0,
+                  "monomial_count": 1,
+                  "nonconstant": true,
+                  "output_index": 0,
+                  "packed_final_actual_bit": 0
+                },
+                {
+                  "concrete_active": false,
+                  "concrete_final_actual_bit": 1,
+                  "concrete_final_diff_bit": 0,
+                  "concrete_match": true,
+                  "constant_term": 1,
+                  "degree": 3,
+                  "degree_histogram": {
+                    "0": 1,
+                    "1": 1,
+                    "3": 1
+                  },
+                  "dist": 11.5,
+                  "global_pos": 116,
+                  "log10_monomials": 0.47712125471966244,
+                  "monomial_count": 3,
+                  "nonconstant": true,
+                  "output_index": 1,
+                  "packed_final_actual_bit": 1
+                },
+                {
+                  "concrete_active": false,
+                  "concrete_final_actual_bit": 1,
+                  "concrete_final_diff_bit": 0,
+                  "concrete_match": true,
+                  "constant_term": 1,
+                  "degree": 3,
+                  "degree_histogram": {
+                    "0": 1,
+                    "1": 1,
+                    "3": 3
+                  },
+                  "dist": 10.5,
+                  "global_pos": 117,
+                  "log10_monomials": 0.6989700043360189,
+                  "monomial_count": 5,
+                  "nonconstant": true,
+                  "output_index": 2,
+                  "packed_final_actual_bit": 1
+                },
+                {
+                  "concrete_active": false,
+                  "concrete_final_actual_bit": 0,
+                  "concrete_final_diff_bit": 0,
+                  "concrete_match": true,
+                  "constant_term": 0,
+                  "degree": 3,
+                  "degree_histogram": {
+                    "1": 1,
+                    "3": 3
+                  },
+                  "dist": 9.5,
+                  "global_pos": 118,
+                  "log10_monomials": 0.6020599913279624,
+                  "monomial_count": 4,
+                  "nonconstant": true,
+                  "output_index": 3,
+                  "packed_final_actual_bit": 0
+                },
+                {
+                  "concrete_active": false,
+                  "concrete_final_actual_bit": 0,
+                  "concrete_final_diff_bit": 0,
+                  "concrete_match": true,
+                  "constant_term": 0,
+                  "degree": 3,
+                  "degree_histogram": {
+                    "1": 1,
+                    "3": 3
+                  },
+                  "dist": 8.5,
+                  "global_pos": 119,
+                  "log10_monomials": 0.6020599913279624,
+                  "monomial_count": 4,
+                  "nonconstant": true,
+                  "output_index": 4,
+                  "packed_final_actual_bit": 0
+                },
+                {
+                  "concrete_active": false,
+                  "concrete_final_actual_bit": 1,
+                  "concrete_final_diff_bit": 0,
+                  "concrete_match": true,
+                  "constant_term": 1,
+                  "degree": 3,
+                  "degree_histogram": {
+                    "0": 1,
+                    "1": 1,
+                    "3": 3
+                  },
+                  "dist": 7.5,
+                  "global_pos": 120,
+                  "log10_monomials": 0.6989700043360189,
+                  "monomial_count": 5,
+                  "nonconstant": true,
+                  "output_index": 5,
+                  "packed_final_actual_bit": 1
+                },
+                {
+                  "concrete_active": false,
+                  "concrete_final_actual_bit": 1,
+                  "concrete_final_diff_bit": 0,
+                  "concrete_match": true,
+                  "constant_term": 1,
+                  "degree": 3,
+                  "degree_histogram": {
+                    "0": 1,
+                    "1": 1,
+                    "3": 3
+                  },
+                  "dist": 6.5,
+                  "global_pos": 121,
+                  "log10_monomials": 0.6989700043360189,
+                  "monomial_count": 5,
+                  "nonconstant": true,
+                  "output_index": 6,
+                  "packed_final_actual_bit": 1
+                },
+                {
+                  "concrete_active": false,
+                  "concrete_final_actual_bit": 0,
+                  "concrete_final_diff_bit": 0,
+                  "concrete_match": true,
+                  "constant_term": 0,
+                  "degree": 3,
+                  "degree_histogram": {
+                    "1": 1,
+                    "3": 3
+                  },
+                  "dist": 5.5,
+                  "global_pos": 122,
+                  "log10_monomials": 0.6020599913279624,
+                  "monomial_count": 4,
+                  "nonconstant": true,
+                  "output_index": 7,
+                  "packed_final_actual_bit": 0
+                },
+                {
+                  "concrete_active": false,
+                  "concrete_final_actual_bit": 0,
+                  "concrete_final_diff_bit": 0,
+                  "concrete_match": true,
+                  "constant_term": 0,
+                  "degree": 3,
+                  "degree_histogram": {
+                    "1": 1,
+                    "3": 3
+                  },
+                  "dist": 4.5,
+                  "global_pos": 123,
+                  "log10_monomials": 0.6020599913279624,
+                  "monomial_count": 4,
+                  "nonconstant": true,
+                  "output_index": 8,
+                  "packed_final_actual_bit": 0
+                },
+                {
+                  "concrete_active": true,
+                  "concrete_final_actual_bit": 0,
+                  "concrete_final_diff_bit": 1,
+                  "concrete_match": true,
+                  "constant_term": 1,
+                  "degree": 3,
+                  "degree_histogram": {
+                    "0": 1,
+                    "1": 1,
+                    "3": 3
+                  },
+                  "dist": 3.5,
+                  "global_pos": 124,
+                  "log10_monomials": 0.6989700043360189,
+                  "monomial_count": 5,
+                  "nonconstant": true,
+                  "output_index": 9,
+                  "packed_final_actual_bit": 0
+                },
+                {
+                  "concrete_active": true,
+                  "concrete_final_actual_bit": 0,
+                  "concrete_final_diff_bit": 1,
+                  "concrete_match": true,
+                  "constant_term": 1,
+                  "degree": 3,
+                  "degree_histogram": {
+                    "0": 1,
+                    "1": 1,
+                    "3": 3
+                  },
+                  "dist": 2.5,
+                  "global_pos": 125,
+                  "log10_monomials": 0.6989700043360189,
+                  "monomial_count": 5,
+                  "nonconstant": true,
+                  "output_index": 10,
+                  "packed_final_actual_bit": 0
+                },
+                {
+                  "concrete_active": false,
+                  "concrete_final_actual_bit": 0,
+                  "concrete_final_diff_bit": 0,
+                  "concrete_match": true,
+                  "constant_term": 0,
+                  "degree": 3,
+                  "degree_histogram": {
+                    "1": 1,
+                    "3": 3
+                  },
+                  "dist": 1.5,
+                  "global_pos": 126,
+                  "log10_monomials": 0.6020599913279624,
+                  "monomial_count": 4,
+                  "nonconstant": true,
+                  "output_index": 11,
+                  "packed_final_actual_bit": 0
+                },
+                {
+                  "concrete_active": false,
+                  "concrete_final_actual_bit": 0,
+                  "concrete_final_diff_bit": 0,
+                  "concrete_match": true,
+                  "constant_term": 0,
+                  "degree": 3,
+                  "degree_histogram": {
+                    "1": 1,
+                    "3": 3
+                  },
+                  "dist": 0.5,
+                  "global_pos": 127,
+                  "log10_monomials": 0.6020599913279624,
+                  "monomial_count": 4,
+                  "nonconstant": true,
+                  "output_index": 12,
+                  "packed_final_actual_bit": 0
+                },
+                {
+                  "concrete_active": true,
+                  "concrete_final_actual_bit": 0,
+                  "concrete_final_diff_bit": 1,
+                  "concrete_match": true,
+                  "constant_term": 1,
+                  "degree": 3,
+                  "degree_histogram": {
+                    "0": 1,
+                    "1": 1,
+                    "3": 3
+                  },
+                  "dist": 0.5,
+                  "global_pos": 128,
+                  "log10_monomials": 0.6989700043360189,
+                  "monomial_count": 5,
+                  "nonconstant": true,
+                  "output_index": 13,
+                  "packed_final_actual_bit": 0
+                },
+                {
+                  "concrete_active": true,
+                  "concrete_final_actual_bit": 0,
+                  "concrete_final_diff_bit": 1,
+                  "concrete_match": true,
+                  "constant_term": 1,
+                  "degree": 3,
+                  "degree_histogram": {
+                    "0": 1,
+                    "1": 1,
+                    "3": 3
+                  },
+                  "dist": 1.5,
+                  "global_pos": 129,
+                  "log10_monomials": 0.6989700043360189,
+                  "monomial_count": 5,
+                  "nonconstant": true,
+                  "output_index": 14,
+                  "packed_final_actual_bit": 0
+                },
+                {
+                  "concrete_active": false,
+                  "concrete_final_actual_bit": 0,
+                  "concrete_final_diff_bit": 0,
+                  "concrete_match": true,
+                  "constant_term": 0,
+                  "degree": 3,
+                  "degree_histogram": {
+                    "1": 1,
+                    "3": 3
+                  },
+                  "dist": 2.5,
+                  "global_pos": 130,
+                  "log10_monomials": 0.6020599913279624,
+                  "monomial_count": 4,
+                  "nonconstant": true,
+                  "output_index": 15,
+                  "packed_final_actual_bit": 0
+                },
+                {
+                  "concrete_active": true,
+                  "concrete_final_actual_bit": 1,
+                  "concrete_final_diff_bit": 1,
+                  "concrete_match": true,
+                  "constant_term": 0,
+                  "degree": 3,
+                  "degree_histogram": {
+                    "1": 1,
+                    "3": 3
+                  },
+                  "dist": 3.5,
+                  "global_pos": 131,
+                  "log10_monomials": 0.6020599913279624,
+                  "monomial_count": 4,
+                  "nonconstant": true,
+                  "output_index": 16,
+                  "packed_final_actual_bit": 1
+                },
+                {
+                  "concrete_active": false,
+                  "concrete_final_actual_bit": 1,
+                  "concrete_final_diff_bit": 0,
+                  "concrete_match": true,
+                  "constant_term": 1,
+                  "degree": 3,
+                  "degree_histogram": {
+                    "0": 1,
+                    "1": 1,
+                    "3": 3
+                  },
+                  "dist": 4.5,
+                  "global_pos": 132,
+                  "log10_monomials": 0.6989700043360189,
+                  "monomial_count": 5,
+                  "nonconstant": true,
+                  "output_index": 17,
+                  "packed_final_actual_bit": 1
+                },
+                {
+                  "concrete_active": false,
+                  "concrete_final_actual_bit": 1,
+                  "concrete_final_diff_bit": 0,
+                  "concrete_match": true,
+                  "constant_term": 1,
+                  "degree": 3,
+                  "degree_histogram": {
+                    "0": 1,
+                    "1": 1,
+                    "3": 3
+                  },
+                  "dist": 5.5,
+                  "global_pos": 133,
+                  "log10_monomials": 0.6989700043360189,
+                  "monomial_count": 5,
+                  "nonconstant": true,
+                  "output_index": 18,
+                  "packed_final_actual_bit": 1
+                },
+                {
+                  "concrete_active": false,
+                  "concrete_final_actual_bit": 0,
+                  "concrete_final_diff_bit": 0,
+                  "concrete_match": true,
+                  "constant_term": 0,
+                  "degree": 3,
+                  "degree_histogram": {
+                    "1": 1,
+                    "3": 3
+                  },
+                  "dist": 6.5,
+                  "global_pos": 134,
+                  "log10_monomials": 0.6020599913279624,
+                  "monomial_count": 4,
+                  "nonconstant": true,
+                  "output_index": 19,
+                  "packed_final_actual_bit": 0
+                },
+                {
+                  "concrete_active": false,
+                  "concrete_final_actual_bit": 0,
+                  "concrete_final_diff_bit": 0,
+                  "concrete_match": true,
+                  "constant_term": 0,
+                  "degree": 3,
+                  "degree_histogram": {
+                    "1": 1,
+                    "3": 3
+                  },
+                  "dist": 7.5,
+                  "global_pos": 135,
+                  "log10_monomials": 0.6020599913279624,
+                  "monomial_count": 4,
+                  "nonconstant": true,
+                  "output_index": 20,
+                  "packed_final_actual_bit": 0
+                },
+                {
+                  "concrete_active": false,
+                  "concrete_final_actual_bit": 1,
+                  "concrete_final_diff_bit": 0,
+                  "concrete_match": true,
+                  "constant_term": 1,
+                  "degree": 3,
+                  "degree_histogram": {
+                    "0": 1,
+                    "1": 1,
+                    "3": 3
+                  },
+                  "dist": 8.5,
+                  "global_pos": 136,
+                  "log10_monomials": 0.6989700043360189,
+                  "monomial_count": 5,
+                  "nonconstant": true,
+                  "output_index": 21,
+                  "packed_final_actual_bit": 1
+                },
+                {
+                  "concrete_active": false,
+                  "concrete_final_actual_bit": 1,
+                  "concrete_final_diff_bit": 0,
+                  "concrete_match": true,
+                  "constant_term": 1,
+                  "degree": 3,
+                  "degree_histogram": {
+                    "0": 1,
+                    "1": 1,
+                    "3": 3
+                  },
+                  "dist": 9.5,
+                  "global_pos": 137,
+                  "log10_monomials": 0.6989700043360189,
+                  "monomial_count": 5,
+                  "nonconstant": true,
+                  "output_index": 22,
+                  "packed_final_actual_bit": 1
+                },
+                {
+                  "concrete_active": false,
+                  "concrete_final_actual_bit": 0,
+                  "concrete_final_diff_bit": 0,
+                  "concrete_match": true,
+                  "constant_term": 0,
+                  "degree": 3,
+                  "degree_histogram": {
+                    "1": 1,
+                    "2": 2,
+                    "3": 1
+                  },
+                  "dist": 10.5,
+                  "global_pos": 138,
+                  "log10_monomials": 0.6020599913279624,
+                  "monomial_count": 4,
+                  "nonconstant": true,
+                  "output_index": 23,
+                  "packed_final_actual_bit": 0
+                },
+                {
+                  "concrete_active": false,
+                  "concrete_final_actual_bit": 0,
+                  "concrete_final_diff_bit": 0,
+                  "concrete_match": true,
+                  "constant_term": 0,
+                  "degree": 2,
+                  "degree_histogram": {
+                    "1": 1,
+                    "2": 1
+                  },
+                  "dist": 11.5,
+                  "global_pos": 139,
+                  "log10_monomials": 0.3010299956639812,
+                  "monomial_count": 2,
+                  "nonconstant": true,
+                  "output_index": 24,
+                  "packed_final_actual_bit": 0
+                }
+              ],
+              "positions_global": [
+                115,
+                116,
+                117,
+                118,
+                119,
+                120,
+                121,
+                122,
+                123,
+                124,
+                125,
+                126,
+                127,
+                128,
+                129,
+                130,
+                131,
+                132,
+                133,
+                134,
+                135,
+                136,
+                137,
+                138,
+                139
+              ],
+              "role": "synthetic_intervention",
+              "rule": 108,
+              "sample_diff_global": [
+                124,
+                125,
+                128,
+                129,
+                131
+              ],
+              "sample_start": 80,
+              "slope_delta_percent": 94.43452224775801,
+              "t_window": 12,
+              "window_cells": 25,
+              "word": "00000001"
+            }
+          ]
+        }
+      ],
+      "anf_monomials": [
+        "C",
+        "LR"
+      ],
+      "background": "1100",
+      "bit_flipped": 0,
+      "catalog_presence": {
+        "backgrounds": [
+          "0001",
+          "0010",
+          "0011",
+          "01",
+          "0100",
+          "0110",
+          "0111",
+          "1",
+          "10",
+          "1000",
+          "1001",
+          "1011",
+          "1100",
+          "1101",
+          "1110"
+        ],
+        "fase55_census_count": 0,
+        "fase55_census_present": false,
+        "periods": [
+          2
+        ],
+        "present": true,
+        "row_count": 4267,
+        "stationary_count": 4267
+      },
+      "center_structure": {
+        "C_alone": true,
+        "LR_no_center": true,
+        "center_interactions": [],
+        "center_mediated": false,
+        "strict_center_mediated": false
+      },
+      "max_span": 9,
+      "moving_count": 0,
+      "moving_hits": [],
+      "processed_ic_words": 502,
+      "rule": 108,
+      "rule_binary": "01101100",
+      "stationary_count": 237,
+      "stationary_hits": [
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "##..##.##",
+            "##..##.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 9,
+          "word": "00000001",
+          "word_len": 8
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "##..#.###",
+            "##..#..#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 9,
+          "word": "00000101",
+          "word_len": 8
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "##...#.##",
+            "##...#.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 9,
+          "word": "00001001",
+          "word_len": 8
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "##....#.#",
+            "##...##.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 9,
+          "word": "00001011",
+          "word_len": 8
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "##...#.##",
+            "##...#.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 9,
+          "word": "00001101",
+          "word_len": 8
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "##...##.#",
+            "##....#.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 9,
+          "word": "00001110",
+          "word_len": 8
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "##.###.##",
+            "##.###.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 9,
+          "word": "00010001",
+          "word_len": 8
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "##.###.##",
+            "##.###.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 9,
+          "word": "00010101",
+          "word_len": 8
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "##.#....#",
+            "##.##...#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 9,
+          "word": "00010111",
+          "word_len": 8
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "##.#.#.##",
+            "##.#.#.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 9,
+          "word": "00011001",
+          "word_len": 8
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "##.##.###",
+            "##.#...#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 9,
+          "word": "00011101",
+          "word_len": 8
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "###.##.##",
+            "###.##.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 9,
+          "word": "00100001",
+          "word_len": 8
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "###.#.###",
+            "###.#..#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 9,
+          "word": "00100101",
+          "word_len": 8
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "####.#.##",
+            "###..#.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 9,
+          "word": "00101001",
+          "word_len": 8
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "###.##.##",
+            "###.##.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 9,
+          "word": "00101101",
+          "word_len": 8
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "####.##.#",
+            "###...#.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 9,
+          "word": "00101110",
+          "word_len": 8
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "####.#..#",
+            "###..#..#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 9,
+          "word": "00101111",
+          "word_len": 8
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "######.##",
+            "######.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 9,
+          "word": "00110001",
+          "word_len": 8
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "###.##.##",
+            "###.##.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 9,
+          "word": "00110101",
+          "word_len": 8
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "###..#.##",
+            "####.#.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 9,
+          "word": "00111001",
+          "word_len": 8
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "###..#..#",
+            "####.#..#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 9,
+          "word": "00111010",
+          "word_len": 8
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "###...#.#",
+            "####.##.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 9,
+          "word": "00111011",
+          "word_len": 8
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "###.#.###",
+            "###.#..#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 9,
+          "word": "00111101",
+          "word_len": 8
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#...##.##",
+            "#...##.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 9,
+          "word": "01000001",
+          "word_len": 8
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#...#.###",
+            "#...#..#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 9,
+          "word": "01000101",
+          "word_len": 8
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#....#.##",
+            "#....#.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 9,
+          "word": "01001001",
+          "word_len": 8
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#.....#.#",
+            "#....##.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 9,
+          "word": "01001011",
+          "word_len": 8
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#....#.##",
+            "#....#.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 9,
+          "word": "01001101",
+          "word_len": 8
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#....##.#",
+            "#.....#.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 9,
+          "word": "01001110",
+          "word_len": 8
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#.####.##",
+            "#..###.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 9,
+          "word": "01010001",
+          "word_len": 8
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#.#####.#",
+            "#..####.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 9,
+          "word": "01010010",
+          "word_len": 8
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#.#####.#",
+            "#..####.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 9,
+          "word": "01010011",
+          "word_len": 8
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#...##.##",
+            "#...##.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 9,
+          "word": "01010101",
+          "word_len": 8
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#....#.##",
+            "#....#.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 9,
+          "word": "01011001",
+          "word_len": 8
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#.###.###",
+            "#..#...#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 9,
+          "word": "01011101",
+          "word_len": 8
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#.#####.#",
+            "#..####.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 9,
+          "word": "01011110",
+          "word_len": 8
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#.####..#",
+            "#..###..#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 9,
+          "word": "01011111",
+          "word_len": 8
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#.#.##.##",
+            "#.#.##.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 9,
+          "word": "01100001",
+          "word_len": 8
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#.#.#.###",
+            "#.#.#..#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 9,
+          "word": "01100101",
+          "word_len": 8
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#....#.##",
+            "#....#.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 9,
+          "word": "01101001",
+          "word_len": 8
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#...##.##",
+            "#...##.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 9,
+          "word": "01101101",
+          "word_len": 8
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#....##.#",
+            "#.....#.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 9,
+          "word": "01101110",
+          "word_len": 8
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#..###.##",
+            "#.####.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 9,
+          "word": "01110001",
+          "word_len": 8
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#..####.#",
+            "#.#####.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 9,
+          "word": "01110010",
+          "word_len": 8
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#..####.#",
+            "#.#####.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 9,
+          "word": "01110011",
+          "word_len": 8
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#..###.##",
+            "#.####.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 9,
+          "word": "01110101",
+          "word_len": 8
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#..###..#",
+            "#.####..#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 9,
+          "word": "01110110",
+          "word_len": 8
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#..#....#",
+            "#.###...#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 9,
+          "word": "01110111",
+          "word_len": 8
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#....#.##",
+            "#....#.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 9,
+          "word": "01111001",
+          "word_len": 8
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#.....#.#",
+            "#....##.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 9,
+          "word": "01111011",
+          "word_len": 8
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#...#.###",
+            "#...#..#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 9,
+          "word": "01111101",
+          "word_len": 8
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "##.###.#",
+            "#.###.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 8,
+          "word": "10001",
+          "word_len": 5
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "##.#...#",
+            "#.#...#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 8,
+          "word": "10011",
+          "word_len": 5
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "##.##..#",
+            "#.##..#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 8,
+          "word": "10101",
+          "word_len": 5
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "###.##.#",
+            "#...#.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 8,
+          "word": "10111",
+          "word_len": 5
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#...##.#",
+            "#....#.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 8,
+          "word": "000111",
+          "word_len": 6
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#.###.#",
+            "##.###.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 8,
+          "word": "010001",
+          "word_len": 6
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#.#...#",
+            "##.#...#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 8,
+          "word": "010011",
+          "word_len": 6
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#...##.#",
+            "#....#.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 8,
+          "word": "010111",
+          "word_len": 6
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#..#..#",
+            "###.#..#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 8,
+          "word": "011101",
+          "word_len": 6
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#.###.#",
+            "##.###.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 8,
+          "word": "011111",
+          "word_len": 6
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "##.###.#",
+            "#.###.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 8,
+          "word": "110001",
+          "word_len": 6
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "##.#...#",
+            "#.#...#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 8,
+          "word": "110011",
+          "word_len": 6
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "##.##..#",
+            "#.##..#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 8,
+          "word": "110101",
+          "word_len": 6
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "###.##.#",
+            "#...#.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 8,
+          "word": "110111",
+          "word_len": 6
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#..##.##",
+            "#..##.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 8,
+          "word": "0000001",
+          "word_len": 7
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#..#.###",
+            "#..#..#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 8,
+          "word": "0000101",
+          "word_len": 7
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#...#.##",
+            "#...#.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 8,
+          "word": "0001001",
+          "word_len": 7
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#....#.#",
+            "#...##.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 8,
+          "word": "0001011",
+          "word_len": 7
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#...#.##",
+            "#...#.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 8,
+          "word": "0001101",
+          "word_len": 7
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#...##.#",
+            "#....#.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 8,
+          "word": "0001110",
+          "word_len": 7
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#.###.##",
+            "#.###.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 8,
+          "word": "0010001",
+          "word_len": 7
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#.###.##",
+            "#.###.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 8,
+          "word": "0010101",
+          "word_len": 7
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#.#....#",
+            "#.##...#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 8,
+          "word": "0010111",
+          "word_len": 7
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#.#.#.##",
+            "#.#.#.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 8,
+          "word": "0011001",
+          "word_len": 7
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#.##.###",
+            "#.#...#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 8,
+          "word": "0011101",
+          "word_len": 7
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#.###.#",
+            "##.###.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 8,
+          "word": "0100010",
+          "word_len": 7
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#.###.#",
+            "##.###.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 8,
+          "word": "0100011",
+          "word_len": 7
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#.#...#",
+            "##.#...#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 8,
+          "word": "0100110",
+          "word_len": 7
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#.#...#",
+            "##.#...#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 8,
+          "word": "0100111",
+          "word_len": 7
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#...#.##",
+            "#...#.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 8,
+          "word": "0101001",
+          "word_len": 7
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#..##.##",
+            "#..##.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 8,
+          "word": "0101101",
+          "word_len": 7
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#...##.#",
+            "#....#.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 8,
+          "word": "0101110",
+          "word_len": 7
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#.###.##",
+            "#.###.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 8,
+          "word": "0110001",
+          "word_len": 7
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#..##.##",
+            "#..##.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 8,
+          "word": "0110101",
+          "word_len": 7
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#..#..#",
+            "###.#..#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 8,
+          "word": "0111010",
+          "word_len": 7
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#...#.#",
+            "###.##.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 8,
+          "word": "0111011",
+          "word_len": 7
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#.###.#",
+            "##.###.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 8,
+          "word": "0111110",
+          "word_len": 7
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#.##..#",
+            "##.##..#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 8,
+          "word": "0111111",
+          "word_len": 7
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#.###.##",
+            "#.###.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 8,
+          "word": "1010001",
+          "word_len": 7
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#..##.##",
+            "#..##.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 8,
+          "word": "1010101",
+          "word_len": 7
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#...#.##",
+            "#...#.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 8,
+          "word": "1011001",
+          "word_len": 7
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#.##.###",
+            "#.#...#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 8,
+          "word": "1011101",
+          "word_len": 7
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "##.##.##",
+            "#.##.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 8,
+          "word": "1100001",
+          "word_len": 7
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "##.###.#",
+            "#.###.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 8,
+          "word": "1100010",
+          "word_len": 7
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "##.###.#",
+            "#.###.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 8,
+          "word": "1100011",
+          "word_len": 7
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "##.#.###",
+            "#.#..#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 8,
+          "word": "1100101",
+          "word_len": 7
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "##.#...#",
+            "#.#...#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 8,
+          "word": "1100110",
+          "word_len": 7
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "##.#...#",
+            "#.#...#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 8,
+          "word": "1100111",
+          "word_len": 7
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "###.#.##",
+            "#..#.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 8,
+          "word": "1101001",
+          "word_len": 7
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "##.##..#",
+            "#.##..#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 8,
+          "word": "1101010",
+          "word_len": 7
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "##.###.#",
+            "#.###.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 8,
+          "word": "1101011",
+          "word_len": 7
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "##.##.##",
+            "#.##.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 8,
+          "word": "1101101",
+          "word_len": 7
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "###.##.#",
+            "#...#.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 8,
+          "word": "1101110",
+          "word_len": 7
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "###.#..#",
+            "#..#..#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 8,
+          "word": "1101111",
+          "word_len": 7
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#.###.##",
+            "#.###.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 8,
+          "word": "1110001",
+          "word_len": 7
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#.###.##",
+            "#.###.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 8,
+          "word": "1110101",
+          "word_len": 7
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#.#....#",
+            "#.##...#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 8,
+          "word": "1110111",
+          "word_len": 7
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#...#.##",
+            "#...#.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 8,
+          "word": "1111001",
+          "word_len": 7
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#....#.#",
+            "#...##.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 8,
+          "word": "1111011",
+          "word_len": 7
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#..#.###",
+            "#..#..#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 8,
+          "word": "1111101",
+          "word_len": 7
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#..##.##",
+            "#..##.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 8,
+          "word": "10000001",
+          "word_len": 8
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#..#.###",
+            "#..#..#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 8,
+          "word": "10000101",
+          "word_len": 8
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#...#.##",
+            "#...#.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 8,
+          "word": "10001001",
+          "word_len": 8
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#....#.#",
+            "#...##.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 8,
+          "word": "10001011",
+          "word_len": 8
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#...#.##",
+            "#...#.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 8,
+          "word": "10001101",
+          "word_len": 8
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#...##.#",
+            "#....#.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 8,
+          "word": "10001110",
+          "word_len": 8
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#.###.##",
+            "#.###.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 8,
+          "word": "10010001",
+          "word_len": 8
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#.###.##",
+            "#.###.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 8,
+          "word": "10010101",
+          "word_len": 8
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#.#....#",
+            "#.##...#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 8,
+          "word": "10010111",
+          "word_len": 8
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#.#.#.##",
+            "#.#.#.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 8,
+          "word": "10011001",
+          "word_len": 8
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#.##.###",
+            "#.#...#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 8,
+          "word": "10011101",
+          "word_len": 8
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#.###.#",
+            "##.###.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 8,
+          "word": "10100010",
+          "word_len": 8
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#.###.#",
+            "##.###.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 8,
+          "word": "10100011",
+          "word_len": 8
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#.#...#",
+            "##.#...#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 8,
+          "word": "10100110",
+          "word_len": 8
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#.#...#",
+            "##.#...#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 8,
+          "word": "10100111",
+          "word_len": 8
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#...#.##",
+            "#...#.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 8,
+          "word": "10101001",
+          "word_len": 8
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#..##.##",
+            "#..##.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 8,
+          "word": "10101101",
+          "word_len": 8
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#...##.#",
+            "#....#.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 8,
+          "word": "10101110",
+          "word_len": 8
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#.###.##",
+            "#.###.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 8,
+          "word": "10110001",
+          "word_len": 8
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#..##.##",
+            "#..##.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 8,
+          "word": "10110101",
+          "word_len": 8
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#..#..#",
+            "###.#..#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 8,
+          "word": "10111010",
+          "word_len": 8
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#...#.#",
+            "###.##.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 8,
+          "word": "10111011",
+          "word_len": 8
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#.###.#",
+            "##.###.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 8,
+          "word": "10111110",
+          "word_len": 8
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#.##..#",
+            "##.##..#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 8,
+          "word": "10111111",
+          "word_len": 8
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#.###.##",
+            "#.###.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 8,
+          "word": "11010001",
+          "word_len": 8
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#..##.##",
+            "#..##.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 8,
+          "word": "11010101",
+          "word_len": 8
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#...#.##",
+            "#...#.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 8,
+          "word": "11011001",
+          "word_len": 8
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#.##.###",
+            "#.#...#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 8,
+          "word": "11011101",
+          "word_len": 8
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "##.##.##",
+            "#.##.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 8,
+          "word": "11100001",
+          "word_len": 8
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "##.###.#",
+            "#.###.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 8,
+          "word": "11100010",
+          "word_len": 8
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "##.###.#",
+            "#.###.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 8,
+          "word": "11100011",
+          "word_len": 8
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "##.#.###",
+            "#.#..#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 8,
+          "word": "11100101",
+          "word_len": 8
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "##.#...#",
+            "#.#...#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 8,
+          "word": "11100110",
+          "word_len": 8
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "##.#...#",
+            "#.#...#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 8,
+          "word": "11100111",
+          "word_len": 8
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "###.#.##",
+            "#..#.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 8,
+          "word": "11101001",
+          "word_len": 8
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "##.##..#",
+            "#.##..#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 8,
+          "word": "11101010",
+          "word_len": 8
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "##.###.#",
+            "#.###.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 8,
+          "word": "11101011",
+          "word_len": 8
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "##.##.##",
+            "#.##.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 8,
+          "word": "11101101",
+          "word_len": 8
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "###.##.#",
+            "#...#.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 8,
+          "word": "11101110",
+          "word_len": 8
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "###.#..#",
+            "#..#..#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 8,
+          "word": "11101111",
+          "word_len": 8
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#.###.##",
+            "#.###.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 8,
+          "word": "11110001",
+          "word_len": 8
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#.###.##",
+            "#.###.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 8,
+          "word": "11110101",
+          "word_len": 8
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#.#....#",
+            "#.##...#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 8,
+          "word": "11110111",
+          "word_len": 8
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#...#.##",
+            "#...#.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 8,
+          "word": "11111001",
+          "word_len": 8
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#....#.#",
+            "#...##.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 8,
+          "word": "11111011",
+          "word_len": 8
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#..#.###",
+            "#..#..#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 8,
+          "word": "11111101",
+          "word_len": 8
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#.##.##",
+            "##.##.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 7,
+          "word": "0100001",
+          "word_len": 7
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#.#.###",
+            "##.#..#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 7,
+          "word": "0100101",
+          "word_len": 7
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#..#.##",
+            "###.#.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 7,
+          "word": "0111001",
+          "word_len": 7
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#.#.###",
+            "##.#..#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 7,
+          "word": "0111101",
+          "word_len": 7
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#.##.##",
+            "##.##.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 7,
+          "word": "10100001",
+          "word_len": 8
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#.#.###",
+            "##.#..#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 7,
+          "word": "10100101",
+          "word_len": 8
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#..#.##",
+            "###.#.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 7,
+          "word": "10111001",
+          "word_len": 8
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#.#.###",
+            "##.#..#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 7,
+          "word": "10111101",
+          "word_len": 8
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "####.#",
+            "###..#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 6,
+          "word": "00101000",
+          "word_len": 8
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "###..#",
+            "####.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 6,
+          "word": "00111000",
+          "word_len": 8
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#.####",
+            "#..###"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 6,
+          "word": "01010000",
+          "word_len": 8
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#..###",
+            "#.####"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 6,
+          "word": "01110000",
+          "word_len": 8
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "##.##",
+            "#.##"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 5,
+          "word": "1000",
+          "word_len": 4
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "###.#",
+            "#..#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 5,
+          "word": "1010",
+          "word_len": 4
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "##.##",
+            "#.##"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 5,
+          "word": "10000",
+          "word_len": 5
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "###.#",
+            "#..#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 5,
+          "word": "10100",
+          "word_len": 5
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#.##",
+            "##.##"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 5,
+          "word": "010000",
+          "word_len": 6
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#..#",
+            "###.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 5,
+          "word": "011100",
+          "word_len": 6
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "##.##",
+            "#.##"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 5,
+          "word": "110000",
+          "word_len": 6
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "###.#",
+            "#..#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 5,
+          "word": "110100",
+          "word_len": 6
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#.##",
+            "##.##"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 5,
+          "word": "0100000",
+          "word_len": 7
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#..#",
+            "###.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 5,
+          "word": "0111000",
+          "word_len": 7
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "##.##",
+            "##.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 5,
+          "word": "1000001",
+          "word_len": 7
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#.###",
+            "#..#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 5,
+          "word": "1000101",
+          "word_len": 7
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "##.##",
+            "#.##"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 5,
+          "word": "1100000",
+          "word_len": 7
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "###.#",
+            "#..#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 5,
+          "word": "1101000",
+          "word_len": 7
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "##.#",
+            "##.##"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 5,
+          "word": "00010100",
+          "word_len": 8
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "##.##",
+            "##.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 5,
+          "word": "00011100",
+          "word_len": 8
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#.###",
+            "#..#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 5,
+          "word": "01011100",
+          "word_len": 8
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#..#",
+            "#.###"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 5,
+          "word": "01110100",
+          "word_len": 8
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#.##",
+            "##.##"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 5,
+          "word": "10100000",
+          "word_len": 8
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#..#",
+            "###.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 5,
+          "word": "10111000",
+          "word_len": 8
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "##.##",
+            "##.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 5,
+          "word": "11000001",
+          "word_len": 8
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#.###",
+            "#..#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 5,
+          "word": "11000101",
+          "word_len": 8
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "##.##",
+            "#.##"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 5,
+          "word": "11100000",
+          "word_len": 8
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "###.#",
+            "#..#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 5,
+          "word": "11101000",
+          "word_len": 8
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#.##",
+            "#.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 4,
+          "word": "11",
+          "word_len": 2
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#.##",
+            "#.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 4,
+          "word": "111",
+          "word_len": 3
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#.##",
+            "#.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 4,
+          "word": "0111",
+          "word_len": 4
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "##.#",
+            "#.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 4,
+          "word": "1001",
+          "word_len": 4
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "##.#",
+            "#.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 4,
+          "word": "1011",
+          "word_len": 4
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#.#",
+            "#.##"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 4,
+          "word": "1101",
+          "word_len": 4
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "##.#",
+            "#.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 4,
+          "word": "00111",
+          "word_len": 5
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#.##",
+            "#.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 4,
+          "word": "01110",
+          "word_len": 5
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "##.#",
+            "#.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 4,
+          "word": "10010",
+          "word_len": 5
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "##.#",
+            "#.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 4,
+          "word": "10110",
+          "word_len": 5
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#.#",
+            "#.##"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 4,
+          "word": "11010",
+          "word_len": 5
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#.#",
+            "#.##"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 4,
+          "word": "001010",
+          "word_len": 6
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#.##",
+            "#.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 4,
+          "word": "001110",
+          "word_len": 6
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#.#",
+            "##.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 4,
+          "word": "010010",
+          "word_len": 6
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#.#",
+            "##.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 4,
+          "word": "011110",
+          "word_len": 6
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "##.#",
+            "#.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 4,
+          "word": "100111",
+          "word_len": 6
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#.##",
+            "#.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 4,
+          "word": "101110",
+          "word_len": 6
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "##.#",
+            "#.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 4,
+          "word": "110010",
+          "word_len": 6
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "##.#",
+            "#.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 4,
+          "word": "110110",
+          "word_len": 6
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#.#",
+            "#.##"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 4,
+          "word": "111010",
+          "word_len": 6
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#.#",
+            "#.##"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 4,
+          "word": "0010100",
+          "word_len": 7
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#.##",
+            "#.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 4,
+          "word": "0011100",
+          "word_len": 7
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#.#",
+            "##.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 4,
+          "word": "0100100",
+          "word_len": 7
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#.#",
+            "##.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 4,
+          "word": "0111100",
+          "word_len": 7
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#.##",
+            "#.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 4,
+          "word": "1001001",
+          "word_len": 7
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#.#",
+            "##.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 4,
+          "word": "1001011",
+          "word_len": 7
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#.##",
+            "#.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 4,
+          "word": "1001101",
+          "word_len": 7
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "##.#",
+            "#.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 4,
+          "word": "1001110",
+          "word_len": 7
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#.##",
+            "#.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 4,
+          "word": "1011100",
+          "word_len": 7
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "##.#",
+            "#.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 4,
+          "word": "1100100",
+          "word_len": 7
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "##.#",
+            "#.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 4,
+          "word": "1101100",
+          "word_len": 7
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#.#",
+            "#.##"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 4,
+          "word": "1110100",
+          "word_len": 7
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#.#",
+            "#.##"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 4,
+          "word": "10010100",
+          "word_len": 8
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#.##",
+            "#.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 4,
+          "word": "10011100",
+          "word_len": 8
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#.#",
+            "##.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 4,
+          "word": "10100100",
+          "word_len": 8
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#.#",
+            "##.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 4,
+          "word": "10111100",
+          "word_len": 8
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#.##",
+            "#.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 4,
+          "word": "11001001",
+          "word_len": 8
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#.#",
+            "##.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 4,
+          "word": "11001011",
+          "word_len": 8
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#.##",
+            "#.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 4,
+          "word": "11001101",
+          "word_len": 8
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "##.#",
+            "#.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 4,
+          "word": "11001110",
+          "word_len": 8
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#.##",
+            "#.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 4,
+          "word": "11011100",
+          "word_len": 8
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "##.#",
+            "#.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 4,
+          "word": "11100100",
+          "word_len": 8
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "##.#",
+            "#.#"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 4,
+          "word": "11101100",
+          "word_len": 8
+        },
+        {
+          "background": "1100",
+          "kind": "stationary",
+          "motif": [
+            "#.#",
+            "#.##"
+          ],
+          "period_T": 2,
+          "rule": 108,
+          "span": 4,
+          "word": "11110100",
+          "word_len": 8
+        }
+      ]
+    },
+    {
+      "alias_count": 0,
+      "anf_measurements": [],
+      "anf_monomials": [
+        "1",
+        "L",
+        "LR",
+        "LC"
+      ],
+      "background": "1100",
+      "bit_flipped": 1,
+      "catalog_presence": {
+        "backgrounds": [],
+        "fase55_census_count": 0,
+        "fase55_census_present": false,
+        "periods": [],
+        "present": false,
+        "row_count": 0,
+        "stationary_count": 0
+      },
+      "center_structure": {
+        "C_alone": false,
+        "LR_no_center": true,
+        "center_interactions": [
+          "LC"
+        ],
+        "center_mediated": false,
+        "strict_center_mediated": false
+      },
+      "max_span": 0,
+      "moving_count": 0,
+      "moving_hits": [],
+      "processed_ic_words": 502,
+      "rule": 111,
+      "rule_binary": "01101111",
+      "stationary_count": 0,
+      "stationary_hits": []
+    },
+    {
+      "alias_count": 0,
+      "anf_measurements": [],
+      "anf_monomials": [
+        "1",
+        "R",
+        "C",
+        "L"
+      ],
+      "background": "1100",
+      "bit_flipped": 2,
+      "catalog_presence": {
+        "backgrounds": [],
+        "fase55_census_count": 0,
+        "fase55_census_present": false,
+        "periods": [],
+        "present": false,
+        "row_count": 0,
+        "stationary_count": 0
+      },
+      "center_structure": {
+        "C_alone": true,
+        "LR_no_center": false,
+        "center_interactions": [],
+        "center_mediated": false,
+        "strict_center_mediated": false
+      },
+      "max_span": 0,
+      "moving_count": 0,
+      "moving_hits": [],
+      "processed_ic_words": 502,
+      "rule": 105,
+      "rule_binary": "01101001",
+      "stationary_count": 0,
+      "stationary_hits": []
+    },
+    {
+      "alias_count": 0,
+      "anf_measurements": [],
+      "anf_monomials": [
+        "1",
+        "R",
+        "L",
+        "LC"
+      ],
+      "background": "1100",
+      "bit_flipped": 3,
+      "catalog_presence": {
+        "backgrounds": [],
+        "fase55_census_count": 0,
+        "fase55_census_present": false,
+        "periods": [],
+        "present": false,
+        "row_count": 0,
+        "stationary_count": 0
+      },
+      "center_structure": {
+        "C_alone": false,
+        "LR_no_center": false,
+        "center_interactions": [
+          "LC"
+        ],
+        "center_mediated": true,
+        "strict_center_mediated": true
+      },
+      "max_span": 0,
+      "moving_count": 0,
+      "moving_hits": [],
+      "processed_ic_words": 502,
+      "rule": 101,
+      "rule_binary": "01100101",
+      "stationary_count": 0,
+      "stationary_hits": []
+    },
+    {
+      "alias_count": 0,
+      "anf_measurements": [],
+      "anf_monomials": [
+        "1",
+        "R",
+        "CR",
+        "LR"
+      ],
+      "background": "1100",
+      "bit_flipped": 4,
+      "catalog_presence": {
+        "backgrounds": [],
+        "fase55_census_count": 0,
+        "fase55_census_present": false,
+        "periods": [],
+        "present": false,
+        "row_count": 0,
+        "stationary_count": 0
+      },
+      "center_structure": {
+        "C_alone": false,
+        "LR_no_center": true,
+        "center_interactions": [
+          "CR"
+        ],
+        "center_mediated": false,
+        "strict_center_mediated": false
+      },
+      "max_span": 0,
+      "moving_count": 0,
+      "moving_hits": [],
+      "processed_ic_words": 502,
+      "rule": 125,
+      "rule_binary": "01111101",
+      "stationary_count": 0,
+      "stationary_hits": []
+    },
+    {
+      "alias_count": 0,
+      "anf_measurements": [],
+      "anf_monomials": [
+        "1",
+        "R",
+        "CR",
+        "L",
+        "LR",
+        "LC"
+      ],
+      "background": "1100",
+      "bit_flipped": 5,
+      "catalog_presence": {
+        "backgrounds": [],
+        "fase55_census_count": 0,
+        "fase55_census_present": false,
+        "periods": [],
+        "present": false,
+        "row_count": 0,
+        "stationary_count": 0
+      },
+      "center_structure": {
+        "C_alone": false,
+        "LR_no_center": true,
+        "center_interactions": [
+          "LC",
+          "CR"
+        ],
+        "center_mediated": false,
+        "strict_center_mediated": false
+      },
+      "max_span": 0,
+      "moving_count": 0,
+      "moving_hits": [],
+      "processed_ic_words": 502,
+      "rule": 77,
+      "rule_binary": "01001101",
+      "stationary_count": 0,
+      "stationary_hits": []
+    },
+    {
+      "alias_count": 0,
+      "anf_measurements": [],
+      "anf_monomials": [
+        "1",
+        "R",
+        "CR",
+        "L"
+      ],
+      "background": "1100",
+      "bit_flipped": 6,
+      "catalog_presence": {
+        "backgrounds": [],
+        "fase55_census_count": 0,
+        "fase55_census_present": false,
+        "periods": [],
+        "present": false,
+        "row_count": 0,
+        "stationary_count": 0
+      },
+      "center_structure": {
+        "C_alone": false,
+        "LR_no_center": false,
+        "center_interactions": [
+          "CR"
+        ],
+        "center_mediated": true,
+        "strict_center_mediated": true
+      },
+      "max_span": 0,
+      "moving_count": 0,
+      "moving_hits": [],
+      "processed_ic_words": 502,
+      "rule": 45,
+      "rule_binary": "00101101",
+      "stationary_count": 0,
+      "stationary_hits": []
+    },
+    {
+      "alias_count": 0,
+      "anf_measurements": [],
+      "anf_monomials": [
+        "1",
+        "R",
+        "CR",
+        "L",
+        "LC"
+      ],
+      "background": "1100",
+      "bit_flipped": 7,
+      "catalog_presence": {
+        "backgrounds": [],
+        "fase55_census_count": 0,
+        "fase55_census_present": false,
+        "periods": [],
+        "present": false,
+        "row_count": 0,
+        "stationary_count": 0
+      },
+      "center_structure": {
+        "C_alone": false,
+        "LR_no_center": false,
+        "center_interactions": [
+          "LC",
+          "CR"
+        ],
+        "center_mediated": true,
+        "strict_center_mediated": true
+      },
+      "max_span": 0,
+      "moving_count": 0,
+      "moving_hits": [],
+      "processed_ic_words": 502,
+      "rule": 237,
+      "rule_binary": "11101101",
+      "stationary_count": 0,
+      "stationary_hits": []
+    }
+  ],
+  "phase": 64,
+  "status": "HAMMING1_WITNESSES_FOUND",
+  "verdict_reason": "At least one Hamming-1 neighbor has a bg=1100 stationary oscillator and was measured by the ANF-gradient protocol."
+}
