@@ -263,7 +263,16 @@ neighbours have no stationary or moving oscillator on <code>bg=1100</code>; the 
 survivor is the bit-0 neighbour <code>rule_108</code>, which collapses to a compact
 period-2 mechanism with slope -0.017102 and R^2 = 0.264706, not a comparable
 ANF-gradient witness. The resulting status is
-<code>HAMMING1_WITNESSES_FOUND_NOT_COMPARABLE</code>.</p>
+<code>HAMMING1_WITNESSES_FOUND_NOT_COMPARABLE</code>. A context-frequency audit then
+counts which local <code>(L,C,R)</code> contexts are used by the active defect cells of
+the remaining residual. Aggregated context frequencies do not discriminate:
+all eight contexts appear in the selected positives and controls, and the
+residual is closest by L1 frequency distance to the negative
+<code>bg=1100/T=10/word=00111001</code> case. A long-horizon persistence audit refutes
+the simplest explanation for this paradox: the residual is not a transient.
+It persists to <code>t=500</code>, repeats exactly with period 8 in the last 100 steps,
+and has negligible center drift. The resulting statuses are
+<code>CONTEXT_UNDISCRIMINATED</code> and <code>RESIDUAL_CONFIRMED_PERSISTENT</code>.</p>
 <p>Every result is reproducible from deterministic scripts with no stochastic
 components in the discovery loop.</p>
 <h2>1. Introduction</h2>
@@ -3612,6 +3621,106 @@ signature on <code>bg=1100</code>. The <code>rule_109/bg=1100/T=8</code> residua
 locally isolated under the tested ECA perturbations; a stronger causal
 experiment would need a conditioned intervention that preserves the orbit
 rather than changing the global rule table uniformly.</p>
+<h3>7.36 Context-frequency and persistence audit of the residual (Fases 65--66)</h3>
+<p>Fase 65 asks whether the remaining residual can be distinguished by the local
+contexts actually used by its active defect cells. The test compares the
+residual <code>rule_109/bg=1100/T=8/word=00000110</code> with the other four positive
+<code>rule_109</code> witnesses and three <code>bg=1100</code> negative controls. Each case is
+evolved to <code>t=50</code> with width 256. As in the dynamic alignment audit, the pure
+background is evolved in parallel and the defect is measured as</p>
+<p><code>defect(t) = state_with_IC(t) XOR background_only(t)</code>.</p>
+<p>For each active defect cell, the local context index is</p>
+<p><code>(L &lt;&lt; 2) | (C &lt;&lt; 1) | R</code>,</p>
+<p>so the eight possible contexts are <code>000</code> through <code>111</code>. For <code>t&gt;0</code>, contexts
+are read from <code>state_with_IC(t-1)</code>; for <code>t=0</code>, they are read from the pure
+background frame.</p>
+<p>The aggregate context-frequency test is negative:</p>
+<ul>
+<li>contexts present in every positive and no negative control: none;</li>
+<li>contexts used by the residual and by no other positive: none;</li>
+<li>contexts used by every other positive but absent from the residual: none;</li>
+<li>contexts never used by any selected defect cell: none.</li>
+</ul>
+<p>Thus, the Fase 65 status is <code>CONTEXT_UNDISCRIMINATED</code>, with
+<code>NO_UNUSED_CONTEXT_INTERVENTION_CANDIDATE</code>. The selected cases exercise all
+eight contexts, so no uniform context flip is obviously safe.</p>
+<p>The most informative number is the L1 context-frequency neighbourhood of the
+residual:</p>
+<table>
+<thead>
+<tr>
+<th align="right">Rank</th>
+<th>Case</th>
+<th>Category</th>
+<th align="right">L1 distance from residual</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="right">1</td>
+<td><code>bg=1100/T=10/word=00111001</code></td>
+<td><code>NEGATIVE</code></td>
+<td align="right">0.104</td>
+</tr>
+<tr>
+<td align="right">2</td>
+<td><code>bg=1100/T=12/word=00101001</code></td>
+<td><code>NATURAL_PERIOD_STRONG</code></td>
+<td align="right">0.256</td>
+</tr>
+<tr>
+<td align="right">3</td>
+<td><code>bg=1011/T=10/word=00000001</code></td>
+<td><code>HORIZON_ACCEPTABLE</code></td>
+<td align="right">0.503</td>
+</tr>
+<tr>
+<td align="right">4</td>
+<td><code>bg=0011/T=12/word=10010100</code></td>
+<td><code>NATURAL_PERIOD_STRONG</code></td>
+<td align="right">0.618</td>
+</tr>
+<tr>
+<td align="right">5</td>
+<td><code>bg=1100/T=6/word=00100110</code></td>
+<td><code>NEGATIVE</code></td>
+<td align="right">0.671</td>
+</tr>
+<tr>
+<td align="right">6</td>
+<td><code>bg=1100/T=3/word=00001110</code></td>
+<td><code>NEGATIVE</code></td>
+<td align="right">0.802</td>
+</tr>
+<tr>
+<td align="right">7</td>
+<td><code>bg=0110/T=8/word=0000011</code></td>
+<td><code>HORIZON_ACCEPTABLE</code></td>
+<td align="right">1.174</td>
+</tr>
+</tbody></table>
+<p>This creates a sharper paradox: the positive residual is closer in aggregate
+context usage to a negative <code>bg=1100/T=10</code> case than to any other positive
+witness.</p>
+<p>Fase 66 tests the cheapest explanation for that paradox: perhaps the residual
+is not a genuine oscillator, but a long transient that only passed the finite
+<code>HORIZON_ACCEPTABLE</code> threshold used in the earlier census. The same residual
+is evolved to <code>t=500</code>, again measuring the background-subtracted defect. The
+result refutes the transient hypothesis:</p>
+<ul>
+<li>classification: <code>PERSISTENT_OSCILLATOR</code>;</li>
+<li>status: <code>RESIDUAL_CONFIRMED_PERSISTENT</code>;</li>
+<li>collapse step: none;</li>
+<li>exact period observed in the last 100 steps: 8;</li>
+<li>center slope in the last 100 steps: <code>5.591147350029335e-05</code>;</li>
+<li>final defect size: 6;</li>
+<li>tail defect-size range: 5..8.</li>
+</ul>
+<p>Therefore, the residual is not a false positive caused by a pre-collapse
+window. It is a genuine period-8 oscillator whose aggregate context
+frequencies do not explain why it remains positive while the nearby
+<code>bg=1100/T=10</code> control is negative. The discrimination is not in the set or
+aggregate frequency of contexts; it must lie in their phase ordering,
+trajectory, or another time-resolved invariant.</p>
 <h2>8. Observer Artifacts and Pipeline Equivariance</h2>
 <p>The ZUSE pipeline contains two classes of observer artifact that the atlas
 identifies and characterizes. Framing these artifacts as results — not just
@@ -4083,8 +4192,11 @@ edits are algebraically valid, but none preserves a stationary oscillator on
 measurement. Fase 64 then tests the Hamming-1 truth-table neighbourhood:
 seven neighbours have no oscillator support on <code>bg=1100</code>, while the only
 survivor, <code>rule_108</code>, collapses to a compact <code>T=2</code> mechanism with
-non-comparable ANF slope (<code>-0.017102</code>, <code>R^2=0.264706</code>). Full results are in
-Sections 7.20-7.35.</li>
+non-comparable ANF slope (<code>-0.017102</code>, <code>R^2=0.264706</code>). Fases 65--66 then
+test the residual directly: aggregate context frequencies do not
+discriminate it from nearby controls, and a long-horizon audit confirms that
+it is a genuine persistent period-8 oscillator rather than a transient. Full
+results are in Sections 7.20-7.36.</li>
 </ul>
 <p>Each extension is a controlled experiment with the same measurement protocol;
 only the IC or background definition changes.</p>
