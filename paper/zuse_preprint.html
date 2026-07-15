@@ -249,7 +249,15 @@ periodic background and measures the XOR defect over <code>t=1..12</code>. No si
 dynamic descriptor separates all 5 positives, but a minimal predeclared union
 captures 4/5 positives with zero false positives. The remaining residual,
 <code>bg=1100/T=8/word=00000110</code>, survives the static and dynamic audits and becomes
-the best intervention target. The resulting status is <code>DYNAMIC_UNION_PARTIAL</code>.</p>
+the best intervention target. The resulting status is <code>DYNAMIC_UNION_PARTIAL</code>.
+An algebraic intervention preflight then tests four minimal ANF edits around
+<code>rule_109</code>: removing <code>LC</code>, removing <code>CR</code>, adding isolated <code>C</code>, and adding
+<code>LR</code>. These edits yield rules 173, 229, 161, and 205. All four local ANF edits
+are verified, but none has a stationary oscillator on <code>bg=1100</code> under the
+same periodic-background protocol. The intervention test is therefore blocked
+before ANF-gradient measurement: the minimal monomial-level edits destroy the
+comparable oscillator support. The resulting status is
+<code>ALGEBRAIC_INTERVENTION_PREFLIGHT_BLOCKED</code>.</p>
 <p>Every result is reproducible from deterministic scripts with no stochastic
 components in the discovery loop.</p>
 <h2>1. Introduction</h2>
@@ -3354,6 +3362,108 @@ survives center-mediated structure, period/horizon thresholds, static
 IC-alignment descriptors, single dynamic descriptors, and the minimal dynamic
 union. It is therefore the most informative remaining target for a future
 intervention experiment.</p>
+<h3>7.34 Algebraic intervention preflight (Fase 63)</h3>
+<p>Fase 63 tests whether the residual identified by Fase 62 can be probed by
+minimal algebraic interventions on the local ANF of <code>rule_109</code>. The local
+rule is</p>
+<p><code>rule_109 = 1 XOR L XOR LC XOR R XOR CR XOR LCR</code>.</p>
+<p>Four single-monomial edits are tested:</p>
+<table>
+<thead>
+<tr>
+<th>Intervention</th>
+<th align="right">Synthetic rule</th>
+<th>Local ANF</th>
+<th>Center mediated?</th>
+<th>Fase 55 census?</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>remove <code>LC</code></td>
+<td align="right">173</td>
+<td><code>1 XOR L XOR R XOR CR XOR LCR</code></td>
+<td>yes</td>
+<td>no</td>
+</tr>
+<tr>
+<td>remove <code>CR</code></td>
+<td align="right">229</td>
+<td><code>1 XOR L XOR LC XOR R XOR LCR</code></td>
+<td>yes</td>
+<td>no</td>
+</tr>
+<tr>
+<td>add isolated <code>C</code></td>
+<td align="right">161</td>
+<td><code>1 XOR L XOR C XOR LC XOR R XOR CR XOR LCR</code></td>
+<td>no</td>
+<td>no</td>
+</tr>
+<tr>
+<td>add <code>LR</code> without center</td>
+<td align="right">205</td>
+<td><code>1 XOR L XOR LC XOR LR XOR R XOR CR XOR LCR</code></td>
+<td>no</td>
+<td>no</td>
+</tr>
+</tbody></table>
+<p>The ANF edits are verified exactly. The next question is whether any synthetic
+rule preserves the stationary oscillator support needed to ask the ANF-gradient
+question on the residual background <code>bg=1100</code>. Fase 63 therefore runs the same
+periodic-background oscillator preflight as earlier phases, restricted to
+<code>bg=1100</code> and IC words of length 1..8.</p>
+<p>The result is:</p>
+<table>
+<thead>
+<tr>
+<th align="right">Synthetic rule</th>
+<th align="right">Processed ICs</th>
+<th align="right">Stationary hits</th>
+<th align="right">Moving hits</th>
+<th align="right">Period-1 aliases</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="right">173</td>
+<td align="right">502</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">12</td>
+</tr>
+<tr>
+<td align="right">229</td>
+<td align="right">502</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td align="right">161</td>
+<td align="right">502</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="right">205</td>
+<td align="right">502</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+</tr>
+</tbody></table>
+<p>No synthetic rule has a stationary oscillator on <code>bg=1100</code> in this preflight.
+Consequently, no cone-ANF measurement is run: there is no comparable
+stationary witness on the residual background. The Fase 63 status is
+<code>ALGEBRAIC_INTERVENTION_PREFLIGHT_BLOCKED</code>.</p>
+<p>This is an informative block rather than a failed measurement. At the
+monomial-edit resolution tested here, the <code>rule_109</code> mechanism is not
+separable into independently removable local ANF terms while preserving the
+oscillatory support. The center-mediated terms are entangled with viability of
+the oscillator itself. A causal intervention must therefore be finer or more
+conditioned than a whole-monomial ANF edit, for example by moving to
+Hamming-1 truth-table neighbors or by targeting the surviving residual with a
+more local dynamic analysis.</p>
 <h2>8. Observer Artifacts and Pipeline Equivariance</h2>
 <p>The ZUSE pipeline contains two classes of observer artifact that the atlas
 identifies and characterizes. Framing these artifacts as results — not just
@@ -3818,8 +3928,11 @@ separator is the lookup-like exact <code>ic_active_bits</code> pattern. Fases 61
 then test dynamic alignment: no single descriptor separates all positives,
 but the minimal union <code>size_growth_total &lt;= -3 OR center_drift_abs &lt;= 0.0</code>
 captures 4/5 positives with zero false positives, leaving
-<code>bg=1100/T=8/word=00000110</code> as the universal residual. Full results are in
-Sections 7.20-7.33.</li>
+<code>bg=1100/T=8/word=00000110</code> as the universal residual. Fase 63 then tests
+four minimal monomial-level ANF interventions around <code>rule_109</code>; all four
+edits are algebraically valid, but none preserves a stationary oscillator on
+<code>bg=1100</code>, so the direct intervention test is blocked before cone-ANF
+measurement. Full results are in Sections 7.20-7.34.</li>
 </ul>
 <p>Each extension is a controlled experiment with the same measurement protocol;
 only the IC or background definition changes.</p>
