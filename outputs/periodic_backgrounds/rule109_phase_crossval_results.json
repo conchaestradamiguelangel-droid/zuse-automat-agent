@@ -1,0 +1,2846 @@
+{
+  "negative_controls": [
+    {
+      "T_local": 3,
+      "background": "1100",
+      "category": "NEGATIVE",
+      "word": "00001110"
+    },
+    {
+      "T_local": 6,
+      "background": "1100",
+      "category": "NEGATIVE",
+      "word": "00100110"
+    },
+    {
+      "T_local": 10,
+      "background": "1100",
+      "category": "NEGATIVE",
+      "word": "00111001"
+    }
+  ],
+  "phase": "67b",
+  "positive_cases": [
+    {
+      "T_local": 12,
+      "background": "0011",
+      "category": "NATURAL_PERIOD_STRONG",
+      "word": "10010100"
+    },
+    {
+      "T_local": 8,
+      "background": "0110",
+      "category": "HORIZON_ACCEPTABLE",
+      "word": "0000011"
+    },
+    {
+      "T_local": 10,
+      "background": "1011",
+      "category": "HORIZON_ACCEPTABLE",
+      "word": "00000001"
+    },
+    {
+      "T_local": 8,
+      "background": "1100",
+      "category": "HORIZON_ACCEPTABLE_RESIDUAL",
+      "word": "00000110"
+    },
+    {
+      "T_local": 12,
+      "background": "1100",
+      "category": "NATURAL_PERIOD_STRONG",
+      "word": "00101001"
+    }
+  ],
+  "rows": [
+    {
+      "T_local": 12,
+      "background": "0011",
+      "category": "NATURAL_PERIOD_STRONG",
+      "group": "positive",
+      "has_target_dominant": false,
+      "has_target_unique_dominant": false,
+      "label": "bg=0011/T=12/word=10010100",
+      "period_after_20": 12,
+      "period_verified": true,
+      "phase_count": 12,
+      "phase_start_t": 69,
+      "phases": [
+        {
+          "active_rel": [
+            -1,
+            0,
+            2,
+            6,
+            7,
+            9
+          ],
+          "counts": {
+            "000": 0,
+            "001": 1,
+            "010": 0,
+            "011": 0,
+            "100": 0,
+            "101": 0,
+            "110": 2,
+            "111": 3
+          },
+          "dominant_contexts": [
+            "111"
+          ],
+          "frequencies": {
+            "000": 0.0,
+            "001": 0.16666666666666666,
+            "010": 0.0,
+            "011": 0.0,
+            "100": 0.0,
+            "101": 0.0,
+            "110": 0.3333333333333333,
+            "111": 0.5
+          },
+          "phase": 0,
+          "size": 6,
+          "t": 69,
+          "target_context_frequency": 0.0,
+          "target_is_dominant": false,
+          "target_is_unique_dominant": false
+        },
+        {
+          "active_rel": [
+            0,
+            2,
+            5,
+            9,
+            10
+          ],
+          "counts": {
+            "000": 1,
+            "001": 1,
+            "010": 1,
+            "011": 1,
+            "100": 0,
+            "101": 0,
+            "110": 0,
+            "111": 1
+          },
+          "dominant_contexts": [
+            "000",
+            "001",
+            "010",
+            "011",
+            "111"
+          ],
+          "frequencies": {
+            "000": 0.2,
+            "001": 0.2,
+            "010": 0.2,
+            "011": 0.2,
+            "100": 0.0,
+            "101": 0.0,
+            "110": 0.0,
+            "111": 0.2
+          },
+          "phase": 1,
+          "size": 5,
+          "t": 70,
+          "target_context_frequency": 0.0,
+          "target_is_dominant": false,
+          "target_is_unique_dominant": false
+        },
+        {
+          "active_rel": [
+            -1,
+            0,
+            2,
+            4,
+            5,
+            6,
+            8,
+            9
+          ],
+          "counts": {
+            "000": 0,
+            "001": 1,
+            "010": 1,
+            "011": 1,
+            "100": 0,
+            "101": 2,
+            "110": 1,
+            "111": 2
+          },
+          "dominant_contexts": [
+            "101",
+            "111"
+          ],
+          "frequencies": {
+            "000": 0.0,
+            "001": 0.125,
+            "010": 0.125,
+            "011": 0.125,
+            "100": 0.0,
+            "101": 0.25,
+            "110": 0.125,
+            "111": 0.25
+          },
+          "phase": 2,
+          "size": 8,
+          "t": 71,
+          "target_context_frequency": 0.0,
+          "target_is_dominant": false,
+          "target_is_unique_dominant": false
+        },
+        {
+          "active_rel": [
+            0,
+            2,
+            5,
+            10
+          ],
+          "counts": {
+            "000": 0,
+            "001": 1,
+            "010": 1,
+            "011": 0,
+            "100": 0,
+            "101": 0,
+            "110": 1,
+            "111": 1
+          },
+          "dominant_contexts": [
+            "001",
+            "010",
+            "110",
+            "111"
+          ],
+          "frequencies": {
+            "000": 0.0,
+            "001": 0.25,
+            "010": 0.25,
+            "011": 0.0,
+            "100": 0.0,
+            "101": 0.0,
+            "110": 0.25,
+            "111": 0.25
+          },
+          "phase": 3,
+          "size": 4,
+          "t": 72,
+          "target_context_frequency": 0.0,
+          "target_is_dominant": false,
+          "target_is_unique_dominant": false
+        },
+        {
+          "active_rel": [
+            -1,
+            0,
+            2,
+            4,
+            5,
+            6,
+            9,
+            10
+          ],
+          "counts": {
+            "000": 1,
+            "001": 2,
+            "010": 0,
+            "011": 1,
+            "100": 0,
+            "101": 1,
+            "110": 1,
+            "111": 2
+          },
+          "dominant_contexts": [
+            "001",
+            "111"
+          ],
+          "frequencies": {
+            "000": 0.125,
+            "001": 0.25,
+            "010": 0.0,
+            "011": 0.125,
+            "100": 0.0,
+            "101": 0.125,
+            "110": 0.125,
+            "111": 0.25
+          },
+          "phase": 4,
+          "size": 8,
+          "t": 73,
+          "target_context_frequency": 0.0,
+          "target_is_dominant": false,
+          "target_is_unique_dominant": false
+        },
+        {
+          "active_rel": [
+            0,
+            2,
+            5,
+            8,
+            9
+          ],
+          "counts": {
+            "000": 0,
+            "001": 1,
+            "010": 2,
+            "011": 0,
+            "100": 0,
+            "101": 1,
+            "110": 1,
+            "111": 0
+          },
+          "dominant_contexts": [
+            "010"
+          ],
+          "frequencies": {
+            "000": 0.0,
+            "001": 0.2,
+            "010": 0.4,
+            "011": 0.0,
+            "100": 0.0,
+            "101": 0.2,
+            "110": 0.2,
+            "111": 0.0
+          },
+          "phase": 5,
+          "size": 5,
+          "t": 74,
+          "target_context_frequency": 0.0,
+          "target_is_dominant": false,
+          "target_is_unique_dominant": false
+        },
+        {
+          "active_rel": [
+            -1,
+            0,
+            2,
+            4,
+            5,
+            6,
+            7,
+            10
+          ],
+          "counts": {
+            "000": 0,
+            "001": 1,
+            "010": 0,
+            "011": 1,
+            "100": 0,
+            "101": 1,
+            "110": 1,
+            "111": 4
+          },
+          "dominant_contexts": [
+            "111"
+          ],
+          "frequencies": {
+            "000": 0.0,
+            "001": 0.125,
+            "010": 0.0,
+            "011": 0.125,
+            "100": 0.0,
+            "101": 0.125,
+            "110": 0.125,
+            "111": 0.5
+          },
+          "phase": 6,
+          "size": 8,
+          "t": 75,
+          "target_context_frequency": 0.0,
+          "target_is_dominant": false,
+          "target_is_unique_dominant": false
+        },
+        {
+          "active_rel": [
+            0,
+            2,
+            5,
+            6,
+            8,
+            9,
+            10
+          ],
+          "counts": {
+            "000": 2,
+            "001": 2,
+            "010": 1,
+            "011": 0,
+            "100": 1,
+            "101": 0,
+            "110": 1,
+            "111": 0
+          },
+          "dominant_contexts": [
+            "000",
+            "001"
+          ],
+          "frequencies": {
+            "000": 0.2857142857142857,
+            "001": 0.2857142857142857,
+            "010": 0.14285714285714285,
+            "011": 0.0,
+            "100": 0.14285714285714285,
+            "101": 0.0,
+            "110": 0.14285714285714285,
+            "111": 0.0
+          },
+          "phase": 7,
+          "size": 7,
+          "t": 76,
+          "target_context_frequency": 0.14285714285714285,
+          "target_is_dominant": false,
+          "target_is_unique_dominant": false
+        },
+        {
+          "active_rel": [
+            -1,
+            0,
+            2,
+            4,
+            5,
+            9
+          ],
+          "counts": {
+            "000": 0,
+            "001": 1,
+            "010": 1,
+            "011": 0,
+            "100": 0,
+            "101": 1,
+            "110": 2,
+            "111": 1
+          },
+          "dominant_contexts": [
+            "110"
+          ],
+          "frequencies": {
+            "000": 0.0,
+            "001": 0.16666666666666666,
+            "010": 0.16666666666666666,
+            "011": 0.0,
+            "100": 0.0,
+            "101": 0.16666666666666666,
+            "110": 0.3333333333333333,
+            "111": 0.16666666666666666
+          },
+          "phase": 8,
+          "size": 6,
+          "t": 77,
+          "target_context_frequency": 0.0,
+          "target_is_dominant": false,
+          "target_is_unique_dominant": false
+        },
+        {
+          "active_rel": [
+            0,
+            2,
+            6,
+            8,
+            9,
+            10
+          ],
+          "counts": {
+            "000": 0,
+            "001": 1,
+            "010": 1,
+            "011": 1,
+            "100": 0,
+            "101": 1,
+            "110": 0,
+            "111": 2
+          },
+          "dominant_contexts": [
+            "111"
+          ],
+          "frequencies": {
+            "000": 0.0,
+            "001": 0.16666666666666666,
+            "010": 0.16666666666666666,
+            "011": 0.16666666666666666,
+            "100": 0.0,
+            "101": 0.16666666666666666,
+            "110": 0.0,
+            "111": 0.3333333333333333
+          },
+          "phase": 9,
+          "size": 6,
+          "t": 78,
+          "target_context_frequency": 0.0,
+          "target_is_dominant": false,
+          "target_is_unique_dominant": false
+        },
+        {
+          "active_rel": [
+            -1,
+            0,
+            2,
+            5,
+            6,
+            9
+          ],
+          "counts": {
+            "000": 1,
+            "001": 2,
+            "010": 0,
+            "011": 0,
+            "100": 0,
+            "101": 0,
+            "110": 2,
+            "111": 1
+          },
+          "dominant_contexts": [
+            "001",
+            "110"
+          ],
+          "frequencies": {
+            "000": 0.16666666666666666,
+            "001": 0.3333333333333333,
+            "010": 0.0,
+            "011": 0.0,
+            "100": 0.0,
+            "101": 0.0,
+            "110": 0.3333333333333333,
+            "111": 0.16666666666666666
+          },
+          "phase": 10,
+          "size": 6,
+          "t": 79,
+          "target_context_frequency": 0.0,
+          "target_is_dominant": false,
+          "target_is_unique_dominant": false
+        },
+        {
+          "active_rel": [
+            0,
+            2,
+            4,
+            5,
+            8,
+            9,
+            10
+          ],
+          "counts": {
+            "000": 0,
+            "001": 1,
+            "010": 2,
+            "011": 1,
+            "100": 0,
+            "101": 2,
+            "110": 0,
+            "111": 1
+          },
+          "dominant_contexts": [
+            "010",
+            "101"
+          ],
+          "frequencies": {
+            "000": 0.0,
+            "001": 0.14285714285714285,
+            "010": 0.2857142857142857,
+            "011": 0.14285714285714285,
+            "100": 0.0,
+            "101": 0.2857142857142857,
+            "110": 0.0,
+            "111": 0.14285714285714285
+          },
+          "phase": 11,
+          "size": 7,
+          "t": 80,
+          "target_context_frequency": 0.0,
+          "target_is_dominant": false,
+          "target_is_unique_dominant": false
+        }
+      ],
+      "rule": 109,
+      "target_dominant_phases": [],
+      "target_unique_phases": [],
+      "word": "10010100"
+    },
+    {
+      "T_local": 8,
+      "background": "0110",
+      "category": "HORIZON_ACCEPTABLE",
+      "group": "positive",
+      "has_target_dominant": true,
+      "has_target_unique_dominant": false,
+      "label": "bg=0110/T=8/word=0000011",
+      "period_after_20": 1,
+      "period_verified": true,
+      "phase_count": 1,
+      "phase_start_t": 80,
+      "phases": [
+        {
+          "active_rel": [
+            -2,
+            0,
+            1,
+            2,
+            3,
+            5
+          ],
+          "counts": {
+            "000": 0,
+            "001": 2,
+            "010": 2,
+            "011": 0,
+            "100": 2,
+            "101": 0,
+            "110": 0,
+            "111": 0
+          },
+          "dominant_contexts": [
+            "001",
+            "010",
+            "100"
+          ],
+          "frequencies": {
+            "000": 0.0,
+            "001": 0.3333333333333333,
+            "010": 0.3333333333333333,
+            "011": 0.0,
+            "100": 0.3333333333333333,
+            "101": 0.0,
+            "110": 0.0,
+            "111": 0.0
+          },
+          "phase": 0,
+          "size": 6,
+          "t": 80,
+          "target_context_frequency": 0.3333333333333333,
+          "target_is_dominant": true,
+          "target_is_unique_dominant": false
+        }
+      ],
+      "rule": 109,
+      "target_dominant_phases": [
+        0
+      ],
+      "target_unique_phases": [],
+      "word": "0000011"
+    },
+    {
+      "T_local": 10,
+      "background": "1011",
+      "category": "HORIZON_ACCEPTABLE",
+      "group": "positive",
+      "has_target_dominant": true,
+      "has_target_unique_dominant": false,
+      "label": "bg=1011/T=10/word=00000001",
+      "period_after_20": 10,
+      "period_verified": true,
+      "phase_count": 10,
+      "phase_start_t": 71,
+      "phases": [
+        {
+          "active_rel": [
+            -3,
+            -2,
+            -1,
+            0,
+            3,
+            6,
+            7,
+            8,
+            9
+          ],
+          "counts": {
+            "000": 1,
+            "001": 3,
+            "010": 2,
+            "011": 0,
+            "100": 3,
+            "101": 0,
+            "110": 0,
+            "111": 0
+          },
+          "dominant_contexts": [
+            "001",
+            "100"
+          ],
+          "frequencies": {
+            "000": 0.1111111111111111,
+            "001": 0.3333333333333333,
+            "010": 0.2222222222222222,
+            "011": 0.0,
+            "100": 0.3333333333333333,
+            "101": 0.0,
+            "110": 0.0,
+            "111": 0.0
+          },
+          "phase": 0,
+          "size": 9,
+          "t": 71,
+          "target_context_frequency": 0.3333333333333333,
+          "target_is_dominant": true,
+          "target_is_unique_dominant": false
+        },
+        {
+          "active_rel": [
+            -2,
+            1,
+            2,
+            3,
+            4,
+            5,
+            8
+          ],
+          "counts": {
+            "000": 0,
+            "001": 1,
+            "010": 0,
+            "011": 1,
+            "100": 1,
+            "101": 0,
+            "110": 1,
+            "111": 3
+          },
+          "dominant_contexts": [
+            "111"
+          ],
+          "frequencies": {
+            "000": 0.0,
+            "001": 0.14285714285714285,
+            "010": 0.0,
+            "011": 0.14285714285714285,
+            "100": 0.14285714285714285,
+            "101": 0.0,
+            "110": 0.14285714285714285,
+            "111": 0.42857142857142855
+          },
+          "phase": 1,
+          "size": 7,
+          "t": 72,
+          "target_context_frequency": 0.14285714285714285,
+          "target_is_dominant": false,
+          "target_is_unique_dominant": false
+        },
+        {
+          "active_rel": [
+            -3,
+            -2,
+            -1,
+            0,
+            2,
+            3,
+            4,
+            6,
+            7,
+            8,
+            9
+          ],
+          "counts": {
+            "000": 1,
+            "001": 3,
+            "010": 0,
+            "011": 1,
+            "100": 3,
+            "101": 0,
+            "110": 1,
+            "111": 2
+          },
+          "dominant_contexts": [
+            "001",
+            "100"
+          ],
+          "frequencies": {
+            "000": 0.09090909090909091,
+            "001": 0.2727272727272727,
+            "010": 0.0,
+            "011": 0.09090909090909091,
+            "100": 0.2727272727272727,
+            "101": 0.0,
+            "110": 0.09090909090909091,
+            "111": 0.18181818181818182
+          },
+          "phase": 2,
+          "size": 11,
+          "t": 73,
+          "target_context_frequency": 0.2727272727272727,
+          "target_is_dominant": true,
+          "target_is_unique_dominant": false
+        },
+        {
+          "active_rel": [
+            -2,
+            1,
+            5,
+            8
+          ],
+          "counts": {
+            "000": 0,
+            "001": 1,
+            "010": 2,
+            "011": 0,
+            "100": 1,
+            "101": 0,
+            "110": 0,
+            "111": 0
+          },
+          "dominant_contexts": [
+            "010"
+          ],
+          "frequencies": {
+            "000": 0.0,
+            "001": 0.25,
+            "010": 0.5,
+            "011": 0.0,
+            "100": 0.25,
+            "101": 0.0,
+            "110": 0.0,
+            "111": 0.0
+          },
+          "phase": 3,
+          "size": 4,
+          "t": 74,
+          "target_context_frequency": 0.25,
+          "target_is_dominant": false,
+          "target_is_unique_dominant": false
+        },
+        {
+          "active_rel": [
+            -3,
+            -2,
+            -1,
+            0,
+            1,
+            2,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "counts": {
+            "000": 0,
+            "001": 2,
+            "010": 0,
+            "011": 1,
+            "100": 2,
+            "101": 0,
+            "110": 1,
+            "111": 6
+          },
+          "dominant_contexts": [
+            "111"
+          ],
+          "frequencies": {
+            "000": 0.0,
+            "001": 0.16666666666666666,
+            "010": 0.0,
+            "011": 0.08333333333333333,
+            "100": 0.16666666666666666,
+            "101": 0.0,
+            "110": 0.08333333333333333,
+            "111": 0.5
+          },
+          "phase": 4,
+          "size": 12,
+          "t": 75,
+          "target_context_frequency": 0.16666666666666666,
+          "target_is_dominant": false,
+          "target_is_unique_dominant": false
+        },
+        {
+          "active_rel": [
+            -2,
+            0,
+            1,
+            5,
+            6,
+            8
+          ],
+          "counts": {
+            "000": 2,
+            "001": 2,
+            "010": 0,
+            "011": 0,
+            "100": 2,
+            "101": 0,
+            "110": 0,
+            "111": 0
+          },
+          "dominant_contexts": [
+            "000",
+            "001",
+            "100"
+          ],
+          "frequencies": {
+            "000": 0.3333333333333333,
+            "001": 0.3333333333333333,
+            "010": 0.0,
+            "011": 0.0,
+            "100": 0.3333333333333333,
+            "101": 0.0,
+            "110": 0.0,
+            "111": 0.0
+          },
+          "phase": 5,
+          "size": 6,
+          "t": 76,
+          "target_context_frequency": 0.3333333333333333,
+          "target_is_dominant": true,
+          "target_is_unique_dominant": false
+        },
+        {
+          "active_rel": [
+            -3,
+            -2,
+            -1,
+            2,
+            4,
+            7,
+            8,
+            9
+          ],
+          "counts": {
+            "000": 0,
+            "001": 2,
+            "010": 2,
+            "011": 0,
+            "100": 2,
+            "101": 0,
+            "110": 0,
+            "111": 2
+          },
+          "dominant_contexts": [
+            "001",
+            "010",
+            "100",
+            "111"
+          ],
+          "frequencies": {
+            "000": 0.0,
+            "001": 0.25,
+            "010": 0.25,
+            "011": 0.0,
+            "100": 0.25,
+            "101": 0.0,
+            "110": 0.0,
+            "111": 0.25
+          },
+          "phase": 6,
+          "size": 8,
+          "t": 77,
+          "target_context_frequency": 0.25,
+          "target_is_dominant": true,
+          "target_is_unique_dominant": false
+        },
+        {
+          "active_rel": [
+            -2,
+            0,
+            1,
+            2,
+            4,
+            5,
+            6,
+            8
+          ],
+          "counts": {
+            "000": 0,
+            "001": 2,
+            "010": 0,
+            "011": 1,
+            "100": 2,
+            "101": 0,
+            "110": 1,
+            "111": 2
+          },
+          "dominant_contexts": [
+            "001",
+            "100",
+            "111"
+          ],
+          "frequencies": {
+            "000": 0.0,
+            "001": 0.25,
+            "010": 0.0,
+            "011": 0.125,
+            "100": 0.25,
+            "101": 0.0,
+            "110": 0.125,
+            "111": 0.25
+          },
+          "phase": 7,
+          "size": 8,
+          "t": 78,
+          "target_context_frequency": 0.25,
+          "target_is_dominant": true,
+          "target_is_unique_dominant": false
+        },
+        {
+          "active_rel": [
+            -3,
+            -2,
+            -1,
+            3,
+            7,
+            8,
+            9
+          ],
+          "counts": {
+            "000": 0,
+            "001": 2,
+            "010": 3,
+            "011": 0,
+            "100": 2,
+            "101": 0,
+            "110": 0,
+            "111": 0
+          },
+          "dominant_contexts": [
+            "010"
+          ],
+          "frequencies": {
+            "000": 0.0,
+            "001": 0.2857142857142857,
+            "010": 0.42857142857142855,
+            "011": 0.0,
+            "100": 0.2857142857142857,
+            "101": 0.0,
+            "110": 0.0,
+            "111": 0.0
+          },
+          "phase": 8,
+          "size": 7,
+          "t": 79,
+          "target_context_frequency": 0.2857142857142857,
+          "target_is_dominant": false,
+          "target_is_unique_dominant": false
+        },
+        {
+          "active_rel": [
+            -2,
+            0,
+            2,
+            3,
+            4,
+            6,
+            8
+          ],
+          "counts": {
+            "000": 0,
+            "001": 1,
+            "010": 0,
+            "011": 0,
+            "100": 1,
+            "101": 0,
+            "110": 0,
+            "111": 5
+          },
+          "dominant_contexts": [
+            "111"
+          ],
+          "frequencies": {
+            "000": 0.0,
+            "001": 0.14285714285714285,
+            "010": 0.0,
+            "011": 0.0,
+            "100": 0.14285714285714285,
+            "101": 0.0,
+            "110": 0.0,
+            "111": 0.7142857142857143
+          },
+          "phase": 9,
+          "size": 7,
+          "t": 80,
+          "target_context_frequency": 0.14285714285714285,
+          "target_is_dominant": false,
+          "target_is_unique_dominant": false
+        }
+      ],
+      "rule": 109,
+      "target_dominant_phases": [
+        0,
+        2,
+        5,
+        6,
+        7
+      ],
+      "target_unique_phases": [],
+      "word": "00000001"
+    },
+    {
+      "T_local": 8,
+      "background": "1100",
+      "category": "HORIZON_ACCEPTABLE_RESIDUAL",
+      "group": "positive",
+      "has_target_dominant": true,
+      "has_target_unique_dominant": true,
+      "label": "bg=1100/T=8/word=00000110",
+      "period_after_20": 8,
+      "period_verified": true,
+      "phase_count": 8,
+      "phase_start_t": 73,
+      "phases": [
+        {
+          "active_rel": [
+            -3,
+            -1,
+            2,
+            3,
+            4,
+            6,
+            7
+          ],
+          "counts": {
+            "000": 0,
+            "001": 0,
+            "010": 2,
+            "011": 1,
+            "100": 1,
+            "101": 2,
+            "110": 0,
+            "111": 1
+          },
+          "dominant_contexts": [
+            "010",
+            "101"
+          ],
+          "frequencies": {
+            "000": 0.0,
+            "001": 0.0,
+            "010": 0.2857142857142857,
+            "011": 0.14285714285714285,
+            "100": 0.14285714285714285,
+            "101": 0.2857142857142857,
+            "110": 0.0,
+            "111": 0.14285714285714285
+          },
+          "phase": 0,
+          "size": 7,
+          "t": 73,
+          "target_context_frequency": 0.14285714285714285,
+          "target_is_dominant": false,
+          "target_is_unique_dominant": false
+        },
+        {
+          "active_rel": [
+            -3,
+            -1,
+            0,
+            1,
+            3,
+            8
+          ],
+          "counts": {
+            "000": 0,
+            "001": 0,
+            "010": 0,
+            "011": 1,
+            "100": 1,
+            "101": 0,
+            "110": 1,
+            "111": 3
+          },
+          "dominant_contexts": [
+            "111"
+          ],
+          "frequencies": {
+            "000": 0.0,
+            "001": 0.0,
+            "010": 0.0,
+            "011": 0.16666666666666666,
+            "100": 0.16666666666666666,
+            "101": 0.0,
+            "110": 0.16666666666666666,
+            "111": 0.5
+          },
+          "phase": 1,
+          "size": 6,
+          "t": 74,
+          "target_context_frequency": 0.16666666666666666,
+          "target_is_dominant": false,
+          "target_is_unique_dominant": false
+        },
+        {
+          "active_rel": [
+            -3,
+            -1,
+            0,
+            3,
+            4,
+            7,
+            8
+          ],
+          "counts": {
+            "000": 1,
+            "001": 1,
+            "010": 1,
+            "011": 1,
+            "100": 2,
+            "101": 0,
+            "110": 0,
+            "111": 1
+          },
+          "dominant_contexts": [
+            "100"
+          ],
+          "frequencies": {
+            "000": 0.14285714285714285,
+            "001": 0.14285714285714285,
+            "010": 0.14285714285714285,
+            "011": 0.14285714285714285,
+            "100": 0.2857142857142857,
+            "101": 0.0,
+            "110": 0.0,
+            "111": 0.14285714285714285
+          },
+          "phase": 2,
+          "size": 7,
+          "t": 75,
+          "target_context_frequency": 0.2857142857142857,
+          "target_is_dominant": true,
+          "target_is_unique_dominant": true
+        },
+        {
+          "active_rel": [
+            -3,
+            -1,
+            2,
+            3,
+            6,
+            7
+          ],
+          "counts": {
+            "000": 0,
+            "001": 0,
+            "010": 3,
+            "011": 0,
+            "100": 1,
+            "101": 2,
+            "110": 0,
+            "111": 0
+          },
+          "dominant_contexts": [
+            "010"
+          ],
+          "frequencies": {
+            "000": 0.0,
+            "001": 0.0,
+            "010": 0.5,
+            "011": 0.0,
+            "100": 0.16666666666666666,
+            "101": 0.3333333333333333,
+            "110": 0.0,
+            "111": 0.0
+          },
+          "phase": 3,
+          "size": 6,
+          "t": 76,
+          "target_context_frequency": 0.16666666666666666,
+          "target_is_dominant": false,
+          "target_is_unique_dominant": false
+        },
+        {
+          "active_rel": [
+            -3,
+            -1,
+            0,
+            1,
+            4,
+            5,
+            8
+          ],
+          "counts": {
+            "000": 0,
+            "001": 0,
+            "010": 0,
+            "011": 1,
+            "100": 1,
+            "101": 0,
+            "110": 0,
+            "111": 5
+          },
+          "dominant_contexts": [
+            "111"
+          ],
+          "frequencies": {
+            "000": 0.0,
+            "001": 0.0,
+            "010": 0.0,
+            "011": 0.14285714285714285,
+            "100": 0.14285714285714285,
+            "101": 0.0,
+            "110": 0.0,
+            "111": 0.7142857142857143
+          },
+          "phase": 4,
+          "size": 7,
+          "t": 77,
+          "target_context_frequency": 0.14285714285714285,
+          "target_is_dominant": false,
+          "target_is_unique_dominant": false
+        },
+        {
+          "active_rel": [
+            -3,
+            -1,
+            0,
+            2,
+            3,
+            6,
+            7,
+            8
+          ],
+          "counts": {
+            "000": 4,
+            "001": 1,
+            "010": 1,
+            "011": 0,
+            "100": 2,
+            "101": 0,
+            "110": 0,
+            "111": 0
+          },
+          "dominant_contexts": [
+            "000"
+          ],
+          "frequencies": {
+            "000": 0.5,
+            "001": 0.125,
+            "010": 0.125,
+            "011": 0.0,
+            "100": 0.25,
+            "101": 0.0,
+            "110": 0.0,
+            "111": 0.0
+          },
+          "phase": 5,
+          "size": 8,
+          "t": 78,
+          "target_context_frequency": 0.25,
+          "target_is_dominant": false,
+          "target_is_unique_dominant": false
+        },
+        {
+          "active_rel": [
+            -3,
+            -1,
+            4,
+            5,
+            7
+          ],
+          "counts": {
+            "000": 0,
+            "001": 0,
+            "010": 1,
+            "011": 0,
+            "100": 1,
+            "101": 0,
+            "110": 1,
+            "111": 2
+          },
+          "dominant_contexts": [
+            "111"
+          ],
+          "frequencies": {
+            "000": 0.0,
+            "001": 0.0,
+            "010": 0.2,
+            "011": 0.0,
+            "100": 0.2,
+            "101": 0.0,
+            "110": 0.2,
+            "111": 0.4
+          },
+          "phase": 6,
+          "size": 5,
+          "t": 79,
+          "target_context_frequency": 0.2,
+          "target_is_dominant": false,
+          "target_is_unique_dominant": false
+        },
+        {
+          "active_rel": [
+            -3,
+            -1,
+            0,
+            3,
+            7,
+            8
+          ],
+          "counts": {
+            "000": 1,
+            "001": 0,
+            "010": 0,
+            "011": 2,
+            "100": 1,
+            "101": 0,
+            "110": 0,
+            "111": 2
+          },
+          "dominant_contexts": [
+            "011",
+            "111"
+          ],
+          "frequencies": {
+            "000": 0.16666666666666666,
+            "001": 0.0,
+            "010": 0.0,
+            "011": 0.3333333333333333,
+            "100": 0.16666666666666666,
+            "101": 0.0,
+            "110": 0.0,
+            "111": 0.3333333333333333
+          },
+          "phase": 7,
+          "size": 6,
+          "t": 80,
+          "target_context_frequency": 0.16666666666666666,
+          "target_is_dominant": false,
+          "target_is_unique_dominant": false
+        }
+      ],
+      "rule": 109,
+      "target_dominant_phases": [
+        2
+      ],
+      "target_unique_phases": [
+        2
+      ],
+      "word": "00000110"
+    },
+    {
+      "T_local": 12,
+      "background": "1100",
+      "category": "NATURAL_PERIOD_STRONG",
+      "group": "positive",
+      "has_target_dominant": true,
+      "has_target_unique_dominant": false,
+      "label": "bg=1100/T=12/word=00101001",
+      "period_after_20": 12,
+      "period_verified": true,
+      "phase_count": 12,
+      "phase_start_t": 69,
+      "phases": [
+        {
+          "active_rel": [
+            -2,
+            0,
+            1,
+            5,
+            7,
+            8
+          ],
+          "counts": {
+            "000": 0,
+            "001": 0,
+            "010": 0,
+            "011": 2,
+            "100": 1,
+            "101": 0,
+            "110": 0,
+            "111": 3
+          },
+          "dominant_contexts": [
+            "111"
+          ],
+          "frequencies": {
+            "000": 0.0,
+            "001": 0.0,
+            "010": 0.0,
+            "011": 0.3333333333333333,
+            "100": 0.16666666666666666,
+            "101": 0.0,
+            "110": 0.0,
+            "111": 0.5
+          },
+          "phase": 0,
+          "size": 6,
+          "t": 69,
+          "target_context_frequency": 0.16666666666666666,
+          "target_is_dominant": false,
+          "target_is_unique_dominant": false
+        },
+        {
+          "active_rel": [
+            -3,
+            -2,
+            2,
+            5,
+            7
+          ],
+          "counts": {
+            "000": 1,
+            "001": 0,
+            "010": 1,
+            "011": 0,
+            "100": 1,
+            "101": 0,
+            "110": 1,
+            "111": 1
+          },
+          "dominant_contexts": [
+            "000",
+            "010",
+            "100",
+            "110",
+            "111"
+          ],
+          "frequencies": {
+            "000": 0.2,
+            "001": 0.0,
+            "010": 0.2,
+            "011": 0.0,
+            "100": 0.2,
+            "101": 0.0,
+            "110": 0.2,
+            "111": 0.2
+          },
+          "phase": 1,
+          "size": 5,
+          "t": 70,
+          "target_context_frequency": 0.2,
+          "target_is_dominant": true,
+          "target_is_unique_dominant": false
+        },
+        {
+          "active_rel": [
+            -2,
+            -1,
+            1,
+            2,
+            3,
+            5,
+            7,
+            8
+          ],
+          "counts": {
+            "000": 0,
+            "001": 0,
+            "010": 1,
+            "011": 1,
+            "100": 1,
+            "101": 2,
+            "110": 1,
+            "111": 2
+          },
+          "dominant_contexts": [
+            "101",
+            "111"
+          ],
+          "frequencies": {
+            "000": 0.0,
+            "001": 0.0,
+            "010": 0.125,
+            "011": 0.125,
+            "100": 0.125,
+            "101": 0.25,
+            "110": 0.125,
+            "111": 0.25
+          },
+          "phase": 2,
+          "size": 8,
+          "t": 71,
+          "target_context_frequency": 0.125,
+          "target_is_dominant": false,
+          "target_is_unique_dominant": false
+        },
+        {
+          "active_rel": [
+            -3,
+            2,
+            5,
+            7
+          ],
+          "counts": {
+            "000": 0,
+            "001": 0,
+            "010": 1,
+            "011": 1,
+            "100": 1,
+            "101": 0,
+            "110": 0,
+            "111": 1
+          },
+          "dominant_contexts": [
+            "010",
+            "011",
+            "100",
+            "111"
+          ],
+          "frequencies": {
+            "000": 0.0,
+            "001": 0.0,
+            "010": 0.25,
+            "011": 0.25,
+            "100": 0.25,
+            "101": 0.0,
+            "110": 0.0,
+            "111": 0.25
+          },
+          "phase": 3,
+          "size": 4,
+          "t": 72,
+          "target_context_frequency": 0.25,
+          "target_is_dominant": true,
+          "target_is_unique_dominant": false
+        },
+        {
+          "active_rel": [
+            -3,
+            -2,
+            1,
+            2,
+            3,
+            5,
+            7,
+            8
+          ],
+          "counts": {
+            "000": 1,
+            "001": 0,
+            "010": 0,
+            "011": 1,
+            "100": 2,
+            "101": 1,
+            "110": 1,
+            "111": 2
+          },
+          "dominant_contexts": [
+            "100",
+            "111"
+          ],
+          "frequencies": {
+            "000": 0.125,
+            "001": 0.0,
+            "010": 0.0,
+            "011": 0.125,
+            "100": 0.25,
+            "101": 0.125,
+            "110": 0.125,
+            "111": 0.25
+          },
+          "phase": 4,
+          "size": 8,
+          "t": 73,
+          "target_context_frequency": 0.25,
+          "target_is_dominant": true,
+          "target_is_unique_dominant": false
+        },
+        {
+          "active_rel": [
+            -2,
+            -1,
+            2,
+            5,
+            7
+          ],
+          "counts": {
+            "000": 0,
+            "001": 0,
+            "010": 2,
+            "011": 1,
+            "100": 1,
+            "101": 1,
+            "110": 0,
+            "111": 0
+          },
+          "dominant_contexts": [
+            "010"
+          ],
+          "frequencies": {
+            "000": 0.0,
+            "001": 0.0,
+            "010": 0.4,
+            "011": 0.2,
+            "100": 0.2,
+            "101": 0.2,
+            "110": 0.0,
+            "111": 0.0
+          },
+          "phase": 5,
+          "size": 5,
+          "t": 74,
+          "target_context_frequency": 0.2,
+          "target_is_dominant": false,
+          "target_is_unique_dominant": false
+        },
+        {
+          "active_rel": [
+            -3,
+            0,
+            1,
+            2,
+            3,
+            5,
+            7,
+            8
+          ],
+          "counts": {
+            "000": 0,
+            "001": 0,
+            "010": 0,
+            "011": 1,
+            "100": 1,
+            "101": 1,
+            "110": 1,
+            "111": 4
+          },
+          "dominant_contexts": [
+            "111"
+          ],
+          "frequencies": {
+            "000": 0.0,
+            "001": 0.0,
+            "010": 0.0,
+            "011": 0.125,
+            "100": 0.125,
+            "101": 0.125,
+            "110": 0.125,
+            "111": 0.5
+          },
+          "phase": 6,
+          "size": 8,
+          "t": 75,
+          "target_context_frequency": 0.125,
+          "target_is_dominant": false,
+          "target_is_unique_dominant": false
+        },
+        {
+          "active_rel": [
+            -3,
+            -2,
+            -1,
+            1,
+            2,
+            5,
+            7
+          ],
+          "counts": {
+            "000": 2,
+            "001": 1,
+            "010": 1,
+            "011": 1,
+            "100": 2,
+            "101": 0,
+            "110": 0,
+            "111": 0
+          },
+          "dominant_contexts": [
+            "000",
+            "100"
+          ],
+          "frequencies": {
+            "000": 0.2857142857142857,
+            "001": 0.14285714285714285,
+            "010": 0.14285714285714285,
+            "011": 0.14285714285714285,
+            "100": 0.2857142857142857,
+            "101": 0.0,
+            "110": 0.0,
+            "111": 0.0
+          },
+          "phase": 7,
+          "size": 7,
+          "t": 76,
+          "target_context_frequency": 0.2857142857142857,
+          "target_is_dominant": true,
+          "target_is_unique_dominant": false
+        },
+        {
+          "active_rel": [
+            -2,
+            2,
+            3,
+            5,
+            7,
+            8
+          ],
+          "counts": {
+            "000": 0,
+            "001": 0,
+            "010": 1,
+            "011": 2,
+            "100": 1,
+            "101": 1,
+            "110": 0,
+            "111": 1
+          },
+          "dominant_contexts": [
+            "011"
+          ],
+          "frequencies": {
+            "000": 0.0,
+            "001": 0.0,
+            "010": 0.16666666666666666,
+            "011": 0.3333333333333333,
+            "100": 0.16666666666666666,
+            "101": 0.16666666666666666,
+            "110": 0.0,
+            "111": 0.16666666666666666
+          },
+          "phase": 8,
+          "size": 6,
+          "t": 77,
+          "target_context_frequency": 0.16666666666666666,
+          "target_is_dominant": false,
+          "target_is_unique_dominant": false
+        },
+        {
+          "active_rel": [
+            -3,
+            -2,
+            -1,
+            1,
+            5,
+            7
+          ],
+          "counts": {
+            "000": 0,
+            "001": 0,
+            "010": 1,
+            "011": 0,
+            "100": 1,
+            "101": 1,
+            "110": 1,
+            "111": 2
+          },
+          "dominant_contexts": [
+            "111"
+          ],
+          "frequencies": {
+            "000": 0.0,
+            "001": 0.0,
+            "010": 0.16666666666666666,
+            "011": 0.0,
+            "100": 0.16666666666666666,
+            "101": 0.16666666666666666,
+            "110": 0.16666666666666666,
+            "111": 0.3333333333333333
+          },
+          "phase": 9,
+          "size": 6,
+          "t": 78,
+          "target_context_frequency": 0.16666666666666666,
+          "target_is_dominant": false,
+          "target_is_unique_dominant": false
+        },
+        {
+          "active_rel": [
+            -2,
+            1,
+            2,
+            5,
+            7,
+            8
+          ],
+          "counts": {
+            "000": 1,
+            "001": 0,
+            "010": 0,
+            "011": 2,
+            "100": 2,
+            "101": 0,
+            "110": 0,
+            "111": 1
+          },
+          "dominant_contexts": [
+            "011",
+            "100"
+          ],
+          "frequencies": {
+            "000": 0.16666666666666666,
+            "001": 0.0,
+            "010": 0.0,
+            "011": 0.3333333333333333,
+            "100": 0.3333333333333333,
+            "101": 0.0,
+            "110": 0.0,
+            "111": 0.16666666666666666
+          },
+          "phase": 10,
+          "size": 6,
+          "t": 79,
+          "target_context_frequency": 0.3333333333333333,
+          "target_is_dominant": true,
+          "target_is_unique_dominant": false
+        },
+        {
+          "active_rel": [
+            -3,
+            -2,
+            -1,
+            2,
+            3,
+            5,
+            7
+          ],
+          "counts": {
+            "000": 0,
+            "001": 0,
+            "010": 2,
+            "011": 0,
+            "100": 1,
+            "101": 2,
+            "110": 1,
+            "111": 1
+          },
+          "dominant_contexts": [
+            "010",
+            "101"
+          ],
+          "frequencies": {
+            "000": 0.0,
+            "001": 0.0,
+            "010": 0.2857142857142857,
+            "011": 0.0,
+            "100": 0.14285714285714285,
+            "101": 0.2857142857142857,
+            "110": 0.14285714285714285,
+            "111": 0.14285714285714285
+          },
+          "phase": 11,
+          "size": 7,
+          "t": 80,
+          "target_context_frequency": 0.14285714285714285,
+          "target_is_dominant": false,
+          "target_is_unique_dominant": false
+        }
+      ],
+      "rule": 109,
+      "target_dominant_phases": [
+        1,
+        3,
+        4,
+        7,
+        10
+      ],
+      "target_unique_phases": [],
+      "word": "00101001"
+    },
+    {
+      "T_local": 3,
+      "background": "1100",
+      "category": "NEGATIVE",
+      "group": "negative_control",
+      "has_target_dominant": true,
+      "has_target_unique_dominant": false,
+      "label": "bg=1100/T=3/word=00001110",
+      "period_after_20": 3,
+      "period_verified": true,
+      "phase_count": 3,
+      "phase_start_t": 78,
+      "phases": [
+        {
+          "active_rel": [
+            -3,
+            -1,
+            0,
+            1,
+            2,
+            4,
+            5,
+            6,
+            8
+          ],
+          "counts": {
+            "000": 0,
+            "001": 2,
+            "010": 1,
+            "011": 1,
+            "100": 2,
+            "101": 0,
+            "110": 1,
+            "111": 2
+          },
+          "dominant_contexts": [
+            "001",
+            "100",
+            "111"
+          ],
+          "frequencies": {
+            "000": 0.0,
+            "001": 0.2222222222222222,
+            "010": 0.1111111111111111,
+            "011": 0.1111111111111111,
+            "100": 0.2222222222222222,
+            "101": 0.0,
+            "110": 0.1111111111111111,
+            "111": 0.2222222222222222
+          },
+          "phase": 0,
+          "size": 9,
+          "t": 78,
+          "target_context_frequency": 0.2222222222222222,
+          "target_is_dominant": true,
+          "target_is_unique_dominant": false
+        },
+        {
+          "active_rel": [
+            -3,
+            -1,
+            0,
+            1,
+            2,
+            5,
+            6,
+            8
+          ],
+          "counts": {
+            "000": 0,
+            "001": 3,
+            "010": 3,
+            "011": 0,
+            "100": 2,
+            "101": 0,
+            "110": 0,
+            "111": 0
+          },
+          "dominant_contexts": [
+            "001",
+            "010"
+          ],
+          "frequencies": {
+            "000": 0.0,
+            "001": 0.375,
+            "010": 0.375,
+            "011": 0.0,
+            "100": 0.25,
+            "101": 0.0,
+            "110": 0.0,
+            "111": 0.0
+          },
+          "phase": 1,
+          "size": 8,
+          "t": 79,
+          "target_context_frequency": 0.25,
+          "target_is_dominant": false,
+          "target_is_unique_dominant": false
+        },
+        {
+          "active_rel": [
+            -3,
+            -1,
+            0,
+            1,
+            2,
+            3,
+            6,
+            8
+          ],
+          "counts": {
+            "000": 0,
+            "001": 2,
+            "010": 3,
+            "011": 0,
+            "100": 2,
+            "101": 1,
+            "110": 0,
+            "111": 0
+          },
+          "dominant_contexts": [
+            "010"
+          ],
+          "frequencies": {
+            "000": 0.0,
+            "001": 0.25,
+            "010": 0.375,
+            "011": 0.0,
+            "100": 0.25,
+            "101": 0.125,
+            "110": 0.0,
+            "111": 0.0
+          },
+          "phase": 2,
+          "size": 8,
+          "t": 80,
+          "target_context_frequency": 0.25,
+          "target_is_dominant": false,
+          "target_is_unique_dominant": false
+        }
+      ],
+      "rule": 109,
+      "target_dominant_phases": [
+        0
+      ],
+      "target_unique_phases": [],
+      "word": "00001110"
+    },
+    {
+      "T_local": 6,
+      "background": "1100",
+      "category": "NEGATIVE",
+      "group": "negative_control",
+      "has_target_dominant": false,
+      "has_target_unique_dominant": false,
+      "label": "bg=1100/T=6/word=00100110",
+      "period_after_20": 6,
+      "period_verified": true,
+      "phase_count": 6,
+      "phase_start_t": 75,
+      "phases": [
+        {
+          "active_rel": [
+            -2,
+            2,
+            4,
+            7,
+            8
+          ],
+          "counts": {
+            "000": 1,
+            "001": 2,
+            "010": 1,
+            "011": 1,
+            "100": 0,
+            "101": 0,
+            "110": 0,
+            "111": 0
+          },
+          "dominant_contexts": [
+            "001"
+          ],
+          "frequencies": {
+            "000": 0.2,
+            "001": 0.4,
+            "010": 0.2,
+            "011": 0.2,
+            "100": 0.0,
+            "101": 0.0,
+            "110": 0.0,
+            "111": 0.0
+          },
+          "phase": 0,
+          "size": 5,
+          "t": 75,
+          "target_context_frequency": 0.0,
+          "target_is_dominant": false,
+          "target_is_unique_dominant": false
+        },
+        {
+          "active_rel": [
+            -3,
+            -2,
+            -1,
+            1,
+            2,
+            4,
+            6,
+            7
+          ],
+          "counts": {
+            "000": 0,
+            "001": 1,
+            "010": 1,
+            "011": 0,
+            "100": 0,
+            "101": 2,
+            "110": 2,
+            "111": 2
+          },
+          "dominant_contexts": [
+            "101",
+            "110",
+            "111"
+          ],
+          "frequencies": {
+            "000": 0.0,
+            "001": 0.125,
+            "010": 0.125,
+            "011": 0.0,
+            "100": 0.0,
+            "101": 0.25,
+            "110": 0.25,
+            "111": 0.25
+          },
+          "phase": 1,
+          "size": 8,
+          "t": 76,
+          "target_context_frequency": 0.0,
+          "target_is_dominant": false,
+          "target_is_unique_dominant": false
+        },
+        {
+          "active_rel": [
+            -2,
+            2,
+            4,
+            8
+          ],
+          "counts": {
+            "000": 0,
+            "001": 1,
+            "010": 1,
+            "011": 1,
+            "100": 0,
+            "101": 0,
+            "110": 0,
+            "111": 1
+          },
+          "dominant_contexts": [
+            "001",
+            "010",
+            "011",
+            "111"
+          ],
+          "frequencies": {
+            "000": 0.0,
+            "001": 0.25,
+            "010": 0.25,
+            "011": 0.25,
+            "100": 0.0,
+            "101": 0.0,
+            "110": 0.0,
+            "111": 0.25
+          },
+          "phase": 2,
+          "size": 4,
+          "t": 77,
+          "target_context_frequency": 0.0,
+          "target_is_dominant": false,
+          "target_is_unique_dominant": false
+        },
+        {
+          "active_rel": [
+            -3,
+            -2,
+            -1,
+            1,
+            2,
+            4,
+            7,
+            8
+          ],
+          "counts": {
+            "000": 1,
+            "001": 2,
+            "010": 0,
+            "011": 0,
+            "100": 0,
+            "101": 1,
+            "110": 2,
+            "111": 2
+          },
+          "dominant_contexts": [
+            "001",
+            "110",
+            "111"
+          ],
+          "frequencies": {
+            "000": 0.125,
+            "001": 0.25,
+            "010": 0.0,
+            "011": 0.0,
+            "100": 0.0,
+            "101": 0.125,
+            "110": 0.25,
+            "111": 0.25
+          },
+          "phase": 3,
+          "size": 8,
+          "t": 78,
+          "target_context_frequency": 0.0,
+          "target_is_dominant": false,
+          "target_is_unique_dominant": false
+        },
+        {
+          "active_rel": [
+            -2,
+            2,
+            4,
+            6,
+            7
+          ],
+          "counts": {
+            "000": 0,
+            "001": 1,
+            "010": 2,
+            "011": 1,
+            "100": 0,
+            "101": 1,
+            "110": 0,
+            "111": 0
+          },
+          "dominant_contexts": [
+            "010"
+          ],
+          "frequencies": {
+            "000": 0.0,
+            "001": 0.2,
+            "010": 0.4,
+            "011": 0.2,
+            "100": 0.0,
+            "101": 0.2,
+            "110": 0.0,
+            "111": 0.0
+          },
+          "phase": 4,
+          "size": 5,
+          "t": 79,
+          "target_context_frequency": 0.0,
+          "target_is_dominant": false,
+          "target_is_unique_dominant": false
+        },
+        {
+          "active_rel": [
+            -3,
+            -2,
+            -1,
+            1,
+            2,
+            4,
+            8
+          ],
+          "counts": {
+            "000": 0,
+            "001": 1,
+            "010": 0,
+            "011": 0,
+            "100": 0,
+            "101": 1,
+            "110": 2,
+            "111": 3
+          },
+          "dominant_contexts": [
+            "111"
+          ],
+          "frequencies": {
+            "000": 0.0,
+            "001": 0.14285714285714285,
+            "010": 0.0,
+            "011": 0.0,
+            "100": 0.0,
+            "101": 0.14285714285714285,
+            "110": 0.2857142857142857,
+            "111": 0.42857142857142855
+          },
+          "phase": 5,
+          "size": 7,
+          "t": 80,
+          "target_context_frequency": 0.0,
+          "target_is_dominant": false,
+          "target_is_unique_dominant": false
+        }
+      ],
+      "rule": 109,
+      "target_dominant_phases": [],
+      "target_unique_phases": [],
+      "word": "00100110"
+    },
+    {
+      "T_local": 10,
+      "background": "1100",
+      "category": "NEGATIVE",
+      "group": "negative_control",
+      "has_target_dominant": true,
+      "has_target_unique_dominant": false,
+      "label": "bg=1100/T=10/word=00111001",
+      "period_after_20": 10,
+      "period_verified": true,
+      "phase_count": 10,
+      "phase_start_t": 71,
+      "phases": [
+        {
+          "active_rel": [
+            -3,
+            -2,
+            1,
+            2,
+            5,
+            7,
+            8
+          ],
+          "counts": {
+            "000": 0,
+            "001": 1,
+            "010": 0,
+            "011": 2,
+            "100": 1,
+            "101": 0,
+            "110": 1,
+            "111": 2
+          },
+          "dominant_contexts": [
+            "011",
+            "111"
+          ],
+          "frequencies": {
+            "000": 0.0,
+            "001": 0.14285714285714285,
+            "010": 0.0,
+            "011": 0.2857142857142857,
+            "100": 0.14285714285714285,
+            "101": 0.0,
+            "110": 0.14285714285714285,
+            "111": 0.2857142857142857
+          },
+          "phase": 0,
+          "size": 7,
+          "t": 71,
+          "target_context_frequency": 0.14285714285714285,
+          "target_is_dominant": false,
+          "target_is_unique_dominant": false
+        },
+        {
+          "active_rel": [
+            -2,
+            -1,
+            2,
+            3,
+            5,
+            7
+          ],
+          "counts": {
+            "000": 0,
+            "001": 0,
+            "010": 3,
+            "011": 0,
+            "100": 1,
+            "101": 2,
+            "110": 0,
+            "111": 0
+          },
+          "dominant_contexts": [
+            "010"
+          ],
+          "frequencies": {
+            "000": 0.0,
+            "001": 0.0,
+            "010": 0.5,
+            "011": 0.0,
+            "100": 0.16666666666666666,
+            "101": 0.3333333333333333,
+            "110": 0.0,
+            "111": 0.0
+          },
+          "phase": 1,
+          "size": 6,
+          "t": 72,
+          "target_context_frequency": 0.16666666666666666,
+          "target_is_dominant": false,
+          "target_is_unique_dominant": false
+        },
+        {
+          "active_rel": [
+            -3,
+            0,
+            1,
+            5,
+            7,
+            8
+          ],
+          "counts": {
+            "000": 0,
+            "001": 0,
+            "010": 0,
+            "011": 1,
+            "100": 1,
+            "101": 0,
+            "110": 0,
+            "111": 4
+          },
+          "dominant_contexts": [
+            "111"
+          ],
+          "frequencies": {
+            "000": 0.0,
+            "001": 0.0,
+            "010": 0.0,
+            "011": 0.16666666666666666,
+            "100": 0.16666666666666666,
+            "101": 0.0,
+            "110": 0.0,
+            "111": 0.6666666666666666
+          },
+          "phase": 2,
+          "size": 6,
+          "t": 73,
+          "target_context_frequency": 0.16666666666666666,
+          "target_is_dominant": false,
+          "target_is_unique_dominant": false
+        },
+        {
+          "active_rel": [
+            -3,
+            -2,
+            -1,
+            2,
+            5,
+            7
+          ],
+          "counts": {
+            "000": 3,
+            "001": 0,
+            "010": 1,
+            "011": 0,
+            "100": 2,
+            "101": 0,
+            "110": 0,
+            "111": 0
+          },
+          "dominant_contexts": [
+            "000"
+          ],
+          "frequencies": {
+            "000": 0.5,
+            "001": 0.0,
+            "010": 0.16666666666666666,
+            "011": 0.0,
+            "100": 0.3333333333333333,
+            "101": 0.0,
+            "110": 0.0,
+            "111": 0.0
+          },
+          "phase": 3,
+          "size": 6,
+          "t": 74,
+          "target_context_frequency": 0.3333333333333333,
+          "target_is_dominant": false,
+          "target_is_unique_dominant": false
+        },
+        {
+          "active_rel": [
+            -2,
+            0,
+            1,
+            2,
+            3,
+            5,
+            7,
+            8
+          ],
+          "counts": {
+            "000": 0,
+            "001": 0,
+            "010": 0,
+            "011": 2,
+            "100": 1,
+            "101": 1,
+            "110": 1,
+            "111": 3
+          },
+          "dominant_contexts": [
+            "111"
+          ],
+          "frequencies": {
+            "000": 0.0,
+            "001": 0.0,
+            "010": 0.0,
+            "011": 0.25,
+            "100": 0.125,
+            "101": 0.125,
+            "110": 0.125,
+            "111": 0.375
+          },
+          "phase": 4,
+          "size": 8,
+          "t": 75,
+          "target_context_frequency": 0.125,
+          "target_is_dominant": false,
+          "target_is_unique_dominant": false
+        },
+        {
+          "active_rel": [
+            -3,
+            -2,
+            1,
+            2,
+            5,
+            7
+          ],
+          "counts": {
+            "000": 0,
+            "001": 1,
+            "010": 1,
+            "011": 1,
+            "100": 1,
+            "101": 0,
+            "110": 1,
+            "111": 1
+          },
+          "dominant_contexts": [
+            "001",
+            "010",
+            "011",
+            "100",
+            "110",
+            "111"
+          ],
+          "frequencies": {
+            "000": 0.0,
+            "001": 0.16666666666666666,
+            "010": 0.16666666666666666,
+            "011": 0.16666666666666666,
+            "100": 0.16666666666666666,
+            "101": 0.0,
+            "110": 0.16666666666666666,
+            "111": 0.16666666666666666
+          },
+          "phase": 5,
+          "size": 6,
+          "t": 76,
+          "target_context_frequency": 0.16666666666666666,
+          "target_is_dominant": true,
+          "target_is_unique_dominant": false
+        },
+        {
+          "active_rel": [
+            -2,
+            -1,
+            2,
+            3,
+            5,
+            7,
+            8
+          ],
+          "counts": {
+            "000": 0,
+            "001": 0,
+            "010": 2,
+            "011": 1,
+            "100": 1,
+            "101": 2,
+            "110": 0,
+            "111": 1
+          },
+          "dominant_contexts": [
+            "010",
+            "101"
+          ],
+          "frequencies": {
+            "000": 0.0,
+            "001": 0.0,
+            "010": 0.2857142857142857,
+            "011": 0.14285714285714285,
+            "100": 0.14285714285714285,
+            "101": 0.2857142857142857,
+            "110": 0.0,
+            "111": 0.14285714285714285
+          },
+          "phase": 6,
+          "size": 7,
+          "t": 77,
+          "target_context_frequency": 0.14285714285714285,
+          "target_is_dominant": false,
+          "target_is_unique_dominant": false
+        },
+        {
+          "active_rel": [
+            -3,
+            0,
+            1,
+            5,
+            7
+          ],
+          "counts": {
+            "000": 0,
+            "001": 0,
+            "010": 1,
+            "011": 0,
+            "100": 1,
+            "101": 0,
+            "110": 0,
+            "111": 3
+          },
+          "dominant_contexts": [
+            "111"
+          ],
+          "frequencies": {
+            "000": 0.0,
+            "001": 0.0,
+            "010": 0.2,
+            "011": 0.0,
+            "100": 0.2,
+            "101": 0.0,
+            "110": 0.0,
+            "111": 0.6
+          },
+          "phase": 7,
+          "size": 5,
+          "t": 78,
+          "target_context_frequency": 0.2,
+          "target_is_dominant": false,
+          "target_is_unique_dominant": false
+        },
+        {
+          "active_rel": [
+            -3,
+            -2,
+            -1,
+            2,
+            5,
+            7,
+            8
+          ],
+          "counts": {
+            "000": 3,
+            "001": 0,
+            "010": 0,
+            "011": 1,
+            "100": 2,
+            "101": 0,
+            "110": 0,
+            "111": 1
+          },
+          "dominant_contexts": [
+            "000"
+          ],
+          "frequencies": {
+            "000": 0.42857142857142855,
+            "001": 0.0,
+            "010": 0.0,
+            "011": 0.14285714285714285,
+            "100": 0.2857142857142857,
+            "101": 0.0,
+            "110": 0.0,
+            "111": 0.14285714285714285
+          },
+          "phase": 8,
+          "size": 7,
+          "t": 79,
+          "target_context_frequency": 0.2857142857142857,
+          "target_is_dominant": false,
+          "target_is_unique_dominant": false
+        },
+        {
+          "active_rel": [
+            -2,
+            0,
+            1,
+            2,
+            3,
+            5,
+            7
+          ],
+          "counts": {
+            "000": 0,
+            "001": 0,
+            "010": 1,
+            "011": 1,
+            "100": 1,
+            "101": 1,
+            "110": 1,
+            "111": 2
+          },
+          "dominant_contexts": [
+            "111"
+          ],
+          "frequencies": {
+            "000": 0.0,
+            "001": 0.0,
+            "010": 0.14285714285714285,
+            "011": 0.14285714285714285,
+            "100": 0.14285714285714285,
+            "101": 0.14285714285714285,
+            "110": 0.14285714285714285,
+            "111": 0.2857142857142857
+          },
+          "phase": 9,
+          "size": 7,
+          "t": 80,
+          "target_context_frequency": 0.14285714285714285,
+          "target_is_dominant": false,
+          "target_is_unique_dominant": false
+        }
+      ],
+      "rule": 109,
+      "target_dominant_phases": [
+        5
+      ],
+      "target_unique_phases": [],
+      "word": "00111001"
+    }
+  ],
+  "rule": 109,
+  "summary": {
+    "context_summaries": {
+      "011": {
+        "negative_dominant": [
+          "bg=1100/T=6/word=00100110",
+          "bg=1100/T=10/word=00111001"
+        ],
+        "negative_dominant_count": 2,
+        "negative_unique": [],
+        "negative_unique_count": 0,
+        "positive_dominant": [
+          "bg=0011/T=12/word=10010100",
+          "bg=1100/T=8/word=00000110",
+          "bg=1100/T=12/word=00101001"
+        ],
+        "positive_dominant_count": 3,
+        "positive_unique": [
+          "bg=1100/T=12/word=00101001"
+        ],
+        "positive_unique_count": 1
+      },
+      "100": {
+        "negative_dominant": [
+          "bg=1100/T=3/word=00001110",
+          "bg=1100/T=10/word=00111001"
+        ],
+        "negative_dominant_count": 2,
+        "negative_unique": [],
+        "negative_unique_count": 0,
+        "positive_dominant": [
+          "bg=0110/T=8/word=0000011",
+          "bg=1011/T=10/word=00000001",
+          "bg=1100/T=8/word=00000110",
+          "bg=1100/T=12/word=00101001"
+        ],
+        "positive_dominant_count": 4,
+        "positive_unique": [
+          "bg=1100/T=8/word=00000110"
+        ],
+        "positive_unique_count": 1
+      },
+      "111": {
+        "negative_dominant": [
+          "bg=1100/T=3/word=00001110",
+          "bg=1100/T=6/word=00100110",
+          "bg=1100/T=10/word=00111001"
+        ],
+        "negative_dominant_count": 3,
+        "negative_unique": [
+          "bg=1100/T=6/word=00100110",
+          "bg=1100/T=10/word=00111001"
+        ],
+        "negative_unique_count": 2,
+        "positive_dominant": [
+          "bg=0011/T=12/word=10010100",
+          "bg=1011/T=10/word=00000001",
+          "bg=1100/T=8/word=00000110",
+          "bg=1100/T=12/word=00101001"
+        ],
+        "positive_dominant_count": 4,
+        "positive_unique": [
+          "bg=0011/T=12/word=10010100",
+          "bg=1011/T=10/word=00000001",
+          "bg=1100/T=8/word=00000110",
+          "bg=1100/T=12/word=00101001"
+        ],
+        "positive_unique_count": 4
+      }
+    },
+    "interpretation": "Context 100 is dominant in 4/5 positives. It also appears as dominant in at least one negative control, so it is not a clean positive-only discriminator.",
+    "negative_with_target_dominant": [
+      "bg=1100/T=3/word=00001110",
+      "bg=1100/T=10/word=00111001"
+    ],
+    "negative_with_target_dominant_count": 2,
+    "negative_with_target_unique": [],
+    "negative_with_target_unique_count": 0,
+    "positive_with_target_dominant": [
+      "bg=0110/T=8/word=0000011",
+      "bg=1011/T=10/word=00000001",
+      "bg=1100/T=8/word=00000110",
+      "bg=1100/T=12/word=00101001"
+    ],
+    "positive_with_target_dominant_count": 4,
+    "positive_with_target_unique": [
+      "bg=1100/T=8/word=00000110"
+    ],
+    "positive_with_target_unique_count": 1,
+    "status": "PHASE_CROSSVAL_CONSISTENT",
+    "target_context": "100",
+    "target_contexts": [
+      "011",
+      "100",
+      "111"
+    ]
+  },
+  "target_context": "100",
+  "width": 256
+}
