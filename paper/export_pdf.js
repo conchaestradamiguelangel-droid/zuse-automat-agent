@@ -142,6 +142,12 @@ const html = `<!doctype html>
       border-left: 3pt solid #777;
       background: #f7f7f7;
     }
+    img {
+      display: block;
+      max-width: 100%;
+      margin: 8pt auto 4pt;
+      page-break-inside: avoid;
+    }
     a {
       color: #0645ad;
       text-decoration: none;
