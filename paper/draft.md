@@ -1,4 +1,4 @@
-# ZUSE Automat Agent: Empirical Law Discovery in Elementary Cellular Automata
+﻿# ZUSE Automat Agent: Empirical Law Discovery in Elementary Cellular Automata
 
 ## Abstract
 
@@ -10,15 +10,15 @@ dedup-gated observer stack, and persistent multi-seed world records, and is
 applied to a 20-world sample spanning ECA rules, Conway's Game of Life
 patterns, and synthetic controls.
 
-The seven laws — *velocidad_constante*, *periodicidad*, *densidad_estable*,
+The seven laws â€” *velocidad_constante*, *periodicidad*, *densidad_estable*,
 *tipo_unico*, *complejidad_alta*, *frontera_temporal*, and
-*temporal_scale_stability* — are calibrated empirically (*frontera_temporal*
+*temporal_scale_stability* â€” are calibrated empirically (*frontera_temporal*
 upper bound 0.4352; *temporal_scale_stability* threshold 19.03, decision-tree
 accuracy 0.908). Laws are separated into two groups: structure-observer laws
 that depend on the full observer stack, and frame-metric laws that depend only
 on aggregate frame statistics.
 
-Key results: (1) *frontera_temporal* is not intrinsically rare — it activates
+Key results: (1) *frontera_temporal* is not intrinsically rare â€” it activates
 in 38 of 256 ECA rules under at least two of three seeds, and in 17 of 256
 under all three; (2) the 20-world atlas reveals seven dynamic categories
 (*frontera-rich-estable*, *periodicidad-global*, *oscilador-local*,
@@ -161,7 +161,22 @@ residual is closest by L1 frequency distance to the negative
 the simplest explanation for this paradox: the residual is not a transient.
 It persists to `t=500`, repeats exactly with period 8 in the last 100 steps,
 and has negligible center drift. The resulting statuses are
-`CONTEXT_UNDISCRIMINATED` and `RESIDUAL_CONFIRMED_PERSISTENT`.
+`CONTEXT_UNDISCRIMINATED` and `RESIDUAL_CONFIRMED_PERSISTENT`. A final
+phase-organization and compressed causal-complexity audit resolves the
+remaining scalar-descriptor question. The residual and its nearest negative
+control are both genuine periodic oscillators; the residual phases 0, 3, and 7
+have no close equivalent in the negative cycle (`L1 > 0.4`), while phases 1
+and 4 are structurally identical to negative phases. Cross-validation over the
+five positive `rule_109` witnesses shows that the phase-dominant context `100`
+replicates in 4/5 positives but also appears in 2/3 negative controls, so it
+is consistent but not separating. A causal-complexity proxy over all 17
+`rule_109` cases, using `(dominant_context, defect_size_bucket)` symbols,
+finds no new separator: the only no-false-positive rule is
+`period_detected >= 12`, which merely recapitulates the earlier
+period/horizon result. The resulting status is `PHASE_PARTIAL_NOT_SEPARATING`:
+the residual is not explained by any tested scalar temporal descriptor; the
+remaining information appears to live in richer spatial or spatiotemporal cone
+structure, not in compressed temporal summaries of the defect.
 
 Every result is reproducible from deterministic scripts with no stochastic
 components in the discovery loop.
@@ -203,13 +218,13 @@ behavior.
 
 We make the following contributions:
 
-1. **ZUSE Automat Agent** — A deterministic, policy-driven discovery loop for
+1. **ZUSE Automat Agent** â€” A deterministic, policy-driven discovery loop for
    ECA that accumulates multi-seed law evidence across worlds without symbolic
    regression or LLM guidance in the loop. The agent combines persistent
    world-record history, a dedup-gated observer stack, and a seven-law evaluator
    into a single reproducible pipeline.
 
-2. **A seven-category empirical atlas of 20 worlds** — We classify 20 worlds
+2. **A seven-category empirical atlas of 20 worlds** â€” We classify 20 worlds
    spanning ECA rules, Conway's Game of Life patterns, and synthetic controls
    into seven operational categories (*frontera-rich-estable*,
    *periodicidad-global*, *oscilador-local*, *multiregimen-productivo*,
@@ -219,7 +234,7 @@ We make the following contributions:
    intra-class structure, scale-dependent silencing, and negative-control
    regimes.
 
-3. **A two-dimensional fragility framework** — We measure `f_total` and
+3. **A two-dimensional fragility framework** â€” We measure `f_total` and
    `f_core` separately, defining `f_gap = f_total - f_core` as a quantitative
    measure of secondary-law churn. Four distinct mechanisms are identified:
    stable basin (`rule_208/209`, `f_total = 0.000`), productive basin switching
@@ -227,7 +242,7 @@ We make the following contributions:
    `f_core = 0.677`), and quiescent-background activation (`rule_108`,
    `f_gap = 0.945`).
 
-4. **`rule_108` as the unique stationary local-period-2 ECA oscillator** —
+4. **`rule_108` as the unique stationary local-period-2 ECA oscillator** â€”
    Under an exhaustive protocol (128 quiescent ECA rules, 502 non-zero IC words per
    rule, span <= 32, period <= 16), `rule_108` is the only ECA rule that
    produces stationary local period-2 oscillators. The motif `#.# <-> ###`
@@ -235,7 +250,7 @@ We make the following contributions:
    `f(1,1,1) = 0`, and the rule's left-right symmetry
    (`f(l,c,r) = f(r,c,l)`) explains why the oscillator does not drift.
 
-5. **A measured separation between ECA dynamics and observer artifacts** —
+5. **A measured separation between ECA dynamics and observer artifacts** â€”
    `rule_54` single-bit-IC frames are provably translation-invariant
    (confirmed by frame identity after shift normalization), while observer
    dedup counts range from 15 to 24 across IC positions. This non-equivariance
@@ -266,7 +281,7 @@ Cook's proof that Rule 110 supports universal computation [Cook2004]
 established that ECA complexity has computational consequences beyond visual
 appearance. But computational class is a coarse lens: `rule_110` and
 `rule_54` are both Class 4, yet ZUSE finds that their fragility mechanisms are
-qualitatively different — productive basin switching versus noise-boundary
+qualitatively different â€” productive basin switching versus noise-boundary
 crossing. `rule_110` appears in the ZUSE atlas as a
 `multiregimen-productivo` world with `f_total = 0.323` and a stable frontera
 signature. The computational proof characterizes what `rule_110` *can*
@@ -435,8 +450,8 @@ signature in the atlas can be reproduced from deterministic scripts.
 
 The seven laws are the primary evidence units linking raw ECA frames to the
 world categories, fragility scores, and observer artifacts reported in Sections
-5-8. Each law is evaluated per run — one world, one initial condition, one step
-count — once the observer and dedup pipeline reports `analysis_status = ok`.
+5-8. Each law is evaluated per run â€” one world, one initial condition, one step
+count â€” once the observer and dedup pipeline reports `analysis_status = ok`.
 The output is binary: accepted or rejected. Law signatures are frozensets of
 accepted law names.
 
@@ -532,8 +547,8 @@ signatures change under perturbation.
 `frontera_temporal` is a proper subset of `complejidad_alta` by construction
 (it adds the upper bound on transition rate). Any run that accepts
 `frontera_temporal` also accepts `complejidad_alta`; the converse is not
-required. This containment is visible in the law coverage matrix: every `✓` in
-the `frontera_temporal` column co-occurs with a `✓` in the
+required. This containment is visible in the law coverage matrix: every `âœ“` in
+the `frontera_temporal` column co-occurs with a `âœ“` in the
 `complejidad_alta` column.
 
 ## 5. World Atlas: 20 Worlds and Dynamic Categories
@@ -613,39 +628,39 @@ temporal_scale_stability
 ```
 
 Each cell has one of four states: accepted in the dominant signature or in at
-least half of non-empty visits (`✓`), observed but below half (`·`), never
+least half of non-empty visits (`âœ“`), observed but below half (`Â·`), never
 observed in non-empty visits (`-`), or unknown because no non-empty visits
 exist (`?`).
 
 Cell states:
 
-- `✓`: law appears in the dominant signature or in at least 50% of non-empty visits.
-- `·`: law appears in at least one non-empty visit but in less than 50%.
+- `âœ“`: law appears in the dominant signature or in at least 50% of non-empty visits.
+- `Â·`: law appears in at least one non-empty visit but in less than 50%.
 - `-`: non-empty visits exist and the law never appears.
 - `?`: no non-empty visits.
 
 | world | vel | per | den | tipo | compl | front | tss |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| `life_blinker` | - | ✓ | ✓ | ✓ | - | - | - |
-| `life_block` | - | - | ✓ | ✓ | - | - | - |
-| `life_glider` | · | - | ✓ | ✓ | - | - | - |
-| `rule_108` | - | ✓ | - | ✓ | - | - | - |
-| `rule_109` | - | - | ✓ | · | ✓ | ✓ | ✓ |
-| `rule_110` | ✓ | - | ✓ | - | ✓ | ✓ | · |
-| `rule_124` | · | - | ✓ | - | ✓ | ✓ | ✓ |
-| `rule_137` | · | - | ✓ | · | ✓ | ✓ | ✓ |
-| `rule_150` | - | - | ✓ | - | ✓ | - | ✓ |
-| `rule_18` | ✓ | - | - | ✓ | ✓ | - | ✓ |
-| `rule_208` | ✓ | - | ✓ | ✓ | ✓ | ✓ | ✓ |
-| `rule_209` | ✓ | - | ✓ | ✓ | ✓ | ✓ | ✓ |
-| `rule_30` | - | - | ✓ | - | ✓ | - | ✓ |
-| `rule_46` | ✓ | - | ✓ | ✓ | ✓ | ✓ | ✓ |
-| `rule_51` | - | ✓ | ✓ | ✓ | ✓ | - | ✓ |
-| `rule_54` | ✓ | - | · | · | ✓ | - | ✓ |
-| `rule_90` | · | - | · | - | · | - | ✓ |
-| `synthetic_bloque` | - | - | ✓ | ✓ | - | - | - |
-| `synthetic_glider` | ✓ | - | ✓ | ✓ | - | - | · |
-| `synthetic_oscilador` | - | ✓ | - | ✓ | - | - | · |
+| `life_blinker` | - | âœ“ | âœ“ | âœ“ | - | - | - |
+| `life_block` | - | - | âœ“ | âœ“ | - | - | - |
+| `life_glider` | Â· | - | âœ“ | âœ“ | - | - | - |
+| `rule_108` | - | âœ“ | - | âœ“ | - | - | - |
+| `rule_109` | - | - | âœ“ | Â· | âœ“ | âœ“ | âœ“ |
+| `rule_110` | âœ“ | - | âœ“ | - | âœ“ | âœ“ | Â· |
+| `rule_124` | Â· | - | âœ“ | - | âœ“ | âœ“ | âœ“ |
+| `rule_137` | Â· | - | âœ“ | Â· | âœ“ | âœ“ | âœ“ |
+| `rule_150` | - | - | âœ“ | - | âœ“ | - | âœ“ |
+| `rule_18` | âœ“ | - | - | âœ“ | âœ“ | - | âœ“ |
+| `rule_208` | âœ“ | - | âœ“ | âœ“ | âœ“ | âœ“ | âœ“ |
+| `rule_209` | âœ“ | - | âœ“ | âœ“ | âœ“ | âœ“ | âœ“ |
+| `rule_30` | - | - | âœ“ | - | âœ“ | - | âœ“ |
+| `rule_46` | âœ“ | - | âœ“ | âœ“ | âœ“ | âœ“ | âœ“ |
+| `rule_51` | - | âœ“ | âœ“ | âœ“ | âœ“ | - | âœ“ |
+| `rule_54` | âœ“ | - | Â· | Â· | âœ“ | - | âœ“ |
+| `rule_90` | Â· | - | Â· | - | Â· | - | âœ“ |
+| `synthetic_bloque` | - | - | âœ“ | âœ“ | - | - | - |
+| `synthetic_glider` | âœ“ | - | âœ“ | âœ“ | - | - | Â· |
+| `synthetic_oscilador` | - | âœ“ | - | âœ“ | - | - | Â· |
 
 The matrix reveals three broad patterns:
 
@@ -862,7 +877,7 @@ have similar total fragility with opposite core/secondary decompositions.
 
 ## 7. Case Studies
 
-### 7.1 `rule_108` — Unique Local Oscillator
+### 7.1 `rule_108` â€” Unique Local Oscillator
 
 #### Discovery and formal profile
 
@@ -958,7 +973,7 @@ accepted by the production observer as `periodicidad`, with oscillator spans
 3, 5, 6, 7, and 8. All confirmed oscillators have period exactly 2; no longer
 period was found.
 
-### 7.2 `rule_54` — Noise Gate Anatomy
+### 7.2 `rule_54` â€” Noise Gate Anatomy
 
 `rule_54` is the clearest example of noise-boundary fragility: perturbations do
 not merely move the run to another productive signature, but can push the
@@ -1024,7 +1039,7 @@ dominated by proximity to an observer threshold. It also motivates the caveat th
 absolute structure counts should not be treated as symmetry-invariant physical
 observables without equivariance checks.
 
-### 7.3 `rule_137` — Productive Basin Switching
+### 7.3 `rule_137` â€” Productive Basin Switching
 
 `rule_137` is the primary example of productive basin switching: one-bit IC
 perturbations change the law signature without ever crossing the noise gate or
@@ -1059,7 +1074,7 @@ width rather than concentrated near a motif. This is consistent with a world
 that has many narrow productive basins whose boundaries intersect throughout
 the IC space.
 
-`peak_diversity = 0.833` — the highest in the atlas. The canonical seeds
+`peak_diversity = 0.833` â€” the highest in the atlas. The canonical seeds
 themselves already visit multiple distinct productive regimes. The fragility
 measurement extends this: not just that the world can reach different signatures
 under different seeds, but that a single-bit perturbation to any one canonical
@@ -1092,7 +1107,7 @@ that the defining behavior (the local oscillator) is nearly indestructible,
 while `rule_137`'s `f_core = 0.312` shows that its defining signatures change
 under nearly a third of all one-bit flips.
 
-### 7.4 `rule_46`, `rule_208`, `rule_209` — Stable-Rich Frontier
+### 7.4 `rule_46`, `rule_208`, `rule_209` â€” Stable-Rich Frontier
 
 These three worlds define the `frontera-rich-estable` category: low signature
 diversity, near-maximal law richness, and very low fragility. They are the
@@ -1492,7 +1507,7 @@ signatures are rule-specific rather than universal. A closed-form derivation
 must therefore encode spatial phase or a higher-order block state, rather than
 truth-table entry presence alone.
 
-### 7.11 Block-locality limits and background-indexed shape families (Fase 29–30)
+### 7.11 Block-locality limits and background-indexed shape families (Fase 29â€“30)
 
 Section 7.10 concludes that a closed-form derivation of the five-cycle must
 encode spatial phase rather than truth-table entry presence alone. Fase 29 and
@@ -1502,13 +1517,13 @@ Fase 30 test two complementary refinements of that conclusion.
 and each of the five cycle phases, the canonical XOR-defect shape is computed
 at sample times `t = 81, 84, 87, 90, 93`. If the T=15 cycle were a pure
 defect-only dynamic, every background would produce the same canonical shape in
-each phase. Instead, `rule_73` produces 8–9 distinct shapes per phase across
+each phase. Instead, `rule_73` produces 8â€“9 distinct shapes per phase across
 its 10 backgrounds, and `rule_109` produces 8. Extending the comparison window
 outward to fixed local blocks (active defect span plus up to three padding
 cells on each side) does not help: no nontrivial block signature is shared
 across all backgrounds in any phase. The `W=0` result in the block-signature
 scan shows that the active defect span itself already carries
-background-dependent context — no additional padding is needed before the
+background-dependent context â€” no additional padding is needed before the
 discrimination occurs. Only the trivial token `d000->0` (background cells
 evolving to background under all three microsteps) is universal.
 
@@ -1521,8 +1536,8 @@ families are shared across the conjugate rules: one of size 3 (two `rule_73`
 backgrounds and one `rule_109` background) and one of size 2 (background word
 `00110101` producing phase-rotationally equivalent defect cycles under both
 rules). This second coincidence is not implied by the analytical conjugation of
-Fase 28 — the bitwise complement of `00110101` is `11001010`, a distinct word
-— so it is an independent structural coincidence. Scalar background
+Fase 28 â€” the bitwise complement of `00110101` is `11001010`, a distinct word
+â€” so it is an independent structural coincidence. Scalar background
 descriptors (`active_count`, `transition_count`, `active_transition_pair`) do
 not determine the family. The canonical temporal orbit of the background under
 the same rule is exact in this representative set, but this is largely a
@@ -1535,7 +1550,7 @@ of defect-cycle shapes plus a phase offset. A derivation predicting a single
 universal five-state cycle is falsified by Fase 29; a derivation predicting
 arbitrary unclustered shape variation is refuted by Fase 30.
 
-### 7.12 Compact state variable for the T=15 family (Fase 31–32)
+### 7.12 Compact state variable for the T=15 family (Fase 31â€“32)
 
 Fase 30 reduced the T=15 family to 13 shape families but required the full
 temporal background orbit as the discriminating descriptor. Fase 31 and Fase 32
@@ -2006,7 +2021,7 @@ representatives and the external length-9/10 witnesses tested here. The
 question of whether this gradient is specific to the `T=15` period or to a
 broader `rule_73`/`rule_109` mechanism family is addressed in Section 7.26.
 
-### 7.26 Specificity of the ANF gradient beyond T=15 (Fases 50–53)
+### 7.26 Specificity of the ANF gradient beyond T=15 (Fases 50â€“53)
 
 Fases 50--53 test whether the ANF gradient law from Fases 44--49 is a
 generic consequence of period, cone size, or active-support width, or whether
@@ -2591,11 +2606,94 @@ frequencies do not explain why it remains positive while the nearby
 aggregate frequency of contexts; it must lie in their phase ordering,
 trajectory, or another time-resolved invariant.
 
+### 7.37 Phase organization and compressed causal-complexity audit (Fases 67--68)
+
+Fase 67 asks whether the residual differs from its nearest negative control
+when the defect trajectory is decomposed by internal phase rather than
+aggregated over time. The residual
+`rule_109/bg=1100/T=8/word=00000110` is compared with the nearest
+context-frequency negative from Fase 65,
+`rule_109/bg=1100/T=10/word=00111001`.
+
+Both defects are genuine periodic trajectories. The residual is verified with
+exact period 8 after burn-in, and the negative control is verified with exact
+period 10. Thus the comparison is not oscillator versus transient; it is a
+comparison between two stable periodic circuits.
+
+The phase-level comparison reveals partial structure:
+
+- residual phases 1 and 4 have context L1 distance 0.000 to their best
+  matching negative phases, so the two oscillators share part of their local
+  circuit structure;
+- residual phase 0 has best context L1 distance 0.571 and dominant contexts
+  `011` and `111`;
+- residual phase 3 has best context L1 distance 0.524, active Jaccard 0.182,
+  and a uniquely dominant `100` context;
+- residual phase 7 has best context L1 distance 0.400 and dominant context
+  `111`.
+
+The Fase 67 status is therefore `PHASE_DISCRIMINANT_FOUND` for the pairwise
+residual-versus-nearest-negative comparison. The discrimination is not the set
+of contexts used by the defect, but their organization by phase.
+
+Fase 67b cross-validates the phase-dominant contexts against the five positive
+`rule_109` witnesses and three `bg=1100` negative controls. The primary
+context is `100`, because it was uniquely dominant in residual phase 3, the
+phase with strongest spatial separation from the negative cycle. The result is
+consistent but not separating:
+
+| Context | Positives dominant | Positives unique | Negatives dominant | Negatives unique |
+| --- | ---: | ---: | ---: | ---: |
+| `011` | 3/5 | 1/5 | 2/3 | 0/3 |
+| `100` | 4/5 | 1/5 | 2/3 | 0/3 |
+| `111` | 4/5 | 4/5 | 3/3 | 2/3 |
+
+Thus `100` replicates across positives, but it is not specific to positives.
+The Fase 67b status is `PHASE_CROSSVAL_CONSISTENT`, not a clean causal
+separator.
+
+Fase 68 then tests a compressed causal-state proxy over all 17 `rule_109`
+catalog cases. Each time step from `t=0..100` is symbolized as
+
+`(dominant_context(t), defect_size_bucket(t))`,
+
+where the size bucket is one of `0`, `1-3`, `4-6`, `7-9`, or `10+`. The
+resulting symbolic sequence is measured using bigram entropy, unique
+transitions, Lempel-Ziv complexity, detected symbolic period, and number of
+unique symbols.
+
+No compressed complexity metric separates the 5 positive witnesses from the
+12 non-positive cases:
+
+- perfect rules: 0;
+- perfect non-period complexity rules: 0;
+- best no-false-positive rule: `period_detected >= 12`, with TP=2, FP=0,
+  TN=12, FN=3, precision 1.000, recall 0.400;
+- best non-period rule: `bigram_entropy >= 3.673269689515108`, with TP=2,
+  FP=1, TN=11, FN=3, precision 0.667, recall 0.400.
+
+The best no-false-positive rule is only the symbolic period threshold, which
+recapitulates the earlier period/horizon result rather than adding a new
+causal-state signal. The non-period complexity metrics overlap strongly
+between positives and negatives. For example, positive `bigram_entropy` ranges
+from 0.322 to 3.673, while negative `bigram_entropy` ranges from 0.081 to
+4.040.
+
+The combined status is `PHASE_PARTIAL_NOT_SEPARATING`. The residual is not
+explained by any scalar temporal descriptor tested: dynamic summaries, global
+perturbations, aggregate contexts, phase-dominant contexts, and compressed
+causal-complexity proxies all fail to provide a compact separator. The
+remaining information appears to reside in richer spatial or spatiotemporal
+cone structure, not in compressed temporal summaries of the defect. This
+closes the scalar causal audit around the `rule_109` residual and motivates
+future work based on full spatial snapshots, richer causal-state
+reconstruction, or external review before adding further internal phases.
+
 ## 8. Observer Artifacts and Pipeline Equivariance
 
 The ZUSE pipeline contains two classes of observer artifact that the atlas
-identifies and characterizes. Framing these artifacts as results — not just
-implementation limitations — is important: they define the boundary between
+identifies and characterizes. Framing these artifacts as results â€” not just
+implementation limitations â€” is important: they define the boundary between
 what the system measures reliably and what it does not.
 
 ### 8.1 Mirror asymmetry in `tipo_unico` (Fase 6b)
@@ -2689,9 +2787,9 @@ symmetry-invariant observers would remove both artifacts.
 
 The atlas is valid for the parameter regime used: `width = 64` (formal
 profiles), `width = 128` (rule_108 oscillator), `steps` roughly `24..200`, and
-the IC protocols defined per world. The two calibrated thresholds —
+the IC protocols defined per world. The two calibrated thresholds â€”
 `frontera_temporal` upper bound `0.4352` and `temporal_scale_stability`
-threshold `19.03` — were fit on data from this regime. Applying the atlas to
+threshold `19.03` â€” were fit on data from this regime. Applying the atlas to
 significantly different widths or step counts requires recalibration. This is
 not a flaw in the methodology; it is the expected scope of an empirically
 grounded atlas.
@@ -2904,8 +3002,8 @@ the `f_core`/`f_gap` separation documented in Section 6.
 
 ### 10.1 Symmetry-invariant observers
 
-The two observer artifacts identified in Section 8 — `tipo_unico` mirror
-asymmetry and dedup translation non-equivariance — share a root cause: the
+The two observer artifacts identified in Section 8 â€” `tipo_unico` mirror
+asymmetry and dedup translation non-equivariance â€” share a root cause: the
 heuristic observers do not encode the symmetries of the underlying CA. A
 natural next step is to build observers that canonicalize structure
 representations under spatial reflection and translation before counting. This
@@ -3064,7 +3162,7 @@ Several controlled extensions have now been completed:
   test the residual directly: aggregate context frequencies do not
   discriminate it from nearby controls, and a long-horizon audit confirms that
   it is a genuine persistent period-8 oscillator rather than a transient. Full
-  results are in Sections 7.20-7.36.
+  results are in Sections 7.20-7.37.
 
 Each extension is a controlled experiment with the same measurement protocol;
 only the IC or background definition changes.
@@ -3083,16 +3181,16 @@ features rather than aggregate atlas features alone.
 
 The following six figures are planned for the preprint draft:
 
-1. **World taxonomy table** — the full 20-world atlas with categories, law
+1. **World taxonomy table** â€” the full 20-world atlas with categories, law
    coverage symbols, and fragility columns, formatted as a paper-ready table.
-2. **Law coverage matrix** — the `✓ / · / - / ?` matrix from
+2. **Law coverage matrix** â€” the `âœ“ / Â· / - / ?` matrix from
    `outputs/world_taxonomy/law_map.md`, rendered as a heatmap or binary grid.
-3. **`f_total` / `f_core` spectrum** — a two-axis scatter or bar chart showing
+3. **`f_total` / `f_core` spectrum** â€” a two-axis scatter or bar chart showing
    all measured worlds positioned by `f_total` and `f_core`, with the four
    fragility mechanisms labeled.
-4. **`rule_108` oscillator motif** — a space-time diagram of the `#.# <-> ###`
+4. **`rule_108` oscillator motif** â€” a space-time diagram of the `#.# <-> ###`
    two-step cycle, showing several periods on a quiescent background.
-5. **`rule_54` gate and observer non-equivariance** — a dual figure: the
+5. **`rule_54` gate and observer non-equivariance** â€” a dual figure: the
    Fase 13 noise-gate crossing diagram (reference dedup vs perturbed dedup)
    alongside the Fase 19 per-position dedup variation (15..24 across k=0..63).
 
