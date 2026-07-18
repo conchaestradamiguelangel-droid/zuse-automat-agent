@@ -9,8 +9,9 @@ model participates in world selection, law evaluation, scoring, or acceptance.
 
 ## Preprint
 
-**Latest: v1.30** - Fases 65-66 show that aggregate context frequencies do not discriminate the `rule_109/bg=1100/T=8` residual, while a long-horizon audit confirms it is a genuine persistent period-8 oscillator rather than a transient.
+**Latest: v1.31** - Fases 67-68 show that phase organization partially distinguishes the persistent `rule_109/bg=1100/T=8` residual, but phase-dominant contexts and compressed causal-complexity proxies do not provide a clean scalar separator.
 
+- v1.31 DOI: [10.5281/zenodo.21433927](https://doi.org/10.5281/zenodo.21433927)
 - v1.30 DOI: [10.5281/zenodo.21385475](https://doi.org/10.5281/zenodo.21385475)
 - v1.29 DOI: [10.5281/zenodo.21385274](https://doi.org/10.5281/zenodo.21385274)
 - v1.28 DOI: [10.5281/zenodo.21385190](https://doi.org/10.5281/zenodo.21385190)
@@ -42,6 +43,7 @@ model participates in world selection, law evaluation, scoring, or acceptance.
 - v1.2 DOI: [10.5281/zenodo.20738025](https://doi.org/10.5281/zenodo.20738025)
 - v1.1 DOI: [10.5281/zenodo.20687470](https://doi.org/10.5281/zenodo.20687470)
 - v1.0 DOI: [10.5281/zenodo.20516375](https://doi.org/10.5281/zenodo.20516375)
+- v1.31 series DOI: [10.5281/zenodo.21433926](https://doi.org/10.5281/zenodo.21433926)
 - v1.30 series DOI: [10.5281/zenodo.21385474](https://doi.org/10.5281/zenodo.21385474)
 - v1.29 series DOI: [10.5281/zenodo.21385273](https://doi.org/10.5281/zenodo.21385273)
 - v1.28 series DOI: [10.5281/zenodo.21385189](https://doi.org/10.5281/zenodo.21385189)
@@ -132,8 +134,8 @@ regenerated from the commands in the reproducibility guide.
 
 ```text
 Concha Estrada, M. A. (2026). ZUSE Automat Agent: Empirical Law Discovery in
-Elementary Cellular Automata (v1.30). Zenodo.
-https://doi.org/10.5281/zenodo.21385475
+Elementary Cellular Automata (v1.31). Zenodo.
+https://doi.org/10.5281/zenodo.21433927
 ```
 
 ## License
