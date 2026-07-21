@@ -1,7 +1,7 @@
 # Reproducibility
 
 This repository contains the deterministic code and summary artifacts used for
-the ZUSE Automat Agent v1.0 preprint.
+the ZUSE Automat Agent v1.32 preprint.
 
 ## Environment
 
@@ -105,13 +105,38 @@ python outputs\periodicity_fase14\run_periodicity_sweep.py
 python outputs\periodicity_fase21\run_periodic_ic_sweep.py
 ```
 
+Periodic-background oscillators and ANF gradient audits:
+
+```powershell
+python outputs\periodic_backgrounds\sweep_periodic_background_oscillators.py
+python outputs\periodic_backgrounds\analyze_periodic_bg_anf_baseline.py
+python outputs\periodic_backgrounds\analyze_anf_gradient_census.py
+python outputs\periodic_backgrounds\analyze_center_mediation_causality.py
+python outputs\periodic_backgrounds\analyze_rule109_period_horizon.py
+python outputs\periodic_backgrounds\analyze_rule109_t8_alignment.py
+python outputs\periodic_backgrounds\analyze_rule109_alignment_validation.py
+python outputs\periodic_backgrounds\analyze_rule109_dynamic_alignment.py
+python outputs\periodic_backgrounds\analyze_rule109_dynamic_union.py
+python outputs\periodic_backgrounds\analyze_rule109_context_frequency.py
+python outputs\periodic_backgrounds\analyze_rule109_residual_persistence.py
+python outputs\periodic_backgrounds\analyze_rule109_phase_trajectory.py
+python outputs\periodic_backgrounds\analyze_rule109_phase_crossval.py
+python outputs\periodic_backgrounds\analyze_rule109_causal_complexity.py
+```
+
+For reviewer-facing claim checks, see:
+
+```text
+docs/submission/REPRODUCIBILITY_CHECKLIST.md
+```
+
 ## Large Raw JSONL Files
 
 The repository tracks scripts and summary artifacts, but raw JSONL outputs larger
 than 1 MB are intentionally omitted from git to keep the public release compact.
 Regenerate them with the scripts above when exact raw rows are needed.
 
-Omitted raw files in v1.0:
+Omitted raw files in early releases:
 
 - `outputs/periodicity_fase21/periodic_ic_sweep_results.jsonl`
 - `outputs/fragility_fase10/fragility_completion_fase22_results.jsonl`
@@ -125,9 +150,9 @@ Tracked companion summaries:
 
 ## Preprint
 
-The paper source is [paper/draft.md](paper/draft.md). The v1.0 PDF is committed
+The paper source is [paper/draft.md](paper/draft.md). The v1.32 PDF is committed
 as [paper/zuse_preprint.pdf](paper/zuse_preprint.pdf) and archived on Zenodo:
 
 ```text
-https://doi.org/10.5281/zenodo.20516375
+https://doi.org/10.5281/zenodo.21435062
 ```
