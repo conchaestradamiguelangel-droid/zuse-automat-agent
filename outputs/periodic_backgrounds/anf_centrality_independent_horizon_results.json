@@ -1,0 +1,1186 @@
+{
+  "horizon_rules": {
+    "horizon_12_central_t15_like": {
+      "accuracy": 0.38461538461538464,
+      "false_negative_labels": [],
+      "false_positive_labels": [
+        "rule=73/bg=1100/T=3/word=0000001/HORIZON_ARTIFACT",
+        "rule=94/bg=0111/T=3/word=10000010/HORIZON_ARTIFACT",
+        "rule=94/bg=0111/T=6/word=10101000/HORIZON_ARTIFACT",
+        "rule=94/bg=1000/T=3/word=00011010/HORIZON_ARTIFACT",
+        "rule=94/bg=1110/T=3/word=00010111/HORIZON_ARTIFACT",
+        "rule=94/bg=1110/T=6/word=00010101/HORIZON_ARTIFACT",
+        "rule=133/bg=0111/T=3/word=10000011/HORIZON_ARTIFACT",
+        "rule=133/bg=1000/T=3/word=00010011/HORIZON_ARTIFACT"
+      ],
+      "fn": 0,
+      "fp": 8,
+      "perfect": false,
+      "precision": 0.38461538461538464,
+      "recall": 1.0,
+      "tn": 0,
+      "tp": 5
+    },
+    "horizon_16_central_t15_like": {
+      "accuracy": 0.6153846153846154,
+      "false_negative_labels": [
+        "rule=109/bg=0011/T=12/word=10010100/NATURAL_PERIOD_STRONG",
+        "rule=109/bg=0110/T=8/word=0000011/HORIZON_ACCEPTABLE",
+        "rule=109/bg=1011/T=10/word=00000001/HORIZON_ACCEPTABLE",
+        "rule=109/bg=1100/T=8/word=00000110/HORIZON_ACCEPTABLE",
+        "rule=109/bg=1100/T=12/word=00101001/NATURAL_PERIOD_STRONG"
+      ],
+      "false_positive_labels": [],
+      "fn": 5,
+      "fp": 0,
+      "perfect": false,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tn": 8,
+      "tp": 0
+    },
+    "horizon_20_central_t15_like": {
+      "accuracy": 0.6153846153846154,
+      "false_negative_labels": [
+        "rule=109/bg=0011/T=12/word=10010100/NATURAL_PERIOD_STRONG",
+        "rule=109/bg=0110/T=8/word=0000011/HORIZON_ACCEPTABLE",
+        "rule=109/bg=1011/T=10/word=00000001/HORIZON_ACCEPTABLE",
+        "rule=109/bg=1100/T=8/word=00000110/HORIZON_ACCEPTABLE",
+        "rule=109/bg=1100/T=12/word=00101001/NATURAL_PERIOD_STRONG"
+      ],
+      "false_positive_labels": [],
+      "fn": 5,
+      "fp": 0,
+      "perfect": false,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tn": 8,
+      "tp": 0
+    },
+    "horizon_8_central_t15_like": {
+      "accuracy": 0.6153846153846154,
+      "false_negative_labels": [
+        "rule=109/bg=0011/T=12/word=10010100/NATURAL_PERIOD_STRONG",
+        "rule=109/bg=0110/T=8/word=0000011/HORIZON_ACCEPTABLE",
+        "rule=109/bg=1011/T=10/word=00000001/HORIZON_ACCEPTABLE",
+        "rule=109/bg=1100/T=8/word=00000110/HORIZON_ACCEPTABLE",
+        "rule=109/bg=1100/T=12/word=00101001/NATURAL_PERIOD_STRONG"
+      ],
+      "false_positive_labels": [],
+      "fn": 5,
+      "fp": 0,
+      "perfect": false,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tn": 8,
+      "tp": 0
+    }
+  },
+  "horizons": [
+    8,
+    12,
+    16,
+    20
+  ],
+  "persistence_rules": {
+    "all_horizons_central_t15_like": {
+      "accuracy": 0.6153846153846154,
+      "false_negative_labels": [
+        "rule=109/bg=0011/T=12/word=10010100/NATURAL_PERIOD_STRONG",
+        "rule=109/bg=0110/T=8/word=0000011/HORIZON_ACCEPTABLE",
+        "rule=109/bg=1011/T=10/word=00000001/HORIZON_ACCEPTABLE",
+        "rule=109/bg=1100/T=8/word=00000110/HORIZON_ACCEPTABLE",
+        "rule=109/bg=1100/T=12/word=00101001/NATURAL_PERIOD_STRONG"
+      ],
+      "false_positive_labels": [],
+      "fn": 5,
+      "fp": 0,
+      "perfect": false,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tn": 8,
+      "tp": 0
+    },
+    "at_least_3_horizons_central_t15_like": {
+      "accuracy": 0.6153846153846154,
+      "false_negative_labels": [
+        "rule=109/bg=0011/T=12/word=10010100/NATURAL_PERIOD_STRONG",
+        "rule=109/bg=0110/T=8/word=0000011/HORIZON_ACCEPTABLE",
+        "rule=109/bg=1011/T=10/word=00000001/HORIZON_ACCEPTABLE",
+        "rule=109/bg=1100/T=8/word=00000110/HORIZON_ACCEPTABLE",
+        "rule=109/bg=1100/T=12/word=00101001/NATURAL_PERIOD_STRONG"
+      ],
+      "false_positive_labels": [],
+      "fn": 5,
+      "fp": 0,
+      "perfect": false,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tn": 8,
+      "tp": 0
+    },
+    "independent_horizons_8_16_20_central_t15_like": {
+      "accuracy": 0.6153846153846154,
+      "false_negative_labels": [
+        "rule=109/bg=0011/T=12/word=10010100/NATURAL_PERIOD_STRONG",
+        "rule=109/bg=0110/T=8/word=0000011/HORIZON_ACCEPTABLE",
+        "rule=109/bg=1011/T=10/word=00000001/HORIZON_ACCEPTABLE",
+        "rule=109/bg=1100/T=8/word=00000110/HORIZON_ACCEPTABLE",
+        "rule=109/bg=1100/T=12/word=00101001/NATURAL_PERIOD_STRONG"
+      ],
+      "false_positive_labels": [],
+      "fn": 5,
+      "fp": 0,
+      "perfect": false,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tn": 8,
+      "tp": 0
+    }
+  },
+  "phase": 74,
+  "rows": [
+    {
+      "T_local": 12,
+      "background": "0011",
+      "category": "NATURAL_PERIOD_STRONG",
+      "central_t15_like_count": 1,
+      "central_t15_like_horizons": [
+        12
+      ],
+      "horizons": {
+        "12": {
+          "active_count": 7,
+          "category": "NATURAL_PERIOD_STRONG",
+          "central_t15_like": true,
+          "concrete_match": true,
+          "distinct_dist_count": 5,
+          "horizon": 12,
+          "max_active_monomial_dist": 0.0,
+          "positive": true,
+          "r2": 0.9983407653012697,
+          "reliable": true,
+          "slope": -0.2982736268389106
+        },
+        "16": {
+          "active_count": 4,
+          "category": "NATURAL_PERIOD_STRONG",
+          "central_t15_like": false,
+          "concrete_match": true,
+          "distinct_dist_count": 3,
+          "horizon": 16,
+          "max_active_monomial_dist": 3.0,
+          "positive": true,
+          "r2": 0.7167746013739577,
+          "reliable": true,
+          "slope": -0.06981054868669112
+        },
+        "20": {
+          "active_count": 7,
+          "category": "NATURAL_PERIOD_STRONG",
+          "central_t15_like": false,
+          "concrete_match": true,
+          "distinct_dist_count": 5,
+          "horizon": 20,
+          "max_active_monomial_dist": 0.0,
+          "positive": true,
+          "r2": 0.2359470402953704,
+          "reliable": true,
+          "slope": -3.348368889254484e-05
+        },
+        "8": {
+          "active_count": 7,
+          "category": "NATURAL_PERIOD_STRONG",
+          "central_t15_like": false,
+          "concrete_match": true,
+          "distinct_dist_count": 5,
+          "horizon": 8,
+          "max_active_monomial_dist": 3.0,
+          "positive": true,
+          "r2": 0.4935676609422509,
+          "reliable": true,
+          "slope": -0.06169937042462523
+        }
+      },
+      "label": "rule=109/bg=0011/T=12/word=10010100/NATURAL_PERIOD_STRONG",
+      "persistent_all_horizons": false,
+      "persistent_independent_horizons": false,
+      "positive": true,
+      "rule": 109,
+      "word": "10010100"
+    },
+    {
+      "T_local": 8,
+      "background": "0110",
+      "category": "HORIZON_ACCEPTABLE",
+      "central_t15_like_count": 1,
+      "central_t15_like_horizons": [
+        12
+      ],
+      "horizons": {
+        "12": {
+          "active_count": 6,
+          "category": "HORIZON_ACCEPTABLE",
+          "central_t15_like": true,
+          "concrete_match": true,
+          "distinct_dist_count": 5,
+          "horizon": 12,
+          "max_active_monomial_dist": 0.0,
+          "positive": true,
+          "r2": 0.9982758088610344,
+          "reliable": true,
+          "slope": -0.2989283354431958
+        },
+        "16": {
+          "active_count": 6,
+          "category": "HORIZON_ACCEPTABLE",
+          "central_t15_like": false,
+          "concrete_match": true,
+          "distinct_dist_count": 5,
+          "horizon": 16,
+          "max_active_monomial_dist": 3.5,
+          "positive": true,
+          "r2": 0.6621344529227566,
+          "reliable": true,
+          "slope": -0.11246532943182387
+        },
+        "20": {
+          "active_count": 6,
+          "category": "HORIZON_ACCEPTABLE",
+          "central_t15_like": false,
+          "concrete_match": true,
+          "distinct_dist_count": 5,
+          "horizon": 20,
+          "max_active_monomial_dist": 0.0,
+          "positive": true,
+          "r2": 0.7162115895460803,
+          "reliable": true,
+          "slope": -3.6057694790102666e-05
+        },
+        "8": {
+          "active_count": 6,
+          "category": "HORIZON_ACCEPTABLE",
+          "central_t15_like": false,
+          "concrete_match": true,
+          "distinct_dist_count": 5,
+          "horizon": 8,
+          "max_active_monomial_dist": 2.5,
+          "positive": true,
+          "r2": 0.6172935274969975,
+          "reliable": true,
+          "slope": -0.10680174181300404
+        }
+      },
+      "label": "rule=109/bg=0110/T=8/word=0000011/HORIZON_ACCEPTABLE",
+      "persistent_all_horizons": false,
+      "persistent_independent_horizons": false,
+      "positive": true,
+      "rule": 109,
+      "word": "0000011"
+    },
+    {
+      "T_local": 10,
+      "background": "1011",
+      "category": "HORIZON_ACCEPTABLE",
+      "central_t15_like_count": 1,
+      "central_t15_like_horizons": [
+        12
+      ],
+      "horizons": {
+        "12": {
+          "active_count": 7,
+          "category": "HORIZON_ACCEPTABLE",
+          "central_t15_like": true,
+          "concrete_match": true,
+          "distinct_dist_count": 4,
+          "horizon": 12,
+          "max_active_monomial_dist": 0.0,
+          "positive": true,
+          "r2": 0.9993493944078341,
+          "reliable": true,
+          "slope": -0.30767434846609376
+        },
+        "16": {
+          "active_count": 6,
+          "category": "HORIZON_ACCEPTABLE",
+          "central_t15_like": false,
+          "concrete_match": true,
+          "distinct_dist_count": 3,
+          "horizon": 16,
+          "max_active_monomial_dist": 3.0,
+          "positive": true,
+          "r2": 0.8824819661772969,
+          "reliable": true,
+          "slope": -0.1318408488126041
+        },
+        "20": {
+          "active_count": 7,
+          "category": "HORIZON_ACCEPTABLE",
+          "central_t15_like": false,
+          "concrete_match": true,
+          "distinct_dist_count": 4,
+          "horizon": 20,
+          "max_active_monomial_dist": 0.0,
+          "positive": true,
+          "r2": 0.003746682762571396,
+          "reliable": true,
+          "slope": -2.1739551402107907e-06
+        },
+        "8": {
+          "active_count": 8,
+          "category": "HORIZON_ACCEPTABLE",
+          "central_t15_like": false,
+          "concrete_match": true,
+          "distinct_dist_count": 4,
+          "horizon": 8,
+          "max_active_monomial_dist": 3.0,
+          "positive": true,
+          "r2": 0.7714285711046109,
+          "reliable": true,
+          "slope": -0.07418112046515445
+        }
+      },
+      "label": "rule=109/bg=1011/T=10/word=00000001/HORIZON_ACCEPTABLE",
+      "persistent_all_horizons": false,
+      "persistent_independent_horizons": false,
+      "positive": true,
+      "rule": 109,
+      "word": "00000001"
+    },
+    {
+      "T_local": 8,
+      "background": "1100",
+      "category": "HORIZON_ACCEPTABLE",
+      "central_t15_like_count": 1,
+      "central_t15_like_horizons": [
+        12
+      ],
+      "horizons": {
+        "12": {
+          "active_count": 6,
+          "category": "HORIZON_ACCEPTABLE",
+          "central_t15_like": true,
+          "concrete_match": true,
+          "distinct_dist_count": 5,
+          "horizon": 12,
+          "max_active_monomial_dist": 0.0,
+          "positive": true,
+          "r2": 0.9982758088610344,
+          "reliable": true,
+          "slope": -0.2989283354431958
+        },
+        "16": {
+          "active_count": 6,
+          "category": "HORIZON_ACCEPTABLE",
+          "central_t15_like": false,
+          "concrete_match": true,
+          "distinct_dist_count": 5,
+          "horizon": 16,
+          "max_active_monomial_dist": 3.5,
+          "positive": true,
+          "r2": 0.6621344529227566,
+          "reliable": true,
+          "slope": -0.11246532943182387
+        },
+        "20": {
+          "active_count": 6,
+          "category": "HORIZON_ACCEPTABLE",
+          "central_t15_like": false,
+          "concrete_match": true,
+          "distinct_dist_count": 5,
+          "horizon": 20,
+          "max_active_monomial_dist": 0.0,
+          "positive": true,
+          "r2": 0.7162115895460803,
+          "reliable": true,
+          "slope": -3.6057694790102666e-05
+        },
+        "8": {
+          "active_count": 6,
+          "category": "HORIZON_ACCEPTABLE",
+          "central_t15_like": false,
+          "concrete_match": true,
+          "distinct_dist_count": 5,
+          "horizon": 8,
+          "max_active_monomial_dist": 2.5,
+          "positive": true,
+          "r2": 0.6172935274969975,
+          "reliable": true,
+          "slope": -0.10680174181300404
+        }
+      },
+      "label": "rule=109/bg=1100/T=8/word=00000110/HORIZON_ACCEPTABLE",
+      "persistent_all_horizons": false,
+      "persistent_independent_horizons": false,
+      "positive": true,
+      "rule": 109,
+      "word": "00000110"
+    },
+    {
+      "T_local": 12,
+      "background": "1100",
+      "category": "NATURAL_PERIOD_STRONG",
+      "central_t15_like_count": 1,
+      "central_t15_like_horizons": [
+        12
+      ],
+      "horizons": {
+        "12": {
+          "active_count": 7,
+          "category": "NATURAL_PERIOD_STRONG",
+          "central_t15_like": true,
+          "concrete_match": true,
+          "distinct_dist_count": 5,
+          "horizon": 12,
+          "max_active_monomial_dist": 0.0,
+          "positive": true,
+          "r2": 0.9983407653012697,
+          "reliable": true,
+          "slope": -0.2982736268389106
+        },
+        "16": {
+          "active_count": 4,
+          "category": "NATURAL_PERIOD_STRONG",
+          "central_t15_like": false,
+          "concrete_match": true,
+          "distinct_dist_count": 3,
+          "horizon": 16,
+          "max_active_monomial_dist": 3.0,
+          "positive": true,
+          "r2": 0.7167746013739577,
+          "reliable": true,
+          "slope": -0.06981054868669112
+        },
+        "20": {
+          "active_count": 7,
+          "category": "NATURAL_PERIOD_STRONG",
+          "central_t15_like": false,
+          "concrete_match": true,
+          "distinct_dist_count": 5,
+          "horizon": 20,
+          "max_active_monomial_dist": 0.0,
+          "positive": true,
+          "r2": 0.2359470402953704,
+          "reliable": true,
+          "slope": -3.348368889254484e-05
+        },
+        "8": {
+          "active_count": 7,
+          "category": "NATURAL_PERIOD_STRONG",
+          "central_t15_like": false,
+          "concrete_match": true,
+          "distinct_dist_count": 5,
+          "horizon": 8,
+          "max_active_monomial_dist": 1.0,
+          "positive": true,
+          "r2": 0.4935676609422509,
+          "reliable": true,
+          "slope": -0.06169937042462523
+        }
+      },
+      "label": "rule=109/bg=1100/T=12/word=00101001/NATURAL_PERIOD_STRONG",
+      "persistent_all_horizons": false,
+      "persistent_independent_horizons": false,
+      "positive": true,
+      "rule": 109,
+      "word": "00101001"
+    },
+    {
+      "T_local": 3,
+      "background": "1100",
+      "category": "HORIZON_ARTIFACT",
+      "central_t15_like_count": 1,
+      "central_t15_like_horizons": [
+        12
+      ],
+      "horizons": {
+        "12": {
+          "active_count": 6,
+          "category": "HORIZON_ARTIFACT",
+          "central_t15_like": true,
+          "concrete_match": true,
+          "distinct_dist_count": 5,
+          "horizon": 12,
+          "max_active_monomial_dist": 0.0,
+          "positive": false,
+          "r2": 0.9987170612505321,
+          "reliable": true,
+          "slope": -0.30391308321501187
+        },
+        "16": {
+          "active_count": 6,
+          "category": "HORIZON_ARTIFACT",
+          "central_t15_like": false,
+          "concrete_match": true,
+          "distinct_dist_count": 4,
+          "horizon": 16,
+          "max_active_monomial_dist": 2.5,
+          "positive": false,
+          "r2": 0.6095664926536688,
+          "reliable": true,
+          "slope": -0.09359294403750078
+        },
+        "20": {
+          "active_count": 8,
+          "category": "HORIZON_ARTIFACT",
+          "central_t15_like": false,
+          "concrete_match": true,
+          "distinct_dist_count": 5,
+          "horizon": 20,
+          "max_active_monomial_dist": 5.5,
+          "positive": false,
+          "r2": 0.24414259077388512,
+          "reliable": true,
+          "slope": 5.134411434170589e-05
+        },
+        "8": {
+          "active_count": 8,
+          "category": "HORIZON_ARTIFACT",
+          "central_t15_like": false,
+          "concrete_match": true,
+          "distinct_dist_count": 5,
+          "horizon": 8,
+          "max_active_monomial_dist": 3.5,
+          "positive": false,
+          "r2": 0.7070758074488355,
+          "reliable": true,
+          "slope": -0.12420266031146807
+        }
+      },
+      "label": "rule=73/bg=1100/T=3/word=0000001/HORIZON_ARTIFACT",
+      "persistent_all_horizons": false,
+      "persistent_independent_horizons": false,
+      "positive": false,
+      "rule": 73,
+      "word": "0000001"
+    },
+    {
+      "T_local": 3,
+      "background": "0111",
+      "category": "HORIZON_ARTIFACT",
+      "central_t15_like_count": 1,
+      "central_t15_like_horizons": [
+        12
+      ],
+      "horizons": {
+        "12": {
+          "active_count": 9,
+          "category": "HORIZON_ARTIFACT",
+          "central_t15_like": true,
+          "concrete_match": true,
+          "distinct_dist_count": 6,
+          "horizon": 12,
+          "max_active_monomial_dist": 0.0,
+          "positive": false,
+          "r2": 0.9999608258414828,
+          "reliable": true,
+          "slope": -0.2958509869579155
+        },
+        "16": {
+          "active_count": 9,
+          "category": "HORIZON_ARTIFACT",
+          "central_t15_like": false,
+          "concrete_match": true,
+          "distinct_dist_count": 5,
+          "horizon": 16,
+          "max_active_monomial_dist": 1.5,
+          "positive": false,
+          "r2": 0.26525412778789936,
+          "reliable": true,
+          "slope": -0.03379620395498695
+        },
+        "20": {
+          "active_count": 9,
+          "category": "HORIZON_ARTIFACT",
+          "central_t15_like": false,
+          "concrete_match": true,
+          "distinct_dist_count": 6,
+          "horizon": 20,
+          "max_active_monomial_dist": 1.0,
+          "positive": false,
+          "r2": 0.003022277240182447,
+          "reliable": true,
+          "slope": -1.5541896858355237e-05
+        },
+        "8": {
+          "active_count": 9,
+          "category": "HORIZON_ARTIFACT",
+          "central_t15_like": false,
+          "concrete_match": true,
+          "distinct_dist_count": 6,
+          "horizon": 8,
+          "max_active_monomial_dist": 4.0,
+          "positive": false,
+          "r2": 0.46082281093853505,
+          "reliable": true,
+          "slope": -0.048394311459080026
+        }
+      },
+      "label": "rule=94/bg=0111/T=3/word=10000010/HORIZON_ARTIFACT",
+      "persistent_all_horizons": false,
+      "persistent_independent_horizons": false,
+      "positive": false,
+      "rule": 94,
+      "word": "10000010"
+    },
+    {
+      "T_local": 6,
+      "background": "0111",
+      "category": "HORIZON_ARTIFACT",
+      "central_t15_like_count": 1,
+      "central_t15_like_horizons": [
+        12
+      ],
+      "horizons": {
+        "12": {
+          "active_count": 8,
+          "category": "HORIZON_ARTIFACT",
+          "central_t15_like": true,
+          "concrete_match": true,
+          "distinct_dist_count": 5,
+          "horizon": 12,
+          "max_active_monomial_dist": 0.0,
+          "positive": false,
+          "r2": 0.9999575644542296,
+          "reliable": true,
+          "slope": -0.29584543333273955
+        },
+        "16": {
+          "active_count": 8,
+          "category": "HORIZON_ARTIFACT",
+          "central_t15_like": false,
+          "concrete_match": true,
+          "distinct_dist_count": 4,
+          "horizon": 16,
+          "max_active_monomial_dist": 0.5,
+          "positive": false,
+          "r2": 0.33038986656867697,
+          "reliable": true,
+          "slope": -0.03887900878175925
+        },
+        "20": {
+          "active_count": 8,
+          "category": "HORIZON_ARTIFACT",
+          "central_t15_like": false,
+          "concrete_match": true,
+          "distinct_dist_count": 6,
+          "horizon": 20,
+          "max_active_monomial_dist": 1.0,
+          "positive": false,
+          "r2": 0.0008234059499249158,
+          "reliable": true,
+          "slope": -8.320136855556879e-06
+        },
+        "8": {
+          "active_count": 8,
+          "category": "HORIZON_ARTIFACT",
+          "central_t15_like": false,
+          "concrete_match": true,
+          "distinct_dist_count": 6,
+          "horizon": 8,
+          "max_active_monomial_dist": 2.0,
+          "positive": false,
+          "r2": 0.5813176902130872,
+          "reliable": true,
+          "slope": -0.05508085508027416
+        }
+      },
+      "label": "rule=94/bg=0111/T=6/word=10101000/HORIZON_ARTIFACT",
+      "persistent_all_horizons": false,
+      "persistent_independent_horizons": false,
+      "positive": false,
+      "rule": 94,
+      "word": "10101000"
+    },
+    {
+      "T_local": 3,
+      "background": "1000",
+      "category": "HORIZON_ARTIFACT",
+      "central_t15_like_count": 1,
+      "central_t15_like_horizons": [
+        12
+      ],
+      "horizons": {
+        "12": {
+          "active_count": 9,
+          "category": "HORIZON_ARTIFACT",
+          "central_t15_like": true,
+          "concrete_match": true,
+          "distinct_dist_count": 6,
+          "horizon": 12,
+          "max_active_monomial_dist": 0.0,
+          "positive": false,
+          "r2": 0.9999666766750902,
+          "reliable": true,
+          "slope": -0.29587749006112873
+        },
+        "16": {
+          "active_count": 9,
+          "category": "HORIZON_ARTIFACT",
+          "central_t15_like": false,
+          "concrete_match": true,
+          "distinct_dist_count": 6,
+          "horizon": 16,
+          "max_active_monomial_dist": 1.0,
+          "positive": false,
+          "r2": 0.5378857885879602,
+          "reliable": true,
+          "slope": -0.054271096100736396
+        },
+        "20": {
+          "active_count": 9,
+          "category": "HORIZON_ARTIFACT",
+          "central_t15_like": false,
+          "concrete_match": true,
+          "distinct_dist_count": 5,
+          "horizon": 20,
+          "max_active_monomial_dist": 1.5,
+          "positive": false,
+          "r2": 0.021173144864909954,
+          "reliable": true,
+          "slope": -4.951852665157141e-05
+        },
+        "8": {
+          "active_count": 9,
+          "category": "HORIZON_ARTIFACT",
+          "central_t15_like": false,
+          "concrete_match": true,
+          "distinct_dist_count": 5,
+          "horizon": 8,
+          "max_active_monomial_dist": 4.5,
+          "positive": false,
+          "r2": 0.26543054137430644,
+          "reliable": true,
+          "slope": -0.033534022974574695
+        }
+      },
+      "label": "rule=94/bg=1000/T=3/word=00011010/HORIZON_ARTIFACT",
+      "persistent_all_horizons": false,
+      "persistent_independent_horizons": false,
+      "positive": false,
+      "rule": 94,
+      "word": "00011010"
+    },
+    {
+      "T_local": 3,
+      "background": "1110",
+      "category": "HORIZON_ARTIFACT",
+      "central_t15_like_count": 1,
+      "central_t15_like_horizons": [
+        12
+      ],
+      "horizons": {
+        "12": {
+          "active_count": 7,
+          "category": "HORIZON_ARTIFACT",
+          "central_t15_like": true,
+          "concrete_match": true,
+          "distinct_dist_count": 5,
+          "horizon": 12,
+          "max_active_monomial_dist": 0.0,
+          "positive": false,
+          "r2": 0.9999889688516735,
+          "reliable": true,
+          "slope": -0.29569699337467525
+        },
+        "16": {
+          "active_count": 7,
+          "category": "HORIZON_ARTIFACT",
+          "central_t15_like": false,
+          "concrete_match": true,
+          "distinct_dist_count": 4,
+          "horizon": 16,
+          "max_active_monomial_dist": 1.5,
+          "positive": false,
+          "r2": 0.3176435429620771,
+          "reliable": true,
+          "slope": -0.038446444469811734
+        },
+        "20": {
+          "active_count": 7,
+          "category": "HORIZON_ARTIFACT",
+          "central_t15_like": false,
+          "concrete_match": true,
+          "distinct_dist_count": 5,
+          "horizon": 20,
+          "max_active_monomial_dist": 0.5,
+          "positive": false,
+          "r2": 0.025947920064859797,
+          "reliable": true,
+          "slope": -4.4348490560588675e-05
+        },
+        "8": {
+          "active_count": 7,
+          "category": "HORIZON_ARTIFACT",
+          "central_t15_like": false,
+          "concrete_match": true,
+          "distinct_dist_count": 5,
+          "horizon": 8,
+          "max_active_monomial_dist": 3.5,
+          "positive": false,
+          "r2": 0.25924561477440644,
+          "reliable": true,
+          "slope": -0.033337739482050606
+        }
+      },
+      "label": "rule=94/bg=1110/T=3/word=00010111/HORIZON_ARTIFACT",
+      "persistent_all_horizons": false,
+      "persistent_independent_horizons": false,
+      "positive": false,
+      "rule": 94,
+      "word": "00010111"
+    },
+    {
+      "T_local": 6,
+      "background": "1110",
+      "category": "HORIZON_ARTIFACT",
+      "central_t15_like_count": 1,
+      "central_t15_like_horizons": [
+        12
+      ],
+      "horizons": {
+        "12": {
+          "active_count": 8,
+          "category": "HORIZON_ARTIFACT",
+          "central_t15_like": true,
+          "concrete_match": true,
+          "distinct_dist_count": 5,
+          "horizon": 12,
+          "max_active_monomial_dist": 0.0,
+          "positive": false,
+          "r2": 0.9999575644542296,
+          "reliable": true,
+          "slope": -0.29584543333273955
+        },
+        "16": {
+          "active_count": 8,
+          "category": "HORIZON_ARTIFACT",
+          "central_t15_like": false,
+          "concrete_match": true,
+          "distinct_dist_count": 4,
+          "horizon": 16,
+          "max_active_monomial_dist": 1.5,
+          "positive": false,
+          "r2": 0.33038986656867697,
+          "reliable": true,
+          "slope": -0.03887900878175925
+        },
+        "20": {
+          "active_count": 8,
+          "category": "HORIZON_ARTIFACT",
+          "central_t15_like": false,
+          "concrete_match": true,
+          "distinct_dist_count": 6,
+          "horizon": 20,
+          "max_active_monomial_dist": 1.0,
+          "positive": false,
+          "r2": 0.0008234059499249158,
+          "reliable": true,
+          "slope": -8.320136855556879e-06
+        },
+        "8": {
+          "active_count": 8,
+          "category": "HORIZON_ARTIFACT",
+          "central_t15_like": false,
+          "concrete_match": true,
+          "distinct_dist_count": 6,
+          "horizon": 8,
+          "max_active_monomial_dist": 4.0,
+          "positive": false,
+          "r2": 0.5813176902130872,
+          "reliable": true,
+          "slope": -0.05508085508027416
+        }
+      },
+      "label": "rule=94/bg=1110/T=6/word=00010101/HORIZON_ARTIFACT",
+      "persistent_all_horizons": false,
+      "persistent_independent_horizons": false,
+      "positive": false,
+      "rule": 94,
+      "word": "00010101"
+    },
+    {
+      "T_local": 3,
+      "background": "0111",
+      "category": "HORIZON_ARTIFACT",
+      "central_t15_like_count": 1,
+      "central_t15_like_horizons": [
+        12
+      ],
+      "horizons": {
+        "12": {
+          "active_count": 9,
+          "category": "HORIZON_ARTIFACT",
+          "central_t15_like": true,
+          "concrete_match": true,
+          "distinct_dist_count": 6,
+          "horizon": 12,
+          "max_active_monomial_dist": 0.0,
+          "positive": false,
+          "r2": 0.9992244631173821,
+          "reliable": true,
+          "slope": -0.28946073177492704
+        },
+        "16": {
+          "active_count": 9,
+          "category": "HORIZON_ARTIFACT",
+          "central_t15_like": false,
+          "concrete_match": true,
+          "distinct_dist_count": 5,
+          "horizon": 16,
+          "max_active_monomial_dist": 1.5,
+          "positive": false,
+          "r2": 0.3624150392852018,
+          "reliable": true,
+          "slope": -0.04880606930112449
+        },
+        "20": {
+          "active_count": 9,
+          "category": "HORIZON_ARTIFACT",
+          "central_t15_like": false,
+          "concrete_match": true,
+          "distinct_dist_count": 6,
+          "horizon": 20,
+          "max_active_monomial_dist": 0.0,
+          "positive": false,
+          "r2": 0.9385757711238268,
+          "reliable": true,
+          "slope": -0.011903441943122367
+        },
+        "8": {
+          "active_count": 9,
+          "category": "HORIZON_ARTIFACT",
+          "central_t15_like": false,
+          "concrete_match": true,
+          "distinct_dist_count": 6,
+          "horizon": 8,
+          "max_active_monomial_dist": 4.0,
+          "positive": false,
+          "r2": 0.4608221085323849,
+          "reliable": true,
+          "slope": -0.046703856068217836
+        }
+      },
+      "label": "rule=133/bg=0111/T=3/word=10000011/HORIZON_ARTIFACT",
+      "persistent_all_horizons": false,
+      "persistent_independent_horizons": false,
+      "positive": false,
+      "rule": 133,
+      "word": "10000011"
+    },
+    {
+      "T_local": 3,
+      "background": "1000",
+      "category": "HORIZON_ARTIFACT",
+      "central_t15_like_count": 1,
+      "central_t15_like_horizons": [
+        12
+      ],
+      "horizons": {
+        "12": {
+          "active_count": 9,
+          "category": "HORIZON_ARTIFACT",
+          "central_t15_like": true,
+          "concrete_match": true,
+          "distinct_dist_count": 6,
+          "horizon": 12,
+          "max_active_monomial_dist": 0.0,
+          "positive": false,
+          "r2": 0.9993051325249848,
+          "reliable": true,
+          "slope": -0.28948874977899297
+        },
+        "16": {
+          "active_count": 9,
+          "category": "HORIZON_ARTIFACT",
+          "central_t15_like": false,
+          "concrete_match": true,
+          "distinct_dist_count": 6,
+          "horizon": 16,
+          "max_active_monomial_dist": 1.0,
+          "positive": false,
+          "r2": 0.5853229210282587,
+          "reliable": true,
+          "slope": -0.07033244875847058
+        },
+        "20": {
+          "active_count": 9,
+          "category": "HORIZON_ARTIFACT",
+          "central_t15_like": false,
+          "concrete_match": true,
+          "distinct_dist_count": 5,
+          "horizon": 20,
+          "max_active_monomial_dist": 0.5,
+          "positive": false,
+          "r2": 0.8705514636568771,
+          "reliable": true,
+          "slope": -0.012395367296773882
+        },
+        "8": {
+          "active_count": 9,
+          "category": "HORIZON_ARTIFACT",
+          "central_t15_like": false,
+          "concrete_match": true,
+          "distinct_dist_count": 5,
+          "horizon": 8,
+          "max_active_monomial_dist": 4.5,
+          "positive": false,
+          "r2": 0.26542942347103815,
+          "reliable": true,
+          "slope": -0.032362611011523615
+        }
+      },
+      "label": "rule=133/bg=1000/T=3/word=00010011/HORIZON_ARTIFACT",
+      "persistent_all_horizons": false,
+      "persistent_independent_horizons": false,
+      "positive": false,
+      "rule": 133,
+      "word": "00010011"
+    }
+  ],
+  "source": {
+    "census": "anf_gradient_census_results.json",
+    "global_centrality": "anf_centrality_global_results.json"
+  },
+  "summary": {
+    "artifact_persistence_counts": [
+      {
+        "central_t15_like_count": 1,
+        "central_t15_like_horizons": [
+          12
+        ],
+        "label": "rule=73/bg=1100/T=3/word=0000001/HORIZON_ARTIFACT"
+      },
+      {
+        "central_t15_like_count": 1,
+        "central_t15_like_horizons": [
+          12
+        ],
+        "label": "rule=94/bg=0111/T=3/word=10000010/HORIZON_ARTIFACT"
+      },
+      {
+        "central_t15_like_count": 1,
+        "central_t15_like_horizons": [
+          12
+        ],
+        "label": "rule=94/bg=0111/T=6/word=10101000/HORIZON_ARTIFACT"
+      },
+      {
+        "central_t15_like_count": 1,
+        "central_t15_like_horizons": [
+          12
+        ],
+        "label": "rule=94/bg=1000/T=3/word=00011010/HORIZON_ARTIFACT"
+      },
+      {
+        "central_t15_like_count": 1,
+        "central_t15_like_horizons": [
+          12
+        ],
+        "label": "rule=94/bg=1110/T=3/word=00010111/HORIZON_ARTIFACT"
+      },
+      {
+        "central_t15_like_count": 1,
+        "central_t15_like_horizons": [
+          12
+        ],
+        "label": "rule=94/bg=1110/T=6/word=00010101/HORIZON_ARTIFACT"
+      },
+      {
+        "central_t15_like_count": 1,
+        "central_t15_like_horizons": [
+          12
+        ],
+        "label": "rule=133/bg=0111/T=3/word=10000011/HORIZON_ARTIFACT"
+      },
+      {
+        "central_t15_like_count": 1,
+        "central_t15_like_horizons": [
+          12
+        ],
+        "label": "rule=133/bg=1000/T=3/word=00010011/HORIZON_ARTIFACT"
+      }
+    ],
+    "best_rule": {
+      "accuracy": 0.38461538461538464,
+      "false_negative_labels": [],
+      "false_positive_labels": [
+        "rule=73/bg=1100/T=3/word=0000001/HORIZON_ARTIFACT",
+        "rule=94/bg=0111/T=3/word=10000010/HORIZON_ARTIFACT",
+        "rule=94/bg=0111/T=6/word=10101000/HORIZON_ARTIFACT",
+        "rule=94/bg=1000/T=3/word=00011010/HORIZON_ARTIFACT",
+        "rule=94/bg=1110/T=3/word=00010111/HORIZON_ARTIFACT",
+        "rule=94/bg=1110/T=6/word=00010101/HORIZON_ARTIFACT",
+        "rule=133/bg=0111/T=3/word=10000011/HORIZON_ARTIFACT",
+        "rule=133/bg=1000/T=3/word=00010011/HORIZON_ARTIFACT"
+      ],
+      "fn": 0,
+      "fp": 8,
+      "perfect": false,
+      "precision": 0.38461538461538464,
+      "recall": 1.0,
+      "tn": 0,
+      "tp": 5
+    },
+    "best_rule_name": "horizon_12_central_t15_like",
+    "candidate_count": 13,
+    "category_counts": {
+      "HORIZON_ACCEPTABLE": 3,
+      "HORIZON_ARTIFACT": 8,
+      "NATURAL_PERIOD_STRONG": 2
+    },
+    "horizon_artifact_counts": {
+      "12": 8,
+      "16": 0,
+      "20": 0,
+      "8": 0
+    },
+    "horizon_positive_counts": {
+      "12": 5,
+      "16": 0,
+      "20": 0,
+      "8": 0
+    },
+    "interpretation": "The central T15-like signal appears only at the original common horizon 12 for both positives and centrality artefacts. It does not survive as an independent-horizon discriminator; Fase 73 remains a descriptive consistency check rather than a non-circular validation.",
+    "non_positive_count": 8,
+    "positive_count": 5,
+    "positive_persistence_counts": [
+      {
+        "central_t15_like_count": 1,
+        "central_t15_like_horizons": [
+          12
+        ],
+        "label": "rule=109/bg=0011/T=12/word=10010100/NATURAL_PERIOD_STRONG"
+      },
+      {
+        "central_t15_like_count": 1,
+        "central_t15_like_horizons": [
+          12
+        ],
+        "label": "rule=109/bg=0110/T=8/word=0000011/HORIZON_ACCEPTABLE"
+      },
+      {
+        "central_t15_like_count": 1,
+        "central_t15_like_horizons": [
+          12
+        ],
+        "label": "rule=109/bg=1011/T=10/word=00000001/HORIZON_ACCEPTABLE"
+      },
+      {
+        "central_t15_like_count": 1,
+        "central_t15_like_horizons": [
+          12
+        ],
+        "label": "rule=109/bg=1100/T=8/word=00000110/HORIZON_ACCEPTABLE"
+      },
+      {
+        "central_t15_like_count": 1,
+        "central_t15_like_horizons": [
+          12
+        ],
+        "label": "rule=109/bg=1100/T=12/word=00101001/NATURAL_PERIOD_STRONG"
+      }
+    ],
+    "status": "CENTRALITY_HORIZON_DEPENDENT"
+  }
+}
