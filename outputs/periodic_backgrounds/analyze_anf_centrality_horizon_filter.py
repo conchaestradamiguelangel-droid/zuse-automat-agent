@@ -146,10 +146,10 @@ def build_results() -> dict[str, Any]:
     centrality_and_ratio = confusion(rows, lambda row: row["centrality_candidate"] and row["oversampling_ratio"] <= 1.5)
 
     if centrality_and_T8["perfect"] and centrality_and_ratio["perfect"]:
-        status = "CENTRALITY_HORIZON_FILTER_SEPARATES"
+        status = "CENTRALITY_HORIZON_FILTER_RECAPITULATES_LABEL"
         interpretation = (
-            "The second filter is horizon sufficiency: centrality plus T_local>=8 "
-            "(equivalently 12/T_local<=1.5 in this census) separates all positives from all non-positives."
+            "The horizon split is descriptively exact, but partially circular: "
+            "T_local>=8 is already part of the HORIZON_ACCEPTABLE label definition."
         )
     elif perfect_rules:
         status = "CENTRALITY_SECOND_FILTER_FOUND"
@@ -228,8 +228,8 @@ def build_report(data: dict[str, Any]) -> str:
         "short-period / oversampled-horizon artefacts?",
         "",
         "This phase tests the cheap second filter first: combine ANF centrality",
-        "(`max_active_monomial_dist=0`) with a sufficient local period under the",
-        "common horizon `T_WINDOW=12`.",
+        "(`max_active_monomial_dist=0`) with the same sufficient-horizon threshold",
+        "used by the Fase 55 category definition.",
         "",
         "## Centrality Candidates",
         "",
@@ -285,14 +285,19 @@ def build_report(data: dict[str, Any]) -> str:
         summary["interpretation"],
         "",
         "The Fase 72 centrality false positives are not random failures of the",
-        "centrality metric. They are short-period centrality artefacts: six have",
-        "`T_local=3` and two have `T_local=6`. Adding the horizon sufficiency",
-        "condition `T_local>=8` removes all eight false positives while preserving",
-        "all five observed positives.",
+        "centrality metric. They are short-period centrality cases: six have",
+        "`T_local=3` and two have `T_local=6`. Adding `T_local>=8` removes all",
+        "eight false positives while preserving all five observed positives, but",
+        "this should not be read as an independent statistical discovery because",
+        "`T_local>=8` is exactly the threshold used by `classify_case()` to split",
+        "`HORIZON_ACCEPTABLE` from `HORIZON_ARTIFACT` when the common-horizon",
+        "ANF fit is comparable to T15.",
         "",
         "## Methodological Limit",
         "",
         "- This is still a validation over the Fase 55 census, not all ECA rules.",
+        "- The `T_local>=8` filter is partially circular with the Fase 55 category",
+        "  definition and should be treated as a descriptive consistency check.",
         "- All observed positives remain rule_109 cases, so external recall is not",
         "  tested.",
         "- The filter is evaluated at common horizon `T_WINDOW=12`; natural-period",

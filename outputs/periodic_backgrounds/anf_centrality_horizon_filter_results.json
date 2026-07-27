@@ -2663,10 +2663,10 @@
       "tn": 53,
       "tp": 5
     },
-    "interpretation": "The second filter is horizon sufficiency: centrality plus T_local>=8 (equivalently 12/T_local<=1.5 in this census) separates all positives from all non-positives.",
+    "interpretation": "The horizon split is descriptively exact, but partially circular: T_local>=8 is already part of the HORIZON_ACCEPTABLE label definition.",
     "perfect_rule_count": 2,
     "positive_count": 5,
-    "status": "CENTRALITY_HORIZON_FILTER_SEPARATES"
+    "status": "CENTRALITY_HORIZON_FILTER_RECAPITULATES_LABEL"
   },
   "t_window": 12,
   "threshold_scan": [
