@@ -125,7 +125,7 @@
 <p>﻿# ZUSE Automat Agent: Empirical Law Discovery in Elementary Cellular Automata</p>
 <h2>Abstract</h2>
 <p>We present ZUSE, a deterministic discovery pipeline for elementary cellular automata (ECA). ZUSE runs fixed simulation protocols, evaluates seven operational cycle laws, stores multi-seed WorldRecords, and measures basin fragility without using a language model inside the discovery loop. Across a 20-world atlas, the system separates law coverage, observer artifacts, and fragility regimes that are collapsed by coarse visual taxonomy.</p>
-<p>The strongest case study concerns a periodic-background oscillator family in <code>rule_73/rule_109</code>. A length-8 background sweep finds a <code>T=15</code> mechanism with a five-state locking cycle. A 25-cell, 12-step causal cone then reveals an algebraic normal form (ANF) gradient: active-output monomial counts decay with distance from the defect center with <code>R^2 = 0.998197</code>, and active-output degree follows <code>degree = 24 - d + epsilon</code>. The gradient generalizes to external length-9/10 <code>T=15</code> witnesses and concentrates, outside the original family, in catalogued <code>rule_109</code> cases. Subsequent causal audits show that center mediation is necessary but not sufficient; period/horizon and alignment descriptors are partial; and the remaining <code>rule_109/bg=1100/T=8</code> residual cannot be separated by scalar temporal summaries.</p>
+<p>The strongest case study concerns a periodic-background oscillator family in <code>rule_73/rule_109</code>. A length-8 background sweep finds a <code>T=15</code> mechanism with a five-state locking cycle. A 25-cell, 12-step causal cone then reveals an algebraic normal form (ANF) gradient: active-output monomial counts decay with distance from the defect center with <code>R^2 = 0.998197</code>, and active-output degree follows <code>degree = 24 - d + epsilon</code>. The gradient generalizes to external length-9/10 <code>T=15</code> witnesses and concentrates, outside the original family, in catalogued <code>rule_109</code> cases. Subsequent causal audits show that center mediation is necessary but not sufficient within that catalog; period/horizon and alignment descriptors are partial; and the remaining <code>rule_109/bg=1100/T=8</code> residual cannot be separated by scalar temporal summaries. A primitive length-8 holdout then finds nine natural-period <code>rule_73/T=12</code> witnesses, three of which retain the signature at a neighboring horizon while 0/27 control measurements become positive.</p>
 <p>All scripts, reports, PDFs, and versioned releases are public. The claims are empirical and protocol-bounded: ZUSE provides a reproducible evidence engine for CA law discovery, not a universal autonomous scientist.</p>
 <h2>1. Introduction</h2>
 <p>Elementary cellular automata are among the simplest systems known to exhibit
@@ -273,7 +273,7 @@ failure of a deliberately compressed symbolization
 <code>(dominant_context, defect_size_bucket)</code>, not as a negative result for
 computational mechanics itself.</p>
 <h3>2.5 Periodic backgrounds, gliders, and mechanistic audits</h3>
-<p>The oscillator results in Sections 7.5--7.37 are closest in spirit to the
+<p>The oscillator results in Sections 7.5--7.38 are closest in spirit to the
 domain/particle tradition in cellular automata: localized structures are
 studied relative to a background, and the relevant mechanism may be a defect
 trajectory rather than a raw frame pattern. Lindgren and Nordahl applied
@@ -3744,6 +3744,97 @@ cone structure, not in compressed temporal summaries of the defect. This
 closes the scalar causal audit around the <code>rule_109</code> residual and motivates
 future work based on full spatial snapshots, richer causal-state
 reconstruction, or external review before adding further internal phases.</p>
+<h3>7.38 External <code>rule_73</code> witnesses and partial horizon robustness (Fases 77--79)</h3>
+<p>Fases 77--79 reopen external validation only after fixing the Fase 55
+comparison predicate and candidate-selection rules. No threshold is fitted to
+the new cases. Fase 77 first evaluates 76 natural-period groups from four rules
+not present in the Fase 55 catalog (<code>62</code>, <code>118</code>, <code>131</code>, and <code>145</code>) over
+primitive length-8 backgrounds. All 76 candidates have natural period 3, all
+fits are reliable, and none is comparable to the T15 ANF gradient. The best
+observed fit has <code>R^2=0.619571</code>, well below the predeclared <code>0.95</code> threshold.
+This is a bounded negative result for the available period-3 holdout, not a
+test of external rules at periods 8--12.</p>
+<p>Fase 78 then queries the completed length-8 physical sweep for previously
+unmeasured <code>rule_73</code> oscillators in that longer-period range. The fixed holdout
+contains 25 stationary groups on 18 primitive backgrounds:</p>
+<table>
+<thead>
+<tr>
+<th align="right">Natural period</th>
+<th align="right">Cases</th>
+<th align="right">Comparable witnesses</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="right">8</td>
+<td align="right">1</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="right">10</td>
+<td align="right">6</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="right">12</td>
+<td align="right">18</td>
+<td align="right">9</td>
+</tr>
+</tbody></table>
+<p>The nine witnesses occur on nine distinct backgrounds and are measured only at
+their natural period. The strongest fit has <code>R^2=0.999252</code>; the closest slope
+is <code>-0.307370</code>, a 0.03% deviation from the T15 reference. An independent
+no-checkpoint remeasurement reproduces the packed result, and no packed versus
+concrete discrepancy is observed. These are the first natural-period
+non-<code>rule_109</code> witnesses in the two completed catalogs. Because <code>rule_73</code> has
+an isolated <code>C</code> term and an <code>LR</code> term without the center, it is not
+center-mediated under the Fase 57 definition. Center mediation is therefore
+not necessary beyond the original Fase 55 catalog; the earlier necessity
+result remains valid only within its stated catalog.</p>
+<p>All nine new witnesses have <code>T_local=12</code>, which coincides with the common
+horizon resonance identified in Fase 76. Fase 79 therefore remeasures all 18
+<code>rule_73/T=12</code> holdout cases at predeclared neighboring horizons 10, 14, and
+16. The nine natural-period witnesses are the primary cohort, and the nine
+natural-period negatives are controls:</p>
+<table>
+<thead>
+<tr>
+<th>Cohort</th>
+<th align="right">Cases</th>
+<th align="right">Comparable at h10</th>
+<th align="right">Comparable at h14</th>
+<th align="right">Comparable at h16</th>
+<th align="right">Survive any neighbor</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Fase 78 witnesses</td>
+<td align="right">9</td>
+<td align="right">1</td>
+<td align="right">2</td>
+<td align="right">0</td>
+<td align="right">3</td>
+</tr>
+<tr>
+<td>Fase 78 controls</td>
+<td align="right">9</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+</tr>
+</tbody></table>
+<p>Each of the three survivors is comparable at one neighboring horizon only; no
+case survives at horizon 16. Across the 27 control measurements, none crosses
+the unchanged comparison threshold. Thus the Fase 78 result is not a pure
+point resonance at horizon 12, but neither is it horizon-invariant.</p>
+<p>The combined status is <code>RULE73_LEN8_NEIGHBOR_HORIZON_PARTIAL</code>. The ANF
+gradient has a first natural witness outside <code>rule_109</code> and finite
+neighboring-horizon robustness in a subset of backgrounds. The claim is
+strictly background-conditioned: it covers one additional rule, primitive
+length-8 backgrounds, nine natural-period witnesses, and three survivors at
+neighboring horizons. It does not establish universal generalization across
+ECA rules or backgrounds.</p>
 <h2>8. Observer Artifacts and Pipeline Equivariance</h2>
 <p>The ZUSE pipeline contains two classes of observer artifact that the atlas
 identifies and characterizes. Framing these artifacts as results -- not just
@@ -4026,6 +4117,15 @@ The answer is negative under the tested horizon protocol: the future-blind
 <code>degree_growth_slope_K</code> feature reaches 79.47% LORO accuracy at <code>K=11</code>, then
 jumps to 94.90% at <code>K=12</code>. Thus the epsilon bit is a full-horizon ANF-growth
 property rather than an early dynamic shortcut.</p>
+<p>The external ANF holdout in Section 7.38 is likewise protocol-bounded. It
+adds 25 <code>rule_73</code> cases on 18 primitive length-8 backgrounds, but only nine
+natural-period witnesses, all at <code>T_local=12</code>. Three retain the comparison
+signature at one neighboring horizon, while six do not and none survives at
+horizon 16. The fact that 0/27 control measurements become positive reduces
+the likelihood of a free threshold effect, but the sample still covers only
+one non-<code>rule_109</code> rule and one background length. It therefore falsifies
+universal necessity of center mediation while supporting only partial,
+background-conditioned generalization of the gradient.</p>
 <h3>9.4 Empirical atlas, not axiomatic classification</h3>
 <p>The world categories are induced from observed law signatures across a finite
 number of seeds and step counts. A world classified as
@@ -4218,8 +4318,16 @@ survivor, <code>rule_108</code>, collapses to a compact <code>T=2</code> mechani
 non-comparable ANF slope (<code>-0.017102</code>, <code>R^2=0.264706</code>). Fases 65--66 then
 test the residual directly: aggregate context frequencies do not
 discriminate it from nearby controls, and a long-horizon audit confirms that
-it is a genuine persistent period-8 oscillator rather than a transient. Full
-results are in Sections 7.20-7.37.</li>
+it is a genuine persistent period-8 oscillator rather than a transient.
+Fases 77--79 then add a predeclared external-background holdout. Four new
+period-3 rules produce no comparable fits, but 9/25 <code>rule_73</code> cases on
+primitive length-8 backgrounds reproduce the gradient at their natural
+period <code>T=12</code>. Three of those nine survive at one neighboring horizon
+(<code>h=10</code> or <code>h=14</code>), while 0/27 neighboring-horizon control measurements
+become positive. This supplies the first natural-period witness outside
+<code>rule_109</code> and limits the earlier center-mediation necessity claim to the
+Fase 55 catalog; robustness remains partial and background-conditioned. Full
+results are in Sections 7.20-7.38.</li>
 </ul>
 <p>Each extension is a controlled experiment with the same measurement protocol;
 only the IC or background definition changes.</p>
