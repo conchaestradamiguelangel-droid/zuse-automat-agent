@@ -1,4 +1,4 @@
-# ZUSE v1.32 Venue Shortlist
+# ZUSE v1.33 Venue Shortlist
 
 Status: draft for submission planning. Verify all venue rules again immediately before submission.
 
@@ -6,7 +6,7 @@ Status: draft for submission planning. Verify all venue rules again immediately 
 
 Primary target: **Artificial Life**.
 
-Reason: ZUSE is best framed as artificial-life methodology plus mechanistic analysis of emergent computation in cellular automata. The current 55-page manuscript can plausibly enter as a journal article without radical surgery.
+Reason: ZUSE is best framed as artificial-life methodology plus mechanistic analysis of emergent computation in cellular automata. The current 56-page manuscript can plausibly enter as a journal article without radical surgery.
 
 Fallback target: **Complex Systems**.
 
@@ -39,7 +39,7 @@ Do not use ALIFE conference as the first target for the current manuscript. An 8
 ## Submission Order
 
 1. Finish arXiv endorsement if Genaro Martinez or another endorser completes `nlin.CG`.
-2. Keep Zenodo v1.32 as the active citable preprint regardless of arXiv timing.
+2. Keep Zenodo v1.33 as the active citable preprint regardless of arXiv timing.
 3. Prepare *Artificial Life* package:
    - cover letter;
    - manuscript PDF;

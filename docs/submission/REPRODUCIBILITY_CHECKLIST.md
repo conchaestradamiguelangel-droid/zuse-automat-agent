@@ -1,4 +1,4 @@
-# ZUSE v1.32 Reproducibility Checklist
+# ZUSE v1.33 Reproducibility Checklist
 
 Audience: reviewers and editors. This is a claim-to-artifact map, not a developer manual.
 
@@ -162,7 +162,7 @@ Select-String paper\draft.md,outputs\periodic_backgrounds\*.md -Pattern "-0.3072
 
 ## Versioned Artifacts
 
-- Zenodo v1.32 DOI: https://doi.org/10.5281/zenodo.21435062
-- GitHub release: https://github.com/conchaestradamiguelangel-droid/zuse-automat-agent/releases/tag/v1.32
+- Zenodo v1.33 DOI: https://doi.org/10.5281/zenodo.21709742
+- GitHub release: https://github.com/conchaestradamiguelangel-droid/zuse-automat-agent/releases/tag/v1.33
 - PDF: `paper/zuse_preprint.pdf`
 - Source: `paper/draft.md`

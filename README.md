@@ -9,8 +9,9 @@ model participates in world selection, law evaluation, scoring, or acceptance.
 
 ## Preprint
 
-**Latest: v1.32** - Editorial submission-preparation release: abstract reduced to 199 words, Related Work expanded to 16 verified references, the §7.5->§7.6 atlas-to-ANF bridge added, and submission figures inserted. Scientific claims remain unchanged from v1.31.
+**Latest: v1.33** - External primitive-length-8 validation adds nine natural-period `rule_73/T=12` ANF-gradient witnesses. Three retain the signature at a predeclared neighboring horizon, while 0/27 control measurements become positive; robustness remains partial and background-conditioned.
 
+- v1.33 DOI: [10.5281/zenodo.21709742](https://doi.org/10.5281/zenodo.21709742)
 - v1.32 DOI: [10.5281/zenodo.21435062](https://doi.org/10.5281/zenodo.21435062)
 - v1.31 DOI: [10.5281/zenodo.21433927](https://doi.org/10.5281/zenodo.21433927)
 - v1.30 DOI: [10.5281/zenodo.21385475](https://doi.org/10.5281/zenodo.21385475)
@@ -44,6 +45,7 @@ model participates in world selection, law evaluation, scoring, or acceptance.
 - v1.2 DOI: [10.5281/zenodo.20738025](https://doi.org/10.5281/zenodo.20738025)
 - v1.1 DOI: [10.5281/zenodo.20687470](https://doi.org/10.5281/zenodo.20687470)
 - v1.0 DOI: [10.5281/zenodo.20516375](https://doi.org/10.5281/zenodo.20516375)
+- v1.33 series DOI: [10.5281/zenodo.21709741](https://doi.org/10.5281/zenodo.21709741)
 - v1.32 series DOI: [10.5281/zenodo.21435061](https://doi.org/10.5281/zenodo.21435061)
 - v1.31 series DOI: [10.5281/zenodo.21433926](https://doi.org/10.5281/zenodo.21433926)
 - v1.30 series DOI: [10.5281/zenodo.21385474](https://doi.org/10.5281/zenodo.21385474)
@@ -136,8 +138,8 @@ regenerated from the commands in the reproducibility guide.
 
 ```text
 Concha Estrada, M. A. (2026). ZUSE Automat Agent: Empirical Law Discovery in
-Elementary Cellular Automata (v1.32). Zenodo.
-https://doi.org/10.5281/zenodo.21435062
+Elementary Cellular Automata (v1.33). Zenodo.
+https://doi.org/10.5281/zenodo.21709742
 ```
 
 ## License

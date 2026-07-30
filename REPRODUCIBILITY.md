@@ -1,7 +1,7 @@
 # Reproducibility
 
 This repository contains the deterministic code and summary artifacts used for
-the ZUSE Automat Agent v1.32 preprint.
+the ZUSE Automat Agent v1.33 preprint.
 
 ## Environment
 
@@ -150,9 +150,9 @@ Tracked companion summaries:
 
 ## Preprint
 
-The paper source is [paper/draft.md](paper/draft.md). The v1.32 PDF is committed
+The paper source is [paper/draft.md](paper/draft.md). The v1.33 PDF is committed
 as [paper/zuse_preprint.pdf](paper/zuse_preprint.pdf) and archived on Zenodo:
 
 ```text
-https://doi.org/10.5281/zenodo.21435062
+https://doi.org/10.5281/zenodo.21709742
 ```
