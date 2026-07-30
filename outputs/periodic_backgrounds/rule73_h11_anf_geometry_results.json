@@ -1,0 +1,1529 @@
+{
+  "control_symmetry_audit": {
+    "background_relations": [],
+    "backgrounds": [
+      "00111011",
+      "00111101"
+    ],
+    "word_relations": [
+      {
+        "shift": 2,
+        "transform": "rotation"
+      },
+      {
+        "shift": 1,
+        "transform": "reflection_rotation"
+      }
+    ],
+    "words": [
+      "011",
+      "101"
+    ]
+  },
+  "measurement_source": "deterministic h=11 remeasurement",
+  "nearest_neighbors": [
+    {
+      "cohort": "baseline_witness",
+      "distance": 0.574303587029132,
+      "label": "rule73_bg00001111_T12",
+      "metric": "signed_monomial_tv",
+      "nearest_cohort": "baseline_witness",
+      "nearest_label": "rule73_bg00111111_T12"
+    },
+    {
+      "cohort": "baseline_witness",
+      "distance": 0.7706309893627339,
+      "label": "rule73_bg00011001_T12",
+      "metric": "signed_monomial_tv",
+      "nearest_cohort": "baseline_control",
+      "nearest_label": "rule73_bg00111011_T12"
+    },
+    {
+      "cohort": "baseline_witness",
+      "distance": 0.3235003262143706,
+      "label": "rule73_bg00101101_T12",
+      "metric": "signed_monomial_tv",
+      "nearest_cohort": "baseline_witness",
+      "nearest_label": "rule73_bg00110101_T12"
+    },
+    {
+      "cohort": "baseline_witness",
+      "distance": 0.465975870873043,
+      "label": "rule73_bg00101111_T12",
+      "metric": "signed_monomial_tv",
+      "nearest_cohort": "baseline_witness",
+      "nearest_label": "rule73_bg00110101_T12"
+    },
+    {
+      "cohort": "baseline_witness",
+      "distance": 0.3235003262143706,
+      "label": "rule73_bg00110101_T12",
+      "metric": "signed_monomial_tv",
+      "nearest_cohort": "baseline_witness",
+      "nearest_label": "rule73_bg00101101_T12"
+    },
+    {
+      "cohort": "baseline_control",
+      "distance": 0.0,
+      "label": "rule73_bg00111011_T12",
+      "metric": "signed_monomial_tv",
+      "nearest_cohort": "baseline_control",
+      "nearest_label": "rule73_bg00111101_T12"
+    },
+    {
+      "cohort": "baseline_control",
+      "distance": 0.0,
+      "label": "rule73_bg00111101_T12",
+      "metric": "signed_monomial_tv",
+      "nearest_cohort": "baseline_control",
+      "nearest_label": "rule73_bg00111011_T12"
+    },
+    {
+      "cohort": "baseline_witness",
+      "distance": 0.574303587029132,
+      "label": "rule73_bg00111111_T12",
+      "metric": "signed_monomial_tv",
+      "nearest_cohort": "baseline_witness",
+      "nearest_label": "rule73_bg00001111_T12"
+    },
+    {
+      "cohort": "baseline_witness",
+      "distance": 0.34821060993620734,
+      "label": "rule73_bg00001111_T12",
+      "metric": "radial_monomial_tv",
+      "nearest_cohort": "baseline_witness",
+      "nearest_label": "rule73_bg00111111_T12"
+    },
+    {
+      "cohort": "baseline_witness",
+      "distance": 0.06982274750355008,
+      "label": "rule73_bg00011001_T12",
+      "metric": "radial_monomial_tv",
+      "nearest_cohort": "baseline_control",
+      "nearest_label": "rule73_bg00111011_T12"
+    },
+    {
+      "cohort": "baseline_witness",
+      "distance": 0.12556000490302105,
+      "label": "rule73_bg00101101_T12",
+      "metric": "radial_monomial_tv",
+      "nearest_cohort": "baseline_witness",
+      "nearest_label": "rule73_bg00110101_T12"
+    },
+    {
+      "cohort": "baseline_witness",
+      "distance": 0.217055315166084,
+      "label": "rule73_bg00101111_T12",
+      "metric": "radial_monomial_tv",
+      "nearest_cohort": "baseline_witness",
+      "nearest_label": "rule73_bg00101101_T12"
+    },
+    {
+      "cohort": "baseline_witness",
+      "distance": 0.12556000490302105,
+      "label": "rule73_bg00110101_T12",
+      "metric": "radial_monomial_tv",
+      "nearest_cohort": "baseline_witness",
+      "nearest_label": "rule73_bg00101101_T12"
+    },
+    {
+      "cohort": "baseline_control",
+      "distance": 0.0,
+      "label": "rule73_bg00111011_T12",
+      "metric": "radial_monomial_tv",
+      "nearest_cohort": "baseline_control",
+      "nearest_label": "rule73_bg00111101_T12"
+    },
+    {
+      "cohort": "baseline_control",
+      "distance": 0.0,
+      "label": "rule73_bg00111101_T12",
+      "metric": "radial_monomial_tv",
+      "nearest_cohort": "baseline_control",
+      "nearest_label": "rule73_bg00111011_T12"
+    },
+    {
+      "cohort": "baseline_witness",
+      "distance": 0.34821060993620734,
+      "label": "rule73_bg00111111_T12",
+      "metric": "radial_monomial_tv",
+      "nearest_cohort": "baseline_witness",
+      "nearest_label": "rule73_bg00001111_T12"
+    },
+    {
+      "cohort": "baseline_witness",
+      "distance": 0.4285714285714286,
+      "label": "rule73_bg00001111_T12",
+      "metric": "signed_degree_tv",
+      "nearest_cohort": "baseline_witness",
+      "nearest_label": "rule73_bg00101111_T12"
+    },
+    {
+      "cohort": "baseline_witness",
+      "distance": 0.7236842105263158,
+      "label": "rule73_bg00011001_T12",
+      "metric": "signed_degree_tv",
+      "nearest_cohort": "baseline_control",
+      "nearest_label": "rule73_bg00111011_T12"
+    },
+    {
+      "cohort": "baseline_witness",
+      "distance": 0.3314285714285714,
+      "label": "rule73_bg00101101_T12",
+      "metric": "signed_degree_tv",
+      "nearest_cohort": "baseline_witness",
+      "nearest_label": "rule73_bg00110101_T12"
+    },
+    {
+      "cohort": "baseline_witness",
+      "distance": 0.4285714285714286,
+      "label": "rule73_bg00101111_T12",
+      "metric": "signed_degree_tv",
+      "nearest_cohort": "baseline_witness",
+      "nearest_label": "rule73_bg00001111_T12"
+    },
+    {
+      "cohort": "baseline_witness",
+      "distance": 0.3314285714285714,
+      "label": "rule73_bg00110101_T12",
+      "metric": "signed_degree_tv",
+      "nearest_cohort": "baseline_witness",
+      "nearest_label": "rule73_bg00101101_T12"
+    },
+    {
+      "cohort": "baseline_control",
+      "distance": 0.0,
+      "label": "rule73_bg00111011_T12",
+      "metric": "signed_degree_tv",
+      "nearest_cohort": "baseline_control",
+      "nearest_label": "rule73_bg00111101_T12"
+    },
+    {
+      "cohort": "baseline_control",
+      "distance": 0.0,
+      "label": "rule73_bg00111101_T12",
+      "metric": "signed_degree_tv",
+      "nearest_cohort": "baseline_control",
+      "nearest_label": "rule73_bg00111011_T12"
+    },
+    {
+      "cohort": "baseline_witness",
+      "distance": 0.4915254237288136,
+      "label": "rule73_bg00111111_T12",
+      "metric": "signed_degree_tv",
+      "nearest_cohort": "baseline_witness",
+      "nearest_label": "rule73_bg00101101_T12"
+    },
+    {
+      "cohort": "baseline_witness",
+      "distance": 0.5,
+      "label": "rule73_bg00001111_T12",
+      "metric": "support_jaccard",
+      "nearest_cohort": "baseline_witness",
+      "nearest_label": "rule73_bg00101111_T12"
+    },
+    {
+      "cohort": "baseline_witness",
+      "distance": 0.8,
+      "label": "rule73_bg00011001_T12",
+      "metric": "support_jaccard",
+      "nearest_cohort": "baseline_control",
+      "nearest_label": "rule73_bg00111011_T12"
+    },
+    {
+      "cohort": "baseline_witness",
+      "distance": 0.5,
+      "label": "rule73_bg00101101_T12",
+      "metric": "support_jaccard",
+      "nearest_cohort": "baseline_witness",
+      "nearest_label": "rule73_bg00110101_T12"
+    },
+    {
+      "cohort": "baseline_witness",
+      "distance": 0.5,
+      "label": "rule73_bg00101111_T12",
+      "metric": "support_jaccard",
+      "nearest_cohort": "baseline_witness",
+      "nearest_label": "rule73_bg00001111_T12"
+    },
+    {
+      "cohort": "baseline_witness",
+      "distance": 0.5,
+      "label": "rule73_bg00110101_T12",
+      "metric": "support_jaccard",
+      "nearest_cohort": "baseline_witness",
+      "nearest_label": "rule73_bg00101101_T12"
+    },
+    {
+      "cohort": "baseline_control",
+      "distance": 0.0,
+      "label": "rule73_bg00111011_T12",
+      "metric": "support_jaccard",
+      "nearest_cohort": "baseline_control",
+      "nearest_label": "rule73_bg00111101_T12"
+    },
+    {
+      "cohort": "baseline_control",
+      "distance": 0.0,
+      "label": "rule73_bg00111101_T12",
+      "metric": "support_jaccard",
+      "nearest_cohort": "baseline_control",
+      "nearest_label": "rule73_bg00111011_T12"
+    },
+    {
+      "cohort": "baseline_witness",
+      "distance": 0.6428571428571428,
+      "label": "rule73_bg00111111_T12",
+      "metric": "support_jaccard",
+      "nearest_cohort": "baseline_witness",
+      "nearest_label": "rule73_bg00101101_T12"
+    }
+  ],
+  "pairwise": [
+    {
+      "left": "rule73_bg00001111_T12",
+      "left_cohort": "baseline_witness",
+      "radial_monomial_tv": 1.0,
+      "right": "rule73_bg00011001_T12",
+      "right_cohort": "baseline_witness",
+      "signed_degree_tv": 1.0,
+      "signed_monomial_tv": 1.0,
+      "support_jaccard": 1.0
+    },
+    {
+      "left": "rule73_bg00001111_T12",
+      "left_cohort": "baseline_witness",
+      "radial_monomial_tv": 0.5722088525190756,
+      "right": "rule73_bg00101101_T12",
+      "right_cohort": "baseline_witness",
+      "signed_degree_tv": 0.4857142857142857,
+      "signed_monomial_tv": 0.638325866691759,
+      "support_jaccard": 0.6428571428571428
+    },
+    {
+      "left": "rule73_bg00001111_T12",
+      "left_cohort": "baseline_witness",
+      "radial_monomial_tv": 0.7006866505334276,
+      "right": "rule73_bg00101111_T12",
+      "right_cohort": "baseline_witness",
+      "signed_degree_tv": 0.4285714285714286,
+      "signed_monomial_tv": 0.7006866505334276,
+      "support_jaccard": 0.5
+    },
+    {
+      "left": "rule73_bg00001111_T12",
+      "left_cohort": "baseline_witness",
+      "radial_monomial_tv": 0.6734332128236378,
+      "right": "rule73_bg00110101_T12",
+      "right_cohort": "baseline_witness",
+      "signed_degree_tv": 0.48,
+      "signed_monomial_tv": 0.7218214923279556,
+      "support_jaccard": 0.6428571428571428
+    },
+    {
+      "left": "rule73_bg00001111_T12",
+      "left_cohort": "baseline_witness",
+      "radial_monomial_tv": 1.0,
+      "right": "rule73_bg00111011_T12",
+      "right_cohort": "baseline_control",
+      "signed_degree_tv": 1.0,
+      "signed_monomial_tv": 1.0,
+      "support_jaccard": 1.0
+    },
+    {
+      "left": "rule73_bg00001111_T12",
+      "left_cohort": "baseline_witness",
+      "radial_monomial_tv": 1.0,
+      "right": "rule73_bg00111101_T12",
+      "right_cohort": "baseline_control",
+      "signed_degree_tv": 1.0,
+      "signed_monomial_tv": 1.0,
+      "support_jaccard": 1.0
+    },
+    {
+      "left": "rule73_bg00001111_T12",
+      "left_cohort": "baseline_witness",
+      "radial_monomial_tv": 0.34821060993620734,
+      "right": "rule73_bg00111111_T12",
+      "right_cohort": "baseline_witness",
+      "signed_degree_tv": 0.4971751412429378,
+      "signed_monomial_tv": 0.574303587029132,
+      "support_jaccard": 0.6666666666666667
+    },
+    {
+      "left": "rule73_bg00011001_T12",
+      "left_cohort": "baseline_witness",
+      "radial_monomial_tv": 1.0,
+      "right": "rule73_bg00101101_T12",
+      "right_cohort": "baseline_witness",
+      "signed_degree_tv": 1.0,
+      "signed_monomial_tv": 1.0,
+      "support_jaccard": 1.0
+    },
+    {
+      "left": "rule73_bg00011001_T12",
+      "left_cohort": "baseline_witness",
+      "radial_monomial_tv": 1.0,
+      "right": "rule73_bg00101111_T12",
+      "right_cohort": "baseline_witness",
+      "signed_degree_tv": 1.0,
+      "signed_monomial_tv": 1.0,
+      "support_jaccard": 1.0
+    },
+    {
+      "left": "rule73_bg00011001_T12",
+      "left_cohort": "baseline_witness",
+      "radial_monomial_tv": 1.0,
+      "right": "rule73_bg00110101_T12",
+      "right_cohort": "baseline_witness",
+      "signed_degree_tv": 1.0,
+      "signed_monomial_tv": 1.0,
+      "support_jaccard": 1.0
+    },
+    {
+      "left": "rule73_bg00011001_T12",
+      "left_cohort": "baseline_witness",
+      "radial_monomial_tv": 0.06982274750355008,
+      "right": "rule73_bg00111011_T12",
+      "right_cohort": "baseline_control",
+      "signed_degree_tv": 0.7236842105263158,
+      "signed_monomial_tv": 0.7706309893627339,
+      "support_jaccard": 0.8
+    },
+    {
+      "left": "rule73_bg00011001_T12",
+      "left_cohort": "baseline_witness",
+      "radial_monomial_tv": 0.06982274750355008,
+      "right": "rule73_bg00111101_T12",
+      "right_cohort": "baseline_control",
+      "signed_degree_tv": 0.7236842105263158,
+      "signed_monomial_tv": 0.7706309893627339,
+      "support_jaccard": 0.8
+    },
+    {
+      "left": "rule73_bg00011001_T12",
+      "left_cohort": "baseline_witness",
+      "radial_monomial_tv": 1.0,
+      "right": "rule73_bg00111111_T12",
+      "right_cohort": "baseline_witness",
+      "signed_degree_tv": 1.0,
+      "signed_monomial_tv": 1.0,
+      "support_jaccard": 1.0
+    },
+    {
+      "left": "rule73_bg00101101_T12",
+      "left_cohort": "baseline_witness",
+      "radial_monomial_tv": 0.217055315166084,
+      "right": "rule73_bg00101111_T12",
+      "right_cohort": "baseline_witness",
+      "signed_degree_tv": 0.6857142857142857,
+      "signed_monomial_tv": 0.7061561224583711,
+      "support_jaccard": 0.7857142857142857
+    },
+    {
+      "left": "rule73_bg00101101_T12",
+      "left_cohort": "baseline_witness",
+      "radial_monomial_tv": 0.12556000490302105,
+      "right": "rule73_bg00110101_T12",
+      "right_cohort": "baseline_witness",
+      "signed_degree_tv": 0.3314285714285714,
+      "signed_monomial_tv": 0.3235003262143706,
+      "support_jaccard": 0.5
+    },
+    {
+      "left": "rule73_bg00101101_T12",
+      "left_cohort": "baseline_witness",
+      "radial_monomial_tv": 1.0,
+      "right": "rule73_bg00111011_T12",
+      "right_cohort": "baseline_control",
+      "signed_degree_tv": 1.0,
+      "signed_monomial_tv": 1.0,
+      "support_jaccard": 1.0
+    },
+    {
+      "left": "rule73_bg00101101_T12",
+      "left_cohort": "baseline_witness",
+      "radial_monomial_tv": 1.0,
+      "right": "rule73_bg00111101_T12",
+      "right_cohort": "baseline_control",
+      "signed_degree_tv": 1.0,
+      "signed_monomial_tv": 1.0,
+      "support_jaccard": 1.0
+    },
+    {
+      "left": "rule73_bg00101101_T12",
+      "left_cohort": "baseline_witness",
+      "radial_monomial_tv": 0.5707925831918563,
+      "right": "rule73_bg00111111_T12",
+      "right_cohort": "baseline_witness",
+      "signed_degree_tv": 0.4915254237288136,
+      "signed_monomial_tv": 0.8598631077452245,
+      "support_jaccard": 0.6428571428571428
+    },
+    {
+      "left": "rule73_bg00101111_T12",
+      "left_cohort": "baseline_witness",
+      "radial_monomial_tv": 0.30181484963254485,
+      "right": "rule73_bg00110101_T12",
+      "right_cohort": "baseline_witness",
+      "signed_degree_tv": 0.5485714285714286,
+      "signed_monomial_tv": 0.465975870873043,
+      "support_jaccard": 0.6923076923076923
+    },
+    {
+      "left": "rule73_bg00101111_T12",
+      "left_cohort": "baseline_witness",
+      "radial_monomial_tv": 1.0,
+      "right": "rule73_bg00111011_T12",
+      "right_cohort": "baseline_control",
+      "signed_degree_tv": 1.0,
+      "signed_monomial_tv": 1.0,
+      "support_jaccard": 1.0
+    },
+    {
+      "left": "rule73_bg00101111_T12",
+      "left_cohort": "baseline_witness",
+      "radial_monomial_tv": 1.0,
+      "right": "rule73_bg00111101_T12",
+      "right_cohort": "baseline_control",
+      "signed_degree_tv": 1.0,
+      "signed_monomial_tv": 1.0,
+      "support_jaccard": 1.0
+    },
+    {
+      "left": "rule73_bg00101111_T12",
+      "left_cohort": "baseline_witness",
+      "radial_monomial_tv": 0.7042515910956428,
+      "right": "rule73_bg00111111_T12",
+      "right_cohort": "baseline_witness",
+      "signed_degree_tv": 0.7909604519774012,
+      "signed_monomial_tv": 0.7393776730537603,
+      "support_jaccard": 0.875
+    },
+    {
+      "left": "rule73_bg00110101_T12",
+      "left_cohort": "baseline_witness",
+      "radial_monomial_tv": 1.0,
+      "right": "rule73_bg00111011_T12",
+      "right_cohort": "baseline_control",
+      "signed_degree_tv": 1.0,
+      "signed_monomial_tv": 1.0,
+      "support_jaccard": 1.0
+    },
+    {
+      "left": "rule73_bg00110101_T12",
+      "left_cohort": "baseline_witness",
+      "radial_monomial_tv": 1.0,
+      "right": "rule73_bg00111101_T12",
+      "right_cohort": "baseline_control",
+      "signed_degree_tv": 1.0,
+      "signed_monomial_tv": 1.0,
+      "support_jaccard": 1.0
+    },
+    {
+      "left": "rule73_bg00110101_T12",
+      "left_cohort": "baseline_witness",
+      "radial_monomial_tv": 0.6726933523640709,
+      "right": "rule73_bg00111111_T12",
+      "right_cohort": "baseline_witness",
+      "signed_degree_tv": 0.5706214689265536,
+      "signed_monomial_tv": 0.7068573891190952,
+      "support_jaccard": 0.7333333333333334
+    },
+    {
+      "left": "rule73_bg00111011_T12",
+      "left_cohort": "baseline_control",
+      "radial_monomial_tv": 0.0,
+      "right": "rule73_bg00111101_T12",
+      "right_cohort": "baseline_control",
+      "signed_degree_tv": 0.0,
+      "signed_monomial_tv": 0.0,
+      "support_jaccard": 0.0
+    },
+    {
+      "left": "rule73_bg00111011_T12",
+      "left_cohort": "baseline_control",
+      "radial_monomial_tv": 1.0,
+      "right": "rule73_bg00111111_T12",
+      "right_cohort": "baseline_witness",
+      "signed_degree_tv": 1.0,
+      "signed_monomial_tv": 1.0,
+      "support_jaccard": 1.0
+    },
+    {
+      "left": "rule73_bg00111101_T12",
+      "left_cohort": "baseline_control",
+      "radial_monomial_tv": 1.0,
+      "right": "rule73_bg00111111_T12",
+      "right_cohort": "baseline_witness",
+      "signed_degree_tv": 1.0,
+      "signed_monomial_tv": 1.0,
+      "support_jaccard": 1.0
+    }
+  ],
+  "phase": 81,
+  "preflight": {
+    "case_count": 8,
+    "control_count": 2,
+    "criterion": "controls must be mutual and strictly separated nearest neighbors under both signed and radial monomial TV",
+    "diagnostic_metrics": [
+      "signed_degree_tv",
+      "support_jaccard"
+    ],
+    "horizon": 11,
+    "measurement_policy": "reuse Fase 80 checkpoint when available; otherwise regenerate the eight h=11 measurements deterministically",
+    "separation_metrics": [
+      "signed_monomial_tv",
+      "radial_monomial_tv"
+    ],
+    "source": "C:\\Users\\PC\\Documents\\Codex\\2026-05-22\\te-voy-a-dar-un-peque\\outputs\\periodic_backgrounds\\rule73_len8_horizon_response_results.json",
+    "threshold_fitting": false,
+    "witness_count": 6
+  },
+  "profiles": [
+    {
+      "active_output_count": 10,
+      "active_span": 20,
+      "active_support_x2": [
+        -19,
+        -15,
+        -7,
+        -3,
+        3,
+        9,
+        11,
+        13,
+        15,
+        19
+      ],
+      "background": "00001111",
+      "center_monomial_mass": 0.0,
+      "center_x2": 25,
+      "cohort": "baseline_witness",
+      "horizon": 11,
+      "label": "rule73_bg00001111_T12",
+      "max_monomial_coordinates_x2": [
+        -3
+      ],
+      "measurement_sha256": "7f37998426732062ab27804d368f72678cf63aeb497da08d40eb91b0262f8d1f",
+      "outputs": [
+        {
+          "coordinate_x2": -19,
+          "degree": 15,
+          "distance": 9.5,
+          "monomial_count": 11507,
+          "output_index": 3
+        },
+        {
+          "coordinate_x2": -15,
+          "degree": 16,
+          "distance": 7.5,
+          "monomial_count": 64384,
+          "output_index": 5
+        },
+        {
+          "coordinate_x2": -7,
+          "degree": 20,
+          "distance": 3.5,
+          "monomial_count": 1026451,
+          "output_index": 9
+        },
+        {
+          "coordinate_x2": -3,
+          "degree": 23,
+          "distance": 1.5,
+          "monomial_count": 4431863,
+          "output_index": 11
+        },
+        {
+          "coordinate_x2": 3,
+          "degree": 21,
+          "distance": 1.5,
+          "monomial_count": 2287515,
+          "output_index": 14
+        },
+        {
+          "coordinate_x2": 9,
+          "degree": 19,
+          "distance": 4.5,
+          "monomial_count": 267028,
+          "output_index": 17
+        },
+        {
+          "coordinate_x2": 11,
+          "degree": 17,
+          "distance": 5.5,
+          "monomial_count": 133703,
+          "output_index": 18
+        },
+        {
+          "coordinate_x2": 13,
+          "degree": 16,
+          "distance": 6.5,
+          "monomial_count": 69300,
+          "output_index": 19
+        },
+        {
+          "coordinate_x2": 15,
+          "degree": 15,
+          "distance": 7.5,
+          "monomial_count": 27450,
+          "output_index": 20
+        },
+        {
+          "coordinate_x2": 19,
+          "degree": 13,
+          "distance": 9.5,
+          "monomial_count": 6965,
+          "output_index": 22
+        }
+      ],
+      "radial_monomial_profile": {
+        "11": 0.01605817131198201,
+        "13": 0.008323158582233408,
+        "15": 0.011029566309391382,
+        "19": 0.0022185481288746825,
+        "3": 0.8070194612982735,
+        "7": 0.12328015079209326,
+        "9": 0.03207094357715184
+      },
+      "signed_degree_profile": {
+        "-15": 0.09142857142857143,
+        "-19": 0.08571428571428572,
+        "-3": 0.13142857142857142,
+        "-7": 0.11428571428571428,
+        "11": 0.09714285714285714,
+        "13": 0.09142857142857143,
+        "15": 0.08571428571428572,
+        "19": 0.07428571428571429,
+        "3": 0.12,
+        "9": 0.10857142857142857
+      },
+      "signed_monomial_profile": {
+        "-15": 0.0077327307670781486,
+        "-19": 0.0013820286552057694,
+        "-3": 0.5322813645560274,
+        "-7": 0.12328015079209326,
+        "11": 0.01605817131198201,
+        "13": 0.008323158582233408,
+        "15": 0.0032968355423132326,
+        "19": 0.0008365194736689132,
+        "3": 0.2747380967422461,
+        "9": 0.03207094357715184
+      },
+      "symmetry_error": 0.44225709648354355,
+      "weighted_radial_distance": 2.032547393362083,
+      "word": "00000001"
+    },
+    {
+      "active_output_count": 8,
+      "active_span": 17,
+      "active_support_x2": [
+        -16,
+        -6,
+        -4,
+        -2,
+        6,
+        10,
+        12,
+        16
+      ],
+      "background": "00011001",
+      "center_monomial_mass": 0.0,
+      "center_x2": 24,
+      "cohort": "baseline_witness",
+      "horizon": 11,
+      "label": "rule73_bg00011001_T12",
+      "max_monomial_coordinates_x2": [
+        -2
+      ],
+      "measurement_sha256": "0db0ade91e1a89f31b5bb182efa2ac648ad12f5b47b715491fc5ee8d088a77c1",
+      "outputs": [
+        {
+          "coordinate_x2": -16,
+          "degree": 15,
+          "distance": 8.0,
+          "monomial_count": 27451,
+          "output_index": 4
+        },
+        {
+          "coordinate_x2": -6,
+          "degree": 21,
+          "distance": 3.0,
+          "monomial_count": 1067778,
+          "output_index": 9
+        },
+        {
+          "coordinate_x2": -4,
+          "degree": 21,
+          "distance": 2.0,
+          "monomial_count": 2287515,
+          "output_index": 10
+        },
+        {
+          "coordinate_x2": -2,
+          "degree": 23,
+          "distance": 1.0,
+          "monomial_count": 4431864,
+          "output_index": 11
+        },
+        {
+          "coordinate_x2": 6,
+          "degree": 21,
+          "distance": 3.0,
+          "monomial_count": 1067778,
+          "output_index": 15
+        },
+        {
+          "coordinate_x2": 10,
+          "degree": 19,
+          "distance": 5.0,
+          "monomial_count": 267028,
+          "output_index": 17
+        },
+        {
+          "coordinate_x2": 12,
+          "degree": 17,
+          "distance": 6.0,
+          "monomial_count": 133704,
+          "output_index": 18
+        },
+        {
+          "coordinate_x2": 16,
+          "degree": 15,
+          "distance": 8.0,
+          "monomial_count": 27451,
+          "output_index": 20
+        }
+      ],
+      "radial_monomial_profile": {
+        "10": 0.028680094632239986,
+        "12": 0.01436045423217421,
+        "16": 0.005896739501098161,
+        "2": 0.4760035611142563,
+        "4": 0.24569013988296526,
+        "6": 0.2293690106372661
+      },
+      "signed_degree_profile": {
+        "-16": 0.09868421052631579,
+        "-2": 0.1513157894736842,
+        "-4": 0.13815789473684212,
+        "-6": 0.13815789473684212,
+        "10": 0.125,
+        "12": 0.1118421052631579,
+        "16": 0.09868421052631579,
+        "6": 0.13815789473684212
+      },
+      "signed_monomial_profile": {
+        "-16": 0.0029483697505490805,
+        "-2": 0.4760035611142563,
+        "-4": 0.24569013988296526,
+        "-6": 0.11468450531863306,
+        "10": 0.028680094632239986,
+        "12": 0.01436045423217421,
+        "16": 0.0029483697505490805,
+        "6": 0.11468450531863306
+      },
+      "symmetry_error": 0.7647342498616357,
+      "weighted_radial_distance": 1.9322279873550157,
+      "word": "1001100"
+    },
+    {
+      "active_output_count": 9,
+      "active_span": 16,
+      "active_support_x2": [
+        -15,
+        -9,
+        -7,
+        -3,
+        -1,
+        1,
+        7,
+        13,
+        15
+      ],
+      "background": "00101101",
+      "center_monomial_mass": 0.0,
+      "center_x2": 25,
+      "cohort": "baseline_witness",
+      "horizon": 11,
+      "label": "rule73_bg00101101_T12",
+      "max_monomial_coordinates_x2": [
+        -3,
+        -1,
+        1
+      ],
+      "measurement_sha256": "39f99d2b46ce8a57725e5ffc0f67109b01403892e3465952e872824cd5382931",
+      "outputs": [
+        {
+          "coordinate_x2": -15,
+          "degree": 16,
+          "distance": 7.5,
+          "monomial_count": 64384,
+          "output_index": 5
+        },
+        {
+          "coordinate_x2": -9,
+          "degree": 19,
+          "distance": 4.5,
+          "monomial_count": 525166,
+          "output_index": 8
+        },
+        {
+          "coordinate_x2": -7,
+          "degree": 20,
+          "distance": 3.5,
+          "monomial_count": 1026451,
+          "output_index": 9
+        },
+        {
+          "coordinate_x2": -3,
+          "degree": 23,
+          "distance": 1.5,
+          "monomial_count": 4431864,
+          "output_index": 11
+        },
+        {
+          "coordinate_x2": -1,
+          "degree": 23,
+          "distance": 0.5,
+          "monomial_count": 4431864,
+          "output_index": 12
+        },
+        {
+          "coordinate_x2": 1,
+          "degree": 23,
+          "distance": 0.5,
+          "monomial_count": 4431864,
+          "output_index": 13
+        },
+        {
+          "coordinate_x2": 7,
+          "degree": 20,
+          "distance": 3.5,
+          "monomial_count": 528985,
+          "output_index": 16
+        },
+        {
+          "coordinate_x2": 13,
+          "degree": 16,
+          "distance": 6.5,
+          "monomial_count": 69301,
+          "output_index": 19
+        },
+        {
+          "coordinate_x2": 15,
+          "degree": 15,
+          "distance": 7.5,
+          "monomial_count": 27450,
+          "output_index": 20
+        }
+      ],
+      "radial_monomial_profile": {
+        "1": 0.5704795206434774,
+        "13": 0.004460290439881913,
+        "15": 0.0059105397073074785,
+        "3": 0.2852397603217387,
+        "7": 0.10010961343484456,
+        "9": 0.03380027545274995
+      },
+      "signed_degree_profile": {
+        "-1": 0.13142857142857142,
+        "-15": 0.09142857142857143,
+        "-3": 0.13142857142857142,
+        "-7": 0.11428571428571428,
+        "-9": 0.10857142857142857,
+        "1": 0.13142857142857142,
+        "13": 0.09142857142857143,
+        "15": 0.08571428571428572,
+        "7": 0.11428571428571428
+      },
+      "signed_monomial_profile": {
+        "-1": 0.2852397603217387,
+        "-15": 0.004143826780008327,
+        "-3": 0.2852397603217387,
+        "-7": 0.06606354283931298,
+        "-9": 0.03380027545274995,
+        "1": 0.2852397603217387,
+        "13": 0.004460290439881913,
+        "15": 0.0017667129272991517,
+        "7": 0.03404607059553157
+      },
+      "symmetry_error": 0.3578949123108611,
+      "weighted_radial_distance": 1.288905223027716,
+      "word": "01110001"
+    },
+    {
+      "active_output_count": 8,
+      "active_span": 20,
+      "active_support_x2": [
+        -19,
+        -15,
+        -5,
+        -1,
+        3,
+        9,
+        13,
+        19
+      ],
+      "background": "00101111",
+      "center_monomial_mass": 0.0,
+      "center_x2": 25,
+      "cohort": "baseline_witness",
+      "horizon": 11,
+      "label": "rule73_bg00101111_T12",
+      "max_monomial_coordinates_x2": [
+        -1
+      ],
+      "measurement_sha256": "3f2eff1af11e41695e884b27f6e87df3072a0a56572b1d22efd77a9813b0f8fb",
+      "outputs": [
+        {
+          "coordinate_x2": -19,
+          "degree": 15,
+          "distance": 9.5,
+          "monomial_count": 11507,
+          "output_index": 3
+        },
+        {
+          "coordinate_x2": -15,
+          "degree": 16,
+          "distance": 7.5,
+          "monomial_count": 64384,
+          "output_index": 5
+        },
+        {
+          "coordinate_x2": -5,
+          "degree": 22,
+          "distance": 2.5,
+          "monomial_count": 1904465,
+          "output_index": 10
+        },
+        {
+          "coordinate_x2": -1,
+          "degree": 23,
+          "distance": 0.5,
+          "monomial_count": 4431864,
+          "output_index": 12
+        },
+        {
+          "coordinate_x2": 3,
+          "degree": 21,
+          "distance": 1.5,
+          "monomial_count": 2287515,
+          "output_index": 14
+        },
+        {
+          "coordinate_x2": 9,
+          "degree": 19,
+          "distance": 4.5,
+          "monomial_count": 267028,
+          "output_index": 17
+        },
+        {
+          "coordinate_x2": 13,
+          "degree": 16,
+          "distance": 6.5,
+          "monomial_count": 69300,
+          "output_index": 19
+        },
+        {
+          "coordinate_x2": 19,
+          "degree": 13,
+          "distance": 9.5,
+          "monomial_count": 6965,
+          "output_index": 22
+        }
+      ],
+      "radial_monomial_profile": {
+        "1": 0.4900862852575487,
+        "13": 0.007663362316250707,
+        "15": 0.007119739096240772,
+        "19": 0.0020426786249030746,
+        "3": 0.25295896462998896,
+        "5": 0.21060036527587883,
+        "9": 0.029528604799188944
+      },
+      "signed_degree_profile": {
+        "-1": 0.15862068965517243,
+        "-15": 0.1103448275862069,
+        "-19": 0.10344827586206896,
+        "-5": 0.15172413793103448,
+        "13": 0.1103448275862069,
+        "19": 0.0896551724137931,
+        "3": 0.14482758620689656,
+        "9": 0.1310344827586207
+      },
+      "signed_monomial_profile": {
+        "-1": 0.4900862852575487,
+        "-15": 0.007119739096240772,
+        "-19": 0.0012724720082697963,
+        "-5": 0.21060036527587883,
+        "13": 0.007663362316250707,
+        "19": 0.0007702066166332781,
+        "3": 0.25295896462998896,
+        "9": 0.029528604799188944
+      },
+      "symmetry_error": 0.9984595867667334,
+      "weighted_radial_distance": 1.4064765695738197,
+      "word": "01000101"
+    },
+    {
+      "active_output_count": 9,
+      "active_span": 16,
+      "active_support_x2": [
+        -15,
+        -13,
+        -7,
+        -1,
+        1,
+        3,
+        7,
+        9,
+        15
+      ],
+      "background": "00110101",
+      "center_monomial_mass": 0.0,
+      "center_x2": 25,
+      "cohort": "baseline_witness",
+      "horizon": 11,
+      "label": "rule73_bg00110101_T12",
+      "max_monomial_coordinates_x2": [
+        -1,
+        1
+      ],
+      "measurement_sha256": "bb1f8b25f33cfcb83b2bec157fb4d746f0c824082142a490d529f35bda156640",
+      "outputs": [
+        {
+          "coordinate_x2": -15,
+          "degree": 16,
+          "distance": 7.5,
+          "monomial_count": 64384,
+          "output_index": 5
+        },
+        {
+          "coordinate_x2": -13,
+          "degree": 18,
+          "distance": 6.5,
+          "monomial_count": 137590,
+          "output_index": 6
+        },
+        {
+          "coordinate_x2": -7,
+          "degree": 20,
+          "distance": 3.5,
+          "monomial_count": 1026451,
+          "output_index": 9
+        },
+        {
+          "coordinate_x2": -1,
+          "degree": 23,
+          "distance": 0.5,
+          "monomial_count": 4431864,
+          "output_index": 12
+        },
+        {
+          "coordinate_x2": 1,
+          "degree": 23,
+          "distance": 0.5,
+          "monomial_count": 4431864,
+          "output_index": 13
+        },
+        {
+          "coordinate_x2": 3,
+          "degree": 21,
+          "distance": 1.5,
+          "monomial_count": 2287514,
+          "output_index": 14
+        },
+        {
+          "coordinate_x2": 7,
+          "degree": 20,
+          "distance": 3.5,
+          "monomial_count": 528985,
+          "output_index": 16
+        },
+        {
+          "coordinate_x2": 9,
+          "degree": 19,
+          "distance": 4.5,
+          "monomial_count": 267028,
+          "output_index": 17
+        },
+        {
+          "coordinate_x2": 15,
+          "degree": 15,
+          "distance": 7.5,
+          "monomial_count": 27450,
+          "output_index": 20
+        }
+      ],
+      "radial_monomial_profile": {
+        "1": 0.6713353576008113,
+        "13": 0.01042101380505986,
+        "15": 0.006955471922188148,
+        "3": 0.1732554326133273,
+        "7": 0.11780812580047306,
+        "9": 0.020224598258140304
+      },
+      "signed_degree_profile": {
+        "-1": 0.13142857142857142,
+        "-13": 0.10285714285714286,
+        "-15": 0.09142857142857143,
+        "-7": 0.11428571428571428,
+        "1": 0.13142857142857142,
+        "15": 0.08571428571428572,
+        "3": 0.12,
+        "7": 0.11428571428571428,
+        "9": 0.10857142857142857
+      },
+      "signed_monomial_profile": {
+        "-1": 0.33566767880040566,
+        "-13": 0.01042101380505986,
+        "-15": 0.004876419455083757,
+        "-7": 0.07774300487838869,
+        "1": 0.33566767880040566,
+        "15": 0.0020790524671043913,
+        "3": 0.1732554326133273,
+        "7": 0.040065120922084384,
+        "9": 0.020224598258140304
+      },
+      "symmetry_error": 0.24437629562081112,
+      "weighted_radial_distance": 1.2187925893329838,
+      "word": "10001110"
+    },
+    {
+      "active_output_count": 4,
+      "active_span": 7,
+      "active_support_x2": [
+        -6,
+        2,
+        4,
+        6
+      ],
+      "background": "00111011",
+      "center_monomial_mass": 0.0,
+      "center_x2": 24,
+      "cohort": "baseline_control",
+      "horizon": 11,
+      "label": "rule73_bg00111011_T12",
+      "max_monomial_coordinates_x2": [
+        2
+      ],
+      "measurement_sha256": "30302195c4644df305c155c8846a3bc34b4f05463790f0a679c537ccb0c0a1b3",
+      "outputs": [
+        {
+          "coordinate_x2": -6,
+          "degree": 21,
+          "distance": 3.0,
+          "monomial_count": 1067658,
+          "output_index": 9
+        },
+        {
+          "coordinate_x2": 2,
+          "degree": 23,
+          "distance": 1.0,
+          "monomial_count": 4431863,
+          "output_index": 13
+        },
+        {
+          "coordinate_x2": 4,
+          "degree": 22,
+          "distance": 2.0,
+          "monomial_count": 1904465,
+          "output_index": 14
+        },
+        {
+          "coordinate_x2": 6,
+          "degree": 21,
+          "distance": 3.0,
+          "monomial_count": 1067657,
+          "output_index": 15
+        }
+      ],
+      "radial_monomial_profile": {
+        "2": 0.5231409066694619,
+        "4": 0.22480468074492752,
+        "6": 0.25205441258561057
+      },
+      "signed_degree_profile": {
+        "-6": 0.2413793103448276,
+        "2": 0.26436781609195403,
+        "4": 0.25287356321839083,
+        "6": 0.2413793103448276
+      },
+      "signed_monomial_profile": {
+        "-6": 0.1260272653132338,
+        "2": 0.5231409066694619,
+        "4": 0.22480468074492752,
+        "6": 0.1260271472723768
+      },
+      "symmetry_error": 0.7479457054552464,
+      "weighted_radial_distance": 1.7289135059161487,
+      "word": "011"
+    },
+    {
+      "active_output_count": 4,
+      "active_span": 7,
+      "active_support_x2": [
+        -6,
+        2,
+        4,
+        6
+      ],
+      "background": "00111101",
+      "center_monomial_mass": 0.0,
+      "center_x2": 24,
+      "cohort": "baseline_control",
+      "horizon": 11,
+      "label": "rule73_bg00111101_T12",
+      "max_monomial_coordinates_x2": [
+        2
+      ],
+      "measurement_sha256": "c1b224c972dfb4c3c24decb8c01794f12cf8989c015bb7e2607fb44a86235a59",
+      "outputs": [
+        {
+          "coordinate_x2": -6,
+          "degree": 21,
+          "distance": 3.0,
+          "monomial_count": 1067658,
+          "output_index": 9
+        },
+        {
+          "coordinate_x2": 2,
+          "degree": 23,
+          "distance": 1.0,
+          "monomial_count": 4431863,
+          "output_index": 13
+        },
+        {
+          "coordinate_x2": 4,
+          "degree": 22,
+          "distance": 2.0,
+          "monomial_count": 1904465,
+          "output_index": 14
+        },
+        {
+          "coordinate_x2": 6,
+          "degree": 21,
+          "distance": 3.0,
+          "monomial_count": 1067657,
+          "output_index": 15
+        }
+      ],
+      "radial_monomial_profile": {
+        "2": 0.5231409066694619,
+        "4": 0.22480468074492752,
+        "6": 0.25205441258561057
+      },
+      "signed_degree_profile": {
+        "-6": 0.2413793103448276,
+        "2": 0.26436781609195403,
+        "4": 0.25287356321839083,
+        "6": 0.2413793103448276
+      },
+      "signed_monomial_profile": {
+        "-6": 0.1260272653132338,
+        "2": 0.5231409066694619,
+        "4": 0.22480468074492752,
+        "6": 0.1260271472723768
+      },
+      "symmetry_error": 0.7479457054552464,
+      "weighted_radial_distance": 1.7289135059161487,
+      "word": "101"
+    },
+    {
+      "active_output_count": 10,
+      "active_span": 18,
+      "active_support_x2": [
+        -17,
+        -11,
+        -9,
+        -7,
+        3,
+        7,
+        11,
+        13,
+        15,
+        17
+      ],
+      "background": "00111111",
+      "center_monomial_mass": 0.0,
+      "center_x2": 25,
+      "cohort": "baseline_witness",
+      "horizon": 11,
+      "label": "rule73_bg00111111_T12",
+      "max_monomial_coordinates_x2": [
+        3
+      ],
+      "measurement_sha256": "7a027db51387efbf21d7291e102eb7e5d9510f6f67c8df92c233dcaccec75bd1",
+      "outputs": [
+        {
+          "coordinate_x2": -17,
+          "degree": 16,
+          "distance": 8.5,
+          "monomial_count": 33910,
+          "output_index": 4
+        },
+        {
+          "coordinate_x2": -11,
+          "degree": 18,
+          "distance": 5.5,
+          "monomial_count": 255568,
+          "output_index": 7
+        },
+        {
+          "coordinate_x2": -9,
+          "degree": 19,
+          "distance": 4.5,
+          "monomial_count": 525166,
+          "output_index": 8
+        },
+        {
+          "coordinate_x2": -7,
+          "degree": 20,
+          "distance": 3.5,
+          "monomial_count": 1026451,
+          "output_index": 9
+        },
+        {
+          "coordinate_x2": 3,
+          "degree": 21,
+          "distance": 1.5,
+          "monomial_count": 2287515,
+          "output_index": 14
+        },
+        {
+          "coordinate_x2": 7,
+          "degree": 20,
+          "distance": 3.5,
+          "monomial_count": 528985,
+          "output_index": 16
+        },
+        {
+          "coordinate_x2": 11,
+          "degree": 17,
+          "distance": 5.5,
+          "monomial_count": 133703,
+          "output_index": 18
+        },
+        {
+          "coordinate_x2": 13,
+          "degree": 16,
+          "distance": 6.5,
+          "monomial_count": 69300,
+          "output_index": 19
+        },
+        {
+          "coordinate_x2": 15,
+          "degree": 15,
+          "distance": 7.5,
+          "monomial_count": 27450,
+          "output_index": 20
+        },
+        {
+          "coordinate_x2": 17,
+          "degree": 15,
+          "distance": 8.5,
+          "monomial_count": 15947,
+          "output_index": 21
+        }
+      ],
+      "radial_monomial_profile": {
+        "11": 0.07937834357498325,
+        "13": 0.01413133577827873,
+        "15": 0.005597477158928588,
+        "17": 0.010166609060572044,
+        "3": 0.4664594886414036,
+        "7": 0.3171773217550181,
+        "9": 0.10708942403081569
+      },
+      "signed_degree_profile": {
+        "-11": 0.1016949152542373,
+        "-17": 0.0903954802259887,
+        "-7": 0.11299435028248588,
+        "-9": 0.10734463276836158,
+        "11": 0.096045197740113,
+        "13": 0.0903954802259887,
+        "15": 0.0847457627118644,
+        "17": 0.0847457627118644,
+        "3": 0.11864406779661017,
+        "7": 0.11299435028248588
+      },
+      "signed_monomial_profile": {
+        "-11": 0.05211424563034832,
+        "-17": 0.006914770508534368,
+        "-7": 0.20930914489105312,
+        "-9": 0.10708942403081569,
+        "11": 0.027264097944634934,
+        "13": 0.01413133577827873,
+        "15": 0.005597477158928588,
+        "17": 0.0032518385520376755,
+        "3": 0.4664594886414036,
+        "7": 0.10786817686396499
+      },
+      "symmetry_error": 0.7232317732787248,
+      "weighted_radial_distance": 2.948544095171386,
+      "word": "00011101"
+    }
+  ],
+  "separation_tests": [
+    {
+      "control_control_distance": 0.0,
+      "control_pair": [
+        "rule73_bg00111011_T12",
+        "rule73_bg00111101_T12"
+      ],
+      "metric": "signed_monomial_tv",
+      "mutual_nearest_and_strictly_separated": true,
+      "nearest_witness_by_control": {
+        "rule73_bg00111011_T12": {
+          "distance": 0.7706309893627339,
+          "label": "rule73_bg00011001_T12"
+        },
+        "rule73_bg00111101_T12": {
+          "distance": 0.7706309893627339,
+          "label": "rule73_bg00011001_T12"
+        }
+      }
+    },
+    {
+      "control_control_distance": 0.0,
+      "control_pair": [
+        "rule73_bg00111011_T12",
+        "rule73_bg00111101_T12"
+      ],
+      "metric": "radial_monomial_tv",
+      "mutual_nearest_and_strictly_separated": true,
+      "nearest_witness_by_control": {
+        "rule73_bg00111011_T12": {
+          "distance": 0.06982274750355008,
+          "label": "rule73_bg00011001_T12"
+        },
+        "rule73_bg00111101_T12": {
+          "distance": 0.06982274750355008,
+          "label": "rule73_bg00011001_T12"
+        }
+      }
+    }
+  ],
+  "status": "H11_CONTROL_GEOMETRY_CLUSTER_FOUND",
+  "summary": {
+    "case_count": 8,
+    "concrete_mismatch_count": 0,
+    "control_count": 2,
+    "control_measurements_distinct": true,
+    "control_pair_distances": {
+      "radial_monomial_tv": 0.0,
+      "signed_degree_tv": 0.0,
+      "signed_monomial_tv": 0.0,
+      "support_jaccard": 0.0
+    },
+    "pair_count": 28,
+    "separation_metrics_passed": [
+      "signed_monomial_tv",
+      "radial_monomial_tv"
+    ],
+    "witness_count": 6
+  },
+  "verdict_reason": "The two h=11 controls form a strictly separated mutual pair under both predeclared monomial-geometry distances."
+}
