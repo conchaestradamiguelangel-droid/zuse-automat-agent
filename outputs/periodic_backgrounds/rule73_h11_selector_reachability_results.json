@@ -1,0 +1,461 @@
+{
+  "all_phase_invariants": [
+    {
+      "coefficient_mask": 129,
+      "global_bits": [
+        7,
+        18
+      ],
+      "parity": 0,
+      "subcube_indices": [
+        0,
+        7
+      ]
+    }
+  ],
+  "all_phase_reached_masks": [
+    0,
+    16,
+    28,
+    68,
+    72,
+    108,
+    112,
+    120,
+    133,
+    145,
+    199,
+    229,
+    231,
+    237,
+    239,
+    241,
+    255
+  ],
+  "fixed_phase_invariants": [
+    {
+      "coefficient_mask": 3,
+      "global_bits": [
+        7,
+        9
+      ],
+      "parity": 0,
+      "subcube_indices": [
+        0,
+        1
+      ]
+    },
+    {
+      "coefficient_mask": 40,
+      "global_bits": [
+        11,
+        13
+      ],
+      "parity": 0,
+      "subcube_indices": [
+        3,
+        5
+      ]
+    },
+    {
+      "coefficient_mask": 129,
+      "global_bits": [
+        7,
+        18
+      ],
+      "parity": 0,
+      "subcube_indices": [
+        0,
+        7
+      ]
+    }
+  ],
+  "fixed_phase_reached_masks": [
+    0,
+    68,
+    108,
+    120,
+    199,
+    255
+  ],
+  "phase": 87,
+  "preflight": {
+    "backgrounds": [
+      "00110111",
+      "00111011",
+      "00111101",
+      "01101111"
+    ],
+    "burn_in": 80,
+    "gates": [
+      "bounded post-burn occurrence",
+      "t=80 occurrence",
+      "exact reference defect operator",
+      "stationary T=12 reference-operator basin"
+    ],
+    "ic_policy": "all non-zero centered binary words length 1..8",
+    "last_operator_start": 289,
+    "postburn_times": [
+      80,
+      289
+    ],
+    "processed_run_target": 2008,
+    "rule": 73,
+    "target_count": 9,
+    "threshold_fitting": false
+  },
+  "status": "MINIMAL_SELECTORS_EXCLUDED_FROM_T12_BASIN",
+  "summary": {
+    "all_phase_invariant_count": 1,
+    "all_phase_unique_subcube_mask_count": 17,
+    "bounded_run_count": 1879,
+    "fixed_phase_invariant_count": 3,
+    "fixed_phase_unique_subcube_mask_count": 6,
+    "postburn_state_count": 394590,
+    "processed_runs": 2008,
+    "reference_operator_subcube_occurrence_count": 6930,
+    "targets_in_t12_reference_basin": 0,
+    "targets_reached_at_t80": 1,
+    "targets_reached_with_reference_operator": 2,
+    "targets_with_postburn_preimage": 2
+  },
+  "targets": [
+    {
+      "all_phase_invariant_violations": [],
+      "assignment": 3211824,
+      "assignment_hex": "0x0310230",
+      "example_reference_operator_events": [],
+      "fixed_phase_invariant_violations": [],
+      "postburn_ic_count": 0,
+      "postburn_occurrence_count": 0,
+      "reference_operator_ic_count": 0,
+      "reference_operator_ic_period_counts": {},
+      "reference_operator_occurrence_count": 0,
+      "role": "A_ATOMIC_BREAK",
+      "selector_bits": [
+        10
+      ],
+      "stationary_t12_operator_ic_count": 0,
+      "subcube_mask": 4,
+      "t80_ic_count": 0
+    },
+    {
+      "all_phase_invariant_violations": [
+        0
+      ],
+      "assignment": 3212976,
+      "assignment_hex": "0x03106b0",
+      "example_reference_operator_events": [],
+      "fixed_phase_invariant_violations": [
+        0,
+        2
+      ],
+      "postburn_ic_count": 0,
+      "postburn_occurrence_count": 0,
+      "reference_operator_ic_count": 0,
+      "reference_operator_ic_period_counts": {},
+      "reference_operator_occurrence_count": 0,
+      "role": "A_ATOMIC_BREAK",
+      "selector_bits": [
+        7
+      ],
+      "stationary_t12_operator_ic_count": 0,
+      "subcube_mask": 1,
+      "t80_ic_count": 0
+    },
+    {
+      "all_phase_invariant_violations": [],
+      "assignment": 3214896,
+      "assignment_hex": "0x0310e30",
+      "example_reference_operator_events": [],
+      "fixed_phase_invariant_violations": [
+        1
+      ],
+      "postburn_ic_count": 0,
+      "postburn_occurrence_count": 0,
+      "reference_operator_ic_count": 0,
+      "reference_operator_ic_period_counts": {},
+      "reference_operator_occurrence_count": 0,
+      "role": "A_ATOMIC_BREAK",
+      "selector_bits": [
+        11
+      ],
+      "stationary_t12_operator_ic_count": 0,
+      "subcube_mask": 8,
+      "t80_ic_count": 0
+    },
+    {
+      "all_phase_invariant_violations": [],
+      "assignment": 3216944,
+      "assignment_hex": "0x0311630",
+      "example_reference_operator_events": [
+        {
+          "background": "01101111",
+          "stationary_period": 6,
+          "time": 80,
+          "word": "00110101",
+          "word_len": 8
+        },
+        {
+          "background": "01101111",
+          "stationary_period": 6,
+          "time": 86,
+          "word": "00110101",
+          "word_len": 8
+        },
+        {
+          "background": "01101111",
+          "stationary_period": 6,
+          "time": 92,
+          "word": "00110101",
+          "word_len": 8
+        },
+        {
+          "background": "01101111",
+          "stationary_period": 6,
+          "time": 98,
+          "word": "00110101",
+          "word_len": 8
+        },
+        {
+          "background": "01101111",
+          "stationary_period": 6,
+          "time": 104,
+          "word": "00110101",
+          "word_len": 8
+        },
+        {
+          "background": "01101111",
+          "stationary_period": 6,
+          "time": 110,
+          "word": "00110101",
+          "word_len": 8
+        },
+        {
+          "background": "01101111",
+          "stationary_period": 6,
+          "time": 116,
+          "word": "00110101",
+          "word_len": 8
+        },
+        {
+          "background": "01101111",
+          "stationary_period": 6,
+          "time": 122,
+          "word": "00110101",
+          "word_len": 8
+        },
+        {
+          "background": "01101111",
+          "stationary_period": 6,
+          "time": 128,
+          "word": "00110101",
+          "word_len": 8
+        },
+        {
+          "background": "01101111",
+          "stationary_period": 6,
+          "time": 134,
+          "word": "00110101",
+          "word_len": 8
+        }
+      ],
+      "fixed_phase_invariant_violations": [],
+      "postburn_ic_count": 1,
+      "postburn_occurrence_count": 35,
+      "reference_operator_ic_count": 1,
+      "reference_operator_ic_period_counts": {
+        "6": 1
+      },
+      "reference_operator_occurrence_count": 35,
+      "role": "A_ATOMIC_BREAK",
+      "selector_bits": [
+        12
+      ],
+      "stationary_t12_operator_ic_count": 0,
+      "subcube_mask": 16,
+      "t80_ic_count": 1
+    },
+    {
+      "all_phase_invariant_violations": [],
+      "assignment": 3221040,
+      "assignment_hex": "0x0312630",
+      "example_reference_operator_events": [],
+      "fixed_phase_invariant_violations": [
+        1
+      ],
+      "postburn_ic_count": 0,
+      "postburn_occurrence_count": 0,
+      "reference_operator_ic_count": 0,
+      "reference_operator_ic_period_counts": {},
+      "reference_operator_occurrence_count": 0,
+      "role": "A_ATOMIC_BREAK",
+      "selector_bits": [
+        13
+      ],
+      "stationary_t12_operator_ic_count": 0,
+      "subcube_mask": 32,
+      "t80_ic_count": 0
+    },
+    {
+      "all_phase_invariant_violations": [],
+      "assignment": 3245616,
+      "assignment_hex": "0x0318630",
+      "example_reference_operator_events": [],
+      "fixed_phase_invariant_violations": [],
+      "postburn_ic_count": 0,
+      "postburn_occurrence_count": 0,
+      "reference_operator_ic_count": 0,
+      "reference_operator_ic_period_counts": {},
+      "reference_operator_occurrence_count": 0,
+      "role": "A_ATOMIC_BREAK",
+      "selector_bits": [
+        15
+      ],
+      "stationary_t12_operator_ic_count": 0,
+      "subcube_mask": 64,
+      "t80_ic_count": 0
+    },
+    {
+      "all_phase_invariant_violations": [
+        0
+      ],
+      "assignment": 3474992,
+      "assignment_hex": "0x0350630",
+      "example_reference_operator_events": [],
+      "fixed_phase_invariant_violations": [
+        2
+      ],
+      "postburn_ic_count": 0,
+      "postburn_occurrence_count": 0,
+      "reference_operator_ic_count": 0,
+      "reference_operator_ic_period_counts": {},
+      "reference_operator_occurrence_count": 0,
+      "role": "A_ATOMIC_BREAK",
+      "selector_bits": [
+        18
+      ],
+      "stationary_t12_operator_ic_count": 0,
+      "subcube_mask": 128,
+      "t80_ic_count": 0
+    },
+    {
+      "all_phase_invariant_violations": [],
+      "assignment": 3485872,
+      "assignment_hex": "0x03530b0",
+      "example_reference_operator_events": [],
+      "fixed_phase_invariant_violations": [
+        1
+      ],
+      "postburn_ic_count": 0,
+      "postburn_occurrence_count": 0,
+      "reference_operator_ic_count": 0,
+      "reference_operator_ic_period_counts": {},
+      "reference_operator_occurrence_count": 0,
+      "role": "B_MINIMAL_RESCUE",
+      "selector_bits": [
+        11,
+        15
+      ],
+      "stationary_t12_operator_ic_count": 0,
+      "subcube_mask": 183,
+      "t80_ic_count": 0
+    },
+    {
+      "all_phase_invariant_violations": [],
+      "assignment": 3517104,
+      "assignment_hex": "0x035aab0",
+      "example_reference_operator_events": [
+        {
+          "background": "00110111",
+          "stationary_period": null,
+          "time": 104,
+          "word": "001111",
+          "word_len": 6
+        },
+        {
+          "background": "00110111",
+          "stationary_period": null,
+          "time": 134,
+          "word": "001111",
+          "word_len": 6
+        },
+        {
+          "background": "00110111",
+          "stationary_period": null,
+          "time": 164,
+          "word": "001111",
+          "word_len": 6
+        },
+        {
+          "background": "00110111",
+          "stationary_period": null,
+          "time": 194,
+          "word": "001111",
+          "word_len": 6
+        },
+        {
+          "background": "00110111",
+          "stationary_period": null,
+          "time": 224,
+          "word": "001111",
+          "word_len": 6
+        },
+        {
+          "background": "00110111",
+          "stationary_period": null,
+          "time": 254,
+          "word": "001111",
+          "word_len": 6
+        },
+        {
+          "background": "00110111",
+          "stationary_period": null,
+          "time": 284,
+          "word": "001111",
+          "word_len": 6
+        },
+        {
+          "background": "00110111",
+          "stationary_period": null,
+          "time": 104,
+          "word": "0011111",
+          "word_len": 7
+        },
+        {
+          "background": "00110111",
+          "stationary_period": null,
+          "time": 134,
+          "word": "0011111",
+          "word_len": 7
+        },
+        {
+          "background": "00110111",
+          "stationary_period": null,
+          "time": 164,
+          "word": "0011111",
+          "word_len": 7
+        }
+      ],
+      "fixed_phase_invariant_violations": [
+        0
+      ],
+      "postburn_ic_count": 40,
+      "postburn_occurrence_count": 280,
+      "reference_operator_ic_count": 40,
+      "reference_operator_ic_period_counts": {
+        "NONSTATIONARY": 40
+      },
+      "reference_operator_occurrence_count": 280,
+      "role": "B_MINIMAL_RESCUE",
+      "selector_bits": [
+        9,
+        12
+      ],
+      "stationary_t12_operator_ic_count": 0,
+      "subcube_mask": 237,
+      "t80_ic_count": 0
+    }
+  ],
+  "verdict_reason": "Minimal selectors have bounded physical preimages under the exact operator but none belongs to the persistent T=12 basin."
+}
