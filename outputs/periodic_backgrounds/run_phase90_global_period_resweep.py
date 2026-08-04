@@ -729,6 +729,26 @@ def canonical_row_digest(rows: list[dict[str, Any]]) -> str:
     return digest.hexdigest()
 
 
+REPLAY_DERIVED_FIELDS = frozenset({"new_T", "new_rule", "new_speed", "speed"})
+
+
+def replay_identity_row(row: dict[str, Any]) -> dict[str, Any]:
+    """Return the physical detector identity, excluding catalog annotations."""
+    return {
+        key: value
+        for key, value in row.items()
+        if key not in REPLAY_DERIVED_FIELDS
+    }
+
+
+def unique_replay_identities(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    unique: dict[bytes, dict[str, Any]] = {}
+    for row in rows:
+        identity = replay_identity_row(row)
+        unique[core.canonical_json_bytes(identity)] = identity
+    return list(unique.values())
+
+
 def load_jsonl(path: Path) -> list[dict[str, Any]]:
     return [
         json.loads(line)
@@ -758,11 +778,17 @@ def historical_replay_gate(protocol: dict[str, Any], runtime: Path) -> dict[str,
             expected_by_rule[int(row["rule"])].append(row)
         for rule in range(256):
             actual_path = stage_paths(runtime, "A", cohort_name, rule)["replay"]
-            actual = load_jsonl(actual_path)
-            expected = expected_by_rule[rule]
+            actual_raw = load_jsonl(actual_path)
+            expected_raw = expected_by_rule[rule]
+            actual = unique_replay_identities(actual_raw)
+            expected = unique_replay_identities(expected_raw)
             row = {
                 "cohort": cohort_name,
                 "rule": rule,
+                "expected_raw_count": len(expected_raw),
+                "actual_raw_count": len(actual_raw),
+                "expected_duplicate_count": len(expected_raw) - len(expected),
+                "actual_duplicate_count": len(actual_raw) - len(actual),
                 "expected_count": len(expected),
                 "actual_count": len(actual),
                 "expected_digest": canonical_row_digest(expected),
@@ -777,7 +803,13 @@ def historical_replay_gate(protocol: dict[str, Any], runtime: Path) -> dict[str,
     data = {
         "phase": 90,
         "status": "PASS" if all_match else "HISTORICAL_REPLAY_MISMATCH",
+        "comparison_basis": "unique_physical_detector_identity",
+        "ignored_catalog_annotation_fields": sorted(REPLAY_DERIVED_FIELDS),
         "comparisons": comparisons,
+        "expected_raw_total": sum(
+            row["expected_raw_count"] for row in comparisons
+        ),
+        "actual_raw_total": sum(row["actual_raw_count"] for row in comparisons),
         "expected_total": sum(row["expected_count"] for row in comparisons),
         "actual_total": sum(row["actual_count"] for row in comparisons),
     }

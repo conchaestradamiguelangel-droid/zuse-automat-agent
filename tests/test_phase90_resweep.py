@@ -315,6 +315,48 @@ class Phase90ProtocolTests(unittest.TestCase):
                     expected_digest="0" * 64,
                 )
 
+    def test_replay_identity_ignores_annotations_and_deduplicates(self):
+        physical = {
+            "rule": 73,
+            "background_canonical": "00001111",
+            "word_len": 2,
+            "word": "11",
+            "kind": "stationary",
+            "period_T": 12,
+            "span": 8,
+            "motif": ["##", "#.#"],
+        }
+        annotated = {
+            **physical,
+            "new_T": True,
+            "new_rule": False,
+            "new_speed": False,
+            "speed": 0.0,
+        }
+        expected = runner.unique_replay_identities([annotated, annotated])
+        actual = runner.unique_replay_identities([physical])
+        self.assertEqual(len(expected), 1)
+        self.assertEqual(expected, actual)
+        self.assertEqual(
+            runner.canonical_row_digest(expected),
+            runner.canonical_row_digest(actual),
+        )
+
+    def test_replay_identity_preserves_physical_differences(self):
+        left = {
+            "rule": 73,
+            "background": "0011",
+            "word_len": 1,
+            "word": "1",
+            "kind": "stationary",
+            "period_T": 6,
+        }
+        right = {**left, "period_T": 12}
+        self.assertNotEqual(
+            runner.canonical_row_digest(runner.unique_replay_identities([left])),
+            runner.canonical_row_digest(runner.unique_replay_identities([right])),
+        )
+
     def test_final_summary_separates_confirmed_and_mismatched_candidates(self):
         rows = [
             {

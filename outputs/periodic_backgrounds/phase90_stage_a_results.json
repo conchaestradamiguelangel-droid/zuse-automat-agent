@@ -1,0 +1,67 @@
+{
+  "phase": 90,
+  "status": "STAGE_A_COMPLETE_REPLAY_PASS_STAGE_B_NOT_AUTHORIZED",
+  "protocol_sha256": "344033959ec57a6614d78cac025185743bfbe552e354ee2239ed4fa237a4aea3",
+  "benchmark_report_sha256": "9fbc905422bbe3fb16a4b86b9cb97febb53792270bf80e874107744916239c6d",
+  "workers": 5,
+  "processed_runs": 5783040,
+  "completed_units": 512,
+  "wall_seconds": 2834.3966681957245,
+  "source_positive_unique_count": 445897,
+  "period_cap_candidate_count": 3296,
+  "candidate_bytes": 643899,
+  "candidate_distribution_by_cohort": {
+    "baseline_period_1_2_4": 160,
+    "primitive_len8": 3136
+  },
+  "candidate_distribution_by_rule": {
+    "73": 1623,
+    "109": 1673
+  },
+  "candidate_distribution_by_kind": {
+    "STATIONARY": 3296
+  },
+  "candidate_distribution_by_period": {
+    "18": 1703,
+    "24": 750,
+    "26": 5,
+    "30": 545,
+    "40": 53,
+    "42": 18,
+    "48": 44,
+    "60": 105,
+    "66": 31,
+    "90": 15,
+    "120": 27
+  },
+  "historical_replay": {
+    "status": "PASS",
+    "comparison_basis": "unique_physical_detector_identity",
+    "expected_raw_rows": 446125,
+    "expected_unique_identities": 445897,
+    "actual_unique_identities": 445897,
+    "mismatches": 0,
+    "historical_duplicate_rows": 228,
+    "duplicate_location": "baseline_period_1_2_4/rule_131",
+    "ignored_catalog_annotation_fields": [
+      "new_T",
+      "new_rule",
+      "new_speed",
+      "speed"
+    ],
+    "gate_report_sha256": "36c5a17be9243c4c55b62e59478d85130970e03f82f4e6abede3ce875a8bbc5a",
+    "preserved_raw_mismatch_report_sha256": "ea70a59f6ea627a10ed6623114d6e0d21f1894361d57fbda1ded5549b2ea7349"
+  },
+  "stage_b_plan": {
+    "candidate_count": 3296,
+    "estimated_wall_seconds": 9.658608058608058,
+    "estimate_is_benchmark": false,
+    "required_free_bytes": 5368709120,
+    "observed_free_bytes": 332622401536,
+    "disk_gate_pass": true
+  },
+  "stage_b_authorized": false,
+  "stage_b_executed": false,
+  "scientific_thresholds_changed": false,
+  "paper_or_release_changed": false
+}

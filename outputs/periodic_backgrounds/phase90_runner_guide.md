@@ -108,9 +108,13 @@ python outputs/periodic_backgrounds/run_phase90_global_period_resweep.py replay-
 python outputs/periodic_backgrounds/run_phase90_global_period_resweep.py stage-b-plan
 ```
 
-The replay gate compares canonical row digests and counts for every rule against
-the two historical catalogs. Stage-B planning uses measured candidate count and
-bytes, not the 5-GiB floor alone.
+The replay gate compares unique physical detector identities for every rule
+against the two historical catalogs. Exact duplicate historical rows are
+reported but do not create additional physical identities. Catalog-only
+annotations (`new_T`, `new_rule`, `new_speed`, and derived `speed`) are excluded
+from the identity; detector fields remain exact. Raw and normalized counts are
+both retained in the gate report. Stage-B planning uses measured candidate
+count and bytes, not the 5-GiB floor alone.
 
 ## Stage-B Gate
 
