@@ -1,4 +1,4 @@
-# ZUSE v1.33 Reproducibility Checklist
+# ZUSE v1.34 Reproducibility Checklist
 
 Audience: reviewers and editors. This is a claim-to-artifact map, not a developer manual.
 
@@ -153,6 +153,38 @@ Reviewer shortcut:
 Select-String paper\draft.md,outputs\periodic_backgrounds\*.md -Pattern "-0.307283|0.998197|degree"
 ```
 
+## R6 - Global Audit of the Historical Period Cap
+
+Paper claim: replaying both historical periodic-background populations recovers
+and independently confirms 3,296 stationary oscillators omitted by the source
+detector's `T<=16` limit.
+
+Primary scripts:
+
+```powershell
+python outputs\periodic_backgrounds\audit_period_detector_limit.py
+python outputs\periodic_backgrounds\run_phase90_global_period_resweep.py preflight
+```
+
+Primary outputs:
+
+- `outputs/periodic_backgrounds/phase90_global_period_cap_resweep_results.json`
+- `outputs/periodic_backgrounds/phase90_global_period_cap_resweep_report.md`
+- `outputs/periodic_backgrounds/phase90_execution_audit.md`
+
+Expected signature:
+
+- Processed configurations: `5,783,040`.
+- Historical unique positives replayed: `445,897`.
+- Stage-A candidates and Stage-B confirmations: `3,296 / 3,296`.
+- Missing, extra, duplicate, kind, period, and drift mismatches: all zero.
+- Confirmed rules: `rule_73 = 1,623`, `rule_109 = 1,673`.
+- Status: `GLOBAL_PERIOD_CAP_FALSE_NEGATIVES_CONFIRMED`.
+
+The full replay is authorization-gated and checkpointed. Reviewers can inspect
+the committed result and execution audit without rerunning the 5.78 million
+configurations.
+
 ## Runtime Notes
 
 - Unit tests and report inspection are quick.
@@ -162,7 +194,7 @@ Select-String paper\draft.md,outputs\periodic_backgrounds\*.md -Pattern "-0.3072
 
 ## Versioned Artifacts
 
-- Zenodo v1.33 DOI: https://doi.org/10.5281/zenodo.21709742
-- GitHub release: https://github.com/conchaestradamiguelangel-droid/zuse-automat-agent/releases/tag/v1.33
+- Zenodo v1.34 DOI: https://doi.org/10.5281/zenodo.21826401
+- GitHub release: https://github.com/conchaestradamiguelangel-droid/zuse-automat-agent/releases/tag/v1.34
 - PDF: `paper/zuse_preprint.pdf`
 - Source: `paper/draft.md`

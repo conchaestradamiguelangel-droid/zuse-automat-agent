@@ -1,7 +1,7 @@
 # Reproducibility
 
 This repository contains the deterministic code and summary artifacts used for
-the ZUSE Automat Agent v1.33 preprint.
+the ZUSE Automat Agent v1.34 preprint.
 
 ## Environment
 
@@ -124,6 +124,19 @@ python outputs\periodic_backgrounds\analyze_rule109_phase_crossval.py
 python outputs\periodic_backgrounds\analyze_rule109_causal_complexity.py
 ```
 
+Global period-cap audit (Fases 89--90):
+
+```powershell
+python outputs\periodic_backgrounds\audit_period_detector_limit.py
+python outputs\periodic_backgrounds\run_phase90_global_period_resweep.py preflight
+```
+
+The complete 5,783,040-configuration re-sweep is authorization-gated and
+checkpointed. See `outputs/periodic_backgrounds/phase90_runner_guide.md` before
+attempting a full replay. The committed final signatures are in
+`phase90_global_period_cap_resweep_results.json` and
+`phase90_global_period_cap_resweep_report.md`.
+
 For reviewer-facing claim checks, see:
 
 ```text
@@ -150,9 +163,9 @@ Tracked companion summaries:
 
 ## Preprint
 
-The paper source is [paper/draft.md](paper/draft.md). The v1.33 PDF is committed
+The paper source is [paper/draft.md](paper/draft.md). The v1.34 PDF is committed
 as [paper/zuse_preprint.pdf](paper/zuse_preprint.pdf) and archived on Zenodo:
 
 ```text
-https://doi.org/10.5281/zenodo.21709742
+https://doi.org/10.5281/zenodo.21826401
 ```

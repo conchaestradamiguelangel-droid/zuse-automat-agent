@@ -9,8 +9,9 @@ model participates in world selection, law evaluation, scoring, or acceptance.
 
 ## Preprint
 
-**Latest: v1.33** - External primitive-length-8 validation adds nine natural-period `rule_73/T=12` ANF-gradient witnesses. Three retain the signature at a predeclared neighboring horizon, while 0/27 control measurements become positive; robustness remains partial and background-conditioned.
+**Latest: v1.34** - A global replay of 5,783,040 periodic-background configurations confirms 3,296 stationary oscillators omitted by the historical `T<=16` detector. The correction is confined to `rule_73/rule_109`; previously detected oscillators and the T=12 causal cohort remain unchanged.
 
+- v1.34 DOI: [10.5281/zenodo.21826401](https://doi.org/10.5281/zenodo.21826401)
 - v1.33 DOI: [10.5281/zenodo.21709742](https://doi.org/10.5281/zenodo.21709742)
 - v1.32 DOI: [10.5281/zenodo.21435062](https://doi.org/10.5281/zenodo.21435062)
 - v1.31 DOI: [10.5281/zenodo.21433927](https://doi.org/10.5281/zenodo.21433927)
@@ -45,6 +46,7 @@ model participates in world selection, law evaluation, scoring, or acceptance.
 - v1.2 DOI: [10.5281/zenodo.20738025](https://doi.org/10.5281/zenodo.20738025)
 - v1.1 DOI: [10.5281/zenodo.20687470](https://doi.org/10.5281/zenodo.20687470)
 - v1.0 DOI: [10.5281/zenodo.20516375](https://doi.org/10.5281/zenodo.20516375)
+- v1.34 series DOI: [10.5281/zenodo.21826400](https://doi.org/10.5281/zenodo.21826400)
 - v1.33 series DOI: [10.5281/zenodo.21709741](https://doi.org/10.5281/zenodo.21709741)
 - v1.32 series DOI: [10.5281/zenodo.21435061](https://doi.org/10.5281/zenodo.21435061)
 - v1.31 series DOI: [10.5281/zenodo.21433926](https://doi.org/10.5281/zenodo.21433926)
@@ -138,8 +140,8 @@ regenerated from the commands in the reproducibility guide.
 
 ```text
 Concha Estrada, M. A. (2026). ZUSE Automat Agent: Empirical Law Discovery in
-Elementary Cellular Automata (v1.33). Zenodo.
-https://doi.org/10.5281/zenodo.21709742
+Elementary Cellular Automata (v1.34). Zenodo.
+https://doi.org/10.5281/zenodo.21826401
 ```
 
 ## License
