@@ -2,11 +2,30 @@
 
 ## Abstract
 
-We present ZUSE, a deterministic discovery pipeline for elementary cellular automata (ECA). ZUSE runs fixed simulation protocols, evaluates seven operational cycle laws, stores multi-seed WorldRecords, and measures basin fragility without using a language model inside the discovery loop. Across a 20-world atlas, the system separates law coverage, observer artifacts, and fragility regimes that are collapsed by coarse visual taxonomy.
+We present ZUSE, a deterministic discovery pipeline for elementary cellular
+automata (ECA). It runs fixed simulation protocols, evaluates seven operational
+cycle laws, stores multi-seed WorldRecords, and measures basin fragility without
+a language model in the discovery loop. Across 20 worlds, ZUSE separates law
+coverage, observer artifacts, and fragility regimes hidden by coarse visual
+taxonomy.
 
-The strongest case study concerns a periodic-background oscillator family in `rule_73/rule_109`. A length-8 background sweep finds a `T=15` mechanism with a five-state locking cycle. A 25-cell, 12-step causal cone then reveals an algebraic normal form (ANF) gradient: active-output monomial counts decay with distance from the defect center with `R^2 = 0.998197`, and active-output degree follows `degree = 24 - d + epsilon`. The gradient generalizes to external length-9/10 `T=15` witnesses and concentrates, outside the original family, in catalogued `rule_109` cases. Subsequent causal audits show that center mediation is necessary but not sufficient within that catalog; period/horizon and alignment descriptors are partial; and the remaining `rule_109/bg=1100/T=8` residual cannot be separated by scalar temporal summaries. A primitive length-8 holdout then finds nine natural-period `rule_73/T=12` witnesses, three of which retain the signature at a neighboring horizon while 0/27 control measurements become positive.
+The strongest case study concerns periodic-background oscillators in
+`rule_73/rule_109`. A length-8 sweep finds a `T=15` mechanism with a five-state
+locking cycle. A 25-cell, 12-step causal cone reveals an algebraic normal form
+(ANF) gradient: monomial counts decay with distance from the defect center with
+`R^2=0.998197`, while active-output degree follows
+`degree=24-d+epsilon`. The gradient generalizes to external length-9/10 `T=15`
+witnesses. Causal audits find center mediation necessary but not sufficient
+within the original catalog, with period/horizon and alignment descriptors
+remaining partial. A primitive length-8 holdout adds nine natural-period
+`rule_73/T=12` witnesses; three retain the signature at a neighboring horizon
+while 0/27 controls become positive. A global replay of 5,783,040
+configurations then recovers and independently confirms 3,296 stationary
+oscillators omitted by the historical `T<=16` detector.
 
-All scripts, reports, PDFs, and versioned releases are public. The claims are empirical and protocol-bounded: ZUSE provides a reproducible evidence engine for CA law discovery, not a universal autonomous scientist.
+All scripts, reports, PDFs, and versioned releases are public. Claims remain
+empirical and protocol-bounded: ZUSE is a reproducible evidence engine for CA
+law discovery, not a universal autonomous scientist.
 ## 1. Introduction
 
 Elementary cellular automata are among the simplest systems known to exhibit
@@ -173,7 +192,7 @@ computational mechanics itself.
 
 ### 2.5 Periodic backgrounds, gliders, and mechanistic audits
 
-The oscillator results in Sections 7.5--7.38 are closest in spirit to the
+The oscillator results in Sections 7.5--7.39 are closest in spirit to the
 domain/particle tradition in cellular automata: localized structures are
 studied relative to a background, and the relevant mechanism may be a defect
 trajectory rather than a raw frame pattern. Lindgren and Nordahl applied
@@ -2658,6 +2677,55 @@ length-8 backgrounds, nine natural-period witnesses, and three survivors at
 neighboring horizons. It does not establish universal generalization across
 ECA rules or backgrounds.
 
+### 7.39 Global audit of the historical period cap (Fases 89--90)
+
+The periodic-background catalogs used a source detector restricted to exact
+periods `2..16`. Fase 88 exposed one concrete consequence: 40 trajectories
+previously labelled nonstationary were stationary with period 30 when checked
+to `t=1000`. Fase 89 first audited the same issue locally on 2,008 `rule_73`
+configurations. It recovered 363 persistent stationary oscillators with
+periods 18..120 that the source detector had left bounded but unclassified.
+All source detections retained their original type and period, and the 165
+period-12 cases used by Fases 81--87 were unchanged.
+
+Fase 90 then reruns the two complete historical populations rather than
+extrapolating from that local cohort:
+
+| Cohort | Configurations | Confirmed misses |
+| --- | ---: | ---: |
+| Background templates of length 1, 2, and 4 | 1,927,680 | 160 |
+| Primitive length-8 backgrounds | 3,855,360 | 3,136 |
+| **Total** | **5,783,040** | **3,296** |
+
+Stage A reproduces 445,897 unique historical positive identities and applies
+the frozen counterfactual detector through period 120. The replay gate ignores
+only exact duplicate rows and order-dependent catalog annotations; physical
+fields remain part of the identity. It yields 3,296 bounded candidates above
+the historical cap. Stage B independently evolves exactly those 3,296 cases
+to `t=1000` and confirms every one with the same stationary type, minimal
+period, and zero drift. Candidate reconciliation finds no missing, extra, or
+duplicate physical identities and no type, period, or drift mismatches.
+
+The recovered periods are:
+
+| Period | 18 | 24 | 26 | 30 | 40 | 42 | 48 | 60 | 66 | 90 | 120 |
+| ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| Cases | 1,703 | 750 | 5 | 545 | 53 | 18 | 44 | 105 | 31 | 15 | 27 |
+
+All confirmed misses occur in `rule_73` (1,623) or `rule_109` (1,673). They
+represent 0.0570% of the 5,783,040 configurations, so the absolute rate is
+small but the incompleteness is systematic rather than a local anomaly. The
+Fase 90 status is `GLOBAL_PERIOD_CAP_FALSE_NEGATIVES_CONFIRMED`.
+
+This audit corrects the interpretation of the historical catalogs: a negative
+row under the source protocol means no oscillator was detected with period at
+most 16, not that no bounded periodic oscillator existed. It does not
+invalidate the previously detected oscillators or the T=12 causal analyses.
+Recurrence is computationally confirmed only through the frozen Stage-B
+horizon and period cap 120, and the result is exhaustive only for the two
+stated historical cohorts; it is not a theorem for arbitrary time, seed
+length, or background family.
+
 ## 8. Observer Artifacts and Pipeline Equivariance
 
 The ZUSE pipeline contains two classes of observer artifact that the atlas
@@ -2937,6 +3005,16 @@ one non-`rule_109` rule and one background length. It therefore falsifies
 universal necessity of center mediation while supporting only partial,
 background-conditioned generalization of the gradient.
 
+Fases 89--90 quantify a separate detector-completeness limit. The historical
+periodic-background detector searched exact periods only in `2..16`; a full
+re-sweep of its 5,783,040 frozen configurations recovers 3,296 stationary
+oscillators with periods 18..120. All occur in `rule_73` or `rule_109`, and
+all are confirmed through `t=1000`. This correction does not change any
+historical positive classification or the 165-case T=12 cohort used by Fases
+81--87, but historical negative rows must be interpreted as detector-bounded.
+The extended check remains finite in horizon and period and does not establish
+absence beyond period 120.
+
 ### 9.4 Empirical atlas, not axiomatic classification
 
 The world categories are induced from observed law signatures across a finite
@@ -3148,8 +3226,13 @@ Several controlled extensions have now been completed:
   (`h=10` or `h=14`), while 0/27 neighboring-horizon control measurements
   become positive. This supplies the first natural-period witness outside
   `rule_109` and limits the earlier center-mediation necessity claim to the
-  Fase 55 catalog; robustness remains partial and background-conditioned. Full
-  results are in Sections 7.20-7.38.
+  Fase 55 catalog; robustness remains partial and background-conditioned.
+  Fases 89--90 then audit the historical detector cap globally. Replaying all
+  5,783,040 configurations preserves 445,897 unique historical positives and
+  confirms 3,296 additional stationary oscillators with periods 18..120;
+  none changes the T=12 cohort used by the later causal audits. This converts
+  the old `T<=16` negative label into an explicitly detector-bounded claim.
+  Full results are in Sections 7.20-7.39.
 
 Each extension is a controlled experiment with the same measurement protocol;
 only the IC or background definition changes.

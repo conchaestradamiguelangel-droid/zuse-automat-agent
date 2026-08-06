@@ -23,7 +23,7 @@ function htmlEscape(text) {
     .replace(/"/g, "&quot;");
 }
 
-const markdown = fs.readFileSync(draftPath, "utf8");
+const markdown = fs.readFileSync(draftPath, "utf8").replace(/^\uFEFF/, "");
 
 marked.setOptions({
   gfm: true,
