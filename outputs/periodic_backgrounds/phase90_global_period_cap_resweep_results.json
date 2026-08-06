@@ -1,0 +1,41 @@
+{
+  "historical_positive_rows_replayed": 445897,
+  "historical_replay_status": "PASS",
+  "methodological_limits": [
+    "Recurrence is computationally confirmed through the frozen Stage-B horizon, not proved for arbitrary time.",
+    "The result covers only the two frozen historical cohorts.",
+    "Completion does not automatically change any paper, DOI, tag, or release."
+  ],
+  "phase": 90,
+  "processed_runs": 5783040,
+  "protocol_sha256": "344033959ec57a6614d78cac025185743bfbe552e354ee2239ed4fa237a4aea3",
+  "status": "GLOBAL_PERIOD_CAP_FALSE_NEGATIVES_CONFIRMED",
+  "summary": {
+    "candidate_count": 3296,
+    "confirmation_status_counts": {
+      "CONFIRMED_PERIOD_CAP_FALSE_NEGATIVE": 3296
+    },
+    "confirmed_cohort_distribution": {
+      "baseline_period_1_2_4": 160,
+      "primitive_len8": 3136
+    },
+    "confirmed_count": 3296,
+    "confirmed_period_distribution": {
+      "120": 27,
+      "18": 1703,
+      "24": 750,
+      "26": 5,
+      "30": 545,
+      "40": 53,
+      "42": 18,
+      "48": 44,
+      "60": 105,
+      "66": 31,
+      "90": 15
+    },
+    "confirmed_rule_distribution": {
+      "109": 1673,
+      "73": 1623
+    }
+  }
+}
