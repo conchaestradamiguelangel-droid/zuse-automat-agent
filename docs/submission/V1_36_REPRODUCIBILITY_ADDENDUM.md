@@ -1,6 +1,6 @@
 # ZUSE v1.36 Reproducibility Addendum
 
-This addendum maps the new candidate v1.36 claims to committed scripts and
+This addendum maps the published v1.36 claims to committed scripts and
 result artifacts. It supplements the published v1.35 addendum and does not
 rerun the 5,783,040-configuration cellular-automaton census.
 

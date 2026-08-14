@@ -11,9 +11,9 @@ cardinality partitions as 69/41/16 for vertex connectivity and 68/40/31 for
 edge connectivity at cardinalities 2/3/4, with no stratum left unresolved.
 Direct cut removal and independent max-flow agree without exception.
 
-Preprint: `TBD_ZENODO_V1_36_DOI`
+Preprint: https://doi.org/10.5281/zenodo.21939732
 
-Release: `TBD_GITHUB_V1_36_RELEASE`
+Release: https://github.com/conchaestradamiguelangel-droid/zuse-automat-agent/releases/tag/v1.36
 
 ## Courtesy note
 

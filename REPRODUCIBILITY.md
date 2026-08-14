@@ -1,7 +1,7 @@
 # Reproducibility
 
 This repository contains the deterministic code and summary artifacts used for
-the ZUSE Automat Agent v1.35 preprint.
+the ZUSE Automat Agent v1.36 preprint.
 
 ## Environment
 
@@ -137,15 +137,17 @@ attempting a full replay. The committed final signatures are in
 `phase90_global_period_cap_resweep_results.json` and
 `phase90_global_period_cap_resweep_report.md`.
 
-Long-period quotient and Q8 cut-coverage audit (Fases 91--103):
+Long-period quotient, Q8 cut coverage, and cardinality audits (Fases 91--105):
 
 ```text
 docs/submission/V1_35_REPRODUCIBILITY_ADDENDUM.md
+docs/submission/V1_36_REPRODUCIBILITY_ADDENDUM.md
 ```
 
-The addendum maps the v1.35 claims to the committed attractor, conjugacy,
-hypercube, cut-coverage, and pairwise-synergy artifacts. These phases reuse the
-frozen Fase-90 population and do not rerun the global CA census.
+The addenda map the v1.35--v1.36 claims to the committed attractor, conjugacy,
+hypercube, cut-coverage, pairwise-, triple-, and quadruple-synergy artifacts.
+These phases reuse the frozen Fase-90 population and do not rerun the global CA
+census.
 
 For reviewer-facing claim checks, see:
 
@@ -173,9 +175,9 @@ Tracked companion summaries:
 
 ## Preprint
 
-The paper source is [paper/draft.md](paper/draft.md). The v1.35 PDF is committed
+The paper source is [paper/draft.md](paper/draft.md). The v1.36 PDF is committed
 as [paper/zuse_preprint.pdf](paper/zuse_preprint.pdf) and archived on Zenodo:
 
 ```text
-https://doi.org/10.5281/zenodo.21935967
+https://doi.org/10.5281/zenodo.21939732
 ```

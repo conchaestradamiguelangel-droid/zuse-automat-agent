@@ -1,26 +1,6 @@
-# Zenodo v1.36 Draft
+# Zenodo v1.36 Record
 
-Texto preparado para la publicacion manual en Zenodo. No rellenar el DOI, el
-tamano ni las sumas de verificacion hasta que el PDF candidato pase la revision
-independiente final.
-
-## Orden de carga
-
-1. Crear un nuevo registro de Zenodo para la version v1.36.
-2. Arrastrar unicamente `paper/zuse_preprint.pdf` y comprobar que Zenodo muestra
-   `zuse_preprint.pdf` con `1,028,156 bytes` antes de continuar.
-3. En "¿Ya tienes un DOI?", dejar el campo vacio: Zenodo debe reservar uno nuevo.
-4. Seleccionar **Preprint** como tipo de recurso.
-5. Completar titulo, fecha, creador, descripcion, licencia y campos recomendados
-   exactamente como aparecen debajo.
-6. En trabajos relacionados, anadir el repositorio con relacion
-   **Is supplement to / Es suplemento de** y esquema URL.
-7. Mantener visibilidad publica, sin embargo, y revisar que solo exista un PDF.
-8. No pulsar **Publicar** hasta que la revision independiente confirme que el
-   nombre, tamano, 59 paginas, MD5 y SHA-256 coinciden con el control final.
-9. Despues de publicar, copiar el DOI de version y el DOI de serie. Esos dos
-   valores se usaran para actualizar `CITATION.cff`, `README.md`, el tag v1.36
-   y la GitHub Release en un commit posterior separado.
+Publicado y verificado contra la API de Zenodo el 2026-08-14.
 
 ## Informacion basica
 
@@ -105,5 +85,5 @@ https://github.com/conchaestradamiguelangel-droid/zuse-automat-agent
 - **Paginas:** `59`
 - **MD5:** `b4dd0183c0cacf42b1e28ab9903fece5`
 - **SHA-256:** `082812f1055acabe492ab9e85f95e6520a573e07822479ac3c380ecb11a6182d`
-- **DOI de version:** `TBD after Zenodo publication`
-- **DOI de serie:** `TBD after Zenodo publication`
+- **DOI de version:** `10.5281/zenodo.21939732`
+- **DOI de serie:** `10.5281/zenodo.21939731`

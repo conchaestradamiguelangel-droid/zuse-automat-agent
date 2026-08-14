@@ -1,4 +1,4 @@
-# ZUSE v1.35 Venue Shortlist
+# ZUSE v1.36 Venue Shortlist
 
 Status: draft for submission planning. Verify all venue rules again immediately before submission.
 
@@ -39,7 +39,7 @@ Do not use ALIFE conference as the first target for the current manuscript. An 8
 ## Submission Order
 
 1. Finish arXiv endorsement if Genaro Martinez or another endorser completes `nlin.CG`.
-2. Keep Zenodo v1.35 as the active citable preprint regardless of arXiv timing.
+2. Keep Zenodo v1.36 as the active citable preprint regardless of arXiv timing.
 3. Prepare *Artificial Life* package:
    - cover letter;
    - manuscript PDF;

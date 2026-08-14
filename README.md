@@ -9,8 +9,9 @@ model participates in world selection, law evaluation, scoring, or acceptance.
 
 ## Preprint
 
-**Latest: v1.35** - The 3,296 long-period cases recovered in v1.34 collapse into 192 strict attractor classes. Across 43,425 unit interventions on 219 fragile Q8 targets, restored vertex or edge redundancy is exactly equivalent to bypassing every corresponding critical cut; a 404,054-pair audit then resolves minimum rescue cardinality two in 69/126 vertex and 68/139 edge strata.
+**Latest: v1.36** - Exhaustive audits of 3,061,466 triples and 24,362,850 quadruples complete the minimum rescue-cardinality ladder left open in v1.35. Within the frozen collective Q8 strata, vertex minima partition as 69/41/16 and edge minima as 68/40/31 at cardinalities 2/3/4, with no stratum remaining unresolved.
 
+- v1.36 DOI: [10.5281/zenodo.21939732](https://doi.org/10.5281/zenodo.21939732)
 - v1.35 DOI: [10.5281/zenodo.21935967](https://doi.org/10.5281/zenodo.21935967)
 - v1.34 DOI: [10.5281/zenodo.21826401](https://doi.org/10.5281/zenodo.21826401)
 - v1.33 DOI: [10.5281/zenodo.21709742](https://doi.org/10.5281/zenodo.21709742)
@@ -47,6 +48,7 @@ model participates in world selection, law evaluation, scoring, or acceptance.
 - v1.2 DOI: [10.5281/zenodo.20738025](https://doi.org/10.5281/zenodo.20738025)
 - v1.1 DOI: [10.5281/zenodo.20687470](https://doi.org/10.5281/zenodo.20687470)
 - v1.0 DOI: [10.5281/zenodo.20516375](https://doi.org/10.5281/zenodo.20516375)
+- v1.36 series DOI: [10.5281/zenodo.21939731](https://doi.org/10.5281/zenodo.21939731)
 - v1.35 series DOI: [10.5281/zenodo.21935966](https://doi.org/10.5281/zenodo.21935966)
 - v1.34 series DOI: [10.5281/zenodo.21826400](https://doi.org/10.5281/zenodo.21826400)
 - v1.33 series DOI: [10.5281/zenodo.21709741](https://doi.org/10.5281/zenodo.21709741)
@@ -142,8 +144,8 @@ regenerated from the commands in the reproducibility guide.
 
 ```text
 Concha Estrada, M. A. (2026). ZUSE Automat Agent: Empirical Law Discovery in
-Elementary Cellular Automata (v1.35). Zenodo.
-https://doi.org/10.5281/zenodo.21935967
+Elementary Cellular Automata (v1.36). Zenodo.
+https://doi.org/10.5281/zenodo.21939732
 ```
 
 ## License

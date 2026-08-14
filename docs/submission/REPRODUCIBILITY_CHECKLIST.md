@@ -1,4 +1,4 @@
-# ZUSE v1.35 Reproducibility Checklist
+# ZUSE v1.36 Reproducibility Checklist
 
 Audience: reviewers and editors. This is a claim-to-artifact map, not a developer manual.
 
@@ -194,7 +194,7 @@ configurations.
 
 ## Versioned Artifacts
 
-- Zenodo v1.35 DOI: https://doi.org/10.5281/zenodo.21935967
-- GitHub release: https://github.com/conchaestradamiguelangel-droid/zuse-automat-agent/releases/tag/v1.35
+- Zenodo v1.36 DOI: https://doi.org/10.5281/zenodo.21939732
+- GitHub release: https://github.com/conchaestradamiguelangel-droid/zuse-automat-agent/releases/tag/v1.36
 - PDF: `paper/zuse_preprint.pdf`
 - Source: `paper/draft.md`

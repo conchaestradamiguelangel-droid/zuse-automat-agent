@@ -1,21 +1,11 @@
 # ZUSE preprint
 
-Candidate under independent review:
-
-- **Candidate version:** v1.36 (not yet published)
-- **Scientific scope:** Fases 104--105; exhaustive triple and quadruple audits
-  completing the minimum rescue-cardinality ladder at values 2--4 within the
-  frozen Q8 protocol.
-- **DOI:** pending manual Zenodo publication after review.
-- **Candidate PDF:** 59 pages, 1,028,156 bytes, MD5
-  `b4dd0183c0cacf42b1e28ab9903fece5`, SHA-256
-  `082812f1055acabe492ab9e85f95e6520a573e07822479ac3c380ecb11a6182d`.
-
 Published preprint:
 
 - **Title:** ZUSE Automat Agent: Empirical Law Discovery in Elementary Cellular Automata
 - **Author:** Miguel Ángel Concha Estrada
-- **Version DOI:** https://doi.org/10.5281/zenodo.21935967
+- **Version DOI:** https://doi.org/10.5281/zenodo.21939732
+- **v1.36 series DOI:** https://doi.org/10.5281/zenodo.21939731
 - **v1.35 series DOI:** https://doi.org/10.5281/zenodo.21935966
 - **v1.34 series DOI:** https://doi.org/10.5281/zenodo.21826400
 - **v1.33 series DOI:** https://doi.org/10.5281/zenodo.21709741
@@ -49,7 +39,7 @@ Published preprint:
 - **v1.4 series DOI:** https://doi.org/10.5281/zenodo.20767476
 - **v1.3 series DOI:** https://doi.org/10.5281/zenodo.20753498
 - **Previous-series DOI (v1.2 and earlier):** https://doi.org/10.5281/zenodo.20738024
-- **Version:** v1.35
+- **Version:** v1.36
 - **Publication date:** 2026-08-14
 - **License:** Creative Commons Attribution 4.0 International (CC BY 4.0)
 
