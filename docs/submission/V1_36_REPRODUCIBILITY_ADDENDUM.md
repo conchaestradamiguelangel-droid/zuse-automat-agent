@@ -68,8 +68,7 @@ rules, word lengths, target classes, or intervention families.
 - Fases 104--105 reuse the frozen Q8 graphs and do not run new CA simulations.
 - The triple ledger contains 3,061,466 records and is 30,614,660 bytes.
 - The quadruple ledger contains 24,362,850 two-byte records and is 48,725,700
-  bytes; the complete run took 1,923.6 seconds on the reference Windows
-  workstation with five workers.
+  bytes.
 - Independent verification decoded all quadruple records, checked all 32 word
   lists against Fase 95, and reproduced every aggregate without discrepancy.
 - The repository suite for the candidate collects 318 tests: 312 pass and 6
