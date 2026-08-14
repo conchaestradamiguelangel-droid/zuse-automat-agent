@@ -1,0 +1,2523 @@
+{
+  "methodological_limits": [
+    "EXACTLY_4 is proven only where all interventions of cardinality one through three fail.",
+    "AT_LEAST_5 is a lower bound; quintets and larger subsets are not enumerated.",
+    "Period labels index frozen historical-node strata and are not interpreted causally.",
+    "The atlas is restricted to 32 unresolved strata in the frozen Q8 catalogue."
+  ],
+  "phase": 105,
+  "preflight": {
+    "internal_edges_by_period": {
+      "2": {
+        "0": 10270964,
+        "1": 2279012,
+        "2": 179432,
+        "3": 4604,
+        "4": 168
+      },
+      "3": {
+        "0": 5076386,
+        "1": 1846975,
+        "2": 260493,
+        "3": 12253,
+        "4": 662
+      },
+      "6": {
+        "0": 3492398,
+        "1": 845623,
+        "2": 80445,
+        "3": 2699,
+        "4": 110
+      },
+      "12": {
+        "0": 7301,
+        "1": 2962,
+        "2": 356,
+        "3": 6,
+        "4": 1
+      }
+    },
+    "kappa_trials_by_period": {
+      "2": 12734180,
+      "3": 3472769,
+      "6": 4421275,
+      "12": 10626
+    },
+    "kappa_trials_by_rule": {
+      "73": 8087220,
+      "109": 12551630
+    },
+    "lambda_trials_by_period": {
+      "2": 12734180,
+      "3": 7196769,
+      "12": 10626
+    },
+    "lambda_trials_by_rule": {
+      "73": 9968820,
+      "109": 9972755
+    },
+    "quartets_by_period": {
+      "2": 12734180,
+      "3": 7196769,
+      "6": 4421275,
+      "12": 10626
+    },
+    "quartets_by_rule": {
+      "73": 9968820,
+      "109": 14394030
+    },
+    "strata_by_period": {
+      "2": 4,
+      "3": 26,
+      "6": 1,
+      "12": 1
+    }
+  },
+  "protocol": {
+    "metric_denominators_separate": true,
+    "quartet_order": "IMPLICIT_STRATUM_SEGMENTS_PLUS_LEXICOGRAPHIC_COMBINATIONS",
+    "route_a": "DIRECT_EXHAUSTIVE_REMOVAL",
+    "route_b": "FRESH_INTEGER_MAX_FLOW_CAP_2",
+    "simulation_executed": false,
+    "threshold_scan_executed": false
+  },
+  "sources": {
+    "phase102": {
+      "canonical_sha256": "3ecad4486d9ac87c5c7efc58726a41dcaacd738d6450ffc6024b3577dbd0b74e",
+      "raw_sha256": "2eae9b4825bb78d9c396a47bfe365c0beedda198de7c8a2a6093fede3423fb2c"
+    },
+    "phase103_ledger_sha256": "24de12594fe8b95f6e70be4278b2dfadb7f29f181aef3d7aeea41f9fbe58de52",
+    "phase103_manifest": {
+      "canonical_sha256": "580635c42efc2bb042e539f0a1f61d6ae15693d38d77a3333041757be9257ea5",
+      "raw_sha256": "d434a20dd0c66350fadceac6ea4f6e3d73bd9769e51195083efc628ed8170057"
+    },
+    "phase103_results": {
+      "canonical_sha256": "152003197716bff38e552b3b51754df6dbfe4c6dc9f93326c3a55de594e5a6c3",
+      "raw_sha256": "9a5c70318085c8d6d1a7ad82a59fb631abda524926288c46cb0da30a7cd47268"
+    },
+    "phase104_ledger_sha256": "b342a58d20aa7ecdc2a2a5ea45037a64739134151db41b562464163b7e93578f",
+    "phase104_manifest": {
+      "canonical_sha256": "330379eeff1ae5a805b669667cbce8a3ec98a7d63b890ad0395cdbbd35fb1b42",
+      "raw_sha256": "d76dd7168d8b3a4e4ec9e3637b959b89d2f947ba519ad4521eccd99b27699531"
+    },
+    "phase104_results": {
+      "canonical_sha256": "ce00fc3085c7f19f0193d2d19939b6fa0e196cb8d26bcfc0c189319e4ae667ce",
+      "raw_sha256": "7487631d098876d51c24eaba75c30dfa693341833f8c85b8170a75ff647d0200"
+    },
+    "phase95": {
+      "canonical_sha256": "57c8988db22d659860b8c94accfa8be54ec5891a7ca036e7d0ea2150e3c3f429",
+      "raw_sha256": "1429ac8edc3d5fd4ee8823e2b8437666cae8bdd129f2a4a47e4505bba9aa83a3"
+    },
+    "phase97": {
+      "canonical_sha256": "85deb69d8dbb650c6423fcfd229e258118596ca3418d2e6556819a9ad23a2c5b",
+      "raw_sha256": "3096af928d5eff638d9ad63b6503eb85ecbd66956f35c5df94674e07d72e5858"
+    }
+  },
+  "status": "QUADRUPLE_SYNERGY_ATLAS_BUILT",
+  "strata": [
+    {
+      "background_index": 5,
+      "cube_key": "baseline_period_1_2_4|rule_073|bg_005",
+      "internal_edge_distribution": {
+        "0": 227041,
+        "1": 78203,
+        "2": 10473,
+        "3": 509,
+        "4": 25
+      },
+      "internal_edge_required_kappa_count": 1,
+      "internal_edge_required_lambda_count": 2,
+      "kappa_minimal_cardinality": "EXACTLY_4",
+      "kappa_quartet_rescue_count": 1,
+      "kappa_rescues_by_internal_edge_count": {
+        "0": 0,
+        "1": 0,
+        "2": 1,
+        "3": 0,
+        "4": 0
+      },
+      "kappa_rescuing_quartet_examples": [
+        [
+          197,
+          199,
+          207,
+          222
+        ]
+      ],
+      "kappa_scope": true,
+      "lambda_minimal_cardinality": "EXACTLY_4",
+      "lambda_quartet_rescue_count": 2,
+      "lambda_rescues_by_internal_edge_count": {
+        "0": 0,
+        "1": 0,
+        "2": 1,
+        "3": 1,
+        "4": 0
+      },
+      "lambda_rescuing_quartet_examples": [
+        [
+          197,
+          199,
+          206,
+          207
+        ],
+        [
+          197,
+          199,
+          207,
+          222
+        ]
+      ],
+      "lambda_scope": true,
+      "node_count": 54,
+      "pair_index": 438,
+      "period": 3,
+      "phase104_stratum_index": 0,
+      "quartet_count": 316251,
+      "rule": 73,
+      "stratum_index": 0
+    },
+    {
+      "background_index": 5,
+      "cube_key": "baseline_period_1_2_4|rule_073|bg_005",
+      "internal_edge_distribution": {
+        "0": 227041,
+        "1": 78203,
+        "2": 10473,
+        "3": 509,
+        "4": 25
+      },
+      "internal_edge_required_kappa_count": 1,
+      "internal_edge_required_lambda_count": 2,
+      "kappa_minimal_cardinality": "EXACTLY_4",
+      "kappa_quartet_rescue_count": 1,
+      "kappa_rescues_by_internal_edge_count": {
+        "0": 0,
+        "1": 0,
+        "2": 1,
+        "3": 0,
+        "4": 0
+      },
+      "kappa_rescuing_quartet_examples": [
+        [
+          197,
+          199,
+          207,
+          222
+        ]
+      ],
+      "kappa_scope": true,
+      "lambda_minimal_cardinality": "EXACTLY_4",
+      "lambda_quartet_rescue_count": 2,
+      "lambda_rescues_by_internal_edge_count": {
+        "0": 0,
+        "1": 0,
+        "2": 1,
+        "3": 1,
+        "4": 0
+      },
+      "lambda_rescuing_quartet_examples": [
+        [
+          197,
+          199,
+          206,
+          207
+        ],
+        [
+          197,
+          199,
+          207,
+          222
+        ]
+      ],
+      "lambda_scope": true,
+      "node_count": 54,
+      "pair_index": 442,
+      "period": 3,
+      "phase104_stratum_index": 1,
+      "quartet_count": 316251,
+      "rule": 73,
+      "stratum_index": 1
+    },
+    {
+      "background_index": 10,
+      "cube_key": "baseline_period_1_2_4|rule_073|bg_010",
+      "internal_edge_distribution": {
+        "0": 2564254,
+        "1": 572494,
+        "2": 45560,
+        "3": 1194,
+        "4": 43
+      },
+      "internal_edge_required_kappa_count": 2,
+      "internal_edge_required_lambda_count": 2,
+      "kappa_minimal_cardinality": "EXACTLY_4",
+      "kappa_quartet_rescue_count": 2,
+      "kappa_rescues_by_internal_edge_count": {
+        "0": 0,
+        "1": 2,
+        "2": 0,
+        "3": 0,
+        "4": 0
+      },
+      "kappa_rescuing_quartet_examples": [
+        [
+          34,
+          98,
+          120,
+          245
+        ],
+        [
+          34,
+          98,
+          120,
+          246
+        ]
+      ],
+      "kappa_scope": true,
+      "lambda_minimal_cardinality": "EXACTLY_4",
+      "lambda_quartet_rescue_count": 2,
+      "lambda_rescues_by_internal_edge_count": {
+        "0": 0,
+        "1": 2,
+        "2": 0,
+        "3": 0,
+        "4": 0
+      },
+      "lambda_rescuing_quartet_examples": [
+        [
+          34,
+          98,
+          120,
+          245
+        ],
+        [
+          34,
+          98,
+          120,
+          246
+        ]
+      ],
+      "lambda_scope": true,
+      "node_count": 95,
+      "pair_index": 144,
+      "period": 2,
+      "phase104_stratum_index": 2,
+      "quartet_count": 3183545,
+      "rule": 73,
+      "stratum_index": 2
+    },
+    {
+      "background_index": 10,
+      "cube_key": "baseline_period_1_2_4|rule_073|bg_010",
+      "internal_edge_distribution": {
+        "0": 2564254,
+        "1": 572494,
+        "2": 45560,
+        "3": 1194,
+        "4": 43
+      },
+      "internal_edge_required_kappa_count": 2,
+      "internal_edge_required_lambda_count": 2,
+      "kappa_minimal_cardinality": "EXACTLY_4",
+      "kappa_quartet_rescue_count": 2,
+      "kappa_rescues_by_internal_edge_count": {
+        "0": 0,
+        "1": 2,
+        "2": 0,
+        "3": 0,
+        "4": 0
+      },
+      "kappa_rescuing_quartet_examples": [
+        [
+          30,
+          68,
+          70,
+          111
+        ],
+        [
+          30,
+          68,
+          70,
+          175
+        ]
+      ],
+      "kappa_scope": true,
+      "lambda_minimal_cardinality": "EXACTLY_4",
+      "lambda_quartet_rescue_count": 2,
+      "lambda_rescues_by_internal_edge_count": {
+        "0": 0,
+        "1": 2,
+        "2": 0,
+        "3": 0,
+        "4": 0
+      },
+      "lambda_rescuing_quartet_examples": [
+        [
+          30,
+          68,
+          70,
+          111
+        ],
+        [
+          30,
+          68,
+          70,
+          175
+        ]
+      ],
+      "lambda_scope": true,
+      "node_count": 95,
+      "pair_index": 753,
+      "period": 2,
+      "phase104_stratum_index": 8,
+      "quartet_count": 3183545,
+      "rule": 73,
+      "stratum_index": 3
+    },
+    {
+      "background_index": 12,
+      "cube_key": "baseline_period_1_2_4|rule_073|bg_012",
+      "internal_edge_distribution": {
+        "0": 227041,
+        "1": 78203,
+        "2": 10473,
+        "3": 509,
+        "4": 25
+      },
+      "internal_edge_required_kappa_count": 1,
+      "internal_edge_required_lambda_count": 2,
+      "kappa_minimal_cardinality": "EXACTLY_4",
+      "kappa_quartet_rescue_count": 1,
+      "kappa_rescues_by_internal_edge_count": {
+        "0": 0,
+        "1": 0,
+        "2": 1,
+        "3": 0,
+        "4": 0
+      },
+      "kappa_rescuing_quartet_examples": [
+        [
+          123,
+          163,
+          227,
+          243
+        ]
+      ],
+      "kappa_scope": true,
+      "lambda_minimal_cardinality": "EXACTLY_4",
+      "lambda_quartet_rescue_count": 2,
+      "lambda_rescues_by_internal_edge_count": {
+        "0": 0,
+        "1": 0,
+        "2": 1,
+        "3": 1,
+        "4": 0
+      },
+      "lambda_rescuing_quartet_examples": [
+        [
+          115,
+          163,
+          227,
+          243
+        ],
+        [
+          123,
+          163,
+          227,
+          243
+        ]
+      ],
+      "lambda_scope": true,
+      "node_count": 54,
+      "pair_index": 252,
+      "period": 3,
+      "phase104_stratum_index": 10,
+      "quartet_count": 316251,
+      "rule": 73,
+      "stratum_index": 4
+    },
+    {
+      "background_index": 12,
+      "cube_key": "baseline_period_1_2_4|rule_073|bg_012",
+      "internal_edge_distribution": {
+        "0": 227041,
+        "1": 78203,
+        "2": 10473,
+        "3": 509,
+        "4": 25
+      },
+      "internal_edge_required_kappa_count": 1,
+      "internal_edge_required_lambda_count": 2,
+      "kappa_minimal_cardinality": "EXACTLY_4",
+      "kappa_quartet_rescue_count": 1,
+      "kappa_rescues_by_internal_edge_count": {
+        "0": 0,
+        "1": 0,
+        "2": 1,
+        "3": 0,
+        "4": 0
+      },
+      "kappa_rescuing_quartet_examples": [
+        [
+          123,
+          163,
+          227,
+          243
+        ]
+      ],
+      "kappa_scope": true,
+      "lambda_minimal_cardinality": "EXACTLY_4",
+      "lambda_quartet_rescue_count": 2,
+      "lambda_rescues_by_internal_edge_count": {
+        "0": 0,
+        "1": 0,
+        "2": 1,
+        "3": 1,
+        "4": 0
+      },
+      "lambda_rescuing_quartet_examples": [
+        [
+          115,
+          163,
+          227,
+          243
+        ],
+        [
+          123,
+          163,
+          227,
+          243
+        ]
+      ],
+      "lambda_scope": true,
+      "node_count": 54,
+      "pair_index": 255,
+      "period": 3,
+      "phase104_stratum_index": 11,
+      "quartet_count": 316251,
+      "rule": 73,
+      "stratum_index": 5
+    },
+    {
+      "background_index": 5,
+      "cube_key": "baseline_period_1_2_4|rule_109|bg_005",
+      "internal_edge_distribution": {
+        "0": 227041,
+        "1": 78203,
+        "2": 10473,
+        "3": 509,
+        "4": 25
+      },
+      "internal_edge_required_kappa_count": 1,
+      "internal_edge_required_lambda_count": 2,
+      "kappa_minimal_cardinality": "EXACTLY_4",
+      "kappa_quartet_rescue_count": 1,
+      "kappa_rescues_by_internal_edge_count": {
+        "0": 0,
+        "1": 0,
+        "2": 1,
+        "3": 0,
+        "4": 0
+      },
+      "kappa_rescuing_quartet_examples": [
+        [
+          12,
+          28,
+          92,
+          132
+        ]
+      ],
+      "kappa_scope": true,
+      "lambda_minimal_cardinality": "EXACTLY_4",
+      "lambda_quartet_rescue_count": 2,
+      "lambda_rescues_by_internal_edge_count": {
+        "0": 0,
+        "1": 0,
+        "2": 1,
+        "3": 1,
+        "4": 0
+      },
+      "lambda_rescuing_quartet_examples": [
+        [
+          12,
+          28,
+          92,
+          132
+        ],
+        [
+          12,
+          28,
+          92,
+          140
+        ]
+      ],
+      "lambda_scope": true,
+      "node_count": 54,
+      "pair_index": 914,
+      "period": 3,
+      "phase104_stratum_index": 12,
+      "quartet_count": 316251,
+      "rule": 109,
+      "stratum_index": 6
+    },
+    {
+      "background_index": 5,
+      "cube_key": "baseline_period_1_2_4|rule_109|bg_005",
+      "internal_edge_distribution": {
+        "0": 227041,
+        "1": 78203,
+        "2": 10473,
+        "3": 509,
+        "4": 25
+      },
+      "internal_edge_required_kappa_count": 1,
+      "internal_edge_required_lambda_count": 2,
+      "kappa_minimal_cardinality": "EXACTLY_4",
+      "kappa_quartet_rescue_count": 1,
+      "kappa_rescues_by_internal_edge_count": {
+        "0": 0,
+        "1": 0,
+        "2": 1,
+        "3": 0,
+        "4": 0
+      },
+      "kappa_rescuing_quartet_examples": [
+        [
+          12,
+          28,
+          92,
+          132
+        ]
+      ],
+      "kappa_scope": true,
+      "lambda_minimal_cardinality": "EXACTLY_4",
+      "lambda_quartet_rescue_count": 2,
+      "lambda_rescues_by_internal_edge_count": {
+        "0": 0,
+        "1": 0,
+        "2": 1,
+        "3": 1,
+        "4": 0
+      },
+      "lambda_rescuing_quartet_examples": [
+        [
+          12,
+          28,
+          92,
+          132
+        ],
+        [
+          12,
+          28,
+          92,
+          140
+        ]
+      ],
+      "lambda_scope": true,
+      "node_count": 54,
+      "pair_index": 917,
+      "period": 3,
+      "phase104_stratum_index": 13,
+      "quartet_count": 316251,
+      "rule": 109,
+      "stratum_index": 7
+    },
+    {
+      "background_index": 7,
+      "cube_key": "baseline_period_1_2_4|rule_109|bg_007",
+      "internal_edge_distribution": {
+        "0": 2571228,
+        "1": 567012,
+        "2": 44156,
+        "3": 1108,
+        "4": 41
+      },
+      "internal_edge_required_kappa_count": 2,
+      "internal_edge_required_lambda_count": 2,
+      "kappa_minimal_cardinality": "EXACTLY_4",
+      "kappa_quartet_rescue_count": 2,
+      "kappa_rescues_by_internal_edge_count": {
+        "0": 0,
+        "1": 2,
+        "2": 0,
+        "3": 0,
+        "4": 0
+      },
+      "kappa_rescuing_quartet_examples": [
+        [
+          9,
+          135,
+          157,
+          221
+        ],
+        [
+          10,
+          135,
+          157,
+          221
+        ]
+      ],
+      "kappa_scope": true,
+      "lambda_minimal_cardinality": "EXACTLY_4",
+      "lambda_quartet_rescue_count": 2,
+      "lambda_rescues_by_internal_edge_count": {
+        "0": 0,
+        "1": 2,
+        "2": 0,
+        "3": 0,
+        "4": 0
+      },
+      "lambda_rescuing_quartet_examples": [
+        [
+          9,
+          135,
+          157,
+          221
+        ],
+        [
+          10,
+          135,
+          157,
+          221
+        ]
+      ],
+      "lambda_scope": true,
+      "node_count": 95,
+      "pair_index": 296,
+      "period": 2,
+      "phase104_stratum_index": 14,
+      "quartet_count": 3183545,
+      "rule": 109,
+      "stratum_index": 8
+    },
+    {
+      "background_index": 7,
+      "cube_key": "baseline_period_1_2_4|rule_109|bg_007",
+      "internal_edge_distribution": {
+        "0": 2571228,
+        "1": 567012,
+        "2": 44156,
+        "3": 1108,
+        "4": 41
+      },
+      "internal_edge_required_kappa_count": 2,
+      "internal_edge_required_lambda_count": 2,
+      "kappa_minimal_cardinality": "EXACTLY_4",
+      "kappa_quartet_rescue_count": 2,
+      "kappa_rescues_by_internal_edge_count": {
+        "0": 0,
+        "1": 2,
+        "2": 0,
+        "3": 0,
+        "4": 0
+      },
+      "kappa_rescuing_quartet_examples": [
+        [
+          80,
+          185,
+          187,
+          225
+        ],
+        [
+          144,
+          185,
+          187,
+          225
+        ]
+      ],
+      "kappa_scope": true,
+      "lambda_minimal_cardinality": "EXACTLY_4",
+      "lambda_quartet_rescue_count": 2,
+      "lambda_rescues_by_internal_edge_count": {
+        "0": 0,
+        "1": 2,
+        "2": 0,
+        "3": 0,
+        "4": 0
+      },
+      "lambda_rescuing_quartet_examples": [
+        [
+          80,
+          185,
+          187,
+          225
+        ],
+        [
+          144,
+          185,
+          187,
+          225
+        ]
+      ],
+      "lambda_scope": true,
+      "node_count": 95,
+      "pair_index": 697,
+      "period": 2,
+      "phase104_stratum_index": 18,
+      "quartet_count": 3183545,
+      "rule": 109,
+      "stratum_index": 9
+    },
+    {
+      "background_index": 12,
+      "cube_key": "baseline_period_1_2_4|rule_109|bg_012",
+      "internal_edge_distribution": {
+        "0": 227041,
+        "1": 78203,
+        "2": 10473,
+        "3": 509,
+        "4": 25
+      },
+      "internal_edge_required_kappa_count": 1,
+      "internal_edge_required_lambda_count": 2,
+      "kappa_minimal_cardinality": "EXACTLY_4",
+      "kappa_quartet_rescue_count": 1,
+      "kappa_rescues_by_internal_edge_count": {
+        "0": 0,
+        "1": 0,
+        "2": 1,
+        "3": 0,
+        "4": 0
+      },
+      "kappa_rescuing_quartet_examples": [
+        [
+          33,
+          48,
+          56,
+          58
+        ]
+      ],
+      "kappa_scope": true,
+      "lambda_minimal_cardinality": "EXACTLY_4",
+      "lambda_quartet_rescue_count": 2,
+      "lambda_rescues_by_internal_edge_count": {
+        "0": 0,
+        "1": 0,
+        "2": 1,
+        "3": 1,
+        "4": 0
+      },
+      "lambda_rescuing_quartet_examples": [
+        [
+          33,
+          48,
+          56,
+          58
+        ],
+        [
+          48,
+          49,
+          56,
+          58
+        ]
+      ],
+      "lambda_scope": true,
+      "node_count": 54,
+      "pair_index": 527,
+      "period": 3,
+      "phase104_stratum_index": 22,
+      "quartet_count": 316251,
+      "rule": 109,
+      "stratum_index": 10
+    },
+    {
+      "background_index": 12,
+      "cube_key": "baseline_period_1_2_4|rule_109|bg_012",
+      "internal_edge_distribution": {
+        "0": 227041,
+        "1": 78203,
+        "2": 10473,
+        "3": 509,
+        "4": 25
+      },
+      "internal_edge_required_kappa_count": 1,
+      "internal_edge_required_lambda_count": 2,
+      "kappa_minimal_cardinality": "EXACTLY_4",
+      "kappa_quartet_rescue_count": 1,
+      "kappa_rescues_by_internal_edge_count": {
+        "0": 0,
+        "1": 0,
+        "2": 1,
+        "3": 0,
+        "4": 0
+      },
+      "kappa_rescuing_quartet_examples": [
+        [
+          33,
+          48,
+          56,
+          58
+        ]
+      ],
+      "kappa_scope": true,
+      "lambda_minimal_cardinality": "EXACTLY_4",
+      "lambda_quartet_rescue_count": 2,
+      "lambda_rescues_by_internal_edge_count": {
+        "0": 0,
+        "1": 0,
+        "2": 1,
+        "3": 1,
+        "4": 0
+      },
+      "lambda_rescuing_quartet_examples": [
+        [
+          33,
+          48,
+          56,
+          58
+        ],
+        [
+          48,
+          49,
+          56,
+          58
+        ]
+      ],
+      "lambda_scope": true,
+      "node_count": 54,
+      "pair_index": 529,
+      "period": 3,
+      "phase104_stratum_index": 23,
+      "quartet_count": 316251,
+      "rule": 109,
+      "stratum_index": 11
+    },
+    {
+      "background_index": 7,
+      "cube_key": "primitive_len8|rule_073|bg_007",
+      "internal_edge_distribution": {
+        "0": 178293,
+        "1": 62520,
+        "2": 8657,
+        "3": 410,
+        "4": 20
+      },
+      "internal_edge_required_kappa_count": 0,
+      "internal_edge_required_lambda_count": 2,
+      "kappa_minimal_cardinality": "NOT_APPLICABLE_NOT_AT_LEAST_FOUR",
+      "kappa_quartet_rescue_count": 0,
+      "kappa_rescues_by_internal_edge_count": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0
+      },
+      "kappa_rescuing_quartet_examples": [],
+      "kappa_scope": false,
+      "lambda_minimal_cardinality": "EXACTLY_4",
+      "lambda_quartet_rescue_count": 2,
+      "lambda_rescues_by_internal_edge_count": {
+        "0": 0,
+        "1": 0,
+        "2": 2,
+        "3": 0,
+        "4": 0
+      },
+      "lambda_rescuing_quartet_examples": [
+        [
+          192,
+          202,
+          224,
+          234
+        ],
+        [
+          192,
+          224,
+          234,
+          238
+        ]
+      ],
+      "lambda_scope": true,
+      "node_count": 51,
+      "pair_index": 674,
+      "period": 3,
+      "phase104_stratum_index": 29,
+      "quartet_count": 249900,
+      "rule": 73,
+      "stratum_index": 12
+    },
+    {
+      "background_index": 7,
+      "cube_key": "primitive_len8|rule_073|bg_007",
+      "internal_edge_distribution": {
+        "0": 178293,
+        "1": 62520,
+        "2": 8657,
+        "3": 410,
+        "4": 20
+      },
+      "internal_edge_required_kappa_count": 0,
+      "internal_edge_required_lambda_count": 2,
+      "kappa_minimal_cardinality": "NOT_APPLICABLE_NOT_AT_LEAST_FOUR",
+      "kappa_quartet_rescue_count": 0,
+      "kappa_rescues_by_internal_edge_count": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0
+      },
+      "kappa_rescuing_quartet_examples": [],
+      "kappa_scope": false,
+      "lambda_minimal_cardinality": "EXACTLY_4",
+      "lambda_quartet_rescue_count": 2,
+      "lambda_rescues_by_internal_edge_count": {
+        "0": 0,
+        "1": 0,
+        "2": 2,
+        "3": 0,
+        "4": 0
+      },
+      "lambda_rescuing_quartet_examples": [
+        [
+          192,
+          202,
+          224,
+          234
+        ],
+        [
+          192,
+          224,
+          234,
+          238
+        ]
+      ],
+      "lambda_scope": true,
+      "node_count": 51,
+      "pair_index": 867,
+      "period": 3,
+      "phase104_stratum_index": 30,
+      "quartet_count": 249900,
+      "rule": 73,
+      "stratum_index": 13
+    },
+    {
+      "background_index": 19,
+      "cube_key": "primitive_len8|rule_073|bg_019",
+      "internal_edge_distribution": {
+        "0": 155675,
+        "1": 64072,
+        "2": 10032,
+        "3": 492,
+        "4": 29
+      },
+      "internal_edge_required_kappa_count": 0,
+      "internal_edge_required_lambda_count": 5,
+      "kappa_minimal_cardinality": "NOT_APPLICABLE_NOT_AT_LEAST_FOUR",
+      "kappa_quartet_rescue_count": 0,
+      "kappa_rescues_by_internal_edge_count": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0
+      },
+      "kappa_rescuing_quartet_examples": [],
+      "kappa_scope": false,
+      "lambda_minimal_cardinality": "EXACTLY_4",
+      "lambda_quartet_rescue_count": 5,
+      "lambda_rescues_by_internal_edge_count": {
+        "0": 0,
+        "1": 0,
+        "2": 3,
+        "3": 2,
+        "4": 0
+      },
+      "lambda_rescuing_quartet_examples": [
+        [
+          96,
+          112,
+          192,
+          224
+        ],
+        [
+          164,
+          192,
+          224,
+          228
+        ],
+        [
+          170,
+          192,
+          224,
+          234
+        ],
+        [
+          192,
+          202,
+          224,
+          234
+        ],
+        [
+          192,
+          224,
+          234,
+          238
+        ]
+      ],
+      "lambda_scope": true,
+      "node_count": 50,
+      "pair_index": 621,
+      "period": 3,
+      "phase104_stratum_index": 34,
+      "quartet_count": 230300,
+      "rule": 73,
+      "stratum_index": 14
+    },
+    {
+      "background_index": 19,
+      "cube_key": "primitive_len8|rule_073|bg_019",
+      "internal_edge_distribution": {
+        "0": 155675,
+        "1": 64072,
+        "2": 10032,
+        "3": 492,
+        "4": 29
+      },
+      "internal_edge_required_kappa_count": 0,
+      "internal_edge_required_lambda_count": 5,
+      "kappa_minimal_cardinality": "NOT_APPLICABLE_NOT_AT_LEAST_FOUR",
+      "kappa_quartet_rescue_count": 0,
+      "kappa_rescues_by_internal_edge_count": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0
+      },
+      "kappa_rescuing_quartet_examples": [],
+      "kappa_scope": false,
+      "lambda_minimal_cardinality": "EXACTLY_4",
+      "lambda_quartet_rescue_count": 5,
+      "lambda_rescues_by_internal_edge_count": {
+        "0": 0,
+        "1": 0,
+        "2": 3,
+        "3": 2,
+        "4": 0
+      },
+      "lambda_rescuing_quartet_examples": [
+        [
+          96,
+          112,
+          192,
+          224
+        ],
+        [
+          164,
+          192,
+          224,
+          228
+        ],
+        [
+          170,
+          192,
+          224,
+          234
+        ],
+        [
+          192,
+          202,
+          224,
+          234
+        ],
+        [
+          192,
+          224,
+          234,
+          238
+        ]
+      ],
+      "lambda_scope": true,
+      "node_count": 50,
+      "pair_index": 622,
+      "period": 3,
+      "phase104_stratum_index": 35,
+      "quartet_count": 230300,
+      "rule": 73,
+      "stratum_index": 15
+    },
+    {
+      "background_index": 19,
+      "cube_key": "primitive_len8|rule_073|bg_019",
+      "internal_edge_distribution": {
+        "0": 155675,
+        "1": 64072,
+        "2": 10032,
+        "3": 492,
+        "4": 29
+      },
+      "internal_edge_required_kappa_count": 0,
+      "internal_edge_required_lambda_count": 1,
+      "kappa_minimal_cardinality": "NOT_APPLICABLE_NOT_AT_LEAST_FOUR",
+      "kappa_quartet_rescue_count": 0,
+      "kappa_rescues_by_internal_edge_count": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0
+      },
+      "kappa_rescuing_quartet_examples": [],
+      "kappa_scope": false,
+      "lambda_minimal_cardinality": "EXACTLY_4",
+      "lambda_quartet_rescue_count": 1,
+      "lambda_rescues_by_internal_edge_count": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 1,
+        "4": 0
+      },
+      "lambda_rescuing_quartet_examples": [
+        [
+          164,
+          192,
+          224,
+          228
+        ]
+      ],
+      "lambda_scope": true,
+      "node_count": 50,
+      "pair_index": 623,
+      "period": 3,
+      "phase104_stratum_index": 36,
+      "quartet_count": 230300,
+      "rule": 73,
+      "stratum_index": 16
+    },
+    {
+      "background_index": 19,
+      "cube_key": "primitive_len8|rule_073|bg_019",
+      "internal_edge_distribution": {
+        "0": 155675,
+        "1": 64072,
+        "2": 10032,
+        "3": 492,
+        "4": 29
+      },
+      "internal_edge_required_kappa_count": 0,
+      "internal_edge_required_lambda_count": 5,
+      "kappa_minimal_cardinality": "NOT_APPLICABLE_NOT_AT_LEAST_FOUR",
+      "kappa_quartet_rescue_count": 0,
+      "kappa_rescues_by_internal_edge_count": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0
+      },
+      "kappa_rescuing_quartet_examples": [],
+      "kappa_scope": false,
+      "lambda_minimal_cardinality": "EXACTLY_4",
+      "lambda_quartet_rescue_count": 5,
+      "lambda_rescues_by_internal_edge_count": {
+        "0": 0,
+        "1": 0,
+        "2": 3,
+        "3": 2,
+        "4": 0
+      },
+      "lambda_rescuing_quartet_examples": [
+        [
+          96,
+          112,
+          192,
+          224
+        ],
+        [
+          164,
+          192,
+          224,
+          228
+        ],
+        [
+          170,
+          192,
+          224,
+          234
+        ],
+        [
+          192,
+          202,
+          224,
+          234
+        ],
+        [
+          192,
+          224,
+          234,
+          238
+        ]
+      ],
+      "lambda_scope": true,
+      "node_count": 50,
+      "pair_index": 677,
+      "period": 3,
+      "phase104_stratum_index": 37,
+      "quartet_count": 230300,
+      "rule": 73,
+      "stratum_index": 17
+    },
+    {
+      "background_index": 19,
+      "cube_key": "primitive_len8|rule_073|bg_019",
+      "internal_edge_distribution": {
+        "0": 155675,
+        "1": 64072,
+        "2": 10032,
+        "3": 492,
+        "4": 29
+      },
+      "internal_edge_required_kappa_count": 0,
+      "internal_edge_required_lambda_count": 5,
+      "kappa_minimal_cardinality": "NOT_APPLICABLE_NOT_AT_LEAST_FOUR",
+      "kappa_quartet_rescue_count": 0,
+      "kappa_rescues_by_internal_edge_count": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0
+      },
+      "kappa_rescuing_quartet_examples": [],
+      "kappa_scope": false,
+      "lambda_minimal_cardinality": "EXACTLY_4",
+      "lambda_quartet_rescue_count": 5,
+      "lambda_rescues_by_internal_edge_count": {
+        "0": 0,
+        "1": 0,
+        "2": 3,
+        "3": 2,
+        "4": 0
+      },
+      "lambda_rescuing_quartet_examples": [
+        [
+          96,
+          112,
+          192,
+          224
+        ],
+        [
+          164,
+          192,
+          224,
+          228
+        ],
+        [
+          170,
+          192,
+          224,
+          234
+        ],
+        [
+          192,
+          202,
+          224,
+          234
+        ],
+        [
+          192,
+          224,
+          234,
+          238
+        ]
+      ],
+      "lambda_scope": true,
+      "node_count": 50,
+      "pair_index": 678,
+      "period": 3,
+      "phase104_stratum_index": 38,
+      "quartet_count": 230300,
+      "rule": 73,
+      "stratum_index": 18
+    },
+    {
+      "background_index": 19,
+      "cube_key": "primitive_len8|rule_073|bg_019",
+      "internal_edge_distribution": {
+        "0": 155675,
+        "1": 64072,
+        "2": 10032,
+        "3": 492,
+        "4": 29
+      },
+      "internal_edge_required_kappa_count": 0,
+      "internal_edge_required_lambda_count": 5,
+      "kappa_minimal_cardinality": "NOT_APPLICABLE_NOT_AT_LEAST_FOUR",
+      "kappa_quartet_rescue_count": 0,
+      "kappa_rescues_by_internal_edge_count": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0
+      },
+      "kappa_rescuing_quartet_examples": [],
+      "kappa_scope": false,
+      "lambda_minimal_cardinality": "EXACTLY_4",
+      "lambda_quartet_rescue_count": 5,
+      "lambda_rescues_by_internal_edge_count": {
+        "0": 0,
+        "1": 0,
+        "2": 3,
+        "3": 2,
+        "4": 0
+      },
+      "lambda_rescuing_quartet_examples": [
+        [
+          96,
+          112,
+          192,
+          224
+        ],
+        [
+          164,
+          192,
+          224,
+          228
+        ],
+        [
+          170,
+          192,
+          224,
+          234
+        ],
+        [
+          192,
+          202,
+          224,
+          234
+        ],
+        [
+          192,
+          224,
+          234,
+          238
+        ]
+      ],
+      "lambda_scope": true,
+      "node_count": 50,
+      "pair_index": 868,
+      "period": 3,
+      "phase104_stratum_index": 39,
+      "quartet_count": 230300,
+      "rule": 73,
+      "stratum_index": 19
+    },
+    {
+      "background_index": 21,
+      "cube_key": "primitive_len8|rule_073|bg_021",
+      "internal_edge_distribution": {
+        "0": 341731,
+        "1": 102610,
+        "2": 10494,
+        "3": 274,
+        "4": 17
+      },
+      "internal_edge_required_kappa_count": 9,
+      "internal_edge_required_lambda_count": 9,
+      "kappa_minimal_cardinality": "EXACTLY_4",
+      "kappa_quartet_rescue_count": 9,
+      "kappa_rescues_by_internal_edge_count": {
+        "0": 0,
+        "1": 0,
+        "2": 9,
+        "3": 0,
+        "4": 0
+      },
+      "kappa_rescuing_quartet_examples": [
+        [
+          9,
+          10,
+          41,
+          43
+        ],
+        [
+          9,
+          10,
+          72,
+          73
+        ],
+        [
+          9,
+          10,
+          73,
+          75
+        ],
+        [
+          9,
+          41,
+          43,
+          130
+        ],
+        [
+          9,
+          41,
+          43,
+          142
+        ],
+        [
+          9,
+          72,
+          73,
+          130
+        ],
+        [
+          9,
+          72,
+          73,
+          142
+        ],
+        [
+          9,
+          73,
+          75,
+          130
+        ],
+        [
+          9,
+          73,
+          75,
+          142
+        ]
+      ],
+      "kappa_scope": true,
+      "lambda_minimal_cardinality": "EXACTLY_4",
+      "lambda_quartet_rescue_count": 9,
+      "lambda_rescues_by_internal_edge_count": {
+        "0": 0,
+        "1": 0,
+        "2": 9,
+        "3": 0,
+        "4": 0
+      },
+      "lambda_rescuing_quartet_examples": [
+        [
+          9,
+          10,
+          41,
+          43
+        ],
+        [
+          9,
+          10,
+          72,
+          73
+        ],
+        [
+          9,
+          10,
+          73,
+          75
+        ],
+        [
+          9,
+          41,
+          43,
+          130
+        ],
+        [
+          9,
+          41,
+          43,
+          142
+        ],
+        [
+          9,
+          72,
+          73,
+          130
+        ],
+        [
+          9,
+          72,
+          73,
+          142
+        ],
+        [
+          9,
+          73,
+          75,
+          130
+        ],
+        [
+          9,
+          73,
+          75,
+          142
+        ]
+      ],
+      "lambda_scope": true,
+      "node_count": 59,
+      "pair_index": 282,
+      "period": 3,
+      "phase104_stratum_index": 40,
+      "quartet_count": 455126,
+      "rule": 73,
+      "stratum_index": 20
+    },
+    {
+      "background_index": 5,
+      "cube_key": "primitive_len8|rule_109|bg_005",
+      "internal_edge_distribution": {
+        "0": 155802,
+        "1": 63829,
+        "2": 10137,
+        "3": 503,
+        "4": 29
+      },
+      "internal_edge_required_kappa_count": 0,
+      "internal_edge_required_lambda_count": 5,
+      "kappa_minimal_cardinality": "NOT_APPLICABLE_NOT_AT_LEAST_FOUR",
+      "kappa_quartet_rescue_count": 0,
+      "kappa_rescues_by_internal_edge_count": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0
+      },
+      "kappa_rescuing_quartet_examples": [],
+      "kappa_scope": false,
+      "lambda_minimal_cardinality": "EXACTLY_4",
+      "lambda_quartet_rescue_count": 5,
+      "lambda_rescues_by_internal_edge_count": {
+        "0": 0,
+        "1": 0,
+        "2": 3,
+        "3": 2,
+        "4": 0
+      },
+      "lambda_rescuing_quartet_examples": [
+        [
+          136,
+          168,
+          248,
+          252
+        ],
+        [
+          168,
+          170,
+          248,
+          252
+        ],
+        [
+          168,
+          172,
+          248,
+          252
+        ],
+        [
+          216,
+          218,
+          248,
+          252
+        ],
+        [
+          241,
+          248,
+          249,
+          252
+        ]
+      ],
+      "lambda_scope": true,
+      "node_count": 50,
+      "pair_index": 82,
+      "period": 3,
+      "phase104_stratum_index": 49,
+      "quartet_count": 230300,
+      "rule": 109,
+      "stratum_index": 21
+    },
+    {
+      "background_index": 5,
+      "cube_key": "primitive_len8|rule_109|bg_005",
+      "internal_edge_distribution": {
+        "0": 155802,
+        "1": 63829,
+        "2": 10137,
+        "3": 503,
+        "4": 29
+      },
+      "internal_edge_required_kappa_count": 0,
+      "internal_edge_required_lambda_count": 5,
+      "kappa_minimal_cardinality": "NOT_APPLICABLE_NOT_AT_LEAST_FOUR",
+      "kappa_quartet_rescue_count": 0,
+      "kappa_rescues_by_internal_edge_count": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0
+      },
+      "kappa_rescuing_quartet_examples": [],
+      "kappa_scope": false,
+      "lambda_minimal_cardinality": "EXACTLY_4",
+      "lambda_quartet_rescue_count": 5,
+      "lambda_rescues_by_internal_edge_count": {
+        "0": 0,
+        "1": 0,
+        "2": 3,
+        "3": 2,
+        "4": 0
+      },
+      "lambda_rescuing_quartet_examples": [
+        [
+          136,
+          168,
+          248,
+          252
+        ],
+        [
+          168,
+          170,
+          248,
+          252
+        ],
+        [
+          168,
+          172,
+          248,
+          252
+        ],
+        [
+          216,
+          218,
+          248,
+          252
+        ],
+        [
+          241,
+          248,
+          249,
+          252
+        ]
+      ],
+      "lambda_scope": true,
+      "node_count": 50,
+      "pair_index": 659,
+      "period": 3,
+      "phase104_stratum_index": 50,
+      "quartet_count": 230300,
+      "rule": 109,
+      "stratum_index": 22
+    },
+    {
+      "background_index": 5,
+      "cube_key": "primitive_len8|rule_109|bg_005",
+      "internal_edge_distribution": {
+        "0": 155802,
+        "1": 63829,
+        "2": 10137,
+        "3": 503,
+        "4": 29
+      },
+      "internal_edge_required_kappa_count": 0,
+      "internal_edge_required_lambda_count": 5,
+      "kappa_minimal_cardinality": "NOT_APPLICABLE_NOT_AT_LEAST_FOUR",
+      "kappa_quartet_rescue_count": 0,
+      "kappa_rescues_by_internal_edge_count": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0
+      },
+      "kappa_rescuing_quartet_examples": [],
+      "kappa_scope": false,
+      "lambda_minimal_cardinality": "EXACTLY_4",
+      "lambda_quartet_rescue_count": 5,
+      "lambda_rescues_by_internal_edge_count": {
+        "0": 0,
+        "1": 0,
+        "2": 3,
+        "3": 2,
+        "4": 0
+      },
+      "lambda_rescuing_quartet_examples": [
+        [
+          136,
+          168,
+          248,
+          252
+        ],
+        [
+          168,
+          170,
+          248,
+          252
+        ],
+        [
+          168,
+          172,
+          248,
+          252
+        ],
+        [
+          216,
+          218,
+          248,
+          252
+        ],
+        [
+          241,
+          248,
+          249,
+          252
+        ]
+      ],
+      "lambda_scope": true,
+      "node_count": 50,
+      "pair_index": 660,
+      "period": 3,
+      "phase104_stratum_index": 51,
+      "quartet_count": 230300,
+      "rule": 109,
+      "stratum_index": 23
+    },
+    {
+      "background_index": 5,
+      "cube_key": "primitive_len8|rule_109|bg_005",
+      "internal_edge_distribution": {
+        "0": 155802,
+        "1": 63829,
+        "2": 10137,
+        "3": 503,
+        "4": 29
+      },
+      "internal_edge_required_kappa_count": 0,
+      "internal_edge_required_lambda_count": 5,
+      "kappa_minimal_cardinality": "NOT_APPLICABLE_NOT_AT_LEAST_FOUR",
+      "kappa_quartet_rescue_count": 0,
+      "kappa_rescues_by_internal_edge_count": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0
+      },
+      "kappa_rescuing_quartet_examples": [],
+      "kappa_scope": false,
+      "lambda_minimal_cardinality": "EXACTLY_4",
+      "lambda_quartet_rescue_count": 5,
+      "lambda_rescues_by_internal_edge_count": {
+        "0": 0,
+        "1": 0,
+        "2": 3,
+        "3": 2,
+        "4": 0
+      },
+      "lambda_rescuing_quartet_examples": [
+        [
+          136,
+          168,
+          248,
+          252
+        ],
+        [
+          168,
+          170,
+          248,
+          252
+        ],
+        [
+          168,
+          172,
+          248,
+          252
+        ],
+        [
+          216,
+          218,
+          248,
+          252
+        ],
+        [
+          241,
+          248,
+          249,
+          252
+        ]
+      ],
+      "lambda_scope": true,
+      "node_count": 50,
+      "pair_index": 956,
+      "period": 3,
+      "phase104_stratum_index": 52,
+      "quartet_count": 230300,
+      "rule": 109,
+      "stratum_index": 24
+    },
+    {
+      "background_index": 5,
+      "cube_key": "primitive_len8|rule_109|bg_005",
+      "internal_edge_distribution": {
+        "0": 155802,
+        "1": 63829,
+        "2": 10137,
+        "3": 503,
+        "4": 29
+      },
+      "internal_edge_required_kappa_count": 0,
+      "internal_edge_required_lambda_count": 5,
+      "kappa_minimal_cardinality": "NOT_APPLICABLE_NOT_AT_LEAST_FOUR",
+      "kappa_quartet_rescue_count": 0,
+      "kappa_rescues_by_internal_edge_count": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0
+      },
+      "kappa_rescuing_quartet_examples": [],
+      "kappa_scope": false,
+      "lambda_minimal_cardinality": "EXACTLY_4",
+      "lambda_quartet_rescue_count": 5,
+      "lambda_rescues_by_internal_edge_count": {
+        "0": 0,
+        "1": 0,
+        "2": 3,
+        "3": 2,
+        "4": 0
+      },
+      "lambda_rescuing_quartet_examples": [
+        [
+          136,
+          168,
+          248,
+          252
+        ],
+        [
+          168,
+          170,
+          248,
+          252
+        ],
+        [
+          168,
+          172,
+          248,
+          252
+        ],
+        [
+          216,
+          218,
+          248,
+          252
+        ],
+        [
+          241,
+          248,
+          249,
+          252
+        ]
+      ],
+      "lambda_scope": true,
+      "node_count": 50,
+      "pair_index": 959,
+      "period": 3,
+      "phase104_stratum_index": 53,
+      "quartet_count": 230300,
+      "rule": 109,
+      "stratum_index": 25
+    },
+    {
+      "background_index": 5,
+      "cube_key": "primitive_len8|rule_109|bg_005",
+      "internal_edge_distribution": {
+        "0": 155802,
+        "1": 63829,
+        "2": 10137,
+        "3": 503,
+        "4": 29
+      },
+      "internal_edge_required_kappa_count": 0,
+      "internal_edge_required_lambda_count": 1,
+      "kappa_minimal_cardinality": "NOT_APPLICABLE_NOT_AT_LEAST_FOUR",
+      "kappa_quartet_rescue_count": 0,
+      "kappa_rescues_by_internal_edge_count": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0
+      },
+      "kappa_rescuing_quartet_examples": [],
+      "kappa_scope": false,
+      "lambda_minimal_cardinality": "EXACTLY_4",
+      "lambda_quartet_rescue_count": 1,
+      "lambda_rescues_by_internal_edge_count": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 1,
+        "4": 0
+      },
+      "lambda_rescuing_quartet_examples": [
+        [
+          216,
+          218,
+          248,
+          252
+        ]
+      ],
+      "lambda_scope": true,
+      "node_count": 50,
+      "pair_index": 961,
+      "period": 3,
+      "phase104_stratum_index": 54,
+      "quartet_count": 230300,
+      "rule": 109,
+      "stratum_index": 26
+    },
+    {
+      "background_index": 7,
+      "cube_key": "primitive_len8|rule_109|bg_007",
+      "internal_edge_distribution": {
+        "0": 162856,
+        "1": 58634,
+        "2": 8380,
+        "3": 410,
+        "4": 20
+      },
+      "internal_edge_required_kappa_count": 0,
+      "internal_edge_required_lambda_count": 2,
+      "kappa_minimal_cardinality": "NOT_APPLICABLE_NOT_AT_LEAST_FOUR",
+      "kappa_quartet_rescue_count": 0,
+      "kappa_rescues_by_internal_edge_count": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0
+      },
+      "kappa_rescuing_quartet_examples": [],
+      "kappa_scope": false,
+      "lambda_minimal_cardinality": "EXACTLY_4",
+      "lambda_quartet_rescue_count": 2,
+      "lambda_rescues_by_internal_edge_count": {
+        "0": 0,
+        "1": 0,
+        "2": 2,
+        "3": 0,
+        "4": 0
+      },
+      "lambda_rescuing_quartet_examples": [
+        [
+          136,
+          168,
+          248,
+          252
+        ],
+        [
+          168,
+          172,
+          248,
+          252
+        ]
+      ],
+      "lambda_scope": true,
+      "node_count": 50,
+      "pair_index": 84,
+      "period": 3,
+      "phase104_stratum_index": 55,
+      "quartet_count": 230300,
+      "rule": 109,
+      "stratum_index": 27
+    },
+    {
+      "background_index": 7,
+      "cube_key": "primitive_len8|rule_109|bg_007",
+      "internal_edge_distribution": {
+        "0": 162856,
+        "1": 58634,
+        "2": 8380,
+        "3": 410,
+        "4": 20
+      },
+      "internal_edge_required_kappa_count": 0,
+      "internal_edge_required_lambda_count": 2,
+      "kappa_minimal_cardinality": "NOT_APPLICABLE_NOT_AT_LEAST_FOUR",
+      "kappa_quartet_rescue_count": 0,
+      "kappa_rescues_by_internal_edge_count": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0
+      },
+      "kappa_rescuing_quartet_examples": [],
+      "kappa_scope": false,
+      "lambda_minimal_cardinality": "EXACTLY_4",
+      "lambda_quartet_rescue_count": 2,
+      "lambda_rescues_by_internal_edge_count": {
+        "0": 0,
+        "1": 0,
+        "2": 2,
+        "3": 0,
+        "4": 0
+      },
+      "lambda_rescuing_quartet_examples": [
+        [
+          136,
+          168,
+          248,
+          252
+        ],
+        [
+          168,
+          172,
+          248,
+          252
+        ]
+      ],
+      "lambda_scope": true,
+      "node_count": 50,
+      "pair_index": 662,
+      "period": 3,
+      "phase104_stratum_index": 56,
+      "quartet_count": 230300,
+      "rule": 109,
+      "stratum_index": 28
+    },
+    {
+      "background_index": 8,
+      "cube_key": "primitive_len8|rule_109|bg_008",
+      "internal_edge_distribution": {
+        "0": 367167,
+        "1": 109027,
+        "2": 11127,
+        "3": 297,
+        "4": 17
+      },
+      "internal_edge_required_kappa_count": 9,
+      "internal_edge_required_lambda_count": 9,
+      "kappa_minimal_cardinality": "EXACTLY_4",
+      "kappa_quartet_rescue_count": 9,
+      "kappa_rescues_by_internal_edge_count": {
+        "0": 0,
+        "1": 0,
+        "2": 9,
+        "3": 0,
+        "4": 0
+      },
+      "kappa_rescuing_quartet_examples": [
+        [
+          43,
+          107,
+          111,
+          142
+        ],
+        [
+          43,
+          107,
+          111,
+          175
+        ],
+        [
+          43,
+          107,
+          111,
+          190
+        ],
+        [
+          45,
+          109,
+          111,
+          142
+        ],
+        [
+          45,
+          109,
+          111,
+          175
+        ],
+        [
+          45,
+          109,
+          111,
+          190
+        ],
+        [
+          109,
+          111,
+          142,
+          237
+        ],
+        [
+          109,
+          111,
+          175,
+          237
+        ],
+        [
+          109,
+          111,
+          190,
+          237
+        ]
+      ],
+      "kappa_scope": true,
+      "lambda_minimal_cardinality": "EXACTLY_4",
+      "lambda_quartet_rescue_count": 9,
+      "lambda_rescues_by_internal_edge_count": {
+        "0": 0,
+        "1": 0,
+        "2": 9,
+        "3": 0,
+        "4": 0
+      },
+      "lambda_rescuing_quartet_examples": [
+        [
+          43,
+          107,
+          111,
+          142
+        ],
+        [
+          43,
+          107,
+          111,
+          175
+        ],
+        [
+          43,
+          107,
+          111,
+          190
+        ],
+        [
+          45,
+          109,
+          111,
+          142
+        ],
+        [
+          45,
+          109,
+          111,
+          175
+        ],
+        [
+          45,
+          109,
+          111,
+          190
+        ],
+        [
+          109,
+          111,
+          142,
+          237
+        ],
+        [
+          109,
+          111,
+          175,
+          237
+        ],
+        [
+          109,
+          111,
+          190,
+          237
+        ]
+      ],
+      "lambda_scope": true,
+      "node_count": 60,
+      "pair_index": 619,
+      "period": 3,
+      "phase104_stratum_index": 57,
+      "quartet_count": 487635,
+      "rule": 109,
+      "stratum_index": 29
+    },
+    {
+      "background_index": 20,
+      "cube_key": "primitive_len8|rule_109|bg_020",
+      "internal_edge_distribution": {
+        "0": 7301,
+        "1": 2962,
+        "2": 356,
+        "3": 6,
+        "4": 1
+      },
+      "internal_edge_required_kappa_count": 1,
+      "internal_edge_required_lambda_count": 1,
+      "kappa_minimal_cardinality": "EXACTLY_4",
+      "kappa_quartet_rescue_count": 1,
+      "kappa_rescues_by_internal_edge_count": {
+        "0": 0,
+        "1": 0,
+        "2": 1,
+        "3": 0,
+        "4": 0
+      },
+      "kappa_rescuing_quartet_examples": [
+        [
+          84,
+          108,
+          110,
+          238
+        ]
+      ],
+      "kappa_scope": true,
+      "lambda_minimal_cardinality": "EXACTLY_4",
+      "lambda_quartet_rescue_count": 1,
+      "lambda_rescues_by_internal_edge_count": {
+        "0": 0,
+        "1": 0,
+        "2": 1,
+        "3": 0,
+        "4": 0
+      },
+      "lambda_rescuing_quartet_examples": [
+        [
+          84,
+          108,
+          110,
+          238
+        ]
+      ],
+      "lambda_scope": true,
+      "node_count": 24,
+      "pair_index": 190,
+      "period": 12,
+      "phase104_stratum_index": 63,
+      "quartet_count": 10626,
+      "rule": 109,
+      "stratum_index": 30
+    },
+    {
+      "background_index": 22,
+      "cube_key": "primitive_len8|rule_109|bg_022",
+      "internal_edge_distribution": {
+        "0": 3492398,
+        "1": 845623,
+        "2": 80445,
+        "3": 2699,
+        "4": 110
+      },
+      "internal_edge_required_kappa_count": 42,
+      "internal_edge_required_lambda_count": 0,
+      "kappa_minimal_cardinality": "EXACTLY_4",
+      "kappa_quartet_rescue_count": 42,
+      "kappa_rescues_by_internal_edge_count": {
+        "0": 0,
+        "1": 19,
+        "2": 23,
+        "3": 0,
+        "4": 0
+      },
+      "kappa_rescuing_quartet_examples": [
+        [
+          33,
+          49,
+          109,
+          161
+        ],
+        [
+          33,
+          97,
+          103,
+          161
+        ],
+        [
+          33,
+          97,
+          109,
+          161
+        ],
+        [
+          49,
+          109,
+          161,
+          177
+        ],
+        [
+          71,
+          79,
+          129,
+          161
+        ],
+        [
+          71,
+          79,
+          161,
+          225
+        ],
+        [
+          71,
+          103,
+          129,
+          161
+        ],
+        [
+          71,
+          103,
+          161,
+          225
+        ],
+        [
+          79,
+          129,
+          137,
+          161
+        ],
+        [
+          79,
+          137,
+          161,
+          169
+        ],
+        [
+          79,
+          161,
+          169,
+          173
+        ],
+        [
+          81,
+          109,
+          129,
+          161
+        ],
+        [
+          81,
+          109,
+          161,
+          225
+        ],
+        [
+          85,
+          109,
+          129,
+          161
+        ],
+        [
+          85,
+          109,
+          161,
+          225
+        ],
+        [
+          97,
+          103,
+          129,
+          161
+        ],
+        [
+          97,
+          103,
+          161,
+          169
+        ],
+        [
+          97,
+          103,
+          161,
+          225
+        ],
+        [
+          97,
+          109,
+          129,
+          161
+        ],
+        [
+          97,
+          109,
+          161,
+          169
+        ]
+      ],
+      "kappa_scope": true,
+      "lambda_minimal_cardinality": "NOT_APPLICABLE_NOT_AT_LEAST_FOUR",
+      "lambda_quartet_rescue_count": 0,
+      "lambda_rescues_by_internal_edge_count": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0
+      },
+      "lambda_rescuing_quartet_examples": [],
+      "lambda_scope": false,
+      "node_count": 103,
+      "pair_index": 101,
+      "period": 6,
+      "phase104_stratum_index": 67,
+      "quartet_count": 4421275,
+      "rule": 109,
+      "stratum_index": 31
+    }
+  ],
+  "summary": {
+    "checkpoint_reused_count": 0,
+    "internal_edge_distribution": {
+      "0": 18847049,
+      "1": 4974572,
+      "2": 520726,
+      "3": 19562,
+      "4": 941
+    },
+    "internal_edge_required_kappa_count": 77,
+    "internal_edge_required_lambda_count": 103,
+    "kappa_at_least_five_strata": 0,
+    "kappa_exactly_four_strata": 16,
+    "kappa_quartet_rescue_count": 77,
+    "kappa_rescues_by_internal_edge_count": {
+      "0": 0,
+      "1": 27,
+      "2": 50,
+      "3": 0,
+      "4": 0
+    },
+    "kappa_rescues_by_period": {
+      "2": 8,
+      "3": 26,
+      "6": 42,
+      "12": 1
+    },
+    "kappa_rescues_by_rule": {
+      "73": 17,
+      "109": 60
+    },
+    "kappa_stratum_count": 16,
+    "kappa_trial_count": 20638850,
+    "lambda_at_least_five_strata": 0,
+    "lambda_exactly_four_strata": 31,
+    "lambda_quartet_rescue_count": 103,
+    "lambda_rescues_by_internal_edge_count": {
+      "0": 0,
+      "1": 8,
+      "2": 65,
+      "3": 30,
+      "4": 0
+    },
+    "lambda_rescues_by_period": {
+      "2": 8,
+      "3": 94,
+      "12": 1
+    },
+    "lambda_rescues_by_rule": {
+      "73": 51,
+      "109": 52
+    },
+    "lambda_stratum_count": 31,
+    "lambda_trial_count": 19941575,
+    "ledger_record_count": 24362850,
+    "ledger_record_size": 2,
+    "ledger_sha256": "530d541e64d538c4e87dc416bda831e7caafa9b827b0068662b9117e8f70dc8a",
+    "ledger_size": 48725700,
+    "monotonicity_failure_count": 0,
+    "quartet_intervention_count": 24362850,
+    "quartet_stratum_count": 32,
+    "route_disagreement_count": 0,
+    "simulation_executed": false,
+    "workers": 5
+  }
+}
