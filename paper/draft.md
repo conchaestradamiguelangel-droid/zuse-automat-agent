@@ -20,10 +20,12 @@ targets induced by the long-period replay,
 43,425 unit interventions obey an exact topological law: an added state restores
 vertex or edge redundancy if and only if it bypasses every corresponding
 critical cut. An exhaustive 404,054-pair audit proves minimum cardinality two
-in 69/126 vertex and 68/139 edge strata; the remaining minima are bounded below
-by three. The underlying global replay covers 5,783,040 configurations and
-independently confirms 3,296 stationary oscillators omitted by the historical
-`T<=16` detector.
+in 69/126 vertex and 68/139 edge strata. Exhaustive audits of 3,061,466 triples
+and 24,362,850 quadruples resolve every remaining collective stratum: the
+minimum is exactly three in 41/57 vertex and 40/71 edge strata, and exactly
+four in the remaining 16/16 and 31/31. The underlying global replay covers
+5,783,040 configurations and independently confirms 3,296 stationary
+oscillators omitted by the historical `T<=16` detector.
 
 All scripts, reports, PDFs, and versioned releases are public. Claims remain
 empirical and protocol-bounded: ZUSE is a reproducible evidence engine for CA
@@ -110,8 +112,9 @@ We make the following contributions:
    corresponding critical cut. Direct cut removal, fresh max-flow, and the
    geometric predicate agree without exception. A complete 404,054-pair audit
    then proves minimum rescue cardinality two in 69/126 vertex-connectivity
-   strata and 68/139 edge-connectivity strata, while leaving the remaining
-   minima only lower-bounded by three.
+   strata and 68/139 edge-connectivity strata. Exhaustive triple and quadruple
+   audits resolve all remaining collective strata at exactly three or four,
+   closing the minimum-cardinality ladder within the frozen protocol.
 
 ## 2. Related Work
 
@@ -2737,7 +2740,7 @@ horizon and period cap 120, and the result is exhaustive only for the two
 stated historical cohorts; it is not a theorem for arbitrary time, seed
 length, or background family.
 
-### 7.40 Long-period attractor quotient and cut-coverage law (Fases 91--103)
+### 7.40 Long-period attractor quotient and cut-coverage law (Fases 91--105)
 
 The 3,296 confirmed long-period cases in Section 7.39 are input descriptors,
 not necessarily distinct attractors. Fases 91--93 separate three equivalence
@@ -2842,17 +2845,46 @@ one metric. Structural cut coverage and fresh max-flow agree on every pair.
 
 The mutual Hamming-1 edge between the two added words is necessary in 83
 vertex rescues and 86 edge rescues. `Exactly 2` is a proof of minimum
-cardinality because all singletons were audited first; `>=3` is only a lower
-bound because no triples have yet been executed. The combined status is
-`PAIRWISE_SYNERGY_ATLAS_BUILT`.
+cardinality because all constituent singletons were audited first.
+
+Fases 104--105 complete the unresolved ladder without changing targets,
+terminal components, graph filtration, or rescue criterion. Fase 104 enumerates
+all 3,061,466 unordered triples in the 73 strata left unresolved by pairs.
+Direct cut removal and fresh max-flow agree on every trial:
+
+| Metric | Strata entering triple audit | Exactly cardinality 3 | Remaining after triples | Rescuing triples |
+| --- | ---: | ---: | ---: | ---: |
+| Vertex redundancy | 57 | 41 | 16 | 180 |
+| Edge redundancy | 71 | 40 | 31 | 192 |
+
+Fase 105 then enumerates all 24,362,850 unordered quadruples in the remaining
+32-stratum union, comprising 20,638,850 vertex and 19,941,575 edge trials. It
+finds at least one rescuing quadruple in every unresolved metric-specific
+stratum:
+
+| Metric | Strata entering quadruple audit | Exactly cardinality 4 | Still unresolved `>=5` |
+| --- | ---: | ---: | ---: |
+| Vertex redundancy | 16 | 16 | 0 |
+| Edge redundancy | 31 | 31 | 0 |
+
+All 77 vertex-rescuing and 103 edge-rescuing quadruples require at least one
+internal Hamming-1 edge among the four added words. Across the full audit,
+Route A (exhaustive cut removal) and Route B (independent integer max-flow)
+have zero disagreements, all reserved and out-of-scope ledger bits remain
+zero, and independent decoding reproduces every aggregate. Combining the pair,
+triple, and quadruple stages gives the complete minimum-cardinality partition
+for the collective-only strata: vertex `69/41/16` and edge `68/40/31` at
+cardinalities `2/3/4`, respectively. The combined status is
+`QUADRUPLE_SYNERGY_ATLAS_BUILT`.
 
 These results are mechanistic but protocol-bounded. The exact law covers 219
 fragile targets inside 48 frozen length-8 Q8 intervention cubes and the
 historical state populations represented there. It is not a theorem about all
 ECA basins, arbitrary initial-condition widths, temporal causality, or
-interventions outside the frozen catalogs. Fase 104 is predeclared to test
-triples in the unresolved strata; it has not been executed and contributes no
-result to this version.
+interventions outside the frozen catalogs. Exact cardinalities two through four
+refer only to the frozen collective strata and rescue definition; they do not
+establish a universal upper bound for other ECA rules, word lengths, target
+classes, or intervention families.
 
 ## 8. Observer Artifacts and Pipeline Equivariance
 
@@ -3143,7 +3175,7 @@ historical positive classification or the 165-case T=12 cohort used by Fases
 The extended check remains finite in horizon and period and does not establish
 absence beyond period 120.
 
-Fases 91--103 add a topological intervention layer, but its exactness must not
+Fases 91--105 add a topological intervention layer, but its exactness must not
 be confused with universal scope. The cut-coverage equivalence is proved
 computationally for 43,425 unit additions to 219 fragile targets inside 48
 frozen length-8 Q8 cubes. These graphs encode Hamming-1 changes of the central
@@ -3151,10 +3183,11 @@ eight-bit initial word; they are not CA time-transition graphs. The 31,682
 geometry-matched exposures cover 73.0% of the unit population, so the
 period-conditioned tie in Fase 101 is not extrapolated to the unmatched 11,743.
 Fase 102 removes that matching restriction only for the cut-coverage law, not
-for arbitrary observables or other intervention spaces. In Fase 103,
-`EXACTLY_2` is a proved minimum because all constituent singletons fail, while
-`AT_LEAST_3` is only a lower bound. No triple result is included in this
-version.
+for arbitrary observables or other intervention spaces. Fases 103--105 prove
+minimum rescue cardinalities two, three, or four by exhaustive enumeration in
+the collective-only strata, with every lower cardinality already audited.
+This closes the ladder only for the frozen state populations and graph
+definition; it is not an upper bound for arbitrary intervention spaces.
 
 ### 9.4 Empirical atlas, not axiomatic classification
 
@@ -3373,12 +3406,13 @@ Several controlled extensions have now been completed:
   confirms 3,296 additional stationary oscillators with periods 18..120;
   none changes the T=12 cohort used by the later causal audits. This converts
   the old `T<=16` negative label into an explicitly detector-bounded claim.
-  Fases 91--103 then quotient those cases into 192 strict attractor classes,
+  Fases 91--105 then quotient those cases into 192 strict attractor classes,
   construct 48 complete Q8 intervention cubes, and derive the exact unit
   cut-coverage law on 43,425 exposures. The pair audit resolves minimum
-  cardinality two in 69/126 vertex and 68/139 edge strata; the remaining
-  minima are only bounded below by three. Fase 104 is predeclared to enumerate
-  triples but has not been executed. Full results are in Sections 7.20-7.40.
+  cardinality two in 69/126 vertex and 68/139 edge strata. Exhaustive audits of
+  3,061,466 triples and 24,362,850 quadruples resolve every remaining stratum:
+  vertex minima partition as `69/41/16` and edge minima as `68/40/31` across
+  cardinalities `2/3/4`. Full results are in Sections 7.20-7.40.
 
 Each extension is a controlled experiment with the same measurement protocol;
 only the IC or background definition changes.

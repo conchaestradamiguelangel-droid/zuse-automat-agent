@@ -1,5 +1,16 @@
 # ZUSE preprint
 
+Candidate under independent review:
+
+- **Candidate version:** v1.36 (not yet published)
+- **Scientific scope:** Fases 104--105; exhaustive triple and quadruple audits
+  completing the minimum rescue-cardinality ladder at values 2--4 within the
+  frozen Q8 protocol.
+- **DOI:** pending manual Zenodo publication after review.
+- **Candidate PDF:** 59 pages, 1,028,156 bytes, MD5
+  `b4dd0183c0cacf42b1e28ab9903fece5`, SHA-256
+  `082812f1055acabe492ab9e85f95e6520a573e07822479ac3c380ecb11a6182d`.
+
 Published preprint:
 
 - **Title:** ZUSE Automat Agent: Empirical Law Discovery in Elementary Cellular Automata
