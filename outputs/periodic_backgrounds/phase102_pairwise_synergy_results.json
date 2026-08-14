@@ -1,0 +1,7815 @@
+{
+  "methodological_limits": [
+    "EXACTLY_2 is proven only where no singleton rescues and at least one pair does.",
+    "AT_LEAST_3 is a lower bound; triples and higher subsets are not enumerated here.",
+    "Period labels index available historical-node families and are not treated as temporal causes.",
+    "The atlas is restricted to 142 frozen target-period strata in 48 Q8 cubes."
+  ],
+  "phase": 103,
+  "protocol": {
+    "metric_denominators_separate": true,
+    "pair_order": "LEXICOGRAPHIC_UNORDERED",
+    "route_a": "ORIGINAL_CUTS_PLUS_ALL_NEW_VERTEX_EDGE_CANDIDATES",
+    "route_b": "FRESH_INTEGER_MAX_FLOW_CAP_2",
+    "simulation_executed": false,
+    "threshold_scan_executed": false
+  },
+  "sources": {
+    "phase100": {
+      "canonical_sha256": "f79e047d22dddb375db7f351bc9bdd55b978ce29ed22e9c22d9195fb70935d22",
+      "path": "phase99_unit_cardinality_period_potency_results.json",
+      "raw_sha256": "39ec272b72c54f07c0996064c3d755fff9d4b6690fdfdbe3eb4d771ac0710c8c"
+    },
+    "phase102": {
+      "canonical_sha256": "3ecad4486d9ac87c5c7efc58726a41dcaacd738d6450ffc6024b3577dbd0b74e",
+      "path": "phase101_cut_coverage_law_results.json",
+      "raw_sha256": "2eae9b4825bb78d9c396a47bfe365c0beedda198de7c8a2a6093fede3423fb2c"
+    },
+    "phase95": {
+      "canonical_sha256": "57c8988db22d659860b8c94accfa8be54ec5891a7ca036e7d0ea2150e3c3f429",
+      "path": "phase94_hypercube_completion_results.json",
+      "raw_sha256": "1429ac8edc3d5fd4ee8823e2b8437666cae8bdd129f2a4a47e4505bba9aa83a3"
+    },
+    "phase97": {
+      "canonical_sha256": "85deb69d8dbb650c6423fcfd229e258118596ca3418d2e6556819a9ad23a2c5b",
+      "path": "phase96_bridge_robustness_results.json",
+      "raw_sha256": "3096af928d5eff638d9ad63b6503eb85ecbd66956f35c5df94674e07d72e5858"
+    }
+  },
+  "status": "PAIRWISE_SYNERGY_ATLAS_BUILT",
+  "strata": [
+    {
+      "adjacent_pair_count": 76,
+      "background_index": 5,
+      "cube_key": "baseline_period_1_2_4|rule_073|bg_005",
+      "kappa_minimal_cardinality": "AT_LEAST_3",
+      "kappa_pair_rescue_count": 0,
+      "kappa_rescuing_pair_examples": [],
+      "lambda_minimal_cardinality": "AT_LEAST_3",
+      "lambda_pair_rescue_count": 0,
+      "lambda_rescuing_pair_examples": [],
+      "mechanism_counts": {
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 1431,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 1431
+      },
+      "mutual_edge_required_kappa_count": 0,
+      "mutual_edge_required_lambda_count": 0,
+      "node_count": 54,
+      "pair_count": 1431,
+      "pair_index": 438,
+      "period": 3,
+      "relations": {
+        "kappa_v": "COLLECTIVE_ONLY_PERIOD_RESCUE",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 73,
+      "stratum_index": 0
+    },
+    {
+      "adjacent_pair_count": 201,
+      "background_index": 5,
+      "cube_key": "baseline_period_1_2_4|rule_073|bg_005",
+      "kappa_minimal_cardinality": "EXACTLY_2",
+      "kappa_pair_rescue_count": 10,
+      "kappa_rescuing_pair_examples": [
+        [
+          224,
+          225
+        ],
+        [
+          224,
+          228
+        ],
+        [
+          224,
+          237
+        ],
+        [
+          225,
+          227
+        ],
+        [
+          225,
+          230
+        ],
+        [
+          225,
+          242
+        ],
+        [
+          227,
+          237
+        ],
+        [
+          228,
+          230
+        ],
+        [
+          230,
+          237
+        ],
+        [
+          237,
+          242
+        ]
+      ],
+      "lambda_minimal_cardinality": "EXACTLY_2",
+      "lambda_pair_rescue_count": 10,
+      "lambda_rescuing_pair_examples": [
+        [
+          224,
+          225
+        ],
+        [
+          224,
+          228
+        ],
+        [
+          224,
+          237
+        ],
+        [
+          225,
+          227
+        ],
+        [
+          225,
+          230
+        ],
+        [
+          225,
+          242
+        ],
+        [
+          227,
+          237
+        ],
+        [
+          228,
+          230
+        ],
+        [
+          230,
+          237
+        ],
+        [
+          237,
+          242
+        ]
+      ],
+      "mechanism_counts": {
+        "DISTRIBUTED_EDGE_COVERAGE": 10,
+        "DISTRIBUTED_VERTEX_COVERAGE": 10,
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 5768,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 5768
+      },
+      "mutual_edge_required_kappa_count": 2,
+      "mutual_edge_required_lambda_count": 2,
+      "node_count": 108,
+      "pair_count": 5778,
+      "pair_index": 440,
+      "period": 2,
+      "relations": {
+        "kappa_v": "COLLECTIVE_ONLY_PERIOD_RESCUE",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 73,
+      "stratum_index": 1
+    },
+    {
+      "adjacent_pair_count": 76,
+      "background_index": 5,
+      "cube_key": "baseline_period_1_2_4|rule_073|bg_005",
+      "kappa_minimal_cardinality": "AT_LEAST_3",
+      "kappa_pair_rescue_count": 0,
+      "kappa_rescuing_pair_examples": [],
+      "lambda_minimal_cardinality": "AT_LEAST_3",
+      "lambda_pair_rescue_count": 0,
+      "lambda_rescuing_pair_examples": [],
+      "mechanism_counts": {
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 1431,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 1431
+      },
+      "mutual_edge_required_kappa_count": 0,
+      "mutual_edge_required_lambda_count": 0,
+      "node_count": 54,
+      "pair_count": 1431,
+      "pair_index": 442,
+      "period": 3,
+      "relations": {
+        "kappa_v": "COLLECTIVE_ONLY_PERIOD_RESCUE",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 73,
+      "stratum_index": 2
+    },
+    {
+      "adjacent_pair_count": 156,
+      "background_index": 10,
+      "cube_key": "baseline_period_1_2_4|rule_073|bg_010",
+      "kappa_minimal_cardinality": "AT_LEAST_3",
+      "kappa_pair_rescue_count": 0,
+      "kappa_rescuing_pair_examples": [],
+      "lambda_minimal_cardinality": "AT_LEAST_3",
+      "lambda_pair_rescue_count": 0,
+      "lambda_rescuing_pair_examples": [],
+      "mechanism_counts": {
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 4465,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 4465
+      },
+      "mutual_edge_required_kappa_count": 0,
+      "mutual_edge_required_lambda_count": 0,
+      "node_count": 95,
+      "pair_count": 4465,
+      "pair_index": 144,
+      "period": 2,
+      "relations": {
+        "kappa_v": "COLLECTIVE_ONLY_PERIOD_RESCUE",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 73,
+      "stratum_index": 3
+    },
+    {
+      "adjacent_pair_count": 112,
+      "background_index": 10,
+      "cube_key": "baseline_period_1_2_4|rule_073|bg_010",
+      "kappa_minimal_cardinality": "AT_LEAST_3",
+      "kappa_pair_rescue_count": 0,
+      "kappa_rescuing_pair_examples": [],
+      "lambda_minimal_cardinality": "AT_LEAST_3",
+      "lambda_pair_rescue_count": 0,
+      "lambda_rescuing_pair_examples": [],
+      "mechanism_counts": {
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 2701,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 2701
+      },
+      "mutual_edge_required_kappa_count": 0,
+      "mutual_edge_required_lambda_count": 0,
+      "node_count": 74,
+      "pair_count": 2701,
+      "pair_index": 144,
+      "period": 3,
+      "relations": {
+        "kappa_v": "COLLECTIVE_ONLY_PERIOD_RESCUE",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 73,
+      "stratum_index": 4
+    },
+    {
+      "adjacent_pair_count": 156,
+      "background_index": 10,
+      "cube_key": "baseline_period_1_2_4|rule_073|bg_010",
+      "kappa_minimal_cardinality": "AT_LEAST_3",
+      "kappa_pair_rescue_count": 0,
+      "kappa_rescuing_pair_examples": [],
+      "lambda_minimal_cardinality": "AT_LEAST_3",
+      "lambda_pair_rescue_count": 0,
+      "lambda_rescuing_pair_examples": [],
+      "mechanism_counts": {
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 4465,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 4465
+      },
+      "mutual_edge_required_kappa_count": 0,
+      "mutual_edge_required_lambda_count": 0,
+      "node_count": 95,
+      "pair_count": 4465,
+      "pair_index": 241,
+      "period": 2,
+      "relations": {
+        "kappa_v": "COLLECTIVE_ONLY_PERIOD_RESCUE",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 73,
+      "stratum_index": 5
+    },
+    {
+      "adjacent_pair_count": 112,
+      "background_index": 10,
+      "cube_key": "baseline_period_1_2_4|rule_073|bg_010",
+      "kappa_minimal_cardinality": "AT_LEAST_3",
+      "kappa_pair_rescue_count": 0,
+      "kappa_rescuing_pair_examples": [],
+      "lambda_minimal_cardinality": "AT_LEAST_3",
+      "lambda_pair_rescue_count": 0,
+      "lambda_rescuing_pair_examples": [],
+      "mechanism_counts": {
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 2701,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 2701
+      },
+      "mutual_edge_required_kappa_count": 0,
+      "mutual_edge_required_lambda_count": 0,
+      "node_count": 74,
+      "pair_count": 2701,
+      "pair_index": 241,
+      "period": 3,
+      "relations": {
+        "kappa_v": "COLLECTIVE_ONLY_PERIOD_RESCUE",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 73,
+      "stratum_index": 6
+    },
+    {
+      "adjacent_pair_count": 156,
+      "background_index": 10,
+      "cube_key": "baseline_period_1_2_4|rule_073|bg_010",
+      "kappa_minimal_cardinality": "AT_LEAST_3",
+      "kappa_pair_rescue_count": 0,
+      "kappa_rescuing_pair_examples": [],
+      "lambda_minimal_cardinality": "AT_LEAST_3",
+      "lambda_pair_rescue_count": 0,
+      "lambda_rescuing_pair_examples": [],
+      "mechanism_counts": {
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 4465,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 4465
+      },
+      "mutual_edge_required_kappa_count": 0,
+      "mutual_edge_required_lambda_count": 0,
+      "node_count": 95,
+      "pair_count": 4465,
+      "pair_index": 451,
+      "period": 2,
+      "relations": {
+        "kappa_v": "COLLECTIVE_ONLY_PERIOD_RESCUE",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 73,
+      "stratum_index": 7
+    },
+    {
+      "adjacent_pair_count": 112,
+      "background_index": 10,
+      "cube_key": "baseline_period_1_2_4|rule_073|bg_010",
+      "kappa_minimal_cardinality": "AT_LEAST_3",
+      "kappa_pair_rescue_count": 0,
+      "kappa_rescuing_pair_examples": [],
+      "lambda_minimal_cardinality": "AT_LEAST_3",
+      "lambda_pair_rescue_count": 0,
+      "lambda_rescuing_pair_examples": [],
+      "mechanism_counts": {
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 2701,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 2701
+      },
+      "mutual_edge_required_kappa_count": 0,
+      "mutual_edge_required_lambda_count": 0,
+      "node_count": 74,
+      "pair_count": 2701,
+      "pair_index": 451,
+      "period": 3,
+      "relations": {
+        "kappa_v": "COLLECTIVE_ONLY_PERIOD_RESCUE",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 73,
+      "stratum_index": 8
+    },
+    {
+      "adjacent_pair_count": 156,
+      "background_index": 10,
+      "cube_key": "baseline_period_1_2_4|rule_073|bg_010",
+      "kappa_minimal_cardinality": "AT_LEAST_3",
+      "kappa_pair_rescue_count": 0,
+      "kappa_rescuing_pair_examples": [],
+      "lambda_minimal_cardinality": "AT_LEAST_3",
+      "lambda_pair_rescue_count": 0,
+      "lambda_rescuing_pair_examples": [],
+      "mechanism_counts": {
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 4465,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 4465
+      },
+      "mutual_edge_required_kappa_count": 0,
+      "mutual_edge_required_lambda_count": 0,
+      "node_count": 95,
+      "pair_count": 4465,
+      "pair_index": 753,
+      "period": 2,
+      "relations": {
+        "kappa_v": "COLLECTIVE_ONLY_PERIOD_RESCUE",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 73,
+      "stratum_index": 9
+    },
+    {
+      "adjacent_pair_count": 112,
+      "background_index": 10,
+      "cube_key": "baseline_period_1_2_4|rule_073|bg_010",
+      "kappa_minimal_cardinality": "AT_LEAST_3",
+      "kappa_pair_rescue_count": 0,
+      "kappa_rescuing_pair_examples": [],
+      "lambda_minimal_cardinality": "AT_LEAST_3",
+      "lambda_pair_rescue_count": 0,
+      "lambda_rescuing_pair_examples": [],
+      "mechanism_counts": {
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 2701,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 2701
+      },
+      "mutual_edge_required_kappa_count": 0,
+      "mutual_edge_required_lambda_count": 0,
+      "node_count": 74,
+      "pair_count": 2701,
+      "pair_index": 753,
+      "period": 3,
+      "relations": {
+        "kappa_v": "COLLECTIVE_ONLY_PERIOD_RESCUE",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 73,
+      "stratum_index": 10
+    },
+    {
+      "adjacent_pair_count": 76,
+      "background_index": 12,
+      "cube_key": "baseline_period_1_2_4|rule_073|bg_012",
+      "kappa_minimal_cardinality": "AT_LEAST_3",
+      "kappa_pair_rescue_count": 0,
+      "kappa_rescuing_pair_examples": [],
+      "lambda_minimal_cardinality": "AT_LEAST_3",
+      "lambda_pair_rescue_count": 0,
+      "lambda_rescuing_pair_examples": [],
+      "mechanism_counts": {
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 1431,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 1431
+      },
+      "mutual_edge_required_kappa_count": 0,
+      "mutual_edge_required_lambda_count": 0,
+      "node_count": 54,
+      "pair_count": 1431,
+      "pair_index": 252,
+      "period": 3,
+      "relations": {
+        "kappa_v": "COLLECTIVE_ONLY_PERIOD_RESCUE",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 73,
+      "stratum_index": 11
+    },
+    {
+      "adjacent_pair_count": 201,
+      "background_index": 12,
+      "cube_key": "baseline_period_1_2_4|rule_073|bg_012",
+      "kappa_minimal_cardinality": "EXACTLY_2",
+      "kappa_pair_rescue_count": 10,
+      "kappa_rescuing_pair_examples": [
+        [
+          7,
+          39
+        ],
+        [
+          7,
+          135
+        ],
+        [
+          7,
+          183
+        ],
+        [
+          39,
+          103
+        ],
+        [
+          79,
+          135
+        ],
+        [
+          79,
+          183
+        ],
+        [
+          103,
+          135
+        ],
+        [
+          103,
+          183
+        ],
+        [
+          135,
+          199
+        ],
+        [
+          183,
+          199
+        ]
+      ],
+      "lambda_minimal_cardinality": "EXACTLY_2",
+      "lambda_pair_rescue_count": 10,
+      "lambda_rescuing_pair_examples": [
+        [
+          7,
+          39
+        ],
+        [
+          7,
+          135
+        ],
+        [
+          7,
+          183
+        ],
+        [
+          39,
+          103
+        ],
+        [
+          79,
+          135
+        ],
+        [
+          79,
+          183
+        ],
+        [
+          103,
+          135
+        ],
+        [
+          103,
+          183
+        ],
+        [
+          135,
+          199
+        ],
+        [
+          183,
+          199
+        ]
+      ],
+      "mechanism_counts": {
+        "DISTRIBUTED_EDGE_COVERAGE": 10,
+        "DISTRIBUTED_VERTEX_COVERAGE": 10,
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 5768,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 5768
+      },
+      "mutual_edge_required_kappa_count": 2,
+      "mutual_edge_required_lambda_count": 2,
+      "node_count": 108,
+      "pair_count": 5778,
+      "pair_index": 254,
+      "period": 2,
+      "relations": {
+        "kappa_v": "COLLECTIVE_ONLY_PERIOD_RESCUE",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 73,
+      "stratum_index": 12
+    },
+    {
+      "adjacent_pair_count": 76,
+      "background_index": 12,
+      "cube_key": "baseline_period_1_2_4|rule_073|bg_012",
+      "kappa_minimal_cardinality": "AT_LEAST_3",
+      "kappa_pair_rescue_count": 0,
+      "kappa_rescuing_pair_examples": [],
+      "lambda_minimal_cardinality": "AT_LEAST_3",
+      "lambda_pair_rescue_count": 0,
+      "lambda_rescuing_pair_examples": [],
+      "mechanism_counts": {
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 1431,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 1431
+      },
+      "mutual_edge_required_kappa_count": 0,
+      "mutual_edge_required_lambda_count": 0,
+      "node_count": 54,
+      "pair_count": 1431,
+      "pair_index": 255,
+      "period": 3,
+      "relations": {
+        "kappa_v": "COLLECTIVE_ONLY_PERIOD_RESCUE",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 73,
+      "stratum_index": 13
+    },
+    {
+      "adjacent_pair_count": 76,
+      "background_index": 5,
+      "cube_key": "baseline_period_1_2_4|rule_109|bg_005",
+      "kappa_minimal_cardinality": "AT_LEAST_3",
+      "kappa_pair_rescue_count": 0,
+      "kappa_rescuing_pair_examples": [],
+      "lambda_minimal_cardinality": "AT_LEAST_3",
+      "lambda_pair_rescue_count": 0,
+      "lambda_rescuing_pair_examples": [],
+      "mechanism_counts": {
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 1431,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 1431
+      },
+      "mutual_edge_required_kappa_count": 0,
+      "mutual_edge_required_lambda_count": 0,
+      "node_count": 54,
+      "pair_count": 1431,
+      "pair_index": 914,
+      "period": 3,
+      "relations": {
+        "kappa_v": "COLLECTIVE_ONLY_PERIOD_RESCUE",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 109,
+      "stratum_index": 14
+    },
+    {
+      "adjacent_pair_count": 76,
+      "background_index": 5,
+      "cube_key": "baseline_period_1_2_4|rule_109|bg_005",
+      "kappa_minimal_cardinality": "AT_LEAST_3",
+      "kappa_pair_rescue_count": 0,
+      "kappa_rescuing_pair_examples": [],
+      "lambda_minimal_cardinality": "AT_LEAST_3",
+      "lambda_pair_rescue_count": 0,
+      "lambda_rescuing_pair_examples": [],
+      "mechanism_counts": {
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 1431,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 1431
+      },
+      "mutual_edge_required_kappa_count": 0,
+      "mutual_edge_required_lambda_count": 0,
+      "node_count": 54,
+      "pair_count": 1431,
+      "pair_index": 917,
+      "period": 3,
+      "relations": {
+        "kappa_v": "COLLECTIVE_ONLY_PERIOD_RESCUE",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 109,
+      "stratum_index": 15
+    },
+    {
+      "adjacent_pair_count": 196,
+      "background_index": 5,
+      "cube_key": "baseline_period_1_2_4|rule_109|bg_005",
+      "kappa_minimal_cardinality": "EXACTLY_2",
+      "kappa_pair_rescue_count": 10,
+      "kappa_rescuing_pair_examples": [
+        [
+          56,
+          72
+        ],
+        [
+          56,
+          120
+        ],
+        [
+          72,
+          152
+        ],
+        [
+          72,
+          176
+        ],
+        [
+          72,
+          248
+        ],
+        [
+          120,
+          152
+        ],
+        [
+          120,
+          176
+        ],
+        [
+          120,
+          248
+        ],
+        [
+          152,
+          216
+        ],
+        [
+          216,
+          248
+        ]
+      ],
+      "lambda_minimal_cardinality": "EXACTLY_2",
+      "lambda_pair_rescue_count": 10,
+      "lambda_rescuing_pair_examples": [
+        [
+          56,
+          72
+        ],
+        [
+          56,
+          120
+        ],
+        [
+          72,
+          152
+        ],
+        [
+          72,
+          176
+        ],
+        [
+          72,
+          248
+        ],
+        [
+          120,
+          152
+        ],
+        [
+          120,
+          176
+        ],
+        [
+          120,
+          248
+        ],
+        [
+          152,
+          216
+        ],
+        [
+          216,
+          248
+        ]
+      ],
+      "mechanism_counts": {
+        "DISTRIBUTED_EDGE_COVERAGE": 10,
+        "DISTRIBUTED_VERTEX_COVERAGE": 10,
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 5661,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 5661
+      },
+      "mutual_edge_required_kappa_count": 2,
+      "mutual_edge_required_lambda_count": 2,
+      "node_count": 107,
+      "pair_count": 5671,
+      "pair_index": 918,
+      "period": 2,
+      "relations": {
+        "kappa_v": "COLLECTIVE_ONLY_PERIOD_RESCUE",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 109,
+      "stratum_index": 16
+    },
+    {
+      "adjacent_pair_count": 154,
+      "background_index": 7,
+      "cube_key": "baseline_period_1_2_4|rule_109|bg_007",
+      "kappa_minimal_cardinality": "AT_LEAST_3",
+      "kappa_pair_rescue_count": 0,
+      "kappa_rescuing_pair_examples": [],
+      "lambda_minimal_cardinality": "AT_LEAST_3",
+      "lambda_pair_rescue_count": 0,
+      "lambda_rescuing_pair_examples": [],
+      "mechanism_counts": {
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 4465,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 4465
+      },
+      "mutual_edge_required_kappa_count": 0,
+      "mutual_edge_required_lambda_count": 0,
+      "node_count": 95,
+      "pair_count": 4465,
+      "pair_index": 296,
+      "period": 2,
+      "relations": {
+        "kappa_v": "COLLECTIVE_ONLY_PERIOD_RESCUE",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 109,
+      "stratum_index": 17
+    },
+    {
+      "adjacent_pair_count": 112,
+      "background_index": 7,
+      "cube_key": "baseline_period_1_2_4|rule_109|bg_007",
+      "kappa_minimal_cardinality": "AT_LEAST_3",
+      "kappa_pair_rescue_count": 0,
+      "kappa_rescuing_pair_examples": [],
+      "lambda_minimal_cardinality": "AT_LEAST_3",
+      "lambda_pair_rescue_count": 0,
+      "lambda_rescuing_pair_examples": [],
+      "mechanism_counts": {
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 2701,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 2701
+      },
+      "mutual_edge_required_kappa_count": 0,
+      "mutual_edge_required_lambda_count": 0,
+      "node_count": 74,
+      "pair_count": 2701,
+      "pair_index": 296,
+      "period": 3,
+      "relations": {
+        "kappa_v": "COLLECTIVE_ONLY_PERIOD_RESCUE",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 109,
+      "stratum_index": 18
+    },
+    {
+      "adjacent_pair_count": 154,
+      "background_index": 7,
+      "cube_key": "baseline_period_1_2_4|rule_109|bg_007",
+      "kappa_minimal_cardinality": "AT_LEAST_3",
+      "kappa_pair_rescue_count": 0,
+      "kappa_rescuing_pair_examples": [],
+      "lambda_minimal_cardinality": "AT_LEAST_3",
+      "lambda_pair_rescue_count": 0,
+      "lambda_rescuing_pair_examples": [],
+      "mechanism_counts": {
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 4465,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 4465
+      },
+      "mutual_edge_required_kappa_count": 0,
+      "mutual_edge_required_lambda_count": 0,
+      "node_count": 95,
+      "pair_count": 4465,
+      "pair_index": 517,
+      "period": 2,
+      "relations": {
+        "kappa_v": "COLLECTIVE_ONLY_PERIOD_RESCUE",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 109,
+      "stratum_index": 19
+    },
+    {
+      "adjacent_pair_count": 112,
+      "background_index": 7,
+      "cube_key": "baseline_period_1_2_4|rule_109|bg_007",
+      "kappa_minimal_cardinality": "AT_LEAST_3",
+      "kappa_pair_rescue_count": 0,
+      "kappa_rescuing_pair_examples": [],
+      "lambda_minimal_cardinality": "AT_LEAST_3",
+      "lambda_pair_rescue_count": 0,
+      "lambda_rescuing_pair_examples": [],
+      "mechanism_counts": {
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 2701,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 2701
+      },
+      "mutual_edge_required_kappa_count": 0,
+      "mutual_edge_required_lambda_count": 0,
+      "node_count": 74,
+      "pair_count": 2701,
+      "pair_index": 517,
+      "period": 3,
+      "relations": {
+        "kappa_v": "COLLECTIVE_ONLY_PERIOD_RESCUE",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 109,
+      "stratum_index": 20
+    },
+    {
+      "adjacent_pair_count": 154,
+      "background_index": 7,
+      "cube_key": "baseline_period_1_2_4|rule_109|bg_007",
+      "kappa_minimal_cardinality": "AT_LEAST_3",
+      "kappa_pair_rescue_count": 0,
+      "kappa_rescuing_pair_examples": [],
+      "lambda_minimal_cardinality": "AT_LEAST_3",
+      "lambda_pair_rescue_count": 0,
+      "lambda_rescuing_pair_examples": [],
+      "mechanism_counts": {
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 4465,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 4465
+      },
+      "mutual_edge_required_kappa_count": 0,
+      "mutual_edge_required_lambda_count": 0,
+      "node_count": 95,
+      "pair_count": 4465,
+      "pair_index": 697,
+      "period": 2,
+      "relations": {
+        "kappa_v": "COLLECTIVE_ONLY_PERIOD_RESCUE",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 109,
+      "stratum_index": 21
+    },
+    {
+      "adjacent_pair_count": 112,
+      "background_index": 7,
+      "cube_key": "baseline_period_1_2_4|rule_109|bg_007",
+      "kappa_minimal_cardinality": "AT_LEAST_3",
+      "kappa_pair_rescue_count": 0,
+      "kappa_rescuing_pair_examples": [],
+      "lambda_minimal_cardinality": "AT_LEAST_3",
+      "lambda_pair_rescue_count": 0,
+      "lambda_rescuing_pair_examples": [],
+      "mechanism_counts": {
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 2701,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 2701
+      },
+      "mutual_edge_required_kappa_count": 0,
+      "mutual_edge_required_lambda_count": 0,
+      "node_count": 74,
+      "pair_count": 2701,
+      "pair_index": 697,
+      "period": 3,
+      "relations": {
+        "kappa_v": "COLLECTIVE_ONLY_PERIOD_RESCUE",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 109,
+      "stratum_index": 22
+    },
+    {
+      "adjacent_pair_count": 154,
+      "background_index": 7,
+      "cube_key": "baseline_period_1_2_4|rule_109|bg_007",
+      "kappa_minimal_cardinality": "AT_LEAST_3",
+      "kappa_pair_rescue_count": 0,
+      "kappa_rescuing_pair_examples": [],
+      "lambda_minimal_cardinality": "AT_LEAST_3",
+      "lambda_pair_rescue_count": 0,
+      "lambda_rescuing_pair_examples": [],
+      "mechanism_counts": {
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 4465,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 4465
+      },
+      "mutual_edge_required_kappa_count": 0,
+      "mutual_edge_required_lambda_count": 0,
+      "node_count": 95,
+      "pair_count": 4465,
+      "pair_index": 928,
+      "period": 2,
+      "relations": {
+        "kappa_v": "COLLECTIVE_ONLY_PERIOD_RESCUE",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 109,
+      "stratum_index": 23
+    },
+    {
+      "adjacent_pair_count": 112,
+      "background_index": 7,
+      "cube_key": "baseline_period_1_2_4|rule_109|bg_007",
+      "kappa_minimal_cardinality": "AT_LEAST_3",
+      "kappa_pair_rescue_count": 0,
+      "kappa_rescuing_pair_examples": [],
+      "lambda_minimal_cardinality": "AT_LEAST_3",
+      "lambda_pair_rescue_count": 0,
+      "lambda_rescuing_pair_examples": [],
+      "mechanism_counts": {
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 2701,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 2701
+      },
+      "mutual_edge_required_kappa_count": 0,
+      "mutual_edge_required_lambda_count": 0,
+      "node_count": 74,
+      "pair_count": 2701,
+      "pair_index": 928,
+      "period": 3,
+      "relations": {
+        "kappa_v": "COLLECTIVE_ONLY_PERIOD_RESCUE",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 109,
+      "stratum_index": 24
+    },
+    {
+      "adjacent_pair_count": 76,
+      "background_index": 12,
+      "cube_key": "baseline_period_1_2_4|rule_109|bg_012",
+      "kappa_minimal_cardinality": "AT_LEAST_3",
+      "kappa_pair_rescue_count": 0,
+      "kappa_rescuing_pair_examples": [],
+      "lambda_minimal_cardinality": "AT_LEAST_3",
+      "lambda_pair_rescue_count": 0,
+      "lambda_rescuing_pair_examples": [],
+      "mechanism_counts": {
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 1431,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 1431
+      },
+      "mutual_edge_required_kappa_count": 0,
+      "mutual_edge_required_lambda_count": 0,
+      "node_count": 54,
+      "pair_count": 1431,
+      "pair_index": 527,
+      "period": 3,
+      "relations": {
+        "kappa_v": "COLLECTIVE_ONLY_PERIOD_RESCUE",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 109,
+      "stratum_index": 25
+    },
+    {
+      "adjacent_pair_count": 76,
+      "background_index": 12,
+      "cube_key": "baseline_period_1_2_4|rule_109|bg_012",
+      "kappa_minimal_cardinality": "AT_LEAST_3",
+      "kappa_pair_rescue_count": 0,
+      "kappa_rescuing_pair_examples": [],
+      "lambda_minimal_cardinality": "AT_LEAST_3",
+      "lambda_pair_rescue_count": 0,
+      "lambda_rescuing_pair_examples": [],
+      "mechanism_counts": {
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 1431,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 1431
+      },
+      "mutual_edge_required_kappa_count": 0,
+      "mutual_edge_required_lambda_count": 0,
+      "node_count": 54,
+      "pair_count": 1431,
+      "pair_index": 529,
+      "period": 3,
+      "relations": {
+        "kappa_v": "COLLECTIVE_ONLY_PERIOD_RESCUE",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 109,
+      "stratum_index": 26
+    },
+    {
+      "adjacent_pair_count": 196,
+      "background_index": 12,
+      "cube_key": "baseline_period_1_2_4|rule_109|bg_012",
+      "kappa_minimal_cardinality": "EXACTLY_2",
+      "kappa_pair_rescue_count": 10,
+      "kappa_rescuing_pair_examples": [
+        [
+          13,
+          18
+        ],
+        [
+          13,
+          30
+        ],
+        [
+          18,
+          25
+        ],
+        [
+          18,
+          28
+        ],
+        [
+          18,
+          31
+        ],
+        [
+          25,
+          27
+        ],
+        [
+          25,
+          30
+        ],
+        [
+          27,
+          31
+        ],
+        [
+          28,
+          30
+        ],
+        [
+          30,
+          31
+        ]
+      ],
+      "lambda_minimal_cardinality": "EXACTLY_2",
+      "lambda_pair_rescue_count": 10,
+      "lambda_rescuing_pair_examples": [
+        [
+          13,
+          18
+        ],
+        [
+          13,
+          30
+        ],
+        [
+          18,
+          25
+        ],
+        [
+          18,
+          28
+        ],
+        [
+          18,
+          31
+        ],
+        [
+          25,
+          27
+        ],
+        [
+          25,
+          30
+        ],
+        [
+          27,
+          31
+        ],
+        [
+          28,
+          30
+        ],
+        [
+          30,
+          31
+        ]
+      ],
+      "mechanism_counts": {
+        "DISTRIBUTED_EDGE_COVERAGE": 10,
+        "DISTRIBUTED_VERTEX_COVERAGE": 10,
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 5661,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 5661
+      },
+      "mutual_edge_required_kappa_count": 2,
+      "mutual_edge_required_lambda_count": 2,
+      "node_count": 107,
+      "pair_count": 5671,
+      "pair_index": 531,
+      "period": 2,
+      "relations": {
+        "kappa_v": "COLLECTIVE_ONLY_PERIOD_RESCUE",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 109,
+      "stratum_index": 27
+    },
+    {
+      "adjacent_pair_count": 5,
+      "background_index": 1,
+      "cube_key": "primitive_len8|rule_073|bg_001",
+      "kappa_minimal_cardinality": "AT_LEAST_3",
+      "kappa_pair_rescue_count": 0,
+      "kappa_rescuing_pair_examples": [],
+      "lambda_minimal_cardinality": "AT_LEAST_3",
+      "lambda_pair_rescue_count": 0,
+      "lambda_rescuing_pair_examples": [],
+      "mechanism_counts": {
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 28,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 28
+      },
+      "mutual_edge_required_kappa_count": 0,
+      "mutual_edge_required_lambda_count": 0,
+      "node_count": 8,
+      "pair_count": 28,
+      "pair_index": 369,
+      "period": 12,
+      "relations": {
+        "kappa_v": "COLLECTIVE_ONLY_PERIOD_RESCUE",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 73,
+      "stratum_index": 28
+    },
+    {
+      "adjacent_pair_count": 5,
+      "background_index": 1,
+      "cube_key": "primitive_len8|rule_073|bg_001",
+      "kappa_minimal_cardinality": "AT_LEAST_3",
+      "kappa_pair_rescue_count": 0,
+      "kappa_rescuing_pair_examples": [],
+      "lambda_minimal_cardinality": "AT_LEAST_3",
+      "lambda_pair_rescue_count": 0,
+      "lambda_rescuing_pair_examples": [],
+      "mechanism_counts": {
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 28,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 28
+      },
+      "mutual_edge_required_kappa_count": 0,
+      "mutual_edge_required_lambda_count": 0,
+      "node_count": 8,
+      "pair_count": 28,
+      "pair_index": 371,
+      "period": 12,
+      "relations": {
+        "kappa_v": "COLLECTIVE_ONLY_PERIOD_RESCUE",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 73,
+      "stratum_index": 29
+    },
+    {
+      "adjacent_pair_count": 5,
+      "background_index": 1,
+      "cube_key": "primitive_len8|rule_073|bg_001",
+      "kappa_minimal_cardinality": "AT_LEAST_3",
+      "kappa_pair_rescue_count": 0,
+      "kappa_rescuing_pair_examples": [],
+      "lambda_minimal_cardinality": "AT_LEAST_3",
+      "lambda_pair_rescue_count": 0,
+      "lambda_rescuing_pair_examples": [],
+      "mechanism_counts": {
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 28,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 28
+      },
+      "mutual_edge_required_kappa_count": 0,
+      "mutual_edge_required_lambda_count": 0,
+      "node_count": 8,
+      "pair_count": 28,
+      "pair_index": 373,
+      "period": 12,
+      "relations": {
+        "kappa_v": "COLLECTIVE_ONLY_PERIOD_RESCUE",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 73,
+      "stratum_index": 30
+    },
+    {
+      "adjacent_pair_count": 97,
+      "background_index": 1,
+      "cube_key": "primitive_len8|rule_073|bg_001",
+      "kappa_minimal_cardinality": "EXACTLY_2",
+      "kappa_pair_rescue_count": 1,
+      "kappa_rescuing_pair_examples": [
+        [
+          5,
+          7
+        ]
+      ],
+      "lambda_minimal_cardinality": "EXACTLY_2",
+      "lambda_pair_rescue_count": 1,
+      "lambda_rescuing_pair_examples": [
+        [
+          5,
+          7
+        ]
+      ],
+      "mechanism_counts": {
+        "DISTRIBUTED_EDGE_COVERAGE": 1,
+        "DISTRIBUTED_VERTEX_COVERAGE": 1,
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 2144,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 2144
+      },
+      "mutual_edge_required_kappa_count": 1,
+      "mutual_edge_required_lambda_count": 1,
+      "node_count": 66,
+      "pair_count": 2145,
+      "pair_index": 548,
+      "period": 3,
+      "relations": {
+        "kappa_v": "COLLECTIVE_ONLY_PERIOD_RESCUE",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 73,
+      "stratum_index": 31
+    },
+    {
+      "adjacent_pair_count": 264,
+      "background_index": 1,
+      "cube_key": "primitive_len8|rule_073|bg_001",
+      "kappa_minimal_cardinality": "EXACTLY_2",
+      "kappa_pair_rescue_count": 11,
+      "kappa_rescuing_pair_examples": [
+        [
+          2,
+          9
+        ],
+        [
+          2,
+          66
+        ],
+        [
+          2,
+          96
+        ],
+        [
+          2,
+          129
+        ],
+        [
+          2,
+          192
+        ],
+        [
+          2,
+          241
+        ],
+        [
+          9,
+          134
+        ],
+        [
+          96,
+          134
+        ],
+        [
+          129,
+          134
+        ],
+        [
+          134,
+          192
+        ],
+        [
+          134,
+          241
+        ]
+      ],
+      "lambda_minimal_cardinality": "EXACTLY_2",
+      "lambda_pair_rescue_count": 11,
+      "lambda_rescuing_pair_examples": [
+        [
+          2,
+          9
+        ],
+        [
+          2,
+          66
+        ],
+        [
+          2,
+          96
+        ],
+        [
+          2,
+          129
+        ],
+        [
+          2,
+          192
+        ],
+        [
+          2,
+          241
+        ],
+        [
+          9,
+          134
+        ],
+        [
+          96,
+          134
+        ],
+        [
+          129,
+          134
+        ],
+        [
+          134,
+          192
+        ],
+        [
+          134,
+          241
+        ]
+      ],
+      "mechanism_counts": {
+        "DISTRIBUTED_EDGE_COVERAGE": 11,
+        "DISTRIBUTED_VERTEX_COVERAGE": 11,
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 7615,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 7615
+      },
+      "mutual_edge_required_kappa_count": 1,
+      "mutual_edge_required_lambda_count": 1,
+      "node_count": 124,
+      "pair_count": 7626,
+      "pair_index": 548,
+      "period": 6,
+      "relations": {
+        "kappa_v": "COLLECTIVE_ONLY_PERIOD_RESCUE",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 73,
+      "stratum_index": 32
+    },
+    {
+      "adjacent_pair_count": 140,
+      "background_index": 4,
+      "cube_key": "primitive_len8|rule_073|bg_004",
+      "kappa_minimal_cardinality": "AT_LEAST_3",
+      "kappa_pair_rescue_count": 0,
+      "kappa_rescuing_pair_examples": [],
+      "lambda_minimal_cardinality": "AT_LEAST_3",
+      "lambda_pair_rescue_count": 0,
+      "lambda_rescuing_pair_examples": [],
+      "mechanism_counts": {
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 3486,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 3486
+      },
+      "mutual_edge_required_kappa_count": 0,
+      "mutual_edge_required_lambda_count": 0,
+      "node_count": 84,
+      "pair_count": 3486,
+      "pair_index": 727,
+      "period": 3,
+      "relations": {
+        "kappa_v": "COLLECTIVE_ONLY_PERIOD_RESCUE",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 73,
+      "stratum_index": 33
+    },
+    {
+      "adjacent_pair_count": 193,
+      "background_index": 4,
+      "cube_key": "primitive_len8|rule_073|bg_004",
+      "kappa_minimal_cardinality": "AT_LEAST_3",
+      "kappa_pair_rescue_count": 0,
+      "kappa_rescuing_pair_examples": [],
+      "lambda_minimal_cardinality": "AT_LEAST_3",
+      "lambda_pair_rescue_count": 0,
+      "lambda_rescuing_pair_examples": [],
+      "mechanism_counts": {
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 5151,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 5151
+      },
+      "mutual_edge_required_kappa_count": 0,
+      "mutual_edge_required_lambda_count": 0,
+      "node_count": 102,
+      "pair_count": 5151,
+      "pair_index": 727,
+      "period": 6,
+      "relations": {
+        "kappa_v": "COLLECTIVE_ONLY_PERIOD_RESCUE",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 73,
+      "stratum_index": 34
+    },
+    {
+      "adjacent_pair_count": 69,
+      "background_index": 7,
+      "cube_key": "primitive_len8|rule_073|bg_007",
+      "kappa_minimal_cardinality": "NOT_APPLICABLE_NOT_COLLECTIVE",
+      "kappa_pair_rescue_count": 0,
+      "kappa_rescuing_pair_examples": [],
+      "lambda_minimal_cardinality": "AT_LEAST_3",
+      "lambda_pair_rescue_count": 0,
+      "lambda_rescuing_pair_examples": [],
+      "mechanism_counts": {
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 1275,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 1275
+      },
+      "mutual_edge_required_kappa_count": 0,
+      "mutual_edge_required_lambda_count": 0,
+      "node_count": 51,
+      "pair_count": 1275,
+      "pair_index": 674,
+      "period": 3,
+      "relations": {
+        "kappa_v": "NONRESCUING_PERIOD_CONTROL",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 73,
+      "stratum_index": 35
+    },
+    {
+      "adjacent_pair_count": 20,
+      "background_index": 7,
+      "cube_key": "primitive_len8|rule_073|bg_007",
+      "kappa_minimal_cardinality": "EXACTLY_2",
+      "kappa_pair_rescue_count": 2,
+      "kappa_rescuing_pair_examples": [
+        [
+          1,
+          131
+        ],
+        [
+          129,
+          131
+        ]
+      ],
+      "lambda_minimal_cardinality": "EXACTLY_2",
+      "lambda_pair_rescue_count": 2,
+      "lambda_rescuing_pair_examples": [
+        [
+          1,
+          131
+        ],
+        [
+          129,
+          131
+        ]
+      ],
+      "mechanism_counts": {
+        "DISTRIBUTED_EDGE_COVERAGE": 2,
+        "DISTRIBUTED_VERTEX_COVERAGE": 2,
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 323,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 323
+      },
+      "mutual_edge_required_kappa_count": 1,
+      "mutual_edge_required_lambda_count": 1,
+      "node_count": 26,
+      "pair_count": 325,
+      "pair_index": 731,
+      "period": 12,
+      "relations": {
+        "kappa_v": "COLLECTIVE_ONLY_PERIOD_RESCUE",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 73,
+      "stratum_index": 36
+    },
+    {
+      "adjacent_pair_count": 69,
+      "background_index": 7,
+      "cube_key": "primitive_len8|rule_073|bg_007",
+      "kappa_minimal_cardinality": "NOT_APPLICABLE_NOT_COLLECTIVE",
+      "kappa_pair_rescue_count": 0,
+      "kappa_rescuing_pair_examples": [],
+      "lambda_minimal_cardinality": "AT_LEAST_3",
+      "lambda_pair_rescue_count": 0,
+      "lambda_rescuing_pair_examples": [],
+      "mechanism_counts": {
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 1275,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 1275
+      },
+      "mutual_edge_required_kappa_count": 0,
+      "mutual_edge_required_lambda_count": 0,
+      "node_count": 51,
+      "pair_count": 1275,
+      "pair_index": 867,
+      "period": 3,
+      "relations": {
+        "kappa_v": "NONRESCUING_PERIOD_CONTROL",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 73,
+      "stratum_index": 37
+    },
+    {
+      "adjacent_pair_count": 122,
+      "background_index": 11,
+      "cube_key": "primitive_len8|rule_073|bg_011",
+      "kappa_minimal_cardinality": "EXACTLY_2",
+      "kappa_pair_rescue_count": 2,
+      "kappa_rescuing_pair_examples": [
+        [
+          182,
+          190
+        ],
+        [
+          188,
+          190
+        ]
+      ],
+      "lambda_minimal_cardinality": "EXACTLY_2",
+      "lambda_pair_rescue_count": 2,
+      "lambda_rescuing_pair_examples": [
+        [
+          182,
+          190
+        ],
+        [
+          188,
+          190
+        ]
+      ],
+      "mechanism_counts": {
+        "DISTRIBUTED_EDGE_COVERAGE": 2,
+        "DISTRIBUTED_VERTEX_COVERAGE": 2,
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 2699,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 2699
+      },
+      "mutual_edge_required_kappa_count": 2,
+      "mutual_edge_required_lambda_count": 2,
+      "node_count": 74,
+      "pair_count": 2701,
+      "pair_index": 52,
+      "period": 2,
+      "relations": {
+        "kappa_v": "COLLECTIVE_ONLY_PERIOD_RESCUE",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 73,
+      "stratum_index": 38
+    },
+    {
+      "adjacent_pair_count": 122,
+      "background_index": 11,
+      "cube_key": "primitive_len8|rule_073|bg_011",
+      "kappa_minimal_cardinality": "EXACTLY_2",
+      "kappa_pair_rescue_count": 2,
+      "kappa_rescuing_pair_examples": [
+        [
+          182,
+          190
+        ],
+        [
+          188,
+          190
+        ]
+      ],
+      "lambda_minimal_cardinality": "EXACTLY_2",
+      "lambda_pair_rescue_count": 2,
+      "lambda_rescuing_pair_examples": [
+        [
+          182,
+          190
+        ],
+        [
+          188,
+          190
+        ]
+      ],
+      "mechanism_counts": {
+        "DISTRIBUTED_EDGE_COVERAGE": 2,
+        "DISTRIBUTED_VERTEX_COVERAGE": 2,
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 2699,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 2699
+      },
+      "mutual_edge_required_kappa_count": 2,
+      "mutual_edge_required_lambda_count": 2,
+      "node_count": 74,
+      "pair_count": 2701,
+      "pair_index": 55,
+      "period": 2,
+      "relations": {
+        "kappa_v": "COLLECTIVE_ONLY_PERIOD_RESCUE",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 73,
+      "stratum_index": 39
+    },
+    {
+      "adjacent_pair_count": 20,
+      "background_index": 12,
+      "cube_key": "primitive_len8|rule_073|bg_012",
+      "kappa_minimal_cardinality": "AT_LEAST_3",
+      "kappa_pair_rescue_count": 0,
+      "kappa_rescuing_pair_examples": [],
+      "lambda_minimal_cardinality": "AT_LEAST_3",
+      "lambda_pair_rescue_count": 0,
+      "lambda_rescuing_pair_examples": [],
+      "mechanism_counts": {
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 378,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 378
+      },
+      "mutual_edge_required_kappa_count": 0,
+      "mutual_edge_required_lambda_count": 0,
+      "node_count": 28,
+      "pair_count": 378,
+      "pair_index": 215,
+      "period": 12,
+      "relations": {
+        "kappa_v": "COLLECTIVE_ONLY_PERIOD_RESCUE",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 73,
+      "stratum_index": 40
+    },
+    {
+      "adjacent_pair_count": 20,
+      "background_index": 12,
+      "cube_key": "primitive_len8|rule_073|bg_012",
+      "kappa_minimal_cardinality": "AT_LEAST_3",
+      "kappa_pair_rescue_count": 0,
+      "kappa_rescuing_pair_examples": [],
+      "lambda_minimal_cardinality": "AT_LEAST_3",
+      "lambda_pair_rescue_count": 0,
+      "lambda_rescuing_pair_examples": [],
+      "mechanism_counts": {
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 378,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 378
+      },
+      "mutual_edge_required_kappa_count": 0,
+      "mutual_edge_required_lambda_count": 0,
+      "node_count": 28,
+      "pair_count": 378,
+      "pair_index": 217,
+      "period": 12,
+      "relations": {
+        "kappa_v": "COLLECTIVE_ONLY_PERIOD_RESCUE",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 73,
+      "stratum_index": 41
+    },
+    {
+      "adjacent_pair_count": 20,
+      "background_index": 12,
+      "cube_key": "primitive_len8|rule_073|bg_012",
+      "kappa_minimal_cardinality": "AT_LEAST_3",
+      "kappa_pair_rescue_count": 0,
+      "kappa_rescuing_pair_examples": [],
+      "lambda_minimal_cardinality": "AT_LEAST_3",
+      "lambda_pair_rescue_count": 0,
+      "lambda_rescuing_pair_examples": [],
+      "mechanism_counts": {
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 378,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 378
+      },
+      "mutual_edge_required_kappa_count": 0,
+      "mutual_edge_required_lambda_count": 0,
+      "node_count": 28,
+      "pair_count": 378,
+      "pair_index": 219,
+      "period": 12,
+      "relations": {
+        "kappa_v": "COLLECTIVE_ONLY_PERIOD_RESCUE",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 73,
+      "stratum_index": 42
+    },
+    {
+      "adjacent_pair_count": 215,
+      "background_index": 18,
+      "cube_key": "primitive_len8|rule_073|bg_018",
+      "kappa_minimal_cardinality": "EXACTLY_2",
+      "kappa_pair_rescue_count": 1,
+      "kappa_rescuing_pair_examples": [
+        [
+          98,
+          120
+        ]
+      ],
+      "lambda_minimal_cardinality": "EXACTLY_2",
+      "lambda_pair_rescue_count": 1,
+      "lambda_rescuing_pair_examples": [
+        [
+          98,
+          120
+        ]
+      ],
+      "mechanism_counts": {
+        "DISTRIBUTED_EDGE_COVERAGE": 1,
+        "DISTRIBUTED_VERTEX_COVERAGE": 1,
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 5564,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 5564
+      },
+      "mutual_edge_required_kappa_count": 0,
+      "mutual_edge_required_lambda_count": 0,
+      "node_count": 106,
+      "pair_count": 5565,
+      "pair_index": 561,
+      "period": 6,
+      "relations": {
+        "kappa_v": "COLLECTIVE_ONLY_PERIOD_RESCUE",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 73,
+      "stratum_index": 43
+    },
+    {
+      "adjacent_pair_count": 11,
+      "background_index": 19,
+      "cube_key": "primitive_len8|rule_073|bg_019",
+      "kappa_minimal_cardinality": "EXACTLY_2",
+      "kappa_pair_rescue_count": 1,
+      "kappa_rescuing_pair_examples": [
+        [
+          49,
+          69
+        ]
+      ],
+      "lambda_minimal_cardinality": "EXACTLY_2",
+      "lambda_pair_rescue_count": 1,
+      "lambda_rescuing_pair_examples": [
+        [
+          49,
+          69
+        ]
+      ],
+      "mechanism_counts": {
+        "DISTRIBUTED_EDGE_COVERAGE": 1,
+        "DISTRIBUTED_VERTEX_COVERAGE": 1,
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 135,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 135
+      },
+      "mutual_edge_required_kappa_count": 0,
+      "mutual_edge_required_lambda_count": 0,
+      "node_count": 17,
+      "pair_count": 136,
+      "pair_index": 123,
+      "period": 12,
+      "relations": {
+        "kappa_v": "COLLECTIVE_ONLY_PERIOD_RESCUE",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 73,
+      "stratum_index": 44
+    },
+    {
+      "adjacent_pair_count": 76,
+      "background_index": 19,
+      "cube_key": "primitive_len8|rule_073|bg_019",
+      "kappa_minimal_cardinality": "EXACTLY_2",
+      "kappa_pair_rescue_count": 2,
+      "kappa_rescuing_pair_examples": [
+        [
+          14,
+          60
+        ],
+        [
+          138,
+          170
+        ]
+      ],
+      "lambda_minimal_cardinality": "EXACTLY_2",
+      "lambda_pair_rescue_count": 2,
+      "lambda_rescuing_pair_examples": [
+        [
+          14,
+          60
+        ],
+        [
+          138,
+          170
+        ]
+      ],
+      "mechanism_counts": {
+        "DISTRIBUTED_EDGE_COVERAGE": 2,
+        "DISTRIBUTED_VERTEX_COVERAGE": 2,
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 1223,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 1223
+      },
+      "mutual_edge_required_kappa_count": 1,
+      "mutual_edge_required_lambda_count": 1,
+      "node_count": 50,
+      "pair_count": 1225,
+      "pair_index": 311,
+      "period": 3,
+      "relations": {
+        "kappa_v": "COLLECTIVE_ONLY_PERIOD_RESCUE",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 73,
+      "stratum_index": 45
+    },
+    {
+      "adjacent_pair_count": 285,
+      "background_index": 19,
+      "cube_key": "primitive_len8|rule_073|bg_019",
+      "kappa_minimal_cardinality": "EXACTLY_2",
+      "kappa_pair_rescue_count": 15,
+      "kappa_rescuing_pair_examples": [
+        [
+          58,
+          143
+        ],
+        [
+          58,
+          158
+        ],
+        [
+          140,
+          156
+        ],
+        [
+          140,
+          172
+        ],
+        [
+          143,
+          156
+        ],
+        [
+          143,
+          187
+        ],
+        [
+          143,
+          189
+        ],
+        [
+          143,
+          190
+        ],
+        [
+          154,
+          158
+        ],
+        [
+          156,
+          158
+        ],
+        [
+          158,
+          187
+        ],
+        [
+          158,
+          189
+        ],
+        [
+          158,
+          190
+        ],
+        [
+          172,
+          174
+        ],
+        [
+          174,
+          190
+        ]
+      ],
+      "lambda_minimal_cardinality": "EXACTLY_2",
+      "lambda_pair_rescue_count": 17,
+      "lambda_rescuing_pair_examples": [
+        [
+          58,
+          143
+        ],
+        [
+          58,
+          158
+        ],
+        [
+          140,
+          156
+        ],
+        [
+          140,
+          172
+        ],
+        [
+          143,
+          156
+        ],
+        [
+          143,
+          187
+        ],
+        [
+          143,
+          189
+        ],
+        [
+          143,
+          190
+        ],
+        [
+          143,
+          248
+        ],
+        [
+          154,
+          158
+        ],
+        [
+          156,
+          158
+        ],
+        [
+          158,
+          187
+        ],
+        [
+          158,
+          189
+        ],
+        [
+          158,
+          190
+        ],
+        [
+          158,
+          248
+        ],
+        [
+          172,
+          174
+        ],
+        [
+          174,
+          190
+        ]
+      ],
+      "mechanism_counts": {
+        "DISTRIBUTED_EDGE_COVERAGE": 17,
+        "DISTRIBUTED_VERTEX_COVERAGE": 15,
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 7984,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 7986
+      },
+      "mutual_edge_required_kappa_count": 5,
+      "mutual_edge_required_lambda_count": 5,
+      "node_count": 127,
+      "pair_count": 8001,
+      "pair_index": 311,
+      "period": 6,
+      "relations": {
+        "kappa_v": "COLLECTIVE_ONLY_PERIOD_RESCUE",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 73,
+      "stratum_index": 46
+    },
+    {
+      "adjacent_pair_count": 76,
+      "background_index": 19,
+      "cube_key": "primitive_len8|rule_073|bg_019",
+      "kappa_minimal_cardinality": "EXACTLY_2",
+      "kappa_pair_rescue_count": 1,
+      "kappa_rescuing_pair_examples": [
+        [
+          60,
+          255
+        ]
+      ],
+      "lambda_minimal_cardinality": "EXACTLY_2",
+      "lambda_pair_rescue_count": 1,
+      "lambda_rescuing_pair_examples": [
+        [
+          60,
+          255
+        ]
+      ],
+      "mechanism_counts": {
+        "DISTRIBUTED_EDGE_COVERAGE": 1,
+        "DISTRIBUTED_VERTEX_COVERAGE": 1,
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 1224,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 1224
+      },
+      "mutual_edge_required_kappa_count": 0,
+      "mutual_edge_required_lambda_count": 0,
+      "node_count": 50,
+      "pair_count": 1225,
+      "pair_index": 312,
+      "period": 3,
+      "relations": {
+        "kappa_v": "COLLECTIVE_ONLY_PERIOD_RESCUE",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 73,
+      "stratum_index": 47
+    },
+    {
+      "adjacent_pair_count": 76,
+      "background_index": 19,
+      "cube_key": "primitive_len8|rule_073|bg_019",
+      "kappa_minimal_cardinality": "EXACTLY_2",
+      "kappa_pair_rescue_count": 1,
+      "kappa_rescuing_pair_examples": [
+        [
+          14,
+          255
+        ]
+      ],
+      "lambda_minimal_cardinality": "EXACTLY_2",
+      "lambda_pair_rescue_count": 1,
+      "lambda_rescuing_pair_examples": [
+        [
+          14,
+          255
+        ]
+      ],
+      "mechanism_counts": {
+        "DISTRIBUTED_EDGE_COVERAGE": 1,
+        "DISTRIBUTED_VERTEX_COVERAGE": 1,
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 1224,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 1224
+      },
+      "mutual_edge_required_kappa_count": 0,
+      "mutual_edge_required_lambda_count": 0,
+      "node_count": 50,
+      "pair_count": 1225,
+      "pair_index": 313,
+      "period": 3,
+      "relations": {
+        "kappa_v": "COLLECTIVE_ONLY_PERIOD_RESCUE",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 73,
+      "stratum_index": 48
+    },
+    {
+      "adjacent_pair_count": 285,
+      "background_index": 19,
+      "cube_key": "primitive_len8|rule_073|bg_019",
+      "kappa_minimal_cardinality": "EXACTLY_2",
+      "kappa_pair_rescue_count": 12,
+      "kappa_rescuing_pair_examples": [
+        [
+          63,
+          143
+        ],
+        [
+          63,
+          158
+        ],
+        [
+          143,
+          175
+        ],
+        [
+          143,
+          187
+        ],
+        [
+          143,
+          189
+        ],
+        [
+          143,
+          190
+        ],
+        [
+          158,
+          175
+        ],
+        [
+          158,
+          187
+        ],
+        [
+          158,
+          189
+        ],
+        [
+          158,
+          190
+        ],
+        [
+          174,
+          175
+        ],
+        [
+          174,
+          190
+        ]
+      ],
+      "lambda_minimal_cardinality": "EXACTLY_2",
+      "lambda_pair_rescue_count": 12,
+      "lambda_rescuing_pair_examples": [
+        [
+          63,
+          143
+        ],
+        [
+          63,
+          158
+        ],
+        [
+          143,
+          175
+        ],
+        [
+          143,
+          187
+        ],
+        [
+          143,
+          189
+        ],
+        [
+          143,
+          190
+        ],
+        [
+          158,
+          175
+        ],
+        [
+          158,
+          187
+        ],
+        [
+          158,
+          189
+        ],
+        [
+          158,
+          190
+        ],
+        [
+          174,
+          175
+        ],
+        [
+          174,
+          190
+        ]
+      ],
+      "mechanism_counts": {
+        "DISTRIBUTED_EDGE_COVERAGE": 12,
+        "DISTRIBUTED_VERTEX_COVERAGE": 12,
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 7989,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 7989
+      },
+      "mutual_edge_required_kappa_count": 2,
+      "mutual_edge_required_lambda_count": 2,
+      "node_count": 127,
+      "pair_count": 8001,
+      "pair_index": 313,
+      "period": 6,
+      "relations": {
+        "kappa_v": "COLLECTIVE_ONLY_PERIOD_RESCUE",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 73,
+      "stratum_index": 49
+    },
+    {
+      "adjacent_pair_count": 76,
+      "background_index": 19,
+      "cube_key": "primitive_len8|rule_073|bg_019",
+      "kappa_minimal_cardinality": "NOT_APPLICABLE_NOT_COLLECTIVE",
+      "kappa_pair_rescue_count": 0,
+      "kappa_rescuing_pair_examples": [],
+      "lambda_minimal_cardinality": "AT_LEAST_3",
+      "lambda_pair_rescue_count": 0,
+      "lambda_rescuing_pair_examples": [],
+      "mechanism_counts": {
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 1225,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 1225
+      },
+      "mutual_edge_required_kappa_count": 0,
+      "mutual_edge_required_lambda_count": 0,
+      "node_count": 50,
+      "pair_count": 1225,
+      "pair_index": 621,
+      "period": 3,
+      "relations": {
+        "kappa_v": "NONRESCUING_PERIOD_CONTROL",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 73,
+      "stratum_index": 50
+    },
+    {
+      "adjacent_pair_count": 76,
+      "background_index": 19,
+      "cube_key": "primitive_len8|rule_073|bg_019",
+      "kappa_minimal_cardinality": "NOT_APPLICABLE_NOT_COLLECTIVE",
+      "kappa_pair_rescue_count": 0,
+      "kappa_rescuing_pair_examples": [],
+      "lambda_minimal_cardinality": "AT_LEAST_3",
+      "lambda_pair_rescue_count": 0,
+      "lambda_rescuing_pair_examples": [],
+      "mechanism_counts": {
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 1225,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 1225
+      },
+      "mutual_edge_required_kappa_count": 0,
+      "mutual_edge_required_lambda_count": 0,
+      "node_count": 50,
+      "pair_count": 1225,
+      "pair_index": 622,
+      "period": 3,
+      "relations": {
+        "kappa_v": "NONRESCUING_PERIOD_CONTROL",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 73,
+      "stratum_index": 51
+    },
+    {
+      "adjacent_pair_count": 76,
+      "background_index": 19,
+      "cube_key": "primitive_len8|rule_073|bg_019",
+      "kappa_minimal_cardinality": "NOT_APPLICABLE_NOT_COLLECTIVE",
+      "kappa_pair_rescue_count": 0,
+      "kappa_rescuing_pair_examples": [],
+      "lambda_minimal_cardinality": "AT_LEAST_3",
+      "lambda_pair_rescue_count": 0,
+      "lambda_rescuing_pair_examples": [],
+      "mechanism_counts": {
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 1225,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 1225
+      },
+      "mutual_edge_required_kappa_count": 0,
+      "mutual_edge_required_lambda_count": 0,
+      "node_count": 50,
+      "pair_count": 1225,
+      "pair_index": 623,
+      "period": 3,
+      "relations": {
+        "kappa_v": "NONRESCUING_PERIOD_CONTROL",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 73,
+      "stratum_index": 52
+    },
+    {
+      "adjacent_pair_count": 285,
+      "background_index": 19,
+      "cube_key": "primitive_len8|rule_073|bg_019",
+      "kappa_minimal_cardinality": "EXACTLY_2",
+      "kappa_pair_rescue_count": 22,
+      "kappa_rescuing_pair_examples": [
+        [
+          1,
+          133
+        ],
+        [
+          1,
+          181
+        ],
+        [
+          67,
+          133
+        ],
+        [
+          67,
+          181
+        ],
+        [
+          77,
+          133
+        ],
+        [
+          77,
+          181
+        ],
+        [
+          81,
+          133
+        ],
+        [
+          81,
+          181
+        ],
+        [
+          89,
+          133
+        ],
+        [
+          89,
+          181
+        ],
+        [
+          97,
+          133
+        ],
+        [
+          97,
+          181
+        ],
+        [
+          105,
+          133
+        ],
+        [
+          105,
+          181
+        ],
+        [
+          133,
+          205
+        ],
+        [
+          133,
+          217
+        ],
+        [
+          137,
+          161
+        ],
+        [
+          137,
+          173
+        ],
+        [
+          161,
+          233
+        ],
+        [
+          173,
+          233
+        ]
+      ],
+      "lambda_minimal_cardinality": "EXACTLY_2",
+      "lambda_pair_rescue_count": 31,
+      "lambda_rescuing_pair_examples": [
+        [
+          1,
+          133
+        ],
+        [
+          1,
+          181
+        ],
+        [
+          67,
+          133
+        ],
+        [
+          67,
+          181
+        ],
+        [
+          77,
+          133
+        ],
+        [
+          77,
+          181
+        ],
+        [
+          81,
+          133
+        ],
+        [
+          81,
+          181
+        ],
+        [
+          89,
+          133
+        ],
+        [
+          89,
+          181
+        ],
+        [
+          97,
+          133
+        ],
+        [
+          97,
+          181
+        ],
+        [
+          105,
+          133
+        ],
+        [
+          105,
+          181
+        ],
+        [
+          129,
+          133
+        ],
+        [
+          129,
+          161
+        ],
+        [
+          133,
+          195
+        ],
+        [
+          133,
+          197
+        ],
+        [
+          133,
+          205
+        ],
+        [
+          133,
+          217
+        ]
+      ],
+      "mechanism_counts": {
+        "DISTRIBUTED_EDGE_COVERAGE": 31,
+        "DISTRIBUTED_VERTEX_COVERAGE": 22,
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 7970,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 7979
+      },
+      "mutual_edge_required_kappa_count": 0,
+      "mutual_edge_required_lambda_count": 5,
+      "node_count": 127,
+      "pair_count": 8001,
+      "pair_index": 623,
+      "period": 6,
+      "relations": {
+        "kappa_v": "COLLECTIVE_ONLY_PERIOD_RESCUE",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 73,
+      "stratum_index": 53
+    },
+    {
+      "adjacent_pair_count": 76,
+      "background_index": 19,
+      "cube_key": "primitive_len8|rule_073|bg_019",
+      "kappa_minimal_cardinality": "EXACTLY_2",
+      "kappa_pair_rescue_count": 1,
+      "kappa_rescuing_pair_examples": [
+        [
+          164,
+          180
+        ]
+      ],
+      "lambda_minimal_cardinality": "EXACTLY_2",
+      "lambda_pair_rescue_count": 1,
+      "lambda_rescuing_pair_examples": [
+        [
+          164,
+          180
+        ]
+      ],
+      "mechanism_counts": {
+        "DISTRIBUTED_EDGE_COVERAGE": 1,
+        "DISTRIBUTED_VERTEX_COVERAGE": 1,
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 1224,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 1224
+      },
+      "mutual_edge_required_kappa_count": 1,
+      "mutual_edge_required_lambda_count": 1,
+      "node_count": 50,
+      "pair_count": 1225,
+      "pair_index": 626,
+      "period": 3,
+      "relations": {
+        "kappa_v": "COLLECTIVE_ONLY_PERIOD_RESCUE",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 73,
+      "stratum_index": 54
+    },
+    {
+      "adjacent_pair_count": 76,
+      "background_index": 19,
+      "cube_key": "primitive_len8|rule_073|bg_019",
+      "kappa_minimal_cardinality": "EXACTLY_2",
+      "kappa_pair_rescue_count": 1,
+      "kappa_rescuing_pair_examples": [
+        [
+          164,
+          180
+        ]
+      ],
+      "lambda_minimal_cardinality": "EXACTLY_2",
+      "lambda_pair_rescue_count": 1,
+      "lambda_rescuing_pair_examples": [
+        [
+          164,
+          180
+        ]
+      ],
+      "mechanism_counts": {
+        "DISTRIBUTED_EDGE_COVERAGE": 1,
+        "DISTRIBUTED_VERTEX_COVERAGE": 1,
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 1224,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 1224
+      },
+      "mutual_edge_required_kappa_count": 1,
+      "mutual_edge_required_lambda_count": 1,
+      "node_count": 50,
+      "pair_count": 1225,
+      "pair_index": 628,
+      "period": 3,
+      "relations": {
+        "kappa_v": "COLLECTIVE_ONLY_PERIOD_RESCUE",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 73,
+      "stratum_index": 55
+    },
+    {
+      "adjacent_pair_count": 76,
+      "background_index": 19,
+      "cube_key": "primitive_len8|rule_073|bg_019",
+      "kappa_minimal_cardinality": "NOT_APPLICABLE_NOT_COLLECTIVE",
+      "kappa_pair_rescue_count": 0,
+      "kappa_rescuing_pair_examples": [],
+      "lambda_minimal_cardinality": "AT_LEAST_3",
+      "lambda_pair_rescue_count": 0,
+      "lambda_rescuing_pair_examples": [],
+      "mechanism_counts": {
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 1225,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 1225
+      },
+      "mutual_edge_required_kappa_count": 0,
+      "mutual_edge_required_lambda_count": 0,
+      "node_count": 50,
+      "pair_count": 1225,
+      "pair_index": 677,
+      "period": 3,
+      "relations": {
+        "kappa_v": "NONRESCUING_PERIOD_CONTROL",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 73,
+      "stratum_index": 56
+    },
+    {
+      "adjacent_pair_count": 76,
+      "background_index": 19,
+      "cube_key": "primitive_len8|rule_073|bg_019",
+      "kappa_minimal_cardinality": "NOT_APPLICABLE_NOT_COLLECTIVE",
+      "kappa_pair_rescue_count": 0,
+      "kappa_rescuing_pair_examples": [],
+      "lambda_minimal_cardinality": "AT_LEAST_3",
+      "lambda_pair_rescue_count": 0,
+      "lambda_rescuing_pair_examples": [],
+      "mechanism_counts": {
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 1225,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 1225
+      },
+      "mutual_edge_required_kappa_count": 0,
+      "mutual_edge_required_lambda_count": 0,
+      "node_count": 50,
+      "pair_count": 1225,
+      "pair_index": 678,
+      "period": 3,
+      "relations": {
+        "kappa_v": "NONRESCUING_PERIOD_CONTROL",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 73,
+      "stratum_index": 57
+    },
+    {
+      "adjacent_pair_count": 76,
+      "background_index": 19,
+      "cube_key": "primitive_len8|rule_073|bg_019",
+      "kappa_minimal_cardinality": "EXACTLY_2",
+      "kappa_pair_rescue_count": 2,
+      "kappa_rescuing_pair_examples": [
+        [
+          134,
+          166
+        ],
+        [
+          164,
+          180
+        ]
+      ],
+      "lambda_minimal_cardinality": "EXACTLY_2",
+      "lambda_pair_rescue_count": 2,
+      "lambda_rescuing_pair_examples": [
+        [
+          134,
+          166
+        ],
+        [
+          164,
+          180
+        ]
+      ],
+      "mechanism_counts": {
+        "DISTRIBUTED_EDGE_COVERAGE": 2,
+        "DISTRIBUTED_VERTEX_COVERAGE": 2,
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 1223,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 1223
+      },
+      "mutual_edge_required_kappa_count": 2,
+      "mutual_edge_required_lambda_count": 2,
+      "node_count": 50,
+      "pair_count": 1225,
+      "pair_index": 793,
+      "period": 3,
+      "relations": {
+        "kappa_v": "COLLECTIVE_ONLY_PERIOD_RESCUE",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 73,
+      "stratum_index": 58
+    },
+    {
+      "adjacent_pair_count": 76,
+      "background_index": 19,
+      "cube_key": "primitive_len8|rule_073|bg_019",
+      "kappa_minimal_cardinality": "EXACTLY_2",
+      "kappa_pair_rescue_count": 2,
+      "kappa_rescuing_pair_examples": [
+        [
+          134,
+          166
+        ],
+        [
+          164,
+          180
+        ]
+      ],
+      "lambda_minimal_cardinality": "EXACTLY_2",
+      "lambda_pair_rescue_count": 2,
+      "lambda_rescuing_pair_examples": [
+        [
+          134,
+          166
+        ],
+        [
+          164,
+          180
+        ]
+      ],
+      "mechanism_counts": {
+        "DISTRIBUTED_EDGE_COVERAGE": 2,
+        "DISTRIBUTED_VERTEX_COVERAGE": 2,
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 1223,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 1223
+      },
+      "mutual_edge_required_kappa_count": 2,
+      "mutual_edge_required_lambda_count": 2,
+      "node_count": 50,
+      "pair_count": 1225,
+      "pair_index": 794,
+      "period": 3,
+      "relations": {
+        "kappa_v": "COLLECTIVE_ONLY_PERIOD_RESCUE",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 73,
+      "stratum_index": 59
+    },
+    {
+      "adjacent_pair_count": 76,
+      "background_index": 19,
+      "cube_key": "primitive_len8|rule_073|bg_019",
+      "kappa_minimal_cardinality": "NOT_APPLICABLE_NOT_COLLECTIVE",
+      "kappa_pair_rescue_count": 0,
+      "kappa_rescuing_pair_examples": [],
+      "lambda_minimal_cardinality": "AT_LEAST_3",
+      "lambda_pair_rescue_count": 0,
+      "lambda_rescuing_pair_examples": [],
+      "mechanism_counts": {
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 1225,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 1225
+      },
+      "mutual_edge_required_kappa_count": 0,
+      "mutual_edge_required_lambda_count": 0,
+      "node_count": 50,
+      "pair_count": 1225,
+      "pair_index": 868,
+      "period": 3,
+      "relations": {
+        "kappa_v": "NONRESCUING_PERIOD_CONTROL",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 73,
+      "stratum_index": 60
+    },
+    {
+      "adjacent_pair_count": 215,
+      "background_index": 20,
+      "cube_key": "primitive_len8|rule_073|bg_020",
+      "kappa_minimal_cardinality": "EXACTLY_2",
+      "kappa_pair_rescue_count": 1,
+      "kappa_rescuing_pair_examples": [
+        [
+          30,
+          70
+        ]
+      ],
+      "lambda_minimal_cardinality": "EXACTLY_2",
+      "lambda_pair_rescue_count": 1,
+      "lambda_rescuing_pair_examples": [
+        [
+          30,
+          70
+        ]
+      ],
+      "mechanism_counts": {
+        "DISTRIBUTED_EDGE_COVERAGE": 1,
+        "DISTRIBUTED_VERTEX_COVERAGE": 1,
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 5564,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 5564
+      },
+      "mutual_edge_required_kappa_count": 0,
+      "mutual_edge_required_lambda_count": 0,
+      "node_count": 106,
+      "pair_count": 5565,
+      "pair_index": 736,
+      "period": 6,
+      "relations": {
+        "kappa_v": "COLLECTIVE_ONLY_PERIOD_RESCUE",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 73,
+      "stratum_index": 61
+    },
+    {
+      "adjacent_pair_count": 78,
+      "background_index": 21,
+      "cube_key": "primitive_len8|rule_073|bg_021",
+      "kappa_minimal_cardinality": "AT_LEAST_3",
+      "kappa_pair_rescue_count": 0,
+      "kappa_rescuing_pair_examples": [],
+      "lambda_minimal_cardinality": "AT_LEAST_3",
+      "lambda_pair_rescue_count": 0,
+      "lambda_rescuing_pair_examples": [],
+      "mechanism_counts": {
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 1711,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 1711
+      },
+      "mutual_edge_required_kappa_count": 0,
+      "mutual_edge_required_lambda_count": 0,
+      "node_count": 59,
+      "pair_count": 1711,
+      "pair_index": 282,
+      "period": 3,
+      "relations": {
+        "kappa_v": "COLLECTIVE_ONLY_PERIOD_RESCUE",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 73,
+      "stratum_index": 62
+    },
+    {
+      "adjacent_pair_count": 184,
+      "background_index": 23,
+      "cube_key": "primitive_len8|rule_073|bg_023",
+      "kappa_minimal_cardinality": "EXACTLY_2",
+      "kappa_pair_rescue_count": 25,
+      "kappa_rescuing_pair_examples": [
+        [
+          15,
+          20
+        ],
+        [
+          20,
+          30
+        ],
+        [
+          20,
+          35
+        ],
+        [
+          20,
+          36
+        ],
+        [
+          20,
+          40
+        ],
+        [
+          20,
+          56
+        ],
+        [
+          20,
+          58
+        ],
+        [
+          20,
+          60
+        ],
+        [
+          20,
+          79
+        ],
+        [
+          20,
+          92
+        ],
+        [
+          20,
+          94
+        ],
+        [
+          20,
+          120
+        ],
+        [
+          20,
+          122
+        ],
+        [
+          20,
+          126
+        ],
+        [
+          20,
+          135
+        ],
+        [
+          20,
+          167
+        ],
+        [
+          20,
+          179
+        ],
+        [
+          20,
+          196
+        ],
+        [
+          20,
+          199
+        ],
+        [
+          20,
+          205
+        ]
+      ],
+      "lambda_minimal_cardinality": "EXACTLY_2",
+      "lambda_pair_rescue_count": 26,
+      "lambda_rescuing_pair_examples": [
+        [
+          15,
+          20
+        ],
+        [
+          20,
+          28
+        ],
+        [
+          20,
+          30
+        ],
+        [
+          20,
+          35
+        ],
+        [
+          20,
+          36
+        ],
+        [
+          20,
+          40
+        ],
+        [
+          20,
+          56
+        ],
+        [
+          20,
+          58
+        ],
+        [
+          20,
+          60
+        ],
+        [
+          20,
+          79
+        ],
+        [
+          20,
+          92
+        ],
+        [
+          20,
+          94
+        ],
+        [
+          20,
+          120
+        ],
+        [
+          20,
+          122
+        ],
+        [
+          20,
+          126
+        ],
+        [
+          20,
+          135
+        ],
+        [
+          20,
+          167
+        ],
+        [
+          20,
+          179
+        ],
+        [
+          20,
+          196
+        ],
+        [
+          20,
+          199
+        ]
+      ],
+      "mechanism_counts": {
+        "DISTRIBUTED_EDGE_COVERAGE": 26,
+        "DISTRIBUTED_VERTEX_COVERAGE": 25,
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 4924,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 4925
+      },
+      "mutual_edge_required_kappa_count": 0,
+      "mutual_edge_required_lambda_count": 0,
+      "node_count": 100,
+      "pair_count": 4950,
+      "pair_index": 39,
+      "period": 6,
+      "relations": {
+        "kappa_v": "COLLECTIVE_ONLY_PERIOD_RESCUE",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 73,
+      "stratum_index": 63
+    },
+    {
+      "adjacent_pair_count": 184,
+      "background_index": 23,
+      "cube_key": "primitive_len8|rule_073|bg_023",
+      "kappa_minimal_cardinality": "EXACTLY_2",
+      "kappa_pair_rescue_count": 25,
+      "kappa_rescuing_pair_examples": [
+        [
+          15,
+          20
+        ],
+        [
+          20,
+          30
+        ],
+        [
+          20,
+          35
+        ],
+        [
+          20,
+          36
+        ],
+        [
+          20,
+          40
+        ],
+        [
+          20,
+          56
+        ],
+        [
+          20,
+          58
+        ],
+        [
+          20,
+          60
+        ],
+        [
+          20,
+          79
+        ],
+        [
+          20,
+          92
+        ],
+        [
+          20,
+          94
+        ],
+        [
+          20,
+          120
+        ],
+        [
+          20,
+          122
+        ],
+        [
+          20,
+          126
+        ],
+        [
+          20,
+          135
+        ],
+        [
+          20,
+          167
+        ],
+        [
+          20,
+          179
+        ],
+        [
+          20,
+          196
+        ],
+        [
+          20,
+          199
+        ],
+        [
+          20,
+          205
+        ]
+      ],
+      "lambda_minimal_cardinality": "EXACTLY_2",
+      "lambda_pair_rescue_count": 26,
+      "lambda_rescuing_pair_examples": [
+        [
+          15,
+          20
+        ],
+        [
+          20,
+          28
+        ],
+        [
+          20,
+          30
+        ],
+        [
+          20,
+          35
+        ],
+        [
+          20,
+          36
+        ],
+        [
+          20,
+          40
+        ],
+        [
+          20,
+          56
+        ],
+        [
+          20,
+          58
+        ],
+        [
+          20,
+          60
+        ],
+        [
+          20,
+          79
+        ],
+        [
+          20,
+          92
+        ],
+        [
+          20,
+          94
+        ],
+        [
+          20,
+          120
+        ],
+        [
+          20,
+          122
+        ],
+        [
+          20,
+          126
+        ],
+        [
+          20,
+          135
+        ],
+        [
+          20,
+          167
+        ],
+        [
+          20,
+          179
+        ],
+        [
+          20,
+          196
+        ],
+        [
+          20,
+          199
+        ]
+      ],
+      "mechanism_counts": {
+        "DISTRIBUTED_EDGE_COVERAGE": 26,
+        "DISTRIBUTED_VERTEX_COVERAGE": 25,
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 4924,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 4925
+      },
+      "mutual_edge_required_kappa_count": 0,
+      "mutual_edge_required_lambda_count": 0,
+      "node_count": 100,
+      "pair_count": 4950,
+      "pair_index": 41,
+      "period": 6,
+      "relations": {
+        "kappa_v": "COLLECTIVE_ONLY_PERIOD_RESCUE",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 73,
+      "stratum_index": 64
+    },
+    {
+      "adjacent_pair_count": 184,
+      "background_index": 23,
+      "cube_key": "primitive_len8|rule_073|bg_023",
+      "kappa_minimal_cardinality": "EXACTLY_2",
+      "kappa_pair_rescue_count": 25,
+      "kappa_rescuing_pair_examples": [
+        [
+          15,
+          40
+        ],
+        [
+          20,
+          40
+        ],
+        [
+          28,
+          40
+        ],
+        [
+          30,
+          40
+        ],
+        [
+          35,
+          40
+        ],
+        [
+          36,
+          40
+        ],
+        [
+          40,
+          58
+        ],
+        [
+          40,
+          60
+        ],
+        [
+          40,
+          79
+        ],
+        [
+          40,
+          92
+        ],
+        [
+          40,
+          94
+        ],
+        [
+          40,
+          120
+        ],
+        [
+          40,
+          122
+        ],
+        [
+          40,
+          126
+        ],
+        [
+          40,
+          135
+        ],
+        [
+          40,
+          167
+        ],
+        [
+          40,
+          179
+        ],
+        [
+          40,
+          196
+        ],
+        [
+          40,
+          199
+        ],
+        [
+          40,
+          205
+        ]
+      ],
+      "lambda_minimal_cardinality": "EXACTLY_2",
+      "lambda_pair_rescue_count": 26,
+      "lambda_rescuing_pair_examples": [
+        [
+          15,
+          40
+        ],
+        [
+          20,
+          40
+        ],
+        [
+          28,
+          40
+        ],
+        [
+          30,
+          40
+        ],
+        [
+          35,
+          40
+        ],
+        [
+          36,
+          40
+        ],
+        [
+          40,
+          56
+        ],
+        [
+          40,
+          58
+        ],
+        [
+          40,
+          60
+        ],
+        [
+          40,
+          79
+        ],
+        [
+          40,
+          92
+        ],
+        [
+          40,
+          94
+        ],
+        [
+          40,
+          120
+        ],
+        [
+          40,
+          122
+        ],
+        [
+          40,
+          126
+        ],
+        [
+          40,
+          135
+        ],
+        [
+          40,
+          167
+        ],
+        [
+          40,
+          179
+        ],
+        [
+          40,
+          196
+        ],
+        [
+          40,
+          199
+        ]
+      ],
+      "mechanism_counts": {
+        "DISTRIBUTED_EDGE_COVERAGE": 26,
+        "DISTRIBUTED_VERTEX_COVERAGE": 25,
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 4924,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 4925
+      },
+      "mutual_edge_required_kappa_count": 0,
+      "mutual_edge_required_lambda_count": 0,
+      "node_count": 100,
+      "pair_count": 4950,
+      "pair_index": 124,
+      "period": 6,
+      "relations": {
+        "kappa_v": "COLLECTIVE_ONLY_PERIOD_RESCUE",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 73,
+      "stratum_index": 65
+    },
+    {
+      "adjacent_pair_count": 184,
+      "background_index": 23,
+      "cube_key": "primitive_len8|rule_073|bg_023",
+      "kappa_minimal_cardinality": "EXACTLY_2",
+      "kappa_pair_rescue_count": 25,
+      "kappa_rescuing_pair_examples": [
+        [
+          15,
+          40
+        ],
+        [
+          20,
+          40
+        ],
+        [
+          28,
+          40
+        ],
+        [
+          30,
+          40
+        ],
+        [
+          35,
+          40
+        ],
+        [
+          36,
+          40
+        ],
+        [
+          40,
+          58
+        ],
+        [
+          40,
+          60
+        ],
+        [
+          40,
+          79
+        ],
+        [
+          40,
+          92
+        ],
+        [
+          40,
+          94
+        ],
+        [
+          40,
+          120
+        ],
+        [
+          40,
+          122
+        ],
+        [
+          40,
+          126
+        ],
+        [
+          40,
+          135
+        ],
+        [
+          40,
+          167
+        ],
+        [
+          40,
+          179
+        ],
+        [
+          40,
+          196
+        ],
+        [
+          40,
+          199
+        ],
+        [
+          40,
+          205
+        ]
+      ],
+      "lambda_minimal_cardinality": "EXACTLY_2",
+      "lambda_pair_rescue_count": 26,
+      "lambda_rescuing_pair_examples": [
+        [
+          15,
+          40
+        ],
+        [
+          20,
+          40
+        ],
+        [
+          28,
+          40
+        ],
+        [
+          30,
+          40
+        ],
+        [
+          35,
+          40
+        ],
+        [
+          36,
+          40
+        ],
+        [
+          40,
+          56
+        ],
+        [
+          40,
+          58
+        ],
+        [
+          40,
+          60
+        ],
+        [
+          40,
+          79
+        ],
+        [
+          40,
+          92
+        ],
+        [
+          40,
+          94
+        ],
+        [
+          40,
+          120
+        ],
+        [
+          40,
+          122
+        ],
+        [
+          40,
+          126
+        ],
+        [
+          40,
+          135
+        ],
+        [
+          40,
+          167
+        ],
+        [
+          40,
+          179
+        ],
+        [
+          40,
+          196
+        ],
+        [
+          40,
+          199
+        ]
+      ],
+      "mechanism_counts": {
+        "DISTRIBUTED_EDGE_COVERAGE": 26,
+        "DISTRIBUTED_VERTEX_COVERAGE": 25,
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 4924,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 4925
+      },
+      "mutual_edge_required_kappa_count": 0,
+      "mutual_edge_required_lambda_count": 0,
+      "node_count": 100,
+      "pair_count": 4950,
+      "pair_index": 126,
+      "period": 6,
+      "relations": {
+        "kappa_v": "COLLECTIVE_ONLY_PERIOD_RESCUE",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 73,
+      "stratum_index": 66
+    },
+    {
+      "adjacent_pair_count": 59,
+      "background_index": 28,
+      "cube_key": "primitive_len8|rule_073|bg_028",
+      "kappa_minimal_cardinality": "AT_LEAST_3",
+      "kappa_pair_rescue_count": 0,
+      "kappa_rescuing_pair_examples": [],
+      "lambda_minimal_cardinality": "AT_LEAST_3",
+      "lambda_pair_rescue_count": 0,
+      "lambda_rescuing_pair_examples": [],
+      "mechanism_counts": {
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 1128,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 1128
+      },
+      "mutual_edge_required_kappa_count": 0,
+      "mutual_edge_required_lambda_count": 0,
+      "node_count": 48,
+      "pair_count": 1128,
+      "pair_index": 129,
+      "period": 3,
+      "relations": {
+        "kappa_v": "COLLECTIVE_ONLY_PERIOD_RESCUE",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 73,
+      "stratum_index": 67
+    },
+    {
+      "adjacent_pair_count": 23,
+      "background_index": 28,
+      "cube_key": "primitive_len8|rule_073|bg_028",
+      "kappa_minimal_cardinality": "EXACTLY_2",
+      "kappa_pair_rescue_count": 1,
+      "kappa_rescuing_pair_examples": [
+        [
+          129,
+          131
+        ]
+      ],
+      "lambda_minimal_cardinality": "EXACTLY_2",
+      "lambda_pair_rescue_count": 1,
+      "lambda_rescuing_pair_examples": [
+        [
+          129,
+          131
+        ]
+      ],
+      "mechanism_counts": {
+        "DISTRIBUTED_EDGE_COVERAGE": 1,
+        "DISTRIBUTED_VERTEX_COVERAGE": 1,
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 495,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 495
+      },
+      "mutual_edge_required_kappa_count": 1,
+      "mutual_edge_required_lambda_count": 1,
+      "node_count": 32,
+      "pair_count": 496,
+      "pair_index": 129,
+      "period": 12,
+      "relations": {
+        "kappa_v": "COLLECTIVE_ONLY_PERIOD_RESCUE",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 73,
+      "stratum_index": 68
+    },
+    {
+      "adjacent_pair_count": 23,
+      "background_index": 28,
+      "cube_key": "primitive_len8|rule_073|bg_028",
+      "kappa_minimal_cardinality": "EXACTLY_2",
+      "kappa_pair_rescue_count": 4,
+      "kappa_rescuing_pair_examples": [
+        [
+          35,
+          190
+        ],
+        [
+          119,
+          190
+        ],
+        [
+          190,
+          231
+        ],
+        [
+          190,
+          247
+        ]
+      ],
+      "lambda_minimal_cardinality": "EXACTLY_2",
+      "lambda_pair_rescue_count": 4,
+      "lambda_rescuing_pair_examples": [
+        [
+          35,
+          190
+        ],
+        [
+          119,
+          190
+        ],
+        [
+          190,
+          231
+        ],
+        [
+          190,
+          247
+        ]
+      ],
+      "mechanism_counts": {
+        "DISTRIBUTED_EDGE_COVERAGE": 4,
+        "DISTRIBUTED_VERTEX_COVERAGE": 4,
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 492,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 492
+      },
+      "mutual_edge_required_kappa_count": 0,
+      "mutual_edge_required_lambda_count": 0,
+      "node_count": 32,
+      "pair_count": 496,
+      "pair_index": 572,
+      "period": 12,
+      "relations": {
+        "kappa_v": "COLLECTIVE_ONLY_PERIOD_RESCUE",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 73,
+      "stratum_index": 69
+    },
+    {
+      "adjacent_pair_count": 23,
+      "background_index": 28,
+      "cube_key": "primitive_len8|rule_073|bg_028",
+      "kappa_minimal_cardinality": "AT_LEAST_3",
+      "kappa_pair_rescue_count": 0,
+      "kappa_rescuing_pair_examples": [],
+      "lambda_minimal_cardinality": "AT_LEAST_3",
+      "lambda_pair_rescue_count": 0,
+      "lambda_rescuing_pair_examples": [],
+      "mechanism_counts": {
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 496,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 496
+      },
+      "mutual_edge_required_kappa_count": 0,
+      "mutual_edge_required_lambda_count": 0,
+      "node_count": 32,
+      "pair_count": 496,
+      "pair_index": 686,
+      "period": 12,
+      "relations": {
+        "kappa_v": "COLLECTIVE_ONLY_PERIOD_RESCUE",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 73,
+      "stratum_index": 70
+    },
+    {
+      "adjacent_pair_count": 23,
+      "background_index": 28,
+      "cube_key": "primitive_len8|rule_073|bg_028",
+      "kappa_minimal_cardinality": "AT_LEAST_3",
+      "kappa_pair_rescue_count": 0,
+      "kappa_rescuing_pair_examples": [],
+      "lambda_minimal_cardinality": "AT_LEAST_3",
+      "lambda_pair_rescue_count": 0,
+      "lambda_rescuing_pair_examples": [],
+      "mechanism_counts": {
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 496,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 496
+      },
+      "mutual_edge_required_kappa_count": 0,
+      "mutual_edge_required_lambda_count": 0,
+      "node_count": 32,
+      "pair_count": 496,
+      "pair_index": 687,
+      "period": 12,
+      "relations": {
+        "kappa_v": "COLLECTIVE_ONLY_PERIOD_RESCUE",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 73,
+      "stratum_index": 71
+    },
+    {
+      "adjacent_pair_count": 250,
+      "background_index": 28,
+      "cube_key": "primitive_len8|rule_073|bg_028",
+      "kappa_minimal_cardinality": "EXACTLY_2",
+      "kappa_pair_rescue_count": 8,
+      "kappa_rescuing_pair_examples": [
+        [
+          47,
+          143
+        ],
+        [
+          51,
+          143
+        ],
+        [
+          53,
+          143
+        ],
+        [
+          54,
+          143
+        ],
+        [
+          63,
+          143
+        ],
+        [
+          103,
+          143
+        ],
+        [
+          143,
+          179
+        ],
+        [
+          143,
+          191
+        ]
+      ],
+      "lambda_minimal_cardinality": "EXACTLY_2",
+      "lambda_pair_rescue_count": 8,
+      "lambda_rescuing_pair_examples": [
+        [
+          47,
+          143
+        ],
+        [
+          51,
+          143
+        ],
+        [
+          53,
+          143
+        ],
+        [
+          54,
+          143
+        ],
+        [
+          63,
+          143
+        ],
+        [
+          103,
+          143
+        ],
+        [
+          143,
+          179
+        ],
+        [
+          143,
+          191
+        ]
+      ],
+      "mechanism_counts": {
+        "DISTRIBUTED_EDGE_COVERAGE": 8,
+        "DISTRIBUTED_VERTEX_COVERAGE": 8,
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 7132,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 7132
+      },
+      "mutual_edge_required_kappa_count": 0,
+      "mutual_edge_required_lambda_count": 0,
+      "node_count": 120,
+      "pair_count": 7140,
+      "pair_index": 740,
+      "period": 6,
+      "relations": {
+        "kappa_v": "COLLECTIVE_ONLY_PERIOD_RESCUE",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 73,
+      "stratum_index": 72
+    },
+    {
+      "adjacent_pair_count": 23,
+      "background_index": 28,
+      "cube_key": "primitive_len8|rule_073|bg_028",
+      "kappa_minimal_cardinality": "AT_LEAST_3",
+      "kappa_pair_rescue_count": 0,
+      "kappa_rescuing_pair_examples": [],
+      "lambda_minimal_cardinality": "AT_LEAST_3",
+      "lambda_pair_rescue_count": 0,
+      "lambda_rescuing_pair_examples": [],
+      "mechanism_counts": {
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 496,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 496
+      },
+      "mutual_edge_required_kappa_count": 0,
+      "mutual_edge_required_lambda_count": 0,
+      "node_count": 32,
+      "pair_count": 496,
+      "pair_index": 740,
+      "period": 12,
+      "relations": {
+        "kappa_v": "COLLECTIVE_ONLY_PERIOD_RESCUE",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 73,
+      "stratum_index": 73
+    },
+    {
+      "adjacent_pair_count": 23,
+      "background_index": 28,
+      "cube_key": "primitive_len8|rule_073|bg_028",
+      "kappa_minimal_cardinality": "EXACTLY_2",
+      "kappa_pair_rescue_count": 1,
+      "kappa_rescuing_pair_examples": [
+        [
+          129,
+          131
+        ]
+      ],
+      "lambda_minimal_cardinality": "EXACTLY_2",
+      "lambda_pair_rescue_count": 1,
+      "lambda_rescuing_pair_examples": [
+        [
+          129,
+          131
+        ]
+      ],
+      "mechanism_counts": {
+        "DISTRIBUTED_EDGE_COVERAGE": 1,
+        "DISTRIBUTED_VERTEX_COVERAGE": 1,
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 495,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 495
+      },
+      "mutual_edge_required_kappa_count": 1,
+      "mutual_edge_required_lambda_count": 1,
+      "node_count": 32,
+      "pair_count": 496,
+      "pair_index": 742,
+      "period": 12,
+      "relations": {
+        "kappa_v": "COLLECTIVE_ONLY_PERIOD_RESCUE",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 73,
+      "stratum_index": 74
+    },
+    {
+      "adjacent_pair_count": 250,
+      "background_index": 4,
+      "cube_key": "primitive_len8|rule_109|bg_004",
+      "kappa_minimal_cardinality": "EXACTLY_2",
+      "kappa_pair_rescue_count": 8,
+      "kappa_rescuing_pair_examples": [
+        [
+          2,
+          14
+        ],
+        [
+          3,
+          14
+        ],
+        [
+          11,
+          14
+        ],
+        [
+          14,
+          25
+        ],
+        [
+          14,
+          50
+        ],
+        [
+          14,
+          51
+        ],
+        [
+          14,
+          83
+        ],
+        [
+          14,
+          147
+        ]
+      ],
+      "lambda_minimal_cardinality": "EXACTLY_2",
+      "lambda_pair_rescue_count": 8,
+      "lambda_rescuing_pair_examples": [
+        [
+          2,
+          14
+        ],
+        [
+          3,
+          14
+        ],
+        [
+          11,
+          14
+        ],
+        [
+          14,
+          25
+        ],
+        [
+          14,
+          50
+        ],
+        [
+          14,
+          51
+        ],
+        [
+          14,
+          83
+        ],
+        [
+          14,
+          147
+        ]
+      ],
+      "mechanism_counts": {
+        "DISTRIBUTED_EDGE_COVERAGE": 8,
+        "DISTRIBUTED_VERTEX_COVERAGE": 8,
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 7132,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 7132
+      },
+      "mutual_edge_required_kappa_count": 0,
+      "mutual_edge_required_lambda_count": 0,
+      "node_count": 120,
+      "pair_count": 7140,
+      "pair_index": 160,
+      "period": 6,
+      "relations": {
+        "kappa_v": "COLLECTIVE_ONLY_PERIOD_RESCUE",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 109,
+      "stratum_index": 75
+    },
+    {
+      "adjacent_pair_count": 23,
+      "background_index": 4,
+      "cube_key": "primitive_len8|rule_109|bg_004",
+      "kappa_minimal_cardinality": "AT_LEAST_3",
+      "kappa_pair_rescue_count": 0,
+      "kappa_rescuing_pair_examples": [],
+      "lambda_minimal_cardinality": "AT_LEAST_3",
+      "lambda_pair_rescue_count": 0,
+      "lambda_rescuing_pair_examples": [],
+      "mechanism_counts": {
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 496,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 496
+      },
+      "mutual_edge_required_kappa_count": 0,
+      "mutual_edge_required_lambda_count": 0,
+      "node_count": 32,
+      "pair_count": 496,
+      "pair_index": 160,
+      "period": 12,
+      "relations": {
+        "kappa_v": "COLLECTIVE_ONLY_PERIOD_RESCUE",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 109,
+      "stratum_index": 76
+    },
+    {
+      "adjacent_pair_count": 23,
+      "background_index": 4,
+      "cube_key": "primitive_len8|rule_109|bg_004",
+      "kappa_minimal_cardinality": "EXACTLY_2",
+      "kappa_pair_rescue_count": 1,
+      "kappa_rescuing_pair_examples": [
+        [
+          62,
+          126
+        ]
+      ],
+      "lambda_minimal_cardinality": "EXACTLY_2",
+      "lambda_pair_rescue_count": 1,
+      "lambda_rescuing_pair_examples": [
+        [
+          62,
+          126
+        ]
+      ],
+      "mechanism_counts": {
+        "DISTRIBUTED_EDGE_COVERAGE": 1,
+        "DISTRIBUTED_VERTEX_COVERAGE": 1,
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 495,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 495
+      },
+      "mutual_edge_required_kappa_count": 1,
+      "mutual_edge_required_lambda_count": 1,
+      "node_count": 32,
+      "pair_count": 496,
+      "pair_index": 162,
+      "period": 12,
+      "relations": {
+        "kappa_v": "COLLECTIVE_ONLY_PERIOD_RESCUE",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 109,
+      "stratum_index": 77
+    },
+    {
+      "adjacent_pair_count": 23,
+      "background_index": 4,
+      "cube_key": "primitive_len8|rule_109|bg_004",
+      "kappa_minimal_cardinality": "AT_LEAST_3",
+      "kappa_pair_rescue_count": 0,
+      "kappa_rescuing_pair_examples": [],
+      "lambda_minimal_cardinality": "AT_LEAST_3",
+      "lambda_pair_rescue_count": 0,
+      "lambda_rescuing_pair_examples": [],
+      "mechanism_counts": {
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 496,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 496
+      },
+      "mutual_edge_required_kappa_count": 0,
+      "mutual_edge_required_lambda_count": 0,
+      "node_count": 32,
+      "pair_count": 496,
+      "pair_index": 656,
+      "period": 12,
+      "relations": {
+        "kappa_v": "COLLECTIVE_ONLY_PERIOD_RESCUE",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 109,
+      "stratum_index": 78
+    },
+    {
+      "adjacent_pair_count": 23,
+      "background_index": 4,
+      "cube_key": "primitive_len8|rule_109|bg_004",
+      "kappa_minimal_cardinality": "AT_LEAST_3",
+      "kappa_pair_rescue_count": 0,
+      "kappa_rescuing_pair_examples": [],
+      "lambda_minimal_cardinality": "AT_LEAST_3",
+      "lambda_pair_rescue_count": 0,
+      "lambda_rescuing_pair_examples": [],
+      "mechanism_counts": {
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 496,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 496
+      },
+      "mutual_edge_required_kappa_count": 0,
+      "mutual_edge_required_lambda_count": 0,
+      "node_count": 32,
+      "pair_count": 496,
+      "pair_index": 657,
+      "period": 12,
+      "relations": {
+        "kappa_v": "COLLECTIVE_ONLY_PERIOD_RESCUE",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 109,
+      "stratum_index": 79
+    },
+    {
+      "adjacent_pair_count": 23,
+      "background_index": 4,
+      "cube_key": "primitive_len8|rule_109|bg_004",
+      "kappa_minimal_cardinality": "EXACTLY_2",
+      "kappa_pair_rescue_count": 4,
+      "kappa_rescuing_pair_examples": [
+        [
+          16,
+          130
+        ],
+        [
+          17,
+          130
+        ],
+        [
+          24,
+          130
+        ],
+        [
+          59,
+          130
+        ]
+      ],
+      "lambda_minimal_cardinality": "EXACTLY_2",
+      "lambda_pair_rescue_count": 4,
+      "lambda_rescuing_pair_examples": [
+        [
+          16,
+          130
+        ],
+        [
+          17,
+          130
+        ],
+        [
+          24,
+          130
+        ],
+        [
+          59,
+          130
+        ]
+      ],
+      "mechanism_counts": {
+        "DISTRIBUTED_EDGE_COVERAGE": 4,
+        "DISTRIBUTED_VERTEX_COVERAGE": 4,
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 492,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 492
+      },
+      "mutual_edge_required_kappa_count": 0,
+      "mutual_edge_required_lambda_count": 0,
+      "node_count": 32,
+      "pair_count": 496,
+      "pair_index": 807,
+      "period": 12,
+      "relations": {
+        "kappa_v": "COLLECTIVE_ONLY_PERIOD_RESCUE",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 109,
+      "stratum_index": 80
+    },
+    {
+      "adjacent_pair_count": 61,
+      "background_index": 4,
+      "cube_key": "primitive_len8|rule_109|bg_004",
+      "kappa_minimal_cardinality": "AT_LEAST_3",
+      "kappa_pair_rescue_count": 0,
+      "kappa_rescuing_pair_examples": [],
+      "lambda_minimal_cardinality": "AT_LEAST_3",
+      "lambda_pair_rescue_count": 0,
+      "lambda_rescuing_pair_examples": [],
+      "mechanism_counts": {
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 1128,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 1128
+      },
+      "mutual_edge_required_kappa_count": 0,
+      "mutual_edge_required_lambda_count": 0,
+      "node_count": 48,
+      "pair_count": 1128,
+      "pair_index": 841,
+      "period": 3,
+      "relations": {
+        "kappa_v": "COLLECTIVE_ONLY_PERIOD_RESCUE",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 109,
+      "stratum_index": 81
+    },
+    {
+      "adjacent_pair_count": 23,
+      "background_index": 4,
+      "cube_key": "primitive_len8|rule_109|bg_004",
+      "kappa_minimal_cardinality": "EXACTLY_2",
+      "kappa_pair_rescue_count": 1,
+      "kappa_rescuing_pair_examples": [
+        [
+          62,
+          126
+        ]
+      ],
+      "lambda_minimal_cardinality": "EXACTLY_2",
+      "lambda_pair_rescue_count": 1,
+      "lambda_rescuing_pair_examples": [
+        [
+          62,
+          126
+        ]
+      ],
+      "mechanism_counts": {
+        "DISTRIBUTED_EDGE_COVERAGE": 1,
+        "DISTRIBUTED_VERTEX_COVERAGE": 1,
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 495,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 495
+      },
+      "mutual_edge_required_kappa_count": 1,
+      "mutual_edge_required_lambda_count": 1,
+      "node_count": 32,
+      "pair_count": 496,
+      "pair_index": 841,
+      "period": 12,
+      "relations": {
+        "kappa_v": "COLLECTIVE_ONLY_PERIOD_RESCUE",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 109,
+      "stratum_index": 82
+    },
+    {
+      "adjacent_pair_count": 76,
+      "background_index": 5,
+      "cube_key": "primitive_len8|rule_109|bg_005",
+      "kappa_minimal_cardinality": "NOT_APPLICABLE_NOT_COLLECTIVE",
+      "kappa_pair_rescue_count": 0,
+      "kappa_rescuing_pair_examples": [],
+      "lambda_minimal_cardinality": "AT_LEAST_3",
+      "lambda_pair_rescue_count": 0,
+      "lambda_rescuing_pair_examples": [],
+      "mechanism_counts": {
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 1225,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 1225
+      },
+      "mutual_edge_required_kappa_count": 0,
+      "mutual_edge_required_lambda_count": 0,
+      "node_count": 50,
+      "pair_count": 1225,
+      "pair_index": 82,
+      "period": 3,
+      "relations": {
+        "kappa_v": "NONRESCUING_PERIOD_CONTROL",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 109,
+      "stratum_index": 83
+    },
+    {
+      "adjacent_pair_count": 76,
+      "background_index": 5,
+      "cube_key": "primitive_len8|rule_109|bg_005",
+      "kappa_minimal_cardinality": "EXACTLY_2",
+      "kappa_pair_rescue_count": 2,
+      "kappa_rescuing_pair_examples": [
+        [
+          143,
+          195
+        ],
+        [
+          170,
+          174
+        ]
+      ],
+      "lambda_minimal_cardinality": "EXACTLY_2",
+      "lambda_pair_rescue_count": 2,
+      "lambda_rescuing_pair_examples": [
+        [
+          143,
+          195
+        ],
+        [
+          170,
+          174
+        ]
+      ],
+      "mechanism_counts": {
+        "DISTRIBUTED_EDGE_COVERAGE": 2,
+        "DISTRIBUTED_VERTEX_COVERAGE": 2,
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 1223,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 1223
+      },
+      "mutual_edge_required_kappa_count": 1,
+      "mutual_edge_required_lambda_count": 1,
+      "node_count": 50,
+      "pair_count": 1225,
+      "pair_index": 484,
+      "period": 3,
+      "relations": {
+        "kappa_v": "COLLECTIVE_ONLY_PERIOD_RESCUE",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 109,
+      "stratum_index": 84
+    },
+    {
+      "adjacent_pair_count": 285,
+      "background_index": 5,
+      "cube_key": "primitive_len8|rule_109|bg_005",
+      "kappa_minimal_cardinality": "EXACTLY_2",
+      "kappa_pair_rescue_count": 15,
+      "kappa_rescuing_pair_examples": [
+        [
+          14,
+          34
+        ],
+        [
+          14,
+          66
+        ],
+        [
+          14,
+          130
+        ],
+        [
+          14,
+          163
+        ],
+        [
+          14,
+          198
+        ],
+        [
+          34,
+          134
+        ],
+        [
+          66,
+          134
+        ],
+        [
+          130,
+          134
+        ],
+        [
+          130,
+          138
+        ],
+        [
+          134,
+          163
+        ],
+        [
+          134,
+          166
+        ],
+        [
+          134,
+          198
+        ],
+        [
+          138,
+          202
+        ],
+        [
+          198,
+          206
+        ],
+        [
+          202,
+          206
+        ]
+      ],
+      "lambda_minimal_cardinality": "EXACTLY_2",
+      "lambda_pair_rescue_count": 17,
+      "lambda_rescuing_pair_examples": [
+        [
+          14,
+          34
+        ],
+        [
+          14,
+          66
+        ],
+        [
+          14,
+          130
+        ],
+        [
+          14,
+          163
+        ],
+        [
+          14,
+          198
+        ],
+        [
+          14,
+          224
+        ],
+        [
+          34,
+          134
+        ],
+        [
+          66,
+          134
+        ],
+        [
+          130,
+          134
+        ],
+        [
+          130,
+          138
+        ],
+        [
+          134,
+          163
+        ],
+        [
+          134,
+          166
+        ],
+        [
+          134,
+          198
+        ],
+        [
+          134,
+          224
+        ],
+        [
+          138,
+          202
+        ],
+        [
+          198,
+          206
+        ],
+        [
+          202,
+          206
+        ]
+      ],
+      "mechanism_counts": {
+        "DISTRIBUTED_EDGE_COVERAGE": 17,
+        "DISTRIBUTED_VERTEX_COVERAGE": 15,
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 7984,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 7986
+      },
+      "mutual_edge_required_kappa_count": 5,
+      "mutual_edge_required_lambda_count": 5,
+      "node_count": 127,
+      "pair_count": 8001,
+      "pair_index": 484,
+      "period": 6,
+      "relations": {
+        "kappa_v": "COLLECTIVE_ONLY_PERIOD_RESCUE",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 109,
+      "stratum_index": 85
+    },
+    {
+      "adjacent_pair_count": 285,
+      "background_index": 5,
+      "cube_key": "primitive_len8|rule_109|bg_005",
+      "kappa_minimal_cardinality": "EXACTLY_2",
+      "kappa_pair_rescue_count": 12,
+      "kappa_rescuing_pair_examples": [
+        [
+          3,
+          14
+        ],
+        [
+          3,
+          134
+        ],
+        [
+          10,
+          14
+        ],
+        [
+          10,
+          134
+        ],
+        [
+          10,
+          138
+        ],
+        [
+          14,
+          34
+        ],
+        [
+          14,
+          66
+        ],
+        [
+          14,
+          130
+        ],
+        [
+          34,
+          134
+        ],
+        [
+          66,
+          134
+        ],
+        [
+          130,
+          134
+        ],
+        [
+          130,
+          138
+        ]
+      ],
+      "lambda_minimal_cardinality": "EXACTLY_2",
+      "lambda_pair_rescue_count": 12,
+      "lambda_rescuing_pair_examples": [
+        [
+          3,
+          14
+        ],
+        [
+          3,
+          134
+        ],
+        [
+          10,
+          14
+        ],
+        [
+          10,
+          134
+        ],
+        [
+          10,
+          138
+        ],
+        [
+          14,
+          34
+        ],
+        [
+          14,
+          66
+        ],
+        [
+          14,
+          130
+        ],
+        [
+          34,
+          134
+        ],
+        [
+          66,
+          134
+        ],
+        [
+          130,
+          134
+        ],
+        [
+          130,
+          138
+        ]
+      ],
+      "mechanism_counts": {
+        "DISTRIBUTED_EDGE_COVERAGE": 12,
+        "DISTRIBUTED_VERTEX_COVERAGE": 12,
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 7989,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 7989
+      },
+      "mutual_edge_required_kappa_count": 2,
+      "mutual_edge_required_lambda_count": 2,
+      "node_count": 127,
+      "pair_count": 8001,
+      "pair_index": 485,
+      "period": 6,
+      "relations": {
+        "kappa_v": "COLLECTIVE_ONLY_PERIOD_RESCUE",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 109,
+      "stratum_index": 86
+    },
+    {
+      "adjacent_pair_count": 76,
+      "background_index": 5,
+      "cube_key": "primitive_len8|rule_109|bg_005",
+      "kappa_minimal_cardinality": "NOT_APPLICABLE_NOT_COLLECTIVE",
+      "kappa_pair_rescue_count": 0,
+      "kappa_rescuing_pair_examples": [],
+      "lambda_minimal_cardinality": "AT_LEAST_3",
+      "lambda_pair_rescue_count": 0,
+      "lambda_rescuing_pair_examples": [],
+      "mechanism_counts": {
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 1225,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 1225
+      },
+      "mutual_edge_required_kappa_count": 0,
+      "mutual_edge_required_lambda_count": 0,
+      "node_count": 50,
+      "pair_count": 1225,
+      "pair_index": 659,
+      "period": 3,
+      "relations": {
+        "kappa_v": "NONRESCUING_PERIOD_CONTROL",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 109,
+      "stratum_index": 87
+    },
+    {
+      "adjacent_pair_count": 76,
+      "background_index": 5,
+      "cube_key": "primitive_len8|rule_109|bg_005",
+      "kappa_minimal_cardinality": "NOT_APPLICABLE_NOT_COLLECTIVE",
+      "kappa_pair_rescue_count": 0,
+      "kappa_rescuing_pair_examples": [],
+      "lambda_minimal_cardinality": "AT_LEAST_3",
+      "lambda_pair_rescue_count": 0,
+      "lambda_rescuing_pair_examples": [],
+      "mechanism_counts": {
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 1225,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 1225
+      },
+      "mutual_edge_required_kappa_count": 0,
+      "mutual_edge_required_lambda_count": 0,
+      "node_count": 50,
+      "pair_count": 1225,
+      "pair_index": 660,
+      "period": 3,
+      "relations": {
+        "kappa_v": "NONRESCUING_PERIOD_CONTROL",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 109,
+      "stratum_index": 88
+    },
+    {
+      "adjacent_pair_count": 76,
+      "background_index": 5,
+      "cube_key": "primitive_len8|rule_109|bg_005",
+      "kappa_minimal_cardinality": "EXACTLY_2",
+      "kappa_pair_rescue_count": 2,
+      "kappa_rescuing_pair_examples": [
+        [
+          154,
+          158
+        ],
+        [
+          210,
+          218
+        ]
+      ],
+      "lambda_minimal_cardinality": "EXACTLY_2",
+      "lambda_pair_rescue_count": 2,
+      "lambda_rescuing_pair_examples": [
+        [
+          154,
+          158
+        ],
+        [
+          210,
+          218
+        ]
+      ],
+      "mechanism_counts": {
+        "DISTRIBUTED_EDGE_COVERAGE": 2,
+        "DISTRIBUTED_VERTEX_COVERAGE": 2,
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 1223,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 1223
+      },
+      "mutual_edge_required_kappa_count": 2,
+      "mutual_edge_required_lambda_count": 2,
+      "node_count": 50,
+      "pair_count": 1225,
+      "pair_index": 720,
+      "period": 3,
+      "relations": {
+        "kappa_v": "COLLECTIVE_ONLY_PERIOD_RESCUE",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 109,
+      "stratum_index": 89
+    },
+    {
+      "adjacent_pair_count": 76,
+      "background_index": 5,
+      "cube_key": "primitive_len8|rule_109|bg_005",
+      "kappa_minimal_cardinality": "EXACTLY_2",
+      "kappa_pair_rescue_count": 2,
+      "kappa_rescuing_pair_examples": [
+        [
+          154,
+          158
+        ],
+        [
+          210,
+          218
+        ]
+      ],
+      "lambda_minimal_cardinality": "EXACTLY_2",
+      "lambda_pair_rescue_count": 2,
+      "lambda_rescuing_pair_examples": [
+        [
+          154,
+          158
+        ],
+        [
+          210,
+          218
+        ]
+      ],
+      "mechanism_counts": {
+        "DISTRIBUTED_EDGE_COVERAGE": 2,
+        "DISTRIBUTED_VERTEX_COVERAGE": 2,
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 1223,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 1223
+      },
+      "mutual_edge_required_kappa_count": 2,
+      "mutual_edge_required_lambda_count": 2,
+      "node_count": 50,
+      "pair_count": 1225,
+      "pair_index": 721,
+      "period": 3,
+      "relations": {
+        "kappa_v": "COLLECTIVE_ONLY_PERIOD_RESCUE",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 109,
+      "stratum_index": 90
+    },
+    {
+      "adjacent_pair_count": 11,
+      "background_index": 5,
+      "cube_key": "primitive_len8|rule_109|bg_005",
+      "kappa_minimal_cardinality": "EXACTLY_2",
+      "kappa_pair_rescue_count": 1,
+      "kappa_rescuing_pair_examples": [
+        [
+          93,
+          115
+        ]
+      ],
+      "lambda_minimal_cardinality": "EXACTLY_2",
+      "lambda_pair_rescue_count": 1,
+      "lambda_rescuing_pair_examples": [
+        [
+          93,
+          115
+        ]
+      ],
+      "mechanism_counts": {
+        "DISTRIBUTED_EDGE_COVERAGE": 1,
+        "DISTRIBUTED_VERTEX_COVERAGE": 1,
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 135,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 135
+      },
+      "mutual_edge_required_kappa_count": 0,
+      "mutual_edge_required_lambda_count": 0,
+      "node_count": 17,
+      "pair_count": 136,
+      "pair_index": 844,
+      "period": 12,
+      "relations": {
+        "kappa_v": "COLLECTIVE_ONLY_PERIOD_RESCUE",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 109,
+      "stratum_index": 91
+    },
+    {
+      "adjacent_pair_count": 76,
+      "background_index": 5,
+      "cube_key": "primitive_len8|rule_109|bg_005",
+      "kappa_minimal_cardinality": "EXACTLY_2",
+      "kappa_pair_rescue_count": 1,
+      "kappa_rescuing_pair_examples": [
+        [
+          210,
+          218
+        ]
+      ],
+      "lambda_minimal_cardinality": "EXACTLY_2",
+      "lambda_pair_rescue_count": 1,
+      "lambda_rescuing_pair_examples": [
+        [
+          210,
+          218
+        ]
+      ],
+      "mechanism_counts": {
+        "DISTRIBUTED_EDGE_COVERAGE": 1,
+        "DISTRIBUTED_VERTEX_COVERAGE": 1,
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 1224,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 1224
+      },
+      "mutual_edge_required_kappa_count": 1,
+      "mutual_edge_required_lambda_count": 1,
+      "node_count": 50,
+      "pair_count": 1225,
+      "pair_index": 954,
+      "period": 3,
+      "relations": {
+        "kappa_v": "COLLECTIVE_ONLY_PERIOD_RESCUE",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 109,
+      "stratum_index": 92
+    },
+    {
+      "adjacent_pair_count": 76,
+      "background_index": 5,
+      "cube_key": "primitive_len8|rule_109|bg_005",
+      "kappa_minimal_cardinality": "NOT_APPLICABLE_NOT_COLLECTIVE",
+      "kappa_pair_rescue_count": 0,
+      "kappa_rescuing_pair_examples": [],
+      "lambda_minimal_cardinality": "AT_LEAST_3",
+      "lambda_pair_rescue_count": 0,
+      "lambda_rescuing_pair_examples": [],
+      "mechanism_counts": {
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 1225,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 1225
+      },
+      "mutual_edge_required_kappa_count": 0,
+      "mutual_edge_required_lambda_count": 0,
+      "node_count": 50,
+      "pair_count": 1225,
+      "pair_index": 956,
+      "period": 3,
+      "relations": {
+        "kappa_v": "NONRESCUING_PERIOD_CONTROL",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 109,
+      "stratum_index": 93
+    },
+    {
+      "adjacent_pair_count": 76,
+      "background_index": 5,
+      "cube_key": "primitive_len8|rule_109|bg_005",
+      "kappa_minimal_cardinality": "EXACTLY_2",
+      "kappa_pair_rescue_count": 1,
+      "kappa_rescuing_pair_examples": [
+        [
+          210,
+          218
+        ]
+      ],
+      "lambda_minimal_cardinality": "EXACTLY_2",
+      "lambda_pair_rescue_count": 1,
+      "lambda_rescuing_pair_examples": [
+        [
+          210,
+          218
+        ]
+      ],
+      "mechanism_counts": {
+        "DISTRIBUTED_EDGE_COVERAGE": 1,
+        "DISTRIBUTED_VERTEX_COVERAGE": 1,
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 1224,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 1224
+      },
+      "mutual_edge_required_kappa_count": 1,
+      "mutual_edge_required_lambda_count": 1,
+      "node_count": 50,
+      "pair_count": 1225,
+      "pair_index": 957,
+      "period": 3,
+      "relations": {
+        "kappa_v": "COLLECTIVE_ONLY_PERIOD_RESCUE",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 109,
+      "stratum_index": 94
+    },
+    {
+      "adjacent_pair_count": 76,
+      "background_index": 5,
+      "cube_key": "primitive_len8|rule_109|bg_005",
+      "kappa_minimal_cardinality": "NOT_APPLICABLE_NOT_COLLECTIVE",
+      "kappa_pair_rescue_count": 0,
+      "kappa_rescuing_pair_examples": [],
+      "lambda_minimal_cardinality": "AT_LEAST_3",
+      "lambda_pair_rescue_count": 0,
+      "lambda_rescuing_pair_examples": [],
+      "mechanism_counts": {
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 1225,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 1225
+      },
+      "mutual_edge_required_kappa_count": 0,
+      "mutual_edge_required_lambda_count": 0,
+      "node_count": 50,
+      "pair_count": 1225,
+      "pair_index": 959,
+      "period": 3,
+      "relations": {
+        "kappa_v": "NONRESCUING_PERIOD_CONTROL",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 109,
+      "stratum_index": 95
+    },
+    {
+      "adjacent_pair_count": 76,
+      "background_index": 5,
+      "cube_key": "primitive_len8|rule_109|bg_005",
+      "kappa_minimal_cardinality": "NOT_APPLICABLE_NOT_COLLECTIVE",
+      "kappa_pair_rescue_count": 0,
+      "kappa_rescuing_pair_examples": [],
+      "lambda_minimal_cardinality": "AT_LEAST_3",
+      "lambda_pair_rescue_count": 0,
+      "lambda_rescuing_pair_examples": [],
+      "mechanism_counts": {
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 1225,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 1225
+      },
+      "mutual_edge_required_kappa_count": 0,
+      "mutual_edge_required_lambda_count": 0,
+      "node_count": 50,
+      "pair_count": 1225,
+      "pair_index": 961,
+      "period": 3,
+      "relations": {
+        "kappa_v": "NONRESCUING_PERIOD_CONTROL",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 109,
+      "stratum_index": 96
+    },
+    {
+      "adjacent_pair_count": 285,
+      "background_index": 5,
+      "cube_key": "primitive_len8|rule_109|bg_005",
+      "kappa_minimal_cardinality": "EXACTLY_2",
+      "kappa_pair_rescue_count": 22,
+      "kappa_rescuing_pair_examples": [
+        [
+          61,
+          82
+        ],
+        [
+          61,
+          94
+        ],
+        [
+          74,
+          104
+        ],
+        [
+          74,
+          110
+        ],
+        [
+          76,
+          82
+        ],
+        [
+          76,
+          94
+        ],
+        [
+          77,
+          82
+        ],
+        [
+          77,
+          94
+        ],
+        [
+          82,
+          100
+        ],
+        [
+          82,
+          101
+        ],
+        [
+          82,
+          105
+        ],
+        [
+          82,
+          117
+        ],
+        [
+          82,
+          121
+        ],
+        [
+          82,
+          127
+        ],
+        [
+          94,
+          100
+        ],
+        [
+          94,
+          101
+        ],
+        [
+          94,
+          105
+        ],
+        [
+          94,
+          117
+        ],
+        [
+          94,
+          121
+        ],
+        [
+          94,
+          127
+        ]
+      ],
+      "lambda_minimal_cardinality": "EXACTLY_2",
+      "lambda_pair_rescue_count": 31,
+      "lambda_rescuing_pair_examples": [
+        [
+          60,
+          82
+        ],
+        [
+          60,
+          94
+        ],
+        [
+          61,
+          82
+        ],
+        [
+          61,
+          94
+        ],
+        [
+          74,
+          104
+        ],
+        [
+          74,
+          110
+        ],
+        [
+          76,
+          82
+        ],
+        [
+          76,
+          94
+        ],
+        [
+          77,
+          82
+        ],
+        [
+          77,
+          94
+        ],
+        [
+          82,
+          92
+        ],
+        [
+          82,
+          100
+        ],
+        [
+          82,
+          101
+        ],
+        [
+          82,
+          105
+        ],
+        [
+          82,
+          117
+        ],
+        [
+          82,
+          121
+        ],
+        [
+          82,
+          127
+        ],
+        [
+          88,
+          92
+        ],
+        [
+          88,
+          120
+        ],
+        [
+          92,
+          94
+        ]
+      ],
+      "mechanism_counts": {
+        "DISTRIBUTED_EDGE_COVERAGE": 31,
+        "DISTRIBUTED_VERTEX_COVERAGE": 22,
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 7970,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 7979
+      },
+      "mutual_edge_required_kappa_count": 0,
+      "mutual_edge_required_lambda_count": 5,
+      "node_count": 127,
+      "pair_count": 8001,
+      "pair_index": 961,
+      "period": 6,
+      "relations": {
+        "kappa_v": "COLLECTIVE_ONLY_PERIOD_RESCUE",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 109,
+      "stratum_index": 97
+    },
+    {
+      "adjacent_pair_count": 35,
+      "background_index": 6,
+      "cube_key": "primitive_len8|rule_109|bg_006",
+      "kappa_minimal_cardinality": "EXACTLY_2",
+      "kappa_pair_rescue_count": 1,
+      "kappa_rescuing_pair_examples": [
+        [
+          170,
+          174
+        ]
+      ],
+      "lambda_minimal_cardinality": "EXACTLY_2",
+      "lambda_pair_rescue_count": 1,
+      "lambda_rescuing_pair_examples": [
+        [
+          170,
+          174
+        ]
+      ],
+      "mechanism_counts": {
+        "DISTRIBUTED_EDGE_COVERAGE": 1,
+        "DISTRIBUTED_VERTEX_COVERAGE": 1,
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 377,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 377
+      },
+      "mutual_edge_required_kappa_count": 1,
+      "mutual_edge_required_lambda_count": 1,
+      "node_count": 28,
+      "pair_count": 378,
+      "pair_index": 487,
+      "period": 3,
+      "relations": {
+        "kappa_v": "COLLECTIVE_ONLY_PERIOD_RESCUE",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 109,
+      "stratum_index": 98
+    },
+    {
+      "adjacent_pair_count": 397,
+      "background_index": 6,
+      "cube_key": "primitive_len8|rule_109|bg_006",
+      "kappa_minimal_cardinality": "EXACTLY_2",
+      "kappa_pair_rescue_count": 23,
+      "kappa_rescuing_pair_examples": [
+        [
+          14,
+          34
+        ],
+        [
+          14,
+          66
+        ],
+        [
+          14,
+          130
+        ],
+        [
+          14,
+          198
+        ],
+        [
+          14,
+          224
+        ],
+        [
+          14,
+          227
+        ],
+        [
+          34,
+          134
+        ],
+        [
+          34,
+          143
+        ],
+        [
+          66,
+          134
+        ],
+        [
+          66,
+          143
+        ],
+        [
+          130,
+          134
+        ],
+        [
+          130,
+          138
+        ],
+        [
+          130,
+          143
+        ],
+        [
+          134,
+          166
+        ],
+        [
+          134,
+          198
+        ],
+        [
+          134,
+          224
+        ],
+        [
+          134,
+          227
+        ],
+        [
+          138,
+          202
+        ],
+        [
+          143,
+          198
+        ],
+        [
+          143,
+          224
+        ]
+      ],
+      "lambda_minimal_cardinality": "EXACTLY_2",
+      "lambda_pair_rescue_count": 23,
+      "lambda_rescuing_pair_examples": [
+        [
+          14,
+          34
+        ],
+        [
+          14,
+          66
+        ],
+        [
+          14,
+          130
+        ],
+        [
+          14,
+          198
+        ],
+        [
+          14,
+          224
+        ],
+        [
+          14,
+          227
+        ],
+        [
+          34,
+          134
+        ],
+        [
+          34,
+          143
+        ],
+        [
+          66,
+          134
+        ],
+        [
+          66,
+          143
+        ],
+        [
+          130,
+          134
+        ],
+        [
+          130,
+          138
+        ],
+        [
+          130,
+          143
+        ],
+        [
+          134,
+          166
+        ],
+        [
+          134,
+          198
+        ],
+        [
+          134,
+          224
+        ],
+        [
+          134,
+          227
+        ],
+        [
+          138,
+          202
+        ],
+        [
+          143,
+          198
+        ],
+        [
+          143,
+          224
+        ]
+      ],
+      "mechanism_counts": {
+        "DISTRIBUTED_EDGE_COVERAGE": 23,
+        "DISTRIBUTED_VERTEX_COVERAGE": 23,
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 11003,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 11003
+      },
+      "mutual_edge_required_kappa_count": 5,
+      "mutual_edge_required_lambda_count": 5,
+      "node_count": 149,
+      "pair_count": 11026,
+      "pair_index": 487,
+      "period": 6,
+      "relations": {
+        "kappa_v": "COLLECTIVE_ONLY_PERIOD_RESCUE",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 109,
+      "stratum_index": 99
+    },
+    {
+      "adjacent_pair_count": 397,
+      "background_index": 6,
+      "cube_key": "primitive_len8|rule_109|bg_006",
+      "kappa_minimal_cardinality": "EXACTLY_2",
+      "kappa_pair_rescue_count": 17,
+      "kappa_rescuing_pair_examples": [
+        [
+          3,
+          14
+        ],
+        [
+          3,
+          134
+        ],
+        [
+          3,
+          143
+        ],
+        [
+          10,
+          14
+        ],
+        [
+          10,
+          134
+        ],
+        [
+          10,
+          138
+        ],
+        [
+          10,
+          143
+        ],
+        [
+          14,
+          34
+        ],
+        [
+          14,
+          66
+        ],
+        [
+          14,
+          130
+        ],
+        [
+          34,
+          134
+        ],
+        [
+          34,
+          143
+        ],
+        [
+          66,
+          134
+        ],
+        [
+          66,
+          143
+        ],
+        [
+          130,
+          134
+        ],
+        [
+          130,
+          138
+        ],
+        [
+          130,
+          143
+        ]
+      ],
+      "lambda_minimal_cardinality": "EXACTLY_2",
+      "lambda_pair_rescue_count": 17,
+      "lambda_rescuing_pair_examples": [
+        [
+          3,
+          14
+        ],
+        [
+          3,
+          134
+        ],
+        [
+          3,
+          143
+        ],
+        [
+          10,
+          14
+        ],
+        [
+          10,
+          134
+        ],
+        [
+          10,
+          138
+        ],
+        [
+          10,
+          143
+        ],
+        [
+          14,
+          34
+        ],
+        [
+          14,
+          66
+        ],
+        [
+          14,
+          130
+        ],
+        [
+          34,
+          134
+        ],
+        [
+          34,
+          143
+        ],
+        [
+          66,
+          134
+        ],
+        [
+          66,
+          143
+        ],
+        [
+          130,
+          134
+        ],
+        [
+          130,
+          138
+        ],
+        [
+          130,
+          143
+        ]
+      ],
+      "mechanism_counts": {
+        "DISTRIBUTED_EDGE_COVERAGE": 17,
+        "DISTRIBUTED_VERTEX_COVERAGE": 17,
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 11009,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 11009
+      },
+      "mutual_edge_required_kappa_count": 2,
+      "mutual_edge_required_lambda_count": 2,
+      "node_count": 149,
+      "pair_count": 11026,
+      "pair_index": 488,
+      "period": 6,
+      "relations": {
+        "kappa_v": "COLLECTIVE_ONLY_PERIOD_RESCUE",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 109,
+      "stratum_index": 100
+    },
+    {
+      "adjacent_pair_count": 35,
+      "background_index": 6,
+      "cube_key": "primitive_len8|rule_109|bg_006",
+      "kappa_minimal_cardinality": "EXACTLY_2",
+      "kappa_pair_rescue_count": 2,
+      "kappa_rescuing_pair_examples": [
+        [
+          154,
+          158
+        ],
+        [
+          210,
+          218
+        ]
+      ],
+      "lambda_minimal_cardinality": "EXACTLY_2",
+      "lambda_pair_rescue_count": 2,
+      "lambda_rescuing_pair_examples": [
+        [
+          154,
+          158
+        ],
+        [
+          210,
+          218
+        ]
+      ],
+      "mechanism_counts": {
+        "DISTRIBUTED_EDGE_COVERAGE": 2,
+        "DISTRIBUTED_VERTEX_COVERAGE": 2,
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 376,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 376
+      },
+      "mutual_edge_required_kappa_count": 2,
+      "mutual_edge_required_lambda_count": 2,
+      "node_count": 28,
+      "pair_count": 378,
+      "pair_index": 722,
+      "period": 3,
+      "relations": {
+        "kappa_v": "COLLECTIVE_ONLY_PERIOD_RESCUE",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 109,
+      "stratum_index": 101
+    },
+    {
+      "adjacent_pair_count": 35,
+      "background_index": 6,
+      "cube_key": "primitive_len8|rule_109|bg_006",
+      "kappa_minimal_cardinality": "EXACTLY_2",
+      "kappa_pair_rescue_count": 1,
+      "kappa_rescuing_pair_examples": [
+        [
+          210,
+          218
+        ]
+      ],
+      "lambda_minimal_cardinality": "EXACTLY_2",
+      "lambda_pair_rescue_count": 1,
+      "lambda_rescuing_pair_examples": [
+        [
+          210,
+          218
+        ]
+      ],
+      "mechanism_counts": {
+        "DISTRIBUTED_EDGE_COVERAGE": 1,
+        "DISTRIBUTED_VERTEX_COVERAGE": 1,
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 377,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 377
+      },
+      "mutual_edge_required_kappa_count": 1,
+      "mutual_edge_required_lambda_count": 1,
+      "node_count": 28,
+      "pair_count": 378,
+      "pair_index": 966,
+      "period": 3,
+      "relations": {
+        "kappa_v": "COLLECTIVE_ONLY_PERIOD_RESCUE",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 109,
+      "stratum_index": 102
+    },
+    {
+      "adjacent_pair_count": 35,
+      "background_index": 6,
+      "cube_key": "primitive_len8|rule_109|bg_006",
+      "kappa_minimal_cardinality": "EXACTLY_2",
+      "kappa_pair_rescue_count": 1,
+      "kappa_rescuing_pair_examples": [
+        [
+          210,
+          218
+        ]
+      ],
+      "lambda_minimal_cardinality": "EXACTLY_2",
+      "lambda_pair_rescue_count": 1,
+      "lambda_rescuing_pair_examples": [
+        [
+          210,
+          218
+        ]
+      ],
+      "mechanism_counts": {
+        "DISTRIBUTED_EDGE_COVERAGE": 1,
+        "DISTRIBUTED_VERTEX_COVERAGE": 1,
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 377,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 377
+      },
+      "mutual_edge_required_kappa_count": 1,
+      "mutual_edge_required_lambda_count": 1,
+      "node_count": 28,
+      "pair_count": 378,
+      "pair_index": 970,
+      "period": 3,
+      "relations": {
+        "kappa_v": "COLLECTIVE_ONLY_PERIOD_RESCUE",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 109,
+      "stratum_index": 103
+    },
+    {
+      "adjacent_pair_count": 35,
+      "background_index": 6,
+      "cube_key": "primitive_len8|rule_109|bg_006",
+      "kappa_minimal_cardinality": "EXACTLY_2",
+      "kappa_pair_rescue_count": 1,
+      "kappa_rescuing_pair_examples": [
+        [
+          210,
+          218
+        ]
+      ],
+      "lambda_minimal_cardinality": "EXACTLY_2",
+      "lambda_pair_rescue_count": 1,
+      "lambda_rescuing_pair_examples": [
+        [
+          210,
+          218
+        ]
+      ],
+      "mechanism_counts": {
+        "DISTRIBUTED_EDGE_COVERAGE": 1,
+        "DISTRIBUTED_VERTEX_COVERAGE": 1,
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 377,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 377
+      },
+      "mutual_edge_required_kappa_count": 1,
+      "mutual_edge_required_lambda_count": 1,
+      "node_count": 28,
+      "pair_count": 378,
+      "pair_index": 973,
+      "period": 3,
+      "relations": {
+        "kappa_v": "COLLECTIVE_ONLY_PERIOD_RESCUE",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 109,
+      "stratum_index": 104
+    },
+    {
+      "adjacent_pair_count": 35,
+      "background_index": 6,
+      "cube_key": "primitive_len8|rule_109|bg_006",
+      "kappa_minimal_cardinality": "EXACTLY_2",
+      "kappa_pair_rescue_count": 1,
+      "kappa_rescuing_pair_examples": [
+        [
+          210,
+          218
+        ]
+      ],
+      "lambda_minimal_cardinality": "EXACTLY_2",
+      "lambda_pair_rescue_count": 1,
+      "lambda_rescuing_pair_examples": [
+        [
+          210,
+          218
+        ]
+      ],
+      "mechanism_counts": {
+        "DISTRIBUTED_EDGE_COVERAGE": 1,
+        "DISTRIBUTED_VERTEX_COVERAGE": 1,
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 377,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 377
+      },
+      "mutual_edge_required_kappa_count": 1,
+      "mutual_edge_required_lambda_count": 1,
+      "node_count": 28,
+      "pair_count": 378,
+      "pair_index": 975,
+      "period": 3,
+      "relations": {
+        "kappa_v": "COLLECTIVE_ONLY_PERIOD_RESCUE",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 109,
+      "stratum_index": 105
+    },
+    {
+      "adjacent_pair_count": 68,
+      "background_index": 7,
+      "cube_key": "primitive_len8|rule_109|bg_007",
+      "kappa_minimal_cardinality": "NOT_APPLICABLE_NOT_COLLECTIVE",
+      "kappa_pair_rescue_count": 0,
+      "kappa_rescuing_pair_examples": [],
+      "lambda_minimal_cardinality": "AT_LEAST_3",
+      "lambda_pair_rescue_count": 0,
+      "lambda_rescuing_pair_examples": [],
+      "mechanism_counts": {
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 1225,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 1225
+      },
+      "mutual_edge_required_kappa_count": 0,
+      "mutual_edge_required_lambda_count": 0,
+      "node_count": 50,
+      "pair_count": 1225,
+      "pair_index": 84,
+      "period": 3,
+      "relations": {
+        "kappa_v": "NONRESCUING_PERIOD_CONTROL",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 109,
+      "stratum_index": 106
+    },
+    {
+      "adjacent_pair_count": 20,
+      "background_index": 7,
+      "cube_key": "primitive_len8|rule_109|bg_007",
+      "kappa_minimal_cardinality": "EXACTLY_2",
+      "kappa_pair_rescue_count": 2,
+      "kappa_rescuing_pair_examples": [
+        [
+          62,
+          126
+        ],
+        [
+          62,
+          127
+        ]
+      ],
+      "lambda_minimal_cardinality": "EXACTLY_2",
+      "lambda_pair_rescue_count": 2,
+      "lambda_rescuing_pair_examples": [
+        [
+          62,
+          126
+        ],
+        [
+          62,
+          127
+        ]
+      ],
+      "mechanism_counts": {
+        "DISTRIBUTED_EDGE_COVERAGE": 2,
+        "DISTRIBUTED_VERTEX_COVERAGE": 2,
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 323,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 323
+      },
+      "mutual_edge_required_kappa_count": 1,
+      "mutual_edge_required_lambda_count": 1,
+      "node_count": 26,
+      "pair_count": 325,
+      "pair_index": 166,
+      "period": 12,
+      "relations": {
+        "kappa_v": "COLLECTIVE_ONLY_PERIOD_RESCUE",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 109,
+      "stratum_index": 107
+    },
+    {
+      "adjacent_pair_count": 68,
+      "background_index": 7,
+      "cube_key": "primitive_len8|rule_109|bg_007",
+      "kappa_minimal_cardinality": "NOT_APPLICABLE_NOT_COLLECTIVE",
+      "kappa_pair_rescue_count": 0,
+      "kappa_rescuing_pair_examples": [],
+      "lambda_minimal_cardinality": "AT_LEAST_3",
+      "lambda_pair_rescue_count": 0,
+      "lambda_rescuing_pair_examples": [],
+      "mechanism_counts": {
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 1225,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 1225
+      },
+      "mutual_edge_required_kappa_count": 0,
+      "mutual_edge_required_lambda_count": 0,
+      "node_count": 50,
+      "pair_count": 1225,
+      "pair_index": 662,
+      "period": 3,
+      "relations": {
+        "kappa_v": "NONRESCUING_PERIOD_CONTROL",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 109,
+      "stratum_index": 108
+    },
+    {
+      "adjacent_pair_count": 80,
+      "background_index": 8,
+      "cube_key": "primitive_len8|rule_109|bg_008",
+      "kappa_minimal_cardinality": "AT_LEAST_3",
+      "kappa_pair_rescue_count": 0,
+      "kappa_rescuing_pair_examples": [],
+      "lambda_minimal_cardinality": "AT_LEAST_3",
+      "lambda_pair_rescue_count": 0,
+      "lambda_rescuing_pair_examples": [],
+      "mechanism_counts": {
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 1770,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 1770
+      },
+      "mutual_edge_required_kappa_count": 0,
+      "mutual_edge_required_lambda_count": 0,
+      "node_count": 60,
+      "pair_count": 1770,
+      "pair_index": 619,
+      "period": 3,
+      "relations": {
+        "kappa_v": "COLLECTIVE_ONLY_PERIOD_RESCUE",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 109,
+      "stratum_index": 109
+    },
+    {
+      "adjacent_pair_count": 112,
+      "background_index": 11,
+      "cube_key": "primitive_len8|rule_109|bg_011",
+      "kappa_minimal_cardinality": "EXACTLY_2",
+      "kappa_pair_rescue_count": 15,
+      "kappa_rescuing_pair_examples": [
+        [
+          16,
+          80
+        ],
+        [
+          16,
+          81
+        ],
+        [
+          16,
+          240
+        ],
+        [
+          17,
+          80
+        ],
+        [
+          17,
+          81
+        ],
+        [
+          17,
+          240
+        ],
+        [
+          22,
+          80
+        ],
+        [
+          22,
+          81
+        ],
+        [
+          22,
+          240
+        ],
+        [
+          26,
+          80
+        ],
+        [
+          26,
+          81
+        ],
+        [
+          26,
+          240
+        ],
+        [
+          31,
+          80
+        ],
+        [
+          31,
+          81
+        ],
+        [
+          31,
+          240
+        ]
+      ],
+      "lambda_minimal_cardinality": "EXACTLY_2",
+      "lambda_pair_rescue_count": 15,
+      "lambda_rescuing_pair_examples": [
+        [
+          16,
+          80
+        ],
+        [
+          16,
+          81
+        ],
+        [
+          16,
+          240
+        ],
+        [
+          17,
+          80
+        ],
+        [
+          17,
+          81
+        ],
+        [
+          17,
+          240
+        ],
+        [
+          22,
+          80
+        ],
+        [
+          22,
+          81
+        ],
+        [
+          22,
+          240
+        ],
+        [
+          26,
+          80
+        ],
+        [
+          26,
+          81
+        ],
+        [
+          26,
+          240
+        ],
+        [
+          31,
+          80
+        ],
+        [
+          31,
+          81
+        ],
+        [
+          31,
+          240
+        ]
+      ],
+      "mechanism_counts": {
+        "DISTRIBUTED_EDGE_COVERAGE": 15,
+        "DISTRIBUTED_VERTEX_COVERAGE": 15,
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 2911,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 2911
+      },
+      "mutual_edge_required_kappa_count": 0,
+      "mutual_edge_required_lambda_count": 0,
+      "node_count": 77,
+      "pair_count": 2926,
+      "pair_index": 168,
+      "period": 3,
+      "relations": {
+        "kappa_v": "COLLECTIVE_ONLY_PERIOD_RESCUE",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 109,
+      "stratum_index": 110
+    },
+    {
+      "adjacent_pair_count": 227,
+      "background_index": 11,
+      "cube_key": "primitive_len8|rule_109|bg_011",
+      "kappa_minimal_cardinality": "EXACTLY_2",
+      "kappa_pair_rescue_count": 18,
+      "kappa_rescuing_pair_examples": [
+        [
+          2,
+          97
+        ],
+        [
+          2,
+          117
+        ],
+        [
+          2,
+          120
+        ],
+        [
+          2,
+          121
+        ],
+        [
+          3,
+          97
+        ],
+        [
+          3,
+          117
+        ],
+        [
+          3,
+          120
+        ],
+        [
+          3,
+          121
+        ],
+        [
+          48,
+          50
+        ],
+        [
+          49,
+          51
+        ],
+        [
+          83,
+          97
+        ],
+        [
+          83,
+          117
+        ],
+        [
+          83,
+          120
+        ],
+        [
+          83,
+          121
+        ],
+        [
+          97,
+          147
+        ],
+        [
+          117,
+          147
+        ],
+        [
+          120,
+          147
+        ],
+        [
+          121,
+          147
+        ]
+      ],
+      "lambda_minimal_cardinality": "EXACTLY_2",
+      "lambda_pair_rescue_count": 18,
+      "lambda_rescuing_pair_examples": [
+        [
+          2,
+          97
+        ],
+        [
+          2,
+          117
+        ],
+        [
+          2,
+          120
+        ],
+        [
+          2,
+          121
+        ],
+        [
+          3,
+          97
+        ],
+        [
+          3,
+          117
+        ],
+        [
+          3,
+          120
+        ],
+        [
+          3,
+          121
+        ],
+        [
+          48,
+          50
+        ],
+        [
+          49,
+          51
+        ],
+        [
+          83,
+          97
+        ],
+        [
+          83,
+          117
+        ],
+        [
+          83,
+          120
+        ],
+        [
+          83,
+          121
+        ],
+        [
+          97,
+          147
+        ],
+        [
+          117,
+          147
+        ],
+        [
+          120,
+          147
+        ],
+        [
+          121,
+          147
+        ]
+      ],
+      "mechanism_counts": {
+        "DISTRIBUTED_EDGE_COVERAGE": 18,
+        "DISTRIBUTED_VERTEX_COVERAGE": 18,
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 5868,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 5868
+      },
+      "mutual_edge_required_kappa_count": 2,
+      "mutual_edge_required_lambda_count": 2,
+      "node_count": 109,
+      "pair_count": 5886,
+      "pair_index": 168,
+      "period": 6,
+      "relations": {
+        "kappa_v": "COLLECTIVE_ONLY_PERIOD_RESCUE",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 109,
+      "stratum_index": 111
+    },
+    {
+      "adjacent_pair_count": 227,
+      "background_index": 11,
+      "cube_key": "primitive_len8|rule_109|bg_011",
+      "kappa_minimal_cardinality": "EXACTLY_2",
+      "kappa_pair_rescue_count": 8,
+      "kappa_rescuing_pair_examples": [
+        [
+          2,
+          14
+        ],
+        [
+          2,
+          94
+        ],
+        [
+          3,
+          14
+        ],
+        [
+          3,
+          94
+        ],
+        [
+          14,
+          83
+        ],
+        [
+          14,
+          147
+        ],
+        [
+          83,
+          94
+        ],
+        [
+          94,
+          147
+        ]
+      ],
+      "lambda_minimal_cardinality": "EXACTLY_2",
+      "lambda_pair_rescue_count": 8,
+      "lambda_rescuing_pair_examples": [
+        [
+          2,
+          14
+        ],
+        [
+          2,
+          94
+        ],
+        [
+          3,
+          14
+        ],
+        [
+          3,
+          94
+        ],
+        [
+          14,
+          83
+        ],
+        [
+          14,
+          147
+        ],
+        [
+          83,
+          94
+        ],
+        [
+          94,
+          147
+        ]
+      ],
+      "mechanism_counts": {
+        "DISTRIBUTED_EDGE_COVERAGE": 8,
+        "DISTRIBUTED_VERTEX_COVERAGE": 8,
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 5878,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 5878
+      },
+      "mutual_edge_required_kappa_count": 0,
+      "mutual_edge_required_lambda_count": 0,
+      "node_count": 109,
+      "pair_count": 5886,
+      "pair_index": 169,
+      "period": 6,
+      "relations": {
+        "kappa_v": "COLLECTIVE_ONLY_PERIOD_RESCUE",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 109,
+      "stratum_index": 112
+    },
+    {
+      "adjacent_pair_count": 112,
+      "background_index": 11,
+      "cube_key": "primitive_len8|rule_109|bg_011",
+      "kappa_minimal_cardinality": "EXACTLY_2",
+      "kappa_pair_rescue_count": 9,
+      "kappa_rescuing_pair_examples": [
+        [
+          22,
+          80
+        ],
+        [
+          22,
+          81
+        ],
+        [
+          22,
+          240
+        ],
+        [
+          26,
+          80
+        ],
+        [
+          26,
+          81
+        ],
+        [
+          26,
+          240
+        ],
+        [
+          31,
+          80
+        ],
+        [
+          31,
+          81
+        ],
+        [
+          31,
+          240
+        ]
+      ],
+      "lambda_minimal_cardinality": "EXACTLY_2",
+      "lambda_pair_rescue_count": 9,
+      "lambda_rescuing_pair_examples": [
+        [
+          22,
+          80
+        ],
+        [
+          22,
+          81
+        ],
+        [
+          22,
+          240
+        ],
+        [
+          26,
+          80
+        ],
+        [
+          26,
+          81
+        ],
+        [
+          26,
+          240
+        ],
+        [
+          31,
+          80
+        ],
+        [
+          31,
+          81
+        ],
+        [
+          31,
+          240
+        ]
+      ],
+      "mechanism_counts": {
+        "DISTRIBUTED_EDGE_COVERAGE": 9,
+        "DISTRIBUTED_VERTEX_COVERAGE": 9,
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 2917,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 2917
+      },
+      "mutual_edge_required_kappa_count": 0,
+      "mutual_edge_required_lambda_count": 0,
+      "node_count": 77,
+      "pair_count": 2926,
+      "pair_index": 172,
+      "period": 3,
+      "relations": {
+        "kappa_v": "COLLECTIVE_ONLY_PERIOD_RESCUE",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 109,
+      "stratum_index": 113
+    },
+    {
+      "adjacent_pair_count": 227,
+      "background_index": 11,
+      "cube_key": "primitive_len8|rule_109|bg_011",
+      "kappa_minimal_cardinality": "EXACTLY_2",
+      "kappa_pair_rescue_count": 8,
+      "kappa_rescuing_pair_examples": [
+        [
+          14,
+          97
+        ],
+        [
+          14,
+          117
+        ],
+        [
+          14,
+          120
+        ],
+        [
+          14,
+          121
+        ],
+        [
+          94,
+          97
+        ],
+        [
+          94,
+          117
+        ],
+        [
+          94,
+          120
+        ],
+        [
+          94,
+          121
+        ]
+      ],
+      "lambda_minimal_cardinality": "EXACTLY_2",
+      "lambda_pair_rescue_count": 8,
+      "lambda_rescuing_pair_examples": [
+        [
+          14,
+          97
+        ],
+        [
+          14,
+          117
+        ],
+        [
+          14,
+          120
+        ],
+        [
+          14,
+          121
+        ],
+        [
+          94,
+          97
+        ],
+        [
+          94,
+          117
+        ],
+        [
+          94,
+          120
+        ],
+        [
+          94,
+          121
+        ]
+      ],
+      "mechanism_counts": {
+        "DISTRIBUTED_EDGE_COVERAGE": 8,
+        "DISTRIBUTED_VERTEX_COVERAGE": 8,
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 5878,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 5878
+      },
+      "mutual_edge_required_kappa_count": 0,
+      "mutual_edge_required_lambda_count": 0,
+      "node_count": 109,
+      "pair_count": 5886,
+      "pair_index": 172,
+      "period": 6,
+      "relations": {
+        "kappa_v": "COLLECTIVE_ONLY_PERIOD_RESCUE",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 109,
+      "stratum_index": 114
+    },
+    {
+      "adjacent_pair_count": 227,
+      "background_index": 11,
+      "cube_key": "primitive_len8|rule_109|bg_011",
+      "kappa_minimal_cardinality": "EXACTLY_2",
+      "kappa_pair_rescue_count": 1,
+      "kappa_rescuing_pair_examples": [
+        [
+          142,
+          174
+        ]
+      ],
+      "lambda_minimal_cardinality": "EXACTLY_2",
+      "lambda_pair_rescue_count": 1,
+      "lambda_rescuing_pair_examples": [
+        [
+          142,
+          174
+        ]
+      ],
+      "mechanism_counts": {
+        "DISTRIBUTED_EDGE_COVERAGE": 1,
+        "DISTRIBUTED_VERTEX_COVERAGE": 1,
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 5885,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 5885
+      },
+      "mutual_edge_required_kappa_count": 1,
+      "mutual_edge_required_lambda_count": 1,
+      "node_count": 109,
+      "pair_count": 5886,
+      "pair_index": 848,
+      "period": 6,
+      "relations": {
+        "kappa_v": "COLLECTIVE_ONLY_PERIOD_RESCUE",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 109,
+      "stratum_index": 115
+    },
+    {
+      "adjacent_pair_count": 227,
+      "background_index": 11,
+      "cube_key": "primitive_len8|rule_109|bg_011",
+      "kappa_minimal_cardinality": "EXACTLY_2",
+      "kappa_pair_rescue_count": 1,
+      "kappa_rescuing_pair_examples": [
+        [
+          142,
+          174
+        ]
+      ],
+      "lambda_minimal_cardinality": "EXACTLY_2",
+      "lambda_pair_rescue_count": 1,
+      "lambda_rescuing_pair_examples": [
+        [
+          142,
+          174
+        ]
+      ],
+      "mechanism_counts": {
+        "DISTRIBUTED_EDGE_COVERAGE": 1,
+        "DISTRIBUTED_VERTEX_COVERAGE": 1,
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 5885,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 5885
+      },
+      "mutual_edge_required_kappa_count": 1,
+      "mutual_edge_required_lambda_count": 1,
+      "node_count": 109,
+      "pair_count": 5886,
+      "pair_index": 851,
+      "period": 6,
+      "relations": {
+        "kappa_v": "COLLECTIVE_ONLY_PERIOD_RESCUE",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 109,
+      "stratum_index": 116
+    },
+    {
+      "adjacent_pair_count": 227,
+      "background_index": 11,
+      "cube_key": "primitive_len8|rule_109|bg_011",
+      "kappa_minimal_cardinality": "EXACTLY_2",
+      "kappa_pair_rescue_count": 1,
+      "kappa_rescuing_pair_examples": [
+        [
+          142,
+          174
+        ]
+      ],
+      "lambda_minimal_cardinality": "EXACTLY_2",
+      "lambda_pair_rescue_count": 1,
+      "lambda_rescuing_pair_examples": [
+        [
+          142,
+          174
+        ]
+      ],
+      "mechanism_counts": {
+        "DISTRIBUTED_EDGE_COVERAGE": 1,
+        "DISTRIBUTED_VERTEX_COVERAGE": 1,
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 5885,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 5885
+      },
+      "mutual_edge_required_kappa_count": 1,
+      "mutual_edge_required_lambda_count": 1,
+      "node_count": 109,
+      "pair_count": 5886,
+      "pair_index": 853,
+      "period": 6,
+      "relations": {
+        "kappa_v": "COLLECTIVE_ONLY_PERIOD_RESCUE",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 109,
+      "stratum_index": 117
+    },
+    {
+      "adjacent_pair_count": 227,
+      "background_index": 11,
+      "cube_key": "primitive_len8|rule_109|bg_011",
+      "kappa_minimal_cardinality": "EXACTLY_2",
+      "kappa_pair_rescue_count": 1,
+      "kappa_rescuing_pair_examples": [
+        [
+          142,
+          174
+        ]
+      ],
+      "lambda_minimal_cardinality": "EXACTLY_2",
+      "lambda_pair_rescue_count": 1,
+      "lambda_rescuing_pair_examples": [
+        [
+          142,
+          174
+        ]
+      ],
+      "mechanism_counts": {
+        "DISTRIBUTED_EDGE_COVERAGE": 1,
+        "DISTRIBUTED_VERTEX_COVERAGE": 1,
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 5885,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 5885
+      },
+      "mutual_edge_required_kappa_count": 1,
+      "mutual_edge_required_lambda_count": 1,
+      "node_count": 109,
+      "pair_count": 5886,
+      "pair_index": 854,
+      "period": 6,
+      "relations": {
+        "kappa_v": "COLLECTIVE_ONLY_PERIOD_RESCUE",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 109,
+      "stratum_index": 118
+    },
+    {
+      "adjacent_pair_count": 20,
+      "background_index": 16,
+      "cube_key": "primitive_len8|rule_109|bg_016",
+      "kappa_minimal_cardinality": "AT_LEAST_3",
+      "kappa_pair_rescue_count": 0,
+      "kappa_rescuing_pair_examples": [],
+      "lambda_minimal_cardinality": "AT_LEAST_3",
+      "lambda_pair_rescue_count": 0,
+      "lambda_rescuing_pair_examples": [],
+      "mechanism_counts": {
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 378,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 378
+      },
+      "mutual_edge_required_kappa_count": 0,
+      "mutual_edge_required_lambda_count": 0,
+      "node_count": 28,
+      "pair_count": 378,
+      "pair_index": 931,
+      "period": 12,
+      "relations": {
+        "kappa_v": "COLLECTIVE_ONLY_PERIOD_RESCUE",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 109,
+      "stratum_index": 119
+    },
+    {
+      "adjacent_pair_count": 20,
+      "background_index": 16,
+      "cube_key": "primitive_len8|rule_109|bg_016",
+      "kappa_minimal_cardinality": "AT_LEAST_3",
+      "kappa_pair_rescue_count": 0,
+      "kappa_rescuing_pair_examples": [],
+      "lambda_minimal_cardinality": "AT_LEAST_3",
+      "lambda_pair_rescue_count": 0,
+      "lambda_rescuing_pair_examples": [],
+      "mechanism_counts": {
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 378,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 378
+      },
+      "mutual_edge_required_kappa_count": 0,
+      "mutual_edge_required_lambda_count": 0,
+      "node_count": 28,
+      "pair_count": 378,
+      "pair_index": 933,
+      "period": 12,
+      "relations": {
+        "kappa_v": "COLLECTIVE_ONLY_PERIOD_RESCUE",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 109,
+      "stratum_index": 120
+    },
+    {
+      "adjacent_pair_count": 20,
+      "background_index": 16,
+      "cube_key": "primitive_len8|rule_109|bg_016",
+      "kappa_minimal_cardinality": "AT_LEAST_3",
+      "kappa_pair_rescue_count": 0,
+      "kappa_rescuing_pair_examples": [],
+      "lambda_minimal_cardinality": "AT_LEAST_3",
+      "lambda_pair_rescue_count": 0,
+      "lambda_rescuing_pair_examples": [],
+      "mechanism_counts": {
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 378,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 378
+      },
+      "mutual_edge_required_kappa_count": 0,
+      "mutual_edge_required_lambda_count": 0,
+      "node_count": 28,
+      "pair_count": 378,
+      "pair_index": 935,
+      "period": 12,
+      "relations": {
+        "kappa_v": "COLLECTIVE_ONLY_PERIOD_RESCUE",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 109,
+      "stratum_index": 121
+    },
+    {
+      "adjacent_pair_count": 56,
+      "background_index": 18,
+      "cube_key": "primitive_len8|rule_109|bg_018",
+      "kappa_minimal_cardinality": "AT_LEAST_3",
+      "kappa_pair_rescue_count": 0,
+      "kappa_rescuing_pair_examples": [],
+      "lambda_minimal_cardinality": "EXACTLY_2",
+      "lambda_pair_rescue_count": 1,
+      "lambda_rescuing_pair_examples": [
+        [
+          108,
+          124
+        ]
+      ],
+      "mechanism_counts": {
+        "DISTRIBUTED_EDGE_COVERAGE": 1,
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 1034,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 1035
+      },
+      "mutual_edge_required_kappa_count": 0,
+      "mutual_edge_required_lambda_count": 1,
+      "node_count": 46,
+      "pair_count": 1035,
+      "pair_index": 646,
+      "period": 3,
+      "relations": {
+        "kappa_v": "COLLECTIVE_ONLY_PERIOD_RESCUE",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 109,
+      "stratum_index": 122
+    },
+    {
+      "adjacent_pair_count": 56,
+      "background_index": 18,
+      "cube_key": "primitive_len8|rule_109|bg_018",
+      "kappa_minimal_cardinality": "AT_LEAST_3",
+      "kappa_pair_rescue_count": 0,
+      "kappa_rescuing_pair_examples": [],
+      "lambda_minimal_cardinality": "EXACTLY_2",
+      "lambda_pair_rescue_count": 1,
+      "lambda_rescuing_pair_examples": [
+        [
+          108,
+          124
+        ]
+      ],
+      "mechanism_counts": {
+        "DISTRIBUTED_EDGE_COVERAGE": 1,
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 1034,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 1035
+      },
+      "mutual_edge_required_kappa_count": 0,
+      "mutual_edge_required_lambda_count": 1,
+      "node_count": 46,
+      "pair_count": 1035,
+      "pair_index": 648,
+      "period": 3,
+      "relations": {
+        "kappa_v": "COLLECTIVE_ONLY_PERIOD_RESCUE",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 109,
+      "stratum_index": 123
+    },
+    {
+      "adjacent_pair_count": 365,
+      "background_index": 20,
+      "cube_key": "primitive_len8|rule_109|bg_020",
+      "kappa_minimal_cardinality": "EXACTLY_2",
+      "kappa_pair_rescue_count": 10,
+      "kappa_rescuing_pair_examples": [
+        [
+          70,
+          126
+        ],
+        [
+          70,
+          222
+        ],
+        [
+          94,
+          126
+        ],
+        [
+          94,
+          222
+        ],
+        [
+          118,
+          126
+        ],
+        [
+          118,
+          222
+        ],
+        [
+          118,
+          246
+        ],
+        [
+          126,
+          214
+        ],
+        [
+          214,
+          222
+        ],
+        [
+          214,
+          246
+        ]
+      ],
+      "lambda_minimal_cardinality": "EXACTLY_2",
+      "lambda_pair_rescue_count": 10,
+      "lambda_rescuing_pair_examples": [
+        [
+          70,
+          126
+        ],
+        [
+          70,
+          222
+        ],
+        [
+          94,
+          126
+        ],
+        [
+          94,
+          222
+        ],
+        [
+          118,
+          126
+        ],
+        [
+          118,
+          222
+        ],
+        [
+          118,
+          246
+        ],
+        [
+          126,
+          214
+        ],
+        [
+          214,
+          222
+        ],
+        [
+          214,
+          246
+        ]
+      ],
+      "mechanism_counts": {
+        "DISTRIBUTED_EDGE_COVERAGE": 10,
+        "DISTRIBUTED_VERTEX_COVERAGE": 10,
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 10575,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 10575
+      },
+      "mutual_edge_required_kappa_count": 4,
+      "mutual_edge_required_lambda_count": 4,
+      "node_count": 146,
+      "pair_count": 10585,
+      "pair_index": 190,
+      "period": 6,
+      "relations": {
+        "kappa_v": "COLLECTIVE_ONLY_PERIOD_RESCUE",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 109,
+      "stratum_index": 124
+    },
+    {
+      "adjacent_pair_count": 16,
+      "background_index": 20,
+      "cube_key": "primitive_len8|rule_109|bg_020",
+      "kappa_minimal_cardinality": "AT_LEAST_3",
+      "kappa_pair_rescue_count": 0,
+      "kappa_rescuing_pair_examples": [],
+      "lambda_minimal_cardinality": "AT_LEAST_3",
+      "lambda_pair_rescue_count": 0,
+      "lambda_rescuing_pair_examples": [],
+      "mechanism_counts": {
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 276,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 276
+      },
+      "mutual_edge_required_kappa_count": 0,
+      "mutual_edge_required_lambda_count": 0,
+      "node_count": 24,
+      "pair_count": 276,
+      "pair_index": 190,
+      "period": 12,
+      "relations": {
+        "kappa_v": "COLLECTIVE_ONLY_PERIOD_RESCUE",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 109,
+      "stratum_index": 125
+    },
+    {
+      "adjacent_pair_count": 39,
+      "background_index": 20,
+      "cube_key": "primitive_len8|rule_109|bg_020",
+      "kappa_minimal_cardinality": "AT_LEAST_3",
+      "kappa_pair_rescue_count": 0,
+      "kappa_rescuing_pair_examples": [],
+      "lambda_minimal_cardinality": "AT_LEAST_3",
+      "lambda_pair_rescue_count": 0,
+      "lambda_rescuing_pair_examples": [],
+      "mechanism_counts": {
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 666,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 666
+      },
+      "mutual_edge_required_kappa_count": 0,
+      "mutual_edge_required_lambda_count": 0,
+      "node_count": 37,
+      "pair_count": 666,
+      "pair_index": 833,
+      "period": 3,
+      "relations": {
+        "kappa_v": "COLLECTIVE_ONLY_PERIOD_RESCUE",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 109,
+      "stratum_index": 126
+    },
+    {
+      "adjacent_pair_count": 365,
+      "background_index": 20,
+      "cube_key": "primitive_len8|rule_109|bg_020",
+      "kappa_minimal_cardinality": "EXACTLY_2",
+      "kappa_pair_rescue_count": 4,
+      "kappa_rescuing_pair_examples": [
+        [
+          145,
+          147
+        ],
+        [
+          145,
+          153
+        ],
+        [
+          147,
+          211
+        ],
+        [
+          159,
+          211
+        ]
+      ],
+      "lambda_minimal_cardinality": "NOT_APPLICABLE_NOT_COLLECTIVE",
+      "lambda_pair_rescue_count": 148,
+      "lambda_rescuing_pair_examples": [
+        [
+          2,
+          159
+        ],
+        [
+          3,
+          159
+        ],
+        [
+          6,
+          159
+        ],
+        [
+          8,
+          159
+        ],
+        [
+          9,
+          159
+        ],
+        [
+          11,
+          159
+        ],
+        [
+          12,
+          159
+        ],
+        [
+          13,
+          159
+        ],
+        [
+          15,
+          159
+        ],
+        [
+          18,
+          159
+        ],
+        [
+          22,
+          159
+        ],
+        [
+          23,
+          159
+        ],
+        [
+          24,
+          159
+        ],
+        [
+          25,
+          159
+        ],
+        [
+          26,
+          159
+        ],
+        [
+          28,
+          159
+        ],
+        [
+          29,
+          159
+        ],
+        [
+          30,
+          159
+        ],
+        [
+          32,
+          159
+        ],
+        [
+          34,
+          159
+        ]
+      ],
+      "mechanism_counts": {
+        "DISTRIBUTED_EDGE_COVERAGE": 3,
+        "DISTRIBUTED_VERTEX_COVERAGE": 4,
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 10437,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 10581
+      },
+      "mutual_edge_required_kappa_count": 3,
+      "mutual_edge_required_lambda_count": 3,
+      "node_count": 146,
+      "pair_count": 10585,
+      "pair_index": 833,
+      "period": 6,
+      "relations": {
+        "kappa_v": "COLLECTIVE_ONLY_PERIOD_RESCUE",
+        "lambda_e": "SINGLE_NODE_EXPLAINS_GROUP_RESCUE"
+      },
+      "rule": 109,
+      "stratum_index": 127
+    },
+    {
+      "adjacent_pair_count": 39,
+      "background_index": 20,
+      "cube_key": "primitive_len8|rule_109|bg_020",
+      "kappa_minimal_cardinality": "AT_LEAST_3",
+      "kappa_pair_rescue_count": 0,
+      "kappa_rescuing_pair_examples": [],
+      "lambda_minimal_cardinality": "AT_LEAST_3",
+      "lambda_pair_rescue_count": 0,
+      "lambda_rescuing_pair_examples": [],
+      "mechanism_counts": {
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 666,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 666
+      },
+      "mutual_edge_required_kappa_count": 0,
+      "mutual_edge_required_lambda_count": 0,
+      "node_count": 37,
+      "pair_count": 666,
+      "pair_index": 835,
+      "period": 3,
+      "relations": {
+        "kappa_v": "COLLECTIVE_ONLY_PERIOD_RESCUE",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 109,
+      "stratum_index": 128
+    },
+    {
+      "adjacent_pair_count": 365,
+      "background_index": 20,
+      "cube_key": "primitive_len8|rule_109|bg_020",
+      "kappa_minimal_cardinality": "EXACTLY_2",
+      "kappa_pair_rescue_count": 4,
+      "kappa_rescuing_pair_examples": [
+        [
+          145,
+          147
+        ],
+        [
+          145,
+          153
+        ],
+        [
+          147,
+          211
+        ],
+        [
+          159,
+          211
+        ]
+      ],
+      "lambda_minimal_cardinality": "NOT_APPLICABLE_NOT_COLLECTIVE",
+      "lambda_pair_rescue_count": 148,
+      "lambda_rescuing_pair_examples": [
+        [
+          2,
+          159
+        ],
+        [
+          3,
+          159
+        ],
+        [
+          6,
+          159
+        ],
+        [
+          8,
+          159
+        ],
+        [
+          9,
+          159
+        ],
+        [
+          11,
+          159
+        ],
+        [
+          12,
+          159
+        ],
+        [
+          13,
+          159
+        ],
+        [
+          15,
+          159
+        ],
+        [
+          18,
+          159
+        ],
+        [
+          22,
+          159
+        ],
+        [
+          23,
+          159
+        ],
+        [
+          24,
+          159
+        ],
+        [
+          25,
+          159
+        ],
+        [
+          26,
+          159
+        ],
+        [
+          28,
+          159
+        ],
+        [
+          29,
+          159
+        ],
+        [
+          30,
+          159
+        ],
+        [
+          32,
+          159
+        ],
+        [
+          34,
+          159
+        ]
+      ],
+      "mechanism_counts": {
+        "DISTRIBUTED_EDGE_COVERAGE": 3,
+        "DISTRIBUTED_VERTEX_COVERAGE": 4,
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 10437,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 10581
+      },
+      "mutual_edge_required_kappa_count": 3,
+      "mutual_edge_required_lambda_count": 3,
+      "node_count": 146,
+      "pair_count": 10585,
+      "pair_index": 835,
+      "period": 6,
+      "relations": {
+        "kappa_v": "COLLECTIVE_ONLY_PERIOD_RESCUE",
+        "lambda_e": "SINGLE_NODE_EXPLAINS_GROUP_RESCUE"
+      },
+      "rule": 109,
+      "stratum_index": 129
+    },
+    {
+      "adjacent_pair_count": 39,
+      "background_index": 20,
+      "cube_key": "primitive_len8|rule_109|bg_020",
+      "kappa_minimal_cardinality": "AT_LEAST_3",
+      "kappa_pair_rescue_count": 0,
+      "kappa_rescuing_pair_examples": [],
+      "lambda_minimal_cardinality": "AT_LEAST_3",
+      "lambda_pair_rescue_count": 0,
+      "lambda_rescuing_pair_examples": [],
+      "mechanism_counts": {
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 666,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 666
+      },
+      "mutual_edge_required_kappa_count": 0,
+      "mutual_edge_required_lambda_count": 0,
+      "node_count": 37,
+      "pair_count": 666,
+      "pair_index": 837,
+      "period": 3,
+      "relations": {
+        "kappa_v": "COLLECTIVE_ONLY_PERIOD_RESCUE",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 109,
+      "stratum_index": 130
+    },
+    {
+      "adjacent_pair_count": 365,
+      "background_index": 20,
+      "cube_key": "primitive_len8|rule_109|bg_020",
+      "kappa_minimal_cardinality": "EXACTLY_2",
+      "kappa_pair_rescue_count": 4,
+      "kappa_rescuing_pair_examples": [
+        [
+          145,
+          147
+        ],
+        [
+          145,
+          153
+        ],
+        [
+          147,
+          211
+        ],
+        [
+          159,
+          211
+        ]
+      ],
+      "lambda_minimal_cardinality": "NOT_APPLICABLE_NOT_COLLECTIVE",
+      "lambda_pair_rescue_count": 148,
+      "lambda_rescuing_pair_examples": [
+        [
+          2,
+          159
+        ],
+        [
+          3,
+          159
+        ],
+        [
+          6,
+          159
+        ],
+        [
+          8,
+          159
+        ],
+        [
+          9,
+          159
+        ],
+        [
+          11,
+          159
+        ],
+        [
+          12,
+          159
+        ],
+        [
+          13,
+          159
+        ],
+        [
+          15,
+          159
+        ],
+        [
+          18,
+          159
+        ],
+        [
+          22,
+          159
+        ],
+        [
+          23,
+          159
+        ],
+        [
+          24,
+          159
+        ],
+        [
+          25,
+          159
+        ],
+        [
+          26,
+          159
+        ],
+        [
+          28,
+          159
+        ],
+        [
+          29,
+          159
+        ],
+        [
+          30,
+          159
+        ],
+        [
+          32,
+          159
+        ],
+        [
+          34,
+          159
+        ]
+      ],
+      "mechanism_counts": {
+        "DISTRIBUTED_EDGE_COVERAGE": 3,
+        "DISTRIBUTED_VERTEX_COVERAGE": 4,
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 10437,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 10581
+      },
+      "mutual_edge_required_kappa_count": 3,
+      "mutual_edge_required_lambda_count": 3,
+      "node_count": 146,
+      "pair_count": 10585,
+      "pair_index": 837,
+      "period": 6,
+      "relations": {
+        "kappa_v": "COLLECTIVE_ONLY_PERIOD_RESCUE",
+        "lambda_e": "SINGLE_NODE_EXPLAINS_GROUP_RESCUE"
+      },
+      "rule": 109,
+      "stratum_index": 131
+    },
+    {
+      "adjacent_pair_count": 171,
+      "background_index": 22,
+      "cube_key": "primitive_len8|rule_109|bg_022",
+      "kappa_minimal_cardinality": "EXACTLY_2",
+      "kappa_pair_rescue_count": 1,
+      "kappa_rescuing_pair_examples": [
+        [
+          47,
+          167
+        ]
+      ],
+      "lambda_minimal_cardinality": "EXACTLY_2",
+      "lambda_pair_rescue_count": 1,
+      "lambda_rescuing_pair_examples": [
+        [
+          47,
+          167
+        ]
+      ],
+      "mechanism_counts": {
+        "DISTRIBUTED_EDGE_COVERAGE": 1,
+        "DISTRIBUTED_VERTEX_COVERAGE": 1,
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 4094,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 4094
+      },
+      "mutual_edge_required_kappa_count": 0,
+      "mutual_edge_required_lambda_count": 0,
+      "node_count": 91,
+      "pair_count": 4095,
+      "pair_index": 101,
+      "period": 2,
+      "relations": {
+        "kappa_v": "COLLECTIVE_ONLY_PERIOD_RESCUE",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 109,
+      "stratum_index": 132
+    },
+    {
+      "adjacent_pair_count": 201,
+      "background_index": 22,
+      "cube_key": "primitive_len8|rule_109|bg_022",
+      "kappa_minimal_cardinality": "AT_LEAST_3",
+      "kappa_pair_rescue_count": 0,
+      "kappa_rescuing_pair_examples": [],
+      "lambda_minimal_cardinality": "AT_LEAST_3",
+      "lambda_pair_rescue_count": 0,
+      "lambda_rescuing_pair_examples": [],
+      "mechanism_counts": {
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 5253,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 5253
+      },
+      "mutual_edge_required_kappa_count": 0,
+      "mutual_edge_required_lambda_count": 0,
+      "node_count": 103,
+      "pair_count": 5253,
+      "pair_index": 101,
+      "period": 6,
+      "relations": {
+        "kappa_v": "COLLECTIVE_ONLY_PERIOD_RESCUE",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 109,
+      "stratum_index": 133
+    },
+    {
+      "adjacent_pair_count": 4,
+      "background_index": 22,
+      "cube_key": "primitive_len8|rule_109|bg_022",
+      "kappa_minimal_cardinality": "EXACTLY_2",
+      "kappa_pair_rescue_count": 2,
+      "kappa_rescuing_pair_examples": [
+        [
+          131,
+          239
+        ],
+        [
+          171,
+          239
+        ]
+      ],
+      "lambda_minimal_cardinality": "EXACTLY_2",
+      "lambda_pair_rescue_count": 2,
+      "lambda_rescuing_pair_examples": [
+        [
+          131,
+          239
+        ],
+        [
+          171,
+          239
+        ]
+      ],
+      "mechanism_counts": {
+        "DISTRIBUTED_EDGE_COVERAGE": 2,
+        "DISTRIBUTED_VERTEX_COVERAGE": 2,
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 64,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 64
+      },
+      "mutual_edge_required_kappa_count": 0,
+      "mutual_edge_required_lambda_count": 0,
+      "node_count": 12,
+      "pair_count": 66,
+      "pair_index": 101,
+      "period": 8,
+      "relations": {
+        "kappa_v": "COLLECTIVE_ONLY_PERIOD_RESCUE",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 109,
+      "stratum_index": 134
+    },
+    {
+      "adjacent_pair_count": 5,
+      "background_index": 24,
+      "cube_key": "primitive_len8|rule_109|bg_024",
+      "kappa_minimal_cardinality": "AT_LEAST_3",
+      "kappa_pair_rescue_count": 0,
+      "kappa_rescuing_pair_examples": [],
+      "lambda_minimal_cardinality": "AT_LEAST_3",
+      "lambda_pair_rescue_count": 0,
+      "lambda_rescuing_pair_examples": [],
+      "mechanism_counts": {
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 28,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 28
+      },
+      "mutual_edge_required_kappa_count": 0,
+      "mutual_edge_required_lambda_count": 0,
+      "node_count": 8,
+      "pair_count": 28,
+      "pair_index": 541,
+      "period": 12,
+      "relations": {
+        "kappa_v": "COLLECTIVE_ONLY_PERIOD_RESCUE",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 109,
+      "stratum_index": 135
+    },
+    {
+      "adjacent_pair_count": 5,
+      "background_index": 24,
+      "cube_key": "primitive_len8|rule_109|bg_024",
+      "kappa_minimal_cardinality": "AT_LEAST_3",
+      "kappa_pair_rescue_count": 0,
+      "kappa_rescuing_pair_examples": [],
+      "lambda_minimal_cardinality": "AT_LEAST_3",
+      "lambda_pair_rescue_count": 0,
+      "lambda_rescuing_pair_examples": [],
+      "mechanism_counts": {
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 28,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 28
+      },
+      "mutual_edge_required_kappa_count": 0,
+      "mutual_edge_required_lambda_count": 0,
+      "node_count": 8,
+      "pair_count": 28,
+      "pair_index": 543,
+      "period": 12,
+      "relations": {
+        "kappa_v": "COLLECTIVE_ONLY_PERIOD_RESCUE",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 109,
+      "stratum_index": 136
+    },
+    {
+      "adjacent_pair_count": 5,
+      "background_index": 24,
+      "cube_key": "primitive_len8|rule_109|bg_024",
+      "kappa_minimal_cardinality": "AT_LEAST_3",
+      "kappa_pair_rescue_count": 0,
+      "kappa_rescuing_pair_examples": [],
+      "lambda_minimal_cardinality": "AT_LEAST_3",
+      "lambda_pair_rescue_count": 0,
+      "lambda_rescuing_pair_examples": [],
+      "mechanism_counts": {
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 28,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 28
+      },
+      "mutual_edge_required_kappa_count": 0,
+      "mutual_edge_required_lambda_count": 0,
+      "node_count": 8,
+      "pair_count": 28,
+      "pair_index": 544,
+      "period": 12,
+      "relations": {
+        "kappa_v": "COLLECTIVE_ONLY_PERIOD_RESCUE",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 109,
+      "stratum_index": 137
+    },
+    {
+      "adjacent_pair_count": 97,
+      "background_index": 24,
+      "cube_key": "primitive_len8|rule_109|bg_024",
+      "kappa_minimal_cardinality": "EXACTLY_2",
+      "kappa_pair_rescue_count": 1,
+      "kappa_rescuing_pair_examples": [
+        [
+          31,
+          95
+        ]
+      ],
+      "lambda_minimal_cardinality": "EXACTLY_2",
+      "lambda_pair_rescue_count": 1,
+      "lambda_rescuing_pair_examples": [
+        [
+          31,
+          95
+        ]
+      ],
+      "mechanism_counts": {
+        "DISTRIBUTED_EDGE_COVERAGE": 1,
+        "DISTRIBUTED_VERTEX_COVERAGE": 1,
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 2210,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 2210
+      },
+      "mutual_edge_required_kappa_count": 1,
+      "mutual_edge_required_lambda_count": 1,
+      "node_count": 67,
+      "pair_count": 2211,
+      "pair_index": 838,
+      "period": 3,
+      "relations": {
+        "kappa_v": "COLLECTIVE_ONLY_PERIOD_RESCUE",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 109,
+      "stratum_index": 138
+    },
+    {
+      "adjacent_pair_count": 260,
+      "background_index": 24,
+      "cube_key": "primitive_len8|rule_109|bg_024",
+      "kappa_minimal_cardinality": "EXACTLY_2",
+      "kappa_pair_rescue_count": 11,
+      "kappa_rescuing_pair_examples": [
+        [
+          111,
+          158
+        ],
+        [
+          111,
+          191
+        ],
+        [
+          112,
+          158
+        ],
+        [
+          112,
+          191
+        ],
+        [
+          126,
+          158
+        ],
+        [
+          126,
+          191
+        ],
+        [
+          158,
+          249
+        ],
+        [
+          158,
+          252
+        ],
+        [
+          189,
+          191
+        ],
+        [
+          191,
+          249
+        ],
+        [
+          191,
+          252
+        ]
+      ],
+      "lambda_minimal_cardinality": "EXACTLY_2",
+      "lambda_pair_rescue_count": 11,
+      "lambda_rescuing_pair_examples": [
+        [
+          111,
+          158
+        ],
+        [
+          111,
+          191
+        ],
+        [
+          112,
+          158
+        ],
+        [
+          112,
+          191
+        ],
+        [
+          126,
+          158
+        ],
+        [
+          126,
+          191
+        ],
+        [
+          158,
+          249
+        ],
+        [
+          158,
+          252
+        ],
+        [
+          189,
+          191
+        ],
+        [
+          191,
+          249
+        ],
+        [
+          191,
+          252
+        ]
+      ],
+      "mechanism_counts": {
+        "DISTRIBUTED_EDGE_COVERAGE": 11,
+        "DISTRIBUTED_VERTEX_COVERAGE": 11,
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 7492,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 7492
+      },
+      "mutual_edge_required_kappa_count": 1,
+      "mutual_edge_required_lambda_count": 1,
+      "node_count": 123,
+      "pair_count": 7503,
+      "pair_index": 838,
+      "period": 6,
+      "relations": {
+        "kappa_v": "COLLECTIVE_ONLY_PERIOD_RESCUE",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 109,
+      "stratum_index": 139
+    },
+    {
+      "adjacent_pair_count": 143,
+      "background_index": 28,
+      "cube_key": "primitive_len8|rule_109|bg_028",
+      "kappa_minimal_cardinality": "AT_LEAST_3",
+      "kappa_pair_rescue_count": 0,
+      "kappa_rescuing_pair_examples": [],
+      "lambda_minimal_cardinality": "AT_LEAST_3",
+      "lambda_pair_rescue_count": 0,
+      "lambda_rescuing_pair_examples": [],
+      "mechanism_counts": {
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 3570,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 3570
+      },
+      "mutual_edge_required_kappa_count": 0,
+      "mutual_edge_required_lambda_count": 0,
+      "node_count": 85,
+      "pair_count": 3570,
+      "pair_index": 195,
+      "period": 3,
+      "relations": {
+        "kappa_v": "COLLECTIVE_ONLY_PERIOD_RESCUE",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 109,
+      "stratum_index": 140
+    },
+    {
+      "adjacent_pair_count": 193,
+      "background_index": 28,
+      "cube_key": "primitive_len8|rule_109|bg_028",
+      "kappa_minimal_cardinality": "AT_LEAST_3",
+      "kappa_pair_rescue_count": 0,
+      "kappa_rescuing_pair_examples": [],
+      "lambda_minimal_cardinality": "AT_LEAST_3",
+      "lambda_pair_rescue_count": 0,
+      "lambda_rescuing_pair_examples": [],
+      "mechanism_counts": {
+        "ORIGINAL_EDGE_CUTS_UNCOVERED": 5151,
+        "ORIGINAL_VERTEX_CUTS_UNCOVERED": 5151
+      },
+      "mutual_edge_required_kappa_count": 0,
+      "mutual_edge_required_lambda_count": 0,
+      "node_count": 102,
+      "pair_count": 5151,
+      "pair_index": 195,
+      "period": 6,
+      "relations": {
+        "kappa_v": "COLLECTIVE_ONLY_PERIOD_RESCUE",
+        "lambda_e": "COLLECTIVE_ONLY_PERIOD_RESCUE"
+      },
+      "rule": 109,
+      "stratum_index": 141
+    }
+  ],
+  "summary": {
+    "adjacent_pair_count": 16307,
+    "collective_stratum_count": 142,
+    "cube_count": 48,
+    "kappa_at_least_three_strata": 57,
+    "kappa_collective_stratum_count": 126,
+    "kappa_exactly_two_strata": 69,
+    "kappa_pair_rescue_count": 454,
+    "kappa_pair_trial_count": 384354,
+    "lambda_at_least_three_strata": 71,
+    "lambda_collective_stratum_count": 139,
+    "lambda_exactly_two_strata": 68,
+    "lambda_pair_rescue_count": 470,
+    "lambda_pair_trial_count": 372299,
+    "ledger_record_count": 404054,
+    "ledger_record_size": 10,
+    "ledger_sha256": "43d029c26f83027d2804f54a8222a0bfc361b9c9c12280b890d0dc5f8082a344",
+    "ledger_size": 4040540,
+    "monotonicity_failure_count": 0,
+    "mutual_edge_required_kappa_count": 83,
+    "mutual_edge_required_lambda_count": 86,
+    "nonadjacent_pair_count": 387747,
+    "pair_intervention_count": 404054,
+    "route_disagreement_count": 0,
+    "simulation_executed": false,
+    "unit_replay_failure_count": 0
+  }
+}

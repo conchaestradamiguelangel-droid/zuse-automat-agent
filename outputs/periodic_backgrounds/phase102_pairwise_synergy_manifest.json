@@ -1,0 +1,75 @@
+{
+  "byte_order": "little-endian",
+  "decoder": "decode_phase102_pairwise_synergy_ledger.py",
+  "fields": [
+    {
+      "name": "stratum_index",
+      "offset": 0,
+      "type": "uint16",
+      "width": 2
+    },
+    {
+      "name": "left_word",
+      "offset": 2,
+      "type": "uint8",
+      "width": 1
+    },
+    {
+      "name": "right_word",
+      "offset": 3,
+      "type": "uint8",
+      "width": 1
+    },
+    {
+      "name": "flags",
+      "offset": 4,
+      "type": "uint16_bitmask",
+      "width": 2
+    },
+    {
+      "name": "uncovered_original_vertices",
+      "offset": 6,
+      "type": "uint8",
+      "width": 1
+    },
+    {
+      "name": "uncovered_original_edges",
+      "offset": 7,
+      "type": "uint8",
+      "width": 1
+    },
+    {
+      "name": "new_vertex_separator_mask",
+      "offset": 8,
+      "type": "uint8_bitmask",
+      "width": 1
+    },
+    {
+      "name": "new_edge_separator_count",
+      "offset": 9,
+      "type": "uint8",
+      "width": 1
+    }
+  ],
+  "flag_bits": {
+    "adjacent_pair": 0,
+    "distributed_edge_coverage": 10,
+    "distributed_vertex_coverage": 9,
+    "kappa_collective_scope": 1,
+    "kappa_route_a_rescue": 3,
+    "kappa_route_b_rescue": 5,
+    "lambda_collective_scope": 2,
+    "lambda_route_a_rescue": 4,
+    "lambda_route_b_rescue": 6,
+    "mutual_edge_required_kappa": 7,
+    "mutual_edge_required_lambda": 8
+  },
+  "ledger_file": "phase102_pairwise_synergy_ledger.bin",
+  "ledger_sha256": "43d029c26f83027d2804f54a8222a0bfc361b9c9c12280b890d0dc5f8082a344",
+  "ledger_size": 4040540,
+  "phase": 103,
+  "record_count": 404054,
+  "record_format": "<HBBHBBBB",
+  "record_size": 10,
+  "stratum_index_source": "phase102_pairwise_synergy_results.json::strata[].stratum_index"
+}
