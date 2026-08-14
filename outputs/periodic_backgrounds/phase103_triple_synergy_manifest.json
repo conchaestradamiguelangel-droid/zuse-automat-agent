@@ -1,0 +1,87 @@
+{
+  "byte_order": "little-endian",
+  "decoder": "decode_phase103_triple_synergy_ledger.py",
+  "fields": [
+    {
+      "name": "stratum_index",
+      "offset": 0,
+      "type": "uint16",
+      "width": 2
+    },
+    {
+      "name": "first_word",
+      "offset": 2,
+      "type": "uint8",
+      "width": 1
+    },
+    {
+      "name": "second_word",
+      "offset": 3,
+      "type": "uint8",
+      "width": 1
+    },
+    {
+      "name": "third_word",
+      "offset": 4,
+      "type": "uint8",
+      "width": 1
+    },
+    {
+      "name": "flags",
+      "offset": 5,
+      "type": "uint16_bitmask",
+      "width": 2
+    },
+    {
+      "name": "uncovered_original_vertices",
+      "offset": 7,
+      "type": "uint8",
+      "width": 1
+    },
+    {
+      "name": "uncovered_original_edges",
+      "offset": 8,
+      "type": "uint8",
+      "width": 1
+    },
+    {
+      "name": "packed_new_separators",
+      "offset": 9,
+      "type": "uint8_packed",
+      "width": 1
+    }
+  ],
+  "flag_bits": {
+    "distributed_edge_coverage": 9,
+    "distributed_vertex_coverage": 8,
+    "internal_edge_required_kappa": 10,
+    "internal_edge_required_lambda": 11,
+    "kappa_route_a_rescue": 4,
+    "kappa_route_b_rescue": 6,
+    "kappa_scope": 2,
+    "lambda_route_a_rescue": 5,
+    "lambda_route_b_rescue": 7,
+    "lambda_scope": 3,
+    "three_node_edge_coverage": 13,
+    "three_node_vertex_coverage": 12
+  },
+  "internal_edge_count_bits": "flags bits 0..1",
+  "ledger_file": "phase103_triple_synergy_ledger.bin",
+  "ledger_sha256": "b342a58d20aa7ecdc2a2a5ea45037a64739134151db41b562464163b7e93578f",
+  "ledger_size": 30614660,
+  "packed_new_separators": {
+    "new_edge_separator_count": {
+      "bits": "3..7",
+      "width": 5
+    },
+    "new_vertex_separator_mask": {
+      "bits": "0..2",
+      "width": 3
+    }
+  },
+  "phase": 104,
+  "record_count": 3061466,
+  "record_format": "<HBBBHBBB",
+  "record_size": 10,
+  "stratum_index_source": "phase103_triple_synergy_results.json::strata[].stratum_index"
+}
