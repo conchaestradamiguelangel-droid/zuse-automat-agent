@@ -1,20 +1,11 @@
 # ZUSE preprint
 
-Candidate under independent review:
-
-- **Candidate version:** v1.35 (not yet published)
-- **Scientific scope:** Fases 91--103; long-period attractor quotient, complete
-  Q8 intervention topology, exact cut-coverage law, and pairwise minimum
-  cardinality audit.
-- **DOI:** pending manual Zenodo publication after review.
-- **Candidate PDF:** 59 pages, 1,025,045 bytes, MD5
-  `2516656a558e1fc0c7690d51abef2656`.
-
 Published preprint:
 
 - **Title:** ZUSE Automat Agent: Empirical Law Discovery in Elementary Cellular Automata
 - **Author:** Miguel Ángel Concha Estrada
-- **Version DOI:** https://doi.org/10.5281/zenodo.21826401
+- **Version DOI:** https://doi.org/10.5281/zenodo.21935967
+- **v1.35 series DOI:** https://doi.org/10.5281/zenodo.21935966
 - **v1.34 series DOI:** https://doi.org/10.5281/zenodo.21826400
 - **v1.33 series DOI:** https://doi.org/10.5281/zenodo.21709741
 - **v1.32 series DOI:** https://doi.org/10.5281/zenodo.21435061
@@ -47,8 +38,8 @@ Published preprint:
 - **v1.4 series DOI:** https://doi.org/10.5281/zenodo.20767476
 - **v1.3 series DOI:** https://doi.org/10.5281/zenodo.20753498
 - **Previous-series DOI (v1.2 and earlier):** https://doi.org/10.5281/zenodo.20738024
-- **Version:** v1.34
-- **Publication date:** 2026-08-06
+- **Version:** v1.35
+- **Publication date:** 2026-08-14
 - **License:** Creative Commons Attribution 4.0 International (CC BY 4.0)
 
 Local artifacts:

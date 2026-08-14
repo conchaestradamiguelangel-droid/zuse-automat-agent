@@ -1,14 +1,12 @@
-# Zenodo v1.35 Draft
+# Zenodo v1.35 Record
 
-This is a paste-ready draft for the manual Zenodo publication. Do not fill in
-the DOI, publication date, checksum, or file size until the final candidate has
-passed independent review.
+Published and verified against the Zenodo API on 2026-08-14.
 
 ## Basic metadata
 
 - **Resource type:** Preprint
 - **Title:** ZUSE Automat Agent: Empirical Law Discovery in Elementary Cellular Automata
-- **Publication date:** `YYYY-MM-DD`
+- **Publication date:** `2026-08-14`
 - **Creator:** Miguel Angel Concha Estrada
 - **Affiliation:** Independent researcher
 - **Version:** v1.35
@@ -19,42 +17,42 @@ passed independent review.
 
 ## Description
 
-Version v1.35 extends the ZUSE preprint with Fases 91--103, a verified analysis
-of the long-period oscillator population recovered in v1.34. The update does
-not rerun or alter the 5,783,040-configuration census. It quotients the 3,296
-confirmed long-period cases into physical attractors, constructs local
-Hamming-1 intervention graphs, and derives an exact topological law for basin
-robustness within the frozen protocol.
+La version v1.35 amplia el preprint de ZUSE con las Fases 91--103, una auditoria
+verificada de la poblacion de osciladores de periodo largo recuperada en v1.34.
+Esta version no repite ni modifica el censo de 5.783.040 configuraciones.
 
-Main results:
+Resultados principales:
 
-- The 3,296 confirmed descriptors collapse into 192 strict physical attractor
-  classes and 123 defect-morphology classes.
-- Deduplication leaves 1,829 strict physical initial states and removes 1,467
-  encoding aliases, with zero deterministic conflicts.
-- Black/white conjugacy between rule_73 and rule_109 is verified exactly for
-  all 3,296 trajectories and closes all 123 conjugacy-quotient classes.
-- Forty-eight complete length-8 Q8 intervention cubes separate fragmentation
-  within a fixed rule/background cube from fragmentation across cubes.
-- On 219 fragile targets, 43,425 unit interventions obey an exact cut-coverage
-  law: vertex or edge redundancy is restored if and only if the added state
-  bypasses every corresponding critical cut. Direct cut removal, an independent
-  max-flow calculation, and the geometric predicate agree with zero exceptions.
-- A complete audit of 404,054 unordered pairs proves minimum rescue
-  cardinality two in 69/126 vertex-connectivity strata and 68/139
-  edge-connectivity strata. The remaining minima are bounded below by three;
-  triples have not yet been executed.
+- Los 3.296 descriptores confirmados se reducen a 192 clases fisicas estrictas
+  de atractor y 123 clases de morfologia del defecto.
+- La deduplicacion deja 1.829 estados fisicos iniciales y elimina 1.467 alias de
+  codificacion, sin conflictos deterministas.
+- La conjugacion blanco/negro entre rule_73 y rule_109 se verifica exactamente
+  para las 3.296 trayectorias y cierra las 123 clases bajo el cociente de
+  conjugacion.
+- Se construyen 48 hipercubos Q8 completos de intervenciones sobre palabras
+  iniciales de ocho bits.
+- Sobre 219 objetivos fragiles, 43.425 intervenciones unitarias obedecen una ley
+  exacta de cobertura de cortes: la redundancia de vertices o aristas se
+  recupera si y solo si el estado anadido evita todos los cortes criticos.
+- La retirada directa de cortes, un calculo independiente de flujo maximo y el
+  predicado geometrico coinciden sin excepciones.
+- Una auditoria completa de 404.054 parejas demuestra cardinalidad minima de
+  rescate exactamente dos en 69/126 estratos de conectividad de vertices y
+  68/139 estratos de conectividad de aristas. Los minimos restantes solo quedan
+  acotados como mayores o iguales que tres; las ternas de Fase 104 no se han
+  ejecutado y no aportan resultados a esta version.
 
-The claims are deliberately bounded. Q8 edges are Hamming-1 interventions on
-the central eight-bit initial word, not temporal transitions of the cellular
-automaton. The exact law covers 219 targets in 48 frozen intervention cubes and
-does not establish a theorem for arbitrary ECA basins, initial-condition widths,
-or intervention families.
+Las afirmaciones estan limitadas deliberadamente. Las aristas Q8 representan
+intervenciones Hamming-1 sobre la palabra inicial central de ocho bits, no
+transiciones temporales del automata celular. La ley exacta cubre 219 objetivos
+dentro de 48 hipercubos congelados y no constituye un teorema universal.
 
-All results are deterministic and reproducible from committed scripts,
-manifests, compact ledgers, reports, and tests.
+Todos los resultados son deterministas y reproducibles mediante scripts,
+manifiestos, ledgers compactos, informes y pruebas comprometidos en el
+repositorio.
 
-Repository:
+Repositorio:
 https://github.com/conchaestradamiguelangel-droid/zuse-automat-agent
 
 ## Keywords
@@ -83,5 +81,5 @@ https://github.com/conchaestradamiguelangel-droid/zuse-automat-agent
 - **Pages:** `59`
 - **MD5:** `2516656a558e1fc0c7690d51abef2656`
 - **SHA-256:** `22644346bc11807661d0e7c23e8e2f068bb100d2ab77d5a8589c19314a3e9747`
-- **Version DOI:** `TBD after Zenodo publication`
-- **Series DOI:** `TBD after Zenodo publication`
+- **Version DOI:** `10.5281/zenodo.21935967`
+- **Series DOI:** `10.5281/zenodo.21935966`

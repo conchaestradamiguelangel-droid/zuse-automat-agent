@@ -2,7 +2,7 @@
 
 ## Short release post
 
-ZUSE v1.35 is ready for publication.
+ZUSE v1.35 is out.
 
 This release turns the 3,296 long-period oscillators recovered in v1.34 into a
 topological intervention atlas. The population collapses into 192 strict
@@ -14,12 +14,11 @@ A further 404,054-pair audit proves minimum rescue cardinality two in 69/126
 vertex-connectivity strata and 68/139 edge-connectivity strata. Remaining
 minima are reported only as `>=3`; no triple result is claimed in this version.
 
-Preprint: `TBD_ZENODO_V1_35_DOI`
+Preprint: https://doi.org/10.5281/zenodo.21935967
 
-Release: `TBD_GITHUB_V1_35_RELEASE`
+Release: https://github.com/conchaestradamiguelangel-droid/zuse-automat-agent/releases/tag/v1.35
 
 ## Courtesy note
 
 No external endorsement or outreach email is queued automatically. Any message
 to an external researcher requires Miguel's explicit approval after publication.
-

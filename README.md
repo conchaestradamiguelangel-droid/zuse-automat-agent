@@ -9,8 +9,9 @@ model participates in world selection, law evaluation, scoring, or acceptance.
 
 ## Preprint
 
-**Latest: v1.34** - A global replay of 5,783,040 periodic-background configurations confirms 3,296 stationary oscillators omitted by the historical `T<=16` detector. The correction is confined to `rule_73/rule_109`; previously detected oscillators and the T=12 causal cohort remain unchanged.
+**Latest: v1.35** - The 3,296 long-period cases recovered in v1.34 collapse into 192 strict attractor classes. Across 43,425 unit interventions on 219 fragile Q8 targets, restored vertex or edge redundancy is exactly equivalent to bypassing every corresponding critical cut; a 404,054-pair audit then resolves minimum rescue cardinality two in 69/126 vertex and 68/139 edge strata.
 
+- v1.35 DOI: [10.5281/zenodo.21935967](https://doi.org/10.5281/zenodo.21935967)
 - v1.34 DOI: [10.5281/zenodo.21826401](https://doi.org/10.5281/zenodo.21826401)
 - v1.33 DOI: [10.5281/zenodo.21709742](https://doi.org/10.5281/zenodo.21709742)
 - v1.32 DOI: [10.5281/zenodo.21435062](https://doi.org/10.5281/zenodo.21435062)
@@ -46,6 +47,7 @@ model participates in world selection, law evaluation, scoring, or acceptance.
 - v1.2 DOI: [10.5281/zenodo.20738025](https://doi.org/10.5281/zenodo.20738025)
 - v1.1 DOI: [10.5281/zenodo.20687470](https://doi.org/10.5281/zenodo.20687470)
 - v1.0 DOI: [10.5281/zenodo.20516375](https://doi.org/10.5281/zenodo.20516375)
+- v1.35 series DOI: [10.5281/zenodo.21935966](https://doi.org/10.5281/zenodo.21935966)
 - v1.34 series DOI: [10.5281/zenodo.21826400](https://doi.org/10.5281/zenodo.21826400)
 - v1.33 series DOI: [10.5281/zenodo.21709741](https://doi.org/10.5281/zenodo.21709741)
 - v1.32 series DOI: [10.5281/zenodo.21435061](https://doi.org/10.5281/zenodo.21435061)
@@ -140,8 +142,8 @@ regenerated from the commands in the reproducibility guide.
 
 ```text
 Concha Estrada, M. A. (2026). ZUSE Automat Agent: Empirical Law Discovery in
-Elementary Cellular Automata (v1.34). Zenodo.
-https://doi.org/10.5281/zenodo.21826401
+Elementary Cellular Automata (v1.35). Zenodo.
+https://doi.org/10.5281/zenodo.21935967
 ```
 
 ## License

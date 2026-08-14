@@ -1,6 +1,6 @@
 # ZUSE v1.35 Reproducibility Addendum
 
-This addendum maps the new claims in the v1.35 candidate to their committed
+This addendum maps the new claims in the published v1.35 preprint to their committed
 scripts and result artifacts. It supplements, rather than replaces,
 `docs/submission/REPRODUCIBILITY_CHECKLIST.md`.
 
@@ -80,5 +80,5 @@ scripts and result artifacts. It supplements, rather than replaces,
 - The complete Fase-103 pair audit takes approximately five minutes on the
   reference Windows workstation and writes a 4,040,540-byte ledger.
 - Fase 104 is predeclared but not executed and contributes no result to v1.35.
-- The repository suite for the candidate is expected to collect 297 tests:
+- The repository suite for v1.35 collects 297 tests:
   291 pass and 6 are skipped in the current Windows environment.
