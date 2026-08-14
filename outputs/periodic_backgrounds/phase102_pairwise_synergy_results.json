@@ -7058,7 +7058,7 @@
         "ORIGINAL_VERTEX_CUTS_UNCOVERED": 10581
       },
       "mutual_edge_required_kappa_count": 3,
-      "mutual_edge_required_lambda_count": 3,
+      "mutual_edge_required_lambda_count": 0,
       "node_count": 146,
       "pair_count": 10585,
       "pair_index": 833,
@@ -7212,7 +7212,7 @@
         "ORIGINAL_VERTEX_CUTS_UNCOVERED": 10581
       },
       "mutual_edge_required_kappa_count": 3,
-      "mutual_edge_required_lambda_count": 3,
+      "mutual_edge_required_lambda_count": 0,
       "node_count": 146,
       "pair_count": 10585,
       "pair_index": 835,
@@ -7366,7 +7366,7 @@
         "ORIGINAL_VERTEX_CUTS_UNCOVERED": 10581
       },
       "mutual_edge_required_kappa_count": 3,
-      "mutual_edge_required_lambda_count": 3,
+      "mutual_edge_required_lambda_count": 0,
       "node_count": 146,
       "pair_count": 10585,
       "pair_index": 837,
@@ -7801,7 +7801,7 @@
     "lambda_pair_trial_count": 372299,
     "ledger_record_count": 404054,
     "ledger_record_size": 10,
-    "ledger_sha256": "43d029c26f83027d2804f54a8222a0bfc361b9c9c12280b890d0dc5f8082a344",
+    "ledger_sha256": "24de12594fe8b95f6e70be4278b2dfadb7f29f181aef3d7aeea41f9fbe58de52",
     "ledger_size": 4040540,
     "monotonicity_failure_count": 0,
     "mutual_edge_required_kappa_count": 83,

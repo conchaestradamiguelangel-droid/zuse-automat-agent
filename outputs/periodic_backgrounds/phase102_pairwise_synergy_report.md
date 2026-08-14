@@ -27,7 +27,7 @@
 - Records: `404054`
 - Record size: `10` bytes
 - Ledger size: `4040540` bytes
-- SHA-256: `43d029c26f83027d2804f54a8222a0bfc361b9c9c12280b890d0dc5f8082a344`
+- SHA-256: `24de12594fe8b95f6e70be4278b2dfadb7f29f181aef3d7aeea41f9fbe58de52`
 - Format and bit meanings are fully specified in the JSON manifest; the decoder uses only the Python standard library.
 
 ## Verdict

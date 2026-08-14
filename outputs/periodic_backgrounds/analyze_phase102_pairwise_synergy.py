@@ -393,6 +393,35 @@ def remove_edge_copy(
     return output
 
 
+def mutual_edge_requirements(
+    adjacency: dict[int, set[int]],
+    component_a: set[int],
+    component_b: set[int],
+    left: int,
+    right: int,
+    *,
+    adjacent: bool,
+    kappa_scope: bool,
+    lambda_scope: bool,
+    route_b_kappa: bool,
+    route_b_lambda: bool,
+) -> tuple[bool, bool]:
+    if not adjacent:
+        return False, False
+    without_mutual = remove_edge_copy(adjacency, tuple(sorted((left, right))))
+    kappa_required = (
+        kappa_scope
+        and route_b_kappa
+        and not vertex_connectivity_two(without_mutual, component_a, component_b)
+    )
+    lambda_required = (
+        lambda_scope
+        and route_b_lambda
+        and not edge_connectivity_two(without_mutual, component_a, component_b)
+    )
+    return kappa_required, lambda_required
+
+
 def build_context(
     cube: dict[str, Any], pair: dict[str, Any], target_class: str, audit: dict[str, Any]
 ) -> dict[str, Any]:
@@ -556,19 +585,18 @@ def build_payloads(
             ):
                 route_disagreements.append((stratum_index, left, right))
 
-            mutual_edge = tuple(sorted((left, right)))
-            mutual_required_kappa = False
-            mutual_required_lambda = False
-            if adjacent and (route_b_kappa or route_b_lambda):
-                without_mutual = remove_edge_copy(adjacency, mutual_edge)
-                if route_b_kappa:
-                    mutual_required_kappa = not vertex_connectivity_two(
-                        without_mutual, context["component_a"], context["component_b"]
-                    )
-                if route_b_lambda:
-                    mutual_required_lambda = not edge_connectivity_two(
-                        without_mutual, context["component_a"], context["component_b"]
-                    )
+            mutual_required_kappa, mutual_required_lambda = mutual_edge_requirements(
+                adjacency,
+                context["component_a"],
+                context["component_b"],
+                left,
+                right,
+                adjacent=adjacent,
+                kappa_scope=kappa_scope,
+                lambda_scope=lambda_scope,
+                route_b_kappa=route_b_kappa,
+                route_b_lambda=route_b_lambda,
+            )
             if mutual_required_kappa:
                 mutual_required_kappa_count += 1
             if mutual_required_lambda:

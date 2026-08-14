@@ -65,7 +65,7 @@
     "mutual_edge_required_lambda": 8
   },
   "ledger_file": "phase102_pairwise_synergy_ledger.bin",
-  "ledger_sha256": "43d029c26f83027d2804f54a8222a0bfc361b9c9c12280b890d0dc5f8082a344",
+  "ledger_sha256": "24de12594fe8b95f6e70be4278b2dfadb7f29f181aef3d7aeea41f9fbe58de52",
   "ledger_size": 4040540,
   "phase": 103,
   "record_count": 404054,

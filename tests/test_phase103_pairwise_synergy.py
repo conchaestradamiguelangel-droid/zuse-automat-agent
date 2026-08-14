@@ -152,6 +152,33 @@ class Phase103PairwiseSynergyTests(unittest.TestCase):
         self.assertFalse(phase103.vertex_connectivity_two(without_mutual, {0}, {3}))
         self.assertFalse(phase103.edge_connectivity_two(without_mutual, {0}, {3}))
 
+    def test_mutual_edge_bits_are_false_outside_metric_scope(self):
+        augmented = adjacency(
+            [
+                (0, 1),
+                (1, 2),
+                (2, 3),
+                (0, 4),
+                (1, 4),
+                (4, 5),
+                (2, 5),
+                (3, 5),
+            ]
+        )
+        requirements = phase103.mutual_edge_requirements(
+            augmented,
+            {0},
+            {3},
+            4,
+            5,
+            adjacent=True,
+            kappa_scope=False,
+            lambda_scope=False,
+            route_b_kappa=True,
+            route_b_lambda=True,
+        )
+        self.assertEqual(requirements, (False, False))
+
     def test_route_a_and_route_b_agree_when_pair_does_not_rescue(self):
         base = adjacency([(0, 1), (1, 2), (2, 3)])
         vertices, edges = phase103.enumerate_terminal_cuts(base, {0}, {3})
