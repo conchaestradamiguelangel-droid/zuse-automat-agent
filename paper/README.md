@@ -1,5 +1,15 @@
 # ZUSE preprint
 
+Candidate under independent review:
+
+- **Candidate version:** v1.35 (not yet published)
+- **Scientific scope:** Fases 91--103; long-period attractor quotient, complete
+  Q8 intervention topology, exact cut-coverage law, and pairwise minimum
+  cardinality audit.
+- **DOI:** pending manual Zenodo publication after review.
+- **Candidate PDF:** 59 pages, 1,025,045 bytes, MD5
+  `2516656a558e1fc0c7690d51abef2656`.
+
 Published preprint:
 
 - **Title:** ZUSE Automat Agent: Empirical Law Discovery in Elementary Cellular Automata

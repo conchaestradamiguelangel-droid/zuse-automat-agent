@@ -15,13 +15,15 @@ locking cycle. A 25-cell, 12-step causal cone reveals an algebraic normal form
 (ANF) gradient: monomial counts decay with distance from the defect center with
 `R^2=0.998197`, while active-output degree follows
 `degree=24-d+epsilon`. The gradient generalizes to external length-9/10 `T=15`
-witnesses. Causal audits find center mediation necessary but not sufficient
-within the original catalog, with period/horizon and alignment descriptors
-remaining partial. A primitive length-8 holdout adds nine natural-period
-`rule_73/T=12` witnesses; three retain the signature at a neighboring horizon
-while 0/27 controls become positive. A global replay of 5,783,040
-configurations then recovers and independently confirms 3,296 stationary
-oscillators omitted by the historical `T<=16` detector.
+witnesses and a background-conditioned `rule_73` holdout. On 219 fragile Q8
+targets induced by the long-period replay,
+43,425 unit interventions obey an exact topological law: an added state restores
+vertex or edge redundancy if and only if it bypasses every corresponding
+critical cut. An exhaustive 404,054-pair audit proves minimum cardinality two
+in 69/126 vertex and 68/139 edge strata; the remaining minima are bounded below
+by three. The underlying global replay covers 5,783,040 configurations and
+independently confirms 3,296 stationary oscillators omitted by the historical
+`T<=16` detector.
 
 All scripts, reports, PDFs, and versioned releases are public. Claims remain
 empirical and protocol-bounded: ZUSE is a reproducible evidence engine for CA
@@ -101,6 +103,15 @@ We make the following contributions:
    dedup counts range from 15 to 24 across IC positions. This non-equivariance
    is characterized as a pipeline property: absolute structure counts depend
    on IC context, but law signatures remain stable.
+
+6. **An exact cut-coverage law for local basin robustness** -- In 48 frozen
+   length-8 Q8 intervention cubes, 43,425 unit additions to 219 fragile targets
+   restore vertex or edge redundancy if and only if they bypass every
+   corresponding critical cut. Direct cut removal, fresh max-flow, and the
+   geometric predicate agree without exception. A complete 404,054-pair audit
+   then proves minimum rescue cardinality two in 69/126 vertex-connectivity
+   strata and 68/139 edge-connectivity strata, while leaving the remaining
+   minima only lower-bounded by three.
 
 ## 2. Related Work
 
@@ -192,7 +203,7 @@ computational mechanics itself.
 
 ### 2.5 Periodic backgrounds, gliders, and mechanistic audits
 
-The oscillator results in Sections 7.5--7.39 are closest in spirit to the
+The oscillator results in Sections 7.5--7.40 are closest in spirit to the
 domain/particle tradition in cellular automata: localized structures are
 studied relative to a background, and the relevant mechanism may be a defect
 trajectory rather than a raw frame pattern. Lindgren and Nordahl applied
@@ -2726,6 +2737,123 @@ horizon and period cap 120, and the result is exhaustive only for the two
 stated historical cohorts; it is not a theorem for arbitrary time, seed
 length, or background family.
 
+### 7.40 Long-period attractor quotient and cut-coverage law (Fases 91--103)
+
+The 3,296 confirmed long-period cases in Section 7.39 are input descriptors,
+not necessarily distinct attractors. Fases 91--93 separate three equivalence
+levels before interpreting basin occupancy. Joint background/defect cycles are
+canonicalized by a shared temporal rotation over the least common multiple of
+their periods; morphology, reflection, and `rule_73/rule_109` black/white
+conjugacy remain separate quotients rather than being folded into strict
+identity.
+
+| Representation level | Count | Interpretation |
+| --- | ---: | --- |
+| Confirmed input descriptors | 3,296 | Stage-B cases from Fase 90 |
+| Strict physical attractor classes | 192 | Joint background/defect periodic orbits |
+| Defect-morphology classes | 123 | Translation-normalized defect cycles |
+| Strict physical initial states | 1,829 | Absolute background plus absolute initial defect |
+| Encoding aliases removed | 1,467 | Duplicate descriptions of the same initial state |
+
+The largest strict class contains 175 input descriptors before initial-state
+deduplication and 77 physical initial states afterward. Determinism is exact:
+no deduplicated initial state maps to more than one strict attractor class.
+Fase 92 then constructs the black/white conjugate trajectory for every case.
+All 3,296 defect trajectories, periods, drift values, and conjugacy-quotient
+hashes match exactly, closing all 123 quotient classes across both rules. Only
+160 pairs are directly present in both frozen catalogs; 3,096 require the
+omitted complementary background phase, and 40 additionally require the
+zero-IC diagnostic excluded by the historical generator. The conjugacy result
+is therefore an exact deterministic symmetry check, while the original
+cross-rule frequency imbalance is a sampling asymmetry rather than independent
+statistical replication.
+
+Fases 94--97 next construct a local intervention geometry. Each physical
+initial state is represented by its absolute eight-bit central word inside one
+of 48 fixed `(rule, background)` cubes. Edges are undirected Hamming-1 flips;
+they are interventions in initial-condition space, not time transitions of the
+CA. The 1,829 observed long-period states generate 14,632 one-bit
+interventions:
+
+| Hamming-1 outcome | Interventions |
+| --- | ---: |
+| Same strict long-period class | 1,818 |
+| A different long-period class | 3,484 |
+| Explicitly represented outside the long-period set | 9,249 |
+| Zero word excluded by the historical generator | 81 |
+
+Completing all 48 Q8 cubes from the frozen Stage-A ledgers distinguishes
+fragmentation within a cube from separation across backgrounds. Of the 192
+strict attractor classes, 51 are connected within one cube, 21 are fragmented
+only across cubes, 41 are fragmented within at least one cube, and 79 combine
+both forms. Across 979 component pairs, the first connecting filtration level
+is the target class itself for 627 pairs, the addition of other long-period
+classes for 350, and the addition of represented short-period/static states for
+two. The two final cases require the `SPAN_ESCAPE` category, but not a unique
+state: both have vertex and edge connectivity eight in the full non-zero Q8
+graph. Thus category necessity and single-state bottlenecks are distinct.
+
+Within the 627 first-level pairs, 219 targets have pair-specific vertex and
+edge connectivity one (`kappa_v=lambda_e=1`); the other 408 are already
+redundantly connected. Adding the historical-source population rescues all 219
+fragile targets, whereas the static-period-1 population rescues none. Period
+families show different raw unit-rescue rates, but they also expose different
+geometries. Fase 101 freezes a 13-variable, period-blind geometric signature
+and matches only within the same target. It covers 31,682 of 43,425 unit
+exposures (73.0%). All 4,090 matched geometry strata are outcome-homogeneous,
+and all 7,281 within-stratum period comparisons are exact ties for both vertex
+and edge rescue. The remaining 11,743 unmatched exposures are retained as an
+explicit coverage limit rather than extrapolated.
+
+Fase 102 replaces that matched association with an exact topological law on the
+full 43,425-exposure population. For a fragile baseline graph `G`, let `C_V`
+and `C_E` be the complete sets of pair-specific single-vertex and single-edge
+cuts between its terminal components. For an added historical state `x`, let
+`b_V(x)` and `b_E(x)` count the cuts bypassed by the new Hamming-1 edges. Then,
+under the frozen Q8 protocol,
+
+```text
+kappa_v(G + x) >= 2  iff  b_V(x) = |C_V|
+lambda_e(G + x) >= 2 iff  b_E(x) = |C_E|.
+```
+
+| Metric | True positive | True negative | False positive | False negative |
+| --- | ---: | ---: | ---: | ---: |
+| Vertex redundancy (`kappa_v`) | 1,505 | 41,920 | 0 | 0 |
+| Edge redundancy (`lambda_e`) | 1,566 | 41,859 | 0 | 0 |
+
+The equivalence is not inferred from correlation: the critical cuts are
+re-enumerated from the frozen graph, every intervention is checked by direct
+cut removal, and a separate max-flow computation reproduces all 43,425
+outcomes. The mechanism is exact because adding a node and edges cannot create
+a new separator whose removal disconnects a baseline graph that was already
+connected; rescue therefore occurs precisely when all original unit cuts are
+bypassed.
+
+Fase 103 tests the first collective extension without changing that graph
+definition. It enumerates all 404,054 unordered pairs in 142 strata where a
+complete historical period family rescues but no singleton does for at least
+one metric. Structural cut coverage and fresh max-flow agree on every pair.
+
+| Metric | Collective strata | Exactly cardinality 2 | Minimum only bounded `>=3` | Rescuing pairs |
+| --- | ---: | ---: | ---: | ---: |
+| Vertex redundancy | 126 | 69 | 57 | 454 |
+| Edge redundancy | 139 | 68 | 71 | 470 |
+
+The mutual Hamming-1 edge between the two added words is necessary in 83
+vertex rescues and 86 edge rescues. `Exactly 2` is a proof of minimum
+cardinality because all singletons were audited first; `>=3` is only a lower
+bound because no triples have yet been executed. The combined status is
+`PAIRWISE_SYNERGY_ATLAS_BUILT`.
+
+These results are mechanistic but protocol-bounded. The exact law covers 219
+fragile targets inside 48 frozen length-8 Q8 intervention cubes and the
+historical state populations represented there. It is not a theorem about all
+ECA basins, arbitrary initial-condition widths, temporal causality, or
+interventions outside the frozen catalogs. Fase 104 is predeclared to test
+triples in the unresolved strata; it has not been executed and contributes no
+result to this version.
+
 ## 8. Observer Artifacts and Pipeline Equivariance
 
 The ZUSE pipeline contains two classes of observer artifact that the atlas
@@ -3015,6 +3143,19 @@ historical positive classification or the 165-case T=12 cohort used by Fases
 The extended check remains finite in horizon and period and does not establish
 absence beyond period 120.
 
+Fases 91--103 add a topological intervention layer, but its exactness must not
+be confused with universal scope. The cut-coverage equivalence is proved
+computationally for 43,425 unit additions to 219 fragile targets inside 48
+frozen length-8 Q8 cubes. These graphs encode Hamming-1 changes of the central
+eight-bit initial word; they are not CA time-transition graphs. The 31,682
+geometry-matched exposures cover 73.0% of the unit population, so the
+period-conditioned tie in Fase 101 is not extrapolated to the unmatched 11,743.
+Fase 102 removes that matching restriction only for the cut-coverage law, not
+for arbitrary observables or other intervention spaces. In Fase 103,
+`EXACTLY_2` is a proved minimum because all constituent singletons fail, while
+`AT_LEAST_3` is only a lower bound. No triple result is included in this
+version.
+
 ### 9.4 Empirical atlas, not axiomatic classification
 
 The world categories are induced from observed law signatures across a finite
@@ -3232,7 +3373,12 @@ Several controlled extensions have now been completed:
   confirms 3,296 additional stationary oscillators with periods 18..120;
   none changes the T=12 cohort used by the later causal audits. This converts
   the old `T<=16` negative label into an explicitly detector-bounded claim.
-  Full results are in Sections 7.20-7.39.
+  Fases 91--103 then quotient those cases into 192 strict attractor classes,
+  construct 48 complete Q8 intervention cubes, and derive the exact unit
+  cut-coverage law on 43,425 exposures. The pair audit resolves minimum
+  cardinality two in 69/126 vertex and 68/139 edge strata; the remaining
+  minima are only bounded below by three. Fase 104 is predeclared to enumerate
+  triples but has not been executed. Full results are in Sections 7.20-7.40.
 
 Each extension is a controlled experiment with the same measurement protocol;
 only the IC or background definition changes.
