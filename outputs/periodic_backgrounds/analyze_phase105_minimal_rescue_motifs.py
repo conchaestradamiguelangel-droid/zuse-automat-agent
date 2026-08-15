@@ -369,6 +369,16 @@ def source_flags(cardinality: int) -> dict[str, int]:
     return {2: PAIR_FLAGS, 3: TRIPLE_FLAGS, 4: QUAD_FLAGS}[cardinality]
 
 
+def reconcile_metric_flags(*, scope: bool, route_a: bool, route_b: bool, required: bool) -> str:
+    if route_a != route_b or (required and (not scope or not route_a)):
+        raise RuntimeError("Source scope/route/requirement reconciliation failed")
+    if route_a and not scope:
+        return "OUT_OF_SCOPE_DIAGNOSTIC"
+    if scope and route_a:
+        return "SCOPED_RESCUE"
+    return "NONRESCUE"
+
+
 def build_tasks(values: dict[str, Any]) -> list[dict[str, Any]]:
     pair_results = values[PAIR_RESULTS_PATH.name]
     triple_results = values[TRIPLE_RESULTS_PATH.name]
@@ -527,7 +537,8 @@ def benchmark_mechanisms(values: dict[str, Any], tasks: list[dict[str, Any]], ta
             context = contexts[(base["cube_key"], int(base["pair_index"]))]
             for row in iter_task_records(task):
                 for metric in ("kappa", "lambda"):
-                    if row["flags"] & (1 << flags_map[f"{metric}_a"]):
+                    in_scope = bool(row["flags"] & (1 << flags_map[f"{metric}_scope"]))
+                    if in_scope and row["flags"] & (1 << flags_map[f"{metric}_a"]):
                         audit = audit_rescue_set(phase102_module, context, row["words"], metric)
                         if not audit["full_rescue"]:
                             raise RuntimeError("Benchmark mechanism replay failed")
@@ -918,6 +929,11 @@ def aggregate_full(values: dict[str, Any], tasks: list[dict[str, Any]], geometry
     }
     mechanism_audits = []
     reconciliation_failures = []
+    diagnostic_out_of_scope_routes: dict[int, Counter] = {
+        2: Counter(),
+        3: Counter(),
+        4: Counter(),
+    }
     global_index = 0
     with geometry_path.open("rb") as geometry_handle:
         for task in tasks:
@@ -951,13 +967,19 @@ def aggregate_full(values: dict[str, Any], tasks: list[dict[str, Any]], geometry
                     route_a = bool(flags & (1 << flags_map[f"{metric}_a"]))
                     route_b = bool(flags & (1 << flags_map[f"{metric}_b"]))
                     required = bool(flags & (1 << flags_map[f"{metric}_required"]))
-                    if route_a != route_b or ((route_a or required) and not scope) or (required and not route_a):
-                        raise RuntimeError("Source scope/route/requirement reconciliation failed")
+                    flag_status = reconcile_metric_flags(
+                        scope=scope,
+                        route_a=route_a,
+                        route_b=route_b,
+                        required=required,
+                    )
+                    if flag_status == "OUT_OF_SCOPE_DIAGNOSTIC":
+                        diagnostic_out_of_scope_routes[cardinality][metric] += 1
                     bucket = outcomes[cardinality][metric][geometry["motif"]]
                     bucket["records"] += 1
                     if scope:
                         bucket["trials"] += 1
-                    if route_a:
+                    if flag_status == "SCOPED_RESCUE":
                         bucket["rescues"] += 1
                         if required:
                             bucket["internal_edge_required"] += 1
@@ -1017,6 +1039,10 @@ def aggregate_full(values: dict[str, Any], tasks: list[dict[str, Any]], geometry
         },
         "outcomes": serialized_outcomes,
         "mechanism_audits": mechanism_audits,
+        "diagnostic_out_of_scope_route_true": {
+            str(n): dict(sorted(counts.items()))
+            for n, counts in diagnostic_out_of_scope_routes.items()
+        },
         "reconciliation_failure_count": 0,
     }
 

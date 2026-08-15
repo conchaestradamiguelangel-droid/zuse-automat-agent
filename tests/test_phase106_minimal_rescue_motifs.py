@@ -194,6 +194,18 @@ class Phase106MinimalRescueMotifTests(unittest.TestCase):
             {2: 404_054, 3: 3_061_466, 4: 24_362_850},
         )
 
+    def test_out_of_scope_route_is_diagnostic_not_minimal_rescue(self):
+        self.assertEqual(
+            phase106.reconcile_metric_flags(
+                scope=False, route_a=True, route_b=True, required=False
+            ),
+            "OUT_OF_SCOPE_DIAGNOSTIC",
+        )
+        with self.assertRaisesRegex(RuntimeError, "scope/route/requirement"):
+            phase106.reconcile_metric_flags(
+                scope=False, route_a=True, route_b=True, required=True
+            )
+
 
 if __name__ == "__main__":
     unittest.main()
