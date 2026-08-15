@@ -1,0 +1,2054 @@
+{
+  "byte_order": "not-applicable-single-byte",
+  "encoding": {
+    "bit_7": "reserved_zero",
+    "bits_0_3": "motif_id",
+    "bits_4_6": "internal_edge_count"
+  },
+  "ledger_sha256": "987d8b54447bdd3919fdc5d41b7b36246bee534ed5c2a5462b6dbbfd61b16588",
+  "ledger_size": 27828370,
+  "motif_ids": {
+    "2I": 0,
+    "2K2": 7,
+    "3I": 2,
+    "4I": 5,
+    "C4": 11,
+    "K1_3": 10,
+    "K2": 1,
+    "K2+2I": 6,
+    "K2+I": 3,
+    "P3": 4,
+    "P3+I": 8,
+    "P4": 9
+  },
+  "outcome_blind_geometry_pass": true,
+  "phase": 106,
+  "record_count": 27828370,
+  "record_format": "uint8",
+  "record_size": 1,
+  "segments": [
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 0,
+      "record_count": 1431,
+      "source_name": "PAIR",
+      "source_record_offset": 0,
+      "stratum_index": 0
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 1431,
+      "record_count": 5778,
+      "source_name": "PAIR",
+      "source_record_offset": 1431,
+      "stratum_index": 1
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 7209,
+      "record_count": 1431,
+      "source_name": "PAIR",
+      "source_record_offset": 7209,
+      "stratum_index": 2
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 8640,
+      "record_count": 4465,
+      "source_name": "PAIR",
+      "source_record_offset": 8640,
+      "stratum_index": 3
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 13105,
+      "record_count": 2701,
+      "source_name": "PAIR",
+      "source_record_offset": 13105,
+      "stratum_index": 4
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 15806,
+      "record_count": 4465,
+      "source_name": "PAIR",
+      "source_record_offset": 15806,
+      "stratum_index": 5
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 20271,
+      "record_count": 2701,
+      "source_name": "PAIR",
+      "source_record_offset": 20271,
+      "stratum_index": 6
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 22972,
+      "record_count": 4465,
+      "source_name": "PAIR",
+      "source_record_offset": 22972,
+      "stratum_index": 7
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 27437,
+      "record_count": 2701,
+      "source_name": "PAIR",
+      "source_record_offset": 27437,
+      "stratum_index": 8
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 30138,
+      "record_count": 4465,
+      "source_name": "PAIR",
+      "source_record_offset": 30138,
+      "stratum_index": 9
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 34603,
+      "record_count": 2701,
+      "source_name": "PAIR",
+      "source_record_offset": 34603,
+      "stratum_index": 10
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 37304,
+      "record_count": 1431,
+      "source_name": "PAIR",
+      "source_record_offset": 37304,
+      "stratum_index": 11
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 38735,
+      "record_count": 5778,
+      "source_name": "PAIR",
+      "source_record_offset": 38735,
+      "stratum_index": 12
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 44513,
+      "record_count": 1431,
+      "source_name": "PAIR",
+      "source_record_offset": 44513,
+      "stratum_index": 13
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 45944,
+      "record_count": 1431,
+      "source_name": "PAIR",
+      "source_record_offset": 45944,
+      "stratum_index": 14
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 47375,
+      "record_count": 1431,
+      "source_name": "PAIR",
+      "source_record_offset": 47375,
+      "stratum_index": 15
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 48806,
+      "record_count": 5671,
+      "source_name": "PAIR",
+      "source_record_offset": 48806,
+      "stratum_index": 16
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 54477,
+      "record_count": 4465,
+      "source_name": "PAIR",
+      "source_record_offset": 54477,
+      "stratum_index": 17
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 58942,
+      "record_count": 2701,
+      "source_name": "PAIR",
+      "source_record_offset": 58942,
+      "stratum_index": 18
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 61643,
+      "record_count": 4465,
+      "source_name": "PAIR",
+      "source_record_offset": 61643,
+      "stratum_index": 19
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 66108,
+      "record_count": 2701,
+      "source_name": "PAIR",
+      "source_record_offset": 66108,
+      "stratum_index": 20
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 68809,
+      "record_count": 4465,
+      "source_name": "PAIR",
+      "source_record_offset": 68809,
+      "stratum_index": 21
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 73274,
+      "record_count": 2701,
+      "source_name": "PAIR",
+      "source_record_offset": 73274,
+      "stratum_index": 22
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 75975,
+      "record_count": 4465,
+      "source_name": "PAIR",
+      "source_record_offset": 75975,
+      "stratum_index": 23
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 80440,
+      "record_count": 2701,
+      "source_name": "PAIR",
+      "source_record_offset": 80440,
+      "stratum_index": 24
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 83141,
+      "record_count": 1431,
+      "source_name": "PAIR",
+      "source_record_offset": 83141,
+      "stratum_index": 25
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 84572,
+      "record_count": 1431,
+      "source_name": "PAIR",
+      "source_record_offset": 84572,
+      "stratum_index": 26
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 86003,
+      "record_count": 5671,
+      "source_name": "PAIR",
+      "source_record_offset": 86003,
+      "stratum_index": 27
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 91674,
+      "record_count": 28,
+      "source_name": "PAIR",
+      "source_record_offset": 91674,
+      "stratum_index": 28
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 91702,
+      "record_count": 28,
+      "source_name": "PAIR",
+      "source_record_offset": 91702,
+      "stratum_index": 29
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 91730,
+      "record_count": 28,
+      "source_name": "PAIR",
+      "source_record_offset": 91730,
+      "stratum_index": 30
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 91758,
+      "record_count": 2145,
+      "source_name": "PAIR",
+      "source_record_offset": 91758,
+      "stratum_index": 31
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 93903,
+      "record_count": 7626,
+      "source_name": "PAIR",
+      "source_record_offset": 93903,
+      "stratum_index": 32
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 101529,
+      "record_count": 3486,
+      "source_name": "PAIR",
+      "source_record_offset": 101529,
+      "stratum_index": 33
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 105015,
+      "record_count": 5151,
+      "source_name": "PAIR",
+      "source_record_offset": 105015,
+      "stratum_index": 34
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 110166,
+      "record_count": 1275,
+      "source_name": "PAIR",
+      "source_record_offset": 110166,
+      "stratum_index": 35
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 111441,
+      "record_count": 325,
+      "source_name": "PAIR",
+      "source_record_offset": 111441,
+      "stratum_index": 36
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 111766,
+      "record_count": 1275,
+      "source_name": "PAIR",
+      "source_record_offset": 111766,
+      "stratum_index": 37
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 113041,
+      "record_count": 2701,
+      "source_name": "PAIR",
+      "source_record_offset": 113041,
+      "stratum_index": 38
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 115742,
+      "record_count": 2701,
+      "source_name": "PAIR",
+      "source_record_offset": 115742,
+      "stratum_index": 39
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 118443,
+      "record_count": 378,
+      "source_name": "PAIR",
+      "source_record_offset": 118443,
+      "stratum_index": 40
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 118821,
+      "record_count": 378,
+      "source_name": "PAIR",
+      "source_record_offset": 118821,
+      "stratum_index": 41
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 119199,
+      "record_count": 378,
+      "source_name": "PAIR",
+      "source_record_offset": 119199,
+      "stratum_index": 42
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 119577,
+      "record_count": 5565,
+      "source_name": "PAIR",
+      "source_record_offset": 119577,
+      "stratum_index": 43
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 125142,
+      "record_count": 136,
+      "source_name": "PAIR",
+      "source_record_offset": 125142,
+      "stratum_index": 44
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 125278,
+      "record_count": 1225,
+      "source_name": "PAIR",
+      "source_record_offset": 125278,
+      "stratum_index": 45
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 126503,
+      "record_count": 8001,
+      "source_name": "PAIR",
+      "source_record_offset": 126503,
+      "stratum_index": 46
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 134504,
+      "record_count": 1225,
+      "source_name": "PAIR",
+      "source_record_offset": 134504,
+      "stratum_index": 47
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 135729,
+      "record_count": 1225,
+      "source_name": "PAIR",
+      "source_record_offset": 135729,
+      "stratum_index": 48
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 136954,
+      "record_count": 8001,
+      "source_name": "PAIR",
+      "source_record_offset": 136954,
+      "stratum_index": 49
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 144955,
+      "record_count": 1225,
+      "source_name": "PAIR",
+      "source_record_offset": 144955,
+      "stratum_index": 50
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 146180,
+      "record_count": 1225,
+      "source_name": "PAIR",
+      "source_record_offset": 146180,
+      "stratum_index": 51
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 147405,
+      "record_count": 1225,
+      "source_name": "PAIR",
+      "source_record_offset": 147405,
+      "stratum_index": 52
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 148630,
+      "record_count": 8001,
+      "source_name": "PAIR",
+      "source_record_offset": 148630,
+      "stratum_index": 53
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 156631,
+      "record_count": 1225,
+      "source_name": "PAIR",
+      "source_record_offset": 156631,
+      "stratum_index": 54
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 157856,
+      "record_count": 1225,
+      "source_name": "PAIR",
+      "source_record_offset": 157856,
+      "stratum_index": 55
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 159081,
+      "record_count": 1225,
+      "source_name": "PAIR",
+      "source_record_offset": 159081,
+      "stratum_index": 56
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 160306,
+      "record_count": 1225,
+      "source_name": "PAIR",
+      "source_record_offset": 160306,
+      "stratum_index": 57
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 161531,
+      "record_count": 1225,
+      "source_name": "PAIR",
+      "source_record_offset": 161531,
+      "stratum_index": 58
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 162756,
+      "record_count": 1225,
+      "source_name": "PAIR",
+      "source_record_offset": 162756,
+      "stratum_index": 59
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 163981,
+      "record_count": 1225,
+      "source_name": "PAIR",
+      "source_record_offset": 163981,
+      "stratum_index": 60
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 165206,
+      "record_count": 5565,
+      "source_name": "PAIR",
+      "source_record_offset": 165206,
+      "stratum_index": 61
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 170771,
+      "record_count": 1711,
+      "source_name": "PAIR",
+      "source_record_offset": 170771,
+      "stratum_index": 62
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 172482,
+      "record_count": 4950,
+      "source_name": "PAIR",
+      "source_record_offset": 172482,
+      "stratum_index": 63
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 177432,
+      "record_count": 4950,
+      "source_name": "PAIR",
+      "source_record_offset": 177432,
+      "stratum_index": 64
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 182382,
+      "record_count": 4950,
+      "source_name": "PAIR",
+      "source_record_offset": 182382,
+      "stratum_index": 65
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 187332,
+      "record_count": 4950,
+      "source_name": "PAIR",
+      "source_record_offset": 187332,
+      "stratum_index": 66
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 192282,
+      "record_count": 1128,
+      "source_name": "PAIR",
+      "source_record_offset": 192282,
+      "stratum_index": 67
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 193410,
+      "record_count": 496,
+      "source_name": "PAIR",
+      "source_record_offset": 193410,
+      "stratum_index": 68
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 193906,
+      "record_count": 496,
+      "source_name": "PAIR",
+      "source_record_offset": 193906,
+      "stratum_index": 69
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 194402,
+      "record_count": 496,
+      "source_name": "PAIR",
+      "source_record_offset": 194402,
+      "stratum_index": 70
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 194898,
+      "record_count": 496,
+      "source_name": "PAIR",
+      "source_record_offset": 194898,
+      "stratum_index": 71
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 195394,
+      "record_count": 7140,
+      "source_name": "PAIR",
+      "source_record_offset": 195394,
+      "stratum_index": 72
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 202534,
+      "record_count": 496,
+      "source_name": "PAIR",
+      "source_record_offset": 202534,
+      "stratum_index": 73
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 203030,
+      "record_count": 496,
+      "source_name": "PAIR",
+      "source_record_offset": 203030,
+      "stratum_index": 74
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 203526,
+      "record_count": 7140,
+      "source_name": "PAIR",
+      "source_record_offset": 203526,
+      "stratum_index": 75
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 210666,
+      "record_count": 496,
+      "source_name": "PAIR",
+      "source_record_offset": 210666,
+      "stratum_index": 76
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 211162,
+      "record_count": 496,
+      "source_name": "PAIR",
+      "source_record_offset": 211162,
+      "stratum_index": 77
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 211658,
+      "record_count": 496,
+      "source_name": "PAIR",
+      "source_record_offset": 211658,
+      "stratum_index": 78
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 212154,
+      "record_count": 496,
+      "source_name": "PAIR",
+      "source_record_offset": 212154,
+      "stratum_index": 79
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 212650,
+      "record_count": 496,
+      "source_name": "PAIR",
+      "source_record_offset": 212650,
+      "stratum_index": 80
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 213146,
+      "record_count": 1128,
+      "source_name": "PAIR",
+      "source_record_offset": 213146,
+      "stratum_index": 81
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 214274,
+      "record_count": 496,
+      "source_name": "PAIR",
+      "source_record_offset": 214274,
+      "stratum_index": 82
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 214770,
+      "record_count": 1225,
+      "source_name": "PAIR",
+      "source_record_offset": 214770,
+      "stratum_index": 83
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 215995,
+      "record_count": 1225,
+      "source_name": "PAIR",
+      "source_record_offset": 215995,
+      "stratum_index": 84
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 217220,
+      "record_count": 8001,
+      "source_name": "PAIR",
+      "source_record_offset": 217220,
+      "stratum_index": 85
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 225221,
+      "record_count": 8001,
+      "source_name": "PAIR",
+      "source_record_offset": 225221,
+      "stratum_index": 86
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 233222,
+      "record_count": 1225,
+      "source_name": "PAIR",
+      "source_record_offset": 233222,
+      "stratum_index": 87
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 234447,
+      "record_count": 1225,
+      "source_name": "PAIR",
+      "source_record_offset": 234447,
+      "stratum_index": 88
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 235672,
+      "record_count": 1225,
+      "source_name": "PAIR",
+      "source_record_offset": 235672,
+      "stratum_index": 89
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 236897,
+      "record_count": 1225,
+      "source_name": "PAIR",
+      "source_record_offset": 236897,
+      "stratum_index": 90
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 238122,
+      "record_count": 136,
+      "source_name": "PAIR",
+      "source_record_offset": 238122,
+      "stratum_index": 91
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 238258,
+      "record_count": 1225,
+      "source_name": "PAIR",
+      "source_record_offset": 238258,
+      "stratum_index": 92
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 239483,
+      "record_count": 1225,
+      "source_name": "PAIR",
+      "source_record_offset": 239483,
+      "stratum_index": 93
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 240708,
+      "record_count": 1225,
+      "source_name": "PAIR",
+      "source_record_offset": 240708,
+      "stratum_index": 94
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 241933,
+      "record_count": 1225,
+      "source_name": "PAIR",
+      "source_record_offset": 241933,
+      "stratum_index": 95
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 243158,
+      "record_count": 1225,
+      "source_name": "PAIR",
+      "source_record_offset": 243158,
+      "stratum_index": 96
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 244383,
+      "record_count": 8001,
+      "source_name": "PAIR",
+      "source_record_offset": 244383,
+      "stratum_index": 97
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 252384,
+      "record_count": 378,
+      "source_name": "PAIR",
+      "source_record_offset": 252384,
+      "stratum_index": 98
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 252762,
+      "record_count": 11026,
+      "source_name": "PAIR",
+      "source_record_offset": 252762,
+      "stratum_index": 99
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 263788,
+      "record_count": 11026,
+      "source_name": "PAIR",
+      "source_record_offset": 263788,
+      "stratum_index": 100
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 274814,
+      "record_count": 378,
+      "source_name": "PAIR",
+      "source_record_offset": 274814,
+      "stratum_index": 101
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 275192,
+      "record_count": 378,
+      "source_name": "PAIR",
+      "source_record_offset": 275192,
+      "stratum_index": 102
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 275570,
+      "record_count": 378,
+      "source_name": "PAIR",
+      "source_record_offset": 275570,
+      "stratum_index": 103
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 275948,
+      "record_count": 378,
+      "source_name": "PAIR",
+      "source_record_offset": 275948,
+      "stratum_index": 104
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 276326,
+      "record_count": 378,
+      "source_name": "PAIR",
+      "source_record_offset": 276326,
+      "stratum_index": 105
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 276704,
+      "record_count": 1225,
+      "source_name": "PAIR",
+      "source_record_offset": 276704,
+      "stratum_index": 106
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 277929,
+      "record_count": 325,
+      "source_name": "PAIR",
+      "source_record_offset": 277929,
+      "stratum_index": 107
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 278254,
+      "record_count": 1225,
+      "source_name": "PAIR",
+      "source_record_offset": 278254,
+      "stratum_index": 108
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 279479,
+      "record_count": 1770,
+      "source_name": "PAIR",
+      "source_record_offset": 279479,
+      "stratum_index": 109
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 281249,
+      "record_count": 2926,
+      "source_name": "PAIR",
+      "source_record_offset": 281249,
+      "stratum_index": 110
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 284175,
+      "record_count": 5886,
+      "source_name": "PAIR",
+      "source_record_offset": 284175,
+      "stratum_index": 111
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 290061,
+      "record_count": 5886,
+      "source_name": "PAIR",
+      "source_record_offset": 290061,
+      "stratum_index": 112
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 295947,
+      "record_count": 2926,
+      "source_name": "PAIR",
+      "source_record_offset": 295947,
+      "stratum_index": 113
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 298873,
+      "record_count": 5886,
+      "source_name": "PAIR",
+      "source_record_offset": 298873,
+      "stratum_index": 114
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 304759,
+      "record_count": 5886,
+      "source_name": "PAIR",
+      "source_record_offset": 304759,
+      "stratum_index": 115
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 310645,
+      "record_count": 5886,
+      "source_name": "PAIR",
+      "source_record_offset": 310645,
+      "stratum_index": 116
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 316531,
+      "record_count": 5886,
+      "source_name": "PAIR",
+      "source_record_offset": 316531,
+      "stratum_index": 117
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 322417,
+      "record_count": 5886,
+      "source_name": "PAIR",
+      "source_record_offset": 322417,
+      "stratum_index": 118
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 328303,
+      "record_count": 378,
+      "source_name": "PAIR",
+      "source_record_offset": 328303,
+      "stratum_index": 119
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 328681,
+      "record_count": 378,
+      "source_name": "PAIR",
+      "source_record_offset": 328681,
+      "stratum_index": 120
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 329059,
+      "record_count": 378,
+      "source_name": "PAIR",
+      "source_record_offset": 329059,
+      "stratum_index": 121
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 329437,
+      "record_count": 1035,
+      "source_name": "PAIR",
+      "source_record_offset": 329437,
+      "stratum_index": 122
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 330472,
+      "record_count": 1035,
+      "source_name": "PAIR",
+      "source_record_offset": 330472,
+      "stratum_index": 123
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 331507,
+      "record_count": 10585,
+      "source_name": "PAIR",
+      "source_record_offset": 331507,
+      "stratum_index": 124
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 342092,
+      "record_count": 276,
+      "source_name": "PAIR",
+      "source_record_offset": 342092,
+      "stratum_index": 125
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 342368,
+      "record_count": 666,
+      "source_name": "PAIR",
+      "source_record_offset": 342368,
+      "stratum_index": 126
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 343034,
+      "record_count": 10585,
+      "source_name": "PAIR",
+      "source_record_offset": 343034,
+      "stratum_index": 127
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 353619,
+      "record_count": 666,
+      "source_name": "PAIR",
+      "source_record_offset": 353619,
+      "stratum_index": 128
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 354285,
+      "record_count": 10585,
+      "source_name": "PAIR",
+      "source_record_offset": 354285,
+      "stratum_index": 129
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 364870,
+      "record_count": 666,
+      "source_name": "PAIR",
+      "source_record_offset": 364870,
+      "stratum_index": 130
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 365536,
+      "record_count": 10585,
+      "source_name": "PAIR",
+      "source_record_offset": 365536,
+      "stratum_index": 131
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 376121,
+      "record_count": 4095,
+      "source_name": "PAIR",
+      "source_record_offset": 376121,
+      "stratum_index": 132
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 380216,
+      "record_count": 5253,
+      "source_name": "PAIR",
+      "source_record_offset": 380216,
+      "stratum_index": 133
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 385469,
+      "record_count": 66,
+      "source_name": "PAIR",
+      "source_record_offset": 385469,
+      "stratum_index": 134
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 385535,
+      "record_count": 28,
+      "source_name": "PAIR",
+      "source_record_offset": 385535,
+      "stratum_index": 135
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 385563,
+      "record_count": 28,
+      "source_name": "PAIR",
+      "source_record_offset": 385563,
+      "stratum_index": 136
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 385591,
+      "record_count": 28,
+      "source_name": "PAIR",
+      "source_record_offset": 385591,
+      "stratum_index": 137
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 385619,
+      "record_count": 2211,
+      "source_name": "PAIR",
+      "source_record_offset": 385619,
+      "stratum_index": 138
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 387830,
+      "record_count": 7503,
+      "source_name": "PAIR",
+      "source_record_offset": 387830,
+      "stratum_index": 139
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 395333,
+      "record_count": 3570,
+      "source_name": "PAIR",
+      "source_record_offset": 395333,
+      "stratum_index": 140
+    },
+    {
+      "cardinality": 2,
+      "geometry_record_offset": 398903,
+      "record_count": 5151,
+      "source_name": "PAIR",
+      "source_record_offset": 398903,
+      "stratum_index": 141
+    },
+    {
+      "cardinality": 3,
+      "geometry_record_offset": 404054,
+      "record_count": 24804,
+      "source_name": "TRIPLE",
+      "source_record_offset": 0,
+      "stratum_index": 0
+    },
+    {
+      "cardinality": 3,
+      "geometry_record_offset": 428858,
+      "record_count": 24804,
+      "source_name": "TRIPLE",
+      "source_record_offset": 24804,
+      "stratum_index": 1
+    },
+    {
+      "cardinality": 3,
+      "geometry_record_offset": 453662,
+      "record_count": 138415,
+      "source_name": "TRIPLE",
+      "source_record_offset": 49608,
+      "stratum_index": 2
+    },
+    {
+      "cardinality": 3,
+      "geometry_record_offset": 592077,
+      "record_count": 64824,
+      "source_name": "TRIPLE",
+      "source_record_offset": 188023,
+      "stratum_index": 3
+    },
+    {
+      "cardinality": 3,
+      "geometry_record_offset": 656901,
+      "record_count": 138415,
+      "source_name": "TRIPLE",
+      "source_record_offset": 252847,
+      "stratum_index": 4
+    },
+    {
+      "cardinality": 3,
+      "geometry_record_offset": 795316,
+      "record_count": 64824,
+      "source_name": "TRIPLE",
+      "source_record_offset": 391262,
+      "stratum_index": 5
+    },
+    {
+      "cardinality": 3,
+      "geometry_record_offset": 860140,
+      "record_count": 138415,
+      "source_name": "TRIPLE",
+      "source_record_offset": 456086,
+      "stratum_index": 6
+    },
+    {
+      "cardinality": 3,
+      "geometry_record_offset": 998555,
+      "record_count": 64824,
+      "source_name": "TRIPLE",
+      "source_record_offset": 594501,
+      "stratum_index": 7
+    },
+    {
+      "cardinality": 3,
+      "geometry_record_offset": 1063379,
+      "record_count": 138415,
+      "source_name": "TRIPLE",
+      "source_record_offset": 659325,
+      "stratum_index": 8
+    },
+    {
+      "cardinality": 3,
+      "geometry_record_offset": 1201794,
+      "record_count": 64824,
+      "source_name": "TRIPLE",
+      "source_record_offset": 797740,
+      "stratum_index": 9
+    },
+    {
+      "cardinality": 3,
+      "geometry_record_offset": 1266618,
+      "record_count": 24804,
+      "source_name": "TRIPLE",
+      "source_record_offset": 862564,
+      "stratum_index": 10
+    },
+    {
+      "cardinality": 3,
+      "geometry_record_offset": 1291422,
+      "record_count": 24804,
+      "source_name": "TRIPLE",
+      "source_record_offset": 887368,
+      "stratum_index": 11
+    },
+    {
+      "cardinality": 3,
+      "geometry_record_offset": 1316226,
+      "record_count": 24804,
+      "source_name": "TRIPLE",
+      "source_record_offset": 912172,
+      "stratum_index": 12
+    },
+    {
+      "cardinality": 3,
+      "geometry_record_offset": 1341030,
+      "record_count": 24804,
+      "source_name": "TRIPLE",
+      "source_record_offset": 936976,
+      "stratum_index": 13
+    },
+    {
+      "cardinality": 3,
+      "geometry_record_offset": 1365834,
+      "record_count": 138415,
+      "source_name": "TRIPLE",
+      "source_record_offset": 961780,
+      "stratum_index": 14
+    },
+    {
+      "cardinality": 3,
+      "geometry_record_offset": 1504249,
+      "record_count": 64824,
+      "source_name": "TRIPLE",
+      "source_record_offset": 1100195,
+      "stratum_index": 15
+    },
+    {
+      "cardinality": 3,
+      "geometry_record_offset": 1569073,
+      "record_count": 138415,
+      "source_name": "TRIPLE",
+      "source_record_offset": 1165019,
+      "stratum_index": 16
+    },
+    {
+      "cardinality": 3,
+      "geometry_record_offset": 1707488,
+      "record_count": 64824,
+      "source_name": "TRIPLE",
+      "source_record_offset": 1303434,
+      "stratum_index": 17
+    },
+    {
+      "cardinality": 3,
+      "geometry_record_offset": 1772312,
+      "record_count": 138415,
+      "source_name": "TRIPLE",
+      "source_record_offset": 1368258,
+      "stratum_index": 18
+    },
+    {
+      "cardinality": 3,
+      "geometry_record_offset": 1910727,
+      "record_count": 64824,
+      "source_name": "TRIPLE",
+      "source_record_offset": 1506673,
+      "stratum_index": 19
+    },
+    {
+      "cardinality": 3,
+      "geometry_record_offset": 1975551,
+      "record_count": 138415,
+      "source_name": "TRIPLE",
+      "source_record_offset": 1571497,
+      "stratum_index": 20
+    },
+    {
+      "cardinality": 3,
+      "geometry_record_offset": 2113966,
+      "record_count": 64824,
+      "source_name": "TRIPLE",
+      "source_record_offset": 1709912,
+      "stratum_index": 21
+    },
+    {
+      "cardinality": 3,
+      "geometry_record_offset": 2178790,
+      "record_count": 24804,
+      "source_name": "TRIPLE",
+      "source_record_offset": 1774736,
+      "stratum_index": 22
+    },
+    {
+      "cardinality": 3,
+      "geometry_record_offset": 2203594,
+      "record_count": 24804,
+      "source_name": "TRIPLE",
+      "source_record_offset": 1799540,
+      "stratum_index": 23
+    },
+    {
+      "cardinality": 3,
+      "geometry_record_offset": 2228398,
+      "record_count": 56,
+      "source_name": "TRIPLE",
+      "source_record_offset": 1824344,
+      "stratum_index": 24
+    },
+    {
+      "cardinality": 3,
+      "geometry_record_offset": 2228454,
+      "record_count": 56,
+      "source_name": "TRIPLE",
+      "source_record_offset": 1824400,
+      "stratum_index": 25
+    },
+    {
+      "cardinality": 3,
+      "geometry_record_offset": 2228510,
+      "record_count": 56,
+      "source_name": "TRIPLE",
+      "source_record_offset": 1824456,
+      "stratum_index": 26
+    },
+    {
+      "cardinality": 3,
+      "geometry_record_offset": 2228566,
+      "record_count": 95284,
+      "source_name": "TRIPLE",
+      "source_record_offset": 1824512,
+      "stratum_index": 27
+    },
+    {
+      "cardinality": 3,
+      "geometry_record_offset": 2323850,
+      "record_count": 171700,
+      "source_name": "TRIPLE",
+      "source_record_offset": 1919796,
+      "stratum_index": 28
+    },
+    {
+      "cardinality": 3,
+      "geometry_record_offset": 2495550,
+      "record_count": 20825,
+      "source_name": "TRIPLE",
+      "source_record_offset": 2091496,
+      "stratum_index": 29
+    },
+    {
+      "cardinality": 3,
+      "geometry_record_offset": 2516375,
+      "record_count": 20825,
+      "source_name": "TRIPLE",
+      "source_record_offset": 2112321,
+      "stratum_index": 30
+    },
+    {
+      "cardinality": 3,
+      "geometry_record_offset": 2537200,
+      "record_count": 3276,
+      "source_name": "TRIPLE",
+      "source_record_offset": 2133146,
+      "stratum_index": 31
+    },
+    {
+      "cardinality": 3,
+      "geometry_record_offset": 2540476,
+      "record_count": 3276,
+      "source_name": "TRIPLE",
+      "source_record_offset": 2136422,
+      "stratum_index": 32
+    },
+    {
+      "cardinality": 3,
+      "geometry_record_offset": 2543752,
+      "record_count": 3276,
+      "source_name": "TRIPLE",
+      "source_record_offset": 2139698,
+      "stratum_index": 33
+    },
+    {
+      "cardinality": 3,
+      "geometry_record_offset": 2547028,
+      "record_count": 19600,
+      "source_name": "TRIPLE",
+      "source_record_offset": 2142974,
+      "stratum_index": 34
+    },
+    {
+      "cardinality": 3,
+      "geometry_record_offset": 2566628,
+      "record_count": 19600,
+      "source_name": "TRIPLE",
+      "source_record_offset": 2162574,
+      "stratum_index": 35
+    },
+    {
+      "cardinality": 3,
+      "geometry_record_offset": 2586228,
+      "record_count": 19600,
+      "source_name": "TRIPLE",
+      "source_record_offset": 2182174,
+      "stratum_index": 36
+    },
+    {
+      "cardinality": 3,
+      "geometry_record_offset": 2605828,
+      "record_count": 19600,
+      "source_name": "TRIPLE",
+      "source_record_offset": 2201774,
+      "stratum_index": 37
+    },
+    {
+      "cardinality": 3,
+      "geometry_record_offset": 2625428,
+      "record_count": 19600,
+      "source_name": "TRIPLE",
+      "source_record_offset": 2221374,
+      "stratum_index": 38
+    },
+    {
+      "cardinality": 3,
+      "geometry_record_offset": 2645028,
+      "record_count": 19600,
+      "source_name": "TRIPLE",
+      "source_record_offset": 2240974,
+      "stratum_index": 39
+    },
+    {
+      "cardinality": 3,
+      "geometry_record_offset": 2664628,
+      "record_count": 32509,
+      "source_name": "TRIPLE",
+      "source_record_offset": 2260574,
+      "stratum_index": 40
+    },
+    {
+      "cardinality": 3,
+      "geometry_record_offset": 2697137,
+      "record_count": 17296,
+      "source_name": "TRIPLE",
+      "source_record_offset": 2293083,
+      "stratum_index": 41
+    },
+    {
+      "cardinality": 3,
+      "geometry_record_offset": 2714433,
+      "record_count": 4960,
+      "source_name": "TRIPLE",
+      "source_record_offset": 2310379,
+      "stratum_index": 42
+    },
+    {
+      "cardinality": 3,
+      "geometry_record_offset": 2719393,
+      "record_count": 4960,
+      "source_name": "TRIPLE",
+      "source_record_offset": 2315339,
+      "stratum_index": 43
+    },
+    {
+      "cardinality": 3,
+      "geometry_record_offset": 2724353,
+      "record_count": 4960,
+      "source_name": "TRIPLE",
+      "source_record_offset": 2320299,
+      "stratum_index": 44
+    },
+    {
+      "cardinality": 3,
+      "geometry_record_offset": 2729313,
+      "record_count": 4960,
+      "source_name": "TRIPLE",
+      "source_record_offset": 2325259,
+      "stratum_index": 45
+    },
+    {
+      "cardinality": 3,
+      "geometry_record_offset": 2734273,
+      "record_count": 4960,
+      "source_name": "TRIPLE",
+      "source_record_offset": 2330219,
+      "stratum_index": 46
+    },
+    {
+      "cardinality": 3,
+      "geometry_record_offset": 2739233,
+      "record_count": 4960,
+      "source_name": "TRIPLE",
+      "source_record_offset": 2335179,
+      "stratum_index": 47
+    },
+    {
+      "cardinality": 3,
+      "geometry_record_offset": 2744193,
+      "record_count": 17296,
+      "source_name": "TRIPLE",
+      "source_record_offset": 2340139,
+      "stratum_index": 48
+    },
+    {
+      "cardinality": 3,
+      "geometry_record_offset": 2761489,
+      "record_count": 19600,
+      "source_name": "TRIPLE",
+      "source_record_offset": 2357435,
+      "stratum_index": 49
+    },
+    {
+      "cardinality": 3,
+      "geometry_record_offset": 2781089,
+      "record_count": 19600,
+      "source_name": "TRIPLE",
+      "source_record_offset": 2377035,
+      "stratum_index": 50
+    },
+    {
+      "cardinality": 3,
+      "geometry_record_offset": 2800689,
+      "record_count": 19600,
+      "source_name": "TRIPLE",
+      "source_record_offset": 2396635,
+      "stratum_index": 51
+    },
+    {
+      "cardinality": 3,
+      "geometry_record_offset": 2820289,
+      "record_count": 19600,
+      "source_name": "TRIPLE",
+      "source_record_offset": 2416235,
+      "stratum_index": 52
+    },
+    {
+      "cardinality": 3,
+      "geometry_record_offset": 2839889,
+      "record_count": 19600,
+      "source_name": "TRIPLE",
+      "source_record_offset": 2435835,
+      "stratum_index": 53
+    },
+    {
+      "cardinality": 3,
+      "geometry_record_offset": 2859489,
+      "record_count": 19600,
+      "source_name": "TRIPLE",
+      "source_record_offset": 2455435,
+      "stratum_index": 54
+    },
+    {
+      "cardinality": 3,
+      "geometry_record_offset": 2879089,
+      "record_count": 19600,
+      "source_name": "TRIPLE",
+      "source_record_offset": 2475035,
+      "stratum_index": 55
+    },
+    {
+      "cardinality": 3,
+      "geometry_record_offset": 2898689,
+      "record_count": 19600,
+      "source_name": "TRIPLE",
+      "source_record_offset": 2494635,
+      "stratum_index": 56
+    },
+    {
+      "cardinality": 3,
+      "geometry_record_offset": 2918289,
+      "record_count": 34220,
+      "source_name": "TRIPLE",
+      "source_record_offset": 2514235,
+      "stratum_index": 57
+    },
+    {
+      "cardinality": 3,
+      "geometry_record_offset": 2952509,
+      "record_count": 3276,
+      "source_name": "TRIPLE",
+      "source_record_offset": 2548455,
+      "stratum_index": 58
+    },
+    {
+      "cardinality": 3,
+      "geometry_record_offset": 2955785,
+      "record_count": 3276,
+      "source_name": "TRIPLE",
+      "source_record_offset": 2551731,
+      "stratum_index": 59
+    },
+    {
+      "cardinality": 3,
+      "geometry_record_offset": 2959061,
+      "record_count": 3276,
+      "source_name": "TRIPLE",
+      "source_record_offset": 2555007,
+      "stratum_index": 60
+    },
+    {
+      "cardinality": 3,
+      "geometry_record_offset": 2962337,
+      "record_count": 15180,
+      "source_name": "TRIPLE",
+      "source_record_offset": 2558283,
+      "stratum_index": 61
+    },
+    {
+      "cardinality": 3,
+      "geometry_record_offset": 2977517,
+      "record_count": 15180,
+      "source_name": "TRIPLE",
+      "source_record_offset": 2573463,
+      "stratum_index": 62
+    },
+    {
+      "cardinality": 3,
+      "geometry_record_offset": 2992697,
+      "record_count": 2024,
+      "source_name": "TRIPLE",
+      "source_record_offset": 2588643,
+      "stratum_index": 63
+    },
+    {
+      "cardinality": 3,
+      "geometry_record_offset": 2994721,
+      "record_count": 7770,
+      "source_name": "TRIPLE",
+      "source_record_offset": 2590667,
+      "stratum_index": 64
+    },
+    {
+      "cardinality": 3,
+      "geometry_record_offset": 3002491,
+      "record_count": 7770,
+      "source_name": "TRIPLE",
+      "source_record_offset": 2598437,
+      "stratum_index": 65
+    },
+    {
+      "cardinality": 3,
+      "geometry_record_offset": 3010261,
+      "record_count": 7770,
+      "source_name": "TRIPLE",
+      "source_record_offset": 2606207,
+      "stratum_index": 66
+    },
+    {
+      "cardinality": 3,
+      "geometry_record_offset": 3018031,
+      "record_count": 176851,
+      "source_name": "TRIPLE",
+      "source_record_offset": 2613977,
+      "stratum_index": 67
+    },
+    {
+      "cardinality": 3,
+      "geometry_record_offset": 3194882,
+      "record_count": 56,
+      "source_name": "TRIPLE",
+      "source_record_offset": 2790828,
+      "stratum_index": 68
+    },
+    {
+      "cardinality": 3,
+      "geometry_record_offset": 3194938,
+      "record_count": 56,
+      "source_name": "TRIPLE",
+      "source_record_offset": 2790884,
+      "stratum_index": 69
+    },
+    {
+      "cardinality": 3,
+      "geometry_record_offset": 3194994,
+      "record_count": 56,
+      "source_name": "TRIPLE",
+      "source_record_offset": 2790940,
+      "stratum_index": 70
+    },
+    {
+      "cardinality": 3,
+      "geometry_record_offset": 3195050,
+      "record_count": 98770,
+      "source_name": "TRIPLE",
+      "source_record_offset": 2790996,
+      "stratum_index": 71
+    },
+    {
+      "cardinality": 3,
+      "geometry_record_offset": 3293820,
+      "record_count": 171700,
+      "source_name": "TRIPLE",
+      "source_record_offset": 2889766,
+      "stratum_index": 72
+    },
+    {
+      "cardinality": 4,
+      "geometry_record_offset": 3465520,
+      "record_count": 316251,
+      "source_name": "QUADRUPLE",
+      "source_record_offset": 0,
+      "stratum_index": 0
+    },
+    {
+      "cardinality": 4,
+      "geometry_record_offset": 3781771,
+      "record_count": 316251,
+      "source_name": "QUADRUPLE",
+      "source_record_offset": 316251,
+      "stratum_index": 1
+    },
+    {
+      "cardinality": 4,
+      "geometry_record_offset": 4098022,
+      "record_count": 3183545,
+      "source_name": "QUADRUPLE",
+      "source_record_offset": 632502,
+      "stratum_index": 2
+    },
+    {
+      "cardinality": 4,
+      "geometry_record_offset": 7281567,
+      "record_count": 3183545,
+      "source_name": "QUADRUPLE",
+      "source_record_offset": 3816047,
+      "stratum_index": 3
+    },
+    {
+      "cardinality": 4,
+      "geometry_record_offset": 10465112,
+      "record_count": 316251,
+      "source_name": "QUADRUPLE",
+      "source_record_offset": 6999592,
+      "stratum_index": 4
+    },
+    {
+      "cardinality": 4,
+      "geometry_record_offset": 10781363,
+      "record_count": 316251,
+      "source_name": "QUADRUPLE",
+      "source_record_offset": 7315843,
+      "stratum_index": 5
+    },
+    {
+      "cardinality": 4,
+      "geometry_record_offset": 11097614,
+      "record_count": 316251,
+      "source_name": "QUADRUPLE",
+      "source_record_offset": 7632094,
+      "stratum_index": 6
+    },
+    {
+      "cardinality": 4,
+      "geometry_record_offset": 11413865,
+      "record_count": 316251,
+      "source_name": "QUADRUPLE",
+      "source_record_offset": 7948345,
+      "stratum_index": 7
+    },
+    {
+      "cardinality": 4,
+      "geometry_record_offset": 11730116,
+      "record_count": 3183545,
+      "source_name": "QUADRUPLE",
+      "source_record_offset": 8264596,
+      "stratum_index": 8
+    },
+    {
+      "cardinality": 4,
+      "geometry_record_offset": 14913661,
+      "record_count": 3183545,
+      "source_name": "QUADRUPLE",
+      "source_record_offset": 11448141,
+      "stratum_index": 9
+    },
+    {
+      "cardinality": 4,
+      "geometry_record_offset": 18097206,
+      "record_count": 316251,
+      "source_name": "QUADRUPLE",
+      "source_record_offset": 14631686,
+      "stratum_index": 10
+    },
+    {
+      "cardinality": 4,
+      "geometry_record_offset": 18413457,
+      "record_count": 316251,
+      "source_name": "QUADRUPLE",
+      "source_record_offset": 14947937,
+      "stratum_index": 11
+    },
+    {
+      "cardinality": 4,
+      "geometry_record_offset": 18729708,
+      "record_count": 249900,
+      "source_name": "QUADRUPLE",
+      "source_record_offset": 15264188,
+      "stratum_index": 12
+    },
+    {
+      "cardinality": 4,
+      "geometry_record_offset": 18979608,
+      "record_count": 249900,
+      "source_name": "QUADRUPLE",
+      "source_record_offset": 15514088,
+      "stratum_index": 13
+    },
+    {
+      "cardinality": 4,
+      "geometry_record_offset": 19229508,
+      "record_count": 230300,
+      "source_name": "QUADRUPLE",
+      "source_record_offset": 15763988,
+      "stratum_index": 14
+    },
+    {
+      "cardinality": 4,
+      "geometry_record_offset": 19459808,
+      "record_count": 230300,
+      "source_name": "QUADRUPLE",
+      "source_record_offset": 15994288,
+      "stratum_index": 15
+    },
+    {
+      "cardinality": 4,
+      "geometry_record_offset": 19690108,
+      "record_count": 230300,
+      "source_name": "QUADRUPLE",
+      "source_record_offset": 16224588,
+      "stratum_index": 16
+    },
+    {
+      "cardinality": 4,
+      "geometry_record_offset": 19920408,
+      "record_count": 230300,
+      "source_name": "QUADRUPLE",
+      "source_record_offset": 16454888,
+      "stratum_index": 17
+    },
+    {
+      "cardinality": 4,
+      "geometry_record_offset": 20150708,
+      "record_count": 230300,
+      "source_name": "QUADRUPLE",
+      "source_record_offset": 16685188,
+      "stratum_index": 18
+    },
+    {
+      "cardinality": 4,
+      "geometry_record_offset": 20381008,
+      "record_count": 230300,
+      "source_name": "QUADRUPLE",
+      "source_record_offset": 16915488,
+      "stratum_index": 19
+    },
+    {
+      "cardinality": 4,
+      "geometry_record_offset": 20611308,
+      "record_count": 455126,
+      "source_name": "QUADRUPLE",
+      "source_record_offset": 17145788,
+      "stratum_index": 20
+    },
+    {
+      "cardinality": 4,
+      "geometry_record_offset": 21066434,
+      "record_count": 230300,
+      "source_name": "QUADRUPLE",
+      "source_record_offset": 17600914,
+      "stratum_index": 21
+    },
+    {
+      "cardinality": 4,
+      "geometry_record_offset": 21296734,
+      "record_count": 230300,
+      "source_name": "QUADRUPLE",
+      "source_record_offset": 17831214,
+      "stratum_index": 22
+    },
+    {
+      "cardinality": 4,
+      "geometry_record_offset": 21527034,
+      "record_count": 230300,
+      "source_name": "QUADRUPLE",
+      "source_record_offset": 18061514,
+      "stratum_index": 23
+    },
+    {
+      "cardinality": 4,
+      "geometry_record_offset": 21757334,
+      "record_count": 230300,
+      "source_name": "QUADRUPLE",
+      "source_record_offset": 18291814,
+      "stratum_index": 24
+    },
+    {
+      "cardinality": 4,
+      "geometry_record_offset": 21987634,
+      "record_count": 230300,
+      "source_name": "QUADRUPLE",
+      "source_record_offset": 18522114,
+      "stratum_index": 25
+    },
+    {
+      "cardinality": 4,
+      "geometry_record_offset": 22217934,
+      "record_count": 230300,
+      "source_name": "QUADRUPLE",
+      "source_record_offset": 18752414,
+      "stratum_index": 26
+    },
+    {
+      "cardinality": 4,
+      "geometry_record_offset": 22448234,
+      "record_count": 230300,
+      "source_name": "QUADRUPLE",
+      "source_record_offset": 18982714,
+      "stratum_index": 27
+    },
+    {
+      "cardinality": 4,
+      "geometry_record_offset": 22678534,
+      "record_count": 230300,
+      "source_name": "QUADRUPLE",
+      "source_record_offset": 19213014,
+      "stratum_index": 28
+    },
+    {
+      "cardinality": 4,
+      "geometry_record_offset": 22908834,
+      "record_count": 487635,
+      "source_name": "QUADRUPLE",
+      "source_record_offset": 19443314,
+      "stratum_index": 29
+    },
+    {
+      "cardinality": 4,
+      "geometry_record_offset": 23396469,
+      "record_count": 10626,
+      "source_name": "QUADRUPLE",
+      "source_record_offset": 19930949,
+      "stratum_index": 30
+    },
+    {
+      "cardinality": 4,
+      "geometry_record_offset": 23407095,
+      "record_count": 4421275,
+      "source_name": "QUADRUPLE",
+      "source_record_offset": 19941575,
+      "stratum_index": 31
+    }
+  ],
+  "source_hashes": {
+    "phase101_cut_coverage_law_results.json": {
+      "canonical": "3ecad4486d9ac87c5c7efc58726a41dcaacd738d6450ffc6024b3577dbd0b74e",
+      "raw": "2eae9b4825bb78d9c396a47bfe365c0beedda198de7c8a2a6093fede3423fb2c"
+    },
+    "phase102_pairwise_synergy_ledger.bin": {
+      "sha256": "24de12594fe8b95f6e70be4278b2dfadb7f29f181aef3d7aeea41f9fbe58de52"
+    },
+    "phase102_pairwise_synergy_manifest.json": {
+      "canonical": "580635c42efc2bb042e539f0a1f61d6ae15693d38d77a3333041757be9257ea5",
+      "raw": "d434a20dd0c66350fadceac6ea4f6e3d73bd9769e51195083efc628ed8170057"
+    },
+    "phase102_pairwise_synergy_results.json": {
+      "canonical": "152003197716bff38e552b3b51754df6dbfe4c6dc9f93326c3a55de594e5a6c3",
+      "raw": "9a5c70318085c8d6d1a7ad82a59fb631abda524926288c46cb0da30a7cd47268"
+    },
+    "phase103_triple_synergy_ledger.bin": {
+      "sha256": "b342a58d20aa7ecdc2a2a5ea45037a64739134151db41b562464163b7e93578f"
+    },
+    "phase103_triple_synergy_manifest.json": {
+      "canonical": "330379eeff1ae5a805b669667cbce8a3ec98a7d63b890ad0395cdbbd35fb1b42",
+      "raw": "d76dd7168d8b3a4e4ec9e3637b959b89d2f947ba519ad4521eccd99b27699531"
+    },
+    "phase103_triple_synergy_results.json": {
+      "canonical": "ce00fc3085c7f19f0193d2d19939b6fa0e196cb8d26bcfc0c189319e4ae667ce",
+      "raw": "7487631d098876d51c24eaba75c30dfa693341833f8c85b8170a75ff647d0200"
+    },
+    "phase104_quadruple_synergy_ledger.bin": {
+      "sha256": "530d541e64d538c4e87dc416bda831e7caafa9b827b0068662b9117e8f70dc8a"
+    },
+    "phase104_quadruple_synergy_manifest.json": {
+      "canonical": "59d163738213dad1cba94545322928a8d547ad7da7ced3f7b2679631af559f64",
+      "raw": "d45c15586b008663398323a2c9f25c87d76f1d9b8404356a65157d610502075d"
+    },
+    "phase104_quadruple_synergy_results.json": {
+      "canonical": "37e9594fb0029d19a4926ac44c0e518ddaf84cf896f784795ca4b734b8d16bf1",
+      "raw": "35c83d1bd7be565d9ebb61cafc6b618ce9efdbfb1799bbd72061f08bd9d5f28c"
+    },
+    "phase94_hypercube_completion_results.json": {
+      "canonical": "57c8988db22d659860b8c94accfa8be54ec5891a7ca036e7d0ea2150e3c3f429",
+      "raw": "1429ac8edc3d5fd4ee8823e2b8437666cae8bdd129f2a4a47e4505bba9aa83a3"
+    },
+    "phase96_bridge_robustness_results.json": {
+      "canonical": "85deb69d8dbb650c6423fcfd229e258118596ca3418d2e6556819a9ad23a2c5b",
+      "raw": "3096af928d5eff638d9ad63b6503eb85ecbd66956f35c5df94674e07d72e5858"
+    }
+  }
+}
