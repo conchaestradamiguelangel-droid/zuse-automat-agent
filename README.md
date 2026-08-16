@@ -9,8 +9,9 @@ model participates in world selection, law evaluation, scoring, or acceptance.
 
 ## Preprint
 
-**Latest: v1.36** - Exhaustive audits of 3,061,466 triples and 24,362,850 quadruples complete the minimum rescue-cardinality ladder left open in v1.35. Within the frozen collective Q8 strata, vertex minima partition as 69/41/16 and edge minima as 68/40/31 at cardinalities 2/3/4, with no stratum remaining unresolved.
+**Latest: v1.37** - An exact motif audit classifies 27,828,370 candidate pairs, triples, and quadruples into 12 unlabeled Hamming-1 graph motifs. The 1,476 verified metric-specific minimal rescues compile into 265 sparse unit-cost QUBOs with exactly 1,476 certified ground states. No quantum hardware is used and no quantum advantage is claimed.
 
+- v1.37 DOI: [10.5281/zenodo.21965090](https://doi.org/10.5281/zenodo.21965090)
 - v1.36 DOI: [10.5281/zenodo.21939732](https://doi.org/10.5281/zenodo.21939732)
 - v1.35 DOI: [10.5281/zenodo.21935967](https://doi.org/10.5281/zenodo.21935967)
 - v1.34 DOI: [10.5281/zenodo.21826401](https://doi.org/10.5281/zenodo.21826401)
@@ -48,6 +49,7 @@ model participates in world selection, law evaluation, scoring, or acceptance.
 - v1.2 DOI: [10.5281/zenodo.20738025](https://doi.org/10.5281/zenodo.20738025)
 - v1.1 DOI: [10.5281/zenodo.20687470](https://doi.org/10.5281/zenodo.20687470)
 - v1.0 DOI: [10.5281/zenodo.20516375](https://doi.org/10.5281/zenodo.20516375)
+- v1.37 series DOI: [10.5281/zenodo.21965089](https://doi.org/10.5281/zenodo.21965089)
 - v1.36 series DOI: [10.5281/zenodo.21939731](https://doi.org/10.5281/zenodo.21939731)
 - v1.35 series DOI: [10.5281/zenodo.21935966](https://doi.org/10.5281/zenodo.21935966)
 - v1.34 series DOI: [10.5281/zenodo.21826400](https://doi.org/10.5281/zenodo.21826400)
@@ -144,8 +146,8 @@ regenerated from the commands in the reproducibility guide.
 
 ```text
 Concha Estrada, M. A. (2026). ZUSE Automat Agent: Empirical Law Discovery in
-Elementary Cellular Automata (v1.36). Zenodo.
-https://doi.org/10.5281/zenodo.21939732
+Elementary Cellular Automata (v1.37). Zenodo.
+https://doi.org/10.5281/zenodo.21965090
 ```
 
 ## License

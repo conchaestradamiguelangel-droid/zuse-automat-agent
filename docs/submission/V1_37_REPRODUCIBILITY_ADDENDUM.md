@@ -1,6 +1,6 @@
 # ZUSE v1.37 Reproducibility Addendum
 
-This addendum maps the candidate v1.37 claims to committed scripts and result
+This addendum maps the published v1.37 claims to committed scripts and result
 artifacts. It supplements the published v1.36 addendum and does not rerun any
 cellular-automaton simulation.
 
@@ -69,4 +69,3 @@ cellular-automaton simulation.
   is used.
 - QUBO compatibility is a reusable representation, not evidence of quantum
   speedup or practical advantage.
-

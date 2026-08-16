@@ -1,4 +1,4 @@
-# ZUSE v1.37 Candidate Reproducibility Checklist
+# ZUSE v1.37 Reproducibility Checklist
 
 Audience: reviewers and editors. This is a claim-to-artifact map, not a developer manual.
 
@@ -247,9 +247,9 @@ Expected signature:
 
 ## Versioned Artifacts
 
-- Candidate v1.37 DOI: pending independent review and Zenodo publication.
-- Candidate v1.37 GitHub release: pending independent review and publication.
-- Zenodo v1.36 DOI: https://doi.org/10.5281/zenodo.21939732
-- GitHub release: https://github.com/conchaestradamiguelangel-droid/zuse-automat-agent/releases/tag/v1.36
+- Zenodo v1.37 DOI: https://doi.org/10.5281/zenodo.21965090
+- GitHub release: https://github.com/conchaestradamiguelangel-droid/zuse-automat-agent/releases/tag/v1.37
+- Previous Zenodo v1.36 DOI: https://doi.org/10.5281/zenodo.21939732
+- Previous GitHub release: https://github.com/conchaestradamiguelangel-droid/zuse-automat-agent/releases/tag/v1.36
 - PDF: `paper/zuse_preprint.pdf`
 - Source: `paper/draft.md`

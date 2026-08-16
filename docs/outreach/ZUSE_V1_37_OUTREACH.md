@@ -14,12 +14,11 @@ No quantum hardware was used and no quantum advantage is claimed. The result
 is an auditable optimization representation prepared for future classical or
 quantum evaluation.
 
-Preprint: PENDING
+Preprint: https://doi.org/10.5281/zenodo.21965090
 
-Release: PENDING
+Release: https://github.com/conchaestradamiguelangel-droid/zuse-automat-agent/releases/tag/v1.37
 
 ## Courtesy note
 
 No external email is queued automatically. Any outreach requires Miguel's
 explicit approval after publication.
-

@@ -1,7 +1,6 @@
-# Zenodo v1.37 Draft
+# Zenodo v1.37 Record
 
-Candidate prepared for independent review. Do not publish until the candidate
-PDF, metadata, and numerical claims have been verified.
+Published and verified against the Zenodo API on 2026-08-16.
 
 ## Informacion basica
 
@@ -84,5 +83,5 @@ https://github.com/conchaestradamiguelangel-droid/zuse-automat-agent
 - **Paginas:** `61`
 - **MD5:** `4cffbfd41886c44d5d25ef0557e088d4`
 - **SHA-256:** `b595d553b652bf31382fcc55a13770d80fcdb791d16a5d2bcf53d3b4804b62c1`
-- **DOI de version:** `PENDING - lo asigna Zenodo al publicar`
-- **DOI de serie:** `PENDING - confirmar en Zenodo tras publicar`
+- **DOI de version:** `10.5281/zenodo.21965090`
+- **DOI de serie:** `10.5281/zenodo.21965089`
