@@ -1,0 +1,13 @@
+{
+  "format": "canonical-jsonl-one-model-per-line",
+  "integer_coefficients": true,
+  "model_count": 265,
+  "models_file": "phase106_minimal_rescue_qubo_models.jsonl",
+  "models_sha256": "d6c813602e914b8863d248d47d7cecfcd498172ba2c3831441b750d5203c82ab",
+  "models_size": 580230,
+  "phase": 107,
+  "qubo_convention": "E=constant+sum_i(Qii*bi)+sum_i<j(Qij*bi*bj)",
+  "source_result_canonical_sha256": "982eef2e0341d5630c170d14893e6839b6681162dc68cd16db9c20d45d976353",
+  "source_result_sha256": "9c56da0916c7a7125c3581f30d685038b4fa42b9c27ae6d1b35448cbbfb59b24",
+  "variable_order": "x ascending word, then z ascending canonical hyperedge tuple"
+}

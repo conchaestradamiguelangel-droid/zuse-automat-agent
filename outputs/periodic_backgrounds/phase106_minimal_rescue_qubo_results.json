@@ -1,0 +1,43 @@
+{
+  "manifest_canonical_sha256": "c9f5e263c73ff73c6f6ce9ba49babecbd16f28c0c15840abcdca46f8399a5e74",
+  "phase": 107,
+  "protocol": {
+    "factorized_and_expanded_routes": true,
+    "new_rescue_discovery_claimed": false,
+    "quantum_advantage_claimed": false,
+    "quantum_execution": false,
+    "simulation_executed": false,
+    "symbolic_global_certificate": true,
+    "unit_cost_only": true
+  },
+  "sources": {
+    "embedded_source_count": 12,
+    "phase106_ledger": "987d8b54447bdd3919fdc5d41b7b36246bee534ed5c2a5462b6dbbfd61b16588",
+    "phase106_manifest_canonical": "45135b64e6936865298a203d03493aeffe8911b50b564af8a9e6d886bc14ba6c",
+    "phase106_manifest_raw": "d092aa050942967b4da15651841e20a4d6521f57a209f676695c17a9c5d4bdc2",
+    "phase106_results_canonical": "982eef2e0341d5630c170d14893e6839b6681162dc68cd16db9c20d45d976353",
+    "phase106_results_raw": "9c56da0916c7a7125c3581f30d685038b4fa42b9c27ae6d1b35448cbbfb59b24"
+  },
+  "status": "EXACT_MINIMAL_RESCUE_QUBO_COMPILATION_VERIFIED",
+  "summary": {
+    "all_certificates_pass": true,
+    "by_cardinality_metric": {
+      "n2_kappa": 69,
+      "n2_lambda": 68,
+      "n3_kappa": 41,
+      "n3_lambda": 40,
+      "n4_kappa": 16,
+      "n4_lambda": 31
+    },
+    "ground_state_count": 1476,
+    "instance_count": 265,
+    "nonzero_qubo_term_count": 32861,
+    "total_variable_count_across_independent_models": 19100,
+    "variable_count_range": [
+      9,
+      172
+    ],
+    "x_variable_count": 17624,
+    "z_variable_count": 1476
+  }
+}
