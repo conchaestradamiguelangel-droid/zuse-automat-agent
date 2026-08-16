@@ -27,6 +27,14 @@ four in the remaining 16/16 and 31/31. The underlying global replay covers
 5,783,040 configurations and independently confirms 3,296 stationary
 oscillators omitted by the historical `T<=16` detector.
 
+An exact motif audit then classifies all 27,828,370 candidate pairs, triples,
+and quadruples into 12 unlabeled Hamming-1 graph motifs and decomposes 1,476
+metric-specific minimal rescues by cut coverage and internal-edge dependence.
+Those verified rescues compile into 265 sparse unit-cost QUBO models with
+19,100 variables accumulated across independent models, 32,861 nonzero terms,
+and exactly 1,476 certified ground states. No quantum hardware is used and no
+quantum speedup or practical advantage is claimed.
+
 All scripts, reports, PDFs, and versioned releases are public. Claims remain
 empirical and protocol-bounded: ZUSE is a reproducible evidence engine for CA
 law discovery, not a universal autonomous scientist.
@@ -115,6 +123,14 @@ We make the following contributions:
    strata and 68/139 edge-connectivity strata. Exhaustive triple and quadruple
    audits resolve all remaining collective strata at exactly three or four,
    closing the minimum-cardinality ladder within the frozen protocol.
+
+7. **A verified motif atlas and exact QUBO compilation** -- All 27,828,370
+   candidate pairs, triples, and quadruples are assigned to one of 12 exact
+   unlabeled Hamming-1 motifs before outcomes are joined. The 1,476
+   metric-specific minimal rescues compile into 265 sparse unit-cost QUBOs;
+   direct integer evaluation certifies exactly one ground state per rescue and
+   no spurious or missing solution. This is a reusable optimization encoding,
+   not evidence of quantum advantage.
 
 ## 2. Related Work
 
@@ -206,7 +222,7 @@ computational mechanics itself.
 
 ### 2.5 Periodic backgrounds, gliders, and mechanistic audits
 
-The oscillator results in Sections 7.5--7.40 are closest in spirit to the
+The oscillator results in Sections 7.5--7.41 are closest in spirit to the
 domain/particle tradition in cellular automata: localized structures are
 studied relative to a background, and the relevant mechanism may be a defect
 trajectory rather than a raw frame pattern. Lindgren and Nordahl applied
@@ -2886,6 +2902,76 @@ refer only to the frozen collective strata and rescue definition; they do not
 establish a universal upper bound for other ECA rules, word lengths, target
 classes, or intervention families.
 
+### 7.41 Minimal-rescue motifs and exact QUBO compilation (Fases 106--107)
+
+Fase 106 freezes geometry before joining outcomes and classifies every
+candidate intervention set from the pair, triple, and quadruple ledgers by the
+exact isomorphism class of its induced Hamming-1 graph. Two independent
+classifiers -- one based on graph invariants and one based on canonical
+adjacency under all vertex permutations -- agree on all 27,828,370 records.
+The closed triangle-free motif vocabulary contains two classes at cardinality
+two, three at cardinality three, and seven at cardinality four.
+
+| Cardinality | Candidate sets | Motif classes | Vertex rescues | Edge rescues | Internal-edge dependent (vertex / edge) |
+| ---: | ---: | ---: | ---: | ---: | ---: |
+| 2 | 404,054 | 2 | 454 | 470 | 83 / 86 |
+| 3 | 3,061,466 | 3 | 180 | 192 | 98 / 98 |
+| 4 | 24,362,850 | 7 | 77 | 103 | 77 / 103 |
+
+The resulting 1,476 metric-specific minimal rescues retain three distinct
+properties rather than collapsing them into a single label: complete coverage
+of the frozen critical cuts, full rescue under direct cut removal and fresh
+max-flow, and dependence on internal Hamming-1 edges among the added states.
+Every rescue covers the corresponding cuts and reproduces the verified graph
+outcome. At cardinality two, 371 vertex and 384 edge rescues remain after all
+internal edges are removed; at cardinality three the corresponding counts are
+82 and 94. No cardinality-four rescue survives removal of all internal edges.
+Motif classes remain heterogeneous where the frozen data make them so; the
+atlas does not reinterpret a frequent motif as a causal explanation.
+
+Fase 107 compiles the verified rescue hypergraphs into independent sparse
+quadratic unconstrained binary optimization (QUBO) models. For one frozen
+target-period-metric instance, let `x_i` select historical state `i`, let
+`z_h` select one verified minimal rescue hyperedge `h`, and let every hyperedge
+have the already proved cardinality `d`. With unit node costs and penalty
+`P=d+1`, the compiled objective is
+
+```text
+E(x,z) = sum_i x_i
+       + P (1 - sum_h z_h)^2
+       + P sum_h z_h (d - sum_{i in h} x_i).
+```
+
+Using binary identities, this produces constant `P`, linear `x_i`
+coefficients `+1`, linear `z_h` coefficients `P(d-1)`, pairwise `z_h z_h'`
+coefficients `+2P`, and incidence coefficients `z_h x_i=-P`, with no `x_i x_j`
+terms. For any selected hyperedge, each included `x_i` has net coefficient
+`1-P<0` and each excluded `x_i` has coefficient `+1`; therefore the unique
+minimum for that `z_h` is exactly its incidence vector, with energy `d`.
+The one-hot penalty makes `z=0` cost `P>d` and makes two or more active
+hyperedges non-optimal. Thus the ground-state degeneracy is exactly the number
+of verified rescue hyperedges, not an empirical solver observation.
+
+| QUBO compilation quantity | Value |
+| --- | ---: |
+| Independent target-period-metric models | 265 |
+| Accumulated `x` variables | 17,624 |
+| Accumulated `z` variables | 1,476 |
+| Accumulated variables | 19,100 |
+| Variables per model | 9--172 |
+| Sparse nonzero terms | 32,861 |
+| Certified ground states | 1,476 |
+
+The 265 models partition as 69/41/16 vertex-connectivity instances and
+68/40/31 edge-connectivity instances at cardinalities two, three, and four.
+Two independent integer-energy routes reproduce every coefficient and every
+certified ground state with zero discrepancies. This compilation does not run
+cellular-automaton simulations, discover new rescues, execute a quantum or
+annealing device, or establish a speedup. It supplies an exact, reusable QUBO
+representation of the already verified finite rescue problem under unit node
+costs; weighted costs, larger intervention families, and hardware behavior
+remain outside scope.
+
 ## 8. Observer Artifacts and Pipeline Equivariance
 
 The ZUSE pipeline contains two classes of observer artifact that the atlas
@@ -3175,7 +3261,7 @@ historical positive classification or the 165-case T=12 cohort used by Fases
 The extended check remains finite in horizon and period and does not establish
 absence beyond period 120.
 
-Fases 91--105 add a topological intervention layer, but its exactness must not
+Fases 91--107 add a topological intervention layer, but its exactness must not
 be confused with universal scope. The cut-coverage equivalence is proved
 computationally for 43,425 unit additions to 219 fragile targets inside 48
 frozen length-8 Q8 cubes. These graphs encode Hamming-1 changes of the central
@@ -3188,6 +3274,13 @@ minimum rescue cardinalities two, three, or four by exhaustive enumeration in
 the collective-only strata, with every lower cardinality already audited.
 This closes the ladder only for the frozen state populations and graph
 definition; it is not an upper bound for arbitrary intervention spaces.
+Fase 106 classifies the induced Hamming-1 motifs of those same frozen
+interventions; the motifs are descriptive graph classes and are not promoted
+to universal causal primitives. Fase 107 compiles the verified minimal rescues
+into unit-cost QUBOs. The compilation is exact for its 265 finite instances,
+but no quantum hardware or annealing solver was run, and no quantum speedup,
+practical advantage, or transfer beyond the frozen intervention family is
+claimed.
 
 ### 9.4 Empirical atlas, not axiomatic classification
 
@@ -3406,13 +3499,16 @@ Several controlled extensions have now been completed:
   confirms 3,296 additional stationary oscillators with periods 18..120;
   none changes the T=12 cohort used by the later causal audits. This converts
   the old `T<=16` negative label into an explicitly detector-bounded claim.
-  Fases 91--105 then quotient those cases into 192 strict attractor classes,
+  Fases 91--107 then quotient those cases into 192 strict attractor classes,
   construct 48 complete Q8 intervention cubes, and derive the exact unit
   cut-coverage law on 43,425 exposures. The pair audit resolves minimum
   cardinality two in 69/126 vertex and 68/139 edge strata. Exhaustive audits of
   3,061,466 triples and 24,362,850 quadruples resolve every remaining stratum:
   vertex minima partition as `69/41/16` and edge minima as `68/40/31` across
-  cardinalities `2/3/4`. Full results are in Sections 7.20-7.40.
+  cardinalities `2/3/4`. The resulting 1,476 verified rescues form a
+  12-class Hamming-1 motif atlas and compile exactly into 265 sparse unit-cost
+  QUBOs with no hardware or advantage claim. Full results are in Sections
+  7.20-7.41.
 
 Each extension is a controlled experiment with the same measurement protocol;
 only the IC or background definition changes.

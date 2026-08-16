@@ -1,4 +1,4 @@
-# ZUSE v1.36 Reproducibility Checklist
+# ZUSE v1.37 Candidate Reproducibility Checklist
 
 Audience: reviewers and editors. This is a claim-to-artifact map, not a developer manual.
 
@@ -185,6 +185,59 @@ The full replay is authorization-gated and checkpointed. Reviewers can inspect
 the committed result and execution audit without rerunning the 5.78 million
 configurations.
 
+## R7 - Exact Minimal-Rescue Motif Atlas
+
+Paper claim: the frozen pair, triple, and quadruple ledgers contain 27,828,370
+candidate intervention sets that fall into 12 exact unlabeled induced
+Hamming-1 motifs, with 1,476 metric-specific minimal rescues.
+
+Primary script:
+
+```powershell
+python outputs\periodic_backgrounds\analyze_phase105_minimal_rescue_motifs.py
+```
+
+Primary artifacts:
+
+- `outputs/periodic_backgrounds/phase105_minimal_rescue_motif_results.json`
+- `outputs/periodic_backgrounds/phase105_minimal_rescue_motif_report.md`
+- `outputs/periodic_backgrounds/phase105_minimal_rescue_motif_ledger.bin`
+- `outputs/periodic_backgrounds/phase105_minimal_rescue_motif_manifest.json`
+
+Expected signature:
+
+- Candidate sets: `404,054 + 3,061,466 + 24,362,850 = 27,828,370`.
+- Motif classes by cardinality: `2 / 3 / 7`.
+- Metric-specific minimal rescues: `1,476`.
+- Reconciliation failures: `0`.
+
+## R8 - Exact Unit-Cost QUBO Compilation
+
+Paper claim: the verified minimal rescues compile into 265 independent sparse
+QUBOs with exactly 1,476 certified ground states.
+
+Primary script:
+
+```powershell
+python outputs\periodic_backgrounds\analyze_phase106_minimal_rescue_qubo.py
+```
+
+Primary artifacts:
+
+- `outputs/periodic_backgrounds/phase106_minimal_rescue_qubo_results.json`
+- `outputs/periodic_backgrounds/phase106_minimal_rescue_qubo_report.md`
+- `outputs/periodic_backgrounds/phase106_minimal_rescue_qubo_models.jsonl`
+- `outputs/periodic_backgrounds/phase106_minimal_rescue_qubo_manifest.json`
+
+Expected signature:
+
+- Independent models: `265`.
+- Accumulated variables: `17,624 x + 1,476 z = 19,100`.
+- Sparse nonzero terms: `32,861`.
+- Certified ground states: `1,476`.
+- Coefficient, energy, and reconciliation failures: `0`.
+- No quantum hardware, annealing, or advantage claim.
+
 ## Runtime Notes
 
 - Unit tests and report inspection are quick.
@@ -194,6 +247,8 @@ configurations.
 
 ## Versioned Artifacts
 
+- Candidate v1.37 DOI: pending independent review and Zenodo publication.
+- Candidate v1.37 GitHub release: pending independent review and publication.
 - Zenodo v1.36 DOI: https://doi.org/10.5281/zenodo.21939732
 - GitHub release: https://github.com/conchaestradamiguelangel-droid/zuse-automat-agent/releases/tag/v1.36
 - PDF: `paper/zuse_preprint.pdf`
