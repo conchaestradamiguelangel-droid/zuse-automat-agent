@@ -1,0 +1,52 @@
+{
+  "artifact_prefix": "phase109",
+  "outputs": {
+    "phase109_fixed_budget_hamming_partition_report.md": {
+      "raw": "34b029ce2ed39c06c2ba3b432302d1c3f98824311d58e3ed62eed13851017d7a"
+    },
+    "phase109_fixed_budget_hamming_partition_results.json": {
+      "canonical": "dcf3d5847af14b3128e88dac765e491900340ddf4587b50281f42ac8ade147b1",
+      "raw": "ba5cf94330ce5c27c6b7c4420f910c637debac1273b9b25d3ad4fd787c141d04"
+    }
+  },
+  "phase": 110,
+  "runner": "analyze_phase109_fixed_budget_hamming_partition.py",
+  "runner_normalized_sha256": "b7039e4346540c9a7fd628b6ce496ba854555b8459eee15ebd9694cc43d1c5b6",
+  "sources": {
+    "analyze_phase96_bridge_robustness.py": {
+      "sha256": "b282191a91b4f25dc5f3406d4ba30adb58465d2913c64446a6bca5dddd8e47f0"
+    },
+    "phase102_pairwise_synergy_ledger.bin": {
+      "sha256": "24de12594fe8b95f6e70be4278b2dfadb7f29f181aef3d7aeea41f9fbe58de52"
+    },
+    "phase102_pairwise_synergy_manifest.json": {
+      "canonical": "580635c42efc2bb042e539f0a1f61d6ae15693d38d77a3333041757be9257ea5",
+      "raw": "d434a20dd0c66350fadceac6ea4f6e3d73bd9769e51195083efc628ed8170057"
+    },
+    "phase102_pairwise_synergy_results.json": {
+      "canonical": "152003197716bff38e552b3b51754df6dbfe4c6dc9f93326c3a55de594e5a6c3",
+      "raw": "9a5c70318085c8d6d1a7ad82a59fb631abda524926288c46cb0da30a7cd47268"
+    },
+    "phase105_minimal_rescue_motif_results.json": {
+      "canonical": "982eef2e0341d5630c170d14893e6839b6681162dc68cd16db9c20d45d976353",
+      "raw": "9c56da0916c7a7125c3581f30d685038b4fa42b9c27ae6d1b35448cbbfb59b24"
+    },
+    "phase108_ambient_rescue_geometry_results.json": {
+      "canonical": "b479df629574d25d0655b3524962846de410b5382cb1b9c26b400117ac2ca1c0",
+      "raw": "02c858e4b8a801e39bec9512a54e317f0dfdd8c43cbe02ee5342c09442cfdae9"
+    },
+    "phase94_hypercube_completion_results.json": {
+      "canonical": "57c8988db22d659860b8c94accfa8be54ec5891a7ca036e7d0ea2150e3c3f429",
+      "raw": "1429ac8edc3d5fd4ee8823e2b8437666cae8bdd129f2a4a47e4505bba9aa83a3"
+    },
+    "phase95_fragment_bridge_results.json": {
+      "canonical": "5c43278492fa09f9367fa971e06d0a7b3e2b99e295a63279721bc78a4946f825",
+      "raw": "cbd414180e89658b3e20c73559dbcb490b2bca845a1165f3f6a8e36f25c2e823"
+    },
+    "phase96_bridge_robustness_results.json": {
+      "canonical": "85deb69d8dbb650c6423fcfd229e258118596ca3418d2e6556819a9ad23a2c5b",
+      "raw": "3096af928d5eff638d9ad63b6503eb85ecbd66956f35c5df94674e07d72e5858"
+    }
+  },
+  "status": "FIXED_BUDGET_HAMMING_PARTITION_K2_VERIFIED"
+}
