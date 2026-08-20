@@ -1,0 +1,36 @@
+{
+  "artifact_prefix": "phase108",
+  "outputs": {
+    "phase108_ambient_rescue_geometry_report.md": {
+      "raw": "a1cfcc640f27371a48af513e98abb533b936c84e5daa5b56a53989d2c3b7cf3b"
+    },
+    "phase108_ambient_rescue_geometry_results.json": {
+      "canonical": "b479df629574d25d0655b3524962846de410b5382cb1b9c26b400117ac2ca1c0",
+      "raw": "02c858e4b8a801e39bec9512a54e317f0dfdd8c43cbe02ee5342c09442cfdae9"
+    }
+  },
+  "phase": 109,
+  "runner": "analyze_phase108_ambient_rescue_geometry.py",
+  "runner_normalized_sha256": "fdf591bcca49d78af85c87ace02df4fa5e9bbadaf1e895918c5fdf501ae84cf2",
+  "sources": {
+    "phase102_pairwise_synergy_ledger.bin": {
+      "sha256": "24de12594fe8b95f6e70be4278b2dfadb7f29f181aef3d7aeea41f9fbe58de52"
+    },
+    "phase102_pairwise_synergy_manifest.json": {
+      "canonical": "580635c42efc2bb042e539f0a1f61d6ae15693d38d77a3333041757be9257ea5",
+      "raw": "d434a20dd0c66350fadceac6ea4f6e3d73bd9769e51195083efc628ed8170057"
+    },
+    "phase102_pairwise_synergy_results.json": {
+      "canonical": "152003197716bff38e552b3b51754df6dbfe4c6dc9f93326c3a55de594e5a6c3",
+      "raw": "9a5c70318085c8d6d1a7ad82a59fb631abda524926288c46cb0da30a7cd47268"
+    },
+    "phase105_minimal_rescue_motif_results.json": {
+      "canonical": "982eef2e0341d5630c170d14893e6839b6681162dc68cd16db9c20d45d976353",
+      "raw": "9c56da0916c7a7125c3581f30d685038b4fa42b9c27ae6d1b35448cbbfb59b24"
+    },
+    "phase106_minimal_rescue_qubo_models.jsonl": {
+      "sha256": "d6c813602e914b8863d248d47d7cecfcd498172ba2c3831441b750d5203c82ab"
+    }
+  },
+  "status": "AMBIENT_GEOMETRY_CONDITIONED_RESCUE_ANALYSIS_VERIFIED"
+}
