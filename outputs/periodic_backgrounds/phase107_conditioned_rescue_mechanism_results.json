@@ -1,0 +1,797 @@
+{
+  "artifact_prefix": "phase107",
+  "phase": 108,
+  "primary": {
+    "empirically_variable_motifs": [
+      "K2",
+      "K2+I"
+    ],
+    "instance_count": 265,
+    "instance_multiplicity": {
+      "distribution": {
+        "1": 87,
+        "10": 10,
+        "11": 4,
+        "12": 4,
+        "14": 2,
+        "15": 4,
+        "17": 4,
+        "18": 4,
+        "19": 1,
+        "2": 68,
+        "21": 1,
+        "22": 2,
+        "23": 2,
+        "25": 4,
+        "26": 5,
+        "28": 1,
+        "3": 12,
+        "31": 2,
+        "4": 10,
+        "42": 1,
+        "5": 15,
+        "8": 8,
+        "9": 14
+      },
+      "instance_count": 265,
+      "rescues_per_instance": {
+        "count": 265,
+        "max": 42,
+        "mean": 5.569811320754717,
+        "median": 2,
+        "min": 1
+      }
+    },
+    "mechanism_counts": {
+      "EXTERNAL_ATTACHMENT_RESCUE": 931,
+      "INTERNAL_EDGE_DEPENDENT_RESCUE": 545
+    },
+    "mechanism_label_matches_internal_edge_required": true,
+    "motif_catalog": [
+      {
+        "by_metric": {
+          "kappa": {
+            "cell_classification": "LOGICALLY_FORCED",
+            "internal_proportion": 0.0,
+            "mechanism_counts": {
+              "EXTERNAL_ATTACHMENT_RESCUE": 347,
+              "INTERNAL_EDGE_DEPENDENT_RESCUE": 0
+            },
+            "total": 347
+          },
+          "lambda": {
+            "cell_classification": "LOGICALLY_FORCED",
+            "internal_proportion": 0.0,
+            "mechanism_counts": {
+              "EXTERNAL_ATTACHMENT_RESCUE": 354,
+              "INTERNAL_EDGE_DEPENDENT_RESCUE": 0
+            },
+            "total": 354
+          }
+        },
+        "cardinality": 2,
+        "cell_classification": "LOGICALLY_FORCED",
+        "internal_edge_count": 0,
+        "internal_proportion": 0.0,
+        "mechanism_counts": {
+          "EXTERNAL_ATTACHMENT_RESCUE": 701,
+          "INTERNAL_EDGE_DEPENDENT_RESCUE": 0
+        },
+        "motif": "2I",
+        "total": 701
+      },
+      {
+        "by_metric": {
+          "kappa": {
+            "cell_classification": "EMPIRICALLY_VARIABLE",
+            "internal_proportion": 0.7757009345794392,
+            "mechanism_counts": {
+              "EXTERNAL_ATTACHMENT_RESCUE": 24,
+              "INTERNAL_EDGE_DEPENDENT_RESCUE": 83
+            },
+            "total": 107
+          },
+          "lambda": {
+            "cell_classification": "EMPIRICALLY_VARIABLE",
+            "internal_proportion": 0.7413793103448276,
+            "mechanism_counts": {
+              "EXTERNAL_ATTACHMENT_RESCUE": 30,
+              "INTERNAL_EDGE_DEPENDENT_RESCUE": 86
+            },
+            "total": 116
+          }
+        },
+        "cardinality": 2,
+        "cell_classification": "EMPIRICALLY_VARIABLE",
+        "internal_edge_count": 1,
+        "internal_proportion": 0.757847533632287,
+        "mechanism_counts": {
+          "EXTERNAL_ATTACHMENT_RESCUE": 54,
+          "INTERNAL_EDGE_DEPENDENT_RESCUE": 169
+        },
+        "motif": "K2",
+        "total": 223
+      },
+      {
+        "by_metric": {
+          "kappa": {
+            "cell_classification": "LOGICALLY_FORCED",
+            "internal_proportion": 0.0,
+            "mechanism_counts": {
+              "EXTERNAL_ATTACHMENT_RESCUE": 72,
+              "INTERNAL_EDGE_DEPENDENT_RESCUE": 0
+            },
+            "total": 72
+          },
+          "lambda": {
+            "cell_classification": "LOGICALLY_FORCED",
+            "internal_proportion": 0.0,
+            "mechanism_counts": {
+              "EXTERNAL_ATTACHMENT_RESCUE": 82,
+              "INTERNAL_EDGE_DEPENDENT_RESCUE": 0
+            },
+            "total": 82
+          }
+        },
+        "cardinality": 3,
+        "cell_classification": "LOGICALLY_FORCED",
+        "internal_edge_count": 0,
+        "internal_proportion": 0.0,
+        "mechanism_counts": {
+          "EXTERNAL_ATTACHMENT_RESCUE": 154,
+          "INTERNAL_EDGE_DEPENDENT_RESCUE": 0
+        },
+        "motif": "3I",
+        "total": 154
+      },
+      {
+        "by_metric": {
+          "kappa": {
+            "cell_classification": "EMPIRICALLY_VARIABLE",
+            "internal_proportion": 0.7727272727272727,
+            "mechanism_counts": {
+              "EXTERNAL_ATTACHMENT_RESCUE": 10,
+              "INTERNAL_EDGE_DEPENDENT_RESCUE": 34
+            },
+            "total": 44
+          },
+          "lambda": {
+            "cell_classification": "EMPIRICALLY_VARIABLE",
+            "internal_proportion": 0.7692307692307693,
+            "mechanism_counts": {
+              "EXTERNAL_ATTACHMENT_RESCUE": 12,
+              "INTERNAL_EDGE_DEPENDENT_RESCUE": 40
+            },
+            "total": 52
+          }
+        },
+        "cardinality": 3,
+        "cell_classification": "EMPIRICALLY_VARIABLE",
+        "internal_edge_count": 1,
+        "internal_proportion": 0.7708333333333334,
+        "mechanism_counts": {
+          "EXTERNAL_ATTACHMENT_RESCUE": 22,
+          "INTERNAL_EDGE_DEPENDENT_RESCUE": 74
+        },
+        "motif": "K2+I",
+        "total": 96
+      },
+      {
+        "by_metric": {
+          "kappa": {
+            "cell_classification": "OBSERVED_COMPLETE_SEPARATION",
+            "internal_proportion": 1.0,
+            "mechanism_counts": {
+              "EXTERNAL_ATTACHMENT_RESCUE": 0,
+              "INTERNAL_EDGE_DEPENDENT_RESCUE": 64
+            },
+            "total": 64
+          },
+          "lambda": {
+            "cell_classification": "OBSERVED_COMPLETE_SEPARATION",
+            "internal_proportion": 1.0,
+            "mechanism_counts": {
+              "EXTERNAL_ATTACHMENT_RESCUE": 0,
+              "INTERNAL_EDGE_DEPENDENT_RESCUE": 58
+            },
+            "total": 58
+          }
+        },
+        "cardinality": 3,
+        "cell_classification": "OBSERVED_COMPLETE_SEPARATION",
+        "internal_edge_count": 2,
+        "internal_proportion": 1.0,
+        "mechanism_counts": {
+          "EXTERNAL_ATTACHMENT_RESCUE": 0,
+          "INTERNAL_EDGE_DEPENDENT_RESCUE": 122
+        },
+        "motif": "P3",
+        "total": 122
+      },
+      {
+        "by_metric": {
+          "kappa": {
+            "cell_classification": "ZERO_OBSERVED",
+            "internal_proportion": null,
+            "mechanism_counts": {
+              "EXTERNAL_ATTACHMENT_RESCUE": 0,
+              "INTERNAL_EDGE_DEPENDENT_RESCUE": 0
+            },
+            "total": 0
+          },
+          "lambda": {
+            "cell_classification": "ZERO_OBSERVED",
+            "internal_proportion": null,
+            "mechanism_counts": {
+              "EXTERNAL_ATTACHMENT_RESCUE": 0,
+              "INTERNAL_EDGE_DEPENDENT_RESCUE": 0
+            },
+            "total": 0
+          }
+        },
+        "cardinality": 4,
+        "cell_classification": "ZERO_OBSERVED",
+        "internal_edge_count": 0,
+        "internal_proportion": null,
+        "mechanism_counts": {
+          "EXTERNAL_ATTACHMENT_RESCUE": 0,
+          "INTERNAL_EDGE_DEPENDENT_RESCUE": 0
+        },
+        "motif": "4I",
+        "total": 0
+      },
+      {
+        "by_metric": {
+          "kappa": {
+            "cell_classification": "OBSERVED_COMPLETE_SEPARATION",
+            "internal_proportion": 1.0,
+            "mechanism_counts": {
+              "EXTERNAL_ATTACHMENT_RESCUE": 0,
+              "INTERNAL_EDGE_DEPENDENT_RESCUE": 27
+            },
+            "total": 27
+          },
+          "lambda": {
+            "cell_classification": "OBSERVED_COMPLETE_SEPARATION",
+            "internal_proportion": 1.0,
+            "mechanism_counts": {
+              "EXTERNAL_ATTACHMENT_RESCUE": 0,
+              "INTERNAL_EDGE_DEPENDENT_RESCUE": 8
+            },
+            "total": 8
+          }
+        },
+        "cardinality": 4,
+        "cell_classification": "OBSERVED_COMPLETE_SEPARATION",
+        "internal_edge_count": 1,
+        "internal_proportion": 1.0,
+        "mechanism_counts": {
+          "EXTERNAL_ATTACHMENT_RESCUE": 0,
+          "INTERNAL_EDGE_DEPENDENT_RESCUE": 35
+        },
+        "motif": "K2+2I",
+        "total": 35
+      },
+      {
+        "by_metric": {
+          "kappa": {
+            "cell_classification": "OBSERVED_COMPLETE_SEPARATION",
+            "internal_proportion": 1.0,
+            "mechanism_counts": {
+              "EXTERNAL_ATTACHMENT_RESCUE": 0,
+              "INTERNAL_EDGE_DEPENDENT_RESCUE": 10
+            },
+            "total": 10
+          },
+          "lambda": {
+            "cell_classification": "OBSERVED_COMPLETE_SEPARATION",
+            "internal_proportion": 1.0,
+            "mechanism_counts": {
+              "EXTERNAL_ATTACHMENT_RESCUE": 0,
+              "INTERNAL_EDGE_DEPENDENT_RESCUE": 38
+            },
+            "total": 38
+          }
+        },
+        "cardinality": 4,
+        "cell_classification": "OBSERVED_COMPLETE_SEPARATION",
+        "internal_edge_count": 2,
+        "internal_proportion": 1.0,
+        "mechanism_counts": {
+          "EXTERNAL_ATTACHMENT_RESCUE": 0,
+          "INTERNAL_EDGE_DEPENDENT_RESCUE": 48
+        },
+        "motif": "2K2",
+        "total": 48
+      },
+      {
+        "by_metric": {
+          "kappa": {
+            "cell_classification": "OBSERVED_COMPLETE_SEPARATION",
+            "internal_proportion": 1.0,
+            "mechanism_counts": {
+              "EXTERNAL_ATTACHMENT_RESCUE": 0,
+              "INTERNAL_EDGE_DEPENDENT_RESCUE": 40
+            },
+            "total": 40
+          },
+          "lambda": {
+            "cell_classification": "OBSERVED_COMPLETE_SEPARATION",
+            "internal_proportion": 1.0,
+            "mechanism_counts": {
+              "EXTERNAL_ATTACHMENT_RESCUE": 0,
+              "INTERNAL_EDGE_DEPENDENT_RESCUE": 27
+            },
+            "total": 27
+          }
+        },
+        "cardinality": 4,
+        "cell_classification": "OBSERVED_COMPLETE_SEPARATION",
+        "internal_edge_count": 2,
+        "internal_proportion": 1.0,
+        "mechanism_counts": {
+          "EXTERNAL_ATTACHMENT_RESCUE": 0,
+          "INTERNAL_EDGE_DEPENDENT_RESCUE": 67
+        },
+        "motif": "P3+I",
+        "total": 67
+      },
+      {
+        "by_metric": {
+          "kappa": {
+            "cell_classification": "ZERO_OBSERVED",
+            "internal_proportion": null,
+            "mechanism_counts": {
+              "EXTERNAL_ATTACHMENT_RESCUE": 0,
+              "INTERNAL_EDGE_DEPENDENT_RESCUE": 0
+            },
+            "total": 0
+          },
+          "lambda": {
+            "cell_classification": "OBSERVED_COMPLETE_SEPARATION",
+            "internal_proportion": 1.0,
+            "mechanism_counts": {
+              "EXTERNAL_ATTACHMENT_RESCUE": 0,
+              "INTERNAL_EDGE_DEPENDENT_RESCUE": 30
+            },
+            "total": 30
+          }
+        },
+        "cardinality": 4,
+        "cell_classification": "OBSERVED_COMPLETE_SEPARATION",
+        "internal_edge_count": 3,
+        "internal_proportion": 1.0,
+        "mechanism_counts": {
+          "EXTERNAL_ATTACHMENT_RESCUE": 0,
+          "INTERNAL_EDGE_DEPENDENT_RESCUE": 30
+        },
+        "motif": "P4",
+        "total": 30
+      },
+      {
+        "by_metric": {
+          "kappa": {
+            "cell_classification": "ZERO_OBSERVED",
+            "internal_proportion": null,
+            "mechanism_counts": {
+              "EXTERNAL_ATTACHMENT_RESCUE": 0,
+              "INTERNAL_EDGE_DEPENDENT_RESCUE": 0
+            },
+            "total": 0
+          },
+          "lambda": {
+            "cell_classification": "ZERO_OBSERVED",
+            "internal_proportion": null,
+            "mechanism_counts": {
+              "EXTERNAL_ATTACHMENT_RESCUE": 0,
+              "INTERNAL_EDGE_DEPENDENT_RESCUE": 0
+            },
+            "total": 0
+          }
+        },
+        "cardinality": 4,
+        "cell_classification": "ZERO_OBSERVED",
+        "internal_edge_count": 3,
+        "internal_proportion": null,
+        "mechanism_counts": {
+          "EXTERNAL_ATTACHMENT_RESCUE": 0,
+          "INTERNAL_EDGE_DEPENDENT_RESCUE": 0
+        },
+        "motif": "K1_3",
+        "total": 0
+      },
+      {
+        "by_metric": {
+          "kappa": {
+            "cell_classification": "ZERO_OBSERVED",
+            "internal_proportion": null,
+            "mechanism_counts": {
+              "EXTERNAL_ATTACHMENT_RESCUE": 0,
+              "INTERNAL_EDGE_DEPENDENT_RESCUE": 0
+            },
+            "total": 0
+          },
+          "lambda": {
+            "cell_classification": "ZERO_OBSERVED",
+            "internal_proportion": null,
+            "mechanism_counts": {
+              "EXTERNAL_ATTACHMENT_RESCUE": 0,
+              "INTERNAL_EDGE_DEPENDENT_RESCUE": 0
+            },
+            "total": 0
+          }
+        },
+        "cardinality": 4,
+        "cell_classification": "ZERO_OBSERVED",
+        "internal_edge_count": 4,
+        "internal_proportion": null,
+        "mechanism_counts": {
+          "EXTERNAL_ATTACHMENT_RESCUE": 0,
+          "INTERNAL_EDGE_DEPENDENT_RESCUE": 0
+        },
+        "motif": "C4",
+        "total": 0
+      }
+    ],
+    "rescue_count": 1476,
+    "unit": "minimal_rescue",
+    "variable_strata": {
+      "K2": {
+        "by_metric": {
+          "kappa": {
+            "instance_count": 48,
+            "internal_proportion": 0.7757009345794392,
+            "mechanism_counts": {
+              "EXTERNAL_ATTACHMENT_RESCUE": 24,
+              "INTERNAL_EDGE_DEPENDENT_RESCUE": 83
+            },
+            "total": 107
+          },
+          "lambda": {
+            "instance_count": 53,
+            "internal_proportion": 0.7413793103448276,
+            "mechanism_counts": {
+              "EXTERNAL_ATTACHMENT_RESCUE": 30,
+              "INTERNAL_EDGE_DEPENDENT_RESCUE": 86
+            },
+            "total": 116
+          }
+        },
+        "cardinality": 2,
+        "instance_count": 101,
+        "lambda_minus_kappa_internal_proportion": -0.0343216242346116,
+        "node_count_by_mechanism": {
+          "EXTERNAL_ATTACHMENT_RESCUE": {
+            "count": 54,
+            "max": 149,
+            "mean": 120.18518518518519,
+            "median": 127.0,
+            "min": 77
+          },
+          "INTERNAL_EDGE_DEPENDENT_RESCUE": {
+            "count": 169,
+            "max": 149,
+            "mean": 94.7810650887574,
+            "median": 109,
+            "min": 26
+          }
+        },
+        "odds_ratio": {
+          "haldane_anscombe_corrected": false,
+          "lambda_vs_kappa": 0.8289156626506025
+        },
+        "total": 223
+      },
+      "K2+I": {
+        "by_metric": {
+          "kappa": {
+            "instance_count": 22,
+            "internal_proportion": 0.7727272727272727,
+            "mechanism_counts": {
+              "EXTERNAL_ATTACHMENT_RESCUE": 10,
+              "INTERNAL_EDGE_DEPENDENT_RESCUE": 34
+            },
+            "total": 44
+          },
+          "lambda": {
+            "instance_count": 28,
+            "internal_proportion": 0.7692307692307693,
+            "mechanism_counts": {
+              "EXTERNAL_ATTACHMENT_RESCUE": 12,
+              "INTERNAL_EDGE_DEPENDENT_RESCUE": 40
+            },
+            "total": 52
+          }
+        },
+        "cardinality": 3,
+        "instance_count": 50,
+        "lambda_minus_kappa_internal_proportion": -0.0034965034965034336,
+        "node_count_by_mechanism": {
+          "EXTERNAL_ATTACHMENT_RESCUE": {
+            "count": 22,
+            "max": 102,
+            "mean": 96.9090909090909,
+            "median": 95.0,
+            "min": 95
+          },
+          "INTERNAL_EDGE_DEPENDENT_RESCUE": {
+            "count": 74,
+            "max": 103,
+            "mean": 61.054054054054056,
+            "median": 74.0,
+            "min": 8
+          }
+        },
+        "odds_ratio": {
+          "haldane_anscombe_corrected": false,
+          "lambda_vs_kappa": 0.9803921568627451
+        },
+        "total": 96
+      }
+    },
+    "zero_observed_motifs": [
+      "4I",
+      "K1_3",
+      "C4"
+    ]
+  },
+  "scope": {
+    "causal_claim": false,
+    "interpretation": "exact_census_of_certified_rescues",
+    "population_generalization": false,
+    "quantum_hardware_used": false,
+    "qubo_models_used_as_analytic_source": false
+  },
+  "secondary_cut_analysis": {
+    "by_motif_metric_mechanism": [
+      {
+        "cut_counts": {
+          "DISTRIBUTED_EXTERNAL": 195,
+          "INDIVIDUAL": 692,
+          "INTERNAL_EDGE_ENABLED": 0
+        },
+        "mechanism_label": "EXTERNAL_ATTACHMENT_RESCUE",
+        "metric": "kappa",
+        "motif": "2I"
+      },
+      {
+        "cut_counts": {
+          "DISTRIBUTED_EXTERNAL": 187,
+          "INDIVIDUAL": 692,
+          "INTERNAL_EDGE_ENABLED": 0
+        },
+        "mechanism_label": "EXTERNAL_ATTACHMENT_RESCUE",
+        "metric": "lambda",
+        "motif": "2I"
+      },
+      {
+        "cut_counts": {
+          "DISTRIBUTED_EXTERNAL": 1,
+          "INDIVIDUAL": 4,
+          "INTERNAL_EDGE_ENABLED": 15
+        },
+        "mechanism_label": "INTERNAL_EDGE_DEPENDENT_RESCUE",
+        "metric": "kappa",
+        "motif": "2K2"
+      },
+      {
+        "cut_counts": {
+          "DISTRIBUTED_EXTERNAL": 0,
+          "INDIVIDUAL": 0,
+          "INTERNAL_EDGE_ENABLED": 76
+        },
+        "mechanism_label": "INTERNAL_EDGE_DEPENDENT_RESCUE",
+        "metric": "lambda",
+        "motif": "2K2"
+      },
+      {
+        "cut_counts": {
+          "DISTRIBUTED_EXTERNAL": 24,
+          "INDIVIDUAL": 272,
+          "INTERNAL_EDGE_ENABLED": 0
+        },
+        "mechanism_label": "EXTERNAL_ATTACHMENT_RESCUE",
+        "metric": "kappa",
+        "motif": "3I"
+      },
+      {
+        "cut_counts": {
+          "DISTRIBUTED_EXTERNAL": 32,
+          "INDIVIDUAL": 264,
+          "INTERNAL_EDGE_ENABLED": 0
+        },
+        "mechanism_label": "EXTERNAL_ATTACHMENT_RESCUE",
+        "metric": "lambda",
+        "motif": "3I"
+      },
+      {
+        "cut_counts": {
+          "DISTRIBUTED_EXTERNAL": 0,
+          "INDIVIDUAL": 74,
+          "INTERNAL_EDGE_ENABLED": 0
+        },
+        "mechanism_label": "EXTERNAL_ATTACHMENT_RESCUE",
+        "metric": "kappa",
+        "motif": "K2"
+      },
+      {
+        "cut_counts": {
+          "DISTRIBUTED_EXTERNAL": 0,
+          "INDIVIDUAL": 44,
+          "INTERNAL_EDGE_ENABLED": 152
+        },
+        "mechanism_label": "INTERNAL_EDGE_DEPENDENT_RESCUE",
+        "metric": "kappa",
+        "motif": "K2"
+      },
+      {
+        "cut_counts": {
+          "DISTRIBUTED_EXTERNAL": 4,
+          "INDIVIDUAL": 84,
+          "INTERNAL_EDGE_ENABLED": 0
+        },
+        "mechanism_label": "EXTERNAL_ATTACHMENT_RESCUE",
+        "metric": "lambda",
+        "motif": "K2"
+      },
+      {
+        "cut_counts": {
+          "DISTRIBUTED_EXTERNAL": 0,
+          "INDIVIDUAL": 51,
+          "INTERNAL_EDGE_ENABLED": 179
+        },
+        "mechanism_label": "INTERNAL_EDGE_DEPENDENT_RESCUE",
+        "metric": "lambda",
+        "motif": "K2"
+      },
+      {
+        "cut_counts": {
+          "DISTRIBUTED_EXTERNAL": 4,
+          "INDIVIDUAL": 12,
+          "INTERNAL_EDGE_ENABLED": 30
+        },
+        "mechanism_label": "INTERNAL_EDGE_DEPENDENT_RESCUE",
+        "metric": "kappa",
+        "motif": "K2+2I"
+      },
+      {
+        "cut_counts": {
+          "DISTRIBUTED_EXTERNAL": 0,
+          "INDIVIDUAL": 4,
+          "INTERNAL_EDGE_ENABLED": 12
+        },
+        "mechanism_label": "INTERNAL_EDGE_DEPENDENT_RESCUE",
+        "metric": "lambda",
+        "motif": "K2+2I"
+      },
+      {
+        "cut_counts": {
+          "DISTRIBUTED_EXTERNAL": 8,
+          "INDIVIDUAL": 10,
+          "INTERNAL_EDGE_ENABLED": 0
+        },
+        "mechanism_label": "EXTERNAL_ATTACHMENT_RESCUE",
+        "metric": "kappa",
+        "motif": "K2+I"
+      },
+      {
+        "cut_counts": {
+          "DISTRIBUTED_EXTERNAL": 0,
+          "INDIVIDUAL": 44,
+          "INTERNAL_EDGE_ENABLED": 58
+        },
+        "mechanism_label": "INTERNAL_EDGE_DEPENDENT_RESCUE",
+        "metric": "kappa",
+        "motif": "K2+I"
+      },
+      {
+        "cut_counts": {
+          "DISTRIBUTED_EXTERNAL": 16,
+          "INDIVIDUAL": 16,
+          "INTERNAL_EDGE_ENABLED": 0
+        },
+        "mechanism_label": "EXTERNAL_ATTACHMENT_RESCUE",
+        "metric": "lambda",
+        "motif": "K2+I"
+      },
+      {
+        "cut_counts": {
+          "DISTRIBUTED_EXTERNAL": 4,
+          "INDIVIDUAL": 56,
+          "INTERNAL_EDGE_ENABLED": 56
+        },
+        "mechanism_label": "INTERNAL_EDGE_DEPENDENT_RESCUE",
+        "metric": "lambda",
+        "motif": "K2+I"
+      },
+      {
+        "cut_counts": {
+          "DISTRIBUTED_EXTERNAL": 0,
+          "INDIVIDUAL": 0,
+          "INTERNAL_EDGE_ENABLED": 82
+        },
+        "mechanism_label": "INTERNAL_EDGE_DEPENDENT_RESCUE",
+        "metric": "kappa",
+        "motif": "P3"
+      },
+      {
+        "cut_counts": {
+          "DISTRIBUTED_EXTERNAL": 4,
+          "INDIVIDUAL": 4,
+          "INTERNAL_EDGE_ENABLED": 98
+        },
+        "mechanism_label": "INTERNAL_EDGE_DEPENDENT_RESCUE",
+        "metric": "lambda",
+        "motif": "P3"
+      },
+      {
+        "cut_counts": {
+          "DISTRIBUTED_EXTERNAL": 11,
+          "INDIVIDUAL": 23,
+          "INTERNAL_EDGE_ENABLED": 54
+        },
+        "mechanism_label": "INTERNAL_EDGE_DEPENDENT_RESCUE",
+        "metric": "kappa",
+        "motif": "P3+I"
+      },
+      {
+        "cut_counts": {
+          "DISTRIBUTED_EXTERNAL": 8,
+          "INDIVIDUAL": 19,
+          "INTERNAL_EDGE_ENABLED": 35
+        },
+        "mechanism_label": "INTERNAL_EDGE_DEPENDENT_RESCUE",
+        "metric": "lambda",
+        "motif": "P3+I"
+      },
+      {
+        "cut_counts": {
+          "DISTRIBUTED_EXTERNAL": 0,
+          "INDIVIDUAL": 0,
+          "INTERNAL_EDGE_ENABLED": 74
+        },
+        "mechanism_label": "INTERNAL_EDGE_DEPENDENT_RESCUE",
+        "metric": "lambda",
+        "motif": "P4"
+      }
+    ],
+    "cut_count": 3784,
+    "cut_counts": {
+      "DISTRIBUTED_EXTERNAL": 498,
+      "INDIVIDUAL": 2365,
+      "INTERNAL_EDGE_ENABLED": 921
+    },
+    "cuts_per_rescue": {
+      "count": 1476,
+      "max": 6,
+      "mean": 2.5636856368563685,
+      "median": 2.0,
+      "min": 1
+    },
+    "rescues_with_multiple_cut_categories": 223,
+    "unit": "rescue_x_critical_cut"
+  },
+  "sources": {
+    "phase102_pairwise_synergy_results.json": {
+      "canonical": "152003197716bff38e552b3b51754df6dbfe4c6dc9f93326c3a55de594e5a6c3",
+      "raw": "9a5c70318085c8d6d1a7ad82a59fb631abda524926288c46cb0da30a7cd47268"
+    },
+    "phase103_triple_synergy_results.json": {
+      "canonical": "ce00fc3085c7f19f0193d2d19939b6fa0e196cb8d26bcfc0c189319e4ae667ce",
+      "raw": "7487631d098876d51c24eaba75c30dfa693341833f8c85b8170a75ff647d0200"
+    },
+    "phase104_quadruple_synergy_results.json": {
+      "canonical": "37e9594fb0029d19a4926ac44c0e518ddaf84cf896f784795ca4b734b8d16bf1",
+      "raw": "35c83d1bd7be565d9ebb61cafc6b618ce9efdbfb1799bbd72061f08bd9d5f28c"
+    },
+    "phase105_minimal_rescue_motif_manifest.json": {
+      "canonical": "45135b64e6936865298a203d03493aeffe8911b50b564af8a9e6d886bc14ba6c",
+      "raw": "d092aa050942967b4da15651841e20a4d6521f57a209f676695c17a9c5d4bdc2"
+    },
+    "phase105_minimal_rescue_motif_results.json": {
+      "canonical": "982eef2e0341d5630c170d14893e6839b6681162dc68cd16db9c20d45d976353",
+      "raw": "9c56da0916c7a7125c3581f30d685038b4fa42b9c27ae6d1b35448cbbfb59b24"
+    }
+  },
+  "status": "CONDITIONED_MINIMAL_RESCUE_MECHANISM_ATLAS_VERIFIED"
+}

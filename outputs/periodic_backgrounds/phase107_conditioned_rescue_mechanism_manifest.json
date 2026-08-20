@@ -1,0 +1,38 @@
+{
+  "artifact_prefix": "phase107",
+  "outputs": {
+    "phase107_conditioned_rescue_mechanism_report.md": {
+      "raw": "b9e21d7ed29c9b1c74953e08bc735f35d44d0ee07e78fce4bea27488e7302224"
+    },
+    "phase107_conditioned_rescue_mechanism_results.json": {
+      "canonical": "288abe40606b2a5cff09e802eacf8eeea24d6ed0f3288d40681047e69b95ba09",
+      "raw": "cc7521f112a35c8cf2aa284c8fe700ef63dbbbd4699a6009b10b966f1eadfee4"
+    }
+  },
+  "phase": 108,
+  "runner": "analyze_phase107_conditioned_rescue_mechanisms.py",
+  "runner_normalized_sha256": "6934063938a56c5aad9933e2d4c67359b6679ebf8ca1112507f6d6fb7c1d4288",
+  "sources": {
+    "phase102_pairwise_synergy_results.json": {
+      "canonical": "152003197716bff38e552b3b51754df6dbfe4c6dc9f93326c3a55de594e5a6c3",
+      "raw": "9a5c70318085c8d6d1a7ad82a59fb631abda524926288c46cb0da30a7cd47268"
+    },
+    "phase103_triple_synergy_results.json": {
+      "canonical": "ce00fc3085c7f19f0193d2d19939b6fa0e196cb8d26bcfc0c189319e4ae667ce",
+      "raw": "7487631d098876d51c24eaba75c30dfa693341833f8c85b8170a75ff647d0200"
+    },
+    "phase104_quadruple_synergy_results.json": {
+      "canonical": "37e9594fb0029d19a4926ac44c0e518ddaf84cf896f784795ca4b734b8d16bf1",
+      "raw": "35c83d1bd7be565d9ebb61cafc6b618ce9efdbfb1799bbd72061f08bd9d5f28c"
+    },
+    "phase105_minimal_rescue_motif_manifest.json": {
+      "canonical": "45135b64e6936865298a203d03493aeffe8911b50b564af8a9e6d886bc14ba6c",
+      "raw": "d092aa050942967b4da15651841e20a4d6521f57a209f676695c17a9c5d4bdc2"
+    },
+    "phase105_minimal_rescue_motif_results.json": {
+      "canonical": "982eef2e0341d5630c170d14893e6839b6681162dc68cd16db9c20d45d976353",
+      "raw": "9c56da0916c7a7125c3581f30d685038b4fa42b9c27ae6d1b35448cbbfb59b24"
+    }
+  },
+  "status": "CONDITIONED_MINIMAL_RESCUE_MECHANISM_ATLAS_VERIFIED"
+}
