@@ -1,0 +1,26 @@
+{
+  "artifact_prefix": "phase110",
+  "outputs": {
+    "phase110_internal_loio_a_g_report.md": {
+      "raw": "8f8814f289b28a878296c502ead41f896e4da0833f31b6f48ee47bb1dbc8ba2e"
+    },
+    "phase110_internal_loio_a_g_results.json": {
+      "canonical": "6a8223b20905eafb92cb6fa5727574587d4f4e2313a414e274500d789fd75d80",
+      "raw": "c135f9d0c63b0baa5ffd0a8c9d4c16a9f258482fbe1ac560a3eff076feb76c0d"
+    }
+  },
+  "phase": 111,
+  "runner": "analyze_phase110_internal_loio_a_g.py",
+  "runner_normalized_sha256": "50101c5ff66a30608705c2b389f00214f51195c9fb1ab95feadf8bbe0de5492d",
+  "sources": {
+    "phase105_minimal_rescue_motif_results.json": {
+      "canonical": "982eef2e0341d5630c170d14893e6839b6681162dc68cd16db9c20d45d976353",
+      "raw": "9c56da0916c7a7125c3581f30d685038b4fa42b9c27ae6d1b35448cbbfb59b24"
+    },
+    "phase109_fixed_budget_hamming_partition_results.json": {
+      "canonical": "dcf3d5847af14b3128e88dac765e491900340ddf4587b50281f42ac8ade147b1",
+      "raw": "ba5cf94330ce5c27c6b7c4420f910c637debac1273b9b25d3ad4fd787c141d04"
+    }
+  },
+  "status": "INTERNAL_LOIO_CLASSIFICATION_POTENTIAL_A_G_VERIFIED"
+}
