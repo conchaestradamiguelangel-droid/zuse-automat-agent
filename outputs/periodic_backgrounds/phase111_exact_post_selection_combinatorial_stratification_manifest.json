@@ -1,0 +1,30 @@
+{
+  "artifact_prefix": "phase111",
+  "outputs": {
+    "phase111_exact_post_selection_combinatorial_stratification_report.md": {
+      "raw": "4f7915d673ba6c590acf801ddb716984c546c91177010af7b4224f2a5e280da2"
+    },
+    "phase111_exact_post_selection_combinatorial_stratification_results.json": {
+      "canonical": "7513f3cb1b6ecd125c13ec61ab891059a8981547c65c119bb8cc522a4d8c56f5",
+      "raw": "0a0024fa5ac2f3ef2c879ecd2e603b86a7a973a0fc0d2057264558415a196a6b"
+    }
+  },
+  "phase": 112,
+  "runner": "analyze_phase111_exact_post_selection_combinatorial_stratification.py",
+  "runner_normalized_sha256": "229696f59e7c047eb07c365e0200ec7b2dc64fb5ede8c9d483b3783c91b63f0b",
+  "sources": {
+    "phase105_minimal_rescue_motif_results.json": {
+      "canonical": "982eef2e0341d5630c170d14893e6839b6681162dc68cd16db9c20d45d976353",
+      "raw": "9c56da0916c7a7125c3581f30d685038b4fa42b9c27ae6d1b35448cbbfb59b24"
+    },
+    "phase109_fixed_budget_hamming_partition_results.json": {
+      "canonical": "dcf3d5847af14b3128e88dac765e491900340ddf4587b50281f42ac8ade147b1",
+      "raw": "ba5cf94330ce5c27c6b7c4420f910c637debac1273b9b25d3ad4fd787c141d04"
+    },
+    "phase110_internal_loio_a_g_results.json": {
+      "canonical": "6a8223b20905eafb92cb6fa5727574587d4f4e2313a414e274500d789fd75d80",
+      "raw": "c135f9d0c63b0baa5ffd0a8c9d4c16a9f258482fbe1ac560a3eff076feb76c0d"
+    }
+  },
+  "status": "EXACT_POST_SELECTION_COMBINATORIAL_STRATIFICATION_CALIBRATED"
+}
