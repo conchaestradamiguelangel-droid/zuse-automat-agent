@@ -1,5 +1,20 @@
 # ZUSE preprint
 
+Candidate under independent review:
+
+- **Candidate version:** v1.38
+- **Candidate date:** 2026-08-22
+- **Candidate DOI:** pending; no DOI has been reserved or fabricated
+- **Scope:** Fases 108--112, consolidated mechanism-conditioned Hamming geometry
+
+The candidate adds one main scientific result: an exact fixed-budget geometric
+partition for 122 rescues in 24 mixed `K2` instances. Fases 111--112 are
+retained as limitation and post-selection audit, not as independent headline
+discoveries.
+
+The published record below remains the source of truth until v1.38 is
+independently reviewed and published.
+
 Published preprint:
 
 - **Title:** ZUSE Automat Agent: Empirical Law Discovery in Elementary Cellular Automata

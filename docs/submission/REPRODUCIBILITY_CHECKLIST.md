@@ -1,4 +1,4 @@
-# ZUSE v1.37 Reproducibility Checklist
+# ZUSE v1.38 Candidate Reproducibility Checklist
 
 Audience: reviewers and editors. This is a claim-to-artifact map, not a developer manual.
 
@@ -238,6 +238,105 @@ Expected signature:
 - Coefficient, energy, and reconciliation failures: `0`.
 - No quantum hardware, annealing, or advantage claim.
 
+## R9 - Conditioned Rescue Mechanism Atlas
+
+Paper claim: only `K2` and `K2+I` contain both exact mechanism labels among
+the 1,476 frozen minimal rescues.
+
+Primary script:
+
+```powershell
+python outputs\periodic_backgrounds\analyze_phase107_conditioned_rescue_mechanisms.py
+```
+
+Primary artifacts:
+
+- `outputs/periodic_backgrounds/phase107_conditioned_rescue_mechanism_results.json`
+- `outputs/periodic_backgrounds/phase107_conditioned_rescue_mechanism_report.md`
+- `outputs/periodic_backgrounds/phase107_conditioned_rescue_mechanism_manifest.json`
+
+Expected signature: 1,476 rescues, 265 instances, 931 external attachment,
+545 internal-edge dependent, 12 motif rows, zero reconciliation failures.
+
+## R10 - Ambient K2 Rescue Geometry
+
+Paper claim: in 24 mixed `K2` instances, the within-instance mean difference
+in candidate-universe connectivity is `Delta_i(A_V)=-1.220833`, with signs
+`2/0/22` positive/zero/negative.
+
+Primary script:
+
+```powershell
+python outputs\periodic_backgrounds\analyze_phase108_ambient_rescue_geometry.py
+```
+
+Primary artifacts:
+
+- `outputs/periodic_backgrounds/phase108_ambient_rescue_geometry_results.json`
+- `outputs/periodic_backgrounds/phase108_ambient_rescue_geometry_report.md`
+- `outputs/periodic_backgrounds/phase108_ambient_rescue_geometry_manifest.json`
+
+## R11 - Fixed-Budget Hamming Partition
+
+Paper claim: all 122 rescues in the 24 mixed `K2` instances satisfy
+`A_V+A_G+A_R=14`; mean `Delta_i(A_G)=1.816667` and all 24 instance-level
+differences are positive.
+
+Primary script:
+
+```powershell
+python outputs\periodic_backgrounds\analyze_phase109_fixed_budget_hamming_partition.py
+```
+
+Primary artifacts:
+
+- `outputs/periodic_backgrounds/phase109_fixed_budget_hamming_partition_results.json`
+- `outputs/periodic_backgrounds/phase109_fixed_budget_hamming_partition_report.md`
+- `outputs/periodic_backgrounds/phase109_fixed_budget_hamming_partition_manifest.json`
+
+Expected signature: 223 `K2` rescues total, 122 primary rescues, 24 mixed
+instances, exact budget 14 in every primary row, signs `24/0/0` for `A_G`,
+centered descriptive correlation `-0.824731`, zero invariant failures.
+
+## R12 - Internal Classification Limitation
+
+Paper claim: `A_G` is not externally validated as a predictor. In the 24 mixed
+instances, internal LOIO weighted balanced accuracy is `0.647500` and internal
+sensitivity is `0.295000`.
+
+Primary script:
+
+```powershell
+python outputs\periodic_backgrounds\analyze_phase110_internal_loio_a_g.py
+```
+
+Primary artifacts:
+
+- `outputs/periodic_backgrounds/phase110_internal_loio_a_g_results.json`
+- `outputs/periodic_backgrounds/phase110_internal_loio_a_g_report.md`
+- `outputs/periodic_backgrounds/phase110_internal_loio_a_g_manifest.json`
+
+## R13 - Post-Selection Multiplicity Calibration
+
+This is an exploratory audit, not a confirmatory paper claim. It preserves the
+outcome-selected threshold, statistic, and tail direction as explicit scope
+flags and computes the exchangeable allocation exactly.
+
+Primary script:
+
+```powershell
+python outputs\periodic_backgrounds\analyze_phase111_exact_post_selection_combinatorial_stratification.py
+```
+
+Primary artifacts:
+
+- `outputs/periodic_backgrounds/phase111_exact_post_selection_combinatorial_stratification_results.json`
+- `outputs/periodic_backgrounds/phase111_exact_post_selection_combinatorial_stratification_report.md`
+- `outputs/periodic_backgrounds/phase111_exact_post_selection_combinatorial_stratification_manifest.json`
+
+Expected signature: 550 exact `(y,z)` cells, total mass `C(223,54)`, one
+qualifying pair `(0,24)`, and no confirmatory p-value or rejection claim.
+
 ## Runtime Notes
 
 - Unit tests and report inspection are quick.
@@ -247,6 +346,8 @@ Expected signature:
 
 ## Versioned Artifacts
 
+- Candidate v1.38 DOI: pending independent review and Zenodo publication.
+- Candidate v1.38 GitHub release: pending independent review and publication.
 - Zenodo v1.37 DOI: https://doi.org/10.5281/zenodo.21965090
 - GitHub release: https://github.com/conchaestradamiguelangel-droid/zuse-automat-agent/releases/tag/v1.37
 - Previous Zenodo v1.36 DOI: https://doi.org/10.5281/zenodo.21939732

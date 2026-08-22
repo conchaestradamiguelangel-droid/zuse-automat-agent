@@ -33,7 +33,14 @@ metric-specific minimal rescues by cut coverage and internal-edge dependence.
 Those verified rescues compile into 265 sparse unit-cost QUBO models with
 19,100 variables accumulated across independent models, 32,861 nonzero terms,
 and exactly 1,476 certified ground states. No quantum hardware is used and no
-quantum speedup or practical advantage is claimed.
+quantum speedup or practical advantage is claimed. Within the 122 rescues from
+24 `K2` instances containing both observed mechanisms, the fixed budget of 14
+external Hamming-1 incidences is allocated differently: external-attachment
+rescues have lower mean connectivity toward the period-specific candidate
+universe and higher mean connectivity toward the disjoint bridge graph than
+internal-edge-dependent rescues. The bridge-graph difference has the same sign
+in all 24 instances. This is a conditioned geometric description of the frozen
+census, not a causal or externally validated classifier.
 
 All scripts, reports, PDFs, and versioned releases are public. Claims remain
 empirical and protocol-bounded: ZUSE is a reproducible evidence engine for CA
@@ -130,7 +137,10 @@ We make the following contributions:
    metric-specific minimal rescues compile into 265 sparse unit-cost QUBOs;
    direct integer evaluation certifies exactly one ground state per rescue and
    no spurious or missing solution. This is a reusable optimization encoding,
-   not evidence of quantum advantage.
+   not evidence of quantum advantage. A conditioned audit then identifies the
+   motifs with genuine mechanism variation and, for 122 rescues in 24 mixed
+   `K2` instances, decomposes a fixed 14-incidence Hamming budget between the
+   candidate universe, the disjoint bridge graph, and the residual region.
 
 ## 2. Related Work
 
@@ -2972,6 +2982,79 @@ representation of the already verified finite rescue problem under unit node
 costs; weighted costs, larger intervention families, and hardware behavior
 remain outside scope.
 
+### 7.42 Mechanism-conditioned allocation of a fixed Hamming-incidence budget (Fases 108--112)
+
+Fase 108 conditions the 1,476 verified minimal rescues on both their frozen
+Hamming-1 motif and whether rescue survives removal of every internal edge of
+the intervention set. The binary mechanism label is therefore an exact audit
+of internal-edge dependence, not a latent class inferred from geometry. Motifs
+without internal edges are logically forced to the external-attachment label;
+three cardinality-four motifs have no observed minimal rescue; and only `K2`
+and `K2+I` contain both labels in the frozen census.
+
+| Observed motif | Rescues | External attachment | Internal-edge dependent | Classification |
+| --- | ---: | ---: | ---: | --- |
+| `2I` | 701 | 701 | 0 | forced |
+| `K2` | 223 | 54 | 169 | variable |
+| `3I` | 154 | 154 | 0 | forced |
+| `K2+I` | 96 | 22 | 74 | variable |
+| `P3` | 122 | 0 | 122 | complete separation |
+| `K2+2I` | 35 | 0 | 35 | complete separation |
+| `2K2` | 48 | 0 | 48 | complete separation |
+| `P3+I` | 67 | 0 | 67 | complete separation |
+| `P4` | 30 | 0 | 30 | complete separation |
+
+The clean within-instance comparison is the `K2` subset. It contains 223
+rescues in 101 target-period-metric instances, of which 24 instances contain
+both mechanisms (122 rescues). For a rescued pair `H={u,v}`, let `V_i` be the
+period-specific candidate universe reconstructed from the certified pair
+ledger and let `G_min` be the frozen bridge graph reconstructed from the
+earliest allowed physical level. In all 24 mixed instances, `H` is a subset of
+`V_i` and `V_i` is disjoint from `G_min`.
+
+Each endpoint of a `K2` pair has seven Hamming-1 incidences other than the
+internal edge. Define `A_V` as the total incidences from the two endpoints to
+`V_i` outside `H`, `A_G` as the incidences to `G_min`, and `A_R` as the
+unassigned residual. The disjointness gives the exact identity
+
+```text
+A_V(H) + A_G(H) + A_R(H) = 14.
+```
+
+The comparison gives every mixed instance equal weight. For each feature,
+`Delta_i` is the mean among external-attachment rescues minus the mean among
+internal-edge-dependent rescues in the same instance.
+
+| Allocation feature | Mean `Delta_i` | Median `Delta_i` | Positive / zero / negative instances |
+| --- | ---: | ---: | ---: |
+| `A_V` (candidate universe) | -1.220833 | -0.500000 | 2 / 0 / 22 |
+| `A_G` (bridge graph) | 1.816667 | 1.550000 | 24 / 0 / 0 |
+| `A_R` (residual) | -0.595833 | -0.700000 | 2 / 8 / 14 |
+
+Thus the conditioned difference is an allocation shift, not an increase in
+the total budget: external-attachment rescues allocate fewer incidences toward
+`V_i` and more toward `G_min` on average. After centering both variables within
+instance and giving each instance equal total weight, the descriptive Pearson
+correlation between `A_V` and `A_G` is `-0.824731`. This correlation is partly
+mechanically constrained by the fixed budget and is not evidence of statistical
+independence, dependence, or causality.
+
+Fase 111 tests whether `A_G` alone can classify individual rescues without
+reusing the held-out instance to choose its threshold. The apparent aggregate
+performance is dominated by 77 monolabel instances. In the 24 mixed instances,
+where the two mechanisms must actually be distinguished, the weighted balanced
+accuracy is only `0.647500` and internal sensitivity is `0.295000`. Moreover,
+`A_G` itself was selected after inspecting this census, so this internal
+leave-one-instance-out analysis is neither external nor prospective validation.
+The geometric allocation should therefore be read as a conditioned census
+result, not as a predictive rule.
+
+Fase 112 records a separate post-selection calibration of rescue multiplicity.
+Because its multiplicity threshold, statistic, and tail direction were chosen
+after observing the same outcomes, it is retained as an auditable exploratory
+artifact and is not used as a confirmatory paper claim or a formal rejection
+of an exchangeable null model.
+
 ## 8. Observer Artifacts and Pipeline Equivariance
 
 The ZUSE pipeline contains two classes of observer artifact that the atlas
@@ -3261,7 +3344,7 @@ historical positive classification or the 165-case T=12 cohort used by Fases
 The extended check remains finite in horizon and period and does not establish
 absence beyond period 120.
 
-Fases 91--107 add a topological intervention layer, but its exactness must not
+Fases 91--112 add a topological intervention layer, but its exactness must not
 be confused with universal scope. The cut-coverage equivalence is proved
 computationally for 43,425 unit additions to 219 fragile targets inside 48
 frozen length-8 Q8 cubes. These graphs encode Hamming-1 changes of the central
@@ -3280,7 +3363,12 @@ to universal causal primitives. Fase 107 compiles the verified minimal rescues
 into unit-cost QUBOs. The compilation is exact for its 265 finite instances,
 but no quantum hardware or annealing solver was run, and no quantum speedup,
 practical advantage, or transfer beyond the frozen intervention family is
-claimed.
+claimed. Fases 108--110 further condition those same rescues by mechanism and
+geometry; they do not add a new population. Their fixed-budget comparison is
+restricted to 122 rescues in 24 mixed `K2` instances. Fase 111 is an internal
+diagnostic whose feature was selected on the same census, and Fase 112 is
+explicitly post-selection. Neither supplies external validation, a population
+generalization, a causal effect, or a confirmatory significance test.
 
 ### 9.4 Empirical atlas, not axiomatic classification
 
@@ -3499,7 +3587,7 @@ Several controlled extensions have now been completed:
   confirms 3,296 additional stationary oscillators with periods 18..120;
   none changes the T=12 cohort used by the later causal audits. This converts
   the old `T<=16` negative label into an explicitly detector-bounded claim.
-  Fases 91--107 then quotient those cases into 192 strict attractor classes,
+  Fases 91--112 then quotient those cases into 192 strict attractor classes,
   construct 48 complete Q8 intervention cubes, and derive the exact unit
   cut-coverage law on 43,425 exposures. The pair audit resolves minimum
   cardinality two in 69/126 vertex and 68/139 edge strata. Exhaustive audits of
@@ -3507,8 +3595,12 @@ Several controlled extensions have now been completed:
   vertex minima partition as `69/41/16` and edge minima as `68/40/31` across
   cardinalities `2/3/4`. The resulting 1,476 verified rescues form a
   12-class Hamming-1 motif atlas and compile exactly into 265 sparse unit-cost
-  QUBOs with no hardware or advantage claim. Full results are in Sections
-  7.20-7.41.
+  QUBOs with no hardware or advantage claim. A conditioned audit then isolates
+  `K2` as an empirically variable motif and, in 122 rescues across 24 mixed
+  instances, proves the fixed partition `A_V+A_G+A_R=14`: external-attachment
+  rescues allocate less connectivity toward `V_i` and more toward `G_min` on
+  average. The result is descriptive of the frozen census and is not an
+  externally validated classifier. Full results are in Sections 7.20-7.42.
 
 Each extension is a controlled experiment with the same measurement protocol;
 only the IC or background definition changes.
