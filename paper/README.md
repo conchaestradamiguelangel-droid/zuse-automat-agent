@@ -1,25 +1,11 @@
 # ZUSE preprint
 
-Candidate under independent review:
-
-- **Candidate version:** v1.38
-- **Candidate date:** 2026-08-22
-- **Candidate DOI:** pending; no DOI has been reserved or fabricated
-- **Scope:** Fases 108--112, consolidated mechanism-conditioned Hamming geometry
-
-The candidate adds one main scientific result: an exact fixed-budget geometric
-partition for 122 rescues in 24 mixed `K2` instances. Fases 111--112 are
-retained as limitation and post-selection audit, not as independent headline
-discoveries.
-
-The published record below remains the source of truth until v1.38 is
-independently reviewed and published.
-
 Published preprint:
 
 - **Title:** ZUSE Automat Agent: Empirical Law Discovery in Elementary Cellular Automata
 - **Author:** Miguel Ángel Concha Estrada
-- **Version DOI:** https://doi.org/10.5281/zenodo.21965090
+- **Version DOI:** https://doi.org/10.5281/zenodo.22061658
+- **v1.38 concept DOI:** https://doi.org/10.5281/zenodo.22061657
 - **v1.37 series DOI:** https://doi.org/10.5281/zenodo.21965089
 - **v1.36 series DOI:** https://doi.org/10.5281/zenodo.21939731
 - **v1.35 series DOI:** https://doi.org/10.5281/zenodo.21935966
@@ -55,8 +41,8 @@ Published preprint:
 - **v1.4 series DOI:** https://doi.org/10.5281/zenodo.20767476
 - **v1.3 series DOI:** https://doi.org/10.5281/zenodo.20753498
 - **Previous-series DOI (v1.2 and earlier):** https://doi.org/10.5281/zenodo.20738024
-- **Published version:** v1.37
-- **Publication date:** 2026-08-16
+- **Published version:** v1.38
+- **Publication date:** 2026-08-22
 - **License:** Creative Commons Attribution 4.0 International (CC BY 4.0)
 
 Local artifacts:

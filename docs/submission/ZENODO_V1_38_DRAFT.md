@@ -1,7 +1,6 @@
-# Zenodo v1.38 Draft
+# Zenodo v1.38 Record
 
-Candidate prepared for independent review. Do not publish until the candidate
-PDF, metadata, numerical claims, and interpretation limits have been verified.
+Published and verified against the Zenodo API on 2026-08-22.
 
 ## Informacion basica
 
@@ -15,11 +14,13 @@ PDF, metadata, numerical claims, and interpretation limits have been verified.
 - **Idioma:** English
 - **Licencia:** Creative Commons Attribution 4.0 International
 - **Copyright:** Copyright (C) 2026 The author.
-- **DOI de version:** pendiente; no reservado ni inventado
+- **DOI de version:** `10.5281/zenodo.22061658`
+- **DOI conceptual del registro:** `10.5281/zenodo.22061657`
+- **Version anterior relacionada:** `10.5281/zenodo.21965090` (`isNewVersionOf`)
 
 ## Descripcion
 
-La version candidata v1.38 incorpora una unica extension cientifica
+La version v1.38 incorpora una unica extension cientifica
 consolidada sobre el atlas de rescates de v1.37: una caracterizacion geometrica
 condicionada por mecanismo de los rescates minimos `K2`.
 
@@ -78,5 +79,5 @@ https://github.com/conchaestradamiguelangel-droid/zuse-automat-agent
 - **Tamano:** `1.061.595 bytes`
 - **MD5:** `428f0532c2ff9bbeddc256e5978bd82c`
 - **SHA-256:** `207cff30864d4abd180a5de294628bbe28ac433f1213bad145aa131cbd63b042`
-- **DOI de version:** pendiente
-- **DOI de serie:** pendiente de confirmacion por Zenodo
+- **DOI de version:** `10.5281/zenodo.22061658`
+- **DOI conceptual del registro:** `10.5281/zenodo.22061657`

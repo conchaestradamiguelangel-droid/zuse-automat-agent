@@ -10,7 +10,7 @@ The manuscript fits *Artificial Life* because it sits at the intersection of eme
 
 All code, data, scripts, reports, figures, PDFs, and versioned releases are public. The current citable preprint is available on Zenodo:
 
-https://doi.org/10.5281/zenodo.21965090
+https://doi.org/10.5281/zenodo.22061658
 
 The repository and reproducibility artifacts are available at:
 

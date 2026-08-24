@@ -1,4 +1,4 @@
-# ZUSE v1.38 Candidate Pre-Submission Checklist
+# ZUSE v1.38 Pre-Submission Checklist
 
 Status: working checklist for journal submission. Verify current venue-specific requirements immediately before submitting.
 
@@ -8,7 +8,7 @@ Status: working checklist for journal submission. Verify current venue-specific 
 - **Article type:** Research article
 - **Current target:** *Artificial Life* (MIT Press)
 - **Fallback target:** *Complex Systems*
-- **Candidate DOI:** pending; the active published preprint remains v1.37 at https://doi.org/10.5281/zenodo.21965090
+- **Published preprint DOI:** https://doi.org/10.5281/zenodo.22061658
 - **Repository:** https://github.com/conchaestradamiguelangel-droid/zuse-automat-agent
 - **Current manuscript source:** `paper/draft.md`
 - **Current PDF:** `paper/zuse_preprint.pdf`
@@ -49,9 +49,9 @@ This research received no external funding.
 Suggested statement:
 
 ```text
-All data, reports, scripts, figures, and versioned PDFs required to verify the published v1.37 results are publicly available in the project repository and archived through the Zenodo v1.37 preprint release. The v1.38 candidate adds committed mechanism-conditioned geometry artifacts and remains under independent review until a new Zenodo record is published.
+All data, reports, scripts, figures, and versioned PDFs required to verify the published v1.38 results are publicly available in the project repository and archived through the Zenodo v1.38 preprint release. The mechanism-conditioned geometry artifacts are committed and independently verified.
 
-Zenodo: https://doi.org/10.5281/zenodo.21965090
+Zenodo: https://doi.org/10.5281/zenodo.22061658
 Repository: https://github.com/conchaestradamiguelangel-droid/zuse-automat-agent
 ```
 
@@ -127,7 +127,7 @@ Have ready:
 
 - The manuscript is long: 62 pages and approximately 30,230 words in Markdown source. If *Artificial Life* enforces article length near 6,000-12,000 words, a trimmed journal version may be needed.
 - The current paper is scientifically complete but reads as a large audit trail. Journal submission may benefit from moving some phase details to supplementary material.
-- arXiv endorsement is still pending. Zenodo v1.37 remains the active citable preprint until the v1.38 candidate is independently verified and manually published.
+- arXiv endorsement is still pending. Zenodo v1.38 is the active citable preprint.
 - Do not submit simultaneously to multiple journals.
 
 ## Files Already Prepared

@@ -1,6 +1,6 @@
 # ZUSE v1.38 Reproducibility Addendum
 
-This addendum maps the candidate v1.38 claims to committed scripts and result
+This addendum maps the published v1.38 claims to committed scripts and result
 artifacts. It supplements the published v1.37 addendum and does not rerun any
 cellular-automaton simulation.
 
@@ -109,7 +109,7 @@ cellular-automaton simulation.
 
 - Fases 108--112 reuse the frozen population underlying Fases 106--107; they
   are not independent replications.
-- The main candidate-v1.38 result is the conditioned geometry and exact
+- The main v1.38 result is the conditioned geometry and exact
   fixed-budget partition in the 122 rescues from 24 mixed `K2` instances.
 - No external or prospective validation, causal effect, population
   generalization, formal significance test, or statistical independence claim

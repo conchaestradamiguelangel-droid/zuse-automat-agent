@@ -18,3 +18,4 @@ journal*.jsonl
 
 fixtures/tmp/
 fixtures/pending/
+/tmp/

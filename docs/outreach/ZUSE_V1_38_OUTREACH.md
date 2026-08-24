@@ -14,9 +14,9 @@ difference has the same sign in all 24 instances.
 The result is descriptive of the certified census. It is not causal, externally
 validated, or a claim of predictive or quantum advantage.
 
-Preprint: PENDING
+Preprint: https://doi.org/10.5281/zenodo.22061658
 
-Release: PENDING
+Release: https://github.com/conchaestradamiguelangel-droid/zuse-automat-agent/releases/tag/v1.38
 
 ## Courtesy note
 

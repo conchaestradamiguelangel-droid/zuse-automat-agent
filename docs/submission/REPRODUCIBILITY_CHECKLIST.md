@@ -1,4 +1,4 @@
-# ZUSE v1.38 Candidate Reproducibility Checklist
+# ZUSE v1.38 Reproducibility Checklist
 
 Audience: reviewers and editors. This is a claim-to-artifact map, not a developer manual.
 
@@ -346,10 +346,11 @@ qualifying pair `(0,24)`, and no confirmatory p-value or rejection claim.
 
 ## Versioned Artifacts
 
-- Candidate v1.38 DOI: pending independent review and Zenodo publication.
-- Candidate v1.38 GitHub release: pending independent review and publication.
+- Zenodo v1.38 DOI: https://doi.org/10.5281/zenodo.22061658
+- Zenodo v1.38 concept DOI: https://doi.org/10.5281/zenodo.22061657
+- GitHub release: https://github.com/conchaestradamiguelangel-droid/zuse-automat-agent/releases/tag/v1.38
 - Zenodo v1.37 DOI: https://doi.org/10.5281/zenodo.21965090
-- GitHub release: https://github.com/conchaestradamiguelangel-droid/zuse-automat-agent/releases/tag/v1.37
+- Previous GitHub release: https://github.com/conchaestradamiguelangel-droid/zuse-automat-agent/releases/tag/v1.37
 - Previous Zenodo v1.36 DOI: https://doi.org/10.5281/zenodo.21939732
 - Previous GitHub release: https://github.com/conchaestradamiguelangel-droid/zuse-automat-agent/releases/tag/v1.36
 - PDF: `paper/zuse_preprint.pdf`
